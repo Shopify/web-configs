@@ -1,0 +1,34 @@
+{
+  "name": "eslint-plugin-shopify",
+  "version": "6.2.0",
+  "description": "Shopify-specific ESLint rules.",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": "Chris Sauve <chris.sauve@shopify.com>",
+  "scripts": {
+    "test:cover": "istanbul cover --dir reports/coverage node_modules/.bin/_mocha tests/ --recursive -- --reporter dot",
+    "test": "mocha tests/ --recursive"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "lib"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shopify/javascript/issues"
+  },
+  "homepage": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
+  "repository": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
+  "devDependencies": {
+    "istanbul": "^0.3.20",
+    "mocha": "^2.3.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=1.0.0"
+  }
+}
