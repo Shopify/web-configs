@@ -1,10 +1,12 @@
 {
   "name": "eslint-plugin-shopify",
   "version": "7.0.0",
-  "description": "Shopify-specific ESLint rules.",
+  "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
+    "eslintconfig",
     "eslintplugin",
+    "eslint-config",
     "eslint-plugin"
   ],
   "author": "Chris Sauve <chris.sauve@shopify.com>",
@@ -30,5 +32,10 @@
   },
   "peerDependencies": {
     "eslint": ">=1.0.0"
+  },
+  "dependencies": {
+    "merge": "^1.2.0",
+    "babel-eslint": "^4.1.8",
+    "eslint-plugin-react": "^3.16.1"
   }
 }
