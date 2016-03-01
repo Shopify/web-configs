@@ -31,11 +31,11 @@
     "mocha": "^2.3.2"
   },
   "peerDependencies": {
-    "eslint": ">=1.0.0"
+    "eslint": ">=2.2.0"
   },
   "dependencies": {
     "merge": "^1.2.0",
-    "babel-eslint": "^4.1.8",
-    "eslint-plugin-react": "^3.16.1"
+    "babel-eslint": "^5.0.0",
+    "eslint-plugin-react": "^4.1.0"
   }
 }
