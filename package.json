@@ -26,6 +26,9 @@
   },
   "homepage": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
   "repository": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
+  "eslintConfig": {
+    "extends": "plugin:shopify/es5"
+  },
   "devDependencies": {
     "istanbul": "^0.3.20",
     "mocha": "^2.3.2"
