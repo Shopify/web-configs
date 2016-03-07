@@ -1,0 +1,38 @@
+{
+  "name": "babel-preset-shopify",
+  "version": "1.0.0",
+  "description": "Shopify's org-wide Babel preset",
+  "main": "index.js",
+  "author": "Bouke van der Bijl <bouke@shopify.com>",
+  "homepage": "https://github.com/Shopify/javascript/tree/master/packages/babel-preset-shopify",
+  "repository": "https://github.com/Shopify/javascript/tree/master/packages/babel-preset-shopify",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shopify/javascript/issues"
+  },
+  "dependencies": {
+    "babel-plugin-check-es2015-constants": "^6.6.5",
+    "babel-plugin-transform-class-properties": "^6.6.0",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.5.2",
+    "babel-plugin-transform-es2015-block-scoped-functions": "^6.6.5",
+    "babel-plugin-transform-es2015-block-scoping": "^6.6.5",
+    "babel-plugin-transform-es2015-classes": "^6.6.5",
+    "babel-plugin-transform-es2015-computed-properties": "^6.6.5",
+    "babel-plugin-transform-es2015-destructuring": "^6.6.5",
+    "babel-plugin-transform-es2015-duplicate-keys": "^6.6.4",
+    "babel-plugin-transform-es2015-for-of": "^6.6.0",
+    "babel-plugin-transform-es2015-function-name": "^6.5.0",
+    "babel-plugin-transform-es2015-literals": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.6.5",
+    "babel-plugin-transform-es2015-object-super": "^6.6.5",
+    "babel-plugin-transform-es2015-parameters": "^6.6.5",
+    "babel-plugin-transform-es2015-shorthand-properties": "^6.5.0",
+    "babel-plugin-transform-es2015-spread": "^6.6.5",
+    "babel-plugin-transform-es2015-sticky-regex": "^6.5.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.6.5",
+    "babel-plugin-transform-es2015-typeof-symbol": "^6.6.0",
+    "babel-plugin-transform-es2015-unicode-regex": "^6.5.0",
+    "babel-plugin-transform-export-extensions": "^6.5.0",
+    "babel-preset-react": "^6.5.0"
+  }
+}
