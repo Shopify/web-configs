@@ -10,6 +10,12 @@
   "bugs": {
     "url": "https://github.com/Shopify/javascript/issues"
   },
+  "eslintConfig": {
+    "extends": "plugin:shopify/es5",
+    "env": {
+      "node": true
+    }
+  },
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.6.0",
     "babel-plugin-transform-export-extensions": "^6.5.0",
