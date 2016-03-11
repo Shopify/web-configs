@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "10.0.0",
+  "version": "10.1.1",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
