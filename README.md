@@ -46,9 +46,30 @@ If working on an ES5 project, extend the ES5 version of the configuration:
 }
 ```
 
+You can also add some "augmenting" configs on top of the "core" config by extending an array of linting configs. For example, this package provides a lodash linting config, which can be added to the ESNext config with the following configuration file:
+
+```json
+{
+  "extends": [
+    "plugin:shopify/esnext",
+    "plugin:shopify/lodash"
+  ]
+}
+```
+
+This plugin provides the following core configurations:
+
+- [esnext](lib/config/esnext.js): Use this for anything written with ES2015+ features.
+- [react](lib/config/react.js): Use this for React projects.
+- [es5](lib/config/es5.js): Use this for legacy projects.
+
+This plugin also provides the following tool-specific configurations, which can be used on top of the core configurations:
+
+- [lodash](lib/config/lodash.js): Use this for projects that use lodash.
+
 ## Plugin-Provided Rules
 
-This plugin provides the following custom rules:
+This plugin provides the following custom rules, which are included as appropriate in all core linting configs:
 
 - [require-flow](docs/rules/require-flow.md): Requires (or disallows) @flow declarations be present at the top of each file.
 - [binary-assignment-parens](docs/rules/binary-assignment-parens.md): Requires (or disallows) assignments of binary, boolean-producing expressions to be wrapped in parentheses.

@@ -9,5 +9,6 @@ module.exports = {
     es5: require('./lib/config/es5'),
     esnext: require('./lib/config/esnext'),
     react: require('./lib/config/react'),
+    lodash: require('./lib/config/lodash'),
   },
 };
