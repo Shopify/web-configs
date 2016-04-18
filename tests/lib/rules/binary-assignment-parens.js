@@ -1,36 +1,36 @@
-var rule = require('../../../lib/rules/binary-assignment-parens');
-var RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/binary-assignment-parens');
+const RuleTester = require('eslint').RuleTester;
 
-var ruleTester = new RuleTester();
+const ruleTester = new RuleTester();
 
-var NON_BOOLEAN_OPERATORS = ['-', '+', '*', '/', '||', '&&'];
-var BOOLEAN_OPERATORS = ['==', '===', '!=', '!==', '>', '>=', '<', '<='];
+const NON_BOOLEAN_OPERATORS = ['-', '+', '*', '/', '||', '&&'];
+const BOOLEAN_OPERATORS = ['==', '===', '!=', '!==', '>', '>=', '<', '<='];
 
-var validNonBooleanExamples = [].concat.apply([], NON_BOOLEAN_OPERATORS.map(function(operator) {
-  return [
-    {code: "var foo = 'bar' " + operator + " 'baz';"},
-    {code: "var foo = 'bar' " + operator + " 'baz';", options: ['never']},
-    {code: "var foo = ('bar' " + operator + " 'baz');"},
-    {code: "var foo = ('bar' " + operator + " 'baz');", options: ['never']},
-    {code: "var foo = ( 'bar' " + operator + " 'baz' );"},
-    {code: "var foo = ( 'bar' " + operator + " 'baz' );", options: ['never']},
-    {code: "var foo; foo = 'bar' " + operator + " 'baz';"},
-    {code: "var foo; foo = ('bar' " + operator + " 'baz');", options: ['never']},
-  ];
-}));
+const validNonBooleanExamples = [].concat(...NON_BOOLEAN_OPERATORS.map((operator) => (
+  [
+    {code: `var foo = 'bar' ${operator} 'baz';`},
+    {code: `var foo = 'bar' ${operator} 'baz';`, options: ['never']},
+    {code: `var foo = ('bar' ${operator} 'baz');`},
+    {code: `var foo = ('bar' ${operator} 'baz');`, options: ['never']},
+    {code: `var foo = ( 'bar' ${operator} 'baz' );`},
+    {code: `var foo = ( 'bar' ${operator} 'baz' );`, options: ['never']},
+    {code: `var foo; foo = 'bar' ${operator} 'baz';`},
+    {code: `var foo; foo = ('bar' ${operator} 'baz');`, options: ['never']},
+  ]
+)));
 
-var validBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(operator) {
-  return [
-    {code: "var foo = ('bar' " + operator + " 'baz')"},
-    {code: "var foo = ( 'bar' " + operator + " 'baz' )"},
-    {code: "var foo = 'bar' " + operator + " 'baz'", options: ['never']},
-    {code: "var foo; foo = ('bar' " + operator + " 'baz')"},
-    {code: "var foo; foo = ( 'bar' " + operator + " 'baz' )"},
-    {code: "var foo; foo = 'bar' " + operator + " 'baz'", options: ['never']},
-  ];
-}));
+const validBooleanExamples = [].concat(...BOOLEAN_OPERATORS.map((operator) => (
+  [
+    {code: `var foo = ('bar' ${operator} 'baz')`},
+    {code: `var foo = ( 'bar' ${operator} 'baz' )`},
+    {code: `var foo = 'bar' ${operator} 'baz'`, options: ['never']},
+    {code: `var foo; foo = ('bar' ${operator} 'baz')`},
+    {code: `var foo; foo = ( 'bar' ${operator} 'baz' )`},
+    {code: `var foo; foo = 'bar' ${operator} 'baz'`, options: ['never']},
+  ]
+)));
 
-var validLogicalExamples = [
+const validLogicalExamples = [
   {code: "var foo = ('bar' !== 'bar') || ('baz' === 'baz');"},
   {code: "var foo = ( 'bar' !== 'bar' ) || ( 'baz' === 'baz' );"},
   {code: "var foo = ('bar' !== 'bar') || ('baz' === 'baz') && qux;"},
@@ -54,10 +54,10 @@ var validLogicalExamples = [
   {code: "var foo; foo = 'bar' !== 'bar' || qux;", options: ['never']},
 ];
 
-var invalidBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(operator) {
-  return [
+const invalidBooleanExamples = [].concat(...BOOLEAN_OPERATORS.map((operator) => (
+  [
     {
-      code: "var foo = 'bar' " + operator + " 'baz'",
+      code: `var foo = 'bar' ${operator} 'baz'`,
       errors: [{
         message: 'You must include parentheses around a binary assignment expression.',
         type: 'BinaryExpression',
@@ -65,7 +65,7 @@ var invalidBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(
     },
 
     {
-      code: "var foo = ('bar' " + operator + " 'baz')",
+      code: `var foo = ('bar' ${operator} 'baz')`,
       options: ['never'],
       errors: [{
         message: 'You must not include parentheses around a binary assignment expression.',
@@ -74,7 +74,7 @@ var invalidBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(
     },
 
     {
-      code: "var foo = ( 'bar' " + operator + " 'baz' )",
+      code: `var foo = ( 'bar' ${operator} 'baz' )`,
       options: ['never'],
       errors: [{
         message: 'You must not include parentheses around a binary assignment expression.',
@@ -83,7 +83,7 @@ var invalidBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(
     },
 
     {
-      code: "var foo; foo = 'bar' " + operator + " 'baz'",
+      code: `var foo; foo = 'bar' ${operator} 'baz'`,
       errors: [{
         message: 'You must include parentheses around a binary assignment expression.',
         type: 'BinaryExpression',
@@ -91,7 +91,7 @@ var invalidBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(
     },
 
     {
-      code: "var foo; foo = ('bar' " + operator + " 'baz')",
+      code: `var foo; foo = ('bar' ${operator} 'baz')`,
       options: ['never'],
       errors: [{
         message: 'You must not include parentheses around a binary assignment expression.',
@@ -100,32 +100,33 @@ var invalidBooleanExamples = [].concat.apply([], BOOLEAN_OPERATORS.map(function(
     },
 
     {
-      code: "var foo; foo = ( 'bar' " + operator + " 'baz' )",
+      code: `var foo; foo = ( 'bar' ${operator} 'baz' )`,
       options: ['never'],
       errors: [{
         message: 'You must not include parentheses around a binary assignment expression.',
         type: 'BinaryExpression',
       }],
     },
-  ];
-}));
+  ]
+)));
 
 function errors(count, needsParens) {
-  var err = [];
+  const err = [];
 
+  // eslint-disable-next-line no-var
   for (var index = 0; index < count; index++) {
     err.push({
       type: 'BinaryExpression',
-      message: (needsParens
+      message: needsParens
         ? 'You must include parentheses around a binary assignment expression.'
-        : 'You must not include parentheses around a binary assignment expression.'),
+        : 'You must not include parentheses around a binary assignment expression.',
     });
   }
 
   return err;
 }
 
-var invalidLogicalExamples = [
+const invalidLogicalExamples = [
   {code: "var foo = ('bar' !== 'bar') || ('baz' === 'baz');", options: ['never'], errors: errors(2, false)},
   {code: "var foo = ( 'bar' !== 'bar' ) || ( 'baz' === 'baz' );", options: ['never'], errors: errors(2, false)},
   {code: "var foo = ('bar' !== 'bar') || ('baz' === 'baz') && qux;", options: ['never'], errors: errors(2, false)},

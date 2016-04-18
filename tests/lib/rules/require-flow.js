@@ -1,13 +1,18 @@
-var rule = require('../../../lib/rules/require-flow');
-var RuleTester = require('eslint').RuleTester;
-var ruleTester = new RuleTester();
+const rule = require('../../../lib/rules/require-flow');
+const RuleTester = require('eslint').RuleTester;
+const ruleTester = new RuleTester();
 
 require('babel-eslint');
 
-var withFlow = '/* @flow */\n\nfunction yesFlow(present: boolean): string { return "success"; }';
-var explicitNoFlow = '/* @noflow */\n\nfunction yesFlow(present: boolean): string { return "success"; }';
-var noFlow = 'function noFlow(present) {}';
-var confusingFlow = 'var foo = "bar"\n\n// This is not a realy @flow comment';
+const withFlow = `/* @flow */
+function yesFlow(present: boolean): string { return 'success'; }`;
+
+const explicitNoFlow = `/* @noflow */
+function yesFlow(present: boolean): string { return 'success'; }`;
+
+const noFlow = 'function noFlow(present) {}';
+const confusingFlow = `var foo = 'bar'
+// This is not a realy @flow comment`;
 
 ruleTester.run('require-flow', rule, {
   valid: [
