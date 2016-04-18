@@ -36,4 +36,4 @@ If you do not care about unnecessarily computed properties, you can safely disab
 
 ## Further Reading
 
-- [Object initializers on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer);
+- [Object initializers on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer)
