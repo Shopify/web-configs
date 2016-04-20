@@ -22,16 +22,28 @@
   "homepage": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
   "repository": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
   "eslintConfig": {
-    "extends": "plugin:shopify/es5"
+    "extends": [
+      "plugin:shopify/es5",
+      "plugin:shopify/node"
+    ]
   },
   "peerDependencies": {
-    "eslint": ">=2.5.1"
+    "eslint": ">=2.8.0"
   },
   "dependencies": {
     "babel-eslint": "^6.0.0",
-    "eslint-plugin-react": "^4.2.3",
+    "eslint-plugin-ava": "^2.2.1",
     "eslint-plugin-babel": "^3.1.0",
-    "eslint-plugin-lodash": "^1.6.5",
+    "eslint-plugin-chai-expect": "^1.1.1",
+    "eslint-plugin-flowtype": "^2.2.6",
+    "eslint-plugin-import": "^1.5.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-lodash": "^1.6.9",
+    "eslint-plugin-mocha": "^2.2.0",
+    "eslint-plugin-node": "^1.0.0",
+    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-react": "^5.0.1",
+    "eslint-plugin-sort-class-members": "^1.0.1",
     "merge": "^1.2.0"
   }
 }

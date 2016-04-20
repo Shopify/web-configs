@@ -13,10 +13,15 @@ module.exports = {
   },
 
   configs: {
+    ava: require('./lib/config/ava'),
     core: require('./lib/config/core'),
     es5: require('./lib/config/es5'),
     esnext: require('./lib/config/esnext'),
-    react: require('./lib/config/react'),
+    flow: require('./lib/config/flow'),
+    jquery: require('./lib/config/jquery'),
     lodash: require('./lib/config/lodash'),
+    mocha: require('./lib/config/mocha'),
+    node: require('./lib/config/node'),
+    react: require('./lib/config/react'),
   },
 };
