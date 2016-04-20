@@ -10,12 +10,12 @@ const parserOptions = {
 
 const classPropErrors = [{
   type: 'ClassProperty',
-  message: 'Unexpected class property. Use assignment in the constructor instead.',
+  message: 'Unexpected class property.',
 }];
 
 const assignErrors = [{
   type: 'AssignmentExpression',
-  message: 'Unexpected assignment of literal instance member. Use class properties instead.',
+  message: 'Unexpected assignment of literal instance member.',
 }];
 
 ruleTester.run('prefer-class-properties', rule, {
