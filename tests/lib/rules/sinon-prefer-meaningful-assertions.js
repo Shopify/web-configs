@@ -21,6 +21,7 @@ ruleTester.run('sinon-prefer-meaningful-assertions', rule, {
     {code: 'expect(foo.bar).to.have.been.called;'},
     {code: 'expect(foo.bar.baz).to.have.been.called;'},
     {code: 'expect(foo.bar()).to.have.been.called;'},
+    {code: 'expect()'},
 
     {code: 'expect(called).to.be.true;'},
     {code: 'expect(callCount(3)).to.equal(3);'},

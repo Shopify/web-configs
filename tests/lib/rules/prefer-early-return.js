@@ -27,6 +27,12 @@ ruleTester.run('prefer-early-return', rule, {
     },
     {
       code: `function foo() {
+        if (something)
+          doSomething();
+      }`,
+    },
+    {
+      code: `function foo() {
         if (something) {
           doSomething();
           doSomethingElse();
@@ -92,6 +98,14 @@ ruleTester.run('prefer-early-return', rule, {
           doSomethingElse();
         }
       }`,
+      errors: [error],
+    },
+    {
+      code: `function foo() {
+        if (something)
+          doSomething();
+      }`,
+      options: [{maximumStatements: 0}],
       errors: [error],
     },
     {
