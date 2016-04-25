@@ -4,6 +4,7 @@ module.exports = {
     'class-property-semi': require('./lib/rules/class-property-semi'),
     'jquery-dollar-sign-reference': require('./lib/rules/jquery-dollar-sign-reference'),
     'no-useless-computed-properties': require('./lib/rules/no-useless-computed-properties'),
+    'no-fully-static-classes': require('./lib/rules/no-fully-static-classes'),
     'prefer-class-properties': require('./lib/rules/prefer-class-properties'),
     'prefer-early-return': require('./lib/rules/prefer-early-return'),
     'require-flow': require('./lib/rules/require-flow'),
