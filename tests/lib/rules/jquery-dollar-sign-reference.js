@@ -21,10 +21,12 @@ ruleTester.run('jquery-dollar-sign-reference', rule, {
     {code: 'var $foo = jQuery("foo");'},
     {code: 'var $foo = something();'},
     {code: 'var $foo = something.else();'},
+    {code: 'var $foo = null;'},
     {code: 'var foo = "something";'},
     {code: 'var foo = "$bar";'},
     {code: 'var foo = something();'},
     {code: 'var foo = bar;'},
+    {code: 'var foo = null;'},
 
     {code: 'this.$foo = $("foo");'},
     {code: 'this.$foo = $bar;'},
