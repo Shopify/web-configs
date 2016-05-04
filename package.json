@@ -37,7 +37,7 @@
     "eslint-plugin-chai-expect": "^1.1.1",
     "eslint-plugin-flowtype": "^2.2.6",
     "eslint-plugin-import": "^1.5.0",
-    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-jsx-a11y": "^1.0.4",
     "eslint-plugin-lodash": "^1.6.9",
     "eslint-plugin-mocha": "^2.2.0",
     "eslint-plugin-node": "^1.0.0",
