@@ -1,8 +1,8 @@
-const rule = require('../../../lib/rules/no-useless-computed-properties');
 const RuleTester = require('eslint').RuleTester;
-const ruleTester = new RuleTester();
-
+const rule = require('../../../lib/rules/no-useless-computed-properties');
 require('babel-eslint');
+
+const ruleTester = new RuleTester();
 
 const parserOptions = {ecmaVersion: 6};
 const message = 'Computed property is using a literal key unnecessarily.';

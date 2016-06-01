@@ -1,5 +1,5 @@
-const rule = require('../../../lib/rules/prefer-early-return');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/prefer-early-return');
 
 const ruleTester = new RuleTester();
 

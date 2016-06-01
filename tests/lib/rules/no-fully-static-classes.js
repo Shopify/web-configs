@@ -1,5 +1,6 @@
-const rule = require('../../../lib/rules/no-fully-static-classes');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/no-fully-static-classes');
+
 const ruleTester = new RuleTester();
 
 require('babel-eslint');

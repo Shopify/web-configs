@@ -1,5 +1,6 @@
-const rule = require('../../../lib/rules/sinon-prefer-meaningful-assertions');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/sinon-prefer-meaningful-assertions');
+
 const ruleTester = new RuleTester();
 
 function bddError(type) {

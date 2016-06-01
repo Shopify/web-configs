@@ -1,5 +1,6 @@
-const rule = require('../../../lib/rules/prefer-class-properties');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/prefer-class-properties');
+
 const ruleTester = new RuleTester();
 
 require('babel-eslint');

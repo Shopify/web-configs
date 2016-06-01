@@ -1,5 +1,6 @@
-const rule = require('../../../lib/rules/jquery-dollar-sign-reference');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/jquery-dollar-sign-reference');
+
 const ruleTester = new RuleTester();
 
 require('babel-eslint');

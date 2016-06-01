@@ -1,5 +1,6 @@
-const rule = require('../../../lib/rules/sinon-no-restricted-features');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/sinon-no-restricted-features');
+
 const ruleTester = new RuleTester();
 
 const sinonRestricted = 'sinon.mock().something();';

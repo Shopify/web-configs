@@ -1,5 +1,6 @@
-const rule = require('../../../lib/rules/require-flow');
 const RuleTester = require('eslint').RuleTester;
+const rule = require('../../../lib/rules/require-flow');
+
 const ruleTester = new RuleTester();
 
 require('babel-eslint');
