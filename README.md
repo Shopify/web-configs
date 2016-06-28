@@ -1,4 +1,4 @@
-# eslint-plugin-shopify
+# babel-preset-shopify
 
 [![NPM version][npm-image]][npm-url]
 
@@ -22,5 +22,29 @@ Then, in your Babel configuration (which should be under the `babel` key of your
 }
 ```
 
-[npm-url]: https://npmjs.org/package/babel-plugin-shopify
-[npm-image]: http://img.shields.io/npm/v/babel-plugin-shopify.svg?style=flat-square
+### React
+
+This preset exposes a preset specific to React that you can use with the following configuration:
+
+```json
+{
+  "babel": {
+    "presets": ["shopify/react"]
+  }
+}
+```
+
+### Node
+
+This preset also a preset for node.js projects. The node preset automatically detects the current version of node in use and uses only the plugins needed for that version. Versions of node.js greater than or equal to 4.0 are supported (for earlier versions, use the base preset).
+
+```json
+{
+  "babel": {
+    "presets": ["shopify/node"]
+  }
+}
+```
+
+[npm-url]: https://npmjs.org/package/babel-preset-shopify
+[npm-image]: http://img.shields.io/npm/v/babel-preset-shopify.svg?style=flat-square
