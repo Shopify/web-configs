@@ -18,9 +18,12 @@ const confusingFlow = `var foo = 'bar'
 ruleTester.run('require-flow', rule, {
   valid: [
     {code: withFlow, parser: 'babel-eslint'},
+    {code: `// @flow\n${withFlow.split('\n')[1]}`, parser: 'babel-eslint'},
     {code: noFlow, options: ['never']},
     {code: withFlow, options: ['always'], parser: 'babel-eslint'},
     {code: confusingFlow, options: ['never']},
+    {code: explicitNoFlow, options: ['explicit'], parser: 'babel-eslint'},
+    {code: `// @noflow\n${explicitNoFlow.split('\n')[1]}`, options: ['explicit'], parser: 'babel-eslint'},
   ],
   invalid: [
     {
@@ -29,12 +32,6 @@ ruleTester.run('require-flow', rule, {
         message: 'You must include a @flow declaration at the top of your file.',
         type: 'Program',
       }],
-    },
-    {
-      code: explicitNoFlow,
-      parser: 'babel-eslint',
-      options: ['explicit'],
-      errors: [],
     },
     {
       code: noFlow,
@@ -51,6 +48,15 @@ ruleTester.run('require-flow', rule, {
       options: ['never'],
       errors: [{
         message: 'You must not include a @flow declaration in your file.',
+        type: 'Program',
+      }],
+    },
+    {
+      code: explicitNoFlow,
+      parser: 'babel-eslint',
+      options: ['always'],
+      errors: [{
+        message: 'You must include a @flow declaration at the top of your file.',
         type: 'Program',
       }],
     },
