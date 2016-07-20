@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-shopify",
-  "version": "12.3.4",
+  "version": "13.0.0",
   "description": "Shopify's org-wide Babel preset",
   "main": "index.js",
   "author": "Bouke van der Bijl <bouke@shopify.com>",
