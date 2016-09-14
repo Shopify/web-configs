@@ -30,25 +30,25 @@
   },
   "devDependencies": {
     "eslint-find-rules": "1.x",
-    "eslint": "3.3.x"
+    "eslint": "3.5.x"
   },
   "peerDependencies": {
-    "eslint": "3.3.x"
+    "eslint": "3.5.x"
   },
   "dependencies": {
     "babel-eslint": "6.1.x",
     "eslint-plugin-ava": "3.0.x",
     "eslint-plugin-babel": "3.3.x",
     "eslint-plugin-chai-expect": "1.1.x",
-    "eslint-plugin-flowtype": "2.7.x",
-    "eslint-plugin-import": "1.13.x",
-    "eslint-plugin-jsx-a11y": "2.1.x",
+    "eslint-plugin-flowtype": "2.17.x",
+    "eslint-plugin-import": "1.15.x",
+    "eslint-plugin-jsx-a11y": "2.2.x",
     "eslint-plugin-lodash": "1.10.x",
-    "eslint-plugin-mocha": "4.3.x",
+    "eslint-plugin-mocha": "4.5.x",
     "eslint-plugin-node": "2.0.x",
     "eslint-plugin-promise": "2.0.x",
-    "eslint-plugin-react": "6.1.x",
-    "eslint-plugin-sort-class-members": "1.0.x",
+    "eslint-plugin-react": "6.2.x",
+    "eslint-plugin-sort-class-members": "1.1.x",
     "merge": "1.x"
   }
 }
