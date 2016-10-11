@@ -2,7 +2,7 @@ var semver = require('semver');
 
 module.exports = function shopifyNodePreset(context, options) {
   options = options || {};
-  var version = options.version || '5.7.0';
+  var version = options.version || process.version;
   var modules = options.modules == null ? true : options.modules;
   var pluginsList = [];
 
