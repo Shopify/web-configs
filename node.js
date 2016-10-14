@@ -12,9 +12,12 @@ module.exports = function shopifyNodePreset(context, options) {
     );
   }
 
+  // Object rest spread (part of the stage 3 preset) requires the destructuring
+  // transform: https://babeljs.io/docs/plugins/transform-object-rest-spread/
+  pluginsList.push(require('babel-plugin-transform-es2015-destructuring'));
+
   if (semver.lt(version, '6.0.0')) {
     pluginsList.push(
-      require('babel-plugin-transform-es2015-destructuring'),
       require('babel-plugin-transform-es2015-function-name'),
       require('babel-plugin-transform-es2015-parameters'),
       require('babel-plugin-transform-es2015-shorthand-properties'),
