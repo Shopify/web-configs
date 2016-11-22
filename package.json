@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "15.0.3",
+  "version": "15.1.0",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -31,10 +31,10 @@
   "devDependencies": {
     "eslint-find-rules": "1.x",
     "eslint-plugin-shopify": "file:.",
-    "eslint": "3.7.x"
+    "eslint": "3.10.x"
   },
   "peerDependencies": {
-    "eslint": "3.7.x"
+    "eslint": "3.10.x"
   },
   "dependencies": {
     "babel-eslint": "7.0.x",
