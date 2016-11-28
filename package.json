@@ -48,7 +48,7 @@
     "eslint-plugin-mocha": "4.7.x",
     "eslint-plugin-node": "3.0.x",
     "eslint-plugin-promise": "3.0.x",
-    "eslint-plugin-react": "6.4.x",
+    "eslint-plugin-react": "6.7.x",
     "eslint-plugin-sort-class-members": "1.1.x",
     "merge": "1.x"
   }
