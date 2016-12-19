@@ -8,13 +8,27 @@ Shopify’s ESLint rules and configs.
 
 You'll first need to install [ESLint](http://eslint.org):
 
+**With Yarn**
+
+```bash
+yarn add --dev eslint
 ```
+
+**With NPM**
+
+```bash
 $ npm i eslint --save-dev
 ```
 
 Next, install `eslint-plugin-shopify`:
 
+**With Yarn**
+```bash
+yarn add --dev eslint-plugin-shopify
 ```
+
+**With NPM**
+```bash
 $ npm install eslint-plugin-shopify --save-dev
 ```
 
