@@ -14,7 +14,7 @@ Install this package, as well as the parts of Babel you wish to use:
 yarn add --dev --exact babel-core babel-preset-shopify
 ```
 
-**With NPM**
+**With npm**
 
 ```bash
 npm install babel-core babel-preset-shopify --save-dev --save-exact
