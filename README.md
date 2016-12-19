@@ -14,7 +14,7 @@ You'll first need to install [ESLint](http://eslint.org):
 yarn add --dev eslint
 ```
 
-**With NPM**
+**With npm**
 
 ```bash
 $ npm i eslint --save-dev
@@ -27,7 +27,7 @@ Next, install `eslint-plugin-shopify`:
 yarn add --dev eslint-plugin-shopify
 ```
 
-**With NPM**
+**With npm**
 ```bash
 $ npm install eslint-plugin-shopify --save-dev
 ```
