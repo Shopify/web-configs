@@ -8,6 +8,14 @@ Shopify’s org-wide set of Babel transforms.
 
 Install this package, as well as the parts of Babel you wish to use:
 
+**With Yarn**
+
+```bash
+yarn add --dev --exact babel-core babel-preset-shopify
+```
+
+**With NPM**
+
 ```bash
 npm install babel-core babel-preset-shopify --save-dev --save-exact
 ```
