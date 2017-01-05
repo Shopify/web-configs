@@ -9,6 +9,11 @@
   },
   "homepage": "https://github.com/Shopify/babel-preset-shopify",
   "repository": "https://github.com/Shopify/babel-preset-shopify",
+  "scripts": {
+    "check": "yarn run lint",
+    "deploy": "npm publish",
+    "lint": "eslint --max-warnings=0 ."
+  },
   "license": "MIT",
   "babel": {
     "presets": [
