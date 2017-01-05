@@ -12,6 +12,7 @@
   "author": "Chris Sauve <chris.sauve@shopify.com>",
   "scripts": {
     "check": "yarn run lint && yarn test",
+    "deploy": "npm publish",
     "check-rules": "eslint-find-rules --unused lib/config/all.js",
     "lint": "eslint . --max-warnings 0",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
