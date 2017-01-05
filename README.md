@@ -1,6 +1,7 @@
 # eslint-plugin-shopify
 
 [![NPM version][npm-image]][npm-url]
+[![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=svg)](https://circleci.com/gh/Shopify/eslint-plugin-shopify)
 
 Shopify’s ESLint rules and configs.
 
