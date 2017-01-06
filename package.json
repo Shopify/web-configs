@@ -11,17 +11,25 @@
   ],
   "author": "Chris Sauve <chris.sauve@shopify.com>",
   "scripts": {
+    "check": "yarn run lint && yarn test",
+    "deploy": "npm publish",
     "check-rules": "eslint-find-rules --unused lib/config/all.js",
-    "test": "../../node_modules/.bin/mocha tests/ --recursive --reporter spec --compilers js:babel-core/register",
-    "test:watch": "npm test -- --watch --reporter min",
-    "test:cover": "../../node_modules/.bin/istanbul cover --dir coverage ../../node_modules/.bin/_mocha -- --compilers js:babel-core/register --recursive tests/"
+    "lint": "eslint . --max-warnings 0",
+    "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
+    "test:watch": "yarn test -- --watch --reporter min",
+    "test:cover": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter spec --recursive tests/"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Shopify/javascript/issues"
+  "babel": {
+    "presets": [
+      "shopify"
+    ]
   },
-  "homepage": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
-  "repository": "https://github.com/Shopify/javascript/tree/master/packages/eslint-plugin-shopify",
+  "bugs": {
+    "url": "https://github.com/Shopify/eslint-plugin-shopify/issues"
+  },
+  "homepage": "https://github.com/Shopify/eslint-plugin-shopify",
+  "repository": "https://github.com/Shopify/eslint-plugin-shopify",
   "eslintConfig": {
     "extends": [
       "plugin:shopify/es5",
@@ -29,9 +37,15 @@
     ]
   },
   "devDependencies": {
+    "babel-cli": "6.x",
+    "babel-core": "6.x",
+    "babel-preset-shopify": "15.0.1",
     "eslint-find-rules": "1.x",
     "eslint-plugin-shopify": "file:.",
-    "eslint": "3.10.x"
+    "eslint": "3.10.x",
+    "isparta": "4.x",
+    "istanbul": "0.4.4",
+    "mocha": "3.x"
   },
   "peerDependencies": {
     "eslint": "3.10.x"
