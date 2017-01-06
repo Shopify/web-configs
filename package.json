@@ -3,18 +3,36 @@
   "version": "15.0.1",
   "description": "Shopify's org-wide Babel preset",
   "main": "index.js",
-  "author": "Bouke van der Bijl <bouke@shopify.com>",
-  "homepage": "https://github.com/Shopify/javascript/tree/master/packages/babel-preset-shopify",
-  "repository": "https://github.com/Shopify/javascript/tree/master/packages/babel-preset-shopify",
+  "author": {
+    "name": "Shopify",
+    "email": "dev@shopify.com"
+  },
+  "homepage": "https://github.com/Shopify/babel-preset-shopify",
+  "repository": "https://github.com/Shopify/babel-preset-shopify",
+  "scripts": {
+    "check": "yarn run lint",
+    "deploy": "npm publish",
+    "lint": "eslint --max-warnings=0 ."
+  },
   "license": "MIT",
+  "babel": {
+    "presets": [
+      "shopify"
+    ]
+  },
   "bugs": {
-    "url": "https://github.com/Shopify/javascript/issues"
+    "url": "https://github.com/Shopify/babel-preset-shopify/issues"
   },
   "eslintConfig": {
     "extends": [
       "plugin:shopify/es5",
       "plugin:shopify/node"
     ]
+  },
+  "devDependencies": {
+    "babel-preset-shopify": "15.0.1",
+    "eslint": "3.10.x",
+    "eslint-plugin-shopify": "15.1.0"
   },
   "dependencies": {
     "babel-plugin-syntax-flow": "^6.13.0",
