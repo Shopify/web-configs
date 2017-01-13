@@ -58,14 +58,14 @@
     "eslint-plugin-ava": "4.0.x",
     "eslint-plugin-babel": "4.0.x",
     "eslint-plugin-chai-expect": "1.1.x",
-    "eslint-plugin-flowtype": "2.28.x",
+    "eslint-plugin-flowtype": "2.29.x",
     "eslint-plugin-import": "2.2.x",
     "eslint-plugin-jsx-a11y": "3.0.x",
     "eslint-plugin-lodash": "2.2.x",
-    "eslint-plugin-mocha": "4.7.x",
+    "eslint-plugin-mocha": "4.8.x",
     "eslint-plugin-node": "3.0.x",
-    "eslint-plugin-promise": "3.0.x",
-    "eslint-plugin-react": "6.7.x",
+    "eslint-plugin-promise": "3.4.x",
+    "eslint-plugin-react": "6.9.x",
     "eslint-plugin-sort-class-members": "1.1.x",
     "merge": "1.x"
   }
