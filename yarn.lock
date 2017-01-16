@@ -1283,17 +1283,6 @@ escope@^3.6.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint-find-rules@1.x:
-  version "1.14.3"
-  resolved "https://registry.yarnpkg.com/eslint-find-rules/-/eslint-find-rules-1.14.3.tgz#51ff8169f0bfaacf3575edd8c439a94d919cdada"
-  dependencies:
-    cliui "^3.2.0"
-    eslint-rule-documentation "^1.0.0"
-    path-is-absolute "1.0.0"
-    which "^1.2.8"
-    window-size "^0.2.0"
-    yargs "^5.0.0"
-
 eslint-import-resolver-node@^0.2.0:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/eslint-import-resolver-node/-/eslint-import-resolver-node-0.2.3.tgz#5add8106e8c928db2cba232bcd9efa846e3da16c"
@@ -1424,10 +1413,6 @@ eslint-plugin-react@6.9.x:
 eslint-plugin-sort-class-members@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.1.1.tgz#dedbb30054fced1a55a9d443bb2b842a0cfc95f1"
-
-eslint-rule-documentation@^1.0.0:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/eslint-rule-documentation/-/eslint-rule-documentation-1.0.4.tgz#f127f59cd0264a1bcde59f4d803552fdd38cb7c2"
 
 eslint@^3.11.1:
   version "3.13.1"
@@ -2274,10 +2259,6 @@ lodash._isiterateecall@^3.0.0:
   version "3.0.9"
   resolved "https://registry.yarnpkg.com/lodash._isiterateecall/-/lodash._isiterateecall-3.0.9.tgz#5203ad7ba425fae842460e696db9cf3e6aac057c"
 
-lodash.assign@^4.1.0, lodash.assign@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/lodash.assign/-/lodash.assign-4.2.0.tgz#0d99f3ccd7a6d261d19bdaeb9245005d285808e7"
-
 lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
@@ -2587,10 +2568,6 @@ path-exists@^2.0.0:
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
-
-path-is-absolute@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.0.tgz#263dada66ab3f2fb10bf7f9d24dd8f3e570ef912"
 
 path-is-inside@^1.0.1:
   version "1.0.2"
@@ -3176,7 +3153,7 @@ which-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
 
-which@^1.0.9, which@^1.1.1, which@^1.2.8:
+which@^1.0.9, which@^1.1.1:
   version "1.2.12"
   resolved "https://registry.yarnpkg.com/which/-/which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192"
   dependencies:
@@ -3187,10 +3164,6 @@ wide-align@^1.1.0:
   resolved "https://registry.yarnpkg.com/wide-align/-/wide-align-1.1.0.tgz#40edde802a71fea1f070da3e62dcda2e7add96ad"
   dependencies:
     string-width "^1.0.1"
-
-window-size@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.2.0.tgz#b4315bb4214a3d7058ebeee892e13fa24d98b075"
 
 window-size@0.1.0:
   version "0.1.0"
@@ -3233,37 +3206,11 @@ y18n@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
 
-yargs-parser@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-3.2.0.tgz#5081355d19d9d0c8c5d81ada908cb4e6d186664f"
-  dependencies:
-    camelcase "^3.0.0"
-    lodash.assign "^4.1.0"
-
 yargs-parser@^4.2.0:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-4.2.1.tgz#29cceac0dc4f03c6c87b4a9f217dd18c9f74871c"
   dependencies:
     camelcase "^3.0.0"
-
-yargs@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-5.0.0.tgz#3355144977d05757dbb86d6e38ec056123b3a66e"
-  dependencies:
-    cliui "^3.2.0"
-    decamelize "^1.1.1"
-    get-caller-file "^1.0.1"
-    lodash.assign "^4.2.0"
-    os-locale "^1.4.0"
-    read-pkg-up "^1.0.1"
-    require-directory "^2.1.1"
-    require-main-filename "^1.0.1"
-    set-blocking "^2.0.0"
-    string-width "^1.0.2"
-    which-module "^1.0.0"
-    window-size "^0.2.0"
-    y18n "^3.2.1"
-    yargs-parser "^3.2.0"
 
 yargs@^6.4.0:
   version "6.6.0"

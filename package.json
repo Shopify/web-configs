@@ -13,7 +13,6 @@
   "scripts": {
     "check": "yarn run lint && yarn test",
     "deploy": "npm publish",
-    "check-rules": "eslint-find-rules --unused lib/config/all.js",
     "rules-status": "eslint-index lib/config/all.js  --format table",
     "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
     "lint": "eslint . --max-warnings 0",
@@ -43,7 +42,6 @@
     "babel-core": "6.x",
     "babel-preset-shopify": "15.0.1",
     "eslint": "3.10.x",
-    "eslint-find-rules": "1.x",
     "eslint-index": "1.2.x",
     "eslint-plugin-shopify": "file:.",
     "isparta": "4.x",
