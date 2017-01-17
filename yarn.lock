@@ -1358,9 +1358,9 @@ eslint-plugin-jsx-a11y@3.0.x:
     jsx-ast-utils "^1.0.0"
     object-assign "^4.0.1"
 
-eslint-plugin-lodash@2.2.x:
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-2.2.5.tgz#0e8a1dc51b3766c7b016d7c0a6352066c98a03e5"
+eslint-plugin-lodash@2.3.x:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-lodash/-/eslint-plugin-lodash-2.3.1.tgz#423182ef674f84555aec49c7e21ad6fd3908365f"
   dependencies:
     lodash "^4.0.0"
 
