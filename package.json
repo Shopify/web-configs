@@ -12,7 +12,6 @@
   "author": "Chris Sauve <chris.sauve@shopify.com>",
   "scripts": {
     "check": "yarn run lint && yarn test",
-    "deploy": "npm publish",
     "rules-status": "eslint-index lib/config/all.js  --format table",
     "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
     "lint": "eslint . --max-warnings 0",
