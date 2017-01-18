@@ -5,7 +5,6 @@ machine:
 
 dependencies:
   pre:
-    - "curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack && chmod 0755 ~/bin/ack"
     - |
       if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
         echo "Download and install Yarn."
