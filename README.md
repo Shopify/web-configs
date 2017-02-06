@@ -43,9 +43,9 @@ This packages comes with several different presets for you to use, depending on 
   ```json
   {
     "babel": {
-      "presets": {
+      "presets": [
         ["shopify/web", {"modules": false}]
-      }
+      ]
     }
   }
   ```
@@ -55,14 +55,26 @@ This packages comes with several different presets for you to use, depending on 
   ```json
   {
     "babel": {
-      "presets": {
+      "presets": [
         ["shopify/node", {"modules": false, "version": "5.7.0"}]
-      }
+      ]
     }
   }
   ```
 
-- `shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `shopify/web` or `shopify/node` configuration. Note that if you enable this, you do not need to also enable the `shopify/flow` config (it is included automatically).
+- `shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `shopify/web` or `shopify/node` configuration. Note that if you enable this, you do not need to also enable the `shopify/flow` config (it is included automatically). You will, however, need to include an `Object.assign` polyfill in your bundle (we recommend the polyfills found in [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/)).
+
+  This preset accepts an options object. We accept a single option, `hot`, which will automatically add plugins to enable hot reloading of React components. Note that this requires you to have a recent version of `react-hot-loader` installed as a dependency in your project.
+
+  ```json
+  {
+    "babel": {
+      "presets": [
+        ["shopify/react", {"hot": true}]
+      ]
+    }
+  }
+  ```
 
 - `shopify/flow`: Adds plugins that transform Flow type annotations. You can use this preset with `shopify/web` or `shopify/node`.
 
