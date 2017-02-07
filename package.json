@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-shopify",
-  "version": "15.0.1",
+  "version": "16.0.0",
   "description": "Shopify's org-wide Babel preset",
   "main": "index.js",
   "author": {
@@ -39,14 +39,14 @@
     "babel-plugin-transform-inline-environment-variables": "^0.0.2",
     "babel-plugin-transform-object-rest-spread": "^6.22.0",
     "babel-plugin-transform-react-constant-elements": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.22.0",
     "babel-plugin-transform-react-jsx": "^6.22.0",
     "babel-plugin-transform-react-jsx-self": "^6.22.0",
     "babel-plugin-transform-react-jsx-source": "^6.22.0",
     "babel-plugin-transform-react-pure-to-component": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.1.8",
-    "babel-preset-stage-3": "^6.22.0",
-    "babel-preset-react": "^6.22.0"
+    "babel-preset-react": "^6.22.0",
+    "babel-preset-stage-3": "^6.22.0"
   },
   "optionalDependencies": {
     "react-hot-loader": "3.0.0-beta.6"
