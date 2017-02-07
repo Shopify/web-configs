@@ -1,43 +1,21 @@
-var semver = require('semver');
+var nonStandardPlugins = require('./non-standard-plugins');
 
 module.exports = function shopifyNodePreset(context, options) {
   options = options || {};
-  var version = options.version || process.version;
+  var version = options.version || 'current';
   var modules = options.modules == null ? true : options.modules;
-  var pluginsList = [];
-
-  if (modules) {
-    pluginsList.push(
-      require('babel-plugin-transform-es2015-modules-commonjs')
-    );
-  }
-
-  // Object rest spread (part of the stage 3 preset) requires the destructuring
-  // transform: https://babeljs.io/docs/plugins/transform-object-rest-spread/
-  pluginsList.push(require('babel-plugin-transform-es2015-destructuring'));
-
-  if (semver.lt(version, '6.0.0')) {
-    pluginsList.push(
-      require('babel-plugin-transform-es2015-function-name'),
-      require('babel-plugin-transform-es2015-parameters'),
-      require('babel-plugin-transform-es2015-shorthand-properties'),
-      require('babel-plugin-transform-es2015-sticky-regex'),
-      require('babel-plugin-transform-es2015-unicode-regex')
-    );
-  }
-
-  if (semver.lt(version, '5.0.0')) {
-    pluginsList.push(
-      require('babel-plugin-transform-es2015-spread')
-    );
-  }
 
   return {
     presets: [
-      {plugins: pluginsList},
-      require('babel-preset-es2016'),
-      require('babel-preset-es2017'),
-      require('./non-standard-features'),
+      [require.resolve('babel-preset-env'), {
+        modules: modules,
+        useBuiltIns: true,
+        targets: {
+          node: version,
+        },
+      }],
+      require.resolve('babel-preset-stage-3'),
     ],
+    plugins: nonStandardPlugins(options),
   };
 };

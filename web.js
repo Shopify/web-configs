@@ -1,12 +1,21 @@
+var browsers = require('./browsers');
+var nonStandardPlugins = require('./non-standard-plugins');
+
 module.exports = function shopifyWebPreset(context, options) {
   options = options || {};
+  var modules = options.modules == null ? true : options.modules;
 
   return {
     presets: [
-      [require('babel-preset-es2015').buildPreset, options],
-      require('babel-preset-es2016'),
-      require('babel-preset-es2017'),
-      require('./non-standard-features'),
+      [require.resolve('babel-preset-env'), {
+        modules: modules,
+        useBuiltIns: true,
+        targets: {
+          browsers: options.browsers || browsers,
+        },
+      }],
+      require.resolve('babel-preset-stage-3'),
     ],
+    plugins: nonStandardPlugins(options),
   };
 };

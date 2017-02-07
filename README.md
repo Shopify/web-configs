@@ -36,31 +36,56 @@ This packages comes with several different presets for you to use, depending on 
 
 - `shopify`: The same as `shopify/web`.
 
-- `shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that Shopify’s admin runs on. Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`core-js`](https://github.com/zloirock/core-js)).
+- `shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that Shopify’s admin runs on. Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
 
-  This preset accepts an options object. The only option available is `modules`, which should be a boolean indicating whether native ES2015 modules should be transpiled to CommonJS equivalents. Set this option to false when you are using a bundler like Rollup or Webpack 2:
+  This preset accepts an options object. The following options are allowed:
+  
+    - `modules`, a boolean indicating whether native ES2015 modules should be transpiled to CommonJS equivalents. Set this option to `false` when you are using a bundler like Rollup or Webpack 2:
+
+      ```json
+      {
+        "babel": {
+          "presets": {
+            ["shopify/web", {"modules": false}]
+          }
+        }
+      }
+      ```
+
+    - `browsers`, a [browserslist](https://github.com/ai/browserslist) string or array, which specifies which browsers to transpile for. Defaults to the list found in `browsers.js`.
+
+      ```json
+      {
+        "babel": {
+          "presets": {
+            ["shopify/web", {
+              "browsers": ["last 3 versions"]
+            }]
+          }
+        }
+      }
+      ```
+    
+    - `inlineEnv`, a boolean (defaults to `false`) to automatically replace `process.env.<VAR>` statements with the corresponding environment variable.
+
+  Note that when using this config, you should also install `babel-polyfill` as a production dependency (`yarn add babel-polyfill` or `npm install --save babel-polyfill`). This package will be used to reduce duplication of common Babel helpers.    
+
+- `shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules` and `inlineEnv` do the same thing they do in `shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 
   ```json
   {
     "babel": {
-      "presets": [
-        ["shopify/web", {"modules": false}]
-      ]
+      "presets": {
+        ["shopify/node", {
+          "modules": false,
+          "version": 4
+        }]
+      }
     }
   }
   ```
 
-- `shopify/node`: This preset transpiles features to a specified version of Node, defaulting to `process.version`. It accepts an options object. As with `shopify/web`, you can set `{modules: false}` in order to disable transforming of ES2015 modules. You can also pass a version of Node to target during transpilation using the `version` option:
-
-  ```json
-  {
-    "babel": {
-      "presets": [
-        ["shopify/node", {"modules": false, "version": "5.7.0"}]
-      ]
-    }
-  }
-  ```
+  As with `shopify/web`, you should install `babel-polyfill` to help reduce the duplication of Babel helpers.
 
 - `shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `shopify/web` or `shopify/node` configuration. Note that if you enable this, you do not need to also enable the `shopify/flow` config (it is included automatically). You will, however, need to include an `Object.assign` polyfill in your bundle (we recommend the polyfills found in [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/)).
 
