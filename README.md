@@ -45,9 +45,9 @@ This packages comes with several different presets for you to use, depending on 
       ```json
       {
         "babel": {
-          "presets": {
+          "presets": [
             ["shopify/web", {"modules": false}]
-          }
+          ]
         }
       }
       ```
@@ -57,11 +57,11 @@ This packages comes with several different presets for you to use, depending on 
       ```json
       {
         "babel": {
-          "presets": {
+          "presets": [
             ["shopify/web", {
               "browsers": ["last 3 versions"]
             }]
-          }
+          ]
         }
       }
       ```
@@ -75,12 +75,12 @@ This packages comes with several different presets for you to use, depending on 
   ```json
   {
     "babel": {
-      "presets": {
+      "presets": [
         ["shopify/node", {
           "modules": false,
           "version": 4
         }]
-      }
+      ]
     }
   }
   ```
