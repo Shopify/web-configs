@@ -3,7 +3,7 @@ var nonStandardPlugins = require('./non-standard-plugins');
 
 module.exports = function shopifyWebPreset(context, options) {
   options = options || {};
-  var modules = options.modules == null ? true : options.modules;
+  var modules = options.modules == null ? 'commonjs' : options.modules;
 
   return {
     presets: [
