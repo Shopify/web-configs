@@ -1,3 +1,7 @@
+# 16.0.1
+## Fixed
+- `shopify/web` and `shopify/node` now correctly default the `modules` option to `'commonjs'` instead of `true`.
+
 # 16.0.0
 ## Added
 - `shopify/react` now includes a `hot` option to enable plugins related to hot reloading (`react-hot-loader` and `react-pure-to-component`).
