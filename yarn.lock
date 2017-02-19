@@ -482,9 +482,9 @@ babel-plugin-transform-react-jsx@^6.22.0:
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-react-pure-to-component@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-pure-to-component/-/babel-plugin-transform-react-pure-to-component-1.0.0.tgz#818f4aca063354d165b3842901389f7d43ef7499"
+babel-plugin-transform-react-pure-to-component:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-pure-to-component/-/babel-plugin-transform-react-pure-to-component-1.0.1.tgz#2b18a2093db3473340ead0cca9d9d944e697d6a8"
 
 babel-plugin-transform-regenerator@^6.6.0:
   version "6.22.0"

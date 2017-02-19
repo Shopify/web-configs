@@ -1,3 +1,7 @@
+# 16.0.2
+## Updated
+- Integrated bugfix from most recent version of `babel-plugin-transform-react-pure-to-component`.
+
 # 16.0.1
 ## Fixed
 - `shopify/web` and `shopify/node` now correctly default the `modules` option to `'commonjs'` instead of `true`.
