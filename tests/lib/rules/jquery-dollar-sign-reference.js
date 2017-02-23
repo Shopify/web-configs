@@ -224,6 +224,13 @@ ruleTester.run('jquery-dollar-sign-reference', rule, {
     {code: 'var $foo = foo[$foo];'},
     {code: 'var foo = foo[bar];'},
     {code: 'var $foo = foo[bar];'},
+
+    {code: 'var $foo = $bar || $qux;'},
+    {code: 'var $foo = $bar && $qux;'},
+    {code: 'var $foo = $bar || ($qux && $baz);'},
+    {code: 'var foo = bar || qux;'},
+    {code: 'var foo = bar && quz;'},
+    {code: 'var foo = bar || (qux && baz);'},
   ],
   invalid: [
     {
@@ -574,6 +581,23 @@ ruleTester.run('jquery-dollar-sign-reference', rule, {
     {
       code: 'var $foo = foo["$foo"].size();',
       errors: [unexpectedDollarError({type: 'VariableDeclarator'})],
+    },
+
+    {
+      code: 'var $foo = bar || $baz;',
+      errors: [unexpectedDollarError({type: 'VariableDeclarator'})],
+    },
+    {
+      code: 'var $foo = ($bar || ($baz && qux));',
+      errors: [unexpectedDollarError({type: 'VariableDeclarator'})],
+    },
+    {
+      code: 'var foo = bar || $baz;',
+      errors: [missingDollarError({type: 'VariableDeclarator'})],
+    },
+    {
+      code: 'var foo = (bar || (baz && $qux));',
+      errors: [missingDollarError({type: 'VariableDeclarator'})],
     },
   ],
 });
