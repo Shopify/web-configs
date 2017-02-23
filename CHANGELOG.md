@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [15.1.2] - 2017-02-23
+### Fixed
+- `jquery-dollar-sign-reference` now checks assignments from `LogicalExpression` / `BinaryExpression`
+
 ## [15.1.1] - 2017-01-17
 ### Added
 - Added `eslint-index` package ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
