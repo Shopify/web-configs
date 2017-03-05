@@ -1,0 +1,35 @@
+{
+  "name": "postcss-shopify",
+  "version": "0.0.1",
+  "description": "All of Shopify's recommended PostCSS plugins in one easy-to-use preset.",
+  "main": "index.js",
+  "repository": {
+    "url": "git+https://github.com/shopify/postcss-shopify",
+    "type": "git"
+  },
+  "author": "Shopify <dev@shopify.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "check": "yarn run lint"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:shopify/esnext",
+      "plugin:shopify/node"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^3.17.0",
+    "eslint-plugin-shopify": "^15.1.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.7.6",
+    "postcss": "^5.2.15",
+    "postcss-calc": "^5.3.1",
+    "postcss-discard-comments": "^2.0.4",
+    "postcss-flexbugs-fixes": "^2.1.0",
+    "postcss-selector-matches": "^2.0.5",
+    "postcss-will-change": "^1.1.0"
+  }
+}
