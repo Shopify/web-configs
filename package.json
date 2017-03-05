@@ -3,10 +3,7 @@
   "version": "0.0.1",
   "description": "All of Shopify’s recommended PostCSS plugins in one easy-to-use preset.",
   "main": "index.js",
-  "repository": {
-    "url": "git+https://github.com/shopify/postcss-shopify",
-    "type": "git"
-  },
+  "repository": "https://github.com/Shopify/postcss-shopify.git",
   "author": "Shopify <dev@shopify.com>",
   "license": "MIT",
   "keywords": [
