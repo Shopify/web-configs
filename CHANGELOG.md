@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [15.2.0] - 2017-03-06
+### Changed
+- `eslint` upgrade to `3.17.x`
+
 ## [15.1.2] - 2017-02-23
 ### Fixed
 - `jquery-dollar-sign-reference` now checks assignments from `LogicalExpression` / `BinaryExpression`
