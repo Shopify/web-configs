@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "15.2.0",
+  "version": "15.2.1",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -48,7 +48,7 @@
     "mocha": "3.x"
   },
   "peerDependencies": {
-    "eslint": "3.17.x"
+    "eslint": "3.x"
   },
   "dependencies": {
     "babel-eslint": "7.1.x",
