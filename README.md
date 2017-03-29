@@ -30,7 +30,7 @@ Shopify’s stylelint rules come bundled in `stylelint-config-shopify`. To enabl
 Now you can run stylelint by adding the following linting script to your `package.json`. See the [stylelint CLI docs](https://stylelint.io/user-guide/cli/) for more details.
 ```
 "scripts": {
-  "stylelint": "stylelint foo/*.css"
+  "stylelint": "stylelint 'src/**/*.scss'"
 }
 ```
 Run it:
