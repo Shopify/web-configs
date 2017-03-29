@@ -1,0 +1,44 @@
+{
+  "name": "stylelint-config-shopify",
+  "version": "1.0.0",
+  "description": "Shopify's stylelint rules and config",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shopify/stylelint-config-shopify"
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "check": "yarn run lint",
+    "test": "echo 'no tests, yet'"
+  },
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "config",
+    "shopify",
+    "css"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shopify/stylelint-config-shopify/issues"
+  },
+  "homepage": "https://github.com/shopify/stylelint-config-shopify",
+  "eslintConfig": {
+    "extends": [
+      "plugin:shopify/es5",
+      "plugin:shopify/node"
+    ]
+  },
+  "dependencies": {
+    "merge": "1.2.x",
+    "stylelint-scss": "1.4.x"
+  },
+  "devDependencies": {
+    "eslint": "3.10.x",
+    "eslint-plugin-shopify": "15.1.0"
+  },
+  "peerDependencies": {
+    "stylelint": "7.6.x"
+  }
+}
