@@ -1,0 +1,9 @@
+{
+  "roots": [
+    "<rootDir>/test"
+  ],
+  "testRegex": "[\\w+]\\.(test)\\.js$",
+  "transform": {
+    ".*\\.js$": "babel-jest"
+  }
+}
