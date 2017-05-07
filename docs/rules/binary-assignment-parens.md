@@ -2,7 +2,7 @@
 
 ## Rule Details
 
-This rule aims to ensure consistency in how assignment of binary expressions (specifically those that generate booleans) are treated with respect to parentheses. By default, this rule forces all such expressions (including those nested in logical expressions) to be wrapped in parentheses to remove ambiguity caused by manu `=` operators in a single line of code.
+This rule aims to ensure consistency in how assignment of binary expressions (specifically those that generate booleans) are treated with respect to parentheses. By default, this rule forces all such expressions (including those nested in logical expressions) to be wrapped in parentheses to remove ambiguity caused by many `=` operators in a single line of code.
 
 The following patterns are considered warnings when using the default or explicitly setting the argument to `"always"`:
 
