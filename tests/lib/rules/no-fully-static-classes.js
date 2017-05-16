@@ -1,4 +1,4 @@
-const RuleTester = require('eslint').RuleTester;
+const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/no-fully-static-classes');
 
 const ruleTester = new RuleTester();

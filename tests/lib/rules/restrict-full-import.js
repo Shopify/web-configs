@@ -1,4 +1,4 @@
-const RuleTester = require('eslint').RuleTester;
+const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/restrict-full-import');
 
 const ruleTester = new RuleTester();
