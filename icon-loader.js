@@ -9,6 +9,8 @@ module.exports = function shopifyIconLoader(source) {
     return fill.includes('#FFF') ? 'fill="currentColor"' : '';
   });
 
+  // Issue with ESLint recognizing this as needing an object destructure
+  // eslint-disable-next-line prefer-destructuring
   const viewBox = VIEWBOX_REGEX.exec(finalSource)[1];
   const svgExport = JSON.stringify({
     viewBox,
