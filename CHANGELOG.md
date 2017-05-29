@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [16.0.1] - 2017-05-29
+### Changed
+- Turned off [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring) ([#30](https://github.com/Shopify/eslint-plugin-shopify/pull/30))
+
 ## [16.0.0] - 2017-05-16
 ### Added
 - New rule: [`babel/semi`](https://github.com/babel/eslint-plugin-babel/releases/tag/v4.1.0)
