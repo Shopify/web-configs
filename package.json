@@ -24,29 +24,30 @@
   },
   "eslintConfig": {
     "extends": [
-      "plugin:shopify/es5",
+      "plugin:shopify/esnext",
       "plugin:shopify/node"
     ]
   },
   "devDependencies": {
-    "eslint": "3.10.x",
-    "eslint-plugin-shopify": "15.1.0"
+    "eslint": "^3.19.0",
+    "eslint-plugin-shopify": "^16.0.1"
   },
   "dependencies": {
+    "babel-plugin-react-test-id": "^1.0.2",
     "babel-plugin-syntax-flow": "^6.18.0",
-    "babel-plugin-transform-class-properties": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-inline-environment-variables": "^0.0.2",
-    "babel-plugin-transform-object-rest-spread": "^6.22.0",
-    "babel-plugin-transform-react-constant-elements": "^6.22.0",
-    "babel-plugin-transform-react-jsx": "^6.22.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-plugin-transform-react-jsx-self": "^6.22.0",
     "babel-plugin-transform-react-jsx-source": "^6.22.0",
     "babel-plugin-transform-react-pure-to-component": "^1.0.1",
-    "babel-plugin-transform-runtime": "^6.22.0",
-    "babel-preset-env": "^1.1.8",
-    "babel-preset-react": "^6.22.0",
-    "babel-preset-stage-3": "^6.22.0"
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1"
   },
   "optionalDependencies": {
     "react-hot-loader": "3.0.0-beta.6"

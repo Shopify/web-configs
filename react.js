@@ -1,10 +1,8 @@
-module.exports = function shopifyReactPreset(context, options) {
-  options = options || {};
-
+module.exports = function shopifyReactPreset(context, options = {}) {
   // eslint-disable-next-line no-process-env
-  var env = process.env.BABEL_ENV || process.env.NODE_ENV;
+  const env = process.env.BABEL_ENV || process.env.NODE_ENV;
 
-  var plugins = [
+  const plugins = [
     // Make JSX spread operator use Object.assign instead of the Babel helper
     [require.resolve('babel-plugin-transform-react-jsx'), {
       useBuiltIns: true,
@@ -19,7 +17,7 @@ module.exports = function shopifyReactPreset(context, options) {
     );
   }
 
-  if (env === 'development') {
+  if (env === 'development' || env === 'test') {
     plugins.push(
       // Adds __self attribute to JSX which React will use for some warnings
       require.resolve('babel-plugin-transform-react-jsx-self'),
@@ -38,10 +36,14 @@ module.exports = function shopifyReactPreset(context, options) {
     }
   }
 
+  if (env !== 'test') {
+    plugins.push(require.resolve('babel-plugin-react-test-id'));
+  }
+
   return {
     presets: [
       require.resolve('babel-preset-react'),
     ],
-    plugins: plugins,
+    plugins,
   };
 };

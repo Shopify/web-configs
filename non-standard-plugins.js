@@ -1,8 +1,7 @@
-module.exports = function shopifyNonStandardPlugins(options) {
-  options = options || {};
-  var inlineEnv = options.inlineEnv == null ? false : options.inlineEnv;
+module.exports = function shopifyNonStandardPlugins(options = {}) {
+  const {inlineEnv = false} = options;
 
-  var plugins = [
+  const plugins = [
     [require.resolve('babel-plugin-transform-object-rest-spread'), {
       useBuiltIns: true,
     }],

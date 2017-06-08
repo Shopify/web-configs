@@ -1,14 +1,13 @@
-var browsers = require('./browsers');
-var nonStandardPlugins = require('./non-standard-plugins');
+const browsers = require('./browsers');
+const nonStandardPlugins = require('./non-standard-plugins');
 
-module.exports = function shopifyWebPreset(context, options) {
-  options = options || {};
-  var modules = options.modules == null ? 'commonjs' : options.modules;
+module.exports = function shopifyWebPreset(context, options = {}) {
+  const {modules = 'commonjs'} = options;
 
   return {
     presets: [
       [require.resolve('babel-preset-env'), {
-        modules: modules,
+        modules,
         useBuiltIns: true,
         targets: {
           browsers: options.browsers || browsers,

@@ -1,14 +1,15 @@
-var nonStandardPlugins = require('./non-standard-plugins');
+const nonStandardPlugins = require('./non-standard-plugins');
 
-module.exports = function shopifyNodePreset(context, options) {
-  options = options || {};
-  var version = options.version || 'current';
-  var modules = options.modules == null ? 'commonjs' : options.modules;
+module.exports = function shopifyNodePreset(context, options = {}) {
+  const {
+    version = 'current',
+    modules = 'commonjs',
+  } = options;
 
   return {
     presets: [
       [require.resolve('babel-preset-env'), {
-        modules: modules,
+        modules,
         useBuiltIns: true,
         targets: {
           node: version,
