@@ -1,3 +1,7 @@
+# 16.1.0
+## Added
+- Added a Babel plugin to remove `testID` props in non-test environments.
+
 # 16.0.2
 ## Updated
 - Integrated bugfix from most recent version of `babel-plugin-transform-react-pure-to-component`.
