@@ -1,1 +1,1 @@
-export function svgOptions(): options;
+export function svgOptions(): object;
