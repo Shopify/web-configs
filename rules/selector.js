@@ -35,20 +35,8 @@ module.exports = {
   'selector-max-specificity': '0,3,0',
   // Specify a pattern for the selectors of rules nested within rules.
   'selector-nested-pattern': null,
-  // Disallow attribute selectors.
-  'selector-no-attribute': null,
-  // Disallow combinators in selectors.
-  'selector-no-combinator': null,
-  // Disallow empty selectors.
-  'selector-no-empty': true,
-  // Disallow id selectors.
-  'selector-no-id': true,
   // Disallow qualifying a selector by type.
   'selector-no-qualifying-type': true,
-  // Disallow type selectors.
-  'selector-no-type': null,
-  // Disallow universal selectors.
-  'selector-no-universal': null,
   // Disallow vendor prefixes for selectors.
   'selector-no-vendor-prefix': true,
   // Specify a blacklist of disallowed pseudo-class selectors.
@@ -67,8 +55,6 @@ module.exports = {
   'selector-pseudo-element-colon-notation': 'double',
   // Disallow unknown pseudo-element selectors.
   'selector-pseudo-element-no-unknown': true,
-  // Disallow the composition of :root selectors.
-  'selector-root-no-composition': true,
   // Specify lowercase or uppercase for type selector.
   'selector-type-case': 'lower',
   // Disallow unknown type selectors.
