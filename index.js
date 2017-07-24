@@ -3,7 +3,10 @@
 var merge = require('merge');
 
 module.exports = {
-  plugins: ['stylelint-scss'],
+  plugins: [
+    'stylelint-scss',
+    'stylelint-order',
+  ],
   rules: merge(
     require('./rules/at-rule'),
     require('./rules/block'),
@@ -16,6 +19,7 @@ module.exports = {
     require('./rules/length'),
     require('./rules/media'),
     require('./rules/number'),
+    require('./rules/order'),
     require('./rules/property'),
     require('./rules/rule'),
     require('./rules/scss'),

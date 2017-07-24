@@ -1681,6 +1681,13 @@ postcss-selector-parser@^2.2.3:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
+postcss-sorting@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/postcss-sorting/-/postcss-sorting-3.0.1.tgz#13d42b255e7881fb33d19dcaa4085580be90664c"
+  dependencies:
+    lodash "^4.17.4"
+    postcss "^6.0.1"
+
 postcss-value-parser@^3.1.1, postcss-value-parser@^3.2.3, postcss-value-parser@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
@@ -1703,7 +1710,7 @@ postcss@^5.2.16:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.0, postcss@^6.0.3, postcss@^6.0.6:
+postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.3, postcss@^6.0.6, postcss@^6.0.7:
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.8.tgz#89067a9ce8b11f8a84cbc5117efc30419a0857b3"
   dependencies:
@@ -2038,6 +2045,15 @@ stylehacks@^2.3.0:
     read-file-stdin "^0.2.1"
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
+
+stylelint-order@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/stylelint-order/-/stylelint-order-0.6.0.tgz#72222be0c64d8782b2fc237d0d9ac974039f968b"
+  dependencies:
+    lodash "^4.17.4"
+    postcss "^6.0.7"
+    postcss-sorting "^3.0.1"
+    stylelint "^8.0.0"
 
 stylelint-scss@1.4.x:
   version "1.4.1"

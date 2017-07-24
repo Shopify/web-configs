@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "merge": "1.2.x",
+    "stylelint-order": "^0.6.0",
     "stylelint-scss": "1.4.x"
   },
   "devDependencies": {
