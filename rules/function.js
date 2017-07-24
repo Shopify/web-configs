@@ -25,6 +25,8 @@ module.exports = {
   'function-url-no-scheme-relative': true,
   // Require or disallow quotes for urls.
   'function-url-quotes': 'always',
+  // Specify a blacklist of disallowed url schemes.
+  'function-url-scheme-blacklist': null,
   // Specify a whitelist of allowed url schemes.
   'function-url-scheme-whitelist': ['http', 'https'],
   // Specify a whitelist of only allowed functions.
