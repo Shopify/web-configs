@@ -39,6 +39,6 @@
     "eslint-plugin-shopify": "15.1.0"
   },
   "peerDependencies": {
-    "stylelint": "7.6.x"
+    "stylelint": "8.0.0"
   }
 }
