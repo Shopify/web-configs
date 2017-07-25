@@ -9,7 +9,7 @@
 * New rules:
   * `rule-empty-line-before`
   * `selector-max-universal`
-  * `at-rule-semicolon-space-before` (disabled)
+  * `at-rule-semicolon-space-before`
   * `function-url-scheme-blacklist` (disabled)
   * `selector-max-attribute` (disabled)
   * `selector-max-class` (disabled)
