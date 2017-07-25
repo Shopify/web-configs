@@ -96,9 +96,6 @@ module.exports = {
         'transition',
       ],
     },
-    {
-      unspecified: 'ignore',
-    },
   ],
-  'order/properties-alphabetical-order': false,
+  'order/properties-alphabetical-order': null,
 };
