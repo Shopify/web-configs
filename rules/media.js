@@ -13,6 +13,8 @@ module.exports = {
   'media-feature-name-no-unknown': true,
   // Disallow vendor prefixes for media feature names.
   'media-feature-name-no-vendor-prefix': true,
+  // Specify a whitelist of allowed media feature names
+  'media-feature-name-whitelist': null,
   // Require a single space or disallow whitespace on the inside of the parentheses within media features.
   'media-feature-parentheses-space-inside': 'never',
   // Require a single space or disallow whitespace after the range operator in media features.

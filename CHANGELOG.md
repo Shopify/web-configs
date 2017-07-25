@@ -16,6 +16,8 @@
   * `selector-max-combinators` (disabled)
   * `selector-max-id` (disabled)
   * `selector-max-type` (disabled)
+  * `media-feature-name-whitelist` (disabled)
+  * `time-min-milliseconds` (disabled)
 
 ### Removed
 
