@@ -23,7 +23,7 @@ module.exports = {
   'selector-id-pattern': /^[A-Z][a-zA-Z]+$/,
   // Limit the number of attribute selectors in a selector.
   'selector-max-attribute': 1,
-  // Limit the number of classes in a selector. <FEEDBACK>
+  // Limit the number of classes in a selector.
   'selector-max-class': 2,
   // Limit the number of combinators in a selector.
   'selector-max-combinators': 1,
