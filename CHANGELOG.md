@@ -6,6 +6,9 @@
 
 ### Added
 
+* New plugin: 
+  * Added `stylelint-order` which replaces `declaration-block-properties-order`
+
 * New rules:
   * `rule-empty-line-before`
   * `selector-max-universal`
@@ -34,7 +37,7 @@
   * `root-no-standard-properties`
   * `rule-nested-empty-line-before`
   * `rule-non-nested-empty-line-before`
-
+  
 
 ## [1.0.0] - 2017-05-29
 * Initial release
