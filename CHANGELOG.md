@@ -10,12 +10,12 @@
   * `rule-empty-line-before`
   * `selector-max-universal`
   * `at-rule-semicolon-space-before`
+  * `selector-max-attribute`
+  * `selector-max-class`
+  * `selector-max-combinators`
+  * `selector-max-id`
+  * `selector-max-type`
   * `function-url-scheme-blacklist` (disabled)
-  * `selector-max-attribute` (disabled)
-  * `selector-max-class` (disabled)
-  * `selector-max-combinators` (disabled)
-  * `selector-max-id` (disabled)
-  * `selector-max-type` (disabled)
   * `media-feature-name-whitelist` (disabled)
   * `time-min-milliseconds` (disabled)
 

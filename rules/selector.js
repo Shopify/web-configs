@@ -21,17 +21,17 @@ module.exports = {
   'selector-descendant-combinator-no-non-space': true,
   // Specify a pattern for id selectors.
   'selector-id-pattern': /^[A-Z][a-zA-Z]+$/,
-  // Limit the number of attribute selectors in a selector. <FEEDBACK>
-  'selector-max-attribute': null,
+  // Limit the number of attribute selectors in a selector.
+  'selector-max-attribute': 1,
   // Limit the number of classes in a selector. <FEEDBACK>
-  'selector-max-class': null,
-  // Limit the number of combinators in a selector. <FEEDBACK>
-  'selector-max-combinators': null,
-  // Limit the number of id selectors in a selector. <FEEDBACK>
-  'selector-max-id': null,
-  // Limit the number of type in a selector. <FEEDBACK>
-  'selector-max-type': null,
-  // Limit the number of universal selectors in a selector. <FEEDBACK>
+  'selector-max-class': 2,
+  // Limit the number of combinators in a selector.
+  'selector-max-combinators': 1,
+  // Limit the number of id selectors in a selector.
+  'selector-max-id': 0,
+  // Limit the number of type in a selector.
+  'selector-max-type': 0,
+  // Limit the number of universal selectors in a selector.
   'selector-max-universal': 2,
   // Require a newline or disallow whitespace after the commas of selector lists.
   'selector-list-comma-newline-after': 'always',
