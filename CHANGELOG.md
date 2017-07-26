@@ -37,7 +37,14 @@
   * `root-no-standard-properties`
   * `rule-nested-empty-line-before`
   * `rule-non-nested-empty-line-before`
-  
+
+
+### Changed
+
+* Properties order for shorthand notation with margin, padding, border styles have been updated to follow:
+```
+property: <top> <right> <bottom> <left>
+```
 
 ## [1.0.0] - 2017-05-29
 * Initial release
