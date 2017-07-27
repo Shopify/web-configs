@@ -48,3 +48,8 @@ property: <top> <right> <bottom> <left>
 
 ## [1.0.0] - 2017-05-29
 * Initial release
+
+
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.0...HEAD
+
+[1.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v1.0.0...v2.0.0
