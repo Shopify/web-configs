@@ -21,12 +21,12 @@ module.exports = {
   'function-parentheses-newline-inside': 'always-multi-line',
   // Require a single space or disallow whitespace on the inside of the parentheses of functions.
   'function-parentheses-space-inside': 'never-single-line',
-  // Require or disallow data URIs for urls.
-  'function-url-data-uris': null,
   // Disallow scheme-relative urls.
   'function-url-no-scheme-relative': true,
   // Require or disallow quotes for urls.
   'function-url-quotes': 'always',
+  // Specify a blacklist of disallowed url schemes.
+  'function-url-scheme-blacklist': null,
   // Specify a whitelist of allowed url schemes.
   'function-url-scheme-whitelist': ['http', 'https'],
   // Specify a whitelist of only allowed functions.

@@ -4,8 +4,6 @@ module.exports = {
     except: ['after-comment', 'after-custom-property', 'first-nested'],
     ignore: ['inside-single-line-block'],
   }],
-  // Disallow custom properties outside of :root selectors.
-  'custom-property-no-outside-root': true,
   // Specify pattern of custom properties.
   'custom-property-pattern': null,
   // Specify a blacklist of disallowed properties.

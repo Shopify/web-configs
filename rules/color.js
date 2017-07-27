@@ -9,6 +9,4 @@ module.exports = {
   'color-no-hex': true,
   // Disallow invalid hex colors.
   'color-no-invalid-hex': true,
-  // Disallow colors that are suspiciously close to being identical.
-  'no-indistinguishable-colors': true,
 };

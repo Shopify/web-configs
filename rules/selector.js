@@ -21,6 +21,18 @@ module.exports = {
   'selector-descendant-combinator-no-non-space': true,
   // Specify a pattern for id selectors.
   'selector-id-pattern': /^[A-Z][a-zA-Z]+$/,
+  // Limit the number of attribute selectors in a selector.
+  'selector-max-attribute': 1,
+  // Limit the number of classes in a selector.
+  'selector-max-class': 2,
+  // Limit the number of combinators in a selector.
+  'selector-max-combinators': 1,
+  // Limit the number of id selectors in a selector.
+  'selector-max-id': 0,
+  // Limit the number of type in a selector.
+  'selector-max-type': 0,
+  // Limit the number of universal selectors in a selector.
+  'selector-max-universal': 2,
   // Require a newline or disallow whitespace after the commas of selector lists.
   'selector-list-comma-newline-after': 'always',
   // Require a newline or disallow whitespace before the commas of selector lists.
@@ -35,20 +47,8 @@ module.exports = {
   'selector-max-specificity': '0,3,0',
   // Specify a pattern for the selectors of rules nested within rules.
   'selector-nested-pattern': null,
-  // Disallow attribute selectors.
-  'selector-no-attribute': null,
-  // Disallow combinators in selectors.
-  'selector-no-combinator': null,
-  // Disallow empty selectors.
-  'selector-no-empty': true,
-  // Disallow id selectors.
-  'selector-no-id': true,
   // Disallow qualifying a selector by type.
   'selector-no-qualifying-type': true,
-  // Disallow type selectors.
-  'selector-no-type': null,
-  // Disallow universal selectors.
-  'selector-no-universal': null,
   // Disallow vendor prefixes for selectors.
   'selector-no-vendor-prefix': true,
   // Specify a blacklist of disallowed pseudo-class selectors.
@@ -67,8 +67,6 @@ module.exports = {
   'selector-pseudo-element-colon-notation': 'double',
   // Disallow unknown pseudo-element selectors.
   'selector-pseudo-element-no-unknown': true,
-  // Disallow the composition of :root selectors.
-  'selector-root-no-composition': true,
   // Specify lowercase or uppercase for type selector.
   'selector-type-case': 'lower',
   // Disallow unknown type selectors.
