@@ -2,11 +2,16 @@
 
 <!-- ## [Unreleased] -->
 
-## [2.0.0] - 2017-07-24
+## [2.0.1] - 2017-07-28
+
+### Changed
+* Set `selector-max-type` to 1
+
+## [2.0.0] - 2017-07-27
 
 ### Added
 
-* New plugin: 
+* New plugin:
   * Added `stylelint-order` which replaces `declaration-block-properties-order`
 
 * New rules:
@@ -50,5 +55,6 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v1.0.0...v2.0.0

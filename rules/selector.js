@@ -30,7 +30,7 @@ module.exports = {
   // Limit the number of id selectors in a selector.
   'selector-max-id': 0,
   // Limit the number of type in a selector.
-  'selector-max-type': 0,
+  'selector-max-type': 1,
   // Limit the number of universal selectors in a selector.
   'selector-max-universal': 2,
   // Require a newline or disallow whitespace after the commas of selector lists.
