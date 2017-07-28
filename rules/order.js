@@ -27,7 +27,7 @@ module.exports = {
       properties: [
         'transform',
         'transform-origin',
-        // Animating transitions is common
+        // Animating transforms is common, so let's group them together
         'transition',
         'transition-delay',
         'transition-duration',
