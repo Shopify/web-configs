@@ -28,7 +28,11 @@ module.exports = {
         'transform',
         'transform-origin',
         // Animating transitions is common
-        'transition'
+        'transition',
+        'transition-delay',
+        'transition-duration',
+        'transition-property',
+        'transition-timing-function',
       ],
     },
     
