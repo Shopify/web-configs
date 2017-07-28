@@ -35,7 +35,6 @@ module.exports = {
         'transition-timing-function',
       ],
     },
-    
     {
       order: 'strict',
       properties: [
@@ -191,7 +190,7 @@ module.exports = {
     {
       order: 'strict',
       properties: [
-        'cursor'
+        'cursor',
       ],
     },
   ],
