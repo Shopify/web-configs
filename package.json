@@ -10,6 +10,9 @@
     "eslint-plugin"
   ],
   "author": "Chris Sauve <chris.sauve@shopify.com>",
+  "engines" : {
+    "node" : ">=6.11.1"
+  },
   "scripts": {
     "check": "yarn run lint && yarn test",
     "rules-status": "eslint-index lib/config/all.js  --format table",

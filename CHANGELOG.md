@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Changed
 - `eslint` upgrade to `4.3.0`
+- `node.js` minimum supported node version update to `6.11.1` (LTS).
 - Upgrade dependencies:
   - `eslint-plugin-ava`: `^4.2.0` → `^4.2.1`.
   - `eslint-plugin-babel`: `^4.1.1` → `^4.1.2`.
