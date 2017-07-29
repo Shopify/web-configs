@@ -1,6 +1,9 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+- `eslint` upgrade to `4.3.0`
+
 
 ## [16.0.1] - 2017-05-29
 ### Changed
