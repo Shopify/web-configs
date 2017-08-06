@@ -4,16 +4,13 @@
 ### Changed
 - `eslint` upgrade to `4.3.0`
 - `node.js` minimum supported node version update to `6.11.1` (LTS).
-- Upgrade dependencies:
+- Update dependencies:
   - `eslint-plugin-ava`: `^4.2.0` → `^4.2.1`.
   - `eslint-plugin-babel`: `^4.1.1` → `^4.1.2`.
-  - `eslint-plugin-flowtype`: `^2.32.1` → `^2.35.0`.
-  - `eslint-plugin-import`: `2.2.x` → `^2.7.0`.
-  - `eslint-plugin-jsx-a11y`: `^5.0.1` → `^6.0.2`.
   - `eslint-plugin-lodash`: `^2.4.2` → `^2.4.4`.
   - `eslint-plugin-mocha`: `^4.9.0` → `^4.11.0`.
-  - `eslint-plugin-node`: `^4.2.2` → `^5.1.1`.
-  - `eslint-plugin-react`: `^7.0.0` → `^7.1.0`.
+  - `eslint-plugin-node`: `^4.2.2` → `^4.2.3`.
+  - `eslint-plugin-react`: `^7.0.0` → `^7.0.1`.
 
 
 ## [16.0.1] - 2017-05-29
