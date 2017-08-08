@@ -22,7 +22,7 @@
     "test:watch": "yarn test -- --watch --reporter min",
     "test:cover": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter spec --recursive tests/",
     "preversion": "yarn run check",
-    "postversion": "git push && git push --follow-tags"
+    "postversion": "git push --follow-tags"
   },
   "license": "MIT",
   "babel": {
