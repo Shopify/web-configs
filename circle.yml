@@ -1,6 +1,8 @@
 machine:
   environment:
     PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
+  node:
+    version: 6.11.1
 
 dependencies:
   override:
@@ -11,4 +13,3 @@ dependencies:
 test:
   override:
     - yarn run check
-

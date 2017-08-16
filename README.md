@@ -10,12 +10,10 @@ Shopify’s ESLint rules and configs.
 
 You'll first need to install [ESLint](http://eslint.org):
 
-> **Note** `eslint-plugin-shopify` has not yet been updated to work with the latest version of `eslint`. Please make sure you use v3.19.0
-
 **With Yarn**
 
 ```bash
-yarn add --dev eslint@3.19.0
+yarn add --dev eslint
 ```
 
 **With npm**

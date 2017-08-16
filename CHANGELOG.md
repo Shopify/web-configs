@@ -2,6 +2,20 @@
 
 ## [Unreleased]
 
+
+## [17.0.0] - 2017-08-09
+### Changed
+- `eslint` upgrade to `4.3.0`
+- `node.js` minimum supported node version update to `6.11.1` (LTS).
+- Update dependencies:
+  - `eslint-plugin-ava`: `^4.2.0` → `^4.2.1`.
+  - `eslint-plugin-babel`: `^4.1.1` → `^4.1.2`.
+  - `eslint-plugin-lodash`: `^2.4.2` → `^2.4.4`.
+  - `eslint-plugin-mocha`: `^4.9.0` → `^4.11.0`.
+  - `eslint-plugin-node`: `^4.2.2` → `^4.2.3`.
+  - `eslint-plugin-react`: `^7.0.0` → `^7.0.1`.
+
+
 ## [16.0.1] - 2017-05-29
 ### Changed
 - Turned off [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring) ([#30](https://github.com/Shopify/eslint-plugin-shopify/pull/30))
