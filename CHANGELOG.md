@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+* Updated [stylelint-scss](https://github.com/kristerkari/stylelint-scss) from `1.4.x` to `^2.0.1`
+* Replaced deprecated `scss/at-mixin-no-argumentless-call-parentheses` rule with its equivalent `scss/at-mixin-argumentless-call-parentheses`
+* Updated `eslint-plugin-shopify` to the latest version, and updated ESLint to the appropriate version
 
 ## [2.0.1] - 2017-07-28
 
