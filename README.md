@@ -1,5 +1,5 @@
 # stylelint-config-shopify
-[![Circle CI](https://circleci.com/gh/Shopify/stylelint-config-shopify.svg?style=svg)](https://circleci.com/gh/Shopify/stylelint-config-shopify)
+[![Circle CI](https://circleci.com/gh/Shopify/stylelint-config-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/stylelint-config-shopify)
 [![David-DM](https://david-dm.org/shopify/stylelint-config-shopify.svg)](https://david-dm.org/Shopify/stylelint-config-shopify)
 
 Shopify's stylelint rules and config
