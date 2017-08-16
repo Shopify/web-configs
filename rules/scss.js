@@ -20,7 +20,7 @@ module.exports = {
   // Specify whitelist of allowed file extensions for partial names in @import commands.
   'scss/at-import-partial-extension-whitelist': null,
   // Disallow parentheses in argumentless @mixin calls.
-  'scss/at-mixin-no-argumentless-call-parentheses': true,
+  'scss/at-mixin-argumentless-call-parentheses': 'never',
   // Specify a pattern for Sass/SCSS-like mixin names.
   'scss/at-mixin-pattern': null,
   // Require a newline after the colon in $-variable declarations.
