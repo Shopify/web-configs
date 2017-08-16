@@ -33,11 +33,11 @@
   "dependencies": {
     "merge": "1.2.x",
     "stylelint-order": "0.6.x",
-    "stylelint-scss": "1.4.x"
+    "stylelint-scss": "^2.0.1"
   },
   "devDependencies": {
-    "eslint": "3.10.x",
-    "eslint-plugin-shopify": "15.1.0"
+    "eslint": "^3.19.0",
+    "eslint-plugin-shopify": "^16.0.1"
   },
   "peerDependencies": {
     "stylelint": "8.0.x"
