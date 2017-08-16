@@ -1389,16 +1389,16 @@ eslint-plugin-promise@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.5.0.tgz#78fbb6ffe047201627569e85a6c5373af2a68fca"
 
-eslint-plugin-react@^7.0.1:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.1.0.tgz#27770acf39f5fd49cd0af4083ce58104eb390d4c"
+eslint-plugin-react@^7.2.0:
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.2.1.tgz#c2673526ed6571b08c69c5f453d03f5f13e8ddbe"
   dependencies:
     doctrine "^2.0.0"
     has "^1.0.1"
-    jsx-ast-utils "^1.4.1"
+    jsx-ast-utils "^2.0.0"
 
 "eslint-plugin-shopify@file:.":
-  version "17.0.0-0"
+  version "17.0.0-1"
   dependencies:
     babel-eslint "^7.2.3"
     eslint-plugin-ava "^4.2.1"
@@ -1411,11 +1411,11 @@ eslint-plugin-react@^7.0.1:
     eslint-plugin-mocha "^4.11.0"
     eslint-plugin-node "^4.2.3"
     eslint-plugin-promise "^3.5.0"
-    eslint-plugin-react "^7.0.1"
-    eslint-plugin-sort-class-members "^1.1.1"
+    eslint-plugin-react "^7.2.0"
+    eslint-plugin-sort-class-members "^1.2.0"
     merge "^1.2.0"
 
-eslint-plugin-sort-class-members@^1.1.1:
+eslint-plugin-sort-class-members@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.2.0.tgz#890111a642c091ce55aa5369bea4c9a9f3def85b"
 
@@ -2201,9 +2201,15 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
-jsx-ast-utils@^1.4.0, jsx-ast-utils@^1.4.1:
+jsx-ast-utils@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-1.4.1.tgz#3867213e8dd79bf1e8f2300c0cfc1efb182c0df1"
+
+jsx-ast-utils@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-2.0.0.tgz#ec06a3d60cf307e5e119dac7bad81e89f096f0f8"
+  dependencies:
+    array-includes "^3.0.3"
 
 kind-of@^3.0.2:
   version "3.2.2"
