@@ -3,7 +3,7 @@
 ## [Unreleased]
 
 
-## [17.0.0] - 2017-08-09
+## [17.0.0] - 2017-08-17
 ### Changed
 - `eslint` upgrade to `4.3.0`
 - `node.js` minimum supported node version update to `6.11.1` (LTS).
