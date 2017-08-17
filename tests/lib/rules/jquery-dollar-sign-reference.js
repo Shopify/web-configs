@@ -231,6 +231,9 @@ ruleTester.run('jquery-dollar-sign-reference', rule, {
     {code: 'var foo = bar || qux;'},
     {code: 'var foo = bar && quz;'},
     {code: 'var foo = bar || (qux && baz);'},
+
+    {code: 'var foo = {["bar"]: "bar"}', parserOptions: {ecmaVersion: 2015}},
+    {code: 'var foo = {["$bar"]: $bar}', parserOptions: {ecmaVersion: 2015}},
   ],
   invalid: [
     {
@@ -598,6 +601,17 @@ ruleTester.run('jquery-dollar-sign-reference', rule, {
     {
       code: 'var foo = (bar || (baz && $qux));',
       errors: [missingDollarError({type: 'VariableDeclarator'})],
+    },
+
+    {
+      code: 'var foo = {["$bar"]: "bar"}',
+      errors: [unexpectedDollarError({type: 'Property'})],
+      parserOptions: {ecmaVersion: 2015},
+    },
+    {
+      code: 'var foo = {["bar"]: $bar}',
+      errors: [missingDollarError({type: 'Property'})],
+      parserOptions: {ecmaVersion: 2015},
     },
   ],
 });
