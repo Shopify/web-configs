@@ -1,7 +1,7 @@
 # Changelog
 
 ## [Unreleased]
-
+- `jquery-dollar-sign-reference` no longer flags assignments from `await` expressions
 
 ## [17.0.0] - 2017-08-17
 ### Changed
