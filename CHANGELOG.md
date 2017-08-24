@@ -1,3 +1,7 @@
+# 16.2.0
+## Added
+- Added `babel-plugin-syntax-dynamic-import` to the web config.
+
 # 16.1.0
 ## Added
 - Added a Babel plugin to remove `testID` props in non-test environments.

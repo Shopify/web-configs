@@ -11,6 +11,7 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
       regenerator: true,
     }],
     require.resolve('babel-plugin-transform-class-properties'),
+    require.resolve('babel-plugin-syntax-dynamic-import'),
   ];
 
   if (inlineEnv) {
