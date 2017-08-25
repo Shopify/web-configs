@@ -10,7 +10,9 @@ module.exports = {
   // Specify lowercase or uppercase for media feature names.
   'media-feature-name-case': 'lower',
   // Disallow unknown media feature names.
-  'media-feature-name-no-unknown': true,
+  'media-feature-name-no-unknown': [true, {
+    ignoreMediaFeatureNames: ['prefers-reduced-motion'],
+  }],
   // Disallow vendor prefixes for media feature names.
   'media-feature-name-no-vendor-prefix': true,
   // Specify a whitelist of allowed media feature names
