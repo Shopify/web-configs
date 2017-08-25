@@ -2,10 +2,15 @@
 
 ## [Unreleased]
 
-* Updated [stylelint-scss](https://github.com/kristerkari/stylelint-scss) from `1.4.x` to `^2.0.1`
+## [2.1.0] - 2017-08-25
+
+### Updated
+* [stylelint-scss](https://github.com/kristerkari/stylelint-scss) from `1.4.x` to `^2.0.1`
 * Replaced deprecated `scss/at-mixin-no-argumentless-call-parentheses` rule with its equivalent `scss/at-mixin-argumentless-call-parentheses`
-* Updated `eslint-plugin-shopify` to the latest version, and updated ESLint to the appropriate version
-* Updates `media-feature-name-no-unknown` to ignore `prefers-reduced-motion`
+* `eslint-plugin-shopify` to the latest version, and updated ESLint to the appropriate version
+
+### Changed
+* `media-feature-name-no-unknown` to ignore `prefers-reduced-motion`
 
 ## [2.0.1] - 2017-07-28
 
@@ -60,6 +65,7 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.1...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v1.0.0...v2.0.0
