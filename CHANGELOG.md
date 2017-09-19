@@ -1,7 +1,44 @@
 # Changelog
 
 ## [Unreleased]
+
+## [17.1.0] - 2017-09-19
+
+### Added
+* New rules ([#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)):
+  - `import/no-anonymous-default-export`
+  - `jsx-a11y/anchor-is-valid`
+  - `no-buffer-constructor`
+  - `node/no-extraneous-import` (disabled)
+  - `node/no-extraneous-require`
+  - `for-direction`
+  - `getter-return`
+  - `react/boolean-prop-naming` (disabled)
+  - `react/default-props-match-prop-types`
+  - `react/no-redundant-should-component-update`
+  - `react/no-typos`
+  - `react/no-unused-state`
+  - `react/jsx-closing-tag-location`
+  - `array-bracket-newline` (disabled)
+  - `array-element-newline` (disabled)
+  - `function-paren-newline`
+  - `padding-line-between-statements` (disabled)
+  - `semi-style`
+  - `switch-colon-spacing`
+
+
+### Changed
+- Updated dependencies ([#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)):
+  - `eslint`
+  - `babel-eslint`
+  - `eslint-plugin-import`
+  - `eslint-plugin-jsx-a11y`
+  - `eslint-plugin-node`
+  - `eslint-plugin-react`
 - `jquery-dollar-sign-reference` no longer flags assignments from `await` expressions
+
+### Removed
+- `jsx-a11y/href-no-hash` replaced with `jsx-a11y/anchor-is-valid`
 
 ## [17.0.0] - 2017-08-17
 ### Changed
