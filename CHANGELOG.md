@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Changed
+* `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`)
+
 ## [17.1.0] - 2017-09-19
 
 ### Added
