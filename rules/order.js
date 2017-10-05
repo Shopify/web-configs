@@ -1,16 +1,22 @@
 // Order inspired by Concentric CSS
 // http://rhodesmill.org/brandon/2011/concentric-css/
 module.exports = {
+  // https://github.com/hudochenkov/stylelint-order/tree/master/rules/order
+  // Force variables to be at the top
+  'order/order': ['custom-properties', 'dollar-variables'],
+  // https://github.com/hudochenkov/stylelint-order/tree/master/rules/properties-order
   'order/properties-order': [
+    // Weird properties
     {
-      order: 'strict',
+      order: 'flexible',
       properties: [
         'content',
         'quotes',
       ],
     },
+    // Positioning
     {
-      order: 'strict',
+      order: 'flexible',
       properties: [
         'position',
         'z-index',
@@ -18,39 +24,11 @@ module.exports = {
         'right',
         'bottom',
         'left',
-        'visibility',
-        'opacity',
       ],
     },
+    // Box model
     {
-      order: 'strict',
-      properties: [
-        'transform',
-        'transform-origin',
-        // Animating transforms is common, so let's group them together
-        'transition',
-        'transition-delay',
-        'transition-duration',
-        'transition-property',
-        'transition-timing-function',
-      ],
-    },
-    {
-      order: 'strict',
-      properties: [
-        'animation',
-        'animation-name',
-        'animation-duration',
-        'animation-timing-function',
-        'animation-delay',
-        'animation-iteration-count',
-        'animation-direction',
-        'animation-fill-mode',
-        'animation-play-state',
-      ],
-    },
-    {
-      order: 'strict',
+      order: 'flexible',
       properties: [
         'box-sizing',
         'display',
@@ -101,19 +79,6 @@ module.exports = {
         'padding-right',
         'padding-bottom',
         'padding-left',
-      ],
-    },
-    {
-      order: 'strict',
-      properties: [
-        'background',
-        'background-attachment',
-        'background-clip',
-        'background-color',
-        'background-image',
-        'background-repeat',
-        'background-position',
-        'background-size',
         'border',
         'border-top',
         'border-right',
@@ -139,60 +104,10 @@ module.exports = {
         'border-right-color',
         'border-bottom-color',
         'border-left-color',
-        'outline',
-        'box-shadow',
       ],
     },
-    {
-      order: 'strict',
-      properties: [
-        'list-style',
-        'list-style-type',
-        'list-style-image',
-        'list-style-position',
-      ],
-    },
-    {
-      order: 'strict',
-      properties: [
-        'caption-side',
-        'table-layout',
-        'border-collapse',
-        'border-spacing',
-        'empty-cells',
-      ],
-    },
-    {
-      order: 'strict',
-      properties: [
-        'font',
-        'font-size',
-        'font-weight',
-        'font-style',
-        'font-smoothing',
-        'font-feature-settings',
-        'line-height',
-        'color',
-        'text-align',
-        'text-indent',
-        'text-transform',
-        'text-decoration',
-        'text-rendering',
-        'text-shadow',
-        'text-overflow',
-        'letter-spacing',
-        'word-spacing',
-        'word-wrap',
-        'word-break',
-        'white-space',
-      ],
-    },
-    {
-      order: 'strict',
-      properties: [
-        'cursor',
-      ],
-    },
+    // All other properties come after
   ],
+  // https://github.com/hudochenkov/stylelint-order/tree/master/rules/properties-alphabetical-order
   'order/properties-alphabetical-order': null,
 };
