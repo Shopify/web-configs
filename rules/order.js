@@ -13,6 +13,8 @@ module.exports = {
   //
   // Positioning and box model properties are at the top because they help
   // easily draw a mental image of an element’s shape and form.
+  //
+  // No specific property order is enforced within those groups.
   'order/properties-order': [
     // Weird properties
     {
