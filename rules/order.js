@@ -1,10 +1,18 @@
-// Order inspired by Concentric CSS
-// http://rhodesmill.org/brandon/2011/concentric-css/
 module.exports = {
   // https://github.com/hudochenkov/stylelint-order/tree/master/rules/order
   // Force variables to be at the top
   'order/order': ['custom-properties', 'dollar-variables'],
+
   // https://github.com/hudochenkov/stylelint-order/tree/master/rules/properties-order
+  // Order inspired by Concentric CSS http://rhodesmill.org/brandon/2011/concentric-css/
+  // Group properties in this order:
+  // 1. Weird properties
+  // 2. Positioning
+  // 3. Box model
+  // 4. Everything else
+  //
+  // Positioning and box model properties are at the top because they help
+  // easily draw a mental image of an element’s shape and form.
   'order/properties-order': [
     // Weird properties
     {
@@ -108,6 +116,7 @@ module.exports = {
     },
     // All other properties come after
   ],
+
   // https://github.com/hudochenkov/stylelint-order/tree/master/rules/properties-alphabetical-order
   'order/properties-alphabetical-order': null,
 };
