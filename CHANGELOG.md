@@ -4,7 +4,11 @@
 
 ## 3.0.0 (currently in beta)
 
-`yarn add stylelint-config-shopify@next`
+Test this new release with:
+
+```
+yarn add --dev stylelint-config-shopify@next
+```
 
 - Enforce property grouping, see [#10](https://github.com/Shopify/stylelint-config-shopify/pull/10)
 
