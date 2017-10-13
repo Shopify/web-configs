@@ -1,6 +1,58 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## 3.0.0 (currently in beta)
+
+`yarn add stylelint-config-shopify@next`
+
+- Enforce property grouping, see [#10](https://github.com/Shopify/stylelint-config-shopify/pull/10)
+
+### tl;dr
+
+- Put variables & custom properties at the top (unless anyone feels strongly about this)
+- Then come weird props, positioning & box model properties
+- All other properties come after
+- No specific property order is enforced
+
+### The following patterns are _not_ considered warnings:
+
+```scss
+.Foo {
+  $foo: 'foo';
+  position: relative;
+  display: block;
+  margin: 10px;
+  color: $foo;
+}
+
+.Foo {
+  $foo: 'foo';
+  position: relative;
+  margin: 10px;
+  display: block;
+  color: $foo;
+}
+```
+
+### The following patterns are considered warnings:
+
+```scss
+.Foo {
+  position: relative;
+  display: block;
+  $foo: 'foo';
+  color: $foo;
+}
+
+.Foo {
+  $foo: 'foo';
+  color: $foo;
+  position: relative;
+  display: block;
+}
+```
+
 
 ## [2.1.0] - 2017-08-25
 
