@@ -44,3 +44,39 @@ yarn run stylelint
 ```
 npm run stylelint
 ```
+
+## Prettier
+
+This config also includes a prettier config which can be extended to format `.scss`.
+
+Install [`prettier-stylelint`](https://github.com/hugomrdias/prettier-stylelint):
+
+```
+$ yarn add --dev prettier-stylelint
+```
+
+Extend the config in your `package.json`:
+
+```
+  "stylelint": {
+    "extends": [
+      "stylelint-config-shopify/prettier"
+    ]
+  },
+```
+
+Add a prettier config in `package.json`:
+
+```
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": false
+  },
+  ```
+
+Run `prettier-stylelint`:
+
+```
+$ prettier-stylelint **/*.scss
+```
