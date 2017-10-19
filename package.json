@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-shopify",
-  "version": "3.0.0-beta.3",
+  "version": "3.0.0-beta.4",
   "description": "Shopify's stylelint rules and config",
   "main": "index.js",
   "repository": {
@@ -37,7 +37,8 @@
   },
   "devDependencies": {
     "eslint": "^4.8.0",
-    "eslint-plugin-shopify": "^17.1.0"
+    "eslint-plugin-shopify": "^17.1.0",
+    "prettier-stylelint": "^0.4.2"
   },
   "peerDependencies": {
     "stylelint": ">=8.0 <=8.1"
