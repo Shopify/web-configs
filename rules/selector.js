@@ -12,7 +12,7 @@ module.exports = {
   // Require or disallow quotes for attribute values.
   'selector-attribute-quotes': 'always',
   // Specify a pattern for class selectors.
-  'selector-class-pattern': /^[a-zA-Z]+$/,
+  'selector-class-pattern': /^[a-zA-Z][a-zA-Z0-9]+$/,
   // Require a single space or disallow whitespace after the combinators of selectors.
   'selector-combinator-space-after': 'always',
   // Require a single space or disallow whitespace before the combinators of selectors.
@@ -20,7 +20,7 @@ module.exports = {
   // Disallow non-space characters for descendant combinators of selectors.
   'selector-descendant-combinator-no-non-space': true,
   // Specify a pattern for id selectors.
-  'selector-id-pattern': /^[A-Z][a-zA-Z]+$/,
+  'selector-id-pattern': /^[A-Z][a-zA-Z0-9]+$/,
   // Limit the number of attribute selectors in a selector.
   'selector-max-attribute': 1,
   // Limit the number of classes in a selector.
