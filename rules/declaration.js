@@ -41,7 +41,6 @@ module.exports = {
   'declaration-property-unit-whitelist': null,
   // Specify a blacklist of disallowed property and value pairs within declarations.
   'declaration-property-value-blacklist': {
-    position: ['fixed'],
     '/^animation/': ['linear'],
   },
   // Specify a whitelist of allowed property and value pairs within declarations.
