@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+## [17.2.0] - 2017-10-25
+### Added
+* Added a prettier config [[#46](https://github.com/Shopify/eslint-plugin-shopify/pull/46)]
+
+Example:
+```
+"eslintConfig": {
+  "extends": [
+    "plugin:shopify/prettier"
+  ]
+}
+```
+
 ### Changed
 * Replace all `warn` with `error`
 * `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`)
