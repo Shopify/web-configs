@@ -16,10 +16,13 @@ Example:
 ```
 
 ### Changed
-* Replace all `warn` with `error`
-* `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`)
-* `lines-around-directive` was deprecated in ESLint `v4.0.0`.
-* Enable `padding-line-between-statements` for directives
+* Replace all `warn` with `error` [[#48](https://github.com/Shopify/eslint-plugin-shopify/pull/48)]
+* `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`) [[#43](https://github.com/Shopify/eslint-plugin-shopify/pull/43)]
+* Enable `padding-line-between-statements` for directives.  [[#44](https://github.com/Shopify/eslint-plugin-shopify/pull/44)]
+
+### Removed
+* `lines-around-directive` was deprecated in ESLint `v4.0.0`. [[#44](https://github.com/Shopify/eslint-plugin-shopify/pull/44)]
+
 
 ## [17.1.0] - 2017-09-19
 
