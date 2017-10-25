@@ -38,9 +38,7 @@ ruleTester.run('prefer-early-return', rule, {
           doSomethingElse();
         }
       }`,
-      options: [
-        {maximumStatements: 2},
-      ],
+      options: [{maximumStatements: 2}],
     },
     {
       code: `function foo() {
@@ -114,9 +112,7 @@ ruleTester.run('prefer-early-return', rule, {
           doSomething();
         }
       }`,
-      options: [
-        {maximumStatements: 0},
-      ],
+      options: [{maximumStatements: 0}],
       errors: [error],
     },
     {

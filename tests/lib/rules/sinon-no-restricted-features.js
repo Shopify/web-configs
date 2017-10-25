@@ -12,10 +12,12 @@ const injectUnrestricted = 'this.stub();';
 
 const restricted = ['mock'];
 const aliases = ['sandbox'];
-const errors = [{
-  message: `Unexpected use of sinon.${restricted[0]}.`,
-  type: 'MemberExpression',
-}];
+const errors = [
+  {
+    message: `Unexpected use of sinon.${restricted[0]}.`,
+    type: 'MemberExpression',
+  },
+];
 
 ruleTester.run('sinon-no-restricted-features', rule, {
   valid: [
@@ -25,7 +27,10 @@ ruleTester.run('sinon-no-restricted-features', rule, {
     {code: aliasRestricted, options: [{restricted}]},
     {code: aliasUnrestricted, options: [{restricted, aliases}]},
     {code: injectRestricted, options: [{restricted, aliases}]},
-    {code: injectUnrestricted, options: [{restricted, aliases, injected: true}]},
+    {
+      code: injectUnrestricted,
+      options: [{restricted, aliases, injected: true}],
+    },
   ],
 
   invalid: [

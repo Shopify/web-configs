@@ -9,23 +9,47 @@ const parserOptions = {
   ecmaVersion: 6,
 };
 
-const classPropErrors = [{
-  type: 'ClassProperty',
-  message: 'Unexpected class property.',
-}];
+const classPropErrors = [
+  {
+    type: 'ClassProperty',
+    message: 'Unexpected class property.',
+  },
+];
 
-const assignErrors = [{
-  type: 'AssignmentExpression',
-  message: 'Unexpected assignment of literal instance member.',
-}];
+const assignErrors = [
+  {
+    type: 'AssignmentExpression',
+    message: 'Unexpected assignment of literal instance member.',
+  },
+];
 
 ruleTester.run('prefer-class-properties', rule, {
   valid: [
-    {code: 'class Foo { foo = "bar"; }', parser: 'babel-eslint', options: ['always']},
-    {code: 'class Foo { foo = bar(); }', parser: 'babel-eslint', options: ['always']},
-    {code: 'class Foo { foo = 123; }', parser: 'babel-eslint', options: ['always']},
-    {code: 'class Foo { static foo = "bar"; }', parser: 'babel-eslint', options: ['never']},
-    {code: 'class Foo { static foo = "bar"; }', parser: 'babel-eslint', options: ['always']},
+    {
+      code: 'class Foo { foo = "bar"; }',
+      parser: 'babel-eslint',
+      options: ['always'],
+    },
+    {
+      code: 'class Foo { foo = bar(); }',
+      parser: 'babel-eslint',
+      options: ['always'],
+    },
+    {
+      code: 'class Foo { foo = 123; }',
+      parser: 'babel-eslint',
+      options: ['always'],
+    },
+    {
+      code: 'class Foo { static foo = "bar"; }',
+      parser: 'babel-eslint',
+      options: ['never'],
+    },
+    {
+      code: 'class Foo { static foo = "bar"; }',
+      parser: 'babel-eslint',
+      options: ['always'],
+    },
     {
       code: `class Foo {
         constructor() {
@@ -120,9 +144,24 @@ ruleTester.run('prefer-class-properties', rule, {
     },
   ],
   invalid: [
-    {code: 'class Foo { foo = "bar"; }', parser: 'babel-eslint', options: ['never'], errors: classPropErrors},
-    {code: 'class Foo { foo = bar(); }', parser: 'babel-eslint', options: ['never'], errors: classPropErrors},
-    {code: 'class Foo { foo = 123; }', parser: 'babel-eslint', options: ['never'], errors: classPropErrors},
+    {
+      code: 'class Foo { foo = "bar"; }',
+      parser: 'babel-eslint',
+      options: ['never'],
+      errors: classPropErrors,
+    },
+    {
+      code: 'class Foo { foo = bar(); }',
+      parser: 'babel-eslint',
+      options: ['never'],
+      errors: classPropErrors,
+    },
+    {
+      code: 'class Foo { foo = 123; }',
+      parser: 'babel-eslint',
+      options: ['never'],
+      errors: classPropErrors,
+    },
     {
       code: `class Foo {
         constructor() {

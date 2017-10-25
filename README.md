@@ -89,6 +89,7 @@ This plugin also provides the following tool-specific configurations, which can 
 - [ava](lib/config/ava.js): Use this for projects that use the [AVA test runner](https://github.com/sindresorhus/ava).
 - [flow](lib/config/flow.js): Use this for projects that use [flow](http://flowtype.org) for type checking.
 - [jquery](lib/config/jquery.js): Use this for projects that use [jQuery](http://jquery.com).
+- [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting.
 
 ### node
 

@@ -11,7 +11,8 @@ function missingDollarError(otherAttrs) {
 }
 
 function unexpectedDollarError(otherAttrs) {
-  otherAttrs.message = 'Don’t use a $-prefixed identifier for a non-jQuery value.';
+  otherAttrs.message =
+    'Don’t use a $-prefixed identifier for a non-jQuery value.';
   return otherAttrs;
 }
 
@@ -235,14 +236,38 @@ ruleTester.run('jquery-dollar-sign-reference', rule, {
     {code: 'var foo = {["bar"]: "bar"}', parserOptions: {ecmaVersion: 2015}},
     {code: 'var foo = {["$bar"]: $bar}', parserOptions: {ecmaVersion: 2015}},
 
-    {code: 'async function foo() { const foo = await aPromise; }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { const foo = await $aPromise; }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { const $foo = await aPromise; }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { const $foo = await $aPromise; }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { const {foo} = await $aPromise; }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { const {$foo} = await bar(); }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { $foo = await aPromise; }', parserOptions: {ecmaVersion: 2017}},
-    {code: 'async function foo() { $foo = await bar(); }', parserOptions: {ecmaVersion: 2017}},
+    {
+      code: 'async function foo() { const foo = await aPromise; }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { const foo = await $aPromise; }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { const $foo = await aPromise; }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { const $foo = await $aPromise; }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { const {foo} = await $aPromise; }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { const {$foo} = await bar(); }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { $foo = await aPromise; }',
+      parserOptions: {ecmaVersion: 2017},
+    },
+    {
+      code: 'async function foo() { $foo = await bar(); }',
+      parserOptions: {ecmaVersion: 2017},
+    },
   ],
   invalid: [
     {

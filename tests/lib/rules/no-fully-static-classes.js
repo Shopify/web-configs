@@ -7,16 +7,27 @@ require('babel-eslint');
 
 const parser = 'babel-eslint';
 
-function method(name = 'foo') { return `${name}() {}`; }
-function staticMethod(name = 'bar') { return `static ${name}() {}`; }
-function property(name = 'baz') { return `${name} = true;`; }
-function staticProperty(name = 'qux') { return `static ${name} = true;`; }
+function method(name = 'foo') {
+  return `${name}() {}`;
+}
+function staticMethod(name = 'bar') {
+  return `static ${name}() {}`;
+}
+function property(name = 'baz') {
+  return `${name} = true;`;
+}
+function staticProperty(name = 'qux') {
+  return `static ${name} = true;`;
+}
 
 function errorWithType(type) {
-  return [{
-    type,
-    message: 'Classes declaring only static members should be objects or named exports instead.',
-  }];
+  return [
+    {
+      type,
+      message:
+        'Classes declaring only static members should be objects or named exports instead.',
+    },
+  ];
 }
 
 ruleTester.run('prefer-class-properties', rule, {

@@ -17,7 +17,11 @@ ruleTester.run('class-property-semi', rule, {
     {code: classPropWithSemi, parser: 'babel-eslint', options: ['always']},
     {code: classPropNoSemi, parser: 'babel-eslint', options: ['never']},
     {code: classStaticPropWithSemi, parser: 'babel-eslint'},
-    {code: classStaticPropWithSemi, parser: 'babel-eslint', options: ['always']},
+    {
+      code: classStaticPropWithSemi,
+      parser: 'babel-eslint',
+      options: ['always'],
+    },
     {code: classStaticPropNoSemi, parser: 'babel-eslint', options: ['never']},
     {code: classMethod, parserOptions: {ecmaVersion: 6}},
   ],
@@ -25,54 +29,66 @@ ruleTester.run('class-property-semi', rule, {
     {
       code: classPropNoSemi,
       parser: 'babel-eslint',
-      errors: [{
-        message: 'Missing semicolon.',
-        type: 'ClassProperty',
-      }],
+      errors: [
+        {
+          message: 'Missing semicolon.',
+          type: 'ClassProperty',
+        },
+      ],
     },
     {
       code: classPropNoSemi,
       parser: 'babel-eslint',
       options: ['always'],
-      errors: [{
-        message: 'Missing semicolon.',
-        type: 'ClassProperty',
-      }],
+      errors: [
+        {
+          message: 'Missing semicolon.',
+          type: 'ClassProperty',
+        },
+      ],
     },
     {
       code: classPropWithSemi,
       parser: 'babel-eslint',
       options: ['never'],
-      errors: [{
-        message: 'Extra semicolon.',
-        type: 'ClassProperty',
-      }],
+      errors: [
+        {
+          message: 'Extra semicolon.',
+          type: 'ClassProperty',
+        },
+      ],
     },
     {
       code: classStaticPropNoSemi,
       parser: 'babel-eslint',
-      errors: [{
-        message: 'Missing semicolon.',
-        type: 'ClassProperty',
-      }],
+      errors: [
+        {
+          message: 'Missing semicolon.',
+          type: 'ClassProperty',
+        },
+      ],
     },
     {
       code: classStaticPropNoSemi,
       parser: 'babel-eslint',
       options: ['always'],
-      errors: [{
-        message: 'Missing semicolon.',
-        type: 'ClassProperty',
-      }],
+      errors: [
+        {
+          message: 'Missing semicolon.',
+          type: 'ClassProperty',
+        },
+      ],
     },
     {
       code: classStaticPropWithSemi,
       parser: 'babel-eslint',
       options: ['never'],
-      errors: [{
-        message: 'Extra semicolon.',
-        type: 'ClassProperty',
-      }],
+      errors: [
+        {
+          message: 'Extra semicolon.',
+          type: 'ClassProperty',
+        },
+      ],
     },
   ],
 });

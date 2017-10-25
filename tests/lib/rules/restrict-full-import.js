@@ -32,93 +32,113 @@ ruleTester.run('restrict-full-import', rule, {
       code: 'import * as _ from "lodash";',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'ImportDeclaration',
-      }],
+      errors: [
+        {
+          message,
+          type: 'ImportDeclaration',
+        },
+      ],
     },
     {
       code: 'import _ from "lodash";',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'ImportDeclaration',
-      }],
+      errors: [
+        {
+          message,
+          type: 'ImportDeclaration',
+        },
+      ],
     },
     {
       code: 'import _, {chain} from "lodash";',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'ImportDefaultSpecifier',
-      }],
+      errors: [
+        {
+          message,
+          type: 'ImportDefaultSpecifier',
+        },
+      ],
     },
     {
       code: 'import {default as _, chain} from "lodash";',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'ImportSpecifier',
-      }],
+      errors: [
+        {
+          message,
+          type: 'ImportSpecifier',
+        },
+      ],
     },
     {
       code: 'var _ = require("lodash");',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'VariableDeclarator',
-      }],
+      errors: [
+        {
+          message,
+          type: 'VariableDeclarator',
+        },
+      ],
     },
     {
       code: 'var _; _ = require("lodash");',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'AssignmentExpression',
-      }],
+      errors: [
+        {
+          message,
+          type: 'AssignmentExpression',
+        },
+      ],
     },
     {
       code: 'var {chain, ...rest} = require("lodash");',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'VariableDeclarator',
-      }],
+      errors: [
+        {
+          message,
+          type: 'VariableDeclarator',
+        },
+      ],
     },
     {
       code: 'var {chain, ...rest} = require("lodash");',
       parserOptions,
       options,
       parser: 'babel-eslint',
-      errors: [{
-        message,
-        type: 'VariableDeclarator',
-      }],
+      errors: [
+        {
+          message,
+          type: 'VariableDeclarator',
+        },
+      ],
     },
     {
       code: 'var [chain, ...rest] = require("lodash");',
       parserOptions,
       options,
-      errors: [{
-        message,
-        type: 'VariableDeclarator',
-      }],
+      errors: [
+        {
+          message,
+          type: 'VariableDeclarator',
+        },
+      ],
     },
     {
       code: 'var [chain, ...rest] = require("lodash");',
       parserOptions,
       options,
       parser: 'babel-eslint',
-      errors: [{
-        message,
-        type: 'VariableDeclarator',
-      }],
+      errors: [
+        {
+          message,
+          type: 'VariableDeclarator',
+        },
+      ],
     },
   ],
 });

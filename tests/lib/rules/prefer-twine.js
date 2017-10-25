@@ -3,10 +3,13 @@ const rule = require('../../../lib/rules/prefer-twine');
 
 const ruleTester = new RuleTester();
 const parserOptions = {ecmaVersion: 6, sourceType: 'module'};
-const errors = [{
-  type: 'ImportDeclaration',
-  message: 'You should use "Twine" as the reference name when importing twine.',
-}];
+const errors = [
+  {
+    type: 'ImportDeclaration',
+    message:
+      'You should use "Twine" as the reference name when importing twine.',
+  },
+];
 
 ruleTester.run('prefer-twine', rule, {
   valid: [

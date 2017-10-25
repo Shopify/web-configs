@@ -7,10 +7,12 @@ function bddError(type) {
   return [{type, message: 'Use the more meaningful sinon-chai assertions.'}];
 }
 
-const tddError = [{
-  message: 'Use the more meaningful sinon.assert assertions.',
-  type: 'CallExpression',
-}];
+const tddError = [
+  {
+    message: 'Use the more meaningful sinon.assert assertions.',
+    type: 'CallExpression',
+  },
+];
 
 ruleTester.run('sinon-prefer-meaningful-assertions', rule, {
   valid: [
@@ -56,21 +58,60 @@ ruleTester.run('sinon-prefer-meaningful-assertions', rule, {
   ],
 
   invalid: [
-    {code: 'expect(foo.called).to.be.true;', errors: bddError('MemberExpression')},
-    {code: 'expect(foo.callCount).to.equal(3);', errors: bddError('CallExpression')},
-    {code: 'expect(foo.alwaysCalledWithNew()).to.be.true;', errors: bddError('MemberExpression')},
-    {code: 'expect(foo.bar.callCount).to.equal(3);', errors: bddError('CallExpression')},
-    {code: 'expect(foo.bar.alwaysCalledWithNew()).to.be.true;', errors: bddError('MemberExpression')},
-    {code: 'expect(foo.bar.baz().callCount).to.equal(3);', errors: bddError('CallExpression')},
-    {code: 'expect(foo.bar.baz().alwaysCalledWithNew()).to.be.true;', errors: bddError('MemberExpression')},
+    {
+      code: 'expect(foo.called).to.be.true;',
+      errors: bddError('MemberExpression'),
+    },
+    {
+      code: 'expect(foo.callCount).to.equal(3);',
+      errors: bddError('CallExpression'),
+    },
+    {
+      code: 'expect(foo.alwaysCalledWithNew()).to.be.true;',
+      errors: bddError('MemberExpression'),
+    },
+    {
+      code: 'expect(foo.bar.callCount).to.equal(3);',
+      errors: bddError('CallExpression'),
+    },
+    {
+      code: 'expect(foo.bar.alwaysCalledWithNew()).to.be.true;',
+      errors: bddError('MemberExpression'),
+    },
+    {
+      code: 'expect(foo.bar.baz().callCount).to.equal(3);',
+      errors: bddError('CallExpression'),
+    },
+    {
+      code: 'expect(foo.bar.baz().alwaysCalledWithNew()).to.be.true;',
+      errors: bddError('MemberExpression'),
+    },
 
     {code: 'foo.called.should.be.true;', errors: bddError('MemberExpression')},
-    {code: 'foo.callCount.should.equal(3);', errors: bddError('CallExpression')},
-    {code: 'foo.alwaysCalledWithNew().should.be.true;', errors: bddError('MemberExpression')},
-    {code: 'foo.bar.callCount.should.equal(3);', errors: bddError('CallExpression')},
-    {code: 'foo.bar.alwaysCalledWithNew().should.be.true;', errors: bddError('MemberExpression')},
-    {code: 'foo.bar.baz().callCount.should.equal(3);', errors: bddError('CallExpression')},
-    {code: 'foo.bar.baz().alwaysCalledWithNew().should.be.true;', errors: bddError('MemberExpression')},
+    {
+      code: 'foo.callCount.should.equal(3);',
+      errors: bddError('CallExpression'),
+    },
+    {
+      code: 'foo.alwaysCalledWithNew().should.be.true;',
+      errors: bddError('MemberExpression'),
+    },
+    {
+      code: 'foo.bar.callCount.should.equal(3);',
+      errors: bddError('CallExpression'),
+    },
+    {
+      code: 'foo.bar.alwaysCalledWithNew().should.be.true;',
+      errors: bddError('MemberExpression'),
+    },
+    {
+      code: 'foo.bar.baz().callCount.should.equal(3);',
+      errors: bddError('CallExpression'),
+    },
+    {
+      code: 'foo.bar.baz().alwaysCalledWithNew().should.be.true;',
+      errors: bddError('MemberExpression'),
+    },
 
     {code: 'assert.true(foo.called);', errors: tddError},
     {code: 'assert.equal(foo.callCount, 3);', errors: tddError},

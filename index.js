@@ -23,6 +23,7 @@ module.exports = {
     lodash: require('./lib/config/lodash'),
     mocha: require('./lib/config/mocha'),
     node: require('./lib/config/node'),
+    prettier: require('./lib/config/prettier'),
     react: require('./lib/config/react'),
   },
 };

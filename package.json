@@ -18,6 +18,7 @@
     "rules-status": "eslint-index lib/config/all.js  --format table",
     "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
     "lint": "eslint . --max-warnings 0",
+    "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
     "test:cover": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter spec --recursive tests/"
@@ -36,7 +37,8 @@
   "eslintConfig": {
     "extends": [
       "plugin:shopify/es5",
-      "plugin:shopify/node"
+      "plugin:shopify/node",
+      "plugin:shopify/prettier"
     ]
   },
   "devDependencies": {
@@ -49,14 +51,19 @@
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
+    "prettier": "^1.7.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"
   },
+  "optionalDependencies": {
+    "prettier": "<2.0 >= 1.7.2"
+  },
   "dependencies": {
     "babel-eslint": "^8.0.0",
+    "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-ava": "^4.2.1",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-chai-expect": "^1.1.1",
@@ -66,6 +73,7 @@
     "eslint-plugin-lodash": "^2.4.4",
     "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
