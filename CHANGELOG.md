@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [17.2.1] - 2017-10-30
+### Changed
+* Turned off `babel/semi` rule in prettier config
+
 ## [17.2.0] - 2017-10-25
 ### Added
 * Added a prettier config [[#46](https://github.com/Shopify/eslint-plugin-shopify/pull/46)]
