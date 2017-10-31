@@ -1,6 +1,8 @@
 # Changelog
 
 ## [Unreleased]
+### Changed
+* Turned off `class-methods-use-this`
 
 ## [17.2.1] - 2017-10-30
 ### Changed
