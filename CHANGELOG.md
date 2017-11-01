@@ -13,6 +13,7 @@ yarn add --dev stylelint-config-shopify@next
 - Removed `position: fixed` from the property value blacklist, see [#18](https://github.com/Shopify/stylelint-config-shopify/pull/18)
 - Allowed digits in class selector names (e.g. `.rotate180`), see [#17](https://github.com/Shopify/stylelint-config-shopify/pull/17)
 - Enforce property grouping, see [#10](https://github.com/Shopify/stylelint-config-shopify/pull/10)
+- Turn off `order/order`
 
 ### tl;dr
 

@@ -1,7 +1,7 @@
 module.exports = {
   // https://github.com/hudochenkov/stylelint-order/tree/master/rules/order
   // Force variables to be at the top
-  'order/order': ['custom-properties', 'dollar-variables'],
+  'order/order': null,
 
   // https://github.com/hudochenkov/stylelint-order/tree/master/rules/properties-order
   // Order inspired by Concentric CSS http://rhodesmill.org/brandon/2011/concentric-css/
