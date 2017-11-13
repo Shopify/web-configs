@@ -2,13 +2,7 @@
 
 <!-- ## [Unreleased] -->
 
-## 3.0.0 (currently in beta)
-
-Test this new release with:
-
-```
-yarn add --dev stylelint-config-shopify@next
-```
+## [3.0.0] - 2017-11-13
 
 - Removed `position: fixed` from the property value blacklist, see [#18](https://github.com/Shopify/stylelint-config-shopify/pull/18)
 - Allowed digits in class selector names (e.g. `.rotate180`), see [#17](https://github.com/Shopify/stylelint-config-shopify/pull/17)
