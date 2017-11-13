@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-shopify",
-  "version": "3.0.0-beta.5",
+  "version": "3.0.0",
   "description": "Shopify's stylelint rules and config",
   "main": "index.js",
   "repository": {
