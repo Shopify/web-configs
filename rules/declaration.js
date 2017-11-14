@@ -4,7 +4,9 @@ module.exports = {
     ignore: 'consecutive-duplicates',
   }],
   // Disallow longhand properties that can be combined into one shorthand property.
-  'declaration-block-no-redundant-longhand-properties': true,
+  'declaration-block-no-redundant-longhand-properties': [true, {
+    ignoreShorthands: ['/^grid.*/'],
+  }],
   // Disallow shorthand properties that override related longhand properties within declaration blocks.
   'declaration-block-no-shorthand-property-overrides': true,
   // Require a newline or disallow whitespace after the semicolons of declaration blocks.

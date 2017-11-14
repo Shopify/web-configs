@@ -2,6 +2,8 @@
 
 <!-- ## [Unreleased] -->
 
+* `declaration-block-no-redundant-longhand-properties` now allows longhand `grid` properties, see [#21](https://github.com/Shopify/stylelint-config-shopify/pull/21)
+
 ## [3.0.1] - 2017-11-13
 
 - Removed `position: fixed` from the property value blacklist, see [#18](https://github.com/Shopify/stylelint-config-shopify/pull/18)
