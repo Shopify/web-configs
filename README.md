@@ -49,10 +49,10 @@ npm run stylelint
 
 This config also includes a prettier config which can be extended to format `.scss`.
 
-Install [`prettier-stylelint`](https://github.com/hugomrdias/prettier-stylelint):
+Install [`prettier-stylelint-formatter`](https://github.com/ismail-syed/prettier-stylelint-formatter):
 
 ```
-$ yarn add --dev prettier-stylelint
+$ yarn add --dev prettier-stylelint-formatter
 ```
 
 Extend the config in your `package.json`:
