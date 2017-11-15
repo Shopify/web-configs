@@ -37,10 +37,12 @@
   },
   "devDependencies": {
     "eslint": "^4.8.0",
-    "eslint-plugin-shopify": "^17.1.0",
-    "prettier-stylelint": "^0.4.2"
+    "eslint-plugin-shopify": "^17.1.0"
   },
   "peerDependencies": {
     "stylelint": ">=8.0 <=8.1"
+  },
+  "optionalDependencies": {
+    "prettier-stylelint-formatter": "^0.5.0"
   }
 }
