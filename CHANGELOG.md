@@ -1,8 +1,18 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [4.0.0] - 2017-11-17
+
 
 - Replaces [`prettier-stylelint`](https://github.com/hugomrdias/prettier-stylelint) with a [forked](https://github.com/ismail-syed/prettier-stylelint-formatter) version addressing an [issue](https://github.com/hugomrdias/prettier-stylelint/issues/3) [#23](https://github.com/Shopify/stylelint-config-shopify/pull/23)
+
+### Migration Suggestions
+- If `stylelint-config-shopify/prettier` is used, please replace `prettier-stylelint` with `prettier-stylelint-formatter`.
+
+    ```
+    yarn remove prettier-stylelint && yarn add prettier-stylelint-formatter
+    ```
 
 ## [3.0.2] - 2017-11-14
 
@@ -124,7 +134,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.2...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.2...v4.0.0
 [3.0.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.1.0...v3.0.1
 [2.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.0.1...v2.1.0
