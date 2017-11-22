@@ -1,9 +1,10 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+- Relaxed the stylelint peer dependency version range to allow `8.2.x` in projects consuming this config ([#25](https://github.com/Shopify/stylelint-config-shopify/pull/25))
 
 ## [4.0.0] - 2017-11-17
-
 
 - Replaces [`prettier-stylelint`](https://github.com/hugomrdias/prettier-stylelint) with a [forked](https://github.com/ismail-syed/prettier-stylelint-formatter) version addressing an [issue](https://github.com/hugomrdias/prettier-stylelint/issues/3) [#23](https://github.com/Shopify/stylelint-config-shopify/pull/23)
 
