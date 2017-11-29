@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 
+### Changed
+* Removed `plugin:shopify/esnext` as an included extension of the `plugin:shopify/prettier` config. `plugin:shopify/esnext` must now be extended by the consumer to use the `plugin:shopify/prettier`.
+
+  Example (`package.json`):
+  ```
+  "eslintConfig": {
+    "extends": [
+      "plugin:shopify/esnext",
+      "plugin:shopify/prettier"
+    ]
+  }
+  ```
+
 ## [18.0.0] - 2017-10-31
 ### Changed
 * Turned off `class-methods-use-this`
