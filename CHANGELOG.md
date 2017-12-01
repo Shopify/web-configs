@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## Unreleased -->
+
+## [18.1.0] - 2017-10-31
 
 ### Added
 * Added a `typescript` and `typescript-react` config [[#54](https://github.com/Shopify/eslint-plugin-shopify/pull/54)]
@@ -171,3 +173,8 @@ Example:
 # Pre-15.1.1 Changelog
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
+
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/18.1.0...HEAD
+[18.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.0.0...v18.1.0
+[18.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v17.2.1...v18.0.0
+[17.2.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v17.2.0...v17.2.1
