@@ -48,11 +48,11 @@
     "babel-preset-shopify": "^16.1.0",
     "eslint": "^4.7.1",
     "eslint-index": "^1.4.0",
-    "eslint-plugin-shopify": "file:.",
+    "eslint-plugin-shopify": "file:./.",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.4.2",
-    "prettier": "^1.7.2",
+    "prettier": "^1.8.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
@@ -78,6 +78,8 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.3.0",
     "eslint-plugin-sort-class-members": "^1.2.0",
-    "merge": "^1.2.0"
+    "eslint-plugin-typescript": "^0.7.0",
+    "merge": "^1.2.0",
+    "typescript-eslint-parser": "^9.0.0"
   }
 }

@@ -14,6 +14,7 @@ const parserOptions = {
 };
 
 const options = [['lodash']];
+
 // prettier-ignore
 const message = `Unexpected full import of restricted module '${options[0][0]}'.`;
 
