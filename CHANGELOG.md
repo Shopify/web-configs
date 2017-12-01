@@ -6,6 +6,8 @@
 * Added a `typescript` and `typescript-react` config [[#54](https://github.com/Shopify/eslint-plugin-shopify/pull/54)]
 
 ### Changed
+* `plugin:shopify/prettier` will now enforce trailing commas in function parameter calls
+* `comma-dangle` will now enforce multi-line function parameters
 * Removed `plugin:shopify/esnext` as an included extension of the `plugin:shopify/prettier` config. `plugin:shopify/esnext` must now be extended by the consumer to use the `plugin:shopify/prettier`.
 
   Example (`package.json`):

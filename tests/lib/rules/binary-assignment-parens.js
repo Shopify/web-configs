@@ -16,7 +16,7 @@ const validNonBooleanExamples = [].concat(
     {code: `var foo = ( 'bar' ${operator} 'baz' );`, options: ['never']},
     {code: `var foo; foo = 'bar' ${operator} 'baz';`},
     {code: `var foo; foo = ('bar' ${operator} 'baz');`, options: ['never']},
-  ])
+  ]),
 );
 
 const validBooleanExamples = [].concat(
@@ -27,7 +27,7 @@ const validBooleanExamples = [].concat(
     {code: `var foo; foo = ('bar' ${operator} 'baz')`},
     {code: `var foo; foo = ( 'bar' ${operator} 'baz' )`},
     {code: `var foo; foo = 'bar' ${operator} 'baz'`, options: ['never']},
-  ])
+  ]),
 );
 
 const validLogicalExamples = [
@@ -149,7 +149,7 @@ const invalidBooleanExamples = [].concat(
         },
       ],
     },
-  ])
+  ]),
 );
 
 function errors(count, needsParens) {
@@ -261,7 +261,7 @@ ruleTester.run('binary-assignment-parens', rule, {
   valid: [].concat(
     validNonBooleanExamples,
     validBooleanExamples,
-    validLogicalExamples
+    validLogicalExamples,
   ),
   invalid: [].concat(invalidBooleanExamples, invalidLogicalExamples),
 });
