@@ -1,6 +1,9 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Added
+* Added a `typescript-prettier` config to run prettier against typescript projects.
 
 ## [18.1.0] - 2017-10-31
 

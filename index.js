@@ -26,6 +26,7 @@ module.exports = {
     prettier: require('./lib/config/prettier'),
     react: require('./lib/config/react'),
     typescript: require('./lib/config/typescript'),
+    'typescript-prettier': require('./lib/config/typescript-prettier'),
     'typescript-react': require('./lib/config/typescript-react'),
   },
 };
