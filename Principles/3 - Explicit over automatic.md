@@ -12,7 +12,7 @@ Below are a few examples of decisions that demonstrate this principle:
 
 * We avoid relying on the CSS cascade, and instead try to explicitly provide styles at a component level.
 
-* We prefer more verbose class naming conventions. Using BEM- or SUIT-style naming conventions allows the CSS to stand on its own (as you can see the structure of the component in the way the classes are named), and makes it so you can understand what different nodes in the markup are responsible for (by naming them in the context of the component, rather than in the context of the styles they provide).
+* We prefer more verbose class naming conventions. Using BEM- or SUIT-style naming conventions allows the CSS to stand on its own (as you can see the structure of the component in the way the classes are named), and makes it so you can understand what different nodes in the markup are responsible for (by naming them in the context of the component, rather than in the context of the styles they provide). However, we've used [CSS Modules](https://github.com/css-modules/css-modules) in some parts of the code as we change over to React.
 
 * Don’t construct class names programatically. Doing so makes it hard for future developers to find what a particular class does.
 
