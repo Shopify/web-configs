@@ -2,6 +2,12 @@
 
 <!-- ## Unreleased -->
 
+
+## [18.3.0] - 2017-12-18
+
+### Added
+* Added `shopify/no-debugger`, which behaves the same as ESLint's `no-debugger` but without a fixer.
+
 ## [18.2.0] - 2017-12-04
 ### Added
 * Added a `typescript-prettier` config to run prettier against typescript projects.
@@ -178,7 +184,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.2.0...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.0...HEAD
+[18.3.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.2.0...v18.3.0
 [18.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.1.0...v18.2.0
 [18.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.0.0...v18.1.0
 [18.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v17.2.1...v18.0.0

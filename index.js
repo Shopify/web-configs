@@ -3,6 +3,7 @@ module.exports = {
     'binary-assignment-parens': require('./lib/rules/binary-assignment-parens'),
     'class-property-semi': require('./lib/rules/class-property-semi'),
     'jquery-dollar-sign-reference': require('./lib/rules/jquery-dollar-sign-reference'),
+    'no-debugger': require('./lib/rules/no-debugger'),
     'no-useless-computed-properties': require('./lib/rules/no-useless-computed-properties'),
     'no-fully-static-classes': require('./lib/rules/no-fully-static-classes'),
     'prefer-class-properties': require('./lib/rules/prefer-class-properties'),
