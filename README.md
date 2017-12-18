@@ -1,6 +1,6 @@
 # images
 
-[![CircleCI](https://circleci.com/gh/Shopify/images.svg?style=svg&circle-token=3a8fc955d07b5bd4cb53eeb4b01c57cde84e1154)](https://circleci.com/gh/Shopify/images)
+[![CircleCI](https://circleci.com/gh/Shopify/images.svg?style=shield)](https://circleci.com/gh/Shopify/images)
 
 Tools to help us wrangle images at Shopify.
 
