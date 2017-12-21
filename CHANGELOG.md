@@ -1,7 +1,9 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
 
+### Changed
+* Changed `eslint-config-shopify` codebase to follow es5 trailingComma [[#61](https://github.com/Shopify/eslint-plugin-shopify/pull/61)]
 
 ## [18.3.0] - 2017-12-18
 
