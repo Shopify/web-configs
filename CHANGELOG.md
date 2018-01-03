@@ -12,6 +12,33 @@
   - `jest/prefer-to-be-undefined`
   - `jest/valid-expect`
 
+### Changed
+* Updated dependencies to their latest versions
+* Updated prettier to 1.9.2, introducing a change in function parens style (set to `arrowParens: 'always'`):
+
+    ```js
+    // Before
+    const foo = myArray.map(foo => {});
+
+    // After
+    const foo = myArray.map((foo) => {});
+    ```
+
+    #### ⚠️ Upgrade path
+
+    Your project config files (`package.json`, `.prettierrc`, `.eslintrc`…)
+    may need to be updated like so:
+
+    ```diff
+       "singleQuote": true,
+       "bracketSpacing": false,
+       "trailingComma": "es5",
+    +  "arrowParens": "always"
+    ```
+
+* Added a `prettier` script: `yarn prettier` now prettifies source files
+* Prettified source files using the new config
+
 ## [18.3.1] - 2017-12-21
 
 ### Changed
