@@ -13,7 +13,7 @@
   - `jest/valid-expect`
 
 ### Changed
-* Updated dependencies to their latest versions
+* Updated dependencies to their latest versions (full details in [#63](https://github.com/Shopify/eslint-plugin-shopify/pull/63))
 * Updated prettier to 1.9.2, introducing a change in function parens style (set to `arrowParens: 'always'`):
 
     ```js
