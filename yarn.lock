@@ -1451,6 +1451,10 @@ eslint-plugin-import@^2.7.0:
     minimatch "^3.0.3"
     read-pkg-up "^2.0.0"
 
+eslint-plugin-jest@^21.5.0:
+  version "21.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-21.5.0.tgz#c7a3bd2ee9d1c832b4e31dec89f6ad93e08d4853"
+
 eslint-plugin-jsx-a11y@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.0.2.tgz#659277a758b036c305a7e4a13057c301cd3be73f"
@@ -1514,6 +1518,7 @@ eslint-plugin-react@^7.3.0:
     eslint-plugin-chai-expect "^1.1.1"
     eslint-plugin-flowtype "^2.32.1"
     eslint-plugin-import "^2.7.0"
+    eslint-plugin-jest "^21.5.0"
     eslint-plugin-jsx-a11y "^6.0.2"
     eslint-plugin-lodash "^2.4.4"
     eslint-plugin-mocha "^4.11.0"

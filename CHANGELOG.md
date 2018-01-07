@@ -1,6 +1,16 @@
 # Changelog
 
 ## Unreleased
+### Added
+* `shopify/jest` plugin with [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) rules:
+  - `jest/no-disabled-tests` (disabled)
+  - `jest/no-focused-tests`
+  - `jest/no-identical-title`
+  - `jest/no-large-snapshots` (limited to 12 lines)
+  - `jest/prefer-to-have-length`
+  - `jest/prefer-to-be-null`
+  - `jest/prefer-to-be-undefined`
+  - `jest/valid-expect`
 
 ## [18.3.1] - 2017-12-21
 

@@ -20,6 +20,7 @@ module.exports = {
     es5: require('./lib/config/es5'),
     esnext: require('./lib/config/esnext'),
     flow: require('./lib/config/flow'),
+    jest: require('./lib/config/jest'),
     jquery: require('./lib/config/jquery'),
     lodash: require('./lib/config/lodash'),
     mocha: require('./lib/config/mocha'),
