@@ -11,6 +11,7 @@
   - `jest/prefer-to-be-null`
   - `jest/prefer-to-be-undefined`
   - `jest/valid-expect`
+* `yarn prettier` now prettifies source files
 
 ### Changed
 * Updated dependencies to their latest versions (full details in [#63](https://github.com/Shopify/eslint-plugin-shopify/pull/63))
@@ -35,8 +36,6 @@
        "trailingComma": "es5",
     +  "arrowParens": "always"
     ```
-
-* Added a `prettier` script: `yarn prettier` now prettifies source files
 * Prettified source files using the new config
 
 ## [18.3.1] - 2017-12-21
