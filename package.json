@@ -65,7 +65,8 @@
     "mocha": "^3.4.2",
     "prettier": "^1.8.2",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "typescript": "^2.6.2"
   },
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"

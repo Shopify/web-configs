@@ -11,6 +11,8 @@
   - `jest/prefer-to-be-null`
   - `jest/prefer-to-be-undefined`
   - `jest/valid-expect`
+* Added `shopify/webpack` plugin
+* Added `shopify/webpack/no-unnamed-dynamic-imports` rule
 
 ## [18.3.1] - 2017-12-21
 

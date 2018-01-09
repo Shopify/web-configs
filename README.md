@@ -91,6 +91,7 @@ This plugin also provides the following tool-specific configurations, which can 
 - [jquery](lib/config/jquery.js): Use this for projects that use [jQuery](http://jquery.com).
 - [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting.
 - [typescript-prettier](lib/config/typescript-prettier.js): Use [prettier](https://github.com/prettier/prettier) on typescript projects.
+- [webpack](lib/config/webpack.js): Use this for projects built by [webpack](https://webpack.js.org/).
 
 ### node
 
@@ -121,6 +122,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [restrict-full-import](docs/rules/restrict-full-import.md): Prevents importing the entirety of a package.
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restricts the use of specified sinon features.
 - [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Requires the use of meaningful sinon assertions through sinon.assert or sinon-chai.
+- [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Requires that all dynamic imports contain a `webpackChunkName` comment.
 
 ## Creating New Rules
 
