@@ -12,6 +12,8 @@
   - `jest/prefer-to-be-undefined`
   - `jest/valid-expect`
 * `yarn prettier` now prettifies source files
+* `shopify/webpack` plugin
+* `shopify/webpack/no-unnamed-dynamic-imports` rule
 
 ### Changed
 * Updated dependencies to their latest versions (full details in [#63](https://github.com/Shopify/eslint-plugin-shopify/pull/63))
