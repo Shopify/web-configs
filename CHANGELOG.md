@@ -13,6 +13,7 @@
   - `jest/valid-expect`
 * Added `shopify/webpack` plugin
 * Added `shopify/webpack/no-unnamed-dynamic-imports` rule
+* Added `shopify/prefer-module-scope-constants` rule
 
 ## [18.3.1] - 2017-12-21
 
