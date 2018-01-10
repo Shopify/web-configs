@@ -8,6 +8,7 @@ module.exports = {
     'no-fully-static-classes': require('./lib/rules/no-fully-static-classes'),
     'prefer-class-properties': require('./lib/rules/prefer-class-properties'),
     'prefer-early-return': require('./lib/rules/prefer-early-return'),
+    'prefer-module-scope-constants': require('./lib/rules/prefer-module-scope-constants'),
     'prefer-twine': require('./lib/rules/prefer-twine'),
     'restrict-full-import': require('./lib/rules/restrict-full-import'),
     'sinon-no-restricted-features': require('./lib/rules/sinon-no-restricted-features'),
