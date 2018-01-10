@@ -1509,10 +1509,11 @@ eslint-plugin-react@^7.3.0:
     prop-types "^15.5.10"
 
 "eslint-plugin-shopify@file:./.":
-  version "18.0.0"
+  version "18.3.1"
   dependencies:
     babel-eslint "^8.0.0"
     eslint-config-prettier "^2.6.0"
+    eslint-module-utils "^2.1.1"
     eslint-plugin-ava "^4.2.1"
     eslint-plugin-babel "^4.1.2"
     eslint-plugin-chai-expect "^1.1.1"
@@ -2839,6 +2840,12 @@ pkg-dir@^1.0.0:
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-1.0.0.tgz#7a4b508a8d5bb2d629d447056ff4e9c9314cf3d4"
   dependencies:
     find-up "^1.0.0"
+
+pkg-dir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
+  dependencies:
+    find-up "^2.1.0"
 
 pkg-up@^2.0.0:
   version "2.0.0"

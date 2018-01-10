@@ -2,7 +2,7 @@
 
 ## Unreleased
 ### Added
-* `shopify/jest` plugin with [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) rules:
+* `shopify/jest` config with [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) rules:
   - `jest/no-disabled-tests` (disabled)
   - `jest/no-focused-tests`
   - `jest/no-identical-title`
@@ -11,9 +11,16 @@
   - `jest/prefer-to-be-null`
   - `jest/prefer-to-be-undefined`
   - `jest/valid-expect`
-* Added `shopify/webpack` plugin
+* Added `shopify/webpack` config
+* Added `shopify/polaris` config
 * Added `shopify/webpack/no-unnamed-dynamic-imports` rule
 * Added `shopify/prefer-module-scope-constants` rule
+* Added `shopify/jsx-no-complex-expressions` rule
+* Added `shopify/jsx-no-hardcoded-content` rule
+* Added `shopify/polaris-no-bare-stack-item` rule
+* Added `shopify/polaris-prefer-sectioned-prop` rule
+* Added `shopify/react-initialize-state` rule
+* Added `shopify/react-type-state` rule
 
 ## [18.3.1] - 2017-12-21
 
