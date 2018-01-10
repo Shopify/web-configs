@@ -8,14 +8,14 @@ const moduleScopeErrors = [
   {
     kind: 'VariableDeclarator',
     message:
-      'You must placee screaming snake case at module scope. If this is not meant to be a module-scoped variable, use camelcase instead.',
+      'You must place screaming snake case at module scope. If this is not meant to be a module-scoped variable, use camelcase instead.',
   },
 ];
 const nonConstErrors = [
   {
     kind: 'VariableDeclarator',
     message:
-      'You must use `const` when using screaming snake case variables. If this is not a constant, use camelcase instead.',
+      'You must use `const` when defining screaming snake case variables. If this is not a constant, use camelcase instead.',
   },
 ];
 

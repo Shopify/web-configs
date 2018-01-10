@@ -29,7 +29,7 @@ The following patterns are not warnings:
 const MY_VALUE = true;
 
 function myFunction() {
-  const otherVlaue = false;
+  const otherValue = false;
 }
 ```
 
