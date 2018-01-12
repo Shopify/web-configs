@@ -1507,9 +1507,9 @@ eslint-plugin-react@^7.5.1:
 "eslint-plugin-shopify@file:./.":
   version "18.3.1"
   dependencies:
-    babel-eslint "^8.1.2"
-    eslint-config-prettier "^2.9.0"
-    eslint-plugin-ava "^4.4.0"
+    babel-eslint "^8.0.0"
+    eslint-config-prettier "^2.6.0"
+    eslint-plugin-ava "^4.2.1"
     eslint-plugin-babel "^4.1.2"
     eslint-plugin-chai-expect "^1.1.1"
     eslint-plugin-flowtype "^2.41.0"
@@ -2829,6 +2829,12 @@ pkg-dir@^1.0.0:
   dependencies:
     find-up "^1.0.0"
 
+pkg-dir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
+  dependencies:
+    find-up "^2.1.0"
+
 pkg-up@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/pkg-up/-/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
@@ -3445,6 +3451,10 @@ typescript-eslint-parser@^11.0.0:
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.4.1"
+
+typescript@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.6.2.tgz#3c5b6fd7f6de0914269027f03c0946758f7673a4"
 
 ua-parser-js@^0.7.9:
   version "0.7.17"
