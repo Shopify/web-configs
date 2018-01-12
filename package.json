@@ -18,6 +18,7 @@
     "rules-status": "eslint-index lib/config/all.js  --format table",
     "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
     "lint": "eslint . --max-warnings 0",
+    "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
@@ -48,53 +49,54 @@
           "singleQuote": true,
           "trailingComma": "es5",
           "bracketSpacing": false,
-          "jsxBracketSameLine": false
+          "jsxBracketSameLine": false,
+          "arrowParens": "always"
         }
       ]
     }
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-preset-shopify": "^16.1.0",
-    "eslint": "^4.7.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-shopify": "^16.2.0",
+    "eslint": "^4.15.0",
     "eslint-index": "^1.4.0",
     "eslint-plugin-shopify": "file:./.",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2",
-    "prettier": "^1.8.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "mocha": "^4.1.0",
+    "prettier": "^1.9.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "typescript": "^2.6.2"
   },
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"
   },
   "optionalDependencies": {
-    "prettier": "<2.0 >= 1.7.2"
+    "prettier": "<2.0 >= 1.9.2"
   },
   "dependencies": {
-    "babel-eslint": "^8.0.0",
-    "eslint-config-prettier": "^2.6.0",
+    "babel-eslint": "^8.2.1",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-module-utils": "^2.1.1",
-    "eslint-plugin-ava": "^4.2.1",
+    "eslint-plugin-ava": "^4.4.0",
     "eslint-plugin-babel": "^4.1.2",
     "eslint-plugin-chai-expect": "^1.1.1",
-    "eslint-plugin-flowtype": "^2.32.1",
-    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jest": "^21.5.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-lodash": "^2.4.4",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-lodash": "^2.5.0",
     "eslint-plugin-mocha": "^4.11.0",
-    "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-prettier": "^2.3.1",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.3.0",
-    "eslint-plugin-sort-class-members": "^1.2.0",
-    "eslint-plugin-typescript": "^0.7.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-sort-class-members": "^1.3.0",
+    "eslint-plugin-typescript": "^0.8.1",
     "merge": "^1.2.0",
     "pkg-dir": "^2.0.0",
-    "typescript-eslint-parser": "^9.0.0"
+    "typescript-eslint-parser": "^11.0.0"
   }
 }

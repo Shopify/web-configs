@@ -11,12 +11,8 @@ const parser = 'babel-eslint';
 function errorsFor(component, prop) {
   const message =
     prop === 'children'
-      ? `Do not use hardcoded content as the children of the ${
-          component
-        } component.`
-      : `Do not use hardcoded content in the ${prop} prop of the ${
-          component
-        } component.`;
+      ? `Do not use hardcoded content as the children of the ${component} component.`
+      : `Do not use hardcoded content in the ${prop} prop of the ${component} component.`;
 
   return [{type: 'JSXElement', message}];
 }
