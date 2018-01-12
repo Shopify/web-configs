@@ -11,7 +11,7 @@
   ],
   "author": "Chris Sauve <chris.sauve@shopify.com>",
   "engines": {
-    "node": ">=6.11.1"
+    "node": ">=8.9.4"
   },
   "scripts": {
     "check": "yarn run lint && yarn test",
@@ -47,7 +47,7 @@
         "error",
         {
           "singleQuote": true,
-          "trailingComma": "es5",
+          "trailingComma": "all",
           "bracketSpacing": false,
           "jsxBracketSameLine": false,
           "arrowParens": "always"

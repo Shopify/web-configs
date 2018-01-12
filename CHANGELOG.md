@@ -1,6 +1,7 @@
 # Changelog
 
 ## Unreleased
+
 ### Added
 * `shopify/jest` config with [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) rules:
   - `jest/no-disabled-tests` (disabled)
@@ -48,7 +49,9 @@
 
 ### Changed
 * Updated dependencies to their latest versions (full details in [#63](https://github.com/Shopify/eslint-plugin-shopify/pull/63))
-* Updated prettier to 1.9.2, introducing a change in function parens style (set to `arrowParens: 'always'`):
+* **Breaking:** `node.js` minimum supported node version update to `8.9.4` (LTS).
+* **Breaking:** Changed `eslint-config-shopify` codebase to `trailingComma: 'all'` and drop support for Node.js 6
+* **Breaking:** Updated prettier to 1.9.2, introducing a change in function parens style (set to `arrowParens: 'always'`):
 
     ```js
     // Before
@@ -66,7 +69,7 @@
     ```diff
        "singleQuote": true,
        "bracketSpacing": false,
-       "trailingComma": "es5",
+       "trailingComma": "all",
     +  "arrowParens": "always"
     ```
 * Prettified source files using the new config
