@@ -11,7 +11,7 @@
   ],
   "author": "Chris Sauve <chris.sauve@shopify.com>",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=8.9.0"
   },
   "scripts": {
     "check": "yarn run lint && yarn test",
