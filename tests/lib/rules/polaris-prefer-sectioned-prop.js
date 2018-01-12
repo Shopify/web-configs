@@ -13,9 +13,7 @@ function errorsFor(component) {
   return [
     {
       kind: 'JSXElement',
-      message: `Use the \`sectioned\` prop on ${
-        component
-      } instead of wrapping all its contents in a ${component}.Section`,
+      message: `Use the \`sectioned\` prop on ${component} instead of wrapping all its contents in a ${component}.Section`,
     },
   ];
 }
