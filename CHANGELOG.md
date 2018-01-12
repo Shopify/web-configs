@@ -21,7 +21,30 @@
 * Added `shopify/polaris-prefer-sectioned-prop` rule
 * Added `shopify/react-initialize-state` rule
 * Added `shopify/react-type-state` rule
-* `yarn prettier` now prettifies source files
+* Added [`implicit-arrow-linebreak`][] rule
+* Added [`lines-around-comment`][] rule (as a [special
+  rule][lines-around-comment-special]).
+* Added [`no-unexpected-multiline`][] rule (as a [special rule][no-unexpected-multiline-special]).
+* Added [`flowtype/no-flow-fix-me-comments`](https://github.com/gajus/eslint-plugin-flowtype/blob/677e55c6a0f1dd355268a0f19618cd2696424c53/.README/rules/no-flow-fix-me-comments.md)
+* Added [`react/jsx-one-expression-per-line`][]
+* Added [`react/destructuring-assignment`][]
+* Added [`react/no-access-state-in-setstate`][]
+* Added [`react/button-has-type`][]
+* Added [`react/jsx-curly-brace-presence`][]
+* Added [`typescript/member-naming`](https://github.com/nzakas/eslint-plugin-typescript/tree/master/docs/rules/member-naming.md)
+* Added [`typescript/no-array-constructor`](https://github.com/nzakas/eslint-plugin-typescript/tree/master/docs/rules/no-array-constructor.md)
+* Added `yarn prettier` script (prettifies source files)
+
+[`implicit-arrow-linebreak`]: https://eslint.org/docs/rules/implicit-arrow-linebreak
+[lines-around-comment-special]: https://github.com/prettier/eslint-config-prettier/blob/5399175c37466747aae9d407021dffec2c169c8b/README.md#lines-around-comment
+[`lines-around-comment`]: https://eslint.org/docs/rules/lines-around-comment
+[no-unexpected-multiline-special]: https://github.com/prettier/eslint-config-prettier/blob/5399175c37466747aae9d407021dffec2c169c8b/README.md#no-unexpected-multiline
+[`no-unexpected-multiline`]: https://eslint.org/docs/rules/no-unexpected-multiline
+[`react/jsx-one-expression-per-line`]: https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules/jsx-one-expression-per-line.md
+[`react/destructuring-assignment`]: https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules/destructuring-assignment.md
+[`react/no-access-state-in-setstate`]: https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules/no-access-state-in-setstate.md
+[`react/button-has-type`]: https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules/button-has-type.md
+[`react/jsx-curly-brace-presence`]: https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules/jsx-curly-brace-presence.md
 
 ### Changed
 * Updated dependencies to their latest versions (full details in [#63](https://github.com/Shopify/eslint-plugin-shopify/pull/63))
