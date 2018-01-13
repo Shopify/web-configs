@@ -11,6 +11,6 @@ describe('config', () => {
       execSync(
         `node_modules/.bin/eslint --config ${allConfigPath} ${__dirname}`,
       );
-    });
+    }).timeout(8000);
   });
 });
