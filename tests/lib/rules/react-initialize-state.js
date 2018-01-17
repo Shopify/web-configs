@@ -78,6 +78,16 @@ ruleTester.run('react-initialize-state', rule, {
     },
     {
       code: `class Button extends React.Component<Props, State> {
+        state: State;
+
+        constructor() {
+          this.state = {};
+        }
+      }`,
+      parser: babelParser,
+    },
+    {
+      code: `class Button extends React.Component<Props, State> {
         constructor() {
           (this: any).state = {};
         }
@@ -178,6 +188,29 @@ ruleTester.run('react-initialize-state', rule, {
         constructor() {
           this.states = {focused: true};
         }
+      }`,
+      parser: babelParser,
+      errors,
+    },
+    {
+      code: `class Button extends React.Component<Props> {
+        state: State;
+      }`,
+      parser: babelParser,
+      errors,
+    },
+    {
+      code: `class Button extends React.Component<Props, State> {
+        state: State;
+      }`,
+      parser: babelParser,
+      errors,
+    },
+    {
+      code: `class Button extends React.Component<Props, State> {
+        state: State;
+
+        constructor() {}
       }`,
       parser: babelParser,
       errors,
