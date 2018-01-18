@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+<!-- ## [Unreleased] -->
+
+## [19.0.0] - 2018-01-17
 
 ### Added
 * `shopify/jest` config with [eslint-plugin-jest](https://www.npmjs.com/package/eslint-plugin-jest) rules:
@@ -260,7 +262,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.1...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.0...HEAD
+[19.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.1...v19.0.0
 [18.3.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.0...v18.3.1
 [18.3.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.2.0...v18.3.0
 [18.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.1.0...v18.2.0
