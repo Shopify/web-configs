@@ -1,7 +1,7 @@
 # postcss-shopify
 
 [![NPM version][npm-image]][npm-url]
-[![Circle CI](https://circleci.com/gh/Shopify/postcss-shopify.svg?style=svg)](https://circleci.com/gh/Shopify/postcss-shopify)
+[![Circle CI](https://circleci.com/gh/Shopify/postcss-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/postcss-shopify)
 
 All of Shopify’s preferred [PostCSS](https://github.com/postcss/postcss) plugins wrapped up in a single, easy-to-use plugin.
 
@@ -27,4 +27,4 @@ This plugin wraps around the following PostCSS transformations:
 - [`postcss-discard-comments`](https://github.com/ben-eb/postcss-discard-comments)
 
 [npm-url]: https://npmjs.org/package/postcss-shopify
-[npm-image]: http://img.shields.io/npm/v/postcss-shopify.svg?style=flat-square
+[npm-image]: http://img.shields.io/npm/v/postcss-shopify.svg?style=shield
