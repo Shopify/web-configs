@@ -7,7 +7,7 @@ const NON_BOOLEAN_OPERATORS = ['-', '+', '*', '/', '||', '&&'];
 const BOOLEAN_OPERATORS = ['==', '===', '!=', '!==', '>', '>=', '<', '<='];
 
 const validNonBooleanExamples = [].concat(
-  ...NON_BOOLEAN_OPERATORS.map(operator => [
+  ...NON_BOOLEAN_OPERATORS.map((operator) => [
     {code: `var foo = 'bar' ${operator} 'baz';`},
     {code: `var foo = 'bar' ${operator} 'baz';`, options: ['never']},
     {code: `var foo = ('bar' ${operator} 'baz');`},
@@ -20,7 +20,7 @@ const validNonBooleanExamples = [].concat(
 );
 
 const validBooleanExamples = [].concat(
-  ...BOOLEAN_OPERATORS.map(operator => [
+  ...BOOLEAN_OPERATORS.map((operator) => [
     {code: `var foo = ('bar' ${operator} 'baz')`},
     {code: `var foo = ( 'bar' ${operator} 'baz' )`},
     {code: `var foo = 'bar' ${operator} 'baz'`, options: ['never']},
@@ -79,7 +79,7 @@ const validLogicalExamples = [
 ];
 
 const invalidBooleanExamples = [].concat(
-  ...BOOLEAN_OPERATORS.map(operator => [
+  ...BOOLEAN_OPERATORS.map((operator) => [
     {
       code: `var foo = 'bar' ${operator} 'baz'`,
       errors: [
