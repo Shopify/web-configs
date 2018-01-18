@@ -1,7 +1,7 @@
 # eslint-plugin-shopify
 
 [![NPM version][npm-image]][npm-url]
-[![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=svg)](https://circleci.com/gh/Shopify/eslint-plugin-shopify)
+[![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/eslint-plugin-shopify)
 [![David DM](https://david-dm.org/Shopify/eslint-plugin-shopify.svg)](https://david-dm.org/Shopify/eslint-plugin-shopify)
 
 Shopify’s ESLint rules and configs.
@@ -137,4 +137,4 @@ This plugin provides the following custom rules, which are included as appropria
 The easiest way to add new rules is to use the [ESLint Yeoman generator](https://www.npmjs.com/package/generator-eslint). Running `yo eslint:rule` from the root of this project should add the required main file, docs, and test for your new rules. Make sure that these are all filled out and consistent with the other rules before merging. All tests can be run using `npm test`.
 
 [npm-url]: https://npmjs.org/package/eslint-plugin-shopify
-[npm-image]: http://img.shields.io/npm/v/eslint-plugin-shopify.svg?style=flat-square
+[npm-image]: http://img.shields.io/npm/v/eslint-plugin-shopify.svg?style=shield
