@@ -19,12 +19,12 @@ npm i postcss-shopify --save-dev
 
 This plugin wraps around the following PostCSS transformations:
 
-- [`postcss-discard-comments`](https://github.com/ben-eb/postcss-discard-comments)
 - [`postcss-calc`](https://github.com/postcss/postcss-calc)
 - [`postcss-flexbugs-fixes`](https://github.com/luisrudge/postcss-flexbugs-fixes)
 - [`postcss-selector-matches`](https://github.com/postcss/postcss-selector-matches)
 - [`postcss-will-change`](https://github.com/postcss/postcss-will-change)
 - [`autoprefixer`](https://github.com/postcss/autoprefixer)
+- [`postcss-discard-comments`](https://github.com/ben-eb/postcss-discard-comments)
 
 [npm-url]: https://npmjs.org/package/postcss-shopify
 [npm-image]: http://img.shields.io/npm/v/postcss-shopify.svg?style=flat-square
