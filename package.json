@@ -13,7 +13,7 @@
     "shopify"
   ],
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint . --max-warnings 0 --format codeframe",
     "check": "yarn run lint"
   },
   "eslintConfig": {
@@ -23,16 +23,16 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^3.17.0",
-    "eslint-plugin-shopify": "^15.1.1"
+    "eslint": "^4.15.0",
+    "eslint-plugin-shopify": "^19.0.0-beta.4"
   },
   "dependencies": {
-    "autoprefixer": "^6.7.6",
-    "postcss": "^5.2.15",
-    "postcss-calc": "^5.3.1",
+    "autoprefixer": "^7.2.5",
+    "postcss": "^6.0.16",
+    "postcss-calc": "^6.0.1",
     "postcss-discard-comments": "^2.0.4",
-    "postcss-flexbugs-fixes": "^2.1.0",
-    "postcss-selector-matches": "^2.0.5",
-    "postcss-will-change": "^1.1.0"
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "postcss-selector-matches": "^3.0.1",
+    "postcss-will-change": "^2.0.0"
   }
 }
