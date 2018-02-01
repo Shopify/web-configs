@@ -3,6 +3,7 @@ function svgOptions() {
     plugins: [
       {removeTitle: true},
       {removeDimensions: true},
+      {removeViewBox: false},
     ],
   };
 }
