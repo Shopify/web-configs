@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "merge": "1.2.x",
-    "stylelint-order": "0.8.x",
+    "stylelint-order": "~0.8.1",
     "stylelint-scss": "^2.4.0"
   },
   "devDependencies": {
@@ -43,7 +43,7 @@
     "eslint-plugin-shopify": "^19.0.0"
   },
   "peerDependencies": {
-    "stylelint": ">=8.0"
+    "stylelint": ">=9.0"
   },
   "optionalDependencies": {
     "prettier-stylelint-formatter": "^0.5.0"

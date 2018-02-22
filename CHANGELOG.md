@@ -5,7 +5,7 @@
 ## [5.0.0] - 2018-02-22
 
 - Dropped support for Node `<8.9`
-- Relaxed the stylelint peer dependency version range to allow all `>=8.0` versions in projects consuming this config ([#25](https://github.com/Shopify/stylelint-config-shopify/pull/25) and [#27](https://github.com/Shopify/stylelint-config-shopify/pull/27))
+- Require stylelint `>=9.0` as a peerDependency for projects consuming this config ([#25](https://github.com/Shopify/stylelint-config-shopify/pull/25) and [#27](https://github.com/Shopify/stylelint-config-shopify/pull/27))
 - Updated dependencies
 
 ## [4.0.0] - 2017-11-17
