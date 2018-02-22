@@ -12,6 +12,9 @@
     "check": "yarn run lint",
     "test": "echo 'no tests, yet'"
   },
+  "engines": {
+    "node": ">=8.9.0"
+  },
   "keywords": [
     "stylelint",
     "stylelint-config",
@@ -26,21 +29,21 @@
   "homepage": "https://github.com/shopify/stylelint-config-shopify",
   "eslintConfig": {
     "extends": [
-      "plugin:shopify/es5",
+      "plugin:shopify/esnext",
       "plugin:shopify/node"
     ]
   },
   "dependencies": {
     "merge": "1.2.x",
-    "stylelint-order": "0.7.x",
-    "stylelint-scss": "^2.1.0"
+    "stylelint-order": "~0.8.1",
+    "stylelint-scss": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^4.8.0",
-    "eslint-plugin-shopify": "^17.1.0"
+    "eslint": "^4.18.1",
+    "eslint-plugin-shopify": "^19.0.0"
   },
   "peerDependencies": {
-    "stylelint": ">=8.0 <8.3"
+    "stylelint": ">=9.0"
   },
   "optionalDependencies": {
     "prettier-stylelint-formatter": "^0.5.0"

@@ -1,6 +1,4 @@
-/* eslint no-var: off */
-
-var merge = require('merge');
+const merge = require('merge');
 
 module.exports = {
   plugins: [
@@ -27,6 +25,6 @@ module.exports = {
     require('./rules/string'),
     require('./rules/time'),
     require('./rules/unit'),
-    require('./rules/value')
+    require('./rules/value'),
   ),
 };
