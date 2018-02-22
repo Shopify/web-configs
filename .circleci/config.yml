@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: circleci/node:8.7.0
+      - image: circleci/node:8.9.4
     steps:
       - checkout
       - restore_cache:
