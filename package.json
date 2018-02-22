@@ -12,6 +12,9 @@
     "check": "yarn run lint",
     "test": "echo 'no tests, yet'"
   },
+  "engines": {
+    "node": ">=8.9.0"
+  },
   "keywords": [
     "stylelint",
     "stylelint-config",
