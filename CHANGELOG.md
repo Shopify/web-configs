@@ -1,8 +1,12 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
 
-- Relaxed the stylelint peer dependency version range to allow `8.2.x` in projects consuming this config ([#25](https://github.com/Shopify/stylelint-config-shopify/pull/25))
+## [5.0.0] - 2018-02-22
+
+- Dropped support for Node `<8.9`
+- Relaxed the stylelint peer dependency version range to allow all `>=8.0` versions in projects consuming this config ([#25](https://github.com/Shopify/stylelint-config-shopify/pull/25) and [#27](https://github.com/Shopify/stylelint-config-shopify/pull/27))
+- Updated dependencies
 
 ## [4.0.0] - 2017-11-17
 
@@ -135,7 +139,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v4.0.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.0...HEAD
+[5.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.2...v4.0.0
 [3.0.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.1...v3.0.2
 [3.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v2.1.0...v3.0.1
