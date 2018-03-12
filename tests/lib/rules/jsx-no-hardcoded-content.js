@@ -24,7 +24,19 @@ const checkProps = {checkProps: ['foo']};
 ruleTester.run('jsx-no-hardcoded-content', rule, {
   valid: [
     {code: '<div />', parser},
+    {
+      code: `<div>
+        <div />
+      </div>`,
+      parser,
+    },
     {code: '<MyComponent />', parser},
+    {
+      code: `<MyComponent>
+        <div />
+      </MyComponent>`,
+      parser,
+    },
     {code: '<MyComponent>{true}</MyComponent>', parser},
     {code: '<MyComponent>{2}</MyComponent>', parser},
     {code: '<MyComponent>{true}</MyComponent>', parser},
