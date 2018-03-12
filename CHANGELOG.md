@@ -2,6 +2,11 @@
 
 <!-- ## [Unreleased] -->
 
+## [19.0.1] - 2018-03-12
+
+### Fixed
+* `shopify/jsx-no-hardcoded-content` rule now does not warn on all-whitespace strings as children. This was causing issues with indented JSX content, and is typically not an issue for different locales.
+
 ## [19.0.0] - 2018-01-17
 
 ### Added
