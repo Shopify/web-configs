@@ -1,6 +1,43 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+* Updated dependencies that support the new ESLint documentation URL metadata. Errors from these plugins are accompanied by a link to the documentation for the broken rule.
+* Dependencies are now strictly versioned for tighter control over the exact rules the plugin enforces.
+
+| Package | old | new |
+| ------- | --- | --- |
+| `eslint-plugin-ava` | `^4.4.0` | `4.5.1` |
+| `eslint-plugin-import` | `^2.8.0` | `2.9.0` |
+| `eslint-plugin-jest` | `^21.5.0` | `21.14.1` |
+| `eslint-plugin-lodash` | `^2.5.0`  | `2.6.1` |
+| `eslint-plugin-node` | `^5.2.1`  | `6.0.1` |
+| `eslint-plugin-prettier` | `^2.4.0`  | `2.6.0` |
+| `eslint-plugin-promise` | `^3.6.0`  | `3.7.0` |
+| `eslint-plugin-react` | `^7.5.1`  | `7.7.0` |
+| `eslint-plugin-typescript` | `^0.8.1`  | `0.10.0` |
+
+* Added rules:
+  - [`react/forbid-dom-props`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md) (disabled)
+  - [`react/jsx-child-element-spacing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-child-element-spacing.md) (disabled)
+  - [`react/jsx-max-depth`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-depth.md) (disabled)
+  - [`react/jsx-sort-default-props`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md) (disabled)
+  - [`react/no-this-in-sfc`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-this-in-sfc.md) (disabled)
+  - [`import/group-exports`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/group-exports.md) (disabled)
+  - [`import/no-self-import`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md) **error**
+  - [`import/no-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-default-export.md) (disabled)
+  - [`import/no-useless-path-segments`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-useless-path-segments.md) **error**
+  - [`jest/prefer-expect-assertions`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-expect-assertions.md) (disabled)
+  - [`jest/valid-expect-in-promise`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-expect-in-promise.md) (disabled)
+  - [`jest/valid-describe`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-describe.md) **error**
+  - [`jest/consistent-test-it`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/consistent-test-it.md) **error**
+  - [`jest/no-test-prefixes`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-prefixes.md) **error**
+  - [`jest/lowercase-name`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/lowercase-name.md) **error**
+  - [`jest/no-jest-import`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-jest-import.md) **error**
+  - [`promise/valid-params`](https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/valid-params.md) **error**
+  - [`promise/no-new-statics`](https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-new-statics.md) (disabled)
+  - [`typescript/explicit-function-return-type`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/explicit-function-return-type.md) (disabled)
+  - [`typescript/no-non-null-assertion`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-non-null-assertion.md) **error**
+* Chore: updated CircleCI from v1 to v2
 
 ## [19.0.1] - 2018-03-12
 
