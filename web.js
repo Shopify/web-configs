@@ -12,6 +12,7 @@ module.exports = function shopifyWebPreset(context, options = {}) {
         targets: {
           browsers: options.browsers || browsers,
         },
+        debug: options.debug || false,
       }],
       require.resolve('babel-preset-stage-3'),
     ],
