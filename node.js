@@ -14,6 +14,7 @@ module.exports = function shopifyNodePreset(context, options = {}) {
         targets: {
           node: version,
         },
+        debug: options.debug || false,
       }],
       require.resolve('babel-preset-stage-3'),
     ],
