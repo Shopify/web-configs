@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* **Breaking:** the version of TypeScript supported by this plugin is 2.7.x (in line with [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser)’s TypeScript support)
 * Updated dependencies that support the new ESLint documentation URL metadata. Errors from these plugins are accompanied by a link to the documentation for the broken rule.
 * Dependencies are now strictly versioned for tighter control over the exact rules the plugin enforces.
 
