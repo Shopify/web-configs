@@ -15,9 +15,9 @@
   },
   "scripts": {
     "check": "yarn run lint && yarn test",
-    "rules-status": "eslint-index lib/config/all.js  --format table",
-    "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
-    "lint": "eslint . --max-warnings 0",
+    "rules-status": "eslint-index lib/config/all.js --format table",
+    "rules-omitted": "eslint-index lib/config/all.js --status omitted",
+    "lint": "eslint . --max-warnings 0 --format codeframe",
     "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
     "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
