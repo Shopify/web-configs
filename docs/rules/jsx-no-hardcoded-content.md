@@ -1,4 +1,4 @@
-# Disallows hardcoded content in JSX. (jsx-no-hardcoded-content)
+# Disallow hardcoded content in JSX. (jsx-no-hardcoded-content)
 
 Many JSX components accept children and other properties that are intended for UI content. In an internationalized app, content is generally provided to these components through a translation function, not directly as strings. This rule enforces that components not accept harcoded literal content.
 

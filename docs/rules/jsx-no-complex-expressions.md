@@ -1,4 +1,4 @@
-# Disallows complex expressions embedded in in JSX. (jsx-no-complex-expressions)
+# Disallow complex expressions embedded in in JSX. (jsx-no-complex-expressions)
 
 Having complex conditionals embedded in JSX can make it harder to read. This rule aims to improve the readability of JSX by preventing the use of complex expressions.
 

@@ -1,4 +1,4 @@
-# Requires (or disallows) semicolons for class properties. (class-property-semi)
+# Require (or disallow) semicolons for class properties. (class-property-semi)
 
 ## Rule Details
 

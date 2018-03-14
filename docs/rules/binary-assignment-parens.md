@@ -1,4 +1,4 @@
-# Requires (or disallows) assignments of binary, boolean-producing expressions to be wrapped in parentheses. (binary-assignment-parens)
+# Require (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses. (binary-assignment-parens)
 
 ## Rule Details
 

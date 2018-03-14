@@ -1,4 +1,4 @@
-# Prevents importing the entirety of a package. (restrict-full-import)
+# Prevent importing the entirety of a package. (restrict-full-import)
 
 Importing the entirety of a large module can be undesirable because it becomes harder to track what properties are being used.
 
