@@ -37,6 +37,7 @@
   - [`promise/no-new-statics`](https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-new-statics.md) (disabled)
   - [`typescript/explicit-function-return-type`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/explicit-function-return-type.md) (disabled)
   - [`typescript/no-non-null-assertion`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-non-null-assertion.md) **error**
+* Updated `import/extensions` due to changes in its implementation: some extensions are explicitly allowed in `import`s: `.svg`, `.png`, `.jpg`, `.ico`. `.json` is still required as well.
 * Chore: updated CircleCI from v1 to v2
 
 ## [19.0.1] - 2018-03-12
