@@ -1,4 +1,4 @@
-# Prevents the usage of unnecessary computed properties. (no-useless-computed-properties)
+# Prevent the usage of unnecessary computed properties. (no-useless-computed-properties)
 
 Computed properties allow you to define methods and properties of an object or class without having to know exact name of the key.
 

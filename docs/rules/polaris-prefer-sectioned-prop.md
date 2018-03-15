@@ -4,7 +4,7 @@ Polaris provides a convenience `sectioned` prop for some components that wraps t
 
 ## Rule details
 
-This rule currently requires the use of the `sectioned` prop over the `Section` subcomponent for the following components:
+This rule currently Require the use of the `sectioned` prop over the `Section` subcomponent for the following components:
 
 * [`Card`](https://polaris.shopify.com/components/structure/card)
 * [`Popover`](https://polaris.shopify.com/components/overlays/popover)

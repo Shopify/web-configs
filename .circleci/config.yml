@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - restore_cache:
+         keys:
+            # Find a cache corresponding to this specific package.json checksum
+            # when this file is changed, this key will fail
+            - v1-npm-deps-{{ arch }}-{{ checksum "yarn.lock" }}
+            # Find the most recent cache used from any branch
+            - v1-npm-deps-{{ arch }} # used if above checksum fails
+      - run: yarn
+      - save_cache:
+         key: v1-npm-deps-{{ arch }}-{{ checksum "yarn.lock" }}
+         paths:
+           - node_modules
+      - run: yarn run check

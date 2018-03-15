@@ -1,4 +1,4 @@
-# Prevents the declaration of classes consisting only of static members. (no-fully-static-classes)
+# Prevent the declaration of classes consisting only of static members. (no-fully-static-classes)
 
 ## Rule Details
 

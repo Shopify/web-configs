@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "19.0.1",
+  "version": "20.0.0-beta.4",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -15,12 +15,12 @@
   },
   "scripts": {
     "check": "yarn run lint && yarn test",
-    "rules-status": "eslint-index lib/config/all.js  --format table",
-    "rules-omitted": "eslint-index lib/config/all.js  --status omitted",
-    "lint": "eslint . --max-warnings 0",
+    "rules-status": "eslint-index lib/config/all.js --format table",
+    "rules-omitted": "eslint-index lib/config/all.js --status omitted",
+    "lint": "eslint . --max-warnings 0 --format codeframe",
     "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
-    "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --compilers js:babel-core/register",
+    "test": "NODE_PATH=$NODE_PATH:./transforms:./tests mocha 'tests/**/*.js' --reporter spec --require babel-core/register",
     "test:watch": "yarn test -- --watch --reporter min",
     "test:cover": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter spec --recursive tests/"
   },
@@ -59,44 +59,44 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-shopify": "^16.2.0",
-    "eslint": "^4.15.0",
+    "eslint": "^4.18.2",
     "eslint-index": "^1.4.0",
     "eslint-plugin-shopify": "file:./.",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^4.1.0",
-    "prettier": "^1.9.2",
+    "mocha": "^5.0.4",
+    "prettier": "^1.11.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.7.2"
   },
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"
   },
   "optionalDependencies": {
-    "prettier": "<2.0 >= 1.9.2"
+    "prettier": "^1.11.1"
   },
   "dependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-module-utils": "^2.1.1",
-    "eslint-plugin-ava": "^4.4.0",
-    "eslint-plugin-babel": "^4.1.2",
-    "eslint-plugin-chai-expect": "^1.1.1",
-    "eslint-plugin-flowtype": "^2.41.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jest": "^21.5.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-lodash": "^2.5.0",
-    "eslint-plugin-mocha": "^4.11.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-prettier": "^2.4.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-react": "^7.5.1",
-    "eslint-plugin-sort-class-members": "^1.3.0",
-    "eslint-plugin-typescript": "^0.8.1",
+    "babel-eslint": "^8.2.2",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-module-utils": "2.1.1",
+    "eslint-plugin-ava": "4.5.1",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-chai-expect": "1.1.1",
+    "eslint-plugin-flowtype": "2.41.0",
+    "eslint-plugin-import": "2.9.0",
+    "eslint-plugin-jest": "21.14.1",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-lodash": "2.6.1",
+    "eslint-plugin-mocha": "4.11.0",
+    "eslint-plugin-node": "6.0.1",
+    "eslint-plugin-prettier": "2.6.0",
+    "eslint-plugin-promise": "3.7.0",
+    "eslint-plugin-react": "7.7.0",
+    "eslint-plugin-sort-class-members": "1.3.0",
+    "eslint-plugin-typescript": "0.10.0",
     "merge": "^1.2.0",
     "pkg-dir": "^2.0.0",
-    "typescript-eslint-parser": "^11.0.0"
+    "typescript-eslint-parser": "14.0.0"
   }
 }
