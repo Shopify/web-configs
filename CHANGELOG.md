@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [20.0.0] - 2018-03-15
 * **Breaking:** the version of TypeScript supported by this plugin is 2.7.x (in line with [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser)’s TypeScript support)
 * Updated dependencies that support the new ESLint documentation URL metadata. Errors from these plugins are accompanied by a link to the documentation for the broken rule.
 * Dependencies are now strictly versioned for tighter control over the exact rules the plugin enforces.
@@ -306,7 +308,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.1...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v20.0.0...HEAD
+[20.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.1...v20.0.0
 [19.0.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.0...v19.0.1
 [19.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.1...v19.0.0
 [18.3.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.0...v18.3.1
