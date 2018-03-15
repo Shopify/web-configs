@@ -1,4 +1,4 @@
-# Restricts the use of specified sinon features. (sinon-no-restricted-features)
+# Restrict the use of specified sinon features. (sinon-no-restricted-features)
 
 [`sinon`](http://sinonjs.org) offers many of features, some of which you may not want to use in your codebase.
 

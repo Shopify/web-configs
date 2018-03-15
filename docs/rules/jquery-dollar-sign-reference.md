@@ -1,4 +1,4 @@
-# Requires that all jQuery objects are assigned to references prefixed with `$`. (jquery-dollar-sign-reference)
+# Require that all jQuery objects are assigned to references prefixed with `$`. (jquery-dollar-sign-reference)
 
 Identifying a reference as being a jQuery object makes it immediately obvious what methods are available on that reference.
 

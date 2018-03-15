@@ -1,4 +1,4 @@
-# Requires the use of meaningful sinon assertions through sinon.assert or sinon-chai. (sinon-prefer-meaningful-assertions)
+# Require the use of meaningful sinon assertions through sinon.assert or sinon-chai. (sinon-prefer-meaningful-assertions)
 
 Sinon provides [spy-specific assertions](http://sinonjs.org/docs/#assertions) that have more useful error messages. These same, more meaningful assertions are also available for BDD-style tests using [sinon-chai](https://github.com/domenic/sinon-chai).
 

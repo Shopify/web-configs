@@ -113,24 +113,24 @@ A node project that will use Babel for transpilation would need the following ES
 
 This plugin provides the following custom rules, which are included as appropriate in all core linting configs:
 
-- [binary-assignment-parens](docs/rules/binary-assignment-parens.md): Requires (or disallows) assignments of binary, boolean-producing expressions to be wrapped in parentheses.
-- [class-property-semi](docs/rules/class-property-semi.md): Requires (or disallows) semicolons for class properties.
-- [jquery-dollar-sign-reference](docs/rules/jquery-dollar-sign-reference.md): Requires that all jQuery objects are assigned to references prefixed with `$`.
-- [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallows complex expressions embedded in in JSX.
-- [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallows hardcoded content in JSX.
-- [no-useless-computed-properties](docs/rules/no-useless-computed-properties.md): Prevents the usage of unnecessary computed properties.
+- [binary-assignment-parens](docs/rules/binary-assignment-parens.md): Require (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.
+- [class-property-semi](docs/rules/class-property-semi.md): Require (or disallow) semicolons for class properties.
+- [jquery-dollar-sign-reference](docs/rules/jquery-dollar-sign-reference.md): Require that all jQuery objects are assigned to references prefixed with `$`.
+- [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
+- [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.
+- [no-useless-computed-properties](docs/rules/no-useless-computed-properties.md): Prevent the usage of unnecessary computed properties.
 - [polaris-no-bare-stack-item](docs/rules/polaris-no-bare-stack-item.md): Disallow the use of Polaris’s `Stack.Item` without any custom props.
 - [polaris-prefer-sectioned-prop](docs/rules/polaris-prefer-sectioned-prop.md): Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.
 - [prefer-class-properties](docs/rules/prefer-class-properties.md): Prefer class properties to assignment of literals in constructors.
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.
 - [prefer-module-scope-constants](docs/rules/prefer-module-scope-constants.md): Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.
 - [prefer-twine](docs/rules/prefer-twine.md): Prefer Twine over Bindings as the name for twine imports.
-- [react-initialize-state](docs/rules/react-initialize-state.md): Requires that React component state be initialized when it has a non-empty type.
-- [react-type-state](docs/rules/react-type-state.md): Requires that React component state be typed in TypeScript.
-- [restrict-full-import](docs/rules/restrict-full-import.md): Prevents importing the entirety of a package.
-- [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restricts the use of specified sinon features.
-- [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Requires the use of meaningful sinon assertions through sinon.assert or sinon-chai.
-- [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Requires that all dynamic imports contain a `webpackChunkName` comment.
+- [react-initialize-state](docs/rules/react-initialize-state.md): Require that React component state be initialized when it has a non-empty type.
+- [react-type-state](docs/rules/react-type-state.md): Require that React component state be typed in TypeScript.
+- [restrict-full-import](docs/rules/restrict-full-import.md): Prevent importing the entirety of a package.
+- [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.
+- [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.
+- [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
 
 ## Creating New Rules
 
