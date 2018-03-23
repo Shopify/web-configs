@@ -1,6 +1,16 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Removed
+* **Breaking:** turned off four rules that previously triggered errors in all cases:
+  * `shopify/react-type-state` (TypeScript now addresses the issue this rule was meant to catch)
+  * `promise/always-return`
+  * `react/no-did-mount-set-state`
+  * `no-undefined`
+* **Breaking:** turned off two rules in specific plugins:
+  * `babel/no-invalid-this` (turned off for the `typescript` configs as TypeScript has better mechanisms for unsuring a valid `this` is used)
+  * `no-process-env` (turned off for the `webpack` and `node` configs as both targets can benefit from use of `process.env`)
 
 ## [20.0.0] - 2018-03-15
 * **Breaking:** the version of TypeScript supported by this plugin is 2.7.x (in line with [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser)’s TypeScript support)
