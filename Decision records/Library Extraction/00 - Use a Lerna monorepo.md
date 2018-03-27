@@ -3,12 +3,12 @@
 
 ## Date
 
-march 26, 2018
+March 26, 2018
 
 ## Contributors
 
-- Mallory Allen
-- Tzvi Melamed
+- [Mallory Allen](https://github.com/TheMallen)
+- [Tzvi Melamed](https://github.com/tzvipm)
 
 ## Summary
 
@@ -19,7 +19,7 @@ We understand that there are build-time risks and complexities to the publishing
 The web foundation team's number of open source packages is set to grow exponentially as we pull libraries out of web. As of now we estimate [at least 19 new libraries](https://github.com/Shopify/web/projects/17) will need to be available to our react web projects.
 
 In the past we've tried pulling common bits of functionality into relatively granular repos, such as [@shopify/javascript-utilities](https://github.com/Shopify/javascript-utilities) and [@shopify/react-utilities](https://github.com/Shopify/react-utilities). This introduces a number of problems for developer workflows:
-- Testability - Packages with dependencies are hard to test together (NPM link, yarn link sucks)
+- Testability - Packages with dependencies are hard to test together
 - Developer Ergonomics - Packages with dependencies are hard to develop locally due to shortcomings of NPM / Yarn link
 - Grokability - It's hard to conceptualize multi-repo changes or refactors with PRs across different repos
 - Efficiency - It’s a major time sink to get reviews and tophats on several PRs to several repos in a row for one small change to a dependency
