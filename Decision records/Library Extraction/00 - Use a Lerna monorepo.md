@@ -85,11 +85,11 @@ For more insight on our explorations see:
 - [yarn workspace / lerna monorepo comparison (see commits)](https://github.com/Shopify/shopify-utilities)
 
 ## Tripwires
-**Build Times**
+### Build Times
 Build times will likely be worse in a mono-repo than they are in multiple small repos. We expect this to be manageable and worth the tradeoffs. If build times exceed 5 minutes then we will need to re-evaluate this decision.
 
-**Developer Flow**
+### Developer Flow
 The monorepo approach requires some manual steps that devs probably may not have done before. We will try to be explicit in our guidance for devs, and to maintain easy package.json commands for common tasks, but if we see a lot of malformed version bumps and confusion we will need to re-evaluate.
 
-**Shipit Integration**
+### Shipit Integration
 Shipit currently supports JS monorepos through lerna. This support is relatively experimental, and far from battle tested. If we find ourselves spending more than an 5 hours in a week debugging / fixing shipit issues, we should re-evaluate our choices.
