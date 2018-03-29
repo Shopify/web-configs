@@ -26,6 +26,8 @@ In the past we've tried pulling common bits of functionality into some chunky ov
 - Discoverability - It’s difficult to know what repos exist to suit your needs when they’re only findable via search engine
 - Boilerplate - Developers must rewrite build and linting configuration, or at least include all the necessary libraries each time a new package is exposed
 
+In addition, the overly broad and vague naming on these packages made it difficult to reason about what should and should not be in them.
+
 Since we have at least 5 dependant projects, and need to provide a stable, fast-iterating backbone of utilities to all of them as soon as possible, we decided for this project we would change our model.
 
 ## Solution
@@ -80,7 +82,7 @@ For more insight on our explorations see:
 - [lerna tests repo](https://github.com/TheMallen/lerna-tests)
 - [extraction](https://github.com/Shopify/extraction-test-import-remote) [test](https://github.com/Shopify/extraction-test-react-utilities) [repos](https://github.com/Shopify/extraction-test-browser)
 - [simple yeoman generator for libraries](https://github.com/Shopify/generator-shopify-library)
-- [wcs monorepo](https://github.com/Shopify/shopify-utilities)
+- [yarn workspace / lerna monorepo comparison (see commits)](https://github.com/Shopify/shopify-utilities)
 
 ## Tripwires
 **Build Times**
