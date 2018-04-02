@@ -16,6 +16,9 @@
       "plugin:shopify/node"
     ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shopify/images.git"
