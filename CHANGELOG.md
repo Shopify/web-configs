@@ -144,7 +144,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.1...HEAD
+[5.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.2...v4.0.0
 [3.0.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v3.0.1...v3.0.2
