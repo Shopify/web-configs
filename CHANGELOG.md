@@ -2,6 +2,11 @@
 
 <!-- ## [Unreleased] -->
 
+## [5.0.1] - 2018-04-06
+
+- Updated dependency: stylelint-css (no breaking changes, only fixes)
+- Updated devDependencies: eslint, eslint-plugin-shopify
+
 ## [5.0.0] - 2018-02-22
 
 - Dropped support for Node `<8.9`
