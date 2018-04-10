@@ -24,6 +24,10 @@ const checkProps = {checkProps: ['foo']};
 ruleTester.run('jsx-no-hardcoded-content', rule, {
   valid: [
     {code: '<div />', parser},
+    {code: '<div aria-label={someVariable} />', parser},
+    {code: '<div title={someVariable} />', parser},
+    {code: '<img alt={someVariable} />', parser},
+    {code: '<input placeholder={someVariable} />', parser},
     {
       code: `<div>
         <div />
@@ -392,6 +396,40 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
   ],
   invalid: [
+    {
+      code: '<div aria-label="Content" />',
+      parser,
+      errors: errorsFor('div', 'aria-label'),
+    },
+    {
+      code: '<div title="Content" />',
+      parser,
+      errors: errorsFor('div', 'title'),
+    },
+    {
+      code: '<img alt="Content" />',
+      parser,
+      errors: errorsFor('img', 'alt'),
+    },
+    {
+      code: '<input placeholder="Content" />',
+      parser,
+      errors: errorsFor('input', 'placeholder'),
+    },
+    {
+      code: '<my-element placeholder="Content" />',
+      parser,
+      errors: errorsFor('my-element', 'placeholder'),
+      options: [
+        {
+          dom: {
+            'my-element': {
+              checkProps: ['placeholder'],
+            },
+          },
+        },
+      ],
+    },
     {
       code: '<MyComponent>Content</MyComponent>',
       parser,

@@ -63,6 +63,49 @@ The following patterns are not warnings:
 <MyComponent bar="baz" />
 ```
 
+### `dom`
+
+Allows you to specify custom validation logic for DOM elements and Web Components. This options should be an object where:
+
+* The key is the name of the DOM element or Web Component, or the string `'*'` to indicate all elements
+* The value is an object which has `allowStrings`, `allowNumbers`, and/ or `checkProps`, as detailed above.
+
+By default, the following properties are checked on DOM elements (in addition to children):
+
+```js
+{
+  '*': {checkProps: ['title', 'aria-label']},
+  area: {checkProps: ['title', 'alt', 'aria-label']},
+  img: {checkProps: ['title', 'alt', 'aria-label']},
+  input: {checkProps: ['title', 'alt', 'placeholder', 'aria-label']},
+}
+```
+
+Note that overriding any of these completely replaces the default, so you must specify all props you wish to check, not just your additional set. Note, too, that the options specified for `'*'` are not merged in with more specific element options, so the specific element options will win when there are conflicts.
+
+With:
+
+```js
+{
+  dom: {
+    'my-custom-element': {checkProps: ['foo']},
+  },
+}
+```
+
+The following patterns are considered warnings:
+
+```js
+<my-custom-element foo="Content" />
+```
+
+The following are not warnings:
+
+```js
+<my-custom-element foo={variableContent} />
+<other-custom-element foo="Content" />
+```
+
 ### `modules`
 
 Allows you to specify custom validation logic for components in different modules. This option should be an object where:
@@ -90,7 +133,7 @@ With:
 }
 ```
 
-the following patterns are considered warnings:
+The following patterns are considered warnings:
 
 ```js
 import {OtherComponent, MyComponent} from 'my-module';

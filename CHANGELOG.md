@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+### Added
+* `shopify/jsx-no-hardcoded-content` now accepts a `dom` option that allows specifying attributes on DOM elements and Web Components to be checked for hardcoded content.
+
 ### Removed
 * **Breaking:** turned off four rules that previously triggered errors in all cases:
   * `shopify/react-type-state` (TypeScript now addresses the issue this rule was meant to catch)
