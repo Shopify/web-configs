@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [21.0.0] - 2018-04-25
+
 ### Added
 * `shopify/jsx-no-hardcoded-content` now accepts a `dom` option that allows specifying attributes on DOM elements and Web Components to be checked for hardcoded content.
 
@@ -14,6 +16,9 @@
 * **Breaking:** turned off two rules in specific plugins:
   * `babel/no-invalid-this` (turned off for the `typescript` configs as TypeScript has better mechanisms for unsuring a valid `this` is used)
   * `no-process-env` (turned off for the `webpack` and `node` configs as both targets can benefit from use of `process.env`)
+
+### Fixed
+* Fixed an issue where various rules were not correctly resolving paths in `node_modules`.
 
 ## [20.0.0] - 2018-03-15
 * **Breaking:** the version of TypeScript supported by this plugin is 2.7.x (in line with [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser)’s TypeScript support)
