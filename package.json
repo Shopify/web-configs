@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "21.0.0",
+  "version": "21.0.1",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -15,7 +15,7 @@
   },
   "publishConfig": {
     "access": "public"
-	},
+  },
   "scripts": {
     "check": "yarn run lint && yarn test",
     "rules-status": "eslint-index lib/config/all.js --format table",
