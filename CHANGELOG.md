@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 
+## [21.0.1] - 2018-04-25
+* Fixed the publish config for the package.
+
 ## [21.0.0] - 2018-04-25
 
 ### Added
