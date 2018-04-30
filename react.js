@@ -2,10 +2,12 @@ module.exports = function shopifyReactPreset(context, options = {}) {
   // eslint-disable-next-line no-process-env
   const env = process.env.BABEL_ENV || process.env.NODE_ENV;
 
+  const pragma = options.pragma || 'React.createElement';
   const plugins = [
     // Make JSX spread operator use Object.assign instead of the Babel helper
     [require.resolve('babel-plugin-transform-react-jsx'), {
       useBuiltIns: true,
+      pragma,
     }],
   ];
 
