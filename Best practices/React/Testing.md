@@ -4,7 +4,7 @@ In addition to the guide below, you should read through our [Enzyme](../Enzyme.m
 
 ## Strategy
 
-React components lend themselves extremely well to testing, as there is a very clear unit of work to test (a component) and a clear public API (`props`). Regardless of the size or complexity of React components, their basic structure (and thus, the structure of their tests) remains consistent. When writing your tests, you should arrange them around testing the following features, using nested describes as needed:
+React components lend themselves extremely well to testing, as there is a very clear unit of work to test (a component) and a clear public API (`props`). Regardless of the size or complexity of React components, their basic structure (and thus, the structure of their tests) remains consistent. When writing your tests, you should arrange them around testing the following features, using nested `describe`s as needed:
 
 * **The outcome of passing particular values as `props`**. These will usually be the main category of test, primarily for components closer to the "edge" of the component hierarchy. When multiple tests apply to a given prop, you should name them after the prop (`describe('propOne')` or `describe('onAction()')`). Note that these might not always be passed directly as `props` to the component; components that are connected to context (for example, a Redux or Apollo store) may have custom context for a test that eventually passes in the correct props to the underlying component.
 
@@ -38,7 +38,7 @@ Tests for props will usually fall into one of a few categories:
     });
     ```
 
-  * **Content:** test that a particular prop is rendered within the component (as discussed below, avoid attempts to test children markup is rendered with any particular styles).
+  * **Content:** test that a particular prop is rendered within the component (as discussed below, avoid attempts to test that children markup is rendered with any particular styles).
 
     ```js
     // Example using Jest and Enzyme:
@@ -66,25 +66,27 @@ Tests for props will usually fall into one of a few categories:
   });
   ```
 
+  These tests will often assert that specific `props` are set on the rendered component based on the internal state of the main component under test.
+
 ### Implementation details
 
 There are many parts of React components that should not be tested as they are internal details of React, despite being technically accessible in a testing context:
 
-* `state`. State is an implementation detail of the component. In order to simulate setting state, trigger the props of components rendered by your component with arguments that result in the component getting into that state. Once a component is in a state, do not assert on the state having a particular shape; instead, assert that the subcomponents being rendered have the expected props.
+* `state`. State is not directly manipulable from other components, and so should be treated as private. In order to simulate setting state, trigger the props of components rendered by your component with arguments that result in the component getting into that state. Once a component is in a state, do not assert on the state having a particular shape; instead, assert that the subcomponents being rendered have the expected props.
 
 * Instances for class components. All methods should be private on your React components, as you will otherwise be encouraging users to break out of the declarative model of React. This includes React’s lifecycle methods, which are implementation details of the framework itself. Never call any of these methods directly.
 
 * `className`s. Classes have no meaning outside of visual tests; the presence of a class does not provide any real confidence over the correctness of the rendered UI. `style` props of subcomponents may be tested if they rely on internal computations involving `state` or `props`.
 
-Additionally, the rendered output of any components rendered by your component should be treated as a black box. For example, you should not rely on the fact that a component that your component renders eventually renders a `button` element with a particular property. Instead, trigger the prop on the composite component you render directly, and allow its tests to assert that the `button` is eventually rendered with the appropriate props. This can be enforced using shallow rendering, or by individually mocking out components that you depend on to simply return `null`.
+Additionally, the rendered output of any components rendered by your component (your "grandchildren") should be treated as a black box. For example, you should not rely on the fact that a component that your component renders eventually renders a `button` element with a particular property. Instead, trigger the prop on the composite component you render directly, and allow its tests to assert that the `button` is eventually rendered with the appropriate props. This can be enforced using shallow rendering, or by individually mocking out components that you depend on to simply return `null`.
 
 ### Environment
 
 Another benefit of testing React components is that they typically abstract away the DOM as an implementation detail of being rendered. As a result, we unit test our React components entirely in Node, not by running them in a real browser with a runner like Karma.
 
-[Jest](https://facebook.github.io/jest/), our recommended test runner, internally uses [JSDom](https://github.com/jsdom/jsdom), which creates an all-JavaScript version of the DOM for the purpose of these tests. If you find that something is missing from JSDom, (for example, a browser global that does not behave as expected in the test environment), it is OK to mock out that global. Note that anything related to style calculation will not work correctly; this is a feature, not a bug. Your unit tests should not attempt to test style-related concerns directly, as these are typically better handled with visual regression tests, integration tests, or manual verification.
+[Jest](https://facebook.github.io/jest/), our recommended test runner, internally uses [JSDom](https://github.com/jsdom/jsdom), which creates an all-JavaScript version of the DOM for the purpose of these tests. If you find that something is missing from JSDom, (for example, a browser global that does not behave as expected in the test environment), consider mocking out that global. Note that anything related to style calculation will not work correctly; this is a feature, not a bug. Your unit tests should not attempt to test style-related concerns directly, as these are typically better handled with visual regression tests, integration tests, or manual verification.
 
-## Styleguide
+## Best practices
 
 * The top-level describe block of a React component should be a self-closing JSX tag of the component’s name. You should use the same format for nested describe blocks meant to test the rendering of particular subcomponents.
 

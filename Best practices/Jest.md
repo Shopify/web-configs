@@ -1,8 +1,10 @@
 # Jest
 
+[Jest](https://facebook.github.io/jest/) is a popular testing library for JavaScript that includes a test runner, assertion library, spies, and code coverage. We strongly recommend Jest for any type of testing that can be run entirely in Node. Jest is the default test framework used by Sewing Kit.
+
 ## Complementary packages
 
-We have a number of packages that handle common mocking scenarios:
+We have a number of packages that handle common mocking scenarios that are built specifically for use with Jest:
 
 * [@shopify/jest-dom-mocks](https://github.com/Shopify/quilt/blob/master/packages/jest-dom-mocks/README.md): mocks for commonly-used browser globals
 * [@shopify/jest-mock-apollo](https://github.com/Shopify/quilt/blob/master/packages/jest-mock-apollo/README.md): a mock Apollo client that supports custom fixtures returned in response to operations
@@ -10,41 +12,7 @@ We have a number of packages that handle common mocking scenarios:
 * [@shopify/jest-koa-mocks](https://github.com/Shopify/quilt/blob/master/packages/jest-koa-mocks/README.md): mocks for Koa’s context for middleware testing
 * [@shopify/with-env](https://github.com/Shopify/quilt/blob/master/packages/with-env/README.md): safe switching of `process.env.NODE_ENV` for testing different handling of those environments
 
-## Expectations
-
-As noted in our main testing guide, you should [prefer the “smartest” assertions available](). Below are some common examples of applying this rule to Jest (note that you can always visit the [Jest expect guide](https://facebook.github.io/jest/docs/en/expect.html) for a list of available assertions).
-
-```js
-// .toHaveProperty()
-// prefer:
-expect(object).toHaveProperty('foo', 'bar');
-
-// over:
-expect(object.foo).toBe('bar');
-
-// .toMatchObject()
-// prefer:
-expect(object).toMatchObject({foo: true, bar: false});
-expect(array).toMatchObject([{foo: 'bar'}]);
-
-// over:
-expect(object.foo).toBe(true);
-expect(object.bar).toBe(false);
-expect(array[0].foo).toBe('bar');
-
-// .toContain()
-// prefer:
-expect(array).toContain('foo');
-
-// over:
-expect(array.includes('foo')).toBe(true);
-```
-
-## Coverage
-
-Use Jest’s [built-in coverage tool](https://facebook.github.io/jest/docs/en/cli.html#coverage). If you are using Sewing Kit, coverage is automatically collected when running `sewing-kit test --coverage`.
-
-## Styleguide
+## Best Practices
 
 * Avoid snapshot tests. As noted in the [basic testing principles](), we avoid taking too many shortcuts around the assertions a test is meant to perform. Jest’s snapshot feature is often used in place of many assertions (in which case, the test is doing too much), and even when used correctly, takes the expected value of the test (and, by extension, the documentation value) out-of-band. More discussion can be found in our [decision log on snapshot tests](https://github.com/Shopify/web/blob/master/documentation/decisions/04%20-%20We%20do%20not%20use%20Jest%20snapshot%20tests).
 
@@ -124,3 +92,37 @@ Use Jest’s [built-in coverage tool](https://facebook.github.io/jest/docs/en/cl
   // or:
   jest.mock('../my-module', () => jest.fn());
   ```
+
+## Expectations
+
+As noted in our [main testing guide](../Testing.md), you should prefer the “smartest” assertions available. Below are some common examples of applying this rule to Jest (note that you can always visit the [Jest expect guide](https://facebook.github.io/jest/docs/en/expect.html) for a list of available assertions).
+
+```js
+// .toHaveProperty()
+// prefer:
+expect(object).toHaveProperty('foo', 'bar');
+
+// over:
+expect(object.foo).toBe('bar');
+
+// .toMatchObject()
+// prefer:
+expect(object).toMatchObject({foo: true, bar: false});
+expect(array).toMatchObject([{foo: 'bar'}]);
+
+// over:
+expect(object.foo).toBe(true);
+expect(object.bar).toBe(false);
+expect(array[0].foo).toBe('bar');
+
+// .toContain()
+// prefer:
+expect(array).toContain('foo');
+
+// over:
+expect(array.includes('foo')).toBe(true);
+```
+
+## Coverage
+
+Use Jest’s [built-in coverage tool](https://facebook.github.io/jest/docs/en/cli.html#coverage). If you are using Sewing Kit, coverage is automatically collected when running `sewing-kit test --coverage`.
