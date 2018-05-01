@@ -7,6 +7,9 @@
     "name": "Shopify",
     "email": "dev@shopify.com"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/Shopify/babel-preset-shopify",
   "repository": "https://github.com/Shopify/babel-preset-shopify",
   "scripts": {
