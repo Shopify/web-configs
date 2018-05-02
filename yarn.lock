@@ -363,7 +363,7 @@ babel-core@^6.26.3:
     slash "^1.0.0"
     source-map "^0.5.7"
 
-babel-eslint@^8.2.3:
+babel-eslint@8.2.3:
   version "8.2.3"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-8.2.3.tgz#1a2e6681cc9bc4473c32899e59915e19cd6733cf"
   dependencies:
@@ -1564,7 +1564,7 @@ eslint-plugin-react@7.7.0:
 "eslint-plugin-shopify@file:./.":
   version "21.0.1"
   dependencies:
-    babel-eslint "^8.2.3"
+    babel-eslint "8.2.3"
     eslint-config-prettier "2.9.0"
     eslint-module-utils "2.1.1"
     eslint-plugin-ava "4.5.1"
@@ -1582,8 +1582,8 @@ eslint-plugin-react@7.7.0:
     eslint-plugin-react "7.7.0"
     eslint-plugin-sort-class-members "1.3.0"
     eslint-plugin-typescript "0.10.0"
-    merge "^1.2.0"
-    pkg-dir "^2.0.0"
+    merge "1.2.0"
+    pkg-dir "2.0.0"
     typescript-eslint-parser "15.0.0"
   optionalDependencies:
     prettier "^1.12.1"
@@ -2538,7 +2538,7 @@ mem@^1.1.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-merge@^1.2.0:
+merge@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
@@ -2880,17 +2880,17 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+pkg-dir@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
+  dependencies:
+    find-up "^2.1.0"
+
 pkg-dir@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-1.0.0.tgz#7a4b508a8d5bb2d629d447056ff4e9c9314cf3d4"
   dependencies:
     find-up "^1.0.0"
-
-pkg-dir@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
-  dependencies:
-    find-up "^2.1.0"
 
 pkg-up@^2.0.0:
   version "2.0.0"
