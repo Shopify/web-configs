@@ -1,6 +1,7 @@
 # Changelog
 
 ## [Unreleased]
+* Update dependencies, add support for TypeScript 2.8
 
 ## [21.0.1] - 2018-04-25
 * Fixed the publish config for the package.
