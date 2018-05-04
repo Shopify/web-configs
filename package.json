@@ -60,27 +60,27 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-shopify": "^16.2.0",
-    "eslint": "^4.18.2",
+    "babel-core": "^6.26.3",
+    "babel-preset-shopify": "^16.5.0",
+    "eslint": "^4.19.1",
     "eslint-index": "^1.4.0",
     "eslint-plugin-shopify": "file:./.",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^5.0.4",
-    "prettier": "^1.11.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "typescript": "^2.7.2"
+    "mocha": "^5.1.1",
+    "prettier": "^1.12.1",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "typescript": "^2.8.3"
   },
   "peerDependencies": {
     "eslint": "<5 >=4.7.1"
   },
   "optionalDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.12.1"
   },
   "dependencies": {
-    "babel-eslint": "^8.2.2",
+    "babel-eslint": "8.2.3",
     "eslint-config-prettier": "2.9.0",
     "eslint-module-utils": "2.1.1",
     "eslint-plugin-ava": "4.5.1",
@@ -98,8 +98,8 @@
     "eslint-plugin-react": "7.7.0",
     "eslint-plugin-sort-class-members": "1.3.0",
     "eslint-plugin-typescript": "0.10.0",
-    "merge": "^1.2.0",
-    "pkg-dir": "^2.0.0",
-    "typescript-eslint-parser": "14.0.0"
+    "merge": "1.2.0",
+    "pkg-dir": "2.0.0",
+    "typescript-eslint-parser": "15.0.0"
   }
 }
