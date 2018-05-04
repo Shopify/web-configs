@@ -1,6 +1,6 @@
 # Enzyme
 
-[Enzyme](http://airbnb.io/enzyme/) is a library that makes it easy to traverse and manipulate the output of React components. We recommend it for any React application complex enough to warrant tests, as the readability it provides warrants the additional API surface area to learn.
+[Enzyme](http://airbnb.io/enzyme/) is a library that makes it easy to traverse and manipulate the output of React components. We recommend it for all React applications complex enough to warrant tests, as the readability it provides outweighs the additional API surface area to learn.
 
 ## Complementary packages
 

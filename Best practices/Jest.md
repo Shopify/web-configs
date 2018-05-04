@@ -14,7 +14,7 @@ We have a number of packages that handle common mocking scenarios that are built
 
 ## Best Practices
 
-* Avoid snapshot tests. As noted in the [basic testing principles](), we avoid taking too many shortcuts around the assertions a test is meant to perform. Jest’s snapshot feature is often used in place of many assertions (in which case, the test is doing too much), and even when used correctly, takes the expected value of the test (and, by extension, the documentation value) out-of-band. More discussion can be found in our [decision log on snapshot tests](https://github.com/Shopify/web/blob/master/documentation/decisions/04%20-%20We%20do%20not%20use%20Jest%20snapshot%20tests).
+* Avoid snapshot tests. As noted in the [basic testing principles](./Testing.md), we avoid taking too many shortcuts around the assertions a test is meant to perform. Jest’s snapshot feature is often used in place of many assertions (in which case, the test is doing too much). Even when used correctly, snapshot tests move the expected value of the test (and, by extension, the documentation value) into an external file that must be found and understood by the reader. More discussion can be found in our [decision log on snapshot tests](../Decision%20records/03%20-%20We%20do%20not%20use%20Jest%20snapshot%20tests.md).
 
   ```js
   // bad
@@ -44,7 +44,7 @@ We have a number of packages that handle common mocking scenarios that are built
 
 * When mocking out only part of an external module, include the full module as part of your mock.
 
-  > Why? This prevent unexpected missing members.
+  > Why? Helps prevent unexpected missing members.
 
   ```js
   // bad
@@ -66,11 +66,11 @@ We have a number of packages that handle common mocking scenarios that are built
 
 * Do not use `jest.doMock()`, `jest.unmock()`, or `jest.dontMock()`.
 
-  > Why? `jest.doMock()` ends up forcing you to require your module directly in the body of tests, which makes the test harder to follow. `jest.unmock()` and `jest.dontMock()` are generally indicators that you have too much automocking in place.
+  > Why? `jest.doMock()` ends up forcing you to require your module directly in the body of tests, which makes the test harder to follow. `jest.unmock()` and `jest.dontMock()` are generally indicators that you have too much auto-mocking in place, or that mocking is not scoped sufficiently to only the tests that need it. In general, all tests should either operate on the assumption that a dependency is mocked or that it is not mocked, as this makes it easier to read through all tests in the file.
 
 * Do not use `jest.resetAllMocks()`, `jest.clearAllMocks()`, `jest.restoreAllMocks()`, and `jest.resetModules()`.
 
-  > Why? These methods are overly broad and do not have explicit connections to the contents of your test file. 
+  > Why? These methods are overly broad and do not have explicit connections to the contents of your test file. Instead, reset/ clear/ restore individual mocks that are set up explicitly for the purposes of your test suite.
 
 * When mocking a default export, return your mock on the `default` key of the module if you are including other parts of the module, and return your mock directly if you are not exporting anything else.
 
@@ -79,7 +79,10 @@ We have a number of packages that handle common mocking scenarios that are built
   ```js
   // bad
   jest.mock('../my-module', () => ({
-    // Probably doesn't do what you think!
+    // Probably doesn't do what you think! This will not be the value
+    // brought in by a default import (`import myFunction from '../my-module';`)
+    // because it is missing a special key that Babel/ TypeScript use to simulate
+    // default imports in Node.
     default: jest.fn(),
   }));
 
@@ -89,7 +92,7 @@ We have a number of packages that handle common mocking scenarios that are built
     default: jest.fn(),
   }));
 
-  // or:
+  // or, if there are no other named imports:
   jest.mock('../my-module', () => jest.fn());
   ```
 
@@ -105,10 +108,15 @@ expect(object).toHaveProperty('foo', 'bar');
 // over:
 expect(object.foo).toBe('bar');
 
-// .toMatchObject()
+// .toMatchObject()/ .toEqual()
 // prefer:
 expect(object).toMatchObject({foo: true, bar: false});
 expect(array).toMatchObject([{foo: 'bar'}]);
+
+// or (if you do not want to allow extra properties):
+
+expect(object).toEqual({foo: true, bar: false});
+expect(array).toEqual([{foo: 'bar'}]);
 
 // over:
 expect(object.foo).toBe(true);

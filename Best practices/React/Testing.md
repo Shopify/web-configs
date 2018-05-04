@@ -6,11 +6,11 @@ In addition to the guide below, you should read through our [Enzyme](../Enzyme.m
 
 React components lend themselves extremely well to testing, as there is a very clear unit of work to test (a component) and a clear public API (`props`). Regardless of the size or complexity of React components, their basic structure (and thus, the structure of their tests) remains consistent. When writing your tests, you should arrange them around testing the following features, using nested `describe`s as needed:
 
-* **The outcome of passing particular values as `props`**. These will usually be the main category of test, primarily for components closer to the "edge" of the component hierarchy. When multiple tests apply to a given prop, you should name them after the prop (`describe('propOne')` or `describe('onAction()')`). Note that these might not always be passed directly as `props` to the component; components that are connected to context (for example, a Redux or Apollo store) may have custom context for a test that eventually passes in the correct props to the underlying component.
+* **The outcome of passing particular values as `props`**. These will usually be the main category of test, primarily for components closer to the "edge" of the component hierarchy. When multiple tests apply to a given prop, you should name them after the prop (`describe('propOne')` or `describe('onAction()')`). Note that these might not always be passed directly as `props` to the component; components that are connected to context (for example, a Redux or Apollo store) may have custom context for a test that eventually delegates the correct props to the underlying component.
 
 Tests for props will usually fall into one of a few categories:
 
-  * **Callbacks:** test that the callback was called in response to the relevant action, and that it was called with the appropriate arguments. This is usually done by simulating a call on a subcomponent (for eaxmple, simulating a click on a contained `button`, which eventually leads to the callback being called). Tests should pass in a spy function for the prop under test to verify the calls.
+  * **Callbacks:** test that the callback was called in response to the relevant action, and that it was called with the appropriate arguments. This is usually done by simulating a call on a subcomponent (for example, simulating a click on a contained `button`, which eventually leads to the callback being called). Tests should pass in a spy function for the prop under test to verify the calls.
 
     ```js
     // Example using Jest and Enzyme:
@@ -52,7 +52,7 @@ Tests for props will usually fall into one of a few categories:
     });
     ```
 
-* **Subcomponents rendered to manage the behaviour of your component**. You will sometimes render components entirely to manage internal state. This is very common in "controller" components — these will have very few props, but may render components that manage internal state. For example, a component might render a button that toggles some other part of the UI to be visible. In these cases, group the tests under desribes named after the subcomponent name (i.e., `describe('<ChildComponent />')`).
+* **Subcomponents rendered to manage the behaviour of your component**. You will sometimes render components entirely to manage internal state. This is very common in "controller" components — these will have very few props, but may render components that manage internal state. For example, a component might render a button that toggles some other part of the UI to be visible. In these cases, group the tests under `describe`s named after the subcomponent name (i.e., `describe('<ChildComponent />')`).
 
   ```js
   // Example using Jest and Enzyme:

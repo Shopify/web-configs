@@ -19,6 +19,8 @@ Below are some specific applications of this principle:
 
 * Do not rely excessively on dependency injection. Dependency injection might make tests easier to write, but they typically work by moving around the test complexity, not eliminating it. If you find that you are extracting parts of the logic exclusively to be able to provide mocked versions for test, you are probably not prioritizing the public API. Use dependency injection only for APIs on which a user will need to provide alternate behaviour in some cases.
 
+* Do not over-mock. Mocking can be a useful tool for short-circuiting potentially expensive function calls or for more easily simulating a particular environment. However, overuse of mocks reduces the degree to which the tests represent the running system, and can indicate a design that has been excessively broken up solely for the purposes of being able to inject mocks into various points of the operation.
+
 ### Setup, perform, assert
 
 All tests should follow a common pattern. First, do any necessary setup work (for example, instantiating an object, or mocking a dependency to return a particular value). Then, perform the action you are testing (for example, triggering a method). Finally, assert on the result, either on the value received from performing the action, or on the side effects that are expected as part of it.
@@ -63,11 +65,11 @@ Below are some specific applications of this principle:
 
 * Never use `beforeAll`/ `afterAll` hooks.
 
-  > Why? These hooks are almost always in a way that introduces shared state that is easy to leak between tests.
+  > Why? These hooks almost always introduce shared state that is easy to leak between tests.
 
-* Avoid using mocks (for example, via `sinon.mock()`).
+* Avoid using mocks with expectations established when creating them (for example, via `sinon.mock()`).
 
-  > Why? Mocks invert the order, putting the assertion first in the test, which makes them harder to read.
+  > Why? These types of mocks invert the typical test order (putting the assertion first), which makes them harder to read.
 
   ```js
   // bad
@@ -83,14 +85,14 @@ Below are some specific applications of this principle:
 
 ### Tests should work and be useful in isolation
 
-The suite, test name, and test contents should read like a paragraph that tell future readers the following:
+The suite, test name, and test contents should read like a paragraph that tells future readers the following:
 
 * What construct is being tested
 * What behaviour of the construct is being tested
 * How is that behaviour initiated by a consumer
 * What is the expected result of the behaviour
 
-It is often useful to organize your suites using the "unit of work - scenario/context - expected behaviour" pattern, as this typically provides all the information your test needs to be understandable on its own:
+It is often useful to organize your suites using the "unit of work - scenario/context - expected behaviour" pattern, as this provides all the information your test needs to be understandable on its own:
 
 ```js
 // Example using Jest:
@@ -194,12 +196,13 @@ Common patterns for organizing test and fixture files makes it easier to navigat
 * Tests files should be collocated with the code they cover, nested inside a `tests` folder. For smaller projects, a single `tests` folder at the root of the project is fine, but this should be avoided as the project grows and as modules become more deeply nested in the source directory. When fixture files are required, add them to a `fixtures` directory nested inside the `tests` directory that needs them.
 
   ```
-  |- MyComponent/
-  |  |- tests/
-  |  |  |- fixtures/
-  |  |  |  |- my-fixture.json
-  |  |  |- MyComponent.test.tsx
-  |  |- MyComponent.tsx
+  MyComponent/
+  ├── MyComponent.tsx
+  ├── index.ts
+  └── tests
+      ├── MyComponent.test.tsx
+      └── fixtures
+          └── my-fixture.json
   ```
 
 ## Miscellaneous
