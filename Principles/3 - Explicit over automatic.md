@@ -20,10 +20,10 @@ Below are a few examples of decisions that demonstrate this principle:
 
 ## Conflicts between explicitness and minimal API
 
-There is a natural conflict between this principle a particular extension of the "API over implementation" principle:
+There is a natural conflict between this principle and a particular extension of the "API over implementation" principle:
 
 > Strive to make the default behaviour completely automatic, and acceptable variations on that behaviour extremely easy to dictate.
 
-This often comes for things like accessibility attributes on components: there is a struggle beyween exposing significant API to set these attributes or trying to make the "correct" behaviour work automatically. As a general rule, prefer the automatic API in cases like these, as they provide the most certainty that all UI meets our quality standards.
+This often comes for things like accessibility attributes on components: there is a struggle between either exposing significant API to set these attributes or trying to make the "correct" behaviour work automatically. As a general rule, prefer the automatic API in cases like these, as they provide the most certainty that all UI meets our quality standards.
 
 However, if you can’t provide the correct behaviour automatically in 100% of cases, you are better off exposing the necessary API for consumers to set it manually. Exposing no API and getting the behaviour right is ideal, but it is better to provide a larger, more explicit API than to occasionally provide the incorrect behaviour, particularly when that behaviour has an impact on the end user.
