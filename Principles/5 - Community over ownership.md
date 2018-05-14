@@ -8,7 +8,7 @@ We also have to make sure to avoid [cargo culting](https://en.wikipedia.org/wiki
 
 Below are a few examples of decisions that demonstrate this principle:
 
-* We avoid using esoteric or non-standard languge features that would create a significant barrier to entry for new developers who are familiar with community standards.
+* We avoid using esoteric or non-standard language features that would create a significant barrier to entry for new developers who are familiar with community standards.
 
 * We prefer a federated model for the core pieces of our architecture (foundation, Polaris, etc), where members from many teams across Shopify can provide input and make changes.
 
@@ -16,7 +16,7 @@ Below are a few examples of decisions that demonstrate this principle:
 
 ## Conflicts between community and minimal API
 
-There can be a conflict between this principle a particular extension of the "API over implementation" principle:
+There can be a conflict between this principle and a particular extension of the "API over implementation" principle:
 
 > Strive to make the default behaviour completely automatic, and acceptable variations on that behaviour extremely easy to dictate.
 

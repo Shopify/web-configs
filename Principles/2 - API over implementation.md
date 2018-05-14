@@ -14,7 +14,7 @@ Below are a few examples of decisions that demonstrate this principle:
 
 * Unless it is a foundational part of the stack, try to avoid exposure of exactly what tool/ community package is in use to accomplish a feature. Always wrap components pulled in as dependencies to expose the API we explicitly want to support.
 
-* Components dont’t accept arbitrary class names or styles, as these force you to expose significant portions of your components as part of their public API, and leads to fragile structures that are hard to change.
+* Components don’t accept arbitrary class names or styles, as these force you to expose significant portions of your components as part of their public API, and leads to fragile structures that are hard to change.
 
 ## Generalize progressively
 
