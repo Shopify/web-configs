@@ -118,6 +118,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [jquery-dollar-sign-reference](docs/rules/jquery-dollar-sign-reference.md): Require that all jQuery objects are assigned to references prefixed with `$`.
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.
+- [jsx-prefer-fragment-wrappers)](docs/rules/jsx-no-hardcoded-content.md): Disallow useless wrapping elements in favour of fragment shorthand in JSX.
 - [no-useless-computed-properties](docs/rules/no-useless-computed-properties.md): Prevent the usage of unnecessary computed properties.
 - [polaris-no-bare-stack-item](docs/rules/polaris-no-bare-stack-item.md): Disallow the use of Polaris’s `Stack.Item` without any custom props.
 - [polaris-prefer-sectioned-prop](docs/rules/polaris-prefer-sectioned-prop.md): Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.
