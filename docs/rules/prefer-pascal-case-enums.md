@@ -1,36 +1,33 @@
 # Enforce pascal case when naming enums. (prefer-pascal-case-enums)
 
-Please describe the origin of the rule here.
-
+Provides consistency when naming [Enums](https://www.typescriptlang.org/docs/handbook/enums.html) within TypeScript code.
 
 ## Rule Details
 
-This rule aims to...
+This rule enforces all TypeScript Enums to be in pascal case. An error will occur if another capitalization rule is used (such as snake case or lowercase) when naming TypeScript Enums.
 
 Examples of **incorrect** code for this rule:
 
-```js
-
-// fill me in
-
+```ts
+enum sortorder {
+  most_recent,
+  LEAST_RECENT,
+  newest,
+  OLDEST
+}
 ```
 
 Examples of **correct** code for this rule:
 
-```js
-
-// fill me in
-
+```ts
+enum SortOrder {
+  MostRecent,
+  LeastRecent,
+  Newest,
+  Oldest
+}
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+If you have established coding standards using a different naming convention for TypeScript Enums, you can safely disable this rule.

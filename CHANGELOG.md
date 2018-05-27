@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Added
+* `shopify/prefer-pascal-case-enums` ([#96](https://github.com/Shopify/eslint-plugin-shopify/pull/96))
+
 ## [22.0.0]
 * Updated dependencies
 * Added support for TypeScript 2.8
