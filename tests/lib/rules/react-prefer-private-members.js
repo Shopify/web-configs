@@ -13,7 +13,7 @@ function makeError({type = 'ClassProperty', memberName, componentName}) {
   return [
     {
       type,
-      message: `${memberName} should be a private member of ${componentName}.`,
+      message: `'${memberName}' should be a private member of '${componentName}'.`,
     },
   ];
 }
