@@ -121,5 +121,19 @@ ruleTester.run('react-prefer-private-members', rule, {
         }),
       ],
     },
+    {
+      code: `class PureButton extends React.PureComponent {
+        publicMethod() {}
+        componentDidMount() {}
+      }`,
+      parser: babelParser,
+      errors: [
+        makeError({
+          type: 'MethodDefinition',
+          memberName: 'publicMethod',
+          componentName: 'PureButton',
+        }),
+      ],
+    },
   ],
 });
