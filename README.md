@@ -127,6 +127,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [prefer-pascal-case-enums](docs/rules/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using pascal case.
 - [prefer-twine](docs/rules/prefer-twine.md): Prefer Twine over Bindings as the name for twine imports.
 - [react-initialize-state](docs/rules/react-initialize-state.md): Require that React component state be initialized when it has a non-empty type.
+- [react-prefer-private-members](docs/rules/react-prefer-private-members.md): Prefer all non-React-specific members be marked private in React class components.
 - [react-type-state](docs/rules/react-type-state.md): Require that React component state be typed in TypeScript.
 - [restrict-full-import](docs/rules/restrict-full-import.md): Prevent importing the entirety of a package.
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.

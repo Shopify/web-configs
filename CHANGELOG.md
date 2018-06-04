@@ -4,6 +4,7 @@
 
 ### Added
 * `shopify/prefer-pascal-case-enums` ([#96](https://github.com/Shopify/eslint-plugin-shopify/pull/96))
+* `shopify/react-prefer-private-members` ([#95](https://github.com/Shopify/eslint-plugin-shopify/pull/95))
 
 ## [22.0.0]
 * Updated dependencies
