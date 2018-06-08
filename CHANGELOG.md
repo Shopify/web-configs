@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased
+## [22.1.0] - 2018-06-08
+
+### Fixed
+* Updated `eslint-plugin-sort-class-members` dependency to version 1.3.1 in order to support node 10.
 
 ### Added
 * `shopify/prefer-pascal-case-enums` ([#96](https://github.com/Shopify/eslint-plugin-shopify/pull/96))
