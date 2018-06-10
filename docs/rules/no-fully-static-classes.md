@@ -41,4 +41,4 @@ class Qux extends Buzz {
 
 ## When Not To Use It
 
-If you do not wish to enforce prevent declarations of fully-static classes, you can safely disable this rule.
+If you do not wish to prevent declarations of fully-static classes, you can safely disable this rule.
