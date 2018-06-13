@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Added
+* `shopify/jsx-prefer-fragment-wrappers` ([#95](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
+
 ## [22.1.0] - 2018-06-08
 
 ### Fixed
