@@ -115,6 +115,7 @@ This plugin provides the following custom rules, which are included as appropria
 
 - [binary-assignment-parens](docs/rules/binary-assignment-parens.md): Require (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.
 - [class-property-semi](docs/rules/class-property-semi.md): Require (or disallow) semicolons for class properties.
+- [jest/no-vague-titles](docs/rules/jest/no-vague-titles.md): Prevent the usage of vague words in test statements.
 - [jquery-dollar-sign-reference](docs/rules/jquery-dollar-sign-reference.md): Require that all jQuery objects are assigned to references prefixed with `$`.
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.

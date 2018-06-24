@@ -3,7 +3,8 @@
 ## Unreleased
 
 ### Added
-* `shopify/jsx-prefer-fragment-wrappers` ([#95](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
+* `shopify/jsx-prefer-fragment-wrappers` ([#94](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
+* `shopify/jest/no-vague-titles` ([#93](https://github.com/Shopify/eslint-plugin-shopify/pull/93))
 
 ## [22.1.0] - 2018-06-08
 
