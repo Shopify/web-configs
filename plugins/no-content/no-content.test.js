@@ -1,5 +1,5 @@
 const testRule = require('stylelint-test-rule-tape');
-const shopifyi18n = require('../shopify-i18n');
+const shopifyi18n = require('.');
 
 testRule(shopifyi18n.rule, {
   ruleName: shopifyi18n.ruleName,
