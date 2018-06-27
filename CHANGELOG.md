@@ -5,6 +5,7 @@
 ### Added
 * `shopify/jsx-prefer-fragment-wrappers` ([#94](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
 * `shopify/jest/no-vague-titles` ([#93](https://github.com/Shopify/eslint-plugin-shopify/pull/93))
+* `shopify/strict-component-boundaries` ([#98](https://github.com/Shopify/eslint-plugin-shopify/pull/98))
 
 ## [22.1.0] - 2018-06-08
 

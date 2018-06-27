@@ -23,6 +23,7 @@ module.exports = {
     'restrict-full-import': require('./lib/rules/restrict-full-import'),
     'sinon-no-restricted-features': require('./lib/rules/sinon-no-restricted-features'),
     'sinon-prefer-meaningful-assertions': require('./lib/rules/sinon-prefer-meaningful-assertions'),
+    'strict-component-boundaries': require('./lib/rules/strict-component-boundaries'),
     'webpack/no-unnamed-dynamic-imports': require('./lib/rules/webpack/no-unnamed-dynamic-imports'),
   },
 

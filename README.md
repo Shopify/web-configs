@@ -134,6 +134,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [restrict-full-import](docs/rules/restrict-full-import.md): Prevent importing the entirety of a package.
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.
 - [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.
+- [strict-component-boundaries](docs/rules/strict-component-boundaries.md): Prevent module imports between components.
 - [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
 
 ## Creating New Rules
