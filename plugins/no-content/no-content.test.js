@@ -4,7 +4,6 @@ const shopifyi18n = require('.');
 testRule(shopifyi18n.rule, {
   ruleName: shopifyi18n.ruleName,
   config: true,
-  skipBasicChecks: true,
 
   reject: [
     {
