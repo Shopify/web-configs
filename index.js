@@ -4,6 +4,7 @@ module.exports = {
   plugins: [
     'stylelint-scss',
     'stylelint-order',
+    './plugins/no-content',
   ],
   rules: merge(
     require('./rules/at-rule'),
@@ -26,5 +27,8 @@ module.exports = {
     require('./rules/time'),
     require('./rules/unit'),
     require('./rules/value'),
+    {
+      'plugin/no-content': true,
+    },
   ),
 };
