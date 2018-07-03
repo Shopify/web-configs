@@ -2,10 +2,15 @@
 
 ## Unreleased
 
+eslint-plugin-shopify will no longer install prettier as a dependency. Please ensure you have added prettier to your package.json if you wish to use it.
+
 ### Added
 * `shopify/jsx-prefer-fragment-wrappers` ([#94](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
 * `shopify/jest/no-vague-titles` ([#93](https://github.com/Shopify/eslint-plugin-shopify/pull/93))
 * `shopify/strict-component-boundaries` ([#98](https://github.com/Shopify/eslint-plugin-shopify/pull/98))
+
+### Changed
+* **Breaking** Moved prettier to be a peerDependency, this avoids the potential for having multiple versions of prettier in the dependency graph. If you use prettier you will need to ensure you have it installed in your project as eslint-plugin-shopify will no longer install it for you ([#107](https://github.com/Shopify/eslint-plugin-shopify/pull/107))
 
 ## [22.1.0] - 2018-06-08
 

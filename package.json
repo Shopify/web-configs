@@ -74,9 +74,7 @@
     "typescript": "^2.8.3"
   },
   "peerDependencies": {
-    "eslint": "<5 >=4.7.1"
-  },
-  "optionalDependencies": {
+    "eslint": "<5 >=4.7.1",
     "prettier": "^1.12.1"
   },
   "dependencies": {
