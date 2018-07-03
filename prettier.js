@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
     './index',
-    'prettier-stylelint-formatter/config',
+    'stylelint-config-prettier',
   ],
 
   // conflicts with prettier formatting
