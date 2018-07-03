@@ -101,6 +101,10 @@ ruleTester.run('no-vague-titles', rule, {
       code: `someFunction.only('correct')`,
       parser,
     },
+    {
+      code: `(() => {})()`,
+      parser,
+    },
   ],
   invalid: [
     {
