@@ -11,6 +11,7 @@ eslint-plugin-shopify will no longer install prettier as a dependency. Please en
 
 ### Changed
 * **Breaking** Moved prettier to be a peerDependency, this avoids the potential for having multiple versions of prettier in the dependency graph. If you use prettier you will need to ensure you have it installed in your project as eslint-plugin-shopify will no longer install it for you ([#107](https://github.com/Shopify/eslint-plugin-shopify/pull/107))
+* **Breaking** Updated `typescript-eslint-parser` to support `typescript@2.9.1` ([#102](https://github.com/Shopify/eslint-plugin-shopify/pull/102))
 
 ## [22.1.0] - 2018-06-08
 
