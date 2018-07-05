@@ -2,6 +2,32 @@
 
 <!-- ## [Unreleased] -->
 
+## [5.1.0] - 2018-07-5
+- Added a new custom rule `plugin/content-no-strings` that disallows hard-coded strings as values for the `content` property. This prevents internationalization issues. Keywords are still allowed.
+
+The following patterns are considered violations:
+
+```css
+.foo::before { content: 'bar'; }
+```
+
+```css
+.foo::before { content: open-quote 'Section' counter(section_counter) close-quote; }
+```
+
+The following patterns are _not_ considered violations:
+
+```css
+.foo::before { content: ''; }
+```
+
+```css
+.foo::before { content: open-quote counter(section_counter) close-quote; }
+```
+
+
+
+
 ## [5.0.1] - 2018-04-06
 
 - Updated dependency: stylelint-css (no breaking changes, only fixes)
