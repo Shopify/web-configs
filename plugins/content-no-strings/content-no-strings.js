@@ -1,9 +1,9 @@
 const stylelint = require('stylelint');
 
-const ruleName = 'plugin/no-content';
+const ruleName = 'plugin/content-no-strings';
 
 const messages = stylelint.utils.ruleMessages(ruleName, {
-  rejected: 'You must not use the `content` property to hard-code unlocalized text',
+  rejected: 'You must not hard-code unlocalized strings into the `content` property',
 });
 
 module.exports = stylelint.createPlugin(ruleName, (primaryOption) => {
@@ -16,14 +16,10 @@ module.exports = stylelint.createPlugin(ruleName, (primaryOption) => {
       return;
     }
 
-    const allowedContentValues = [
-      "''",
-      '""',
-      'none',
-    ];
+    const nonEmptyString = /('.+')|(".+")/;
 
     root.walkDecls('content', (decl) => {
-      if (!allowedContentValues.includes(decl.value)) {
+      if (decl.value.match(nonEmptyString)) {
         stylelint.utils.report({
           node: decl,
           message: messages.rejected,
