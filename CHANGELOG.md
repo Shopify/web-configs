@@ -4,6 +4,7 @@
 
 ## [5.1.1] - 2018-07-09
 - Rename `plugin/content-no-strings` rule to `shopify/content-no-strings`.
+- Disable `shopify/content-no-strings` by default.
 
 ## [5.1.0] - 2018-07-05
 
