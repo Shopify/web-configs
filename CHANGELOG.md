@@ -2,6 +2,9 @@
 
 <!-- ## [Unreleased] -->
 
+## [5.1.1] - 2018-07-09
+- Rename `plugin/content-no-strings` rule to `shopify/content-no-strings`.
+
 ## [5.1.0] - 2018-07-05
 
 - Added a new custom rule `plugin/content-no-strings` that disallows hard-coded strings as values for the `content` property. This prevents internationalization issues. Keywords are still allowed.

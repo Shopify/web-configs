@@ -28,7 +28,7 @@ module.exports = {
     require('./rules/unit'),
     require('./rules/value'),
     {
-      'plugin/content-no-strings': true,
+      'shopify/content-no-strings': true,
     },
   ),
 };
