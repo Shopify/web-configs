@@ -21,6 +21,8 @@ Below are some specific applications of this principle:
 
 * Do not over-mock. Mocking can be a useful tool for short-circuiting potentially expensive function calls or for more easily simulating a particular environment. However, overuse of mocks reduces the degree to which the tests represent the running system, and can indicate a design that has been excessively broken up solely for the purposes of being able to inject mocks into various points of the operation.
 
+* Do not rely on test IDs of any kind. See the [test IDs](#test-ids) section below for alternative to test IDs, and read additional rationale for this decision in its [decision record](../Decision%20records/04%20-%20We%20do%20not%20use%20test%20IDs%20in%20tests.md).
+
 ### Setup, perform, assert
 
 All tests should follow a common pattern. First, do any necessary setup work (for example, instantiating an object, or mocking a dependency to return a particular value). Then, perform the action you are testing (for example, triggering a method). Finally, assert on the result, either on the value received from performing the action, or on the side effects that are expected as part of it.
@@ -205,11 +207,104 @@ Common patterns for organizing test and fixture files makes it easier to navigat
           └── my-fixture.json
   ```
 
-## Miscellaneous
+## Additional topics
 
 ### Fake data
 
 In order to provide clarity that the specific value used in a test is unimportant, it can be useful to use a library that abstracts away and randomizes the generation of mock data. In JavaScript, we recommend using [faker.js](https://github.com/marak/Faker.js/) for generating fake data.
+
+### Test IDs
+
+A common way in which developers accidentally break the barrier of public API in tests is by using test IDs to target specific elements rendered by their component. These identifiers are often used to mark parts of the component’s markup that are not truly important to the consumer of the component, but which include some details the developer wishes to test for. Common examples include:
+
+* `div`s and `span`s that have no semantic value, but contain some content (text, child components, etc) that *are* a guarantee the developer wants to make.
+* Markup that has an important effect on the visual output of a component, but which have no other defining characteristics (for example, an element on which we apply a particular class name or inline styles).
+* A child component that is rendered multiple times, where the developer wishes to easily disambiguate between the instances (for example, a component that renders multiple `Modal`s from Polaris React).
+
+We would like to avoid test IDs for handling the cases above, as make it easy to reach into your component in ways that unnecessarily lock down the implementation. You can typically avoid test IDs by using one of the following strategies:
+
+* If you are asserting that particular text exists in your component, simply check that the text exists *somewhere* in the component without noting a particular element that contains it. For example, you could do the following in Enzyme to assert that a particular string exists based on a `name` prop passed to a React component:
+
+  ```ts
+  it('greets the user with the provided name', () => {
+    const name = 'Tobi';
+    const greeting = mount(<Greeting name={name} />);
+    expect(greeting.text()).toContain(`Welcome, ${name}`);
+  });
+  ```
+
+* Similarly to the above, if you wish to assert that a property of a component is "injected" into the component’s end markup, assert that it appears *somewhere* in the component, without nailing down any particular element:
+
+  ```ts
+  // Example using React and Enzyme
+
+  it('includes the children in the markup', () => {
+    const children = <div>Contents</div>;
+    const card = mount(<Card>{children}</Card>);
+    expect(card).toContainReact(children);
+  });
+  ```
+
+* If you are trying to assert that some markup exists that results in the correct visual appearance of your component, delete the unit test. Unit tests, as we describe them in this guide, can’t provide confidence over this aspect of the component. Even if you can find a `div` and assert that it has a particular class name, this does not guarantee that the CSS was written correctly, or that the class name is the one that has the necessary styles. We do not attempt to assert visual fidelity in unit tests, and would instead rely on tests that render the entire component (along with its styles, in a real browser environment). In this context, test IDs are not meaningful.
+
+* If you are trying to find one of several instances of a component, use one of the following strategies (listed here from most to least preferred):
+
+  * If the component makes sense as a separate, named component, extract and find it based on that new component. Use this strategy only when the component encapsulates sufficient logic to make it meaningful as a separate component instead of overloading the parent component with that responsibility.
+  
+    This is frequently the case for modals, which are often better off encapsulating all their logic in a separate component that can be found independently of other modals on the page:
+
+    ```ts
+    // instead of:
+
+    <Modal
+      testID="DeleteModal"
+      title="Delete product?"
+      open={this.state.deleteOpen}
+    >
+      {deleteContents}
+    </Modal>
+    <Modal
+      testID="DuplicateModal"
+      title="Duplicate product?"
+      open={this.state.duplicateOpen}
+    >
+      {duplicateContents}
+    </Modal>
+
+    // make them into separate components:
+
+    <DeleteModal open={this.state.deleteOpen} />
+    <DuplicateModal open={this.state.duplicateOpen} />
+
+    // and, in your test, you can now find based on this component,
+    // shown here using Enzyme:
+
+    expect(myComponent.find(DeleteModal)).toHaveProp('open', true);
+    ```
+  
+  * If the component accepts an `id` property that is meaningful on its own, filter components by that property instead. This is frequently the case for form controls, where omitting `id` properties are allowed but result in non-deterministic IDs being used in their place:
+
+    ```ts
+    // instead of this (using the TextField component from Polaris React):
+
+    <TextField testID="NameField" label="Name" value={this.state.name}>
+    <TextField testID="AgeField" label="Age" value={this.state.age}>
+
+    // use the real ID prop, which is eventually needed to associate
+    // the label field with the input:
+
+    <TextField id="NameField" label="Name" value={this.state.name}>
+    <TextField id="AgeField" label="Age" value={this.state.age}>
+
+    // and, in your test, you can now find based on this property,
+    // shown here using Enzyme:
+
+    expect(myComponent.find(TextField).filter({id: 'NameField'})).toHaveProp('value', '');
+    ```
+
+    To make this approach even easier, our [`enzyme-utilities` package](https://github.com/Shopify/quilt/tree/master/packages/enzyme-utilities) provides a `findById` utility function.
+  
+  * If neither of the above apply, filter the set of matched components based on the properties that are unique to them. If no properties are unique, fall back to the index of the item in the matched set.
 
 ## Technology-specific best practices
 
