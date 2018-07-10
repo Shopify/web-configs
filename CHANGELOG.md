@@ -2,13 +2,9 @@
 
 <!-- ## [Unreleased] -->
 
-## [5.1.1] - 2018-07-09
-- Rename `plugin/content-no-strings` rule to `shopify/content-no-strings`.
-- Disable `shopify/content-no-strings` by default.
+## [5.1.1] - 2018-07-10
 
-## [5.1.0] - 2018-07-05
-
-- Added a new custom rule `plugin/content-no-strings` that disallows hard-coded strings as values for the `content` property. This prevents internationalization issues. Keywords are still allowed.
+- Added a new custom rule `shopify/content-no-strings` that disallows hard-coded strings as values for the `content` property. This prevents internationalization issues. Keywords are still allowed. The rule is not enabled by default. 
 
 The following patterns are considered violations:
 
@@ -29,6 +25,10 @@ The following patterns are _not_ considered violations:
 ```css
 .foo::before { content: open-quote counter(section_counter) close-quote; }
 ```
+
+## [5.1.0] - 2018-07-05 [YANKED]
+
+- Use 5.1.1 instead.
 
 ## [5.0.1] - 2018-04-06
 
@@ -172,7 +172,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.1...HEAD
+[5.1.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.0...v5.0.1
 [5.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v4.0.0...v5.0.0
