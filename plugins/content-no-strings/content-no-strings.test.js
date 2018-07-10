@@ -1,8 +1,8 @@
 const testRule = require('stylelint-test-rule-tape');
-const shopifyi18n = require('.');
+const contentNoStrings = require('.');
 
-testRule(shopifyi18n.rule, {
-  ruleName: shopifyi18n.ruleName,
+testRule(contentNoStrings.rule, {
+  ruleName: contentNoStrings.ruleName,
   config: true,
   skipBasicChecks: true,
 

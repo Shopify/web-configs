@@ -1,6 +1,6 @@
 const stylelint = require('stylelint');
 
-const ruleName = 'plugin/content-no-strings';
+const ruleName = 'shopify/content-no-strings';
 
 const messages = stylelint.utils.ruleMessages(ruleName, {
   rejected: 'You must not hard-code unlocalized strings into the `content` property',
