@@ -1,6 +1,9 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+- Changed dependency: Pull the base prettier config from stylelint-config-prettier instead of  prettier-stylelint-formatter. It is provided by the prettier organisation and is more up to date than the one provided by prettier-stylelint-formatter
+- Increase stylelint minimum version to 9.1.1 so it aligns with the minumum required by stylelint-config-prettier
 
 ## [5.1.1] - 2018-07-10
 
