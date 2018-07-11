@@ -21,7 +21,7 @@ Below are some specific applications of this principle:
 
 * Do not over-mock. Mocking can be a useful tool for short-circuiting potentially expensive function calls or for more easily simulating a particular environment. However, overuse of mocks reduces the degree to which the tests represent the running system, and can indicate a design that has been excessively broken up solely for the purposes of being able to inject mocks into various points of the operation.
 
-* Do not rely on test IDs of any kind. See the [test IDs](#test-ids) section below for alternative to test IDs, and read additional rationale for this decision in its [decision record](../Decision%20records/04%20-%20We%20do%20not%20use%20test%20IDs%20in%20tests.md).
+* Do not rely on test IDs of any kind. See the [test IDs](#test-ids) section below for alternative to test IDs, and read additional rationale for this decision in its [decision record](../Decision%20records/04%20-%20We%20do%20not%20use%20test%20IDs.md).
 
 ### Setup, perform, assert
 
@@ -221,7 +221,7 @@ A common way in which developers accidentally break the barrier of public API in
 * Markup that has an important effect on the visual output of a component, but which have no other defining characteristics (for example, an element on which we apply a particular class name or inline styles).
 * A child component that is rendered multiple times, where the developer wishes to easily disambiguate between the instances (for example, a component that renders multiple `Modal`s from Polaris React).
 
-We would like to avoid test IDs for handling the cases above, as make it easy to reach into your component in ways that unnecessarily lock down the implementation. You can typically avoid test IDs by using one of the following strategies:
+We would like to avoid test IDs for handling the cases above, as they make it easy to reach into your component in ways that unnecessarily lock down the implementation. You can typically avoid test IDs by using one of the following strategies:
 
 * If you are asserting that particular text exists in your component, simply check that the text exists *somewhere* in the component without noting a particular element that contains it. For example, you could do the following in Enzyme to assert that a particular string exists based on a `name` prop passed to a React component:
 
