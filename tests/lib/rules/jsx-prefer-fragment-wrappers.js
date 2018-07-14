@@ -33,6 +33,14 @@ ruleTester.run('jsx-prefer-fragment-wrappers', rule, {
       code: '<Foo.Bar><Foo /><Bar /><Baz /></Foo.Bar>',
       parser,
     },
+    {
+      code: '<table><tbody /><thead /></table>',
+      parser,
+    },
+    {
+      code: '<tr><td>data</td><td>more data</td></tr>',
+      parser,
+    },
   ],
   invalid: [
     {
