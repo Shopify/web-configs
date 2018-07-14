@@ -42,6 +42,10 @@ ruleTester.run('react-prefer-private-members', rule, {
         static defaultProps = {}
         static childContextTypes = {}
         static contextTypes = {}
+        static displayName = ''
+        state = {}
+        constructor() {}
+        getChildContext() {}
         getDerivedStateFromProps() {}
         componentWillMount() {}
         UNSAFE_componentWillMount() {}
