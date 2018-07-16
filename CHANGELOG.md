@@ -2,7 +2,8 @@
 
 ## Unreleased
 
-eslint-plugin-shopify will no longer install prettier as a dependency. Please ensure you have added prettier to your package.json if you wish to use it.
+## [23.0.0] - 2018-07-16
+* **Breaking** `eslint-plugin-shopify` will no longer install `prettier` as a dependency. Please ensure you have added `prettier` to your `package.json` if you wish to use it.
 
 ### Added
 * `shopify/jsx-prefer-fragment-wrappers` ([#94](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
