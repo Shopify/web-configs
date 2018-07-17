@@ -1,5 +1,11 @@
 # Prevent the usage of vague words in test statements. (no-vague-titles)
-This rule encourages more explicit test descriptions by preventing the use of the vague words, such as "correct" and "appropriate".
+This rule encourages more explicit test descriptions by preventing the use of the vague words.
+
+The following vague terms are flagged:
+
+* "correct"
+* "appropriate"
+* "all"
 
 ## Rule Details
 
@@ -9,6 +15,7 @@ Examples of **incorrect** code for this rule:
 
 ```js
 it('is called with the correct parameters')
+it('is called with all the plugins')
 test('renders the appropriate markup')
 describe('receives the correct props')
 
@@ -18,6 +25,7 @@ Examples of **correct** code for this rule:
 
 ```js
 it(`is called with the user's id and password`)
+it('is called with the Foo and Bar plugins')
 test('renders the user avatar and email')
 describe('receives the date and publishState props from the router params')
 ```

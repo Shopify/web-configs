@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### Changed
+* Included `all` as a vague term for `no-vague-titles` ([#114](https://github.com/Shopify/eslint-plugin-shopify/pull/114))
+
 ## [23.0.0] - 2018-07-16
 * **Breaking** `eslint-plugin-shopify` will no longer install `prettier` as a dependency. Please ensure you have added `prettier` to your `package.json` if you wish to use it.
 
