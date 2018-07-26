@@ -98,7 +98,7 @@ We have a number of packages that handle common mocking scenarios that are built
 
 ## Expectations
 
-As noted in our [main testing guide](../Testing.md), you should prefer the “smartest” assertions available. Below are some common examples of applying this rule to Jest (note that you can always visit the [Jest expect guide](https://facebook.github.io/jest/docs/en/expect.html) for a list of available assertions).
+As noted in our [main testing guide](./Testing.md), you should prefer the “smartest” assertions available. Below are some common examples of applying this rule to Jest (note that you can always visit the [Jest expect guide](https://facebook.github.io/jest/docs/en/expect.html) for a list of available assertions).
 
 ```js
 // .toHaveProperty()
