@@ -50,7 +50,7 @@ We have one utility package for Enzyme, [@shopify/enzyme-utilities](https://gith
 
 ## Expectations
 
-As noted in our [main testing guide](../Testing), you should prefer the “smartest” assertions available. When making heavy use of Enzyme and Jest, we recommend including [enzyme-matchers](https://github.com/FormidableLabs/enzyme-matchers), which provide more meaningful assertions for Enzyme wrappers. Below are a couple of common examples where these smarter assertions are useful:
+As noted in our [main testing guide](./Testing.md), you should prefer the “smartest” assertions available. When making heavy use of Enzyme and Jest, we recommend including [enzyme-matchers](https://github.com/FormidableLabs/enzyme-matchers), which provide more meaningful assertions for Enzyme wrappers. Below are a couple of common examples where these smarter assertions are useful:
 
 ```js
 const myComponent = mount(<MyComponent />);
