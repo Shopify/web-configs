@@ -1,8 +1,8 @@
 # Web Foundation team
 
-## Responsibilities
-
 The Web Foundation team at Shopify is responsible for stewarding our approach to building web applications. It is important to note, however, that stewardship is the most apt description of the team’s role; it is not meant to dictate or police, particularly where doing so would interfere with another team being able to deliver their target experience.
+
+## Responsibilities
 
 There are a few areas where the Web Foundation team takes a particularly prominent role. This section outlines these areas, as well as how the Web Foundation team decides on the degree of its involvement.
 
@@ -28,8 +28,6 @@ At Shopify, we do not believe that every project should have completely free-rei
 
 The Web Foundation team applies this same principle of having sensible "picks" to developer tools, application libraries, and best practices specific to the Web platform. However, we are mindful of not creating "thin clients" — that is, leaving no decisions to application teams about what their application should look like.
 
-It is useful to consider the separation of powers between federal and provincial governments, as this is a similar model to how the Web Foundation team considers topics in which to involve themselves. In Canada, the federal government delegates the responsibility for overseeing schools, hospitals, and property rights to provincial governments, while retaining powers that they are best positioned to address, such as national defence and currency. Similarly, the Web Foundations team is responsible for guiding decisions on topics that are important for all applications, but delegates most of the finer points to application teams.
-
 #### Criteria for Web Foundation involvement
 
 The above description can be seen as overly broad, so the Web Foundation team uses the following criteria in deciding whether it should take a role in deciding best practices or preferred tools for a particular topic.
@@ -39,7 +37,7 @@ The following criteria must **always** be met for the Web Foundation team to get
 * It **must not** interfere with a team’s ability to deliver value to their user. This has two implications:
   1. The Web Foundation team only builds and maintains libraries that are either non-visual for the end user, or which operate in line with our design system, Polaris.
   2. Any team feeling that our recommended best practices or libraries prevent them from being capable of delivering a user-facing feature should ignore the recommendation and bring this up with us.
-* It **must** be a topic that affects a majority of applications. The Web Foundation team will not build libraries for that benefit only a small handful of projects.
+* It **must** be a topic that affects a majority of applications. The Web Foundation team will not build libraries that benefit only a small handful of projects; our work typically impacts at least 80% of merchants or internal developers.
 * It **must not** be a topic that has universal consensus in the industry.
 
 **At least one** of the following criteria must also be met for the Web Foundation team to get involved:
@@ -65,7 +63,7 @@ These responsibilities are summarized in the diagram below.
 
 <figure>
   <img src="./images/Responsibilities%20-%20Shopify.png" alt="Web Foundation responsibilities for Shopify" />
-  <figcaption>A summary of components that the Web Foundation team is responsible for (the bottom four layers, highlighted in blue)</figcaption>
+  <figcaption>A summary of components that the Web Foundation team is responsible for (the bottom four layers, highlighted in blue). Note that Polaris is listed as a responsibility of the Web Foundation team given its importance in our approach to building web apps, but its maintenance and evolution are handled by the dedicated Polaris team.</figcaption>
 </figure>
 
 ### Maintenance of foundational piece of Shopify Web
