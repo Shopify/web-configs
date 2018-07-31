@@ -99,6 +99,6 @@
     "merge": "1.2.0",
     "pascal-case": "^2.0.1",
     "pkg-dir": "2.0.0",
-    "typescript-eslint-parser": "16.0.1"
+    "typescript-eslint-parser": "17.0.1"
   }
 }

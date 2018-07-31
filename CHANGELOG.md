@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Fixed
+* Updated `typescript-eslint-parser` dependency to version 17.0.1 in order to support TypeScript 3.
+* `plugin:shopify/prettier` and `plugin:shopify/typescript-prettier` now defer Prettier's config to project's `.prettierrc`.
+
 ### Changed
 * Included `all` as a vague term for `no-vague-titles` ([#114](https://github.com/Shopify/eslint-plugin-shopify/pull/114))
 
