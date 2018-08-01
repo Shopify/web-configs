@@ -28,8 +28,7 @@ const resourceSKU = resource.sku;
 
 ### Enums
 
-Use pascal case when naming enums, even if the enum contains an abbreviation.
-
+Always use pascal case when naming enums, even if the enum contains an abbreviation.
 
 ```ts
 // bad
