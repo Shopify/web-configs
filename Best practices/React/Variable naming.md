@@ -26,6 +26,30 @@ const skuLabel = 'SKU';
 const resourceSKU = resource.sku;
 ```
 
+### Enums
+
+Use pascal case when naming enums, even if the enum contains an abbreviation.
+
+
+```ts
+// bad
+enum sortorder {
+  most_recent,
+  LEAST_RECENT,
+  newest,
+  OLDEST,
+}
+
+// good
+enum SortOrder {
+  MostRecent,
+  LeastRecent,
+  Newest,
+  Oldest
+}
+```
+
+
 ### Sub-component Markup
 
 Use `<componentName>Markup` in camel case for storing generated partial jsx output within a render function.
