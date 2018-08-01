@@ -361,8 +361,10 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.0.0...HEAD
-[22.0.2]: https://github.com/Shopify/eslint-plugin-shopify/compare/v21.0.1...v22.0.0
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.0.0...HEAD
+[23.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.1.0...v23.0.0
+[22.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.0.0...v22.1.0
+[22.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v21.0.1...v22.0.0
 [21.0.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v21.0.0...v21.0.1
 [21.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v20.0.0...v21.0.0
 [20.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.1...v20.0.0
