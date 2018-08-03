@@ -48,11 +48,12 @@ npm run stylelint
 ## Prettier
 
 This config also includes a prettier config which can be extended to format `.scss`.
+Using the `stylelint-prettier` plugin, prettier changes are exposed as stylelint rule violations.
 
-Install [`prettier-stylelint-formatter`](https://github.com/ismail-syed/prettier-stylelint-formatter):
+Install [`prettier`](https://github.com/prettier/prettier):
 
 ```
-$ yarn add --dev prettier-stylelint-formatter
+$ yarn add --dev prettier
 ```
 
 Extend the config in your `package.json`:
@@ -73,10 +74,4 @@ Add a prettier config in `package.json`:
   "trailingComma": "es5",
   "bracketSpacing": false
 }
-```
-
-Run `prettier-stylelint`:
-
-```
-prettier-stylelint **/*.scss
 ```

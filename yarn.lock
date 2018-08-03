@@ -1030,7 +1030,7 @@ eslint-plugin-prettier@2.6.0:
     fast-diff "^1.1.1"
     jest-docblock "^21.0.0"
 
-eslint-plugin-prettier@^2.1.0:
+eslint-plugin-prettier@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.6.2.tgz#71998c60aedfa2141f7bfcbf9d1c459bf98b4fad"
   dependencies:
@@ -3359,11 +3359,11 @@ stylelint-order@~0.8.1:
     postcss "^6.0.14"
     postcss-sorting "^3.1.0"
 
-stylelint-prettier@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-0.2.1.tgz#8a2d0057bb869933ee87612e525e13f1fb3fc76c"
+stylelint-prettier@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-0.2.2.tgz#85df8194f19523a7e23edab2ddc90bea79bc5110"
   dependencies:
-    eslint-plugin-prettier "^2.1.0"
+    eslint-plugin-prettier "^2.6.2"
 
 stylelint-scss@^3.0.0:
   version "3.0.0"
