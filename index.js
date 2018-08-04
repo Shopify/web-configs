@@ -16,6 +16,7 @@ module.exports = {
     'prefer-early-return': require('./lib/rules/prefer-early-return'),
     'prefer-module-scope-constants': require('./lib/rules/prefer-module-scope-constants'),
     'prefer-pascal-case-enums': require('./lib/rules/prefer-pascal-case-enums'),
+    'prefer-singular-enums': require('./lib/rules/prefer-singular-enums'),
     'prefer-twine': require('./lib/rules/prefer-twine'),
     'react-initialize-state': require('./lib/rules/react-initialize-state'),
     'react-prefer-private-members': require('./lib/rules/react-prefer-private-members'),

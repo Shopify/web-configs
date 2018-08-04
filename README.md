@@ -127,6 +127,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.
 - [prefer-module-scope-constants](docs/rules/prefer-module-scope-constants.md): Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.
 - [prefer-pascal-case-enums](docs/rules/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using pascal case.
+- [prefer-singular-enums](docs/rules/prefer-singular-enums.md): Prefer TypeScript enums be singular.
 - [prefer-twine](docs/rules/prefer-twine.md): Prefer Twine over Bindings as the name for twine imports.
 - [react-initialize-state](docs/rules/react-initialize-state.md): Require that React component state be initialized when it has a non-empty type.
 - [react-prefer-private-members](docs/rules/react-prefer-private-members.md): Prefer all non-React-specific members be marked private in React class components.

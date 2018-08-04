@@ -1,6 +1,8 @@
 # Changelog
 
 <!-- ## Unreleased -->
+### Added
+* `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
 
 ## [23.1.0] - 2018-08-02
 
