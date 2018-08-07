@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.1.0] - 2018-08-07
+
+- Update dependency: use stylelint-config-prettier v4.0.0. This is identical to v3.3.0 except it moves stylelint to be a peerDependency, which means there is less chance for installing multiple versions of stylelint.
+
 ## [6.0.0] - 2018-08-07
 
 - Changed dependency: Use `stylelint-prettier` for prettier integration instead of `prettier-stylelint-formatter`. `stylelint-prettier` is a stylelint plugin that exposes prettier issues as stylelint rule violations. This means you can use `stylelint --fix` to fix formatting issues that prettier raises instead of having to use different executables for showing and autofixing issues.
