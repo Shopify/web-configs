@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Changed dependency: Use `stylelint-prettier` for prettier integration instead of `prettier-stylelint-formatter`. `stylelint-prettier` is stylelint plugin that exposes prettier issues as stylelint rule violations. This means you can use `stylelint --fix` to fix formatting issues that prettier raises instead of having to use different executables for showing and autofixing issues.
+- Changed dependency: Use `stylelint-prettier` for prettier integration instead of `prettier-stylelint-formatter`. `stylelint-prettier` is a stylelint plugin that exposes prettier issues as stylelint rule violations. This means you can use `stylelint --fix` to fix formatting issues that prettier raises instead of having to use different executables for showing and autofixing issues.
 
 ### Migration Suggestions
 

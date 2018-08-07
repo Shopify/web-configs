@@ -48,7 +48,7 @@ npm run stylelint
 ## Prettier
 
 This config also includes a prettier config which can be extended to format `.scss`.
-Using the `stylelint-prettier` plugin, prettier changes are exposed as stylelint rule violations.
+Using the [`stylelint-prettier`](https://github.com/bpscott/stylelint-prettier) plugin, prettier changes are exposed as stylelint rule violations.
 
 Install [`prettier`](https://github.com/prettier/prettier):
 
@@ -75,3 +75,5 @@ Add a prettier config in `package.json`:
   "bracketSpacing": false
 }
 ```
+
+Prettier fixes shall be reported when you run `stylelint **/*.css` and shall be autofixed when you run `stylelint --fix **/*.scss`.
