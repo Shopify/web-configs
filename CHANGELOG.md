@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+- Changed dependency: Use `stylelint-prettier` for prettier integration instead of `prettier-stylelint-formatter`. `stylelint-prettier` is a stylelint plugin that exposes prettier issues as stylelint rule violations. This means you can use `stylelint --fix` to fix formatting issues that prettier raises instead of having to use different executables for showing and autofixing issues.
+
+### Migration Suggestions
+
+- If `stylelint-config-shopify/prettier` is used, please remove `prettier-stylelint-formatter` and update any scripts that referenced it to use run `stylelint --fix '**/*.scss'` to autofix issues.
+
+  ```
+  yarn remove prettier-stylelint-formatter
+  ```
+
 ## [5.1.2] - 2018-07-10
 
 - Changed dependency: Pull the base prettier config from stylelint-config-prettier instead of  prettier-stylelint-formatter. It is provided by the prettier organisation and is more up to date than the one provided by prettier-stylelint-formatter
