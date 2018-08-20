@@ -1,4 +1,4 @@
-# Prevent the usage of vague words in test statements. (no-vague-titles)
+# Prevent the usage of vague words in test statements. (jest/no-vague-titles)
 This rule encourages more explicit test descriptions by preventing the use of the vague words.
 
 The following vague terms are flagged:

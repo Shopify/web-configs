@@ -15,8 +15,6 @@ module.exports = {
     'prefer-class-properties': require('./lib/rules/prefer-class-properties'),
     'prefer-early-return': require('./lib/rules/prefer-early-return'),
     'prefer-module-scope-constants': require('./lib/rules/prefer-module-scope-constants'),
-    'prefer-pascal-case-enums': require('./lib/rules/prefer-pascal-case-enums'),
-    'prefer-singular-enums': require('./lib/rules/prefer-singular-enums'),
     'prefer-twine': require('./lib/rules/prefer-twine'),
     'react-initialize-state': require('./lib/rules/react-initialize-state'),
     'react-no-multiple-render-methods': require('./lib/rules/react-no-multiple-render-methods'),
@@ -26,6 +24,8 @@ module.exports = {
     'sinon-no-restricted-features': require('./lib/rules/sinon-no-restricted-features'),
     'sinon-prefer-meaningful-assertions': require('./lib/rules/sinon-prefer-meaningful-assertions'),
     'strict-component-boundaries': require('./lib/rules/strict-component-boundaries'),
+    'typescript/prefer-pascal-case-enums': require('./lib/rules/typescript/prefer-pascal-case-enums'),
+    'typescript/prefer-singular-enums': require('./lib/rules/typescript/prefer-singular-enums'),
     'webpack/no-unnamed-dynamic-imports': require('./lib/rules/webpack/no-unnamed-dynamic-imports'),
   },
 

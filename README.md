@@ -126,8 +126,6 @@ This plugin provides the following custom rules, which are included as appropria
 - [prefer-class-properties](docs/rules/prefer-class-properties.md): Prefer class properties to assignment of literals in constructors.
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.
 - [prefer-module-scope-constants](docs/rules/prefer-module-scope-constants.md): Prefer that screaming snake case variables always be defined using `const`, and always appear at module scope.
-- [prefer-pascal-case-enums](docs/rules/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using pascal case.
-- [prefer-singular-enums](docs/rules/prefer-singular-enums.md): Prefer TypeScript enums be singular.
 - [prefer-twine](docs/rules/prefer-twine.md): Prefer Twine over Bindings as the name for twine imports.
 - [react-initialize-state](docs/rules/react-initialize-state.md): Require that React component state be initialized when it has a non-empty type.
 - [react-no-multiple-render-methods](docs/rules/react-no-multiple-render-methods.md): Disallow multiple render methods in React component classes.
@@ -137,6 +135,8 @@ This plugin provides the following custom rules, which are included as appropria
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.
 - [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.
 - [strict-component-boundaries](docs/rules/strict-component-boundaries.md): Prevent module imports between components.
+- [typescipt/prefer-pascal-case-enums](docs/rules/typescipt/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using Pascal case.
+- [typescipt/prefer-singular-enums](docs/rules/typescipt/prefer-singular-enums.md): Prefer TypeScript enums be singular.
 - [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
 
 ## Creating New Rules

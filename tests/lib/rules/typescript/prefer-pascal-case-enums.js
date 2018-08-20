@@ -1,6 +1,6 @@
 const {RuleTester} = require('eslint');
 
-const rule = require('../../../lib/rules/prefer-pascal-case-enums');
+const rule = require('../../../../lib/rules/typescript/prefer-pascal-case-enums');
 
 const ruleTester = new RuleTester();
 
@@ -11,7 +11,7 @@ const typeScriptParser = 'typescript-eslint-parser';
 function errorWithName(name) {
   return {
     type: 'Identifier',
-    message: `Enum '${name}' should use pascal case.`,
+    message: `Enum '${name}' should use Pascal case.`,
   };
 }
 

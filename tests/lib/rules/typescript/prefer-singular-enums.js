@@ -1,6 +1,6 @@
 const {RuleTester} = require('eslint');
 
-const rule = require('../../../lib/rules/prefer-singular-enums');
+const rule = require('../../../../lib/rules/typescript/prefer-singular-enums');
 
 const ruleTester = new RuleTester();
 
