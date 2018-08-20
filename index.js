@@ -19,6 +19,7 @@ module.exports = {
     'prefer-singular-enums': require('./lib/rules/prefer-singular-enums'),
     'prefer-twine': require('./lib/rules/prefer-twine'),
     'react-initialize-state': require('./lib/rules/react-initialize-state'),
+    'react-no-multiple-render-methods': require('./lib/rules/react-no-multiple-render-methods'),
     'react-prefer-private-members': require('./lib/rules/react-prefer-private-members'),
     'react-type-state': require('./lib/rules/react-type-state'),
     'restrict-full-import': require('./lib/rules/restrict-full-import'),

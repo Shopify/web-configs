@@ -130,6 +130,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [prefer-singular-enums](docs/rules/prefer-singular-enums.md): Prefer TypeScript enums be singular.
 - [prefer-twine](docs/rules/prefer-twine.md): Prefer Twine over Bindings as the name for twine imports.
 - [react-initialize-state](docs/rules/react-initialize-state.md): Require that React component state be initialized when it has a non-empty type.
+- [react-no-multiple-render-methods](docs/rules/react-no-multiple-render-methods.md): Disallow multiple render methods in React component classes.
 - [react-prefer-private-members](docs/rules/react-prefer-private-members.md): Prefer all non-React-specific members be marked private in React class components.
 - [react-type-state](docs/rules/react-type-state.md): Require that React component state be typed in TypeScript.
 - [restrict-full-import](docs/rules/restrict-full-import.md): Prevent importing the entirety of a package.

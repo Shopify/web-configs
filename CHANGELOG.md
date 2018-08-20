@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased 
+## Unreleased
 
 ### Fixed
 * `plugin:shopify/flow` now disables rules checked by Flow's static analyzer. ([#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135))
@@ -8,6 +8,7 @@
 
 ### Added
 * `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
+* `shopify/react-no-multiple-render-methods` ([#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134))
 
 ## [23.1.0] - 2018-08-02
 
