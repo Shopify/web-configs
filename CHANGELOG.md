@@ -10,7 +10,10 @@
 * `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
 * `shopify/react-no-multiple-render-methods` ([#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134))
 
-## [23.1.0] - 2018-08-02
+### Fixed
+* Updated `strict-component-boundaries` to exclude imports from node_modules([#140](https://github.com/Shopify/eslint-plugin-shopify/pull/140))
+
+## [23.1.0] - 2018-08-02s
 
 ### Fixed
 * Updated `typescript-eslint-parser` dependency to version 17.0.1 in order to support TypeScript 3. ([#121](https://github.com/Shopify/eslint-plugin-shopify/pull/121))
