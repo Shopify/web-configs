@@ -31,6 +31,10 @@ ruleTester.run('strict-component-boundaries', rule, {
       parserOptions,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
     },
+    {
+      code: `import someThing from '../fixtures/SomeMockQuery/query.json';`,
+      parserOptions,
+    },
   ],
   invalid: [
     {
@@ -50,6 +54,16 @@ ruleTester.run('strict-component-boundaries', rule, {
     },
     {
       code: `import someThing from './components/SomeComponent/any-path';`,
+      parserOptions,
+      errors,
+    },
+    {
+      code: `import someThing from '../SomeComponent/fixtures/SomeMockQuery/query.json';`,
+      parserOptions,
+      errors,
+    },
+    {
+      code: `import someThing from './components/SomeComponent/fixtures/SomeMockQuery/query.json';`,
       parserOptions,
       errors,
     },
