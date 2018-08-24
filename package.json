@@ -1,0 +1,23 @@
+{
+  "name": "@shopify/browserlist-config",
+  "version": "0.0.4",
+  "description": "Shareable Browserslist configuration for Shopify.",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/browserlist-config.git"
+  },
+  "keywords": [
+    "Shopify",
+    "Browserlist"
+  ],
+  "author": "Shopify Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shopify/browserlist-config/issues"
+  },
+  "homepage": "https://github.com/Shopify/browserlist-config#readme"
+}
