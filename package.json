@@ -1,6 +1,6 @@
 {
   "name": "@shopify/browserslist-config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Shareable browserslist configuration for Shopify.",
   "main": "index.js",
   "publishConfig": {
