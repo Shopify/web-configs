@@ -6,6 +6,7 @@
 * `plugin:shopify/flow` now disables rules checked by Flow's static analyzer. ([#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135))
 * `plugin:shopify/prettier` and `plugin:shopify/typescript-prettier` defer missing semicolon rules to a project´s `.prettierrc`. ([#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135))
 * Updated `strict-component-boundaries` to exclude fixture imports([#117](https://github.com/Shopify/eslint-plugin-shopify/pull/117))
+* Updated `strict-component-boundaries` to exclude imports from node_modules([#140](https://github.com/Shopify/eslint-plugin-shopify/pull/140))
 
 ### Changed
 * Namespaced `prefer-pascal-case-enums` and `prefer-singular-enums` under `typescript`. ([#141](https://github.com/Shopify/eslint-plugin-shopify/pull/141))
@@ -14,8 +15,6 @@
 * `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
 * `shopify/react-no-multiple-render-methods` ([#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134))
 
-### Fixed
-* Updated `strict-component-boundaries` to exclude imports from node_modules([#140](https://github.com/Shopify/eslint-plugin-shopify/pull/140))
 
 ## [23.1.0] - 2018-08-02s
 
