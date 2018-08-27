@@ -25,7 +25,7 @@ At the time of this decision, the largest of these components had test files any
 
 ## Decision
 
-Developer experience is a higher priority than technical purity, so we have decided these test files need to be split. Our existing directory structure can handle this fairly gracefully; a `Component/tests` directory already contains a single test file for the component (alongside directories for things like fixtures), so collocating all of the split test files in this directory is the natural next step.
+Developer experience is a higher priority than technical purity, so we have decided these test files need to be split; the velocity improvement for our formatting tools along is worth a more complex file setup. Our existing directory structure can handle this fairly gracefully; a `Component/tests` directory already contains a single test file for the component (alongside directories for things like fixtures), so collocating all of the split test files in this directory is the natural next step.
 
 There are different options for how we could split these files, though. We considered two main alternatives:
 

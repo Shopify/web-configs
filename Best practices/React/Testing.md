@@ -187,7 +187,7 @@ Another benefit of testing React components is that they typically abstract away
 
 As noted in the [decision record](../../Decision%20records/06%20-%20We%20split%20up%20large%20component%20test%20files%20by%20feature.md), when a component’s test file gets large enough that is hard to navigate and/ or stresses editor tooling, we split the test file by feature. Below are some best practices for naming and structure of these split files:
 
-* Name the split files in the format `component-feature.test.tsx`. For example, a test file for the SEO feature of a `ProductDetails` component would be found at `ProductDetails/tests/seo.test.tsx`.
+* Name the split files in the format `Component-feature.test.tsx`. For example, a test file for the SEO feature of a `ProductDetails` component would be found at `ProductDetails/tests/ProductDetails-seo.test.tsx`.
 * Tests that do not directly relate to a particular feature, or are too small to warrant a separate test file, should remain in a test file named after the component (for example, `ProductDetails/tests/ProductDetails.test.tsx`).
 * Nest all tests for a component in a describe block named after the component, followed by a describe block for the feature. This allows the results to be grouped together by the test runner.
 
