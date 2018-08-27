@@ -22,7 +22,7 @@ Shareable [browserslist](https://github.com/ai/browserslist) configuration for S
 Install the module.
 
 ```shell
-$ yarn add browserslist-config-shopify
+$ yarn add @shopify/browserslist-config
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ $ yarn add browserslist-config-shopify
 
 ```json
 {
-  "browserslist": ["extends browserslist-config-shopify"]
+  "browserslist": ["extends @shopify/browserslist-config"]
 }
 ```
 
