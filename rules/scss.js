@@ -36,10 +36,13 @@ module.exports = {
   // Specify a pattern for %-placeholders.
   'scss/percent-placeholder-pattern': null,
   // Require or disallow an empty line before //-comments.
-  'scss/double-slash-comment-empty-line-before': ['always', {
-    except: ['first-nested'],
-    ignore: ['between-comments', 'stylelint-commands'],
-  }],
+  'scss/double-slash-comment-empty-line-before': [
+    'always',
+    {
+      except: ['first-nested'],
+      ignore: ['between-comments', 'stylelint-commands'],
+    },
+  ],
   // Require or disallow //-comments to be inline comments.
   'scss/double-slash-comment-inline': null,
   // Require or disallow whitespace after the // in //-comments
@@ -60,4 +63,8 @@ module.exports = {
   'scss/partial-no-import': true,
   // Disallow redundant nesting selectors (`&`).
   'scss/selector-no-redundant-nesting-selector': true,
+  // Disallow dollar variables within a stylesheet.
+  'no-dollar-variables': null,
+  // Disallow duplicate dollar variables within a stylesheet.
+  'no-duplicate-dollar-variables': true,
 };
