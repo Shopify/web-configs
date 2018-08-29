@@ -43,7 +43,7 @@
   "devDependencies": {
     "eslint": "^5.4.0",
     "eslint-plugin-shopify": "24.0.0-alpha.1",
-    "stylelint": "^9.1.1",
+    "stylelint": "9.5.0",
     "stylelint-test-rule-tape": "^0.2.0",
     "tape": "^4.9.1"
   },
