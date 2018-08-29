@@ -117,11 +117,13 @@ ruleTester.run('no-vague-titles', rule, {
       code: `(() => {})()`,
       parser,
     },
-
     {
       code: "it('onAllImagesUploaded')",
       parser,
-      errors: errorWithMethod('it'),
+    },
+    {
+      code: `test.each([['production'], ['staging']])('Includes things for %s clients')`,
+      parser,
     },
   ],
   invalid: [
@@ -449,6 +451,11 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('test'),
     },
     {
+      code: `test.each([['production'], ['staging']])('all correct for %s')`,
+      parser,
+      errors: errorWithMethod('test'),
+    },
+    {
       code: "xtest('appropriate')",
       parser,
       errors: errorWithMethod('xtest'),
@@ -470,6 +477,11 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('Appropriate')",
+      parser,
+      errors: errorWithMethod('xtest'),
+    },
+    {
+      code: `xtest.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('xtest'),
     },
@@ -514,12 +526,22 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('it'),
     },
     {
+      code: `it.each([['production'], ['staging']])('all correct for %s')`,
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
       code: "xit('correct')",
       parser,
       errors: errorWithMethod('xit'),
     },
     {
       code: "xit('Includes all the expected things')",
+      parser,
+      errors: errorWithMethod('xit'),
+    },
+    {
+      code: `xit.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('xit'),
     },
@@ -534,7 +556,17 @@ ruleTester.run('no-vague-titles', rule, {
       errors: errorWithMethod('xdescribe'),
     },
     {
+      code: `xdescribe.each([['production'], ['staging']])('all correct for %s')`,
+      parser,
+      errors: errorWithMethod('xdescribe'),
+    },
+    {
       code: "describe.only('Includes all the expected things')",
+      parser,
+      errors: errorWithMethod('describe'),
+    },
+    {
+      code: `describe.each([['production'], ['staging']])('all correct for %s')`,
       parser,
       errors: errorWithMethod('describe'),
     },
@@ -548,10 +580,15 @@ ruleTester.run('no-vague-titles', rule, {
       parser,
       errors: errorWithMethod('test'),
     },
+    {
+      code: `test.each([['production'], ['staging']])('Includes all things for %s clients')`,
+      parser,
+      errors: errorWithMethod('test'),
+    },
   ],
 });
 
-ruleTester.run('no-tests-contain-correct with ignore=describe', rule, {
+ruleTester.run('no-vague-titles with ignore=describe', rule, {
   valid: [
     {
       code: "describe('correct')",
@@ -593,11 +630,15 @@ ruleTester.run('no-tests-contain-correct with ignore=describe', rule, {
       code: "describe.only('appropriate')",
       options: [{ignore: ['describe']}],
     },
+    {
+      code: `describe.each([['production'], ['staging']])('all correct for %s')`,
+      options: [{ignore: ['describe']}],
+    },
   ],
   invalid: [],
 });
 
-ruleTester.run('no-tests-contain-correct with ignore=test', rule, {
+ruleTester.run('no-vague-titles with ignore=test', rule, {
   valid: [
     {
       code: "test('correct')",
@@ -635,11 +676,15 @@ ruleTester.run('no-tests-contain-correct with ignore=test', rule, {
       code: 'test.only("appropriate")',
       options: [{ignore: ['test']}],
     },
+    {
+      code: `test.each([['production'], ['staging']])('all correct for %s')`,
+      options: [{ignore: ['test']}],
+    },
   ],
   invalid: [],
 });
 
-ruleTester.run('no-tests-contain-correct with ignore=it', rule, {
+ruleTester.run('no-vague-titles with ignore=it', rule, {
   valid: [
     {
       code: "it('correct')",
@@ -675,6 +720,10 @@ ruleTester.run('no-tests-contain-correct with ignore=it', rule, {
     },
     {
       code: 'it.only("appropriate")',
+      options: [{ignore: ['it']}],
+    },
+    {
+      code: `it.each([['production'], ['staging']])('all correct for %s')`,
       options: [{ignore: ['it']}],
     },
   ],
