@@ -57,15 +57,5 @@ ruleTester.run('strict-component-boundaries', rule, {
       parserOptions,
       errors,
     },
-    {
-      code: `import someThing from '../SomeComponent/fixtures/SomeMockQuery/query.json';`,
-      parserOptions,
-      errors,
-    },
-    {
-      code: `import someThing from './components/SomeComponent/fixtures/SomeMockQuery/query.json';`,
-      parserOptions,
-      errors,
-    },
   ],
 });
