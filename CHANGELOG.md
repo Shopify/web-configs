@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [2.0.0] - 2018-08-30
 
 Breaking change: updated dependencies to use PostCSS 6.0.
 
@@ -17,5 +19,6 @@ Breaking change: updated dependencies to use PostCSS 6.0.
 ## 1.0.0 - 2017-03-05
 - Initial release
 
-[Unreleased]: https://github.com/Shopify/postcss-shopify/compare/v1.0.1...master
+[Unreleased]: https://github.com/Shopify/postcss-shopify/compare/v2.0.0...master
+[2.0.0]: https://github.com/Shopify/postcss-shopify/compare/v1.0.1...2.0.0
 [1.0.1]: https://github.com/Shopify/postcss-shopify/compare/v1.0.0...1.0.1
