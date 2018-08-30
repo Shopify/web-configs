@@ -6,6 +6,9 @@
   "repository": "https://github.com/Shopify/postcss-shopify.git",
   "author": "Shopify <dev@shopify.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "postcss",
     "postcss-plugin",
