@@ -16,7 +16,7 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
 
   if (inlineEnv) {
     plugins.push(
-      require.resolve('babel-plugin-transform-inline-environment-variables')
+      require.resolve('babel-plugin-transform-inline-environment-variables'),
     );
   }
 

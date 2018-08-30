@@ -15,7 +15,7 @@ module.exports = function shopifyReactPreset(context, options = {}) {
     plugins.push(
       // Hoist constant JSX elements to the top of their scope, which can
       // result in faster reconciliation
-      require.resolve('babel-plugin-transform-react-constant-elements')
+      require.resolve('babel-plugin-transform-react-constant-elements'),
     );
   }
 
@@ -24,7 +24,7 @@ module.exports = function shopifyReactPreset(context, options = {}) {
       // Adds __self attribute to JSX which React will use for some warnings
       require.resolve('babel-plugin-transform-react-jsx-self'),
       // Adds component stack to warning messages
-      require.resolve('babel-plugin-transform-react-jsx-source')
+      require.resolve('babel-plugin-transform-react-jsx-source'),
     );
 
     if (options.hot) {
@@ -33,7 +33,7 @@ module.exports = function shopifyReactPreset(context, options = {}) {
         require.resolve('react-hot-loader/babel'),
         // Force `PureComponent`s to be `Component`s instead, which will make it
         // so they always re-render on hot reloads
-        require.resolve('babel-plugin-transform-react-pure-to-component')
+        require.resolve('babel-plugin-transform-react-pure-to-component'),
       );
     }
   }
