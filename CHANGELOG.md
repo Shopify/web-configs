@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+
+- **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using node [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) versions, we recommend `^8.10.0`. See details on the v4 to v5 migration guide [here](https://eslint.org/docs/user-guide/migrating-to-5.0.0). ([#40](https://github.com/Shopify/stylelint-config-shopify/pull/40))
+
+### Added
+
+- New rules:
+  - [linebreaks](https://stylelint.io/user-guide/rules/linebreaks/)
+  - [scss/no-dollar-variables](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-dollar-variables/README.md) (disabled)
+  - [scss/no-duplicate-dollar-variables](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables/README.md)
+
+
 ## [6.1.0] - 2018-08-07
 
 - Update dependency: use stylelint-config-prettier v4.0.0. This is identical to v3.3.0 except it moves stylelint to be a peerDependency, which means there is less chance for installing multiple versions of stylelint.
@@ -23,7 +37,7 @@
 
 ## [5.1.1] - 2018-07-10
 
-- Added a new custom rule `shopify/content-no-strings` that disallows hard-coded strings as values for the `content` property. This prevents internationalization issues. Keywords are still allowed. The rule is not enabled by default. 
+- Added a new custom rule `shopify/content-no-strings` that disallows hard-coded strings as values for the `content` property. This prevents internationalization issues. Keywords are still allowed. The rule is not enabled by default.
 
 The following patterns are considered violations:
 
@@ -191,7 +205,10 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.1...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v6.1.0...HEAD
+[6.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v6.0.0...v6.1.0
+[6.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.2...v6.0.0
+[5.1.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.1...v5.1.2
 [5.1.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.0...v5.1.1
 [5.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.1...v5.1.0
 [5.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.0.0...v5.0.1

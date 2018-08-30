@@ -13,7 +13,7 @@
     "test": "tape plugins/**/*.test.js"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=8.10.0"
   },
   "keywords": [
     "stylelint",
@@ -36,14 +36,14 @@
   "dependencies": {
     "merge": "1.2.x",
     "stylelint-config-prettier": "^4.0.0",
-    "stylelint-order": "~0.8.1",
+    "stylelint-order": "1.0.0",
     "stylelint-prettier": "^0.2.2",
-    "stylelint-scss": "^3.0.0"
+    "stylelint-scss": "3.3.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "eslint-plugin-shopify": "^20.0.0",
-    "stylelint": "^9.1.1",
+    "eslint": "^5.4.0",
+    "eslint-plugin-shopify": "^24.0.0",
+    "stylelint": "9.5.0",
     "stylelint-test-rule-tape": "^0.2.0",
     "tape": "^4.9.1"
   },
