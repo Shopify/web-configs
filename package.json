@@ -32,8 +32,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-shopify": "^16.0.1"
+    "eslint": "^5.4.0",
+    "eslint-plugin-shopify": "^24.0.0"
   },
   "dependencies": {
     "babel-plugin-react-test-id": "^1.0.2",
