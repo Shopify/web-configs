@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+<!-- ## Unreleased -->
+
+## [24.0.0] - 2018-08-30
 
 ### Fixed
 * `plugin:shopify/flow` now disables rules checked by Flow's static analyzer. ([#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135))
@@ -49,7 +51,7 @@
   * [`typescript/no-var-requires`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-var-requires.md)
 
 
-## [23.1.0] - 2018-08-02s
+## [23.1.0] - 2018-08-02
 
 ### Fixed
 * Updated `typescript-eslint-parser` dependency to version 17.0.1 in order to support TypeScript 3. ([#121](https://github.com/Shopify/eslint-plugin-shopify/pull/121))
@@ -410,7 +412,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.1.0...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.0.0...HEAD
+[24.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.1.0...v24.0.0
 [23.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.0.0...v23.1.0
 [23.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.1.0...v23.0.0
 [22.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.0.0...v22.1.0
