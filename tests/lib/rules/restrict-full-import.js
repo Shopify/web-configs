@@ -6,11 +6,8 @@ const ruleTester = new RuleTester();
 require('babel-eslint');
 
 const parserOptions = {
-  ecmaVersion: 7,
+  ecmaVersion: 2018,
   sourceType: 'module',
-  ecmaFeatures: {
-    experimentalObjectRestSpread: true,
-  },
 };
 
 const options = [['lodash']];

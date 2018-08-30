@@ -11,10 +11,42 @@
 
 ### Changed
 * Namespaced `prefer-pascal-case-enums` and `prefer-singular-enums` under `typescript`. ([#141](https://github.com/Shopify/eslint-plugin-shopify/pull/141))
+* **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) node versions, we recommend `^8.10.0`. See details on the v4 to v5 [migration guide](https://eslint.org/docs/user-guide/migrating-to-5.0.0). ([#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151))
 
 ### Added
 * `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
 * `shopify/react-no-multiple-render-methods` ([#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134))
+
+* New eslint rules and plugins rules: ([#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151))
+  * [`max-classes-per-file`](https://eslint.org/docs/rules/max-classes-per-file) (disabled)
+  * [`no-self-assign`](https://eslint.org/docs/rules/no-self-assign)
+  * [`require-unicode-regexp`](https://eslint.org/docs/rules/require-unicode-regexp) (disabled)
+  * [`no-async-promise-executor`](https://eslint.org/docs/rules/no-async-promise-executor)
+  * [`no-misleading-character-class`](https://eslint.org/docs/rules/no-misleading-character-class)
+  * [`require-atomic-updates`](https://eslint.org/docs/rules/require-atomic-updates)
+  * [`lines-between-class-members`](https://eslint.org/docs/rules/lines-between-class-members)
+  * [`max-lines-per-function`](https://eslint.org/docs/rules/max-lines-per-function) (disabled)
+  * [`multiline-comment-style`](https://eslint.org/docs/rules/multiline-comment-style) (disabled)
+  * [`prefer-object-spread`](https://eslint.org/docs/rules/prefer-object-spread)
+  * [`import/no-self-import`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-self-import.md)
+  * [`import/no-cycle`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-cycle.md)
+  * [`import/no-relative-parent-imports`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md)
+  * [`jest/expect-expect`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/expect-expect.md)
+  * [`jest/no-jasmine-globals`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-jasmine-globals.md)
+  * [`jest/prefer-inline-snapshots`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md) (disabled)
+  * [`jest/no-test-return-statement`](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-return-statement.md)
+  * [`node/prefer-global/buffer`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/buffer.md)
+  * [`node/prefer-global/console`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/console.md)
+  * [`node/prefer-global/process`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/process.md0)
+  * [`node/prefer-global/url-search-params`](https://github.com/mysticatea/eslint-plugin-node/blob/master/lib/rules/prefer-global/url-search-params.js)
+  * [`node/prefer-global/url`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/prefer-global/url.md)
+  * [`node/no-unsupported-features/es-builtins`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-builtins.md) (disabled)
+  * [`node/no-unsupported-features/es-syntax`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/es-syntax.md) (disabled)
+  * [`node/no-unsupported-features/node-builtins`](https://github.com/mysticatea/eslint-plugin-node/blob/master/docs/rules/no-unsupported-features/node-builtins.md)
+  * [`react/no-unsafe`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unsafe.md)
+  * [`react/jsx-props-no-multi-spaces`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-multi-spaces.md)
+  * [`typescript/no-inferrable-types`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-inferrable-types.md)
+  * [`typescript/no-var-requires`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-var-requires.md)
 
 
 ## [23.1.0] - 2018-08-02s

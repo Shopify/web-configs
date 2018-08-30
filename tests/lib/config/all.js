@@ -2,10 +2,11 @@
 /* eslint-disable flowtype/require-valid-file-annotation */
 import {execSync} from 'child_process';
 
-const path = require('path');
+import path from 'path';
 
 describe('config', () => {
   describe('all', () => {
+    // eslint-disable-next-line jest/expect-expect
     it('has valid plugins and requires', () => {
       const allConfigPath = path.join(process.cwd(), 'lib', 'config', 'all.js');
       execSync(
