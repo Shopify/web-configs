@@ -66,5 +66,8 @@ module.exports = {
   // Disallow dollar variables within a stylesheet.
   'scss/no-dollar-variables': null,
   // Disallow duplicate dollar variables within a stylesheet.
-  'scss/no-duplicate-dollar-variables': true,
+  'scss/no-duplicate-dollar-variables': [
+    true,
+    {ignoreInsideAtRules: ['if', 'mixin']},
+  ],
 };
