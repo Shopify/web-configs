@@ -4,7 +4,7 @@
 
 ## [2.0.0] - 2018-08-30
 
-Breaking change: updated dependencies to use PostCSS 6.0.
+Breaking change: updated dependencies to use PostCSS 7.0.
 
 - Updated autoprefixer: `^6.7.6` -> `9.1.3` ([changelog](https://github.com/postcss/autoprefixer/blob/master/CHANGELOG.md))
 - Updated postcss: `^5.2.15` -> `7.0.2` ([changelog](https://github.com/postcss/postcss/blob/master/CHANGELOG.md))
@@ -21,5 +21,5 @@ Breaking change: updated dependencies to use PostCSS 6.0.
 - Initial release
 
 [Unreleased]: https://github.com/Shopify/postcss-shopify/compare/v2.0.0...master
-[2.0.0]: https://github.com/Shopify/postcss-shopify/compare/v1.0.1...2.0.0
-[1.0.1]: https://github.com/Shopify/postcss-shopify/compare/v1.0.0...1.0.1
+[2.0.0]: https://github.com/Shopify/postcss-shopify/compare/v1.0.1...v2.0.0
+[1.0.1]: https://github.com/Shopify/postcss-shopify/compare/v1.0.0...v1.0.1
