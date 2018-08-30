@@ -1,6 +1,6 @@
 {
   "name": "postcss-shopify",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0",
   "description": "All of Shopify’s recommended PostCSS plugins in one easy-to-use preset.",
   "main": "index.js",
   "repository": "https://github.com/Shopify/postcss-shopify.git",
