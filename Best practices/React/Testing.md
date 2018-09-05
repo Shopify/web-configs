@@ -192,15 +192,15 @@ As noted in the [decision record](../../Decision%20records/06%20-%20We%20split%2
 * Nest all tests for a component in a describe block named after the component, followed by a describe block for the feature. This allows the results to be grouped together by the test runner.
 
   ```ts
-  // seo.test.tsx
-  describe('<ProductIndex />', () => {
+  // ProductDetails-seo.test.tsx
+  describe('<ProductDetails />', () => {
     describe('seo', () => {
       // tests
     });
   });
 
-  // images.test.tsx
-  describe('<ProductIndex />', () => {
+  // ProductDetails-images.test.tsx
+  describe('<ProductDetails />', () => {
     describe('images', () => {
       // tests
     });
