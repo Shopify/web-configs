@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Changed
+
+- Disable `scss/no-duplicate-dollar-variables` rule by default. It makes no attempt to understand how Sass's variable scoping works which results in lots of false warnings on completely reasonable code. ([#44](https://github.com/Shopify/stylelint-config-shopify/pull/44))
 
 ## [7.0.1] - 2018-09-12
 
