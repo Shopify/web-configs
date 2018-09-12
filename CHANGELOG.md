@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Changed
+
+- Updated stylelint-prettier to v1.0.1 ([#42](https://github.com/Shopify/stylelint-config-shopify/pull/42))
 
 ## [7.0.0] - 2018-08-30
 

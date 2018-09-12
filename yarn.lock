@@ -3406,9 +3406,9 @@ stylelint-order@1.0.0:
     postcss "^7.0.2"
     postcss-sorting "^4.0.0"
 
-stylelint-prettier@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-0.2.2.tgz#85df8194f19523a7e23edab2ddc90bea79bc5110"
+stylelint-prettier@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-1.0.1.tgz#991f0bd639f7dc11648b553cef85db6301aaf4f1"
   dependencies:
     eslint-plugin-prettier "^2.6.2"
 
