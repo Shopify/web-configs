@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [7.0.1] - 2018-09-12
 
 ### Changed
 
@@ -211,7 +213,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.1...HEAD
+[7.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v6.1.0...v7.0.0
 [6.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v6.0.0...v6.1.0
 [6.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v5.1.2...v6.0.0
