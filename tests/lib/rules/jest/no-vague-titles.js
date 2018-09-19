@@ -125,6 +125,18 @@ ruleTester.run('no-vague-titles', rule, {
       code: `test.each([['production'], ['staging']])('Includes things for %s clients')`,
       parser,
     },
+    {
+      code: `import('./foo')`,
+      parser,
+    },
+    {
+      code: 'foo(bar)()',
+      parser,
+    },
+    {
+      code: 'class Foo { constructor() { super(); } }',
+      parser,
+    },
   ],
   invalid: [
     {

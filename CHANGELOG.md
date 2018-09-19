@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Fixed
+
+* Updated `no-vague-titles` rule to fix parsing issues in `getMethodName`. ([#167](https://github.com/Shopify/eslint-plugin-shopify/pull/167))
 
 ## [24.1.1] - 2018-09-19
 
