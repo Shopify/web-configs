@@ -88,6 +88,7 @@ This plugin also provides the following tool-specific configurations, which can 
 - [mocha](lib/config/mocha.js): Use this for projects that use [mocha](http://mochajs.org)/ [sinon](http://sinonjs.org)/ [chai](http://chaijs.com) for testing.
 - [ava](lib/config/ava.js): Use this for projects that use the [AVA test runner](https://github.com/sindresorhus/ava).
 - [flow](lib/config/flow.js): Use this for projects that use [flow](http://flowtype.org) for type checking.
+- [graphql](lib/config/graphql.js): Use this for projects that use [graphql-config](https://github.com/prisma/graphql-config) for graphql validation.
 - [jquery](lib/config/jquery.js): Use this for projects that use [jQuery](http://jquery.com).
 - [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components/get-started).
 - [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting. Prettier must be installed within your project, as eslint-plugin-shopify does not provide the dependency itself.

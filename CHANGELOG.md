@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Added
+
+* Added `shopify/graphql` config using new `eslint-plugin-graphql` (`2.1.1.`) dependency. ([#165](https://github.com/Shopify/eslint-plugin-shopify/pull/165))
 
 ## [24.0.0] - 2018-08-30
 
