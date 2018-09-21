@@ -1,12 +1,16 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Fixed
+
+* Updated `plugin:shopify/prettier` to enable prettier linting. ([#170](https://github.com/Shopify/eslint-plugin-shopify/pull/170))
 
 ## [24.2.0] - 2018-09-21
 
 ### Added
 
-* Added `plugin:shopify/graphql` to module index. ([#000](https://github.com/Shopify/eslint-plugin-shopify/pull/000))
+* Added `plugin:shopify/graphql` to module index. ([#168](https://github.com/Shopify/eslint-plugin-shopify/pull/168))
 
 ### Fixed
 
