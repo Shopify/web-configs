@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+<!-- ## Unreleased -->
+
+## [24.2.0] - 2018-09-21
 
 ### Added
 
@@ -430,7 +432,9 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.0...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.2.0...HEAD
+[24.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.1...v24.2.0
+[24.1.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.0...v24.1.1
 [24.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.0.0...v24.1.0
 [24.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.1.0...v24.0.0
 [23.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.0.0...v23.1.0
