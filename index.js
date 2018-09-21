@@ -35,6 +35,7 @@ module.exports = {
     es5: require('./lib/config/es5'),
     esnext: require('./lib/config/esnext'),
     flow: require('./lib/config/flow'),
+    graphql: require('./lib/config/graphql'),
     jest: require('./lib/config/jest'),
     jquery: require('./lib/config/jquery'),
     lodash: require('./lib/config/lodash'),
