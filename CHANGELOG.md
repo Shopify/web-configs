@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+* Added `plugin:shopify/graphql` to module index. ([#000](https://github.com/Shopify/eslint-plugin-shopify/pull/000))
+
 ### Fixed
 
 * Updated `no-vague-titles` rule to fix parsing issues in `getMethodName`. ([#167](https://github.com/Shopify/eslint-plugin-shopify/pull/167))
