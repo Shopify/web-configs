@@ -1,11 +1,12 @@
 # Changelog
 
-## Unreleased
+<!-- ## Unreleased -->
+
+## [25.0.0] - 2018-09-25
 
 ### Fixed
 
 * Updated `plugin:shopify/prettier` to enable prettier linting. ([#170](https://github.com/Shopify/eslint-plugin-shopify/pull/170))
-<!-- ## Unreleased -->
 * `strict-component-boundaries` now consistently uses the resolved path from the app root to perform its checks. This fixes a number of false-positives. ([#160](https://github.com/Shopify/eslint-plugin-shopify/pull/160))
 
 ## [24.2.0] - 2018-09-21
@@ -438,7 +439,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.2.0...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.0.0...HEAD
+[25.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.2.0...v25.0.0
 [24.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.1...v24.2.0
 [24.1.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.0...v24.1.1
 [24.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.0.0...v24.1.0
