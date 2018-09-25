@@ -5,6 +5,8 @@
 ### Fixed
 
 * Updated `plugin:shopify/prettier` to enable prettier linting. ([#170](https://github.com/Shopify/eslint-plugin-shopify/pull/170))
+<!-- ## Unreleased -->
+* `strict-component-boundaries` now consistently uses the resolved path from the app root to perform its checks. This fixes a number of false-positives. ([#160](https://github.com/Shopify/eslint-plugin-shopify/pull/160))
 
 ## [24.2.0] - 2018-09-21
 
