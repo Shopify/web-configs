@@ -1,5 +1,0 @@
-{
-  "eslintConfig": {
-    "extends": "plugin:shopify/prettier"
-  }
-}

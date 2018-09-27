@@ -5,11 +5,13 @@ import {expect} from 'chai';
 import {execESLint, fixtureFile} from '../../utilities';
 
 describe('config', () => {
-  describe('all', () => {
-    it('has valid plugins and requires', () => {
+  describe('typescript', () => {
+    it('ignores files not handled by TypeScript', () => {
       expect(
         execESLint(
-          `--config ${fixtureFile('all/.eslintrc.js')} ${fixtureFile('all')}`,
+          `--ext .js --ext .ts --config ${fixtureFile(
+            'typescript-no-js/.eslintrc.js',
+          )} ${fixtureFile('typescript-no-js')}`,
         ),
       ).to.eq('');
     }).timeout(8000);
