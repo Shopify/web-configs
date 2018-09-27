@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [7.0.3] - 2018-09-27
+
+- Redeploy of `7.0.2` to update `latest` version reference on npm.
+
 ## [7.0.2] - 2018-09-13
 
 ### Changed
@@ -219,7 +223,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.2...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.3...HEAD
+[7.0.3]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.2...v7.0.3
 [7.0.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.0...v7.0.1
 [7.0.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v6.1.0...v7.0.0
