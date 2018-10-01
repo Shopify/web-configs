@@ -103,6 +103,6 @@
     "pascal-case": "^2.0.1",
     "pkg-dir": "2.0.0",
     "pluralize": "^7.0.0",
-    "typescript-eslint-parser": "18.0.0"
+    "typescript-eslint-parser": "19.0.2"
   }
 }

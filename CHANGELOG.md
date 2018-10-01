@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Changed
+
+* Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. ([#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176))
 
 ## [25.0.1] - 2018-09-25
 
