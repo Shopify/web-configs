@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [7.0.4] - 2018-10-02
+
+- Bump stylelint-prettier v1.0.3 to avoid a transitive dependency on eslint-plugin-prettier ([#45](https://github.com/Shopify/stylelint-config-shopify/pull/45))
+
 ## [7.0.3] - 2018-09-27
 
 - Redeploy of `7.0.2` to update `latest` version reference on npm.
