@@ -4,7 +4,9 @@ const rule = require('../../../../lib/rules/jest/no-vague-titles');
 const ruleTester = new RuleTester();
 
 require('babel-eslint');
+require('typescript-eslint-parser');
 
+const typeScriptParser = 'typescript-eslint-parser';
 const parser = 'babel-eslint';
 
 function errorWithMethod(method) {
@@ -136,6 +138,10 @@ ruleTester.run('no-vague-titles', rule, {
     {
       code: 'class Foo { constructor() { super(); } }',
       parser,
+    },
+    {
+      code: '(Foo as Function)();',
+      parser: typeScriptParser,
     },
   ],
   invalid: [
