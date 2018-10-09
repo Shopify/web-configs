@@ -15,3 +15,4 @@ describe('config', () => {
     }).timeout(8000);
   });
 });
+/* eslint-enable flowtype/require-valid-file-annotation */

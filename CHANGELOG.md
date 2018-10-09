@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+### Added
+* `shopify/eslint-comments` plugin with [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) rules:
+  - `eslint-comments/disable-enable-pair`,
+  - `eslint-comments/no-aggregating-enable`
+  - `eslint-comments/no-duplicate-disable`
+  - `eslint-comments/no-unlimited-disable`
+  - `eslint-comments/no-unused-disable`
+  - `eslint-comments/no-unused-enable`
+  - `eslint-comments/no-restricted-disable` (disabled)
+  - `eslint-comments/no-use` (disabled)
+
 ### Changed
 
 * Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))

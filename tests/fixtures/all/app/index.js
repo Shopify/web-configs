@@ -5,3 +5,4 @@ module.exports = {
   foo,
   bar: 'bar',
 };
+/* eslint-enable flowtype/require-valid-file-annotation,typescript/no-var-requires */
