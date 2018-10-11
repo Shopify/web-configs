@@ -1,4 +1,7 @@
 # Unreleased
+Nil.
+
+# 16.6.0
 ## Changed
 - Updated several babel plugin dependencies:
   - `babel-plugin-transform-inline-environment-variables` 0.1.1 => 0.4.3
