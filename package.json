@@ -48,7 +48,7 @@
     "tape": "^4.9.1"
   },
   "peerDependencies": {
-    "stylelint": ">=9.1.1"
+    "stylelint": ">=9.4.0"
   },
   "publishConfig": {
     "access": "public"
