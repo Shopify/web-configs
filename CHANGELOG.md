@@ -1,9 +1,24 @@
 # Unreleased
-Nil.
+## Changed
+- Updated several babel plugin dependencies:
+  - `babel-plugin-transform-inline-environment-variables` 0.1.1 => 0.4.3
+  - `babel-plugin-transform-object-rest-spread` 6.23.0 => 6.26.0
+  - `babel-preset-env` 1.5.2 => 1.7.0.
+
+## Internals
+- Switch from Circle CI to Travis.
+
+# 16.5.0
+## Internals
+- Added `publishConfig` to fix deployments.
+
+# 16.4.0
+## Added
+- `shopify/react` preset now accepts an additional option, `pragma`. Defaults to `React.createElement`.
 
 # 16.3.0
 ## Added
-- `shopify/web` and `shopify/node` now accept an addition option, `debug`. When passed, this enables `babel-preset-env`'s debugging to show why transforms are being included in a project. Defaults to `false` (current behaviour).
+- `shopify/web` and `shopify/node` now accept an additional option, `debug`. When passed, this enables `babel-preset-env`'s debugging to show why transforms are being included in a project. Defaults to `false` (current behaviour).
 
 # 16.2.0
 ## Added
