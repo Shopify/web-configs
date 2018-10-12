@@ -2,6 +2,8 @@
 
 <!-- ## [Unreleased] -->
 
+- Raise `peerDependency` on `stylelint` to 9.4.0 to accomodate the `linebreaks` rule.
+
 ## [7.0.4] - 2018-10-02
 
 - Bump stylelint-prettier v1.0.3 to avoid a transitive dependency on eslint-plugin-prettier ([#45](https://github.com/Shopify/stylelint-config-shopify/pull/45))
@@ -227,7 +229,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.3...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.4...HEAD
+[7.0.4]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.3...v7.0.4
 [7.0.3]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.2...v7.0.3
 [7.0.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.1...v7.0.2
 [7.0.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.0...v7.0.1
