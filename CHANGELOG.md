@@ -13,6 +13,8 @@
   - `eslint-comments/no-restricted-disable` (disabled)
   - `eslint-comments/no-use` (disabled)
 
+* `shopify/jest/no-snapshots` ([#182](https://github.com/Shopify/eslint-plugin-shopify/pull/182))
+
 ### Changed
 
 * Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))
