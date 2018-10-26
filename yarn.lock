@@ -1816,10 +1816,10 @@ eslint-plugin-flowtype@2.41.0:
   dependencies:
     lodash "^4.15.0"
 
-eslint-plugin-graphql@2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-graphql/-/eslint-plugin-graphql-2.1.1.tgz#dae5d597080075320ea8e98795056309ffe73a18"
-  integrity sha512-JT2paUyu3e9ZDnroSshwUMc6pKcnkfXTsZInX1+/rPotvqOLVLtdrx/cmfb7PTJwjiEAshwcpm3/XPdTpsKJPw==
+eslint-plugin-graphql@2.1.0-0:
+  version "2.1.0-0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-graphql/-/eslint-plugin-graphql-2.1.0-0.tgz#49eb0126f4aef142ecb0b444baece5d481388361"
+  integrity sha512-BSLC0/LpCW+LEFnCWaM7UQ5sBJzxO1WtsS+8nmtErkFULvF76yVzVW8LdJ6ZRKE8W/gakJIh21VlaXjhUuqyqQ==
   dependencies:
     graphql-config "^2.0.1"
     lodash "^4.11.1"
@@ -1919,7 +1919,7 @@ eslint-plugin-react@7.11.1:
     eslint-plugin-chai-expect "1.1.1"
     eslint-plugin-eslint-comments "3.0.1"
     eslint-plugin-flowtype "2.41.0"
-    eslint-plugin-graphql "2.1.1"
+    eslint-plugin-graphql "2.1.0-0"
     eslint-plugin-import "2.14.0"
     eslint-plugin-jest "21.22.0"
     eslint-plugin-jsx-a11y "6.1.1"
