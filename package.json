@@ -76,7 +76,7 @@
     "eslint-plugin-chai-expect": "1.1.1",
     "eslint-plugin-eslint-comments": "3.0.1",
     "eslint-plugin-flowtype": "2.41.0",
-    "eslint-plugin-graphql": "2.1.1",
+    "eslint-plugin-graphql": "2.1.0-0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jest": "21.22.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
