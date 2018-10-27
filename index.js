@@ -8,6 +8,7 @@ module.exports = {
     'jsx-no-complex-expressions': require('./lib/rules/jsx-no-complex-expressions'),
     'jsx-no-hardcoded-content': require('./lib/rules/jsx-no-hardcoded-content'),
     'jsx-prefer-fragment-wrappers': require('./lib/rules/jsx-prefer-fragment-wrappers'),
+    'no-ancestor-directory-import': require('./lib/rules/no-ancestor-directory-import'),
     'no-debugger': require('./lib/rules/no-debugger'),
     'no-useless-computed-properties': require('./lib/rules/no-useless-computed-properties'),
     'no-fully-static-classes': require('./lib/rules/no-fully-static-classes'),

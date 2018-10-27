@@ -2,6 +2,9 @@
 
 <!-- ## Unreleased -->
 
+### Added
+* `shopify/no-ancestor-directory-import` ([#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149))
+
 ## [26.0.0] - 2018-10-26
 
 ### Added
