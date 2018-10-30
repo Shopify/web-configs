@@ -57,7 +57,7 @@ module.exports = {
 
     // DEPREACATED - use 'prettier' instead
     'typescript-prettier': require('./lib/config/prettier'),
-    // DEPREACATED - use 'react' instead
-    'typescript-react': require('./lib/config/react'),
+    // DEPREACATED - use 'typescript', then 'react' instead
+    'typescript-react': require('./lib/config/typescript-react'),
   },
 };
