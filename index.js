@@ -32,10 +32,15 @@ module.exports = {
   },
 
   configs: {
-    ava: require('./lib/config/ava'),
+    // Core configs - When extending, one of these should go first
     core: require('./lib/config/core'),
     es5: require('./lib/config/es5'),
     esnext: require('./lib/config/esnext'),
+    react: require('./lib/config/react'),
+    typescript: require('./lib/config/typescript'),
+
+    // Augmenting configs - When extending, these go after the core config
+    ava: require('./lib/config/ava'),
     'eslint-comments': require('./lib/config/eslint-comments'),
     flow: require('./lib/config/flow'),
     graphql: require('./lib/config/graphql'),
@@ -45,11 +50,14 @@ module.exports = {
     mocha: require('./lib/config/mocha'),
     node: require('./lib/config/node'),
     polaris: require('./lib/config/polaris'),
-    prettier: require('./lib/config/prettier'),
-    react: require('./lib/config/react'),
-    typescript: require('./lib/config/typescript'),
-    'typescript-prettier': require('./lib/config/typescript-prettier'),
-    'typescript-react': require('./lib/config/typescript-react'),
     webpack: require('./lib/config/webpack'),
+
+    // Prettier config - When extending, this must go last
+    prettier: require('./lib/config/prettier'),
+
+    // DEPREACATED - use 'prettier' instead
+    'typescript-prettier': require('./lib/config/prettier'),
+    // DEPREACATED - use 'react' instead
+    'typescript-react': require('./lib/config/react'),
   },
 };

@@ -3,11 +3,17 @@
 <!-- ## Unreleased -->
 
 ### Added
+
 * `shopify/no-ancestor-directory-import` ([#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149))
+
+### Fixed
+
+* Set TypeScript parser only on TS files. This makes sure you can specify extending from the typescript and react configs in either order. Previously you had to make sure react came first. ([#200](https://github.com/Shopify/eslint-plugin-shopify/pull/200))
 
 ## [26.0.0] - 2018-10-26
 
 ### Added
+
 * `shopify/eslint-comments` plugin with [eslint-plugin-eslint-comments](https://www.npmjs.com/package/eslint-plugin-eslint-comments) rules:
   - `eslint-comments/disable-enable-pair`,
   - `eslint-comments/no-aggregating-enable`
