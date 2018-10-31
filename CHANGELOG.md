@@ -1,6 +1,7 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## [26.1.0] - 2018-10-30
+
 
 ### Added
 
@@ -8,7 +9,7 @@
 
 ### Fixed
 
-* Set TypeScript parser only on TS files. This makes sure you can specify extending from the typescript and react configs in either order. Previously you had to make sure react came first. ([#200](https://github.com/Shopify/eslint-plugin-shopify/pull/200))
+* Set TypeScript parser only on TS files. This makes sure you can extend from the typescript and react configs in either order. Previously you had to make sure typescript came first to avoid using the babel-eslint parser on typescript files. Now we suggest to extend from typescript, and then react to ensure some rules some JSX rules don't get inadventently disabled. ([#200](https://github.com/Shopify/eslint-plugin-shopify/pull/200))
 
 ## [26.0.0] - 2018-10-26
 
@@ -484,7 +485,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.0.0...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.0...HEAD
+[26.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.0.0...v26.1.0
 [26.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.1.0...v26.0.0
 [25.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.0.1...v25.1.0
 [25.0.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.0.0...v25.0.1
