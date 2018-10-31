@@ -1,7 +1,12 @@
 # Changelog
 
-## [26.1.0] - 2018-10-30
+## Unreleased
 
+### Fixed
+
+* `typescript-eslint-parser` pinned at `20.0.0` to avoid [a known issue](https://github.com/eslint/typescript-eslint-parser/issues/535) ([#201](https://github.com/Shopify/eslint-plugin-shopify/pull/201))
+
+## [26.1.0] - 2018-10-30
 
 ### Added
 
