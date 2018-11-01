@@ -8,14 +8,13 @@ Shareable [browserslist](https://github.com/ai/browserslist) configuration for S
 | --------------------------- | ------- |
 | Chrome & Chrome for Android | last 3  |
 | Firefox                     | last 3  |
+| Opera                       | last 3  |
 | Edge                        | last 2  |
-| Internet Explorer           | 11+     |
-| Explorer Mobile             | 11+     |
-| Safari                      | 8+      |
-| iOS                         | 8       |
-| Android                     | 11+     |
+| Safari                      | 10      |
+| iOS                         | 10      |
+| Android                     | 4.4     |
 
-[List all supported browsers](http://browserl.ist/?q=last+3+chrome+versions%2C+last+3+firefox+versions%2C+last+2+versions%2C+safari+%3E%3D+8%2C+ios+%3E%3D+8%2C+ie+%3E%3D+11%2C+explorermobile+%3E%3D+11%2C+android+%3E%3D+4.4)
+[List all supported browsers](https://browserl.ist/?q=last+3+chrome+versions%2C+last+3+chromeandroid+versions%2C+last+3+firefox+versions%2C+last+3+opera+versions%2C+last+2+edge+versions%2C+safari+%3E%3D+10%2C+ios+%3E%3D+10%2C+android+%3E%3D+4.4)
 
 ## Installation
 
