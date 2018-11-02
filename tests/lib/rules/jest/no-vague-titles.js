@@ -44,6 +44,10 @@ ruleTester.run('no-vague-titles', rule, {
       parser,
     },
     {
+      code: `describe('closing foo does not call bar')`,
+      parser,
+    },
+    {
       code: `xdescribe('foo bar baz')`,
       parser,
     },
