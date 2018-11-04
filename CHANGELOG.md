@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Fixed
+
+* `jest/no-vague-titles` no longer flags when the word `call` is used.
+
 ## [26.1.1] - 2018-10-31
 
 ### Fixed
