@@ -311,5 +311,6 @@ We would like to avoid test IDs for handling the cases above, as they make it ea
 For some technologies that we use frequently, we have more specific testing guides. These can be found below:
 
 * [Testing React applications](./React/Testing.md)
+* [Testing GraphQL](./GraphQL/Testing.md)
 * [Testing using Jest](./Jest.md)
 * [Testing using Enzyme](./Enzyme.md)
