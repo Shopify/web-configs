@@ -4,9 +4,9 @@ This document outlines our stylistic preferences for authoring GraphQL queries, 
 
 ## Table of contents
 
-2. [Using this guide](#using-this-guide)
-2. [Naming](#naming)
-2. [Whitespace and punctuation](#whitespace-and-punctuation)
+1. [Using this guide](#using-this-guide)
+1. [Naming](#naming)
+1. [Whitespace and punctuation](#whitespace-and-punctuation)
 
 ## Using this guide
 
@@ -101,6 +101,10 @@ yarn run sewing-kit format
     }
   `;
   ```
+
+* [1.5](#1.5) <a name="1.5"></a> Prefer the use of `.graphql` over `.gql` file extensions for GraphQL documents.
+
+  > Why? Because there's no point in having both, and .graphql is easier to grok at a glance.
 
 ## Whitespace and punctuation
 

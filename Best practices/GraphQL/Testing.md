@@ -2,6 +2,13 @@
 
 This guide will discuss strategies for testing GraphQL-connected applications. It does not go over strategies for testing GraphQL APIs themselves, or for non-UI uses of GraphQL APIs. For the purposes of this guide, we may use React examples to illustrate best practices, but these recommendations should apply to all client-side uses of GraphQL.
 
+## Table of contents
+
+1. [Strategy](#strategy)
+1. [Test infrastructure](#test-infrastructure)
+1. [Mock data](#mock-data)
+1. [Anti-patterns](#anti-patterns)
+
 ## Strategy
 
 There are two general approaches we could use when it comes to testing GraphQL:
