@@ -44,7 +44,8 @@
 ### Changed
 
 * Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))
-* Update `import/order` rule to enforce ordering of internal, parent and sibling imports ([#189](https://github.com/Shopify/eslint-plugin-shopify/pull/189))
+* Updated `import/order` rule to enforce ordering of internal, parent and sibling imports ([#189](https://github.com/Shopify/eslint-plugin-shopify/pull/189))
+* Updated `func-style` rule to allow arrow functions ([#188](https://github.com/Shopify/eslint-plugin-shopify/pull/188))
 
 ### Fixed
 
