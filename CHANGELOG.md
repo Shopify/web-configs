@@ -6,6 +6,9 @@
 
 * `jest/no-vague-titles` no longer flags when the word `call` is used.
 
+### Changed
+* `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words.
+
 ## [26.1.1] - 2018-10-31
 
 ### Fixed

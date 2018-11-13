@@ -150,6 +150,56 @@ ruleTester.run('no-vague-titles', rule, {
   ],
   invalid: [
     {
+      code: "it('properly')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "describe('properly')",
+      parser,
+      errors: errorWithMethod('describe'),
+    },
+    {
+      code: "test('properly')",
+      parser,
+      errors: errorWithMethod('test'),
+    },
+    {
+      code: "fit('properly')",
+      parser,
+      errors: errorWithMethod('fit'),
+    },
+    {
+      code: "xdescribe('properly')",
+      parser,
+      errors: errorWithMethod('xdescribe'),
+    },
+    {
+      code: "it('should')",
+      parser,
+      errors: errorWithMethod('it'),
+    },
+    {
+      code: "describe('should')",
+      parser,
+      errors: errorWithMethod('describe'),
+    },
+    {
+      code: "test('should')",
+      parser,
+      errors: errorWithMethod('test'),
+    },
+    {
+      code: "fit('should')",
+      parser,
+      errors: errorWithMethod('fit'),
+    },
+    {
+      code: "xdescribe('should')",
+      parser,
+      errors: errorWithMethod('xdescribe'),
+    },
+    {
       code: "it('correct')",
       parser,
       errors: errorWithMethod('it'),
@@ -750,4 +800,94 @@ ruleTester.run('no-vague-titles with ignore=it', rule, {
     },
   ],
   invalid: [],
+});
+
+ruleTester.run('no-vague-titles with allow=correct', rule, {
+  valid: [
+    {
+      code: "it('correct')",
+      options: [{allow: ['correct']}],
+    },
+    {
+      code: "it('appropriate all should correct properly')",
+      options: [
+        {allow: ['appropriate', 'should', 'all', 'correct', 'properly']},
+      ],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all correct')",
+      options: [{allow: ['correct']}],
+      errors: errorWithMethod('it'),
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=should', rule, {
+  valid: [
+    {
+      code: "it('should')",
+      options: [{allow: ['should']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['should']}],
+      errors: errorWithMethod('it'),
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=all', rule, {
+  valid: [
+    {
+      code: "it('all')",
+      options: [{allow: ['all']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['all']}],
+      errors: errorWithMethod('it'),
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=should', rule, {
+  valid: [
+    {
+      code: "it('should')",
+      options: [{allow: ['should']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['should']}],
+      errors: errorWithMethod('it'),
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=appropriate', rule, {
+  valid: [
+    {
+      code: "it('appropriate')",
+      options: [{allow: ['appropriate']}],
+    },
+    {
+      code: "it('appropriate all should')",
+      options: [{allow: ['appropriate', 'should', 'all']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['appropriate', 'should']}],
+      errors: errorWithMethod('it'),
+    },
+  ],
 });
