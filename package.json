@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "babel-eslint": "9.0.0",
+    "common-tags": "^1.8.0",
     "eslint-config-prettier": "3.0.1",
     "eslint-import-resolver-typescript": "^1.1.1",
     "eslint-module-utils": "2.1.1",

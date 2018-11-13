@@ -9,14 +9,6 @@ require('typescript-eslint-parser');
 const typeScriptParser = 'typescript-eslint-parser';
 const parser = 'babel-eslint';
 
-function errorWithMethod(method) {
-  return [
-    {
-      type: 'CallExpression',
-      message: `${method} description should not contain vague words. Be sure the description meaningfully illustrates the purpose of this test.`,
-    },
-  ];
-}
 ruleTester.run('no-vague-titles', rule, {
   valid: [
     {
@@ -150,512 +142,925 @@ ruleTester.run('no-vague-titles', rule, {
   ],
   invalid: [
     {
+      code: "it('properly should correcly appropriate all')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
       code: "it('properly')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('properly')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('properly')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('properly')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('properly')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('should')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('should')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('should')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('should')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('should')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('correct')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('correctly')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('incorrect')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('Correct')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('correctly')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('incorrect')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('Correct')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('All the expected things are included')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('correct')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('correctly')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('incorrect')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('Correct')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('correct')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('correctly')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('incorrect')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('Correct')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
 
     {
       code: "describe.only('correct')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
 
     {
       code: "describe.only('correctly')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe.only('incorrect')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe.only('Correct')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe.only('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('correct')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('correctly')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('incorrect')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('Correct')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
 
     {
       code: "xtest('correct')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('correctly')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('incorrect')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('Correct')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test.only('correct')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test.only('correctly')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test.only('incorrect')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test.only('Correct')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('appropriate')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('appropriately')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('inappropriate')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('Appropriate')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('appropriate')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('appropriately')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('inappropriate')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('Appropriate')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('appropriate')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('appropriate')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('appropriately')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('inappropriate')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "fit('Appropriate')",
       parser,
-      errors: errorWithMethod('fit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('appropriate')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('appropriate')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('appropriately')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('inappropriate')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('Appropriate')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('appropriate')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('appropriate')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('appropriately')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('inappropriate')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('Appropriate')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('appropriate')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('appropriate')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('appropriately')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('inappropriate')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('Appropriate')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `test.each([['production'], ['staging']])('all correct for %s')`,
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('appropriate')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('appropriate')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('appropriately')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('inappropriate')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xtest('Appropriate')",
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `xtest.each([['production'], ['staging']])('all correct for %s')`,
       parser,
-      errors: errorWithMethod('xtest'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it('All the expected things are included')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it.only('correct')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it.only('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it.only('correctly')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it.only('incorrect')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it.only('Correct')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "it.only('All the expected things are included')",
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `it.each([['production'], ['staging']])('all correct for %s')`,
       parser,
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('correct')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xit('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `xit.each([['production'], ['staging']])('all correct for %s')`,
       parser,
-      errors: errorWithMethod('xit'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe('All the expected things are included')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "xdescribe('All the expected things are included')",
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `xdescribe.each([['production'], ['staging']])('all correct for %s')`,
       parser,
-      errors: errorWithMethod('xdescribe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "describe.only('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `describe.each([['production'], ['staging']])('all correct for %s')`,
       parser,
-      errors: errorWithMethod('describe'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test('All the expected things are included')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: "test.only('Includes all the expected things')",
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
     {
       code: `test.each([['production'], ['staging']])('Includes all things for %s clients')`,
       parser,
-      errors: errorWithMethod('test'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
   ],
 });
@@ -819,7 +1224,11 @@ ruleTester.run('no-vague-titles with allow=correct', rule, {
     {
       code: "it('properly all correct')",
       options: [{allow: ['correct']}],
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
   ],
 });
@@ -835,7 +1244,11 @@ ruleTester.run('no-vague-titles with allow=should', rule, {
     {
       code: "it('properly all should')",
       options: [{allow: ['should']}],
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
   ],
 });
@@ -851,7 +1264,11 @@ ruleTester.run('no-vague-titles with allow=all', rule, {
     {
       code: "it('properly all should')",
       options: [{allow: ['all']}],
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
   ],
 });
@@ -867,7 +1284,11 @@ ruleTester.run('no-vague-titles with allow=should', rule, {
     {
       code: "it('properly all should')",
       options: [{allow: ['should']}],
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
   ],
 });
@@ -887,7 +1308,11 @@ ruleTester.run('no-vague-titles with allow=appropriate', rule, {
     {
       code: "it('properly all should')",
       options: [{allow: ['appropriate', 'should']}],
-      errors: errorWithMethod('it'),
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
     },
   ],
 });
