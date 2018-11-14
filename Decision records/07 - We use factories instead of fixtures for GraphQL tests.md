@@ -44,4 +44,4 @@ These many downsides forced us to consider an alternative approach: a factory fu
 * We reduce duplication between the fixture and test by having the fixture be computed from values that will then be asserted upon
 * Because our tools encode type information about a GraphQL query/ mutation (through [`graphql-typescript-definitions`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-typescript-definitions)), we can retain confidence that the data being supplied actually matches the types we will get from the GraphQL API in practice
 
-Overall, we felt that using a factory function was much more scalable as the number of GraphQL-connected components increases in an app, and that it does not impose much of a burden on smaller apps, either. It is therefore our recommended approach for supplying mock data to GraphQL.
+Overall, using a factory function was much more scalable as the number of GraphQL-connected components increases in an app, and it does not impose much of a burden on smaller apps, either. It is therefore our recommended approach for supplying mock data to GraphQL.

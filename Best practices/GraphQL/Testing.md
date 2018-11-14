@@ -1,6 +1,6 @@
 # GraphQL Testing
 
-This guide will discuss strategies for testing GraphQL-connected applications. It does not go over strategies for testing GraphQL APIs themselves, or for non-UI uses of GraphQL APIs. For the purposes of this guide, we may use React examples to illustrate best practices, but these recommendations should apply to all client-side uses of GraphQL.
+This guide covers strategies for testing GraphQL-connected applications. It does not cover testing GraphQL APIs themselves. For the purposes of this guide, we will often use React examples to illustrate best practices, but these recommendations should apply to all client-side uses of GraphQL.
 
 ## Table of contents
 
@@ -11,20 +11,20 @@ This guide will discuss strategies for testing GraphQL-connected applications. I
 
 ## Strategy
 
-There are two general approaches we could use when it comes to testing GraphQL:
+There are two general approaches you could use to test GraphQL:
 
 1. Mocking out the connection our components have to the GraphQL part of the app and directly injecting GraphQL responses into our components
 1. Mocking out only the GraphQL responses and leaving the GraphQL connections in place
 
-There are pros and cons to both approaches. The first is more in line with how we test other parts of the app; as noted in our [React testing guide](../React/Testing.md), we generally mock out children components and manually trigger their properties as a way of maintaining strict isolation between component boundaries. However, this approach works best when the process being mocked is simple, as it typically is with a "managed" subcomponent that only exposes a `value`/ `onChange` set of props.
+There are pros and cons to both approaches. The first is more in line with how we test other parts of the app; as noted in our [React testing guide](../React/Testing.md), we generally mock out children components and manually trigger their properties as a way of forcing strict isolation between components. This approach works best when the process being mocked is simple.
 
-In the case of GraphQL, the process is generally more complex. There are many different states that the GraphQL infrastructure is responsible for orchestrating, and there are often side effects that are important to verify, like updating the cache in response to a mutation. There are also many different ways of connecting to GraphQL; in the case of Apollo, our [preferred GraphQL client](../../Decision%20records/02%20-%20Use%20Apollo%20as%20our%20GraphQL%20client.md), there are decorators, `Query`/ `Mutation` components, and direct uses of the Apollo client instance.
+In the case of GraphQL, the process is generally more complex. There are many different states that the GraphQL infrastructure manages, and there are often side effects that are important to verify, like updating the cache in response to a mutation. There are also many different ways of connecting to GraphQL; in the case of Apollo, our [preferred GraphQL client](../../Decision%20records/02%20-%20Use%20Apollo%20as%20our%20GraphQL%20client.md), there are decorators, `Query`/ `Mutation` components, and direct uses of the Apollo client.
 
-Based on our experience, we favor the second approach noted above: mocking out GraphQL responses, but leaving the infrastructure for connecting to GraphQL un-mocked.
+We favor the second approach noted above: mocking out GraphQL responses, but leaving the infrastructure for connecting to GraphQL un-mocked.
 
 ## Test infrastructure
 
-In order to implement the recommendation above, an application needs a way of injecting fake GraphQL responses into their application. We have a package that makes this easy to achieve for applications using Apollo: [`@shopify/jest-mock-apollo`](https://github.com/Shopify/quilt/tree/master/packages/jest-mock-apollo). This module exposes a factory for creating mock GraphQL clients that support hardcoded responses, including error responses, and waiting for GraphQL operations to resolve. Typically, we use this package to expose a GraphQL client creator function from the `tests/utilities` directory, allowing all parts of the app to easily import it:
+In order to implement the recommendation above, you will need a way of injecting fake GraphQL responses into your application. We have a package that makes this easy to achieve for applications using Apollo: [`@shopify/jest-mock-apollo`](https://github.com/Shopify/quilt/tree/master/packages/jest-mock-apollo). This package exposes a function for creating mock GraphQL clients that support hardcoded responses. Most developers will use this package to expose a GraphQL client creator function from the `tests/utilities` directory, allowing all parts of the app to easily import it:
 
 ```ts
 // in tests/utilities.tsx
@@ -45,9 +45,9 @@ const graphQLClient = createGraphQLClient({
 });
 ```
 
-You can see details about this package at the link above. We recommend that you create a GraphQL client for *each* test to avoid any state leaking between tests. It can be useful to have a custom `mount` (or equivalent for non-React/-Enzyme projects) that accepts the GraphQL client as an option, and then injects it into the component under test:
+We recommend that you create a GraphQL client for *each* test to avoid any state leaking between tests. It’s useful to have a custom `mount` that accepts the GraphQL client as an option, and then injects it into the component being tested:
 
-```ts
+```tsx
 // in tests/utilities.tsx
 import {mount as originalMount} from 'enzyme;
 import {ApolloProvider} from 'react-apollo';
@@ -96,7 +96,7 @@ The custom mount function can be useful in other ways; you can make it asynchron
 
 ## Mock data
 
-Once you have the above infrastructure in place, the next step is to provide suitable example data for the case under test. As noted in our [decision record on the topic](../../07%20-%20We%20use%20factories%20instead%20of%20fixtures%20for%20GraphQL%20tests), we prefer factories over fixtures for supplying this data. We provide a package that can do this with type safety, [`graphql-fixtures`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-fixtures). Once this module is initialized with your schema, it can take a query or mutation and, optionally, a subset of the data, and will fill out the rest of the query with appropriate data.
+The next step to testing GraphQL is to provide suitable example data for your test. As noted in our [decision record on the topic](../../07%20-%20We%20use%20factories%20instead%20of%20fixtures%20for%20GraphQL%20tests), we prefer factories over fixtures for supplying this data. We provide a package that can do this with type safety, [`graphql-fixtures`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-fixtures). Once this package is initialized with your schema, it can take a query or mutation and, optionally, a subset of the data, and will fill out the rest of the query with appropriate data.
 
 ```ts
 // As with the GraphQL client factory detailed above,
@@ -109,13 +109,13 @@ const fillGraphQL = createFiller(schema);
 const data = fillGraphQL(someQuery, {partial: 'data'});
 ```
 
-This model for filling in data allows you to specify only a subset of data that is relevant for the case under test. This allows more information to be added to the query without having to update every test relying on that query, focuses the reader on the information that is relevant for the case under test, and enables more tailored data for each test. It illustrates our preference for [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration), and for [tests working well in isolation](../Testing#tests-should-work-and-be-useful-in-isolation).
+This model for filling in data lets you specify only a subset of data that is relevant for the case under test. This lets more other developers add fields to the query without updating every test, focuses the reader on the information that is relevant for the case being tested, and enables more tailored data for each test. It illustrates our preference for [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration), and for [tests working well in isolation](../Testing#tests-should-work-and-be-useful-in-isolation).
 
 There are a few things you should keep in mind when using this kind of data factory:
 
-* Only fill the smallest subset of data you actually need for the case under test.
+* Only fill the smallest subset of data you actually need for the case being tested.
 
-* Do not share a fixture directly between tests. It encourages the exact same anti-pattern as fixture files: encoding all cases needed by every test sharing the fixture. Where you need some shared subset, use a function that calls `fillGraphQL`:
+* Do not share a fixture directly between tests. It encourages the exact same anti-pattern as fixture files: merging everything needed by every test into one object. Where you need a common set of data between fixtures, use a function that calls `fillGraphQL`:
 
   ```ts
   // When importing a GraphQL file, Sewing Kit will automatically
@@ -134,9 +134,9 @@ There are a few things you should keep in mind when using this kind of data fact
   }
   ```
 
-* When you have some set of the query that must be filled out for a large set of tests, use the same pattern as above to remove the shared bits to refocus the individual tests on the data that is actually relevant. This can be the case when there is some guarantee on the data that can't be codified in the type system. For example, we may provide a default filler that always provides at least one variant for a filled product response.
+* When you have a part of the query that needs to be filled out the same for many tests, use the same pattern as above to remove the shared bits. This refocuses the individual tests on the data that is actually relevant for that case. This is usually needed when there is a guarantee on the data that can't be codified in the type system. For example, we may provide a default filler that always provides at least one variant for a filled `product` response.
 
-* Do not reference data off of the filled fixture. Instead, store the values you care about separately from the fixture and reference those in your assertion.
+* Do not reference data off of the filled fixture. Instead, store the values you care about separately from the fixture and reference those in your assertions.
 
   ```ts
   // bad
@@ -168,11 +168,11 @@ A few common approaches are generally considered anti-patterns based on the reco
   }));
   ```
 
-* Exporting an "undecorated" version of the component alongside the decorated one, just for the purposes of testing the underlying component through direct passing of data:
+* Exporting an "undecorated" version of the component alongside the decorated one so we can test the underlying component directly:
 
-  > Note: this also violates a core principle of testing: we should not be changing our API just for the purposes of testing.
+  > Note: this also violates a core principle of testing: we should not be changing our API just our tests.
 
-  ```ts
+  ```tsx
   // MyComponent.tsx
   export function MyComponent({data}) {
     return data.loading ? <div>loading</div> : null;

@@ -1,6 +1,6 @@
 # GraphQL styleguide
 
-This document outlines our stylistic preferences for authoring GraphQL queries, mutations, and subscriptions. It does not go over stylistic concerns for actually building the APIs. It also does not go into the best practices for using GraphQL in client-side applications (for more details on this subject, please consult our [best practices guide on GraphQL](../Best%20practices/GraphQL)).
+This document outlines our stylistic preferences for authoring GraphQL queries, mutations, and subscriptions. It does cover building the APIs themselves. If you are looking for best practices on writing client-side code that interacts with GraphQL, you can read our [guide on the subject](../Best%20practices/GraphQL).
 
 ## Table of contents
 

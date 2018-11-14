@@ -13,7 +13,7 @@ November 11, 2018
 
 ## Summary
 
-We avoid using fragments as a mechanism for sharing the data needs of a React component to the components that render it. Instead, components should write their prop types ust as they would for any other "dumb" component, and rely on type generation on GraphQL documents to ensure that the parent is sending down data in an appropriate shape.
+We avoid using fragments for sharing the data needs of a leaf component with its parents. Components should write types for their props as they would normally with plain TypeScript. They may rely on types created from their parent's GraphQL queries to ensure that the parent is passing them safely-typed props.
 
 ## Community
 
@@ -23,12 +23,7 @@ The official documentation about fragments does not discuss them specifically as
 
 ## Decision
 
-Based on our experience with using GraphQL fragments, there are two types of downsides that we believe make fragments ill suited to indicating data needs. The first is problems with GraphQL fragments more generally:
-
-* They can’t declare arguments, so their use of variables becomes very awkward as they must rely on an implicit contract with the query/ mutation to include an appropriate argument declaration
-* They end up as part of the same global namespace of GraphQL document names, which can be problematic when the number of fragments increases
-
-The second category is issues that are more specific to how we write UI applications:
+Based on our experience with using GraphQL fragments, there are many downsides that make fragments ill suited to indicating data needs:
 
 * It is not clear how a component should "import" a fragment from another component; any mechanism for doing this feels like it violates the principle of component isolation
 
@@ -36,7 +31,7 @@ The second category is issues that are more specific to how we write UI applicat
 
 * The types generated for the fragment end up including some details that the component does not strictly need (most notably, `__typename` fields, which are automatically added by most of our GraphQL tools). This is particularly problematic in the context of providing fixture data to the component; in practice, it often resulted in developers either manually writing data with type names, or writing data without typenames and casting them to the appropriate type:
 
-  ```ts
+  ```tsx
   // Neither of these are particularly desirable:
   const myComponent = (
     <MyComponent
@@ -77,7 +72,11 @@ The second category is issues that are more specific to how we write UI applicat
   );
   ```
 
-The alternative to using fragments in a typical JavaScript application is not immediately obvious, but this is not the case when writing TypeScript. Components in a React/ TypeScript app already have a mechanism for declaring their data needs: prop types. This allows a component the stay "dumb" to how the data is fetched, but still maintains safety, as the component rendering yours must fetch the right data from GraphQL to satisfy the types you have specified.
+* They can’t declare arguments, so their use of variables becomes very awkward as they must rely on an implicit contract with the query/ mutation to include an appropriate argument declaration
+
+* They end up as part of the same global namespace of GraphQL document names, which can be problematic when the number of fragments increases
+
+Components in a React app already have a mechanism for declaring their data needs: prop types. This allows a component the stay "dumb" to how the data is fetched, but still maintains safety, as the component rendering yours must fetch the right data from GraphQL to satisfy the types you have specified.
 
 ```ts
 // in components/Seo/Seo.tsx
@@ -101,7 +100,7 @@ query Product($id: ID!) {
 }
 ```
 
-```ts
+```tsx
 // in Product.tsx
 import productQuery from './graphql/ProductQuery.graphql';
 import {Seo} from './components';
@@ -118,5 +117,4 @@ export default function Product({data}) {
 }
 ```
 
-Because we generate types for the GraphQL queries, we get the strong guarantee that the data the `Product` component is passing to `Seo` matches its expectations, and the `Seo` component is able to present an elegant API for itself, rather than being restricted to the shape of the GraphQL API (where SEO details are nested under a dedicated object).
-
+Because we generate types for the GraphQL queries, we are still sure that the data the `Product` component is passing to `Seo` matches its expectations. At the same time, the `Seo` component is now able to present an elegant API for itself, rather than being restricted to the shape of the GraphQL API.

@@ -35,6 +35,7 @@ While dynamic GraphQL documents theoretically offer the most flexibility in cons
 
 * They are easier to understand at a glance due to being [declarative instead of imperative](../Principles/6%20-%20Declarative%20over%20imperative)
 * They are inherently more type safe given that the shape of the document is knowable at build time
+* Since they are static, their performance can be optimized (for example, by using [persisted queries](https://blog.apollographql.com/persisted-graphql-queries-with-apollo-client-119fd7e6bba5))
 * They follow more closely to the way the community teaches GraphQL, and the way the primary clients (Apollo and Relay) expect to receive GraphQL documents
 
 ### Dedicated versus embedded
@@ -44,7 +45,7 @@ As discussed earlier, most guides prefer to show embedded GraphQL documents usin
 * It requires no additional configuration (in comparison, dedicated GraphQL files require both a [Webpack loader](https://github.com/apollographql/graphql-tag#webpack-preprocessing-with-graphql-tagloader) and a [Jest loader](https://github.com/remind101/jest-transform-graphql), though these are handled automatically by Sewing Kit)
 * It reduces the amount of flipping between files a developer must do to understand the full nature of a component, which is particularly useful for smaller components
 
-However, we believe that dedicated GraphQL files offer many more benefits. Not only is this approach consistent with mobile, but it also provides the following attractive features:
+However, dedicated GraphQL files offer many more benefits. Not only is this approach consistent with mobile, but it also provides the following attractive features:
 
 * No GraphQL runtime is required, which can remove a significant chunk of bundle size (template literals can be precompiled, but it requires [additional configuration](https://github.com/gajus/babel-plugin-graphql-tag))
 * It offers a much nicer hook for inserting code generated types (because GraphQL files must be imported, we can create sibling `.d.ts` files that export the required types. In contrast, inline queries offer no obvious place to insert such types)
