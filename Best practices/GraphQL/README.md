@@ -1,6 +1,6 @@
 # GraphQL
 
-[GraphQL](https://graphql.org) is our preferred way of sharing persistent data across server and client. where JavaScript, TypeScript, and React form the language of our UIs, GraphQL is our language for data.
+[GraphQL](https://graphql.org) is our preferred way of sharing persistent data across server and client. Where JavaScript, TypeScript, and React form the language of our UIs, GraphQL is our language for data.
 
 ## Table of contents
 
@@ -27,7 +27,7 @@ In addition to Sewing Kit’s GraphQL support, we have a number of GraphQL-speci
 
 ## Client
 
-Developers should use the simplest GraphQL "client" that suits the needs of their application. For simple applications, or applications that do not benefit from a cache of previously-requested data, this might mean performing raw `fetch` calls to a GraphQL endpoint.
+The GraphQL client is a part of your application code responsible for making GraphQL network requests and, optionally, storing the data in some form of cache. Developers should use the simplest GraphQL "client" that suits the needs of their application. For simple applications, or applications that do not benefit from a cache of previously-requested data, this might mean performing raw `fetch` calls to a GraphQL endpoint.
 
 For more complex applications, we [recommend using Apollo](../../Decision%20records/02%20-%20Use%20Apollo%20as%20our%20GraphQL%20client). It offers an excellent balance of flexibility and built-in features for handling a wide variety of use cases.
 
@@ -99,7 +99,7 @@ The key to creating a maintainable GraphQL application is to have sensible polic
 
 * [Avoid fragments as a way of declaring data needs](../../Decision%20records/09%20-%20We%20do%20not%20use%20fragments%20tied%20to%20React%20components) for components that do not have dedicated GraphQL queries. Instead, use prop types to declare the shape of the data your component needs, just as you would for other "dumb" components. Fragments are still good for organizing shared bits of data for multiple places in a single query.
 
-* GraphQL files are the private responsibility of a single component. Components should not reach into another component to grab its GraphQL query for any reason. This is usually done to gain access to individual types from the query when declaring a subcomponent’s prop types. Instead of doing this, you should declare a "dumb" version of the types your component expects, and rely on TypeScript to verify that the parent is passing in the right:
+* GraphQL files are the private responsibility of a single component. Components should not reach into another component to grab its GraphQL query for any reason. This is usually done to gain access to individual types from the query when declaring a subcomponent’s prop types. Instead of doing this, you should declare a "dumb" version of the types your component expects, and rely on TypeScript to verify that the parent is passing in the right data:
 
   ```ts
   // bad
@@ -137,7 +137,7 @@ The biggest impact a Web Developer has on user experience will usually be how th
 
 ## Types and code generation
 
-Typescript and GraphQL combine to let us access our data with type safety. Developers should make use of the types generated alongside GraphQL documents [`graphql-typescript-definitions`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-typescript-definitions). Developers should also use the generated types and enums created by [`graphql-typescript-definitions`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-typescript-definitions#schema-types) instead of manually hardcoding these types into their app.
+Typescript and GraphQL combine to let us access our data with type safety. You should use our [`graphql-typescript-definitions`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-typescript-definitions) package to generate types alongside `.graphql` files, and for the GraphQL schema’s enums and input types (if you are using Sewing Kit, this is done automatically). Prefer the use of these generated types over manually hardcoding types representing your GraphQL operations.
 
 ## Resources
 
