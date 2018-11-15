@@ -1,4 +1,4 @@
-# We use dedicated files to store GraphQL documents
+# We do not use fragments tied to React components
 
 ## Date
 
