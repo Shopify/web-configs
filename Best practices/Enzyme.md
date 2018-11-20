@@ -78,3 +78,27 @@ expect(myComponent.find(ChildComponent)).toHaveLength(1);
 // over:
 expect(myComponent.find(ChildComponent).exists()).toBe(true);
 ```
+
+## Event simulations
+
+* When triggering events on a composite component, use `trigger` on the prop; when doing it for raw DOM elements, use `simulate`.
+
+```js
+const myComponent = mount(<MyComponent />);
+
+// prefer:
+trigger(myComponent.find(SomeComponent), 'onClick');
+
+// over:
+myComponent.find('button').simulate('click');
+```
+
+```js
+const myComponent = mount(<MyComponent />);
+
+// prefer:
+myComponent.find('button').simulate('click');
+
+// over:
+trigger(myComponent.find(SomeComponent), 'onClick');
+```

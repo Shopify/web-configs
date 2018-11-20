@@ -116,7 +116,7 @@ As noted in the previous section, breaking out utilities that capture how the be
 
 Below are some specific applications of this principle:
 
-* Test names should read as english sentences, not contain content that repeats the names of the nested suites in which the test is located, and should not end with a period.
+* Test names should read as english sentences in the present tense, not contain content that repeats the names of the nested suites in which the test is located, and should not end with a period.
 
   ```js
   // bad
