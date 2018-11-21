@@ -9,4 +9,4 @@ Note that the principles are ordered by their importance. Earlier principles sho
 * [Isolation over integration](4%20-%20Isolation%20over%20integration.md)
 * [Community over ownership](5%20-%20Community%20over%20ownership.md)
 
-Finally, remember that these are only our principles, and they only exist for now; they will not make every decision, and they are not set in stone. As we our needs change, we may update our principles, and as we encounter new problems, we should document how we applied these ideas to build solutions.
+Finally, remember that these are only our principles, and they only exist for now; they will not make every decision, and they are not set in stone. As our needs change, we may update our principles, and as we encounter new problems, we should document how we applied these ideas to build solutions.
