@@ -26,16 +26,16 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^5.4.0",
-    "eslint-plugin-shopify": "^24.0.0"
+    "eslint": "^5.9.0",
+    "eslint-plugin-shopify": "^26.1.1"
   },
   "dependencies": {
-    "autoprefixer": "9.1.3",
-    "postcss": "7.0.2",
-    "postcss-calc": "6.0.1",
-    "postcss-discard-comments": "4.0.0",
+    "autoprefixer": "9.3.1",
+    "postcss": "7.0.6",
+    "postcss-calc": "7.0.1",
+    "postcss-discard-comments": "4.0.1",
     "postcss-flexbugs-fixes": "4.1.0",
-    "postcss-selector-matches": "3.0.1",
-    "postcss-will-change": "2.0.0"
+    "postcss-selector-matches": "4.0.0",
+    "postcss-will-change": "3.0.0"
   }
 }
