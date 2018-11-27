@@ -98,6 +98,26 @@ Another benefit of testing React components is that they typically abstract away
   describe('<MyComponent />', () => {});
   ```
 
+* When there are multiple tests for the same prop, they should be wrapped in a single describe block.
+
+  ```js
+  // bad
+  describe('<MyComponent />', () => {
+    it('disabled gets passed to <MySubComponent />', () => {});
+    it('renders if disabled is true', () => {});
+    it('does not render if disabled is false', () => {});
+  });
+
+  // good
+  describe('<MyComponent />', () => {
+    describe('disabled', () => {
+      it('gets passed to <MySubComponent />', () => {});
+      it('renders if true', () => {});
+      it('does not render if false', () => {});
+    });
+  });
+  ```
+
 * When mocking out React components, keep the mocked version as simple as possible. This usually involves a named function that returns `null` (as this is a minimal requirement for a React component with a meaningful display name), but might instead involve returning `children` or some other `prop` directly if you embed props in the final JSX of the component being mocked.
 
   ```js
