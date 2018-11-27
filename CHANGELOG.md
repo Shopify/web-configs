@@ -2,6 +2,14 @@
 
 <!-- ## [Unreleased] -->
 
+## [2.2.0] - 2018-11-26
+
+- Added the `minimize` option to optionally enable `cssnano`.
+
+## [2.1.0] - 2018-11-22
+
+- Updated to the latest version of all dependencies.
+
 ## [2.0.0] - 2018-08-30
 
 Breaking change: updated dependencies to use PostCSS 7.0.

@@ -26,5 +26,9 @@ This plugin wraps around the following PostCSS transformations:
 - [`autoprefixer`](https://github.com/postcss/autoprefixer)
 - [`postcss-discard-comments`](https://github.com/ben-eb/postcss-discard-comments)
 
+## Options
+
+This plugin accepts a single option, `minimize`. Passing `minimize: true` will turn on CSS minification via [cssnano](https://cssnano.co).
+
 [npm-url]: https://npmjs.org/package/postcss-shopify
 [npm-image]: http://img.shields.io/npm/v/postcss-shopify.svg?style=shield
