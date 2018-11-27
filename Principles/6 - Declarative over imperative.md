@@ -26,6 +26,6 @@ Below are a few examples of decisions that demonstrate this principle:
 
 ## Conflicts
 
-Sometimes its correct to choose the more imperative path on a problem. This usually happens when the declarative path to a solution negatively effects user experience. In these cases the best path forward is to, as always, think of the user first. We should always write the code in the way that best addresses the problems our users face.
+Sometimes it's correct to choose the more imperative path on a problem. This usually happens when the declarative path to a solution negatively affects user experience. In these cases the best path forward is to, as always, think of the user first. We should always write the code in the way that best addresses the problems our users face.
 
  Usually these spots are relatively isolated and can be abstracted behind a declarative API for future use, or they speak to a missing component or tool that would let us accomplish them more gracefully in the long term. This doesn't always have to be addressed immediately, or even at all, but it can be a good way to look at particularly ugly pieces of code.
