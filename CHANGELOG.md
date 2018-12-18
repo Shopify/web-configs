@@ -1,4 +1,7 @@
 # Unreleased
+nil
+
+# 16.7.0
 ## Changed
 - Removed `babel-plugin-transform-react-pure-to-component`.
 
