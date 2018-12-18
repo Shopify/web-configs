@@ -31,9 +31,6 @@ module.exports = function shopifyReactPreset(context, options = {}) {
       plugins.unshift(
         // Enable hot loading
         require.resolve('react-hot-loader/babel'),
-        // Force `PureComponent`s to be `Component`s instead, which will make it
-        // so they always re-render on hot reloads
-        require.resolve('babel-plugin-transform-react-pure-to-component'),
       );
     }
   }
