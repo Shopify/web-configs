@@ -5,8 +5,10 @@
 ### Fixed
 
 * `jest/no-vague-titles` no longer flags when the word `call` is used.
+* Update `eslint-plugin-prettier` to 3.0.1 so it does not crash when given an unparsable file ([#212](https://github.com/Shopify/eslint-plugin-shopify/pull/212))
 
 ### Changed
+
 * `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words.
 
 ## [26.1.1] - 2018-10-31
