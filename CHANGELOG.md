@@ -2,14 +2,16 @@
 
 <!-- ## Unreleased -->
 
+## [26.1.2] - 2019-01-02
+
 ### Fixed
 
-* `jest/no-vague-titles` no longer flags when the word `call` is used.
+* `jest/no-vague-titles` no longer flags when the word `call` is used. ([#203](https://github.com/Shopify/eslint-plugin-shopify/pull/203))
 * Update `eslint-plugin-prettier` to 3.0.1 so it does not crash when given an unparsable file ([#212](https://github.com/Shopify/eslint-plugin-shopify/pull/212))
 
 ### Changed
 
-* `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words.
+* `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words. ([#208](https://github.com/Shopify/eslint-plugin-shopify/pull/208))
 
 ## [26.1.1] - 2018-10-31
 
@@ -502,7 +504,8 @@ Example:
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
 
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.1...HEAD
+[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.2...HEAD
+[26.1.2]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.1...v26.1.2
 [26.1.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.0...v26.1.1
 [26.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.0.0...v26.1.0
 [26.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.1.0...v26.0.0
