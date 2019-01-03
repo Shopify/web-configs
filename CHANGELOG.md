@@ -1,6 +1,18 @@
 # Unreleased
 nil
 
+# 17.0.0
+## Changed
+- All presets now only work with Babel version 7 or greater.
+- `browsers` are no longer hardcoded to those supported by Shopify’s admin for the purposes of the `shopify/web` preset. You must provide a [browserslist](https://github.com/browserslist/browserslist)-compatible configuration within your project, which will be used automatically when running Babel with this preset. Projects can use [`@shopify/browserslist-config`](https://github.com/Shopify/browserslist-config) to get the same support as Shopify’s admin.
+- The `shopify/web` preset no longer includes plugins for Stage 3 features. The only non-standard features included in this preset are class properties and dynamic imports.
+
+## Removed
+- Removed `shopify/flow` preset since it is no longer used by most projects at Shopify.
+
+## Added
+- The `shopify/react` preset now accepts a `pragmaFrag` option for specifying the component to use in JSX fragment expressions.
+
 # 16.7.0
 ## Changed
 - Removed `babel-plugin-transform-react-pure-to-component`.
