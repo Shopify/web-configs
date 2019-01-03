@@ -36,7 +36,7 @@ This packages comes with several different presets for you to use, depending on 
 
 - `shopify`: The same as `shopify/web`.
 
-- `shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that Shopify’s admin runs on. Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
+- `shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that you have specified in your [browserslist config](https://github.com/browserslist/browserslist). Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`@shopify/polyfills`](https://github.com/Shopify/quilt/tree/master/packages/polyfills), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
 
   This preset accepts an options object. The following options are allowed:
 
@@ -52,7 +52,7 @@ This packages comes with several different presets for you to use, depending on 
       }
       ```
 
-    - `browsers`, a [browserslist](https://github.com/ai/browserslist) string or array, which specifies which browsers to transpile for. Defaults to the list found in `browsers.js`.
+    - `browsers`, a [browserslist](https://github.com/ai/browserslist) string or array, which specifies which browsers to transpile for. We recommend setting your target browsers using a `browserslist` key in `package.json`, as that method will automatically be used by all browserslist-compatible tools.
 
       ```json
       {
@@ -70,8 +70,6 @@ This packages comes with several different presets for you to use, depending on 
 
     - `debug`, a boolean (defaults to `false`) to turn on [`babel-preset-env` debugging](https://github.com/babel/babel/tree/master/packages/babel-preset-env#debug).
 
-  Note that when using this config, you should also install `babel-polyfill` as a production dependency (`yarn add babel-polyfill` or `npm install --save babel-polyfill`). This package will be used to reduce duplication of common Babel helpers.
-
 - `shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules` and `inlineEnv` do the same thing they do in `shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 
   ```json
@@ -87,13 +85,12 @@ This packages comes with several different presets for you to use, depending on 
   }
   ```
 
-  As with `shopify/web`, you should install `babel-polyfill` to help reduce the duplication of Babel helpers.
-
-- `shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `shopify/web` or `shopify/node` configuration. Note that if you enable this, you do not need to also enable the `shopify/flow` config (it is included automatically). You will, however, need to include an `Object.assign` polyfill in your bundle (we recommend the polyfills found in [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/)).
+- `shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `shopify/web` or `shopify/node` configuration.
 
   This preset accepts an options object.
   - `hot` : Will automatically add plugins to enable hot reloading of React components. Note that this requires you to have a recent version of `react-hot-loader` installed as a dependency in your project.
-  - `pragma` : Replace the function used when compiling JSX expressions. defaults to `React.createElement`.
+  - `pragma` : Replace the function used when compiling JSX expressions. Defaults to `React.createElement`.
+  - `pragmaFrag`: Replace the function used when compiling JSX fragment expressions. Defaults to `React.Fragment`.
 
   ```json
   {
@@ -104,8 +101,6 @@ This packages comes with several different presets for you to use, depending on 
     }
   }
   ```
-
-- `shopify/flow`: Adds plugins that transform Flow type annotations. You can use this preset with `shopify/web` or `shopify/node`.
 
 As noted above, you can include multiple of these presets together. Some common recipes are shown below:
 
@@ -120,12 +115,11 @@ As noted above, you can include multiple of these presets together. Some common 
   }
 }
 
-// A Node project using flow and Rollup to create a single bundle
+// A Node project using Rollup to create a single bundle
 {
   "babel": {
     "presets": [
-      ["shopify/node", {"modules": false}],
-      "shopify/flow"
+      ["shopify/node", {"modules": false}]
     ]
   }
 }

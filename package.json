@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-shopify",
-  "version": "16.7.0",
+  "version": "17.0.0-beta.9",
   "description": "Shopify's org-wide Babel preset",
   "main": "index.js",
   "author": {
@@ -36,23 +36,16 @@
     "eslint-plugin-shopify": "^25.1.0"
   },
   "dependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "babel-plugin-react-test-id": "^1.0.2",
-    "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "babel-plugin-syntax-flow": "^6.18.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-plugin-transform-inline-environment-variables": "^0.4.3",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-plugin-transform-react-constant-elements": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-plugin-transform-react-jsx-self": "^6.22.0",
-    "babel-plugin-transform-react-jsx-source": "^6.22.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1"
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3"
   },
   "optionalDependencies": {
-    "react-hot-loader": "3.0.0-beta.6"
+    "react-hot-loader": "^4.6.0"
   }
 }

@@ -1,4 +1,3 @@
-const browsers = require('./browsers');
 const nonStandardPlugins = require('./non-standard-plugins');
 
 module.exports = function shopifyWebPreset(context, options = {}) {
@@ -6,15 +5,14 @@ module.exports = function shopifyWebPreset(context, options = {}) {
 
   return {
     presets: [
-      [require.resolve('babel-preset-env'), {
+      [require.resolve('@babel/preset-env'), {
         modules,
-        useBuiltIns: true,
+        useBuiltIns: 'entry',
         targets: {
-          browsers: options.browsers || browsers,
+          browsers: options.browsers,
         },
         debug: options.debug || false,
       }],
-      require.resolve('babel-preset-stage-3'),
     ],
     plugins: nonStandardPlugins(options),
   };
