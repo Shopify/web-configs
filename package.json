@@ -1,6 +1,6 @@
 {
   "name": "@shopify/browserslist-config",
-  "version": "0.0.1",
+  "version": "0.0.2-beta.2",
   "description": "Shareable browserslist configuration for Shopify.",
   "main": "index.js",
   "publishConfig": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Shopify/browserslist-config/issues"
   },
-  "homepage": "https://github.com/Shopify/browserslist-config#readme"
+  "homepage": "https://github.com/Shopify/browserslist-config#readme",
+  "devDependencies": {
+    "browserslist": "^4.3.4"
+  }
 }
