@@ -1,2 +1,2 @@
-const browsers: string;
+declare const browsers: string[];
 export = browsers;
