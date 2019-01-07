@@ -3405,9 +3405,10 @@ stylelint-order@1.0.0:
     postcss "^7.0.2"
     postcss-sorting "^4.0.0"
 
-stylelint-prettier@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-1.0.3.tgz#d7b1e8c331045dc1fd9d792dd8a1a5afc5304018"
+stylelint-prettier@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/stylelint-prettier/-/stylelint-prettier-1.0.6.tgz#479b76336751cb617c5beb7545d05a791f945e1e"
+  integrity sha512-XKlTyJHJYiyXs9JXRMt2FQxMJoBSjz4I6+4+/R3o8/ePof19v9naC4d0zsMKUJ88by81+qHfqXBLfmAalu46cg==
   dependencies:
     prettier-linter-helpers "^1.0.0"
 

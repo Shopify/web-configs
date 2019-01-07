@@ -37,7 +37,7 @@
     "merge": "1.2.x",
     "stylelint-config-prettier": "^4.0.0",
     "stylelint-order": "1.0.0",
-    "stylelint-prettier": "1.0.3",
+    "stylelint-prettier": "1.0.6",
     "stylelint-scss": "3.3.0"
   },
   "devDependencies": {

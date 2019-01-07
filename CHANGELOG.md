@@ -2,7 +2,8 @@
 
 <!-- ## [Unreleased] -->
 
-- Raise `peerDependency` on `stylelint` to 9.4.0 to accomodate the `linebreaks` rule.
+- Raise `peerDependency` on `stylelint` to 9.4.0 to accomodate the `linebreaks` rule. ([#46](https://github.com/Shopify/stylelint-config-shopify/pull/46))
+- Bump `stylelint-prettier` to v1.0.6 to fix crashes when reading unparsable files. ([#48](https://github.com/Shopify/stylelint-config-shopify/pull/48))
 
 ## [7.0.4] - 2018-10-02
 
