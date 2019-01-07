@@ -2,6 +2,8 @@
 
 <!-- ## [Unreleased] -->
 
+## [7.1.0] - 2019-01-07
+
 - Raise `peerDependency` on `stylelint` to 9.4.0 to accomodate the `linebreaks` rule. ([#46](https://github.com/Shopify/stylelint-config-shopify/pull/46))
 - Bump `stylelint-prettier` to v1.0.6 to fix crashes when reading unparsable files. ([#48](https://github.com/Shopify/stylelint-config-shopify/pull/48))
 
@@ -230,7 +232,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.4...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.1.0...HEAD
+[7.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.4...v7.1.0
 [7.0.4]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.3...v7.0.4
 [7.0.3]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.2...v7.0.3
 [7.0.2]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.1...v7.0.2
