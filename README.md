@@ -25,7 +25,7 @@ Then, in your Babel configuration (which should be under the `babel` key of your
 ```json
 {
   "babel": {
-    "presets": ["shopify/web"]
+    "presets": ["babel-preset-shopify/web"]
   }
 }
 ```
@@ -34,9 +34,9 @@ Then, in your Babel configuration (which should be under the `babel` key of your
 
 This packages comes with several different presets for you to use, depending on your project:
 
-- `shopify`: The same as `shopify/web`.
+- `babel-preset-shopify`: The same as `babel-preset-shopify/web`.
 
-- `shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that you have specified in your [browserslist config](https://github.com/browserslist/browserslist). Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`@shopify/polyfills`](https://github.com/Shopify/quilt/tree/master/packages/polyfills), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
+- `babel-preset-shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that you have specified in your [browserslist config](https://github.com/browserslist/browserslist). Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`@shopify/polyfills`](https://github.com/Shopify/quilt/tree/master/packages/polyfills), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
 
   This preset accepts an options object. The following options are allowed:
 
@@ -46,7 +46,7 @@ This packages comes with several different presets for you to use, depending on 
       {
         "babel": {
           "presets": [
-            ["shopify/web", {"modules": false}]
+            ["babel-preset-shopify/web", {"modules": false}]
           ]
         }
       }
@@ -58,7 +58,7 @@ This packages comes with several different presets for you to use, depending on 
       {
         "babel": {
           "presets": [
-            ["shopify/web", {
+            ["babel-preset-shopify/web", {
               "browsers": ["last 3 versions"]
             }]
           ]
@@ -70,13 +70,13 @@ This packages comes with several different presets for you to use, depending on 
 
     - `debug`, a boolean (defaults to `false`) to turn on [`babel-preset-env` debugging](https://github.com/babel/babel/tree/master/packages/babel-preset-env#debug).
 
-- `shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules` and `inlineEnv` do the same thing they do in `shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
+- `babel-preset-shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules` and `inlineEnv` do the same thing they do in `babel-preset-shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 
   ```json
   {
     "babel": {
       "presets": [
-        ["shopify/node", {
+        ["babel-preset-shopify/node", {
           "modules": false,
           "version": 4
         }]
@@ -85,7 +85,7 @@ This packages comes with several different presets for you to use, depending on 
   }
   ```
 
-- `shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `shopify/web` or `shopify/node` configuration.
+- `babel-preset-shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `babel-preset-shopify/web` or `babel-preset-shopify/node` configuration.
 
   This preset accepts an options object.
   - `hot` : Will automatically add plugins to enable hot reloading of React components. Note that this requires you to have a recent version of `react-hot-loader` installed as a dependency in your project.
@@ -96,7 +96,7 @@ This packages comes with several different presets for you to use, depending on 
   {
     "babel": {
       "presets": [
-        ["shopify/react", {"hot": true}]
+        ["babel-preset-shopify/react", {"hot": true}]
       ]
     }
   }
@@ -109,8 +109,8 @@ As noted above, you can include multiple of these presets together. Some common 
 {
   "babel": {
     "presets": [
-      "shopify/web",
-      "shopify/react"
+      "babel-preset-shopify/web",
+      "babel-preset-shopify/react"
     ]
   }
 }
@@ -119,7 +119,7 @@ As noted above, you can include multiple of these presets together. Some common 
 {
   "babel": {
     "presets": [
-      ["shopify/node", {"modules": false}]
+      ["babel-preset-shopify/node", {"modules": false}]
     ]
   }
 }
