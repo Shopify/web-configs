@@ -1,6 +1,5 @@
-module.exports = function shopifyReactPreset(_context, options = {}) {
-  // eslint-disable-next-line no-process-env
-  const env = process.env.BABEL_ENV || process.env.NODE_ENV;
+module.exports = function shopifyReactPreset(api, options = {}) {
+  const env = api.env();
 
   const pragma = options.pragma || 'React.createElement';
   const pragmaFrag = options.pragmaFrag || 'React.Fragment';

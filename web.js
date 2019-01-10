@@ -1,6 +1,6 @@
 const nonStandardPlugins = require('./non-standard-plugins');
 
-module.exports = function shopifyWebPreset(context, options = {}) {
+module.exports = function shopifyWebPreset(_api, options = {}) {
   const {modules = 'commonjs'} = options;
 
   return {
