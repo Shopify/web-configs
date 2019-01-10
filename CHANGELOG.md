@@ -2,6 +2,8 @@
 
 <!-- ## Unreleased -->
 
+## 17.0.1 - 2019-01-09
+
 ### Fixed
 
 - Honor the `envName` defined in your babel config.
