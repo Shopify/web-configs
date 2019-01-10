@@ -1,5 +1,8 @@
 # Unreleased
-nil
+
+## Fixed
+
+- Honor the `envName` defined in your babel config.
 
 # 17.0.0
 ## Changed
