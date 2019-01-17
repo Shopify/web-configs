@@ -10,7 +10,17 @@ const plugin = postcss.plugin('postcss-shopify', (options = {}) => {
 
   if (options.minimize) {
     processor.use(require('cssnano')({
-      preset: 'default',
+      preset: ['default', {
+        // This rule has an issue where multiple declarations
+        // for the same property are merged into one, which can
+        // change the semantics of code like:
+        //
+        // .klass {
+        //   padding-left: 4rem;
+        //   padding-left: calc(4rem + event(safe-area-inset-left));
+        // }
+        mergeLonghand: false,
+      }],
     }));
   }
 
