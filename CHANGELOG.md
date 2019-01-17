@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [2.2.1] - 2019-01-17
+
+- Removed a potentially buggy transform from the `minimize`-based preset
+
 ## [2.2.0] - 2018-11-26
 
 - Added the `minimize` option to optionally enable `cssnano`.
