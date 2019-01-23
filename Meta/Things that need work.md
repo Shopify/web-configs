@@ -7,7 +7,7 @@ The guidance in this repo is far from perfect. There are many patterns that we c
 - Having to import so many Shopify libraries for any given app.
 - Having no solid patterns for how to write or test a Node.js application.
 - The significant gap between the libraries for production visibility in Node.js as compared to Rails.
-- Missing libraries for basic application constructs in Node.js )loggers, error handlers, etc).
+- Missing libraries for basic application constructs in Node.js (loggers, error handlers, etc).
 - Missing libraries and documentation for building a Node.js app on Shopify Cloud.
 - Missing tools for generating components and complete applications that conform to our best practices.
 - Insufficient documentation on best practices for state management.
