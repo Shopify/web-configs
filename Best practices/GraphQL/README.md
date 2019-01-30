@@ -93,11 +93,11 @@ In cases where parts of the GraphQL client must be shared, store them under `app
 
 The key to creating a maintainable GraphQL application is to have sensible policies for organizing your GraphQL queries and mutations. The recommendations below will help you maintain large applications without sacrificing our core principle of [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration):
 
-* [Use dedicated GraphQL files](../../Decision%20records/08%20-%20We%20use%20dedicated%20files%20to%20store%20GraphQL%20documents) instead of GraphQL template literals embedded in component files.
+* [Use dedicated GraphQL files](../../Decision%20records/08%20-%20We%20use%20dedicated%20files%20to%20store%20GraphQL%20documents.md) instead of GraphQL template literals embedded in component files.
 
 * GraphQL documents should only contain a single query or mutation. This makes it easier to keep a sensible naming scheme for GraphQL files, and makes GraphQL documents easier to find.
 
-* [Avoid fragments as a way of declaring data needs](../../Decision%20records/09%20-%20We%20do%20not%20use%20fragments%20tied%20to%20React%20components) for components that do not have dedicated GraphQL queries. Instead, use prop types to declare the shape of the data your component needs, just as you would for other "dumb" components. Fragments are still good for organizing shared bits of data for multiple places in a single query.
+* [Avoid fragments as a way of declaring data needs](../../Decision%20records/09%20-%20We%20do%20not%20use%20fragments%20tied%20to%20React%20components.md) for components that do not have dedicated GraphQL queries. Instead, use prop types to declare the shape of the data your component needs, just as you would for other "dumb" components. Fragments are still good for organizing shared bits of data for multiple places in a single query.
 
 * GraphQL files are the private responsibility of a single component. Components should not reach into another component to grab its GraphQL query for any reason. This is usually done to gain access to individual types from the query when declaring a subcomponent’s prop types. Instead of doing this, you should declare a "dumb" version of the types your component expects, and rely on TypeScript to verify that the parent is passing in the right data:
 
