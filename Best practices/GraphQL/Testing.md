@@ -96,7 +96,7 @@ The custom mount function can be useful in other ways; you can make it asynchron
 
 ## Mock data
 
-The next step to testing GraphQL is to provide suitable example data for your test. As noted in our [decision record on the topic](../../07%20-%20We%20use%20factories%20instead%20of%20fixtures%20for%20GraphQL%20tests), we prefer factories over fixtures for supplying this data. We provide a package that can do this with type safety, [`graphql-fixtures`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-fixtures). Once this package is initialized with your schema, it can take a query or mutation and, optionally, a subset of the data, and will fill out the rest of the query with appropriate data.
+The next step to testing GraphQL is to provide suitable example data for your test. As noted in our [decision record on the topic](../../Decision%20records/07%20-%20We%20use%20factories%20instead%20of%20fixtures%20for%20GraphQL%20tests.md), we prefer factories over fixtures for supplying this data. We provide a package that can do this with type safety, [`graphql-fixtures`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-fixtures). Once this package is initialized with your schema, it can take a query or mutation and, optionally, a subset of the data, and will fill out the rest of the query with appropriate data.
 
 ```ts
 // As with the GraphQL client factory detailed above,
