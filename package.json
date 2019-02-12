@@ -18,8 +18,8 @@
   },
   "scripts": {
     "check": "yarn run lint && yarn test",
-    "rules-status": "eslint-index lib/config/all.js --format table",
-    "rules-omitted": "eslint-index lib/config/all.js --status omitted",
+    "rules-status": "eslint-index tests/enable-all-configs.js --format table",
+    "rules-omitted": "eslint-index tests/enable-all-configs.js --status omitted",
     "lint": "eslint . --max-warnings 0 --format codeframe",
     "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
@@ -40,9 +40,8 @@
   "repository": "https://github.com/Shopify/eslint-plugin-shopify",
   "eslintConfig": {
     "extends": [
-      "plugin:shopify/es5",
-      "plugin:shopify/node",
       "plugin:shopify/esnext",
+      "plugin:shopify/node",
       "plugin:shopify/prettier"
     ]
   },

@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '../../../lib/config/all.js',
+  extends: '../../../tests/enable-all-configs.js',
   settings: {
     react: {
       version: '16.0',
