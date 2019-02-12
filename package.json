@@ -39,10 +39,11 @@
   "homepage": "https://github.com/Shopify/eslint-plugin-shopify",
   "repository": "https://github.com/Shopify/eslint-plugin-shopify",
   "eslintConfig": {
+    "plugins":  ["self"],
     "extends": [
-      "plugin:shopify/esnext",
-      "plugin:shopify/node",
-      "plugin:shopify/prettier"
+      "plugin:self/esnext",
+      "plugin:self/node",
+      "plugin:self/prettier"
     ]
   },
   "devDependencies": {
@@ -52,7 +53,7 @@
     "chai": "^4.0.0",
     "eslint": "^5.4.0",
     "eslint-index": "^1.4.0",
-    "eslint-plugin-shopify": "file:./.",
+    "eslint-plugin-self": "^1.2.0",
     "graphql": "^0.13.0",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",

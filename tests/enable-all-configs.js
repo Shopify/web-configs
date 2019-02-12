@@ -3,27 +3,28 @@ module.exports = {
   // care about and typescript/react implies the presence of the esnext, es5 and
   // core configs so specifying them all is not needed.
   // But it is useful for testing to prove all configs can be loaded sucessfully
+  plugins: ['self'],
   extends: [
-    'plugin:shopify/core',
-    'plugin:shopify/es5',
-    'plugin:shopify/esnext',
-    'plugin:shopify/typescript',
-    'plugin:shopify/react',
+    'plugin:self/core',
+    'plugin:self/es5',
+    'plugin:self/esnext',
+    'plugin:self/typescript',
+    'plugin:self/react',
 
     // Augmenting configs - When extending, these go after the core config
-    'plugin:shopify/ava',
-    'plugin:shopify/eslint-comments',
-    'plugin:shopify/flow',
-    'plugin:shopify/graphql',
-    'plugin:shopify/jest',
-    'plugin:shopify/jquery',
-    'plugin:shopify/lodash',
-    'plugin:shopify/mocha',
-    'plugin:shopify/node',
-    'plugin:shopify/polaris',
-    'plugin:shopify/webpack',
+    'plugin:self/ava',
+    'plugin:self/eslint-comments',
+    'plugin:self/flow',
+    'plugin:self/graphql',
+    'plugin:self/jest',
+    'plugin:self/jquery',
+    'plugin:self/lodash',
+    'plugin:self/mocha',
+    'plugin:self/node',
+    'plugin:self/polaris',
+    'plugin:self/webpack',
 
     // Prettier config - When extending, this must go last
-    'plugin:shopify/prettier',
+    'plugin:self/prettier',
   ],
 };

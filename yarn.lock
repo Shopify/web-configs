@@ -1962,36 +1962,10 @@ eslint-plugin-react@7.12.4:
     prop-types "^15.6.2"
     resolve "^1.9.0"
 
-"eslint-plugin-shopify@file:./.":
-  version "26.2.0"
-  dependencies:
-    babel-eslint "9.0.0"
-    common-tags "^1.8.0"
-    eslint-config-prettier "3.0.1"
-    eslint-import-resolver-typescript "^1.1.1"
-    eslint-module-utils "2.1.1"
-    eslint-plugin-ava "5.1.0"
-    eslint-plugin-babel "5.1.0"
-    eslint-plugin-chai-expect "1.1.1"
-    eslint-plugin-eslint-comments "3.0.1"
-    eslint-plugin-flowtype "2.41.0"
-    eslint-plugin-graphql "2.1.0-0"
-    eslint-plugin-import "2.14.0"
-    eslint-plugin-jest "21.22.0"
-    eslint-plugin-jsx-a11y "6.1.1"
-    eslint-plugin-lodash "2.6.1"
-    eslint-plugin-mocha "5.2.0"
-    eslint-plugin-node "7.0.1"
-    eslint-plugin-prettier "3.0.1"
-    eslint-plugin-promise "4.0.0"
-    eslint-plugin-react "7.12.4"
-    eslint-plugin-sort-class-members "1.3.1"
-    eslint-plugin-typescript "0.12.0"
-    merge "1.2.0"
-    pascal-case "^2.0.1"
-    pkg-dir "2.0.0"
-    pluralize "^7.0.0"
-    typescript-eslint-parser "20.0.0"
+eslint-plugin-self@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-self/-/eslint-plugin-self-1.2.0.tgz#b999cfed88b893afa6b1f7ce7037d208ede9b8ba"
+  integrity sha512-veuI/YC7DHJI4/rPlYxnZpszW7aSjwWj2/zZQ4UCWJE+tDgF853jJlz5UhPd/ckLYaMJXewZdKx6nSpWC2Ncqw==
 
 eslint-plugin-sort-class-members@1.3.1:
   version "1.3.1"
