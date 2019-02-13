@@ -2,6 +2,7 @@ module.exports = {
   rules: {
     'binary-assignment-parens': require('./lib/rules/binary-assignment-parens'),
     'class-property-semi': require('./lib/rules/class-property-semi'),
+    'images-no-direct-imports': require('./lib/rules/images-no-direct-imports'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
     'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
     'jquery-dollar-sign-reference': require('./lib/rules/jquery-dollar-sign-reference'),
