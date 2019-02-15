@@ -2,6 +2,8 @@
 
 <!-- ## Unreleased -->
 
+## [26.2.0] - 2019-02-14
+
 ### Added
 
 * `images-no-direct-imports` ([#219](https://github.com/Shopify/eslint-plugin-shopify/pull/219))
