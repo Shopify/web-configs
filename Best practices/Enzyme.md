@@ -90,7 +90,7 @@ const myComponent = mount(<MyComponent />);
 trigger(myComponent.find(SomeComponent), 'onClick');
 
 // over:
-myComponent.find('button').simulate('click');
+myComponent.find(SomeComponent).simulate('click');
 ```
 
 ```js
@@ -100,5 +100,5 @@ const myComponent = mount(<MyComponent />);
 myComponent.find('button').simulate('click');
 
 // over:
-trigger(myComponent.find(SomeComponent), 'onClick');
+trigger(myComponent.find('button'), 'onClick');
 ```
