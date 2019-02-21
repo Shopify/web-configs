@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Added
+
+* Updated `eslint-plugin-react` and enabled `react/jsx-fragments` rule to prefer using `<>` over `<React.Fragment>` when defining fragments ([#223](https://github.com/Shopify/eslint-plugin-shopify/pull/223))
+
 ## [26.2.0] - 2019-02-14
 
 ### Added
