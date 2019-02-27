@@ -106,7 +106,7 @@ import {createFiller} from 'graphql-fixtures';
 const fillGraphQL = createFiller(schema);
 
 // in a test file
-const data = fillGraphQL(someQuery, {partial: 'data'});
+const fillSomeQuery = fillGraphQL(someQuery, {partial: 'data'});
 ```
 
 This model for filling in data lets you specify only a subset of data that is relevant for the case under test. This lets more other developers add fields to the query without updating every test, focuses the reader on the information that is relevant for the case being tested, and enables more tailored data for each test. It illustrates our preference for [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration), and for [tests working well in isolation](../Testing#tests-should-work-and-be-useful-in-isolation).
@@ -123,7 +123,7 @@ There are a few things you should keep in mind when using this kind of data fact
   // can be used as a type for this kind of function.
   import myQuery, {MyQueryPartialData} from '../graphql/MyQuery.graphql';
 
-  function createMyQueryData(partial: MyQueryPartialData = {}) {
+  function fillMyQuery(partial: MyQueryPartialData = {}) {
     return fillGraphQL(myQuery, {
       ...partial,
       field: {
@@ -140,18 +140,39 @@ There are a few things you should keep in mind when using this kind of data fact
 
   ```ts
   // bad
-  const data = fillGraphQL(myQuery);
+  // (graphql-fixtures makes this fairly awkward, because the
+  // return value is actually another factory function, not your
+  // data)
+  const fillMyQuery = fillGraphQL(myQuery);
+  const data = fillMyQuery({query: myQuery});
   const graphQLClient = createGraphQLClient({MyQuery: data});
   const myComponent = mount(<MyComponent />, {graphQLClient});
   expect(myComponent).toContainText(data.product.id);
 
   // good
   const id = composeGid('Product', 123);
-  const data = fillGraphQL(myQuery, {product: {id}});
-  const graphQLClient = createGraphQLClient({MyQuery: data});
+  const fillMyQuery = fillGraphQL(myQuery, {product: {id}});
+  const graphQLClient = createGraphQLClient({MyQuery: fillMyQuery});
   const myComponent = mount(<MyComponent />, {graphQLClient});
   expect(myComponent).toContainText(id);
   ```
+
+### Mocking multiple operations
+
+Occasionally, tests need to simulate multiple queries for the same operation. This is commonly needed when paginating, where the component will update the variables of the GraphQL query to pull in more data. For these cases, `fillGraphQL` accepts a function as its second argument. This function is called with the GraphQL operation, which gives you access to the variables. With this information in hand, you can tailor the partial you provide based on the variables:
+
+```ts
+const products = createBasicProducts(60);
+const firstProducts = products.slice(0, 50);
+const secondProducts = products.slice(50);
+
+const fillMyQuery = fillGraphQL(myQuery, ({variables: {after}}) => {
+  // When after is null, we are still on the first page
+  return after == null ? firstProducts : secondProducts;
+});
+
+const graphQLClient = createGraphQLClient({MyQuery: fillMyQuery});
+```
 
 ## Anti-patterns
 
