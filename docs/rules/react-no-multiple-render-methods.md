@@ -2,6 +2,8 @@
 
 As a React component grows to render many elements, it is tempting to split the render method into multiple “sub-render” methods. While this may seem like an improvement in readability, the component's state, props, and class methods are still shared, making it difficult to identify which are used by each additional render method. The entire class becomes objectively more complicated, and it would be more effective to break those additional elements into entirely new components instead.
 
+Another benefit to this approach is in testing. Anything that is substantial enough to warrant its own render method (or component) should be fully tested. By having `Foo` be its own functional component, its functionality can easily be unit tested with very little setup. When it comes to integration testing within `MyComponent` or higher up the tree, `Foo` can easily be asserted on by selecting the component itself as opposed to relying on inappropriate things like `className` or `ref`, or brittle things like relative position.
+
 ## Rule Details
 
 This rule disallows any `renderFoo` methods on a class.
