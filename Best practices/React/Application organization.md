@@ -156,7 +156,7 @@ export default function Routes() {
 
 #### `/app/foundation/Prefetch`
 
-The `Prefetch` component is very much a sibling to the `Routes` component. It should describe any preloading behavior for the application, for example using the [`PrefetchRoute />` component from `@shopify/react-async`](https://github.com/Shopify/quilt/tree/master/packages/react-async#prefetchroute-and-prefetcher):
+The `Prefetch` component is very much a sibling to the `Routes` component. It should describe any preloading behavior for the application, for example using the [`<PrefetchRoute />` component from `@shopify/react-async`](https://github.com/Shopify/quilt/tree/master/packages/react-async#prefetchroute-and-prefetcher):
 
 ```tsx
 // /app/foundation/Routes/Routes.tsx
