@@ -25,6 +25,7 @@ The simplest form of code spitting is to split your app on route boundaries. Thi
 If you are using React, please consult our [React performance guide](./React/Performance.md#asynchronous-component-loading) for instructions on how to asynchronously load components. 
 
 ### Foundation
+
 Once an application has been split up, you should keep a close eye on the foundational parts of the app. These parts will always be present, and their size and execution time cost will be a constant that sets the lower bound on how fast pages can be. We recommend imposing the following constraints on the this code:
 
 * It uses no utility libraries such as lodash, opting for native language features or minimal hand-coded versions of these utilities instead.
