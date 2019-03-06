@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Changed
+
+* `jest/no-vague-titles` added `every` and `descriptive` as vague words. ([#221](https://github.com/Shopify/eslint-plugin-shopify/pull/221))
+
 ## [26.3.0] - 2019-02-21
 
 ### Added

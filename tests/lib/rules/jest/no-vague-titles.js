@@ -241,6 +241,96 @@ ruleTester.run('no-vague-titles', rule, {
       ],
     },
     {
+      code: "it('descriptive')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "describe('descriptive')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "test('descriptive')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "fit('descriptive')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "xdescribe('descriptive')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "it('every')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "describe('every')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "test('every')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "fit('every')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "xdescribe('every')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
       code: "it('correct')",
       parser,
       errors: [
@@ -1308,6 +1398,54 @@ ruleTester.run('no-vague-titles with allow=appropriate', rule, {
     {
       code: "it('properly all should')",
       options: [{allow: ['appropriate', 'should']}],
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=every', rule, {
+  valid: [
+    {
+      code: "it('every')",
+      options: [{allow: ['every']}],
+    },
+    {
+      code: "it('every all should')",
+      options: [{allow: ['every', 'should', 'all']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['every', 'should']}],
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=descriptive', rule, {
+  valid: [
+    {
+      code: "it('descriptive')",
+      options: [{allow: ['descriptive']}],
+    },
+    {
+      code: "it('descriptive all should')",
+      options: [{allow: ['descriptive', 'should', 'all']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['descriptive', 'should']}],
       errors: [
         {
           messageId: 'containsVagueWord',

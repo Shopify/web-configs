@@ -6,6 +6,10 @@ The following vague terms are flagged:
 * "correct"
 * "appropriate"
 * "all"
+* "properly"
+* "should"
+* "every"
+* "descriptive"
 
 ## Rule Details
 
@@ -29,6 +33,23 @@ it('is called with the Foo and Bar plugins')
 test('renders the user avatar and email')
 describe('receives the date and publishState props from the router params')
 ```
+
+### `allow`
+
+```json
+{
+  "jest/no-vague-titles": [
+    "error",
+    {
+      "allow": ["properly", "correct"]
+    }
+  ]
+}
+```
+
+This array option allows a subset of vague words so that this rule does not report their usage as being incorrect.
+
+By default, none of these options are enabled (the equivalent of `{ "allow": [] }`).
 
 ### `ignore`
 
