@@ -2,6 +2,13 @@
 
 [Jest](https://facebook.github.io/jest/) is a popular testing library for JavaScript that includes a test runner, assertion library, spies, and code coverage. We strongly recommend Jest for any type of testing that can be run entirely in Node. Jest is the default test framework used by Sewing Kit.
 
+## Table of contents
+
+1. [Complementary packages](#complementary-packages)
+1. [Best practices](#best-practices)
+1. [Expectations](#expectations)
+1. [Coverage](#coverage)
+
 ## Complementary packages
 
 We have a number of packages that handle common mocking scenarios that are built specifically for use with Jest:

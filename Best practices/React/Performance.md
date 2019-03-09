@@ -1,5 +1,17 @@
 # React Performance
 
+## Table of contents
+
+1. [Complementary packages](#complementary-packages)
+1. [Asynchronous component loading](#asynchronous-component-loading)
+
+## Complementary packages
+
+* [`@shopify/react-async`](https://github.com/Shopify/quilt/tree/master/packages/react-async): utilities for creating asynchronously-loaded React components, with support for prefetching and extracting used bundles included in [Sewing Kit](https://github.com/Shopify/sewing-kit)
+* [`@shopify/react-graphql`](https://github.com/Shopify/quilt/tree/master/packages/react-graphql): provides a functions to create asynchronous GraphQL query components with built-in prefetching
+* [`@shopify/react-import-remote`](https://github.com/Shopify/quilt/tree/master/packages/react-import-remote): provides a React component for performance-conscious loading of external scripts
+* [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html): provides a `<Preconnect />` component for warming up connections to other domains
+
 ## Asynchronous component loading
 
 Complex applications generally end up having components that aren’t needed for every render. These can be components that:

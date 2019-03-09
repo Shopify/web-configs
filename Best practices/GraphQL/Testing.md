@@ -4,10 +4,16 @@ This guide covers strategies for testing GraphQL-connected applications. It does
 
 ## Table of contents
 
+1. [Complementary packages](#complementary-packages)
 1. [Strategy](#strategy)
 1. [Test infrastructure](#test-infrastructure)
 1. [Mock data](#mock-data)
 1. [Anti-patterns](#anti-patterns)
+
+## Complementary packages
+
+* [@shopify/graphql-testing](https://github.com/Shopify/quilt/blob/master/packages/jest-mock-apollo/README.md): a mock Apollo client that supports arbitrary fixtures in response to GraphQL operations
+* [graphql-fixtures](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-fixtures): type-safe, randomly generated fixtures that match the shape of GraphQL documents
 
 ## Strategy
 

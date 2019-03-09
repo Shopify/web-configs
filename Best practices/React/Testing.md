@@ -2,6 +2,16 @@
 
 In addition to the guide below, you should read through our [Enzyme](../Enzyme.md) and [Jest](../Jest.md) best practices. These two tools are strongly recommended for testing a React application.
 
+1. [Complementary packages](#complementary-packages)
+1. [Strategy](#strategy)
+1. [Best practices](#best-practices)
+
+## Complementary packages
+
+* [`@shopify/jest-dom-mocks`](https://github.com/Shopify/quilt/tree/master/packages/jest-dom-mocks): mock versions of browser globals including clock, timers, animation frames, and more
+* [`@shopify/enzyme-utilities`](https://github.com/Shopify/quilt/tree/master/packages/enzyme-utilities): Utility functions for interacting with [Enzyme](https://github.com/airbnb/enzyme)
+* [`@shopify/jest-mock-router`](https://github.com/Shopify/quilt/tree/master/packages/jest-mock-router): a mock version of the React Router 3.x router
+
 ## Strategy
 
 React components lend themselves extremely well to testing, as there is a very clear unit of work to test (a component) and a clear public API (`props`). Regardless of the size or complexity of React components, their basic structure (and thus, the structure of their tests) remains consistent. When writing your tests, you should arrange them around testing the following features, using nested `describe`s as needed:

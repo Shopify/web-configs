@@ -22,8 +22,9 @@ GraphQL is heavily integrated into [Sewing Kit](https://github.com/Shopify/sewin
 
 In addition to Sewing Kit’s GraphQL support, we have a number of GraphQL-specific packages that make it easier to use in your app:
 
-* [@shopify/jest-mock-apollo](https://github.com/Shopify/quilt/blob/master/packages/jest-mock-apollo/README.md): a mock Apollo client that supports custom fixtures returned in response to operations
-* [graphql-fixtures](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-fixtures): type-safe, randomly generated fixtures that match the shape of GraphQL documents
+* [`@shopify/react-graphql`](https://github.com/Shopify/quilt/tree/master/packages/react-graphql): a set of strongly-typed GraphQL utilities, including a function for creating asynchronously-loaded GraphQL query components that support prefetching
+* [`@shopify/koa-shopify-graphql-proxy`](https://github.com/Shopify/quilt/tree/master/packages/koa-shopify-graphql-proxy): a Koa proxy middleware for Shopify’s GraphQL API
+* [`@shopify/admin-graphql-api-utilities`](https://github.com/Shopify/quilt/tree/master/packages/admin-graphql-api-utilities): a number of simple utilities for helping you navigate Shopify’s admin GraphQL API
 
 ## Client
 

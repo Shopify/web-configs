@@ -2,6 +2,13 @@
 
 [Enzyme](http://airbnb.io/enzyme/) is a library that makes it easy to traverse and manipulate the output of React components. We recommend it for all React applications complex enough to warrant tests, as the readability it provides outweighs the additional API surface area to learn.
 
+## Table of contents
+
+1. [Complementary packages](#complementary-packages)
+1. [Best practices](#best-practices)
+1. [Expectations](#expectations)
+1. [Event simulations](#event-simulations)
+
 ## Complementary packages
 
 We have one utility package for Enzyme, [@shopify/enzyme-utilities](https://github.com/Shopify/quilt/blob/master/packages/enzyme-utilities/README.md). Importantly, this package exposes `trigger`, which lets you call an arbitrary `prop` on a React wrapper (optionally throw a keypath for complex `prop`s). This is our recommended strategy for interacting with components rendered by the component under test, and it will work in cases that Enzyme’s native `simulate()` does not.

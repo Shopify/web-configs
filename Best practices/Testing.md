@@ -5,6 +5,13 @@ Testing is a vitally important part of writing code that is meant to withstand t
 1. They prevent regressions, making it easier to iterate on code with confidence that you have not broken the behaviour for consumers.
 2. They serve as a more thorough form of documentation for technically experienced users, detailing edge cases and expected behaviour that may not be obvious from the API or documentation in prose.
 
+## Table of contents
+
+1. [Core principles](#core-principles)
+1. [Test files](#test-files)
+1. [Additional topics](#additional-topics)
+1. [Technology-specific best practices](#technology-specific-best-practices)
+
 ## Core principles
 
 ### Test the interface, not the implementation

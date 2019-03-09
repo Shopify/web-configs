@@ -1,5 +1,10 @@
 # Performance
 
+## Table of contents
+
+1. [Types of performance](#types-of-performance)
+1. [Bundle splitting](#bundle-splitting)
+
 ## Types of performance
 
 There are many angles to consider when discussing web performance. For this guide, we’ll consider three broad categories of performance concerns:
