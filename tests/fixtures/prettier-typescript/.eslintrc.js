@@ -1,6 +1,4 @@
 module.exports = {
-  extends: [
-    '../../../lib/config/typescript.js',
-    '../../../lib/config/prettier.js',
-  ],
+  plugins: ['self'],
+  extends: ['plugin:self/typescript', 'plugin:self/prettier'],
 };

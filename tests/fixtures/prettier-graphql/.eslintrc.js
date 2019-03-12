@@ -1,6 +1,4 @@
 module.exports = {
-  extends: [
-    '../../../lib/config/graphql.js',
-    '../../../lib/config/prettier.js',
-  ],
+  plugins: ['self'],
+  extends: ['plugin:self/graphql', 'plugin:self/prettier'],
 };

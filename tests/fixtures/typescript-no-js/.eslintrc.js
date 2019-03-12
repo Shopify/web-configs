@@ -1,6 +1,4 @@
 module.exports = {
-  extends: [
-    '../../../lib/config/node.js',
-    '../../../lib/config/typescript.js',
-  ],
+  plugins: ['self'],
+  extends: ['plugin:self/typescript', 'plugin:self/node'],
 };

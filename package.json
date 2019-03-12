@@ -18,8 +18,8 @@
   },
   "scripts": {
     "check": "yarn run lint && yarn test",
-    "rules-status": "eslint-index lib/config/all.js --format table",
-    "rules-omitted": "eslint-index lib/config/all.js --status omitted",
+    "rules-status": "eslint-index tests/enable-all-configs.js --format table",
+    "rules-omitted": "eslint-index tests/enable-all-configs.js --status omitted",
     "lint": "eslint . --max-warnings 0 --format codeframe",
     "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
@@ -39,11 +39,11 @@
   "homepage": "https://github.com/Shopify/eslint-plugin-shopify",
   "repository": "https://github.com/Shopify/eslint-plugin-shopify",
   "eslintConfig": {
+    "plugins":  ["self"],
     "extends": [
-      "plugin:shopify/es5",
-      "plugin:shopify/node",
-      "plugin:shopify/esnext",
-      "plugin:shopify/prettier"
+      "plugin:self/esnext",
+      "plugin:self/node",
+      "plugin:self/prettier"
     ]
   },
   "devDependencies": {
@@ -53,7 +53,7 @@
     "chai": "^4.0.0",
     "eslint": "^5.4.0",
     "eslint-index": "^1.4.0",
-    "eslint-plugin-shopify": "file:./.",
+    "eslint-plugin-self": "^1.2.0",
     "graphql": "^0.13.0",
     "isparta": "^4.0.0",
     "istanbul": "^0.4.5",
