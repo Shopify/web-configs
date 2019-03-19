@@ -2,6 +2,12 @@
 
 <!-- ## Unreleased -->
 
+## 18.0.0 - 2019-03-19
+
+### Changed
+
+- `node` and `web` presets now use `useBuiltIns: 'usage'` for including `corejs` polyfills.
+
 ## 17.0.1 - 2019-01-09
 
 ### Fixed
