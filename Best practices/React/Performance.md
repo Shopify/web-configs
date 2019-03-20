@@ -3,6 +3,7 @@
 ## Table of contents
 
 1. [Complementary packages](#complementary-packages)
+1. [Server rendering](#server-rendering)
 1. [Asynchronous component loading](#asynchronous-component-loading)
 
 ## Complementary packages
@@ -10,7 +11,18 @@
 * [`@shopify/react-async`](https://github.com/Shopify/quilt/tree/master/packages/react-async): utilities for creating asynchronously-loaded React components, with support for prefetching and extracting used bundles included in [Sewing Kit](https://github.com/Shopify/sewing-kit)
 * [`@shopify/react-graphql`](https://github.com/Shopify/quilt/tree/master/packages/react-graphql): provides a functions to create asynchronous GraphQL query components with built-in prefetching
 * [`@shopify/react-import-remote`](https://github.com/Shopify/quilt/tree/master/packages/react-import-remote): provides a React component for performance-conscious loading of external scripts
-* [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html): provides a `<Preconnect />` component for warming up connections to other domains
+* [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html): provides a `<Preconnect />` component for warming up connections to other domains, and a collection of tools for easily serializing data for server-rendered pages
+
+## Server rendering
+
+Exclusively using client-side rendering means that nothing is shown on the page until the scripts have downloaded and executed, any initial data fetching has been performed, and the app has been rendered for the first time.
+
+Server-side rendering a React application can be a useful tool in reducing the time until a merchant has a page that appears visually complete. However, this does not guarantee good performance. If your JavaScript takes a long time to execute on a fresh page load, there can be a period of time where the app appears to be interactive, but isn’t. Tracking the [first input delay](https://developers.google.com/web/updates/2018/05/first-input-delay) can help you determine whether users are being "tricked" into interacting with the app while initial JavaScript is still executing.
+
+Server-side rendering is also easy to get wrong. If the markup from the server does not match what the client believes the markup should be, the work performed by the server is basically thrown away. There are a few common patterns that cause these kinds of difference in markup:
+
+* **Not serializing data from the server correctly.** If a piece of information was fetched by the server, it must include that in the HTML response. Examples include everything from GraphQL data, to headers or other fields from the request, and much more. [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html) provides a set of tools that make it easy to serialize this data on the server, and de-serialize it on the client
+* **Basing state or render off globals that differ from the server to the client**. Accessing globals like `window`, `localStorage`, or `MediaQueryList` in a component constructor, state initializer, or render function is always a bug. Instead, grab the necessary values in a `componentDidMount` or `useEffect` function
 
 ## Asynchronous component loading
 

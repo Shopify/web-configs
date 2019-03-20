@@ -136,6 +136,8 @@ The biggest impact a Web Developer has on user experience will usually be how th
   1. Skipping GraphQL queries wherever you can; less network traffic is always better!
   2. Find a way to render components that will need to run GraphQL queries while their parent is loading. You can often render them in a hidden element if you don’t want to show any loading UI.
 
+* If using Apollo, avoid showing pure loading UI when a query’s `loading` value is true. `loading` is true both when the data has never been fetched yet, but also when cached values were given and a "refresh" query is still inflight. You may want to show some indicating that the data is being refreshed, but you do have some data to show, so don’t be afraid to show it!
+
 ## Types and code generation
 
 Typescript and GraphQL combine to let us access our data with type safety. You should use our [`graphql-typescript-definitions`](https://github.com/Shopify/graphql-tools-web/tree/master/packages/graphql-typescript-definitions) package to generate types alongside `.graphql` files, and for the GraphQL schema’s enums and input types (if you are using Sewing Kit, this is done automatically). Prefer the use of these generated types over manually hardcoding types representing your GraphQL operations.
