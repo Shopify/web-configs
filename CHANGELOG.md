@@ -1,6 +1,9 @@
 # Changelog
 
 <!-- ## Unreleased -->
+### Added
+
+* `shopify/jest/no-if` ([#232](https://github.com/Shopify/eslint-plugin-shopify/pull/232))
 
 ### Changed
 
