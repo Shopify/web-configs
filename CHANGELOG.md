@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [7.2.0] - 2019-04-03
 
 - Allow non-lowercase values in properties such as `font`, `font-family`, `--anything-with-font-in-its-name`, or Sass variables starting with `$polaris` or containing `font` ([#49](https://github.com/Shopify/stylelint-config-shopify/pull/49))
 
@@ -234,7 +236,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.1.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.0...HEAD
+[7.2.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.4...v7.1.0
 [7.0.4]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.3...v7.0.4
 [7.0.3]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.2...v7.0.3
