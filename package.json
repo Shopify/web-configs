@@ -10,7 +10,9 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "check": "yarn lint && yarn test",
-    "test": "tape plugins/**/*.test.js"
+    "test:rules": "tape ./rules/*.test.js",
+    "test:plugins": "tape ./plugins/**/*.test.js",
+    "test": "yarn test:rules && yarn test:plugins"
   },
   "engines": {
     "node": ">=8.10.0"

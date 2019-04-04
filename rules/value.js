@@ -6,9 +6,9 @@ module.exports = {
       ignoreProperties: [
         'font',
         'font-family',
-        /^--.*font/,
-        /^\$.*font/,
-        /^\$polaris/,
+        '/^--.*font/',
+        '/^\\$.*font/',
+        '/^\\$polaris/',
       ],
     },
   ],
