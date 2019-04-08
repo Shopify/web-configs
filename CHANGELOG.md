@@ -1,6 +1,9 @@
 # Changelog
 
 <!-- ## Unreleased -->
+
+## [27.0.0] - 2019-04-08
+
 ### Added
 
 #### Plugin updates and additions ([#233](https://github.com/Shopify/eslint-plugin-shopify/pull/233))
