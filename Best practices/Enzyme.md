@@ -1,5 +1,7 @@
 # Enzyme
 
+> **Note**: We now recommend using [`@shopify/react-testing`](https://github.com/Shopify/quilt/tree/master/packages/react-testing) to test React components, as it avoids many pitfalls of Enzyme and has better support for hooks, triggering props, and more.
+
 [Enzyme](http://airbnb.io/enzyme/) is a library that makes it easy to traverse and manipulate the output of React components. We recommend it for all React applications complex enough to warrant tests, as the readability it provides outweighs the additional API surface area to learn.
 
 ## Table of contents

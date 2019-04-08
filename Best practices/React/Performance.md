@@ -5,6 +5,7 @@
 1. [Complementary packages](#complementary-packages)
 1. [Server rendering](#server-rendering)
 1. [Asynchronous component loading](#asynchronous-component-loading)
+1. [Memoization](#memoization)
 
 ## Complementary packages
 
@@ -12,6 +13,8 @@
 * [`@shopify/react-graphql`](https://github.com/Shopify/quilt/tree/master/packages/react-graphql): provides a functions to create asynchronous GraphQL query components with built-in prefetching
 * [`@shopify/react-import-remote`](https://github.com/Shopify/quilt/tree/master/packages/react-import-remote): provides a React component for performance-conscious loading of external scripts
 * [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html): provides a `<Preconnect />` component for warming up connections to other domains, and a collection of tools for easily serializing data for server-rendered pages
+* [`@shopify/function-enhancers`](https://github.com/Shopify/quilt/tree/master/packages/function-enhancers): provides a set of helpers that run on functions, including helpers for memoizing and debouncing
+* [`@shopify/decorators`](https://github.com/Shopify/quilt/tree/master/packages/decorators): provides commonly-needed decorators for methods
 
 ## Server rendering
 
@@ -110,3 +113,12 @@ const MyComponent = createAsyncComponent({
 What gets rendered by each of these components can be customized using the `renderPrefetch`, `renderPreload`, and `renderKeepFresh` [options](https://github.com/Shopify/quilt/tree/master/packages/react-async#createasynccomponent). You can use this customization to preload additional asynchronous components that yours depends on.
 
 At a minimum, we recommend rendering the `<Prefetch />` for any asynchronous components that are rendered by a route your component links to. This pattern can be generalized using the [`<PrefetchRoute />` component](https://github.com/Shopify/quilt/tree/master/packages/react-async#prefetchroute-and-prefetcher) in `@shopify/react-async`.
+
+## Memoization
+
+Memoization is the process of storing previously-computed results to speed up subsequent operations. There are two common places we memoize in a React application:
+
+* Methods or other functions that need to generate results for lists of data (we recommend using [`@shopify/decorators`](https://github.com/Shopify/quilt/tree/master/packages/decorators#memoize) and [`@shopify/function-enhancers`](https://github.com/Shopify/quilt/tree/master/packages/function-enhancers#memoize))
+* Using the `React.useMemo`/ `React.useCallback` hooks to preserve objects across renders of a function component
+
+In all cases, make sure to **Measure, update, then measure again**. It is easy to fall into the trap of prematurely optimizing React components without taking stock of the actual results of those changes. Memoization (and the related concepts of `React.memo`/ `React.PureComponent`/ `shouldComponentUpdate`) should only be used in hot paths where un-memoized results lead to excessive re-rendering of expensive components.
