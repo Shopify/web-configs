@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "26.3.0",
+  "version": "27.0.0",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -40,7 +40,9 @@
   "homepage": "https://github.com/Shopify/eslint-plugin-shopify",
   "repository": "https://github.com/Shopify/eslint-plugin-shopify",
   "eslintConfig": {
-    "plugins":  ["self"],
+    "plugins": [
+      "self"
+    ],
     "extends": [
       "plugin:self/esnext",
       "plugin:self/node",
