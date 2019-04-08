@@ -3,9 +3,9 @@ const rule = require('../../../lib/rules/react-type-state');
 
 const ruleTester = new RuleTester();
 
-require('typescript-eslint-parser');
+require('@typescript-eslint/parser');
 
-const parser = 'typescript-eslint-parser';
+const parser = '@typescript-eslint/parser';
 
 const errors = [
   {

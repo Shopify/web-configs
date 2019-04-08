@@ -56,7 +56,7 @@ const validExamples = [
       ).then(bar => bar);
     }
     `,
-    parser: 'typescript-eslint-parser',
+    parser: '@typescript-eslint/parser',
   },
 ];
 

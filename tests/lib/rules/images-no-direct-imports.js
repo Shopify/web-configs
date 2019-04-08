@@ -56,7 +56,7 @@ ruleTester.run('images-no-direct-imports', rule, {
     },
     // Exports without a source file
     {
-      code: 'export {a, b}; export default c;',
+      code: 'let a, b, c; export {a, b}; export default c;',
       filename: fixtureFile('basic-app/app/components/Foo/Foo.js'),
     },
   ],

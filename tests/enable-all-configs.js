@@ -12,14 +12,8 @@ module.exports = {
     'plugin:self/react',
 
     // Augmenting configs - When extending, these go after the core config
-    'plugin:self/ava',
-    'plugin:self/eslint-comments',
-    'plugin:self/flow',
     'plugin:self/graphql',
     'plugin:self/jest',
-    'plugin:self/jquery',
-    'plugin:self/lodash',
-    'plugin:self/mocha',
     'plugin:self/node',
     'plugin:self/polaris',
     'plugin:self/webpack',

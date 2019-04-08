@@ -4,7 +4,7 @@ Provides consistency when naming [Enums](https://www.typescriptlang.org/docs/han
 
 ## Rule Details
 
-This rule enforces all TypeScript Enums to be in Pascal case. An error will occur if another capitalization rule is used (such as snake case or lowercase) when naming TypeScript Enums.
+This rule enforces all TypeScript enums to be in pascal case. An error will occur if another capitalization rule is used (such as snake case or lowercase) when naming TypeScript Enums.
 
 Examples of **incorrect** code for this rule:
 

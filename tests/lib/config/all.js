@@ -1,7 +1,6 @@
 /* eslint-env node, mocha */
 import {expect} from 'chai';
 
-// eslint-disable-next-line shopify/strict-component-boundaries
 import {execESLint, fixtureFile} from '../../utilities';
 
 describe('config', () => {
@@ -15,4 +14,3 @@ describe('config', () => {
     }).timeout(8000);
   });
 });
-/* eslint-enable flowtype/require-valid-file-annotation */

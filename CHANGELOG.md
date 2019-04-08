@@ -3,7 +3,77 @@
 <!-- ## Unreleased -->
 ### Added
 
+#### Plugin updates and additions ([#233](https://github.com/Shopify/eslint-plugin-shopify/pull/233))
+
+#### Breaking Changes
+
+* `shopify/jquery-dollar-sign-reference` has been removed.
+* The `eslint-comments` ruleset has been removed and is now enabled by default as part of core - if you're using `es5`, `esnext`, `react` or `typescript` then you can remove the reference to `eslint-comments`.
+* The `ava`, `mocha`, `jquery` and `lodash` rulesets have been removed as these tools are are not commonly used at Shopify.
+* The `typescript-react` and `typescript-prettier` rulesets have been removed. Replace `["plugin:shopify/typescript-react"]` with `["plugin:shopify/typescript", "plugin:shopify/react"]` and replace`["plugin:shopify/typescript-prettier"]`  with `["plugin:shopify/prettier"]`
+* Updated from `eslint-plugin-typescript` to `@typescript-eslint/eslint-plugin`. If you have any rules defined under the `typescript` namespace, you will need to change those to use the new `@typescript-eslint` namespace.
+
+  For example:
+
+  ```json
+  "rules": {
+    "typescript/restrict-plus-operands": "error"
+  }
+  ```
+
+  Will become:
+
+  ```json
+  "rules": {
+    "@typescript-eslint/restrict-plus-operands": "error"
+  }
+  ```
+  More information on this change can be found [in this eslint blog post](https://eslint.org/blog/2019/01/future-typescript-eslint]).
+
+#### New rules
+
 * `shopify/jest/no-if` ([#232](https://github.com/Shopify/eslint-plugin-shopify/pull/232))
+
+Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules.html) to learn more about the following rules.
+
+* `'react-hooks/rules-of-hooks': 'error'`   // Only use Hooks at the top level of a React functional component or from within another custom hook.
+* `'react-hooks/exhaustive-deps': 'error'`   // Checks for missing useEffect dependencies
+
+
+#### Updated Plugins
+
+| Package | Old version | New version |
+| ------- | ----------- | ----------- |
+| `eslint-plugin-sort-class-members` | `1.3.1` | `1.4.0` |
+| `eslint-plugin-promise` | `4.0.0` | `4.0.1` |
+| `eslint-plugin-node` | `7.0.1` | `8.0.1` |
+| `eslint-plugin-jsx-a11y` | `6.1.1"`  | `6.2.1` |
+| `eslint-plugin-jest` | `21.22.0`  | `21.23.0` |
+| `eslint-plugin-import` | `2.14.0`  | `2.16.0` |
+| `eslint-plugin-graphql` | `2.1.0-0`  | `3.0.3` |
+| `eslint-plugin-eslint-comments` | `3.0.1`  | `3.1.1` |
+| `eslint-plugin-babel` | `5.1.0`  | `5.3.0` |
+| `eslint-plugin-utils` | `2.1.0`  | `2.3.0` |
+
+#### Added Plugins
+
+| Package | Version |
+| ------- | ------- |
+| eslint-plugin-react-hooks | 1.5.0 |
+| @typescript-eslint/eslint-plugin | 1.5.0 |
+| "@typescript-eslint/parser | 1.5.0 |
+| babel-eslint | 10.0.1 |
+
+#### Removed Plugins
+
+| Package |
+| ------- |
+| eslint-plugin-mocha |
+| eslint-plugin-ava |
+| eslint-plugin-flowtype |
+| eslint-plugin-chai-expect |
+| eslint-plugin-lodash |
+| eslint-plugin-jquery |
 
 ### Changed
 

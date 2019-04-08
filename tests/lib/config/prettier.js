@@ -1,4 +1,5 @@
 /* eslint-env node, mocha */
+
 import {expect} from 'chai';
 import {configFile, execESLint, fixtureFile} from '../../utilities';
 
@@ -45,7 +46,7 @@ describe('config', () => {
     it('uses .prettierrc as the source of prettier rules for TypeScript', () => {
       expect(
         execESLint(
-          `--ext .ts --plugin typescript --config ${fixtureFile(
+          `--ext .ts --config ${fixtureFile(
             'prettier-typescript/.eslintrc.js',
           )} ${fixtureFile('prettier-config')}`,
         ),
@@ -53,5 +54,3 @@ describe('config', () => {
     }).timeout(8000);
   });
 });
-
-/* eslint-enable flowtype/require-valid-file-annotation */

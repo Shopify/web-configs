@@ -4,9 +4,9 @@ const rule = require('../../../../lib/rules/typescript/prefer-pascal-case-enums'
 
 const ruleTester = new RuleTester();
 
-require('typescript-eslint-parser');
+require('@typescript-eslint/parser');
 
-const typeScriptParser = 'typescript-eslint-parser';
+const typeScriptParser = '@typescript-eslint/parser';
 
 function errorWithName(name) {
   return {

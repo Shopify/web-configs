@@ -62,14 +62,13 @@ If working on an ES5 project, extend the ES5 version of the configuration:
 }
 ```
 
-You can also add some "augmenting" configs on top of the "core" config by extending an array of linting configs. For example, this package provides a lodash linting config, which can be added to the ESNext config with the following configuration file:
+You can also add some "augmenting" configs on top of the "core" config by extending an array of linting configs. For example, this package provides a jest config, which can be added to the ESNext config with the following configuration file:
 
 ```json
 {
   "extends": [
     "plugin:shopify/esnext",
-    "plugin:shopify/lodash",
-    "plugin:shopify/mocha"
+    "plugin:shopify/jest",
   ]
 }
 ```
@@ -84,12 +83,7 @@ This plugin provides the following core configurations:
 
 This plugin also provides the following tool-specific configurations, which can be used on top of the core configurations:
 
-- [lodash](lib/config/lodash.js): Use this for projects that use [lodash](https://lodash.com).
-- [mocha](lib/config/mocha.js): Use this for projects that use [mocha](http://mochajs.org)/ [sinon](http://sinonjs.org)/ [chai](http://chaijs.com) for testing.
-- [ava](lib/config/ava.js): Use this for projects that use the [AVA test runner](https://github.com/sindresorhus/ava).
-- [flow](lib/config/flow.js): Use this for projects that use [flow](http://flowtype.org) for type checking.
 - [graphql](lib/config/graphql.js): Use this for projects that use [graphql-config](https://github.com/prisma/graphql-config) for graphql validation.
-- [jquery](lib/config/jquery.js): Use this for projects that use [jQuery](http://jquery.com).
 - [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components/get-started).
 - [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting. Prettier must be installed within your project, as eslint-plugin-shopify does not provide the dependency itself.
 - [typescript-prettier](lib/config/typescript-prettier.js): Use [prettier](https://github.com/prettier/prettier) on typescript projects. Prettier must be installed within your project, as eslint-plugin-shopify does not provide the dependency itself.
@@ -120,7 +114,6 @@ This plugin provides the following custom rules, which are included as appropria
 - [jest/no-if](docs/rules/jest/no-if.md): Prevent if statements in tests.
 - [jest/no-snapshots](docs/rules/jest/no-snapshots.md): Disallows jest snapshots.
 - [jest/no-vague-titles](docs/rules/jest/no-vague-titles.md): Prevent the usage of vague words in test statements.
-- [jquery-dollar-sign-reference](docs/rules/jquery-dollar-sign-reference.md): Require that all jQuery objects are assigned to references prefixed with `$`.
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.
 - [jsx-prefer-fragment-wrappers](docs/rules/jsx-prefer-fragment-wrappers.md): Disallow useless wrapping elements in favour of fragment shorthand in JSX.
