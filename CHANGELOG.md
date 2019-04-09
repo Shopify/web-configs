@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Changed
+
+* `react/jsx-no-bind` now allows function and arrow functions. ([#239](https://github.com/Shopify/eslint-plugin-shopify/pull/239))
+
 ### Removed
 
 * turned off `babel/camelcase` in typescript config because it overlaps with `@typescript-eslint/camelcase`. ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
