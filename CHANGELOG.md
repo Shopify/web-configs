@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Removed
+
+* turned off `babel/camelcase` in typescript config because it overlaps with `@typescript-eslint/camelcase`. ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
+
 ## [27.0.0] - 2019-04-08
 
 ### Added
