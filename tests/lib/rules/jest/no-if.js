@@ -20,6 +20,62 @@ ruleTester.run('no-if', rule, {
       })`,
       parser,
     },
+    {
+      code: `describe('foo', () => {
+        if('bar') {}
+      })`,
+      parser,
+    },
+    {
+      code: `describe.skip('foo', () => {
+        if('bar') {}
+      })`,
+      parser,
+    },
+    {
+      code: `describe('foo', () => {
+        if('bar') {}
+      })`,
+      parser,
+    },
+    {
+      code: `xdescribe('foo', () => {
+        if('bar') {}
+      })`,
+      parser,
+    },
+    {
+      code: `fdescribe('foo', () => {
+        if('bar') {}
+      })`,
+      parser,
+    },
+    {
+      code: `describe('foo', () => {
+        if('bar') {}
+      })
+      if('baz') {}
+      `,
+      parser,
+    },
+    {
+      code: `describe('foo', () => {
+          afterEach(() => {
+            if('bar') {}
+          });
+        })
+      `,
+      parser,
+    },
+    {
+      code: `describe('foo', () => {
+          beforeEach(() => {
+            if('bar') {}
+          });
+        })
+      `,
+      parser,
+    },
   ],
   invalid: [
     {
@@ -68,61 +124,6 @@ ruleTester.run('no-if', rule, {
     },
     {
       code: `fit('foo', () => {
-          if('bar') {}
-        })`,
-      parser,
-      errors: [
-        {
-          messageId: 'noIf',
-        },
-      ],
-    },
-    {
-      code: `describe('foo', () => {
-        if('bar') {}
-      })`,
-      parser,
-      errors: [
-        {
-          messageId: 'noIf',
-        },
-      ],
-    },
-    {
-      code: `describe.skip('foo', () => {
-        if('bar') {}
-      })`,
-      parser,
-      errors: [
-        {
-          messageId: 'noIf',
-        },
-      ],
-    },
-    {
-      code: `describe.only('foo', () => {
-        if('bar') {}
-      })`,
-      parser,
-      errors: [
-        {
-          messageId: 'noIf',
-        },
-      ],
-    },
-    {
-      code: `xdescribe.only('foo', () => {
-        if('bar') {}
-      })`,
-      parser,
-      errors: [
-        {
-          messageId: 'noIf',
-        },
-      ],
-    },
-    {
-      code: `fdescribe.only('foo', () => {
         if('bar') {}
       })`,
       parser,
@@ -207,19 +208,6 @@ ruleTester.run('no-if', rule, {
         {
           messageId: 'noIf',
         },
-        {
-          messageId: 'noIf',
-        },
-      ],
-    },
-    {
-      code: `describe('foo', () => {
-          if('bar') {}
-      })
-      if('baz') {}
-      `,
-      parser,
-      errors: [
         {
           messageId: 'noIf',
         },
