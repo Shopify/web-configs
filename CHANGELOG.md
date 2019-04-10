@@ -2,13 +2,18 @@
 
 <!-- ## Unreleased -->
 
+## [27.0.1] - 2019-04-10
+
 ### Changed
 
-* `react/jsx-no-bind` now allows function and arrow functions. ([#239](https://github.com/Shopify/eslint-plugin-shopify/pull/239))
+* `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. ([#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235))
 
 ### Removed
 
+* turned off `consistent-return` ([#236](https://github.com/Shopify/eslint-plugin-shopify/pull/236)
+* turned off `react/jsx-no-bind` ([#239](https://github.com/Shopify/eslint-plugin-shopify/pull/239))
 * turned off `babel/camelcase` in typescript config because it overlaps with `@typescript-eslint/camelcase`. ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
+* `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. ([#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235))
 
 ## [27.0.0] - 2019-04-08
 
