@@ -12,14 +12,24 @@ TODO
 
 ### `/app/hooks` and `<Component>/hooks`
 
-[React Hooks](https://reactjs.org/docs/hooks-overview.html) provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). Like `components`, you should import directly from the `hooks` directory, rather than the nested directories:
+> **Note:** because hooks are so new, we haven’t been able to test these recommendations as much as we have for other parts of project structure. If you are trying to figure out where a hook should go, you should come discuss it with us in the `#web-foundation-tech` slack channel.
+
+[React Hooks](https://reactjs.org/docs/hooks-overview.html) provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). You should import from the subdirectory of `hooks`, like you would for `utilities`:
 
 ```tsx
 // bad
-import {useProductForm} from './hooks/form';
+import {useProductForm} from './hooks';
 
 // good
-import {useProductForm} from './hooks';
+import {useProductForm} from './hooks/form';
+```
+
+We recommend having a dedicated subdirectory for each hook "type", rather than having individual files. This makes it easy to introduce a test directory if your hook requires tests. File and directory names should be in kebab case to clearly differentiate them from components. Also unlike components, we recommend using named exports, as you are more likely to export multiple hooks for a particular "theme" than you are for components.
+
+```
+/app/hooks/form/index.ts
+/app/hooks/form/form.ts
+/app/hooks/form/tests/form.test.ts
 ```
 
 The example above works very well for hook-only situations, but does not work well when you also need to export context or other components alongside the hook. In cases like this, we prefer collocation of the files along the "theme" of the files, not based on the values exported from them (an application of [isolation over integration](https://github.com/Shopify/web-foundation/blob/master/Principles/4%20-%20Isolation%20over%20integration.md)). If you have code like this, follow the [context-based library organization](#context-based-library), but placed in a nested `utilities` directory:

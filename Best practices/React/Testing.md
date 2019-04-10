@@ -89,6 +89,8 @@ There are many parts of React components that should not be tested as they are i
 
 * `state`. State is not directly manipulable from other components, and so should be treated as private. In order to simulate setting state, trigger the props of components rendered by your component with arguments that result in the component getting into that state. Once a component is in a state, do not assert on the state having a particular shape; instead, assert that the subcomponents being rendered have the expected props.
 
+* What hooks were used in a component. The hooks you use generally end up doing one of three things: pull in context, store local state, or create side effects. How context is pulled in to a component is an implementation detail; `useContext`, `contextType`, and `Context.Consumer` are all acceptable and interchangeable. As noted above, local state is never tested. Finally, we should test that the side effects themselves happened, not how they were triggered.
+
 * Instances for class components. All methods should be private on your React components, as you will otherwise be encouraging users to break out of the declarative model of React. This includes React’s lifecycle methods, which are implementation details of the framework itself. Never call any of these methods directly. Similarly, function components should never use the `useImperativeHandle` hook to provide a public API.
 
 * `className`s. Classes have no meaning outside of visual tests; the presence of a class does not provide any real confidence over the correctness of the rendered UI. `style` props of subcomponents may be tested if they rely on internal computations involving `state` or `props`.
