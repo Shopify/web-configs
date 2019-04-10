@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Removed
+
+* turned off `node/no-extraneous-require` because it duplicates reported violations from `import/no-extraneous-dependencies` ([#240](https://github.com/Shopify/eslint-plugin-shopify/pull/240)
+
 ## [27.0.1] - 2019-04-10
 
 ### Changed
