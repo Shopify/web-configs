@@ -12,7 +12,7 @@ TODO
 
 ### `/app/hooks` and `<Component>/hooks`
 
-Hooks provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). Like `components`, you should import directly from the `hooks` directory, rather than the nested directories:
+[React Hooks](https://reactjs.org/docs/hooks-overview.html) provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). Like `components`, you should import directly from the `hooks` directory, rather than the nested directories:
 
 ```tsx
 // bad
