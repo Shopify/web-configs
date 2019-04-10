@@ -1,4 +1,4 @@
-# React application organization
+# React project organization
 
 ## Node
 
@@ -6,11 +6,68 @@ This section describes a sensible starting point for organizing a React applicat
 
 ## `/app`
 
-### `/app/components`
+### `/app/components` and `<Component>/components`
 
 TODO
 
-### `/app/utilities`
+### `/app/hooks` and `<Component>/hooks`
+
+> **Note:** because hooks are so new, we haven’t been able to test these recommendations as much as we have for other parts of project structure. If you are trying to figure out where a hook should go, you should come discuss it with us in the `#web-foundation-tech` slack channel.
+
+[React Hooks](https://reactjs.org/docs/hooks-overview.html) provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). You should import from the subdirectory of `hooks`, like you would for `utilities`:
+
+```tsx
+// bad
+import {useProductForm} from './hooks';
+
+// good
+import {useProductForm} from './hooks/form';
+```
+
+We recommend having a dedicated subdirectory for each hook "type", rather than having individual files. This makes it easy to introduce a test directory if your hook requires tests. File and directory names should be in kebab case to clearly differentiate them from components. Also unlike components, we recommend using named exports, as you are more likely to export multiple hooks for a particular "theme" than you are for components.
+
+```
+/app/hooks/form/index.ts
+/app/hooks/form/form.ts
+/app/hooks/form/tests/form.test.ts
+```
+
+The example above works very well for hook-only situations, but does not work well when you also need to export context or other components alongside the hook. In cases like this, we prefer collocation of the files along the "theme" of the files, not based on the values exported from them (an application of [isolation over integration](https://github.com/Shopify/web-foundation/blob/master/Principles/4%20-%20Isolation%20over%20integration.md)). If you have code like this, follow the [context-based library organization](#context-based-library), but placed in a nested `utilities` directory:
+
+```
+/app/components/MyComponent/utilities/my-feature/index.ts
+/app/components/MyComponent/utilities/my-feature/context.ts
+/app/components/MyComponent/utilities/my-feature/object.ts
+/app/components/MyComponent/utilities/my-feature/hooks.ts
+/app/components/MyComponent/utilities/my-feature/WithObject.tsx
+```
+
+```tsx
+// In application code, we still just import from the utility directory,
+// but we now have a single place that houses the necessary context and
+// the "consumers" of that context
+
+import {
+  MyFeatureContext,
+  MyFeatureDomainObject,
+  useMyFeature,
+} from './utilities/my-feature';
+
+function Parent() {
+  return (
+    <MyFeatureContext.Provider value={new MyFeatureDomainObject()}>
+      {children}
+    </MyFeatureContext.Provider>
+  );
+}
+
+function Child() {
+  const myFeature = useMyFeature();
+  return null;
+}
+```
+
+### `/app/utilities` and `<Component>/utilities`
 
 TODO
 
@@ -179,3 +236,42 @@ export default function Routes() {
 ```
 
 As with the `Routes` component, more complex prefetching logic for a discrete group of routes can be organized into dedicated components in `/app/foundation/Prefetch/components`.
+
+## Libraries
+
+This section discusses a few common "shapes" of libraries we write, and how to structure them:
+
+### Context-based library
+
+We often have libraries that supply a context object, some kind of domain model (a manager, a subscription, etc), and a set of hooks and components for accessing or using that model. `@shopify/react-i18n`, `@shopify/react-html`, and many other libraries fit this definition.
+
+In these kinds of projects, we usually split the different parts (context, model, components, hooks) into their own files. By default, we always place hooks in a `hooks.ts` file, or in a `hooks` directory if there are too many to comfortably fit in a single file. Like an application, components always get their own files. A typical project with this shape would look like this:
+
+```
+# Re-exports the public API of the library
+index.ts
+
+# Many hooks depend on context. If so, place the context in a distinct file,
+# since other files often also depend on it
+context.ts
+
+# If you are providing a more complex object through context, put that object
+# in its own file, too. A common case is a "manager" class, which has methods
+# that consumers call.
+object.ts / manager.ts / whatever describes the context value
+
+# Any hooks should live in their own file, or in a directory if there are many
+# hooks, or the hooks are very loosely related. If you automatically generate
+# decorators/ render prop components from your hooks, they can also be exported
+# here.
+hooks.ts
+
+# Similar to the above, any decorators should live in a dedicated file. These
+# should now be treated as legacy features, as we prefer hooks for function
+# components, and render props for class components
+decorators.ts
+
+# If you manually create render prop components, place those in their own
+# component files
+WithFeature.tsx
+```
