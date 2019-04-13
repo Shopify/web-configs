@@ -133,8 +133,8 @@ This plugin provides the following custom rules, which are included as appropria
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.
 - [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.
 - [strict-component-boundaries](docs/rules/strict-component-boundaries.md): Prevent module imports between components.
-- [typescipt/prefer-pascal-case-enums](docs/rules/typescipt/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using Pascal case.
-- [typescipt/prefer-singular-enums](docs/rules/typescipt/prefer-singular-enums.md): Prefer TypeScript enums be singular.
+- [typescript/prefer-pascal-case-enums](docs/rules/typescript/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using Pascal case.
+- [typescript/prefer-singular-enums](docs/rules/typescript/prefer-singular-enums.md): Prefer TypeScript enums be singular.
 - [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
 
 ## Creating New Rules
