@@ -243,7 +243,7 @@ As noted in the [decision record](../../Decision%20records/06%20-%20We%20split%2
 
 * Use "mock" props that satisfy the required `prop` types for a component that are spread into each component under test. Only customize the `prop` that is under test, using a value specified in your test file.
 
-  > Why? This prevents misconfigued components, and keeps the focus on the part of the component actually being tested.
+  > Why? This prevents misconfigured components, and keeps the focus on the part of the component actually being tested.
 
   ```js
   // bad
