@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Added
+
+* `shopify/react-hooks-strict-return` Restrict the number of returned items from React hooks. ([#237](https://github.com/Shopify/eslint-plugin-shopify/pull/237))
+
 ### Removed
 
 * turned off `node/no-extraneous-require` because it duplicates reported violations from `import/no-extraneous-dependencies` ([#240](https://github.com/Shopify/eslint-plugin-shopify/pull/240)

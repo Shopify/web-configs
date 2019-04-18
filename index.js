@@ -19,6 +19,7 @@ module.exports = {
     'prefer-early-return': require('./lib/rules/prefer-early-return'),
     'prefer-module-scope-constants': require('./lib/rules/prefer-module-scope-constants'),
     'prefer-twine': require('./lib/rules/prefer-twine'),
+    'react-hooks-strict-return': require('./lib/rules/react-hooks-strict-return'),
     'react-initialize-state': require('./lib/rules/react-initialize-state'),
     'react-no-multiple-render-methods': require('./lib/rules/react-no-multiple-render-methods'),
     'react-prefer-private-members': require('./lib/rules/react-prefer-private-members'),
