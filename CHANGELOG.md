@@ -4,10 +4,12 @@
 
 ### Fixed
 
-* `shopify/estrict-full-import` "empty" array pattern (eg: `const [, bar] = foo` errors ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
+* `shopify/restrict-full-import` "empty" array pattern (eg: `const [, bar] = foo` errors ([#243](https://github.com/Shopify/eslint-plugin-shopify/pull/243))
 
 ### Added
 
+* updated `eslint-plugin-import` to version `22.4.1` which introduces the [`no-unused-modules`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md) rule. 
+* updated `eslint-plugin-jest` to version `22.4.1` which introduces the [`no-empty-title`](https://github.com/jest-community/eslint-plugin-jest/commit/c793b7a) rule.
 * `shopify/react-hooks-strict-return` Restrict the number of returned items from React hooks. ([#237](https://github.com/Shopify/eslint-plugin-shopify/pull/237))
 
 ### Removed
