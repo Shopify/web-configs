@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+### Fixed
+
+* `shopify/estrict-full-import` "empty" array pattern (eg: `const [, bar] = foo` errors ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
+
 ### Added
 
 * `shopify/react-hooks-strict-return` Restrict the number of returned items from React hooks. ([#237](https://github.com/Shopify/eslint-plugin-shopify/pull/237))

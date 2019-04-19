@@ -13,7 +13,21 @@ const parserOptions = {
 const options = [['lodash']];
 
 // prettier-ignore
-const message = `Unexpected full import of restricted module '${options[0][0]}'.`;
+
+function configFor(type) {
+  const message = `Unexpected full import of restricted module '${options[0][0]}'.`;
+
+  return {
+    parserOptions,
+    options,
+    errors: [
+      {
+        message,
+        type,
+      },
+    ],
+  };
+}
 
 ruleTester.run('restrict-full-import', rule, {
   valid: [
@@ -29,115 +43,47 @@ ruleTester.run('restrict-full-import', rule, {
   invalid: [
     {
       code: 'import * as _ from "lodash";',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'ImportDeclaration',
-        },
-      ],
+      ...configFor('ImportDeclaration'),
     },
     {
       code: 'import _ from "lodash";',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'ImportDeclaration',
-        },
-      ],
+      ...configFor('ImportDeclaration'),
     },
     {
       code: 'import _, {chain} from "lodash";',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'ImportDefaultSpecifier',
-        },
-      ],
+      ...configFor('ImportDefaultSpecifier'),
     },
     {
       code: 'import {default as _, chain} from "lodash";',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'ImportSpecifier',
-        },
-      ],
+      ...configFor('ImportSpecifier'),
     },
     {
       code: 'var _ = require("lodash");',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'VariableDeclarator',
-        },
-      ],
+      ...configFor('VariableDeclarator'),
     },
     {
       code: 'var _; _ = require("lodash");',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'AssignmentExpression',
-        },
-      ],
+      ...configFor('AssignmentExpression'),
     },
     {
       code: 'var {chain, ...rest} = require("lodash");',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'VariableDeclarator',
-        },
-      ],
+      ...configFor('VariableDeclarator'),
     },
     {
       code: 'var {chain, ...rest} = require("lodash");',
-      parserOptions,
-      options,
-      parser: 'babel-eslint',
-      errors: [
-        {
-          message,
-          type: 'VariableDeclarator',
-        },
-      ],
+      ...configFor('VariableDeclarator'),
     },
     {
       code: 'var [chain, ...rest] = require("lodash");',
-      parserOptions,
-      options,
-      errors: [
-        {
-          message,
-          type: 'VariableDeclarator',
-        },
-      ],
+      ...configFor('VariableDeclarator'),
     },
     {
       code: 'var [chain, ...rest] = require("lodash");',
-      parserOptions,
-      options,
-      parser: 'babel-eslint',
-      errors: [
-        {
-          message,
-          type: 'VariableDeclarator',
-        },
-      ],
+      ...configFor('VariableDeclarator'),
+    },
+    {
+      code: 'var [, , ...rest] = require("lodash");',
+      ...configFor('VariableDeclarator'),
     },
   ],
 });
