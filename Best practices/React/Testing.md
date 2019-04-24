@@ -157,6 +157,33 @@ it('does not call the listener when the component has unmounted', () => {
 
 If you are testing a library that exports a hook and a component that uses the hook and returns nothing (like our `EventListenerUser` component above), you only need to test one. We recommend testing the component version only; otherwise, it can be confusing why you have a component for tests that so closely mirrors a component that is actually exported from the library.
 
+### Side effect-only hooks
+
+The only exception to the rules above is for hooks that **only** have a side effect that is never reflected in the component tree. This is commonly the case for hooks that build on top of [`@shopify/react-effect`’s `useServerEffect` hook](https://github.com/Shopify/quilt/tree/master/packages/react-effect#useservereffect). In these cases, you can instead mock out the hook and simply ensure that it was called with the expected value:
+
+```tsx
+// @shopify/react-network’s `useStatus` hook has no effect beyond
+// a side effect that occurs during the server render.
+
+import {useStatus, StatusCode} from '@shopify/react-network';
+
+jest.mock('@shopify/react-network', () => ({
+  ...require.requireActual('@shopify/react-network'),
+  useStatus: jest.fn(),
+}));
+
+describe('<MyComponent />', () => {
+  beforeEach(() => {
+    (useStatus as jest.Mock).mockReset();
+  });
+
+  it('sets the status code to not found', () => {
+    mount(<MyComponent />);
+    expect(useStatus).toHaveBeenCalledWith(StatusCode.NotFound);
+  });
+});
+```
+
 ## Split test files
 
 As noted in the [decision record](../../Decision%20records/06%20-%20We%20split%20up%20large%20component%20test%20files%20by%20feature.md), when a component’s test file gets large enough that is hard to navigate and/ or stresses editor tooling, we split the test file by feature. Below are some best practices for naming and structure of these split files:
