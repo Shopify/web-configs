@@ -65,15 +65,13 @@
     "prettier": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "typescript": "^3.4.3"
+    "typescript": "~3.1.1"
   },
   "peerDependencies": {
     "eslint": "<6 >5.0.0",
     "prettier": "^1.14.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.6.0",
-    "@typescript-eslint/parser": "^1.6.0",
     "babel-eslint": "10.0.1",
     "common-tags": "^1.8.0",
     "eslint-config-prettier": "4.1.0",
@@ -91,9 +89,11 @@
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "^1.6.0",
     "eslint-plugin-sort-class-members": "1.4.0",
+    "eslint-plugin-typescript": "0.12.0",
     "merge": "1.2.1",
     "pascal-case": "^2.0.1",
     "pkg-dir": "4.1.0",
-    "pluralize": "^7.0.0"
+    "pluralize": "^7.0.0",
+    "typescript-eslint-parser": "20.0.0"
   }
 }

@@ -4,9 +4,9 @@ const rule = require('../../../../lib/rules/jest/no-vague-titles');
 const ruleTester = new RuleTester();
 
 require('babel-eslint');
-require('@typescript-eslint/parser');
+require('typescript-eslint-parser');
 
-const typeScriptParser = '@typescript-eslint/parser';
+const typeScriptParser = 'typescript-eslint-parser';
 const parser = 'babel-eslint';
 
 ruleTester.run('no-vague-titles', rule, {

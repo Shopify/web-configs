@@ -4,10 +4,10 @@ const rule = require('../../../lib/rules/react-prefer-private-members');
 const ruleTester = new RuleTester();
 
 require('babel-eslint');
-require('@typescript-eslint/parser');
+require('typescript-eslint-parser');
 
 const babelParser = 'babel-eslint';
-const typeScriptParser = '@typescript-eslint/parser';
+const typeScriptParser = 'typescript-eslint-parser';
 
 function makeError({type = 'ClassProperty', memberName, componentName}) {
   return {
