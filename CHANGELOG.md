@@ -2,10 +2,35 @@
 
 <!-- ## Unreleased -->
 
+## [28.0.0] - 2019-04-26
+
+### Changed
+
+* Reverted a previous update from `eslint-plugin-typescript` to `@typescript-eslint/eslint-plugin`. If you have any rules defined under the `@typescript-eslint` namespace, you will need to change those to use the older `typescript` namespace.
+
+  For example:
+
+  ```json
+  "rules": {
+    "@typescript-eslint/restrict-plus-operands": "error"
+  }
+  ```
+
+  Will become:
+
+  ```json
+  "rules": {
+    "typescript/restrict-plus-operands": "error"
+  }
+  ```
+
+**Note:** This is a temporary work-around to resolve a bug in prettier-eslint and will attempt the typescript updates again when resolved.
+
 ### Fixed
 
 * `shopify/restrict-full-import` "empty" array pattern (eg: `const [, bar] = foo` errors ([#243](https://github.com/Shopify/eslint-plugin-shopify/pull/243))
 * Optimized `shopify/images/no-direct-imports` to be much faster in the common case ([#247](https://github.com/Shopify/eslint-plugin-shopify/pull/247))
+* `shopify/react-hooks-strict-return` from crashing when a hook returns undefined ([#251](https://github.com/Shopify/eslint-plugin-shopify/pull/251))
 
 ### Added
 
