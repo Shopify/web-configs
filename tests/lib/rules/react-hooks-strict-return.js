@@ -145,6 +145,16 @@ ruleTester.run('react-hooks-strict-return', rule, {
       }`,
       parser,
     },
+    {
+      code: `function useHookWithNoReturn() {}`,
+      parser,
+    },
+    {
+      code: `function useHookUndefinedReturn() {
+        return;
+      }`,
+      parser,
+    },
   ],
   invalid: [
     {
