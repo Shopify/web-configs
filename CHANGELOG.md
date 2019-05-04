@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+## 18.1.1 - 2019-05-03
+
+- `web` preset now accepts a `useBuiltIn` value (default = `usage`)
+
 ## 18.1.0 - 2019-04-22
 
 ### Added

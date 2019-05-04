@@ -6,13 +6,14 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
     corejs = 2,
     debug = false,
     browsers,
+    useBuiltIns = 'usage',
   } = options;
 
   return {
     presets: [
       [require.resolve('@babel/preset-env'), {
         modules,
-        useBuiltIns: 'usage',
+        useBuiltIns,
         corejs,
         targets: {
           browsers,
