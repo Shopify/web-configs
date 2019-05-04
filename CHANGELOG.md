@@ -2,6 +2,12 @@
 
 <!-- ## Unreleased -->
 
+## 18.1.0 - 2019-04-22
+
+### Added
+
+- `node` and `web` presets now accept a `corejs` option (default = `2`)
+
 ## 18.0.0 - 2019-03-19
 
 ### Changed
