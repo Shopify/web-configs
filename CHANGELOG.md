@@ -3,8 +3,11 @@
 <!-- ## Unreleased -->
 
 ### Added
-- New Rules: `node/prefer-promises/dns` and `node/prefer-promises/fs`. These rules disallow the callback API in favor of promise API for the dns and fs modules. ([257](https://github.com/Shopify/eslint-plugin-shopify/pull/257))
-- New Rule: `jest/no-mocks-import`. This rule disallows manually importing from `__mocks__`.
+
+- New Rules:
+  - `node/prefer-promises/dns` and `node/prefer-promises/fs` These rules disallow the callback API in favor of promise API for the dns and fs modules. ([257](https://github.com/Shopify/eslint-plugin-shopify/pull/257))
+  - `jest/no-mocks-import` This rule disallows manually importing from `__mocks__` ([246](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
+  - `react/state-in-constructor` Enforce state initialization to be in a class property. ([256](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
 
 ## [28.0.0] - 2019-04-26
 
