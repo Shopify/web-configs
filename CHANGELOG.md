@@ -9,6 +9,9 @@
   - `jest/no-mocks-import` This rule disallows manually importing from `__mocks__` ([246](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
   - `react/state-in-constructor` Enforce state initialization to be in a class property. ([256](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
 
+### Fixed
+- `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. ([258](https://github.com/Shopify/eslint-plugin-shopify/pull/258))
+
 ## [28.0.0] - 2019-04-26
 
 ### Changed

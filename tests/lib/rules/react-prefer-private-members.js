@@ -72,6 +72,18 @@ ruleTester.run('react-prefer-private-members', rule, {
       }`,
       parser: babelParser,
     },
+    {
+      code: `class NormalClass {
+      constructor() {
+        class NestedReactComponentClass extends React.Component {
+          render() {}
+        }
+      }
+
+      get foo() {}
+    }`,
+      parser: babelParser,
+    },
   ],
   invalid: [
     {
@@ -136,6 +148,26 @@ ruleTester.run('react-prefer-private-members', rule, {
           type: 'MethodDefinition',
           memberName: 'publicMethod',
           componentName: 'PureButton',
+        }),
+      ],
+    },
+    {
+      code: `class NormalClass {
+      constructor() {
+        class NestedReactComponentClass extends React.Component {
+          publicMethod() {}
+          render() {}
+        }
+      }
+
+      get foo() {}
+    }`,
+      parser: babelParser,
+      errors: [
+        makeError({
+          type: 'MethodDefinition',
+          memberName: 'publicMethod',
+          componentName: 'NestedReactComponentClass',
         }),
       ],
     },
