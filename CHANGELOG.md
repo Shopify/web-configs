@@ -2,6 +2,10 @@
 
 <!-- ## Unreleased -->
 
+## 19.0.0 - 2019-05-06
+
+- Switched the default `useBuiltIns` option back to `entry`, since it has a smaller bundle impact on large applications
+
 ## 18.1.1 - 2019-05-03
 
 - `web` preset now accepts a `useBuiltIn` value (default = `usage`)

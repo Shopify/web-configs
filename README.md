@@ -68,9 +68,11 @@ This packages comes with several different presets for you to use, depending on 
 
     - `inlineEnv`, a boolean (defaults to `false`) to automatically replace `process.env.<VAR>` statements with the corresponding environment variable.
 
-    - `debug`, a boolean (defaults to `false`) to turn on [`babel-preset-env` debugging](https://github.com/babel/babel/tree/master/packages/babel-preset-env#debug).
+    - `debug`, a boolean (defaults to `false`) to turn on [`@babel/preset-env` debugging](https://github.com/babel/babel/tree/master/packages/babel-preset-env#debug).
 
     - `corejs`, a number of string that will be used to set the [`corejs` version to use](https://babeljs.io/blog/2019/03/19/7.4.0#core-js-3-7646-https-githubcom-babel-babel-pull-7646)
+
+    - `useBuiltIns`, a string that is passed to the [`useBuiltIns` option of `@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env#usebuiltins)
 
 - `babel-preset-shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules` and `inlineEnv` do the same thing they do in `babel-preset-shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 

@@ -6,7 +6,7 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
     corejs = 2,
     debug = false,
     browsers,
-    useBuiltIns = 'usage',
+    useBuiltIns = 'entry',
   } = options;
 
   return {
