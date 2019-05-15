@@ -142,7 +142,53 @@ ruleTester.run('no-vague-titles', rule, {
   ],
   invalid: [
     {
-      code: "it('properly should correcly appropriate all')",
+      code:
+        "it('properly should correcly appropriate all descriptive necessary')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "it('necessary')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "describe('necessary')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "test('necessary')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "fit('necessary')",
+      parser,
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "xdescribe('necessary')",
       parser,
       errors: [
         {
@@ -1446,6 +1492,30 @@ ruleTester.run('no-vague-titles with allow=descriptive', rule, {
     {
       code: "it('properly all should')",
       options: [{allow: ['descriptive', 'should']}],
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+  ],
+});
+
+ruleTester.run('no-vague-titles with allow=necessary', rule, {
+  valid: [
+    {
+      code: "it('necessary')",
+      options: [{allow: ['necessary']}],
+    },
+    {
+      code: "it('necessary all should')",
+      options: [{allow: ['necessary', 'should', 'all']}],
+    },
+  ],
+  invalid: [
+    {
+      code: "it('properly all should')",
+      options: [{allow: ['necessary', 'should']}],
       errors: [
         {
           messageId: 'containsVagueWord',
