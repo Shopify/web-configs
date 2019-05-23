@@ -1,7 +1,10 @@
 # Changelog
 
-## Unreleased
-- Added `@babel/plugin-proposal-optional-catch-binding` to `node` presets
+<!-- ## Unreleased -->
+
+## 19.0.1 - 2019-05-23
+
+- Added `@babel/plugin-proposal-optional-catch-binding` to `node` and `web` presets
 
 ## 19.0.0 - 2019-05-06
 
