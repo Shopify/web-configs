@@ -92,7 +92,7 @@
     "eslint-plugin-typescript": "0.12.0",
     "merge": "1.2.1",
     "pascal-case": "^2.0.1",
-    "pkg-dir": "4.1.0",
+    "pkg-dir": "4.2.0",
     "pluralize": "^8.0.0",
     "typescript-eslint-parser": "20.0.0"
   }
