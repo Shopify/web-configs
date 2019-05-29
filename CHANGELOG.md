@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+<!-- ## Unreleased -->
+
+## 19.1.0 - 2019-05-29
 
 - Added `typescript` option to node and web presets to allow babel to read typescript files when set to true.
 - Added `babel-plugin-dynamic-import-node` to the node preset
