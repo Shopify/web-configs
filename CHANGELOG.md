@@ -1,6 +1,8 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+- Removed `@babel/plugin-proposal-optional-catch-binding` because it is already handled by `@babel/preset-env` if you specify an environment where it is needed.
 
 ## 19.0.1 - 2019-05-23
 
