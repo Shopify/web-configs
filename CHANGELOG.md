@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added `typescript` option to node and web presets to allow babel to read typescript files when set to true.
+- Added `babel-plugin-dynamic-import-node` to the node preset
 - Removed `@babel/plugin-proposal-optional-catch-binding` because it is already handled by `@babel/preset-env` if you specify an environment where it is needed.
 
 ## 19.0.1 - 2019-05-23

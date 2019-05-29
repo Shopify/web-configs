@@ -7,20 +7,31 @@ module.exports = function shopifyNodePreset(_api, options = {}) {
     corejs = 2,
     debug = false,
     useBuiltIns = 'entry',
+    typescript = false,
   } = options;
 
-  return {
-    presets: [
-      [require.resolve('@babel/preset-env'), {
-        modules,
-        useBuiltIns,
-        corejs,
-        targets: {
-          node: version,
-        },
-        debug,
-      }],
-    ],
-    plugins: nonStandardPlugins(options),
-  };
+  const presets = [
+    [require.resolve('@babel/preset-env'), {
+      modules,
+      useBuiltIns,
+      corejs,
+      targets: {
+        node: version,
+      },
+      debug,
+    }],
+  ];
+
+  const plugins = [
+    ...nonStandardPlugins(options),
+    require.resolve('babel-plugin-dynamic-import-node'),
+  ];
+
+  if (typescript) {
+    presets.push(
+      require.resolve('@babel/preset-typescript'),
+    );
+  }
+
+  return {presets, plugins};
 };

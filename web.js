@@ -7,20 +7,30 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
     debug = false,
     browsers,
     useBuiltIns = 'entry',
+    typescript = false,
   } = options;
 
+  const presets = [
+    [require.resolve('@babel/preset-env'), {
+      modules,
+      useBuiltIns,
+      corejs,
+      targets: {
+        browsers,
+      },
+      debug,
+    }],
+  ];
+
+  if (typescript) {
+    presets.push(
+      require.resolve('@babel/preset-typescript'),
+    );
+  }
+
+
   return {
-    presets: [
-      [require.resolve('@babel/preset-env'), {
-        modules,
-        useBuiltIns,
-        corejs,
-        targets: {
-          browsers,
-        },
-        debug,
-      }],
-    ],
+    presets,
     plugins: nonStandardPlugins(options),
   };
 };
