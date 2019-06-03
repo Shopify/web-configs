@@ -24,7 +24,6 @@ module.exports = function shopifyNodePreset(_api, options = {}) {
 
   const plugins = [
     ...nonStandardPlugins(options),
-    require.resolve('babel-plugin-dynamic-import-node'),
   ];
 
   if (typescript) {
