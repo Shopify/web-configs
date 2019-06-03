@@ -2,6 +2,8 @@
 
 <!-- ## Unreleased -->
 
+- Add `babel-plugin-dynamic-import-node` to the node preset
+
 ## 19.1.1 - 2019-06-03
 
 - Revert Adding `babel-plugin-dynamic-import-node` to the node preset as this may be a breaking change in some circumstances
