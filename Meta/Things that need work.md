@@ -18,4 +18,3 @@ The guidance in this repo is far from perfect. There are many patterns that we c
 - Having no clear pattern for building Rails applications that can coexist with (and server render) our React applications.
 - The boilerplate for attaching translations to components using `@shopify/react-i18n`, particularly when using dynamic imports.
 - GraphQL mutations in general. Some specifically bad parts: having to write error-prone `update` functions, and the necessity to collocate them with any queries they may impact.
-- Our testing library of choice for React, Enzyme, has lagged behind in getting updates, and makes it easy to accomplish many kinds of tests we consider to be bad practices.
