@@ -76,6 +76,10 @@ ruleTester.run('no-if', rule, {
       `,
       parser,
     },
+    {
+      code: `const foo = bar ? foo : baz;`,
+      parser,
+    },
   ],
   invalid: [
     {
@@ -223,6 +227,47 @@ ruleTester.run('no-if', rule, {
       errors: [
         {
           messageId: 'noIf',
+        },
+      ],
+    },
+    {
+      code: `it('foo', () => {
+        const foo = bar ? foo : baz;
+      })
+      `,
+      parser,
+      errors: [
+        {
+          messageId: 'noConditional',
+        },
+      ],
+    },
+    {
+      code: `it('foo', () => {
+        const foo = bar ? foo : baz;
+      })
+      const foo = bar ? foo : baz;
+      `,
+      parser,
+      errors: [
+        {
+          messageId: 'noConditional',
+        },
+      ],
+    },
+    {
+      code: `it('foo', () => {
+        const foo = bar ? foo : baz;
+        const anotherFoo = anotherBar ? anotherFoo : anotherBaz;
+      })
+      `,
+      parser,
+      errors: [
+        {
+          messageId: 'noConditional',
+        },
+        {
+          messageId: 'noConditional',
         },
       ],
     },

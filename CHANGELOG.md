@@ -5,6 +5,7 @@
 ### Changed
 
 - added "necessary" to `shopify/jest/no-vague-titles` ([265](https://github.com/Shopify/eslint-plugin-shopify/pull/265))
+- `shopify/jest/no-if` now recognizes conditional statements ([298](https://github.com/Shopify/eslint-plugin-shopify/pull/298))
 
 ### Added
 
