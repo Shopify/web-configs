@@ -5,6 +5,7 @@ module.exports = {
     'images-no-direct-imports': require('./lib/rules/images-no-direct-imports'),
     'jest/no-if': require('./lib/rules/jest/no-if'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
+    'jest/no-try-expect': require('./lib/rules/jest/no-try-expect'),
     'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
     'jsx-no-complex-expressions': require('./lib/rules/jsx-no-complex-expressions'),
     'jsx-no-hardcoded-content': require('./lib/rules/jsx-no-hardcoded-content'),
