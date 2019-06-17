@@ -18,6 +18,7 @@
 
 ### Fixed
 
+- `shopify/jest/no-if` ignores if statements nested within block statements ([299](https://github.com/Shopify/eslint-plugin-shopify/pull/299))
 - `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. ([258](https://github.com/Shopify/eslint-plugin-shopify/pull/258))
 
 ## [28.0.0] - 2019-04-26

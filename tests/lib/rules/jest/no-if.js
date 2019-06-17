@@ -80,6 +80,67 @@ ruleTester.run('no-if', rule, {
       code: `const foo = bar ? foo : baz;`,
       parser,
     },
+    {
+      code: `
+      it('valid', () => {
+        const values = something.map((thing) => {
+          if (thing.isFoo) {
+            return thing.foo
+          } else {
+            return thing.bar;
+          }
+        });
+
+        expect(values).toStrictEqual(['foo']);
+      });
+      `,
+      parser,
+    },
+    {
+      code: `
+      describe('valid', () => {
+        it('still valid', () => {
+          const values = something.map((thing) => {
+            if (thing.isFoo) {
+              return thing.foo
+            } else {
+              return thing.bar;
+            }
+          });
+
+          expect(values).toStrictEqual(['foo']);
+        });
+      });
+      `,
+      parser,
+    },
+    {
+      code: `
+      describe('valid', () => {
+        describe('still valid', () => {
+          it('really still valid', () => {
+            const values = something.map((thing) => {
+              if (thing.isFoo) {
+                return thing.foo
+              } else {
+                return thing.bar;
+              }
+            });
+
+            expect(values).toStrictEqual(['foo']);
+          });
+        });
+      });
+      `,
+      parser,
+    },
+    {
+      code: `it('foo', () => {
+        const foo = bar(() => qux ? qux() : false);
+      });
+      `,
+      parser,
+    },
   ],
   invalid: [
     {
@@ -268,6 +329,33 @@ ruleTester.run('no-if', rule, {
         },
         {
           messageId: 'noConditional',
+        },
+      ],
+    },
+    {
+      code: `
+      describe('valid', () => {
+        describe('still valid', () => {
+          it('really still valid', () => {
+            const values = something.map((thing) => {
+              if (thing.isFoo) {
+                return thing.foo
+              } else {
+                return thing.bar;
+              }
+            });
+
+            if('invalid') {
+              expect(values).toStrictEqual(['foo']);
+            }
+          });
+        });
+      });
+      `,
+      parser,
+      errors: [
+        {
+          messageId: 'noIf',
         },
       ],
     },
