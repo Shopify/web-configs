@@ -2,6 +2,8 @@
 
 <!-- ## Unreleased -->
 
+## [29.0.0] - 2019-06-17
+
 ### Changed
 
 - added "necessary" to `shopify/jest/no-vague-titles` ([265](https://github.com/Shopify/eslint-plugin-shopify/pull/265))
