@@ -1,6 +1,11 @@
 # Changelog
 
 <!-- ## Unreleased -->
+## [29.0.1] - 2019-06-18
+
+### Changed
+
+- Removed `import/no-namespace` ([308](https://github.com/Shopify/eslint-plugin-shopify/pull/308))
 
 ## [29.0.0] - 2019-06-17
 
@@ -17,6 +22,7 @@
   - `node/prefer-promises/dns` and `node/prefer-promises/fs` These rules disallow the callback API in favor of promise API for the dns and fs modules. ([257](https://github.com/Shopify/eslint-plugin-shopify/pull/257))
   - `jest/no-mocks-import` This rule disallows manually importing from `__mocks__` ([246](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
   - `react/state-in-constructor` Enforce state initialization to be in a class property. ([256](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
+  - `import/no-namespace` Prevents namespace imports. ([305](https://github.com/Shopify/eslint-plugin-shopify/pull/305))
 
 ### Fixed
 
