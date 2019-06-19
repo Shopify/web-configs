@@ -66,6 +66,8 @@ This packages comes with several different presets for you to use, depending on 
       }
       ```
 
+    - `typescript`, a boolean (defaults to `false`) to turn on [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript) and  other plugins that allow babel to read typescript files directly.
+
     - `inlineEnv`, a boolean (defaults to `false`) to automatically replace `process.env.<VAR>` statements with the corresponding environment variable.
 
     - `debug`, a boolean (defaults to `false`) to turn on [`@babel/preset-env` debugging](https://github.com/babel/babel/tree/master/packages/babel-preset-env#debug).
@@ -74,7 +76,7 @@ This packages comes with several different presets for you to use, depending on 
 
     - `useBuiltIns`, a string that is passed to the [`useBuiltIns` option of `@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env#usebuiltins)
 
-- `babel-preset-shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules` and `inlineEnv` do the same thing they do in `babel-preset-shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
+- `babel-preset-shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules`, `typescript`, `inlineEnv`,`debug`, `corejs` and `useBuiltIns` options do the same thing they do in `babel-preset-shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 
   ```json
   {
