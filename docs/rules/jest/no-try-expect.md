@@ -1,4 +1,4 @@
-# Prevent catch assertions in tests. (jest/no-if)
+# Prevent catch assertions in tests. (jest/no-try-catch)
 This rule prevents the use of `expect` inside `catch` blocks.
 
 ## Rule Details
