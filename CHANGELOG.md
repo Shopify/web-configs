@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Changed
+
+- Enabled `typescript/interface-name-prefix` to prevent `I` prefixes in TypeScript interface names
 
 ## [29.0.2] - 2019-06-18
 
