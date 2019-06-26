@@ -44,6 +44,7 @@ module.exports = {
   // Specify a blacklist of disallowed property and value pairs within declarations.
   'declaration-property-value-blacklist': {
     '/^animation/': ['linear'],
+    display: ['table'],
   },
   // Specify a whitelist of allowed property and value pairs within declarations.
   'declaration-property-value-whitelist': {},
