@@ -12,10 +12,6 @@ $ yarn add @shopify/images
 
 ## API
 
-### `icon-loader.js`
-
-This package exports a loader that is intended to be used with Webpack. It processes icon files into objects that we can use to render our shared Icon component.
-
 ### `optimize.js`
 
 This package exports helpers for optimizing images. The following members are exported:
