@@ -6,8 +6,6 @@ describe('optimize()', () => {
   describe('svg', () => {
     it('removes all useless attributes', async () => {
       const content = await optimize(getFixture('basic'));
-      expect(content).not.toMatch(/width/);
-      expect(content).not.toMatch(/height/);
       expect(content).not.toMatch(/title/);
     });
   });
