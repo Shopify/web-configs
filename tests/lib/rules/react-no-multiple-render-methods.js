@@ -1,11 +1,9 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/react-no-multiple-render-methods');
 
-const ruleTester = new RuleTester();
-
-require('babel-eslint');
-
-const babelParser = 'babel-eslint';
+const ruleTester = new RuleTester({
+  parser: require.resolve('babel-eslint'),
+});
 
 function error(memberName) {
   return {
@@ -20,14 +18,12 @@ ruleTester.run('react-no-multiple-render-methods', rule, {
       code: `class Button extends React.Component {
         render() {}
       }`,
-      parser: babelParser,
     },
     {
       code: `class Button extends React.Component {
         otherMethod() {}
         render() {}
       }`,
-      parser: babelParser,
     },
   ],
   invalid: [
@@ -35,7 +31,6 @@ ruleTester.run('react-no-multiple-render-methods', rule, {
       code: `class Button extends React.Component {
         renderFoo() {}
       }`,
-      parser: babelParser,
       errors: [error('renderFoo')],
     },
     {
@@ -43,7 +38,6 @@ ruleTester.run('react-no-multiple-render-methods', rule, {
         renderFoo() {}
         render() {}
       }`,
-      parser: babelParser,
       errors: [error('renderFoo')],
     },
     {
@@ -52,7 +46,6 @@ ruleTester.run('react-no-multiple-render-methods', rule, {
         renderBar() {}
         render() {}
       }`,
-      parser: babelParser,
       errors: [error('renderFoo'), error('renderBar')],
     },
   ],

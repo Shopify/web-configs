@@ -4,6 +4,7 @@
 
 ### Changed
 
+- [Major] Updated to eslint v6, enabled `no-console` and enabled `no-async-promise-executor` ([330](https://github.com/Shopify/eslint-plugin-shopify/pull/330))
 - Enabled `typescript/interface-name-prefix` to prevent `I` prefixes in TypeScript interface names
 
 ## [29.0.2] - 2019-06-18

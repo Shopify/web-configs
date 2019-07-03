@@ -1,9 +1,9 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../../lib/rules/jest/no-if');
-require('babel-eslint');
 
-const parser = 'babel-eslint';
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({
+  parser: require.resolve('babel-eslint'),
+});
 
 ruleTester.run('no-if', rule, {
   valid: [
@@ -12,43 +12,36 @@ ruleTester.run('no-if', rule, {
     },
     {
       code: `it('foo', () => {})`,
-      parser,
     },
     {
       code: `foo('bar', () => {
         if(baz) {}
       })`,
-      parser,
     },
     {
       code: `describe('foo', () => {
         if('bar') {}
       })`,
-      parser,
     },
     {
       code: `describe.skip('foo', () => {
         if('bar') {}
       })`,
-      parser,
     },
     {
       code: `describe('foo', () => {
         if('bar') {}
       })`,
-      parser,
     },
     {
       code: `xdescribe('foo', () => {
         if('bar') {}
       })`,
-      parser,
     },
     {
       code: `fdescribe('foo', () => {
         if('bar') {}
       })`,
-      parser,
     },
     {
       code: `describe('foo', () => {
@@ -56,7 +49,6 @@ ruleTester.run('no-if', rule, {
       })
       if('baz') {}
       `,
-      parser,
     },
     {
       code: `describe('foo', () => {
@@ -65,7 +57,6 @@ ruleTester.run('no-if', rule, {
           });
         })
       `,
-      parser,
     },
     {
       code: `describe('foo', () => {
@@ -74,11 +65,9 @@ ruleTester.run('no-if', rule, {
           });
         })
       `,
-      parser,
     },
     {
       code: `const foo = bar ? foo : baz;`,
-      parser,
     },
     {
       code: `
@@ -94,7 +83,6 @@ ruleTester.run('no-if', rule, {
         expect(values).toStrictEqual(['foo']);
       });
       `,
-      parser,
     },
     {
       code: `
@@ -112,7 +100,6 @@ ruleTester.run('no-if', rule, {
         });
       });
       `,
-      parser,
     },
     {
       code: `
@@ -132,14 +119,12 @@ ruleTester.run('no-if', rule, {
         });
       });
       `,
-      parser,
     },
     {
       code: `it('foo', () => {
         const foo = bar(() => qux ? qux() : false);
       });
       `,
-      parser,
     },
   ],
   invalid: [
@@ -147,7 +132,6 @@ ruleTester.run('no-if', rule, {
       code: `it('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -158,7 +142,6 @@ ruleTester.run('no-if', rule, {
       code: `it.skip('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -169,7 +152,6 @@ ruleTester.run('no-if', rule, {
       code: `it.only('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -180,7 +162,6 @@ ruleTester.run('no-if', rule, {
       code: `xit('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -191,7 +172,6 @@ ruleTester.run('no-if', rule, {
       code: `fit('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -202,7 +182,6 @@ ruleTester.run('no-if', rule, {
       code: `test('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -213,7 +192,6 @@ ruleTester.run('no-if', rule, {
       code: `test.skip('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -224,7 +202,6 @@ ruleTester.run('no-if', rule, {
       code: `test.only('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -235,7 +212,6 @@ ruleTester.run('no-if', rule, {
       code: `xtest('foo', () => {
         if('bar') {}
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -248,7 +224,6 @@ ruleTester.run('no-if', rule, {
           if('bar') {}
         })
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -265,7 +240,6 @@ ruleTester.run('no-if', rule, {
           if('quux') {}
         })
       })`,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -284,7 +258,6 @@ ruleTester.run('no-if', rule, {
         if ('bar') {}
       })
       `,
-      parser,
       errors: [
         {
           messageId: 'noIf',
@@ -296,7 +269,6 @@ ruleTester.run('no-if', rule, {
         const foo = bar ? foo : baz;
       })
       `,
-      parser,
       errors: [
         {
           messageId: 'noConditional',
@@ -309,7 +281,6 @@ ruleTester.run('no-if', rule, {
       })
       const foo = bar ? foo : baz;
       `,
-      parser,
       errors: [
         {
           messageId: 'noConditional',
@@ -322,7 +293,6 @@ ruleTester.run('no-if', rule, {
         const anotherFoo = anotherBar ? anotherFoo : anotherBaz;
       })
       `,
-      parser,
       errors: [
         {
           messageId: 'noConditional',
@@ -352,7 +322,6 @@ ruleTester.run('no-if', rule, {
         });
       });
       `,
-      parser,
       errors: [
         {
           messageId: 'noIf',

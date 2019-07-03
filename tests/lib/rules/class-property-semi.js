@@ -1,9 +1,9 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/class-property-semi');
 
-const ruleTester = new RuleTester();
-
-require('babel-eslint');
+const ruleTester = new RuleTester({
+  parser: require.resolve('babel-eslint'),
+});
 
 const classPropNoSemi = 'class Foo { bar = 1 }';
 const classPropWithSemi = 'class Foo { bar = 1; }';
@@ -13,22 +13,20 @@ const classMethod = 'class Foo { bar() {} }';
 
 ruleTester.run('class-property-semi', rule, {
   valid: [
-    {code: classPropWithSemi, parser: 'babel-eslint'},
-    {code: classPropWithSemi, parser: 'babel-eslint', options: ['always']},
-    {code: classPropNoSemi, parser: 'babel-eslint', options: ['never']},
-    {code: classStaticPropWithSemi, parser: 'babel-eslint'},
+    {code: classPropWithSemi},
+    {code: classPropWithSemi, options: ['always']},
+    {code: classPropNoSemi, options: ['never']},
+    {code: classStaticPropWithSemi},
     {
       code: classStaticPropWithSemi,
-      parser: 'babel-eslint',
       options: ['always'],
     },
-    {code: classStaticPropNoSemi, parser: 'babel-eslint', options: ['never']},
+    {code: classStaticPropNoSemi, options: ['never']},
     {code: classMethod, parserOptions: {ecmaVersion: 6}},
   ],
   invalid: [
     {
       code: classPropNoSemi,
-      parser: 'babel-eslint',
       errors: [
         {
           message: 'Missing semicolon.',
@@ -38,7 +36,6 @@ ruleTester.run('class-property-semi', rule, {
     },
     {
       code: classPropNoSemi,
-      parser: 'babel-eslint',
       options: ['always'],
       errors: [
         {
@@ -49,7 +46,6 @@ ruleTester.run('class-property-semi', rule, {
     },
     {
       code: classPropWithSemi,
-      parser: 'babel-eslint',
       options: ['never'],
       errors: [
         {
@@ -60,7 +56,6 @@ ruleTester.run('class-property-semi', rule, {
     },
     {
       code: classStaticPropNoSemi,
-      parser: 'babel-eslint',
       errors: [
         {
           message: 'Missing semicolon.',
@@ -70,7 +65,6 @@ ruleTester.run('class-property-semi', rule, {
     },
     {
       code: classStaticPropNoSemi,
-      parser: 'babel-eslint',
       options: ['always'],
       errors: [
         {
@@ -81,7 +75,6 @@ ruleTester.run('class-property-semi', rule, {
     },
     {
       code: classStaticPropWithSemi,
-      parser: 'babel-eslint',
       options: ['never'],
       errors: [
         {

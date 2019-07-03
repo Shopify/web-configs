@@ -1,13 +1,11 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/react-prefer-private-members');
 
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({
+  parser: require.resolve('typescript-eslint-parser'),
+});
 
-require('babel-eslint');
-require('typescript-eslint-parser');
-
-const babelParser = 'babel-eslint';
-const typeScriptParser = 'typescript-eslint-parser';
+const babelParser = require.resolve('babel-eslint');
 
 function makeError({type = 'ClassProperty', memberName, componentName}) {
   return {
@@ -23,7 +21,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         private member = true;
         componentDidMount() {}
       }`,
-      parser: typeScriptParser,
     },
     {
       code: `class Button extends Klass {
@@ -113,7 +110,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         alsoInvalid() {}
         render() {}
       }`,
-      parser: typeScriptParser,
       errors: [
         makeError({memberName: 'inValid', componentName: 'Button'}),
         makeError({

@@ -1,9 +1,9 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../../lib/rules/jest/no-try-expect');
-require('babel-eslint');
 
-const parser = 'babel-eslint';
-const ruleTester = new RuleTester();
+const ruleTester = new RuleTester({
+  parser: require.resolve('babel-eslint'),
+});
 
 ruleTester.run('no-try-expect', rule, {
   valid: [
@@ -11,7 +11,6 @@ ruleTester.run('no-try-expect', rule, {
       code: `it('foo', () => {
         expect('foo').toEqual('foo');
       })`,
-      parser,
     },
     {
       code: `
@@ -23,7 +22,6 @@ ruleTester.run('no-try-expect', rule, {
         } catch {
           expect('foo').toEqual('foo');
         }`,
-      parser,
     },
     {
       code: `
@@ -33,7 +31,6 @@ ruleTester.run('no-try-expect', rule, {
         } catch {
           expect('foo').toEqual('foo');
         }`,
-      parser,
     },
   ],
   invalid: [
@@ -45,7 +42,6 @@ ruleTester.run('no-try-expect', rule, {
           expect(err).toMatch('Error');
         }
       })`,
-      parser,
       errors: [
         {
           messageId: 'noTryExpect',
@@ -62,7 +58,6 @@ ruleTester.run('no-try-expect', rule, {
           }
         })
       })`,
-      parser,
       errors: [
         {
           messageId: 'noTryExpect',

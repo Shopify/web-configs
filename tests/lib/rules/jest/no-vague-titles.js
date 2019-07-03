@@ -1,150 +1,112 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../../lib/rules/jest/no-vague-titles');
 
-const ruleTester = new RuleTester();
-
-require('babel-eslint');
-require('typescript-eslint-parser');
-
-const typeScriptParser = 'typescript-eslint-parser';
-const parser = 'babel-eslint';
+const ruleTester = new RuleTester({parser: require.resolve('babel-eslint')});
 
 ruleTester.run('no-vague-titles', rule, {
   valid: [
     {
       code: `it()`,
-      parser,
     },
     {
       code: `it('')`,
-      parser,
     },
     {
       code: `it('foo bar baz')`,
-      parser,
     },
     {
       code: `xit('foo bar baz')`,
-      parser,
     },
     {
       code: `it.only('foo bar baz')`,
-      parser,
     },
     {
       code: `describe('foo bar baz')`,
-      parser,
     },
     {
       code: `describe('closing foo does not call bar')`,
-      parser,
     },
     {
       code: `xdescribe('foo bar baz')`,
-      parser,
     },
     {
       code: `describe.only('foo bar baz')`,
-      parser,
     },
     {
       code: `test('foo bar baz')`,
-      parser,
     },
     {
       code: `xtest('foo bar baz')`,
-      parser,
     },
     {
       code: `test.only('foo bar baz')`,
-      parser,
     },
     {
       code: `someFunction('correct')`,
-      parser,
     },
     {
       code: `someFunction('incorrect')`,
-      parser,
     },
     {
       code: `someFunction('correctly')`,
-      parser,
     },
     {
       code: `someFunction('incorrectly')`,
-      parser,
     },
     {
       code: `someFunction('Correct')`,
-      parser,
     },
     {
       code: `someFunction('appropriate')`,
-      parser,
     },
     {
       code: `someFunction('inappropriate')`,
-      parser,
     },
     {
       code: `someFunction('Appropriate')`,
-      parser,
     },
     {
       code: `someFunction('appropriately')`,
-      parser,
     },
     {
       code: `someFunction.only('correct')`,
-      parser,
     },
     {
       code: `someFunction('Includes all the expected things')`,
-      parser,
     },
     {
       code: `someFunction('All the expected things are included')`,
-      parser,
     },
     {
       code: `someFunction.only('Includes all the expected things')`,
-      parser,
     },
     {
       code: `(() => {})()`,
-      parser,
     },
     {
       code: "it('onAllImagesUploaded')",
-      parser,
     },
     {
       code: `test.each([['production'], ['staging']])('Includes things for %s clients')`,
-      parser,
     },
     {
       code: `import('./foo')`,
-      parser,
     },
     {
       code: 'foo(bar)()',
-      parser,
     },
     {
       code: 'class Foo { constructor() { super(); } }',
-      parser,
     },
     {
       code: '(Foo as Function)();',
-      parser: typeScriptParser,
+      parser: require.resolve('typescript-eslint-parser'),
     },
   ],
   invalid: [
     {
       code:
         "it('properly should correcly appropriate all descriptive necessary')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -153,7 +115,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('necessary')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -162,7 +123,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('necessary')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -171,7 +131,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('necessary')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -180,7 +139,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('necessary')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -189,7 +147,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('necessary')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -198,7 +155,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('properly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -207,7 +163,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('properly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -216,7 +171,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('properly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -225,7 +179,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('properly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -234,7 +187,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('properly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -243,7 +195,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('should')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -252,7 +203,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('should')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -261,7 +211,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('should')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -270,7 +219,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('should')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -279,7 +227,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('should')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -288,7 +235,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('descriptive')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -297,7 +243,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('descriptive')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -306,7 +251,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('descriptive')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -315,7 +259,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('descriptive')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -324,7 +267,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('descriptive')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -333,7 +275,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('every')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -342,7 +283,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('every')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -351,7 +291,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('every')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -360,7 +299,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('every')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -369,7 +307,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('every')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -378,7 +315,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -387,7 +323,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -396,7 +331,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -405,7 +339,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -414,7 +347,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -423,7 +355,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -432,7 +363,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -441,7 +371,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('All the expected things are included')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -450,7 +379,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -459,7 +387,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -468,7 +395,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -477,7 +403,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -486,7 +411,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -495,7 +419,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -504,7 +427,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -513,7 +435,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -522,7 +443,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -531,7 +451,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -541,7 +460,6 @@ ruleTester.run('no-vague-titles', rule, {
 
     {
       code: "describe.only('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -551,7 +469,6 @@ ruleTester.run('no-vague-titles', rule, {
 
     {
       code: "describe.only('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -560,7 +477,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe.only('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -569,7 +485,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe.only('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -578,7 +493,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe.only('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -587,7 +501,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -596,7 +509,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -605,7 +517,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -614,7 +525,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -624,7 +534,6 @@ ruleTester.run('no-vague-titles', rule, {
 
     {
       code: "xtest('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -633,7 +542,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -642,7 +550,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -651,7 +558,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -660,7 +566,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -669,7 +574,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test.only('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -678,7 +582,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test.only('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -687,7 +590,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test.only('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -696,7 +598,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test.only('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -705,7 +606,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -714,7 +614,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -723,7 +622,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -732,7 +630,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -741,7 +638,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -750,7 +646,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -759,7 +654,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -768,7 +662,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -777,7 +670,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -786,7 +678,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -795,7 +686,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -804,7 +694,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -813,7 +702,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "fit('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -822,7 +710,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -831,7 +718,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -840,7 +726,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -849,7 +734,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -858,7 +742,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -867,7 +750,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -876,7 +758,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -885,7 +766,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -894,7 +774,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -903,7 +782,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -912,7 +790,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -921,7 +798,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -930,7 +806,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -939,7 +814,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -948,7 +822,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -957,7 +830,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `test.each([['production'], ['staging']])('all correct for %s')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -966,7 +838,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -975,7 +846,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -984,7 +854,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('appropriately')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -993,7 +862,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('inappropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1002,7 +870,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xtest('Appropriate')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1011,7 +878,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `xtest.each([['production'], ['staging']])('all correct for %s')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1020,7 +886,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1029,7 +894,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('All the expected things are included')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1038,7 +902,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it.only('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1047,7 +910,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it.only('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1056,7 +918,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it.only('correctly')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1065,7 +926,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it.only('incorrect')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1074,7 +934,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it.only('Correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1083,7 +942,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it.only('All the expected things are included')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1092,7 +950,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `it.each([['production'], ['staging']])('all correct for %s')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1101,7 +958,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('correct')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1110,7 +966,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xit('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1119,7 +974,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `xit.each([['production'], ['staging']])('all correct for %s')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1128,7 +982,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe('All the expected things are included')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1137,7 +990,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "xdescribe('All the expected things are included')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1146,7 +998,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `xdescribe.each([['production'], ['staging']])('all correct for %s')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1155,7 +1006,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "describe.only('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1164,7 +1014,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `describe.each([['production'], ['staging']])('all correct for %s')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1173,7 +1022,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test('All the expected things are included')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1182,7 +1030,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "test.only('Includes all the expected things')",
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -1191,7 +1038,6 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: `test.each([['production'], ['staging']])('Includes all things for %s clients')`,
-      parser,
       errors: [
         {
           messageId: 'containsVagueWord',

@@ -1,11 +1,9 @@
 const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/react-type-state');
 
-const ruleTester = new RuleTester();
-
-require('typescript-eslint-parser');
-
-const parser = 'typescript-eslint-parser';
+const ruleTester = new RuleTester({
+  parser: require.resolve('typescript-eslint-parser'),
+});
 
 const errors = [
   {
@@ -19,31 +17,25 @@ ruleTester.run('react-type-state', rule, {
   valid: [
     {
       code: 'class Button {}',
-      parser,
     },
     {
       code: 'class Button<Props, State> {}',
-      parser,
     },
     {
       code: 'class Button extends React.Component<Props, State> {}',
-      parser,
     },
     {
       code: 'class Button extends React.PureComponent<Props, State> {}',
-      parser,
     },
     {
       code: `class Button extends React.Component<Props, State> {
         state: State = {};
       }`,
-      parser,
     },
     {
       code: `class Button extends React.PureComponent<Props, State> {
         state: State = {};
       }`,
-      parser,
     },
   ],
   invalid: [
@@ -52,14 +44,12 @@ ruleTester.run('react-type-state', rule, {
         state = {};
       }`,
       errors,
-      parser,
     },
     {
       code: `class Button extends React.PureComponent<Props, State> {
         state = {};
       }`,
       errors,
-      parser,
     },
   ],
 });

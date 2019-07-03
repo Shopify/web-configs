@@ -2,11 +2,7 @@ const {RuleTester} = require('eslint');
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/jsx-no-hardcoded-content');
 
-const ruleTester = new RuleTester();
-
-require('babel-eslint');
-
-const parser = 'babel-eslint';
+const ruleTester = new RuleTester({parser: require.resolve('babel-eslint')});
 
 function errorsFor(component, prop) {
   const message =
@@ -23,113 +19,94 @@ const checkProps = {checkProps: ['foo']};
 
 ruleTester.run('jsx-no-hardcoded-content', rule, {
   valid: [
-    {code: '<div />', parser},
-    {code: '<div aria-label={someVariable} />', parser},
-    {code: '<div title={someVariable} />', parser},
-    {code: '<img alt={someVariable} />', parser},
-    {code: '<input placeholder={someVariable} />', parser},
+    {code: '<div />'},
+    {code: '<div aria-label={someVariable} />'},
+    {code: '<div title={someVariable} />'},
+    {code: '<img alt={someVariable} />'},
+    {code: '<input placeholder={someVariable} />'},
     {
       code: `<div>
         <div />
       </div>`,
-      parser,
     },
-    {code: '<MyComponent />', parser},
+    {code: '<MyComponent />'},
     {
       code: `<MyComponent>
         <div />
       </MyComponent>`,
-      parser,
     },
-    {code: '<MyComponent>{true}</MyComponent>', parser},
-    {code: '<MyComponent>{2}</MyComponent>', parser},
-    {code: '<MyComponent>{true}</MyComponent>', parser},
+    {code: '<MyComponent>{true}</MyComponent>'},
+    {code: '<MyComponent>{2}</MyComponent>'},
+    {code: '<MyComponent>{true}</MyComponent>'},
     {
       code: '<MyComponent>Content</MyComponent>',
-      parser,
       options: [allowStrings],
     },
     {
       code: '<MyComponent>{"Content"}</MyComponent>',
-      parser,
       options: [allowStrings],
     },
-    {code: '<MyComponent>{someVariable}</MyComponent>', parser},
-    {code: '<MyComponent>{someFunction()}</MyComponent>', parser},
-    {code: '<MyComponent>{this.someMethod()}</MyComponent>', parser},
+    {code: '<MyComponent>{someVariable}</MyComponent>'},
+    {code: '<MyComponent>{someFunction()}</MyComponent>'},
+    {code: '<MyComponent>{this.someMethod()}</MyComponent>'},
     {
       code: '<MyComponent>{someVariable} Content</MyComponent>',
-      parser,
       options: [allowStrings],
     },
     {
       code: '<MyComponent>{someFunction()}{" Content"}</MyComponent>',
-      parser,
       options: [allowStrings],
     },
     {
       code: '<MyComponent>{someFunction()}{` Content`}</MyComponent>',
-      parser,
       options: [allowStrings],
     },
     {
       code: '<MyComponent>{someFunction()}{" Content"}</MyComponent>',
-      parser,
       options: [{...allowStrings, ...disallowNumbers}],
     },
     {
       code: '<MyComponent foo />',
-      parser,
       options: [checkProps],
     },
     {
       code: '<MyComponent foo={false} />',
-      parser,
       options: [checkProps],
     },
     {
       code: '<MyComponent foo={42} />',
-      parser,
       options: [checkProps],
     },
     {
       code: '<MyComponent foo={someFunction()} />',
-      parser,
       options: [checkProps],
     },
     {
       code: '<MyComponent foo={someVariable} />',
-      parser,
       options: [checkProps],
     },
     {
       code: '<MyComponent foo="bar" />',
-      parser,
       options: [{...checkProps, ...allowStrings}],
     },
     {
       code: '<MyComponent foo={"bar"} />',
-      parser,
       options: [{...checkProps, ...allowStrings}],
     },
     {
       code: "<MyComponent foo={'bar'} />",
-      parser,
       options: [{...checkProps, ...allowStrings}],
     },
     {
       code: '<MyComponent foo={`bar`} />',
-      parser,
       options: [{...checkProps, ...allowStrings}],
     },
     {
       code: '<MyComponent foo={`bar`} />',
-      parser,
       options: [{...checkProps, ...allowStrings}],
     },
     {
       code: '<MyComponent>{42}</MyComponent>',
-      parser,
       options: [
         {
           modules: {
@@ -143,7 +120,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'other-module';
         <MyComponent>{42}</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -158,7 +134,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'my-module';
         <MyComponent>{42}</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -170,7 +145,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {
       code: '<MyComponent foo="bar" />',
-      parser,
       options: [
         {
           modules: {
@@ -184,7 +158,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'other-module';
         <MyComponent foo="bar" />
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -199,7 +172,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'my-module';
         <MyComponent foo="bar" />
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -214,7 +186,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'my-module';
         <MyComponent>Content</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -229,7 +200,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent as Aliased} from 'my-module';
         <Aliased>Content</Aliased>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -245,7 +215,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         function MyComponent() {}
         <MyComponent>{42}</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -261,7 +230,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       settings: {
         'import/resolver': {
           node: {
@@ -283,7 +251,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -298,7 +265,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -315,7 +281,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -332,7 +297,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -349,7 +313,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <Polaris.MyComponent>Content</Polaris.MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -366,7 +329,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -383,7 +345,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -398,27 +359,22 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
   invalid: [
     {
       code: '<div aria-label="Content" />',
-      parser,
       errors: errorsFor('div', 'aria-label'),
     },
     {
       code: '<div title="Content" />',
-      parser,
       errors: errorsFor('div', 'title'),
     },
     {
       code: '<img alt="Content" />',
-      parser,
       errors: errorsFor('img', 'alt'),
     },
     {
       code: '<input placeholder="Content" />',
-      parser,
       errors: errorsFor('input', 'placeholder'),
     },
     {
       code: '<my-element placeholder="Content" />',
-      parser,
       errors: errorsFor('my-element', 'placeholder'),
       options: [
         {
@@ -432,62 +388,51 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {
       code: '<MyComponent>Content</MyComponent>',
-      parser,
       errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: '<MyComponent>{"Content"}</MyComponent>',
-      parser,
       errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: '<MyComponent>{`Content`}</MyComponent>',
-      parser,
       errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: '<MyComponent>{someFunction()} Content</MyComponent>',
-      parser,
       errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: '<MyComponent>{someFunction()}{" Content"}</MyComponent>',
-      parser,
       errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: '<MyComponent>{3}</MyComponent>',
-      parser,
       options: [disallowNumbers],
       errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: '<MyComponent foo={42} />',
-      parser,
       options: [{...checkProps, ...disallowNumbers}],
       errors: errorsFor('MyComponent', 'foo'),
     },
     {
       code: '<MyComponent foo="bar" />',
-      parser,
       options: [checkProps],
       errors: errorsFor('MyComponent', 'foo'),
     },
     {
       code: '<MyComponent foo={"bar"} />',
-      parser,
       options: [checkProps],
       errors: errorsFor('MyComponent', 'foo'),
     },
     {
       code: "<MyComponent foo={'bar'} />",
-      parser,
       options: [checkProps],
       errors: errorsFor('MyComponent', 'foo'),
     },
     {
       code: '<MyComponent foo={`bar`} />',
-      parser,
       options: [checkProps],
       errors: errorsFor('MyComponent', 'foo'),
     },
@@ -496,7 +441,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'my-module';
         <MyComponent>Content</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -512,7 +456,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent} from 'my-module';
         <MyComponent>Content</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -529,7 +472,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         import {MyComponent as Aliased} from 'my-module';
         <Aliased>Content</Aliased>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -546,7 +488,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         function MyComponent() {}
         <MyComponent>Content</MyComponent>
       `,
-      parser,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
       options: [
         {
@@ -563,7 +504,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -581,7 +521,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -599,7 +538,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>Content</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -617,7 +555,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>{42}</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -635,7 +572,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent>{42}</MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -653,7 +589,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <Polaris.MyComponent>Content</Polaris.MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -671,7 +606,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <Polaris.MyComponent>{42}</Polaris.MyComponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -689,7 +623,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent.Subcomponent>{42}</MyComponent.Subcomponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -707,7 +640,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -725,7 +657,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent.Subcomponent>{42}</MyComponent.Subcomponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
@@ -743,7 +674,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
         <MyComponent.Subcomponent>Content</MyComponent.Subcomponent>
       `,
       filename: fixtureFile('basic-app/app/sections/MySection/MySection.js'),
-      parser,
       options: [
         {
           modules: {
