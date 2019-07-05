@@ -3,9 +3,11 @@
 ## Unreleased
 
 ### Changed
-
 - [Major] Updated to eslint v6, enabled `no-console` and enabled `no-async-promise-executor` ([330](https://github.com/Shopify/eslint-plugin-shopify/pull/330))
 - Enabled `typescript/interface-name-prefix` to prevent `I` prefixes in TypeScript interface names
+
+### Fixed
+- [Patch] Fix `jest/no-if` from falsely reporting if statements inside of functions ([331](https://github.com/Shopify/eslint-plugin-shopify/pull/331))
 
 ## [29.0.2] - 2019-06-18
 

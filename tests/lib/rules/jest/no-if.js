@@ -126,6 +126,49 @@ ruleTester.run('no-if', rule, {
       });
       `,
     },
+    {
+      code: `it('foo', () => {
+        const foo = bar => {
+          return foo ? bar : null;
+        };
+      });`,
+    },
+    {
+      code: `it('foo', () => {
+        const foo = function(bar) {
+          return foo ? bar : null;
+        };
+      });`,
+    },
+    {
+      code: `it('foo', () => {
+        const foo = function(bar) {
+          if (bar) {
+            return 1;
+          } else {
+            return 2;
+          }
+        };
+      });`,
+    },
+    {
+      code: `it('foo', () => {
+        function foo(bar) {
+          return foo ? bar : null;
+        };
+      });`,
+    },
+    {
+      code: `it('foo', () => {
+        function foo(bar) {
+          if (bar) {
+            return 1;
+          } else {
+            return 2;
+          }
+        };
+      });`,
+    },
   ],
   invalid: [
     {
