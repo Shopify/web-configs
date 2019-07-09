@@ -211,7 +211,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {
       code: `
-        import {MyComponent} from 'my-module';
         function MyComponent() {}
         <MyComponent>{42}</MyComponent>
       `,
@@ -484,7 +483,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {
       code: `
-        import {MyComponent} from 'my-module';
         function MyComponent() {}
         <MyComponent>Content</MyComponent>
       `,
