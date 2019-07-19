@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
-    "@babel/register": "7.4.4",
+    "@babel/register": "7.5.5",
     "@babel/runtime-corejs2": "^7.4.3",
     "babel-preset-shopify": "^20.0.0",
     "chai": "^4.2.0",
