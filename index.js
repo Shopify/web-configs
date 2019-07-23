@@ -4,7 +4,6 @@ module.exports = {
     'class-property-semi': require('./lib/rules/class-property-semi'),
     'images-no-direct-imports': require('./lib/rules/images-no-direct-imports'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
-    'jest/no-try-expect': require('./lib/rules/jest/no-try-expect'),
     'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
     'jsx-no-complex-expressions': require('./lib/rules/jsx-no-complex-expressions'),
     'jsx-no-hardcoded-content': require('./lib/rules/jsx-no-hardcoded-content'),

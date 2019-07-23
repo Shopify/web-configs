@@ -3,6 +3,8 @@
 ## Unreleased
 
 ### Changed
+- Enabled `jest/no-export` rule ([344](https://github.com/Shopify/eslint-plugin-shopify/pull/344)) 
+- [Major] depreciated `shopify/jest/no-try-expect` in favour of [`jest/no-try-expect`](https://github.com/jest-community/eslint-plugin-jest/pull/) ([331](https://github.com/jest-community/eslint-plugin-jest/pull/331))
 - [Major] depreciated `shopify/jest/no-if` in favour of [`jest/no-if`](https://github.com/jest-community/eslint-plugin-jest/pull/293) ([347](https://github.com/Shopify/eslint-plugin-shopify/pull/347))
 - [Major] Updated to eslint v6, enabled `no-console` and enabled `no-async-promise-executor` ([330](https://github.com/Shopify/eslint-plugin-shopify/pull/330))
 - Enabled `typescript/interface-name-prefix` to prevent `I` prefixes in TypeScript interface names
