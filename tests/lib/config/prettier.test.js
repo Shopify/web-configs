@@ -1,6 +1,3 @@
-/* eslint-env node, mocha */
-
-import {expect} from 'chai';
 import {configFile, execESLint, fixtureFile} from '../../utilities';
 
 describe('config', () => {
@@ -10,8 +7,8 @@ describe('config', () => {
         execESLint(
           `--config ${configFile('prettier')} ${fixtureFile('prettier')}`,
         ),
-      ).to.match(/Replace .*"bar".* with .*'bar'/);
-    }).timeout(8000);
+      ).toMatch(/Replace .*"bar".* with .*'bar'/);
+    }, 8000);
 
     it('validates TypeScript source files using prettier', () => {
       expect(
@@ -20,8 +17,8 @@ describe('config', () => {
             'prettier-typescript/.eslintrc.js',
           )} ${fixtureFile('prettier-typescript')}`,
         ),
-      ).to.match(/Replace .*"bar".* with .*'bar'/);
-    }).timeout(8000);
+      ).toMatch(/Replace .*"bar".* with .*'bar'/);
+    }, 8000);
 
     it('does not generate prettier errors in graphql files', () => {
       expect(
@@ -30,8 +27,8 @@ describe('config', () => {
             'prettier-graphql/.eslintrc.js',
           )}" "${fixtureFile('prettier-graphql')}"`,
         ),
-      ).to.eq('');
-    }).timeout(8000);
+      ).toBe('');
+    }, 8000);
 
     it('uses .prettierrc as the source of prettier rules', () => {
       expect(
@@ -40,8 +37,8 @@ describe('config', () => {
             'prettier-config',
           )}`,
         ),
-      ).to.match(/Delete .;./);
-    }).timeout(8000);
+      ).toMatch(/Delete .;./);
+    }, 8000);
 
     it('uses .prettierrc as the source of prettier rules for TypeScript', () => {
       expect(
@@ -50,7 +47,7 @@ describe('config', () => {
             'prettier-typescript/.eslintrc.js',
           )} ${fixtureFile('prettier-config')}`,
         ),
-      ).to.match(/Delete .;./);
-    }).timeout(8000);
+      ).toMatch(/Delete .;./);
+    }, 8000);
   });
 });

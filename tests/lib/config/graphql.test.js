@@ -1,6 +1,3 @@
-/* eslint-env node, mocha */
-
-import {expect} from 'chai';
 import {configFile, execESLint, fixtureFile} from '../../utilities';
 
 describe('config', () => {
@@ -12,8 +9,8 @@ describe('config', () => {
             'graphql',
           )}" "${fixtureFile('graphql-lint-error')}"`,
         ),
-      ).to.match(/Cannot query field .*DOES_NOT_EXIST/);
-    }).timeout(8000);
+      ).toMatch(/Cannot query field .*DOES_NOT_EXIST/);
+    }, 8000);
 
     it('validates .graphql file syntax using graphql plugin', () => {
       expect(
@@ -22,7 +19,7 @@ describe('config', () => {
             'graphql',
           )}" "${fixtureFile('graphql-syntax-error')}"`,
         ),
-      ).to.match(/Syntax Error.+Expected Name/);
-    }).timeout(8000);
+      ).toMatch(/Syntax Error.+Expected Name/);
+    }, 8000);
   });
 });
