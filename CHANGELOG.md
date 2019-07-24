@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## [30.0.1] - 2019-06-24
+
+- bump eslint peer depndency to 6
+
 ## [30.0.0] - 2019-06-24
 
 ### Changed
