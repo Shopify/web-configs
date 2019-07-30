@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+# New Rules
+
+- `jest/no-standalone-expect` Prevents `expect` statements outside of a `test` or `it` block ([368](https://github.com/Shopify/eslint-plugin-shopify/pull/368))
+
 ## [30.0.1] - 2019-06-24
 
 - bump eslint peer depndency to 6
