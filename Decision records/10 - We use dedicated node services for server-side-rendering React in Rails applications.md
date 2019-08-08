@@ -21,19 +21,19 @@ We use a node server living in the same repository but deployed as a separate se
 
 SSR is further complicated by the need to have the client side app rehydrate using the same state as the server render. This is usually accomplished with serialization of state on the server and deserialization of state in the client entry point. In our projects we have historically used [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html) for managing serializations to good effect, so support for the patterns it uses is ideal.
 
-## Prior Art #1 - client-side-rendering
+### Prior Art #1 - client-side-rendering
 
 Many applications opt out of SSR entirely and simply render a client-side React application from a Rails view. Since Rails ultimately controls all server-side concerns backend developers are able to stick to the stack they know best, and no inter-service communication must be managed.
 
 Unfortunately, this approach eschews the performance (and SEO if applicable) benefits of SSR, making it less than ideal in a world where performance is increasingly important.
 
-## Prior Art #2 - separate React service
+### Prior Art #2 - separate React service
 
 Our largest React applications are totally independent node applications which interact with Rails entirely as an API server. They typically handle their own authentication, metrics and API proxying concerns.
 
 This strategy allows them the maximimum amount of control over their behaviour and ideal performance characteristics, but involves significant increases in complexity. Complexity becomes especially high in cases where the node server must share a domain with conventionally rendered Rails views, as both services must become aware of when to yield to the other, and complex NGINX incantations become entwined with the way the services communicate.
 
-## Prior Art #3 - embedded JS interpreters
+### Prior Art #3 - embedded JS interpreters
 
 Libraries such as [react_on_rails](https://github.com/shakacode/react_on_rails) and [react-rails](https://github.com/reactjs/react-rails#server-side-rendering) exist to provide mechanisms to render react by executing JavaScript directly from Ruby, using tools such as `ExecJS`. These can provide a simple and familiar API for Rails developers integrating React into their applications while providing similar levels of control to the Rails server as a straightforward client-side-rendering approach. They also offer similar performance benefits to server rendering using node.
 
@@ -41,7 +41,7 @@ Unfortunately, these libraries have limits around how much of the node/React eco
 
 The limitations of this approach are severe enough that those who have used it at Shopify have stated they would not use it again, and at least one of the common off-the-shelf libraries actually switching strategy to a separate node server through their [paid pro plan](https://github.com/reactjs/react-rails#server-side-rendering).
 
-## Prior Art #4 - Hypernova
+### Prior Art #4 - Hypernova
 
 Airbnb maintains a project called [`HyperNova`](https://github.com/airbnb/hypernova) which provides a simple API for building a server-rendering enabled react application, as well as a companion Ruby library for connecting to a Rails application.
 
