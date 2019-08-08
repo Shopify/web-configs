@@ -16,7 +16,7 @@ We use 'sidecar' node server living in the same repository but deployed as separ
 
 ## Problem space
 
-[Server-side-rendering](https://reactjs.org/docs/react-dom-server.html) (SSR) is a performance optimization available to React applications aimed at bringing their time-to-first-byte and first contentful paint time down, and at allaying some of the issues associated with conventional single-page-applications. Since rendering React applications on the server necessarily requires a JavaScript runtime, the server-side-rendering is usually done in node, or a similar server-side JS runtime.
+[Server-side-rendering](https://reactjs.org/docs/react-dom-server.html) (SSR) is a performance optimization available to React applications aimed at bringing their time-to-first-byte and first contentful paint time down, and at allaying some of the issues associated with conventional single-page-applications. Since rendering React applications on the server necessarily requires a JavaScript runtime, the server-side-rendering is done in Node.
 
 SSR is further complicated by the need to have the client side app rehydrate using the same state as the server render. This is usually accomplished with serialization of state on the server and deserialization of state in the client entry point. In our projects we have historically used [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html) for managing serializations to good effect, so support for the patterns it uses is ideal.
 
