@@ -52,7 +52,6 @@ Unfortunately, [`HyperNova`](https://github.com/airbnb/hypernova) has its own op
 The recommended architecture for Rails SSR apps is two cloud services:
 - A private Node server to handle SSR (via [`@shopify/react-server`](https://github.com/Shopify/quilt/tree/master/packages/react-server))
 - A public Rails server that proxies requests on to the Node service (via [`quilt_rails`]https://github.com/Shopify/quilt/tree/master/gems/quilt_rails))
-- Built in support for generating in-memory client and server entrypoints given an `<App />` component. (via [`sewing_kit`](https://github.com/Shopify/sewing_kit))
 
 This allows:
 - Independent monitoring & scaling of services by our production platform
@@ -60,6 +59,10 @@ This allows:
 - Front-end developers to quickly contribute to projects using the same tools they would in a totally standalone node application
 - Minimal boilerplate thanks to intelligent build system support
 - Full support for arbitrary serialization using [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html)
+
+We also provide tooling to simplify the setup costs associated with this architecture:
+- automated modern JavaScript compilation and generation of client/server entrypoints (via [`sewing_kit`]https://github.com/Shopify/sewing-kit))
+- cloud templates for deploy configuration
 
 ### Supporting documents
 - [Rails+React SSR exploration](https://docs.google.com/document/d/1gsCN0z9t89zWpUuqp6rWa8wJi6HrN6_FJMPyGz-U34A/edit#heading=h.ketzgarmm35m)
