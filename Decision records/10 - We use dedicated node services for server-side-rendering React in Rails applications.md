@@ -49,11 +49,17 @@ Unfortunately, [`HyperNova`](https://github.com/airbnb/hypernova) has its own op
 
 ## Solution
 
-We maintain a JavaScript library, [`@shopify/react-server`](https://github.com/Shopify/quilt/tree/master/packages/react-server), built from the ground up to support [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html) consuming React applications. On the Rails side we provide [`quilt_rails`]https://github.com/Shopify/quilt/tree/master/gems/quilt_rails) to proxy requests to the rendering service.
+The recommended architecture for Rails SSR apps is two cloud services:
+- A private Node server to handle SSR (via [`@shopify/react-server`](https://github.com/Shopify/quilt/tree/master/packages/react-server))
+- A public Rails server that proxies requests on to the Node service (via [`quilt_rails`]https://github.com/Shopify/quilt/tree/master/gems/quilt_rails))
+- Built in support for generating in-memory client and server entrypoints given an `<App />` component. (via [`sewing_kit`](https://github.com/Shopify/sewing_kit))
 
-By proxying requests to Node in this way we allow both our React and Rails patterns to remain consistent. Rails developers continue to handle authentication, API requests, and other server-side concerns the same way they would in a conventional Rails application, and React developers are able to build applications the same way that they would in a totally standalone node app. We use Shopify Build, Cloud Platform and ServicesDB to provide a template for shipping the Rails+React app as a single deploy from the same repo, while still allowing the two services to be scaled and monitored independentally.
-
-This solution is actually quite similar to [`HyperNova`](https://github.com/airbnb/hypernova), but since our solution is built from the ground up around letting the application code define its own serialization / deserialization needs and make use of our service scaling infrastructure, we can avoid the problems they encountered.
+This allows:
+- Independent monitoring & scaling of services by our production platform
+- Backend developers to leverage existing patterns and tools (auth, API requests, etc)
+- Front-end developers to quickly contribute to projects using the same tools they would in a totally standalone node application
+- Minimal boilerplate thanks to intelligent build system support
+- Full support for arbitrary serialization using [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html)
 
 ### Supporting documents
 - [Rails+React SSR exploration](https://docs.google.com/document/d/1gsCN0z9t89zWpUuqp6rWa8wJi6HrN6_FJMPyGz-U34A/edit#heading=h.ketzgarmm35m)
