@@ -61,7 +61,7 @@ This allows:
 - Full support for arbitrary serialization using [`@shopify/react-html`](https://github.com/Shopify/quilt/tree/master/packages/react-html)
 
 We also provide tooling to simplify the setup costs associated with this architecture:
-- automated modern JavaScript compilation and generation of client/server entrypoints (via [`sewing_kit`]https://github.com/Shopify/sewing-kit))
+- Automated modern JavaScript compilation and generation of client/server entrypoints (via [`sewing_kit`]https://github.com/Shopify/sewing-kit))
 - Cloud templates for deploy configuration
 
 ### Supporting documents
