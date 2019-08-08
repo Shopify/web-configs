@@ -39,7 +39,7 @@ Libraries such as [react_on_rails](https://github.com/shakacode/react_on_rails) 
 
 Unfortunately, these libraries have limits around how much of the Node/React ecosystem they support, often being built around one or more common open-source libraries with limited support for rehydrating other components. They also struggle to cope with the impedance mismatch between asynchronous event-based JavaScript and the synchronous threaded nature of Ruby, making debugging especially difficult. Another concern comes with the performance characteristics of embedding javascript execution inside of Ruby, and the requirement for configuration of the execution environment living inside of application code.
 
-The limitations of this approach are severe enough that those who have used it at Shopify have stated they would not use it again, and at least one of the common off-the-shelf libraries actually switching strategy to a separate node server through their [paid pro plan](https://github.com/reactjs/react-rails#server-side-rendering).
+The limitations of this approach are severe enough that those who have used it at Shopify have stated they would not use it again, and at least one of the common off-the-shelf libraries is actually switching strategy to a separate Node server through their [paid pro plan](https://github.com/reactjs/react-rails#server-side-rendering).
 
 ### Prior Art #4 - Hypernova
 
