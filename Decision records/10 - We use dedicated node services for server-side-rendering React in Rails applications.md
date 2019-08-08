@@ -62,7 +62,7 @@ This allows:
 
 We also provide tooling to simplify the setup costs associated with this architecture:
 - automated modern JavaScript compilation and generation of client/server entrypoints (via [`sewing_kit`]https://github.com/Shopify/sewing-kit))
-- cloud templates for deploy configuration
+- Cloud templates for deploy configuration
 
 ### Supporting documents
 - [Rails+React SSR exploration](https://docs.google.com/document/d/1gsCN0z9t89zWpUuqp6rWa8wJi6HrN6_FJMPyGz-U34A/edit#heading=h.ketzgarmm35m)
