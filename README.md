@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/eslint-plugin-shopify)
-[![David DM](https://david-dm.org/Shopify/eslint-plugin-shopify.svg)](https://david-dm.org/Shopify/eslint-plugin-shopify) [![Greenkeeper badge](https://badges.greenkeeper.io/Shopify/eslint-plugin-shopify.svg)](https://greenkeeper.io/)
+[![David DM](https://david-dm.org/Shopify/eslint-plugin-shopify.svg)](https://david-dm.org/Shopify/eslint-plugin-shopify) 
 
 Shopify’s ESLint rules and configs.
 
