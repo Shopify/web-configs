@@ -112,7 +112,6 @@ This plugin provides the following custom rules, which are included as appropria
 - [class-property-semi](docs/rules/class-property-semi.md): Require (or disallow) semicolons for class properties.
 - [images-no-direct-imports](docs/rules/images-no-direct-imports.md): Prevent images from being directly imported.
 - [jest/no-snapshots](docs/rules/jest/no-snapshots.md): Disallows jest snapshots.
-- [jest/no-try-expect](docs/rules/jest/no-try-expect.md): Prevent catch assertions in tests.
 - [jest/no-vague-titles](docs/rules/jest/no-vague-titles.md): Prevent the usage of vague words in test statements.
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.
