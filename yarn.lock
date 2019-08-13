@@ -2195,12 +2195,13 @@ eslint-config-prettier@6.0.0:
     get-stdin "^6.0.0"
 
 eslint-find-rules@^3.3.1:
-  version "3.3.1"
-  resolved "https://registry.yarnpkg.com/eslint-find-rules/-/eslint-find-rules-3.3.1.tgz#46a86c2fc9e9be2b33235234e1820e1f045793a9"
-  integrity sha512-07lurNxr53r0EgiuPR0JuybU3p1eIOnmA4FBmVGCvi0OtMIUod7CIjOmwKmU5VYkSMDyC/nPT/iWVNU7V4uTlg==
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/eslint-find-rules/-/eslint-find-rules-3.4.0.tgz#efc76af591409f7b9960ab360aa62ab42815ccb1"
+  integrity sha512-LLaPdZ2C9Q20uXNQMW44CjhlCFiUTdoy/gENudmOYMlqLn/8F6wzPoyTAAa2aTpIED4q5/Z5Obw58lTEKidi+A==
   dependencies:
     cliui "^3.2.0"
     eslint-rule-documentation "^1.0.0"
+    glob "^7.1.4"
     path-is-absolute "^1.0.1"
     which "^1.2.8"
     window-size "0.3.0"
@@ -2947,7 +2948,7 @@ glob@^5.0.15:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.1.1, glob@^7.1.2, glob@^7.1.3:
+glob@^7.1.1, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4:
   version "7.1.4"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.4.tgz#aa608a2f6c577ad357e1ae5a5c26d9a8d1969255"
   integrity sha512-hkLPepehmnKk41pUGm3sYxoFs/umurYfYJCerbXEyFIWcAzvpipAgVkBqqT9RBKMGjnq6kMuyYwha6csxbiM1A==
