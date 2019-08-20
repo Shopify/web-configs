@@ -10,3 +10,22 @@ This is a 5 hour workshop originally written for RnD Summit 2018. The workshop b
 
 * [Matt Seccafien](https://github.com/cartogram)
 * [Michelle Chen](http://github.com/michelleyschen)
+
+## Series of "Whys"
+
+A series of 45 minute workshops for context building.  The series is targeted for React developers, but initial sessions are broadly applicable.
+
+1. ** Why Simple is Good ** - Defining the words "Simple", "Easy", and "Complect".  How to decide what is Good. (Based on "Simple Made Easy", by Rich Hickey)
+  * [Slide Deck](https://docs.google.com/presentation/d/1ops1Hm7DciF1bLmWrzH0VIbI7ARsfeUzs1bLmZxCTds/edit#slide=id.p)
+  * [Recording from August 13, 2019 in Toronto](https://drive.google.com/file/d/1HpC1wJQBdm1NA6oU-3y6wJVfzfNnluM5)
+1. ** Why Functional Programming is Hot Right Now **
+  * [Slide Deck](https://docs.google.com/presentation/d/1r2NnEuJA9yWgCmvpZW3y5JJ2iUNLnY_Cksr2c_AsUY8/edit#slide=id.p)
+  * [Recording from August 13, 2019 in Toronto](https://drive.google.com/file/d/1BGWRcD4mszqSWgTVeR6KQisUH5X_Crq7)
+1. ** Why React **
+  * Work in Progress.  Slides & Recording TBD
+
+
+
+### Owners
+
+* [Jared Dykstra](https://github.com/jared-dykstra)
