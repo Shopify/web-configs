@@ -2403,10 +2403,10 @@ eslint-plugin-self@^1.2.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-self/-/eslint-plugin-self-1.2.0.tgz#b999cfed88b893afa6b1f7ce7037d208ede9b8ba"
   integrity sha512-veuI/YC7DHJI4/rPlYxnZpszW7aSjwWj2/zZQ4UCWJE+tDgF853jJlz5UhPd/ckLYaMJXewZdKx6nSpWC2Ncqw==
 
-eslint-plugin-sort-class-members@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.5.0.tgz#71c66d89f902ddd31b04acd4cff7c86141db3389"
-  integrity sha512-LgseO8RQTJ1PJcnSlMNuSGIHHaJhSH+CUQE2jbsSVmKETwaW+tJLBNTHX7laTobXugrjvF6A+7RccxEKJY3t/A==
+eslint-plugin-sort-class-members@1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-sort-class-members/-/eslint-plugin-sort-class-members-1.6.0.tgz#64228d527f5d8e315e8249765417be218404353f"
+  integrity sha512-7+FEtnxeK0vtoPERAU7gtxpr//NsYYrPvMoDRIoqP6u999xbY7Lpgjr9KmalfXIOTuVxvRNgK7vJhAGVRi/z4A==
 
 eslint-plugin-typescript@0.14.0:
   version "0.14.0"
