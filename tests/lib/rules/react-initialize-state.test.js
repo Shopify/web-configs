@@ -5,7 +5,7 @@ const ruleTester = new RuleTester({
   parser: require.resolve('babel-eslint'),
 });
 
-const typeScriptParser = require.resolve('typescript-eslint-parser');
+const typeScriptParser = require.resolve('@typescript-eslint/parser');
 
 const errors = [
   {

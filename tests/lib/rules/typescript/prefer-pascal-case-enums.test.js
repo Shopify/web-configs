@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../../lib/rules/typescript/prefer-pascal-case-enums');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('typescript-eslint-parser'),
+  parser: require.resolve('@typescript-eslint/parser'),
 });
 
 function errorWithName(name) {

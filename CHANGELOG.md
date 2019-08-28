@@ -2,7 +2,27 @@
 
 ## Unreleased
 
-# New Rules
+### Breaking Changes
+
+Updated from `eslint-plugin-typescript` to `@typescript-eslint/eslint-plugin`. If you have any rules defined under the typescript namespace, you will need to change those to use the new `@typescript-eslint` namespace.
+
+For example:
+
+```json
+"rules": {
+  "typescript/restrict-plus-operands": "error"
+}
+```
+
+Will become:
+
+```json
+"rules": {
+  "@typescript-eslint/restrict-plus-operands": "error"
+}
+```
+
+### New Rules
 
 - `jest/no-standalone-expect` Prevents `expect` statements outside of a `test` or `it` block ([368](https://github.com/Shopify/eslint-plugin-shopify/pull/368))
 - `jest/no-expect-resolves` Avoid using `expect().resolves` ([370](https://github.com/Shopify/eslint-plugin-shopify/pull/370))

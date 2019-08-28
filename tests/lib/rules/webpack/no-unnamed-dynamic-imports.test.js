@@ -56,7 +56,7 @@ ruleTester.run('webpack/no-unnamed-dynamic-imports', rule, {
         ).then(bar => bar);
       }
       `,
-      parser: require.resolve('typescript-eslint-parser'),
+      parser: require.resolve('@typescript-eslint/parser'),
     },
   ],
   invalid: [

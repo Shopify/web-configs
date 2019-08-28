@@ -100,7 +100,7 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: '(Foo as Function)();',
-      parser: require.resolve('typescript-eslint-parser'),
+      parser: require.resolve('@typescript-eslint/parser'),
     },
   ],
   invalid: [
