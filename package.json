@@ -78,7 +78,7 @@
     "prettier": "^1.14.0"
   },
   "dependencies": {
-    "babel-eslint": "10.0.2",
+    "babel-eslint": "10.0.3",
     "common-tags": "^1.8.0",
     "eslint-config-prettier": "6.0.0",
     "eslint-import-resolver-typescript": "^1.1.1",
