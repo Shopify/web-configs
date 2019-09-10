@@ -4,11 +4,97 @@
 
 This section describes a sensible starting point for organizing a React application that supports server-side rendering.
 
-## `/app`
+## Application
 
-### `/app/components` and `<Component>/components`
+### React Components and Sub-Components
 
-TODO
+React Components should always exist in a `components/` folder, but the component's internal structure may change depending on their complexity.
+
+
+#### 1. Start with a file and a test
+
+At its simplest a component will exist as a component and a test at the `components/` level.
+
+If you foresee this component growing quickly in complexity or needing a subcomponent, feel free to jump straight to #2.
+```
+.
+└── components
+    ├── ...
+    ├── MyComponent.js
+    └── tests
+        ├── ...
+        └── MyComponent.test.js
+```
+
+
+#### 2. Isolate your component to a folder (of the same name) as the component grows
+
+When you move your component into it's own folder, you
+
+```
+├── component.js
+└── components
+    └── MyComponent.js
+        ├── MyComponent.js
+        ├── MyComponent.scss
+        └── MyComponent.test.js
+```
+
+#### 3. As your component grows, group like-files in folders.
+
+Common types to group inside a component:
+- Multiple tests into `./tests/`
+- graphQL queries and mutations in `./graphql/`
+- Subcomponents of the component in it's own `./components/` subfolder
+- utility files containing helpers in `./utils/`
+
+A more complex component could start to look like either of these examples. As always, choose the grouping or abstraction that makes sense to you.
+
+```
+components
+└── ImportInventory
+    ├── index.ts
+    ├── ImportInventory.tsx
+    ├── components
+    │   ├── ImportCreated
+    │   │   ├── ImportCreated.tsx
+    │   │   └── ImportCreated.test.tsx
+    │   ├── ImportSubmitted
+    │   │   ├── ImportSubmitted.tsx
+    │   │   └── ImportSubmitted.test.tsx
+    │   └── InitialState
+    │       ├── InitialState.tsx
+    │       └── InitialState.test.tsx
+    ├── graphql
+    │   ├── InventoryImportCreateMutation.graphql
+    │   ├── InventoryImportSubmitMutation.graphql
+    │   └── InventoryStagedUploadMutation.graphql
+    └── tests
+        └── ImportInventory.test.tsx
+```
+
+or
+
+```
+components
+└── ImportInventory
+    ├── index.ts
+    ├── components
+    │   ├── ImportInventory.tsx
+    │   ├── ImportCreated.tsx
+    │   ├── ImportSubmitted.tsx
+    │   ├── InitialState.tsx
+    │   └── tests
+    │       ├── ImportCreated.test.tsx
+    │       ├── ImportSubmitted.test.tsx
+    │       ├── InitialState.test.tsx
+    │       └── ImportInventory.test.tsx
+    └── graphql
+        ├── InventoryImportCreateMutation.graphql
+        ├── InventoryImportSubmitMutation.graphql
+        └── InventoryStagedUploadMutation.graphql
+```
+
 
 ### `/app/hooks` and `<Component>/hooks`
 
