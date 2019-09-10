@@ -6,7 +6,7 @@ This section describes a sensible starting point for organizing a React applicat
 
 ## Application
 
-### React Components and Sub-Components
+### React Components and Sub-components
 
 React Components should always exist in a `components/` folder, but the component's internal structure may change depending on their complexity.
 
@@ -56,9 +56,9 @@ You have several options to fix this problem:
 
 Common types to group inside a component:
 - Multiple tests into `./tests/`
-- graphQL queries and mutations in `./graphql/`
-- Subcomponents of the component in it's own `./components/` subfolder
-- utility files containing helpers in `./utils/`
+- GraphQL queries and mutations in `./graphql/`
+- Sub-components of the component in it's own `./components/` subfolder
+- Utility files containing helpers in `./utilities/`
 
 A more complex component could start to look like either of these examples. As always, choose the grouping or abstraction that makes sense to you.
 
