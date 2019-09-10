@@ -29,16 +29,28 @@ If you foresee this component growing quickly in complexity or needing a subcomp
 
 #### 2. Isolate your component to a folder (of the same name) as the component grows
 
-When you move your component into it's own folder, you
-
 ```
 ├── component.js
 └── components
-    └── MyComponent.js
+    └── MyComponent
         ├── MyComponent.js
         ├── MyComponent.scss
         └── MyComponent.test.js
 ```
+
+When you move your component into it's own folder, you will need to figure out how to maintain all existing import paths.
+
+```
+import {MyComponent} from './components/MyComponent';
+// would need to become 👇
+import {MyComponent} from './components/MyComponent/MyComponent';
+```
+
+You have several options to fix this problem:
+
+1. rename the component's filename from `MyComponent.js` to `index.js` to
+2. create an `index.js` inside the component's folder that exports `MyComponent.js`
+3. create a `components.js` file next to the component's folder that exports each component in the `components/` folder.
 
 #### 3. As your component grows, group like-files in folders.
 
