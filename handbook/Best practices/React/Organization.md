@@ -56,9 +56,11 @@ You have several options to fix this problem:
 
 Common types to group inside a component:
 - Multiple tests into `./tests/`
-- GraphQL queries and mutations in `./graphql/`
-- Sub-components of the component in it's own `./components/` subfolder
+- GraphQL queries and mutations in `./graphql/` (if there are still too many feel free to group those as well)
 - Utility files containing helpers in `./utilities/`
+- Sub-components of the component in it's own `./components/` subfolder
+- Hooks used in the component go to `./hooks/`
+- And so on...
 
 A more complex component could start to look like either of these examples. As always, choose the grouping or abstraction that makes sense to you.
 
