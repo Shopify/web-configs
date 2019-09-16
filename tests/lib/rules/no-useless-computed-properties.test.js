@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/no-useless-computed-properties');
 
 const ruleTester = new RuleTester({

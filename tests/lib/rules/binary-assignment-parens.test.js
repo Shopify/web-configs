@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/binary-assignment-parens');
 
 const ruleTester = new RuleTester();

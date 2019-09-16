@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/jsx-no-complex-expressions');
 
 const ruleTester = new RuleTester();

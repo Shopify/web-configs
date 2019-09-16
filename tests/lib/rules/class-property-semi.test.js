@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/class-property-semi');
 
 const ruleTester = new RuleTester({

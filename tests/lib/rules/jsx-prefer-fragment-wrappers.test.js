@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/jsx-prefer-fragment-wrappers');
 
 const ruleTester = new RuleTester({parser: require.resolve('babel-eslint')});

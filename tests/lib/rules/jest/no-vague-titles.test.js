@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../../lib/rules/jest/no-vague-titles');
 
 const ruleTester = new RuleTester({parser: require.resolve('babel-eslint')});

@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/react-type-state');
 
 const ruleTester = new RuleTester({
