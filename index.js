@@ -5,5 +5,5 @@ module.exports = [
   'last 3 opera versions',
   'last 2 edge versions',
   'safari >= 10',
-  'ios >= 9',
+  'ios >= 10',
 ];
