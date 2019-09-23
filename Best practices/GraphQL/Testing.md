@@ -55,7 +55,7 @@ We recommend that you create a GraphQL client for *each* test to avoid any state
 
 ```tsx
 // in tests/utilities.tsx
-import {mount as originalMount} from 'enzyme;
+import {mount as originalMount} from 'enzyme';
 import {ApolloProvider} from 'react-apollo';
 
 interface Options {
