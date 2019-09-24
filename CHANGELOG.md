@@ -2,6 +2,8 @@
 
 <!-- ## Unreleased -->
 
+## 20.1.0 - 2019-09-24
+
 - Pass `browsers` web preset config string directly into babel-preset-env's targets option, so that if it is unset we shall read honor browserslist config in package.json / .browserslistrc
 
 ## 20.0.0 - 2019-06-03
