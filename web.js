@@ -15,9 +15,7 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
       modules,
       useBuiltIns,
       corejs,
-      targets: {
-        browsers,
-      },
+      targets: browsers,
       debug,
     }],
   ];
