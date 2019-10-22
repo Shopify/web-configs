@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-shopify",
-  "version": "31.0.0-beta.0",
+  "version": "31.0.0",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -75,7 +75,7 @@
   },
   "peerDependencies": {
     "eslint": "^5.0.0 || ^6.0.0",
-    "prettier":"^1.17.0",
+    "prettier": "^1.17.0",
     "typescript": ">=3.2.1 <3.8.0"
   },
   "dependencies": {
