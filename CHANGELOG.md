@@ -2,9 +2,9 @@
 
 ## Unreleased
 
-### Breaking Changes
+### Using `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`
 
-Updated from `eslint-plugin-typescript` to `@typescript-eslint/eslint-plugin`. If you have any rules defined under the typescript namespace, you will need to change those to use the new `@typescript-eslint` namespace.
+- **Breaking Change** Updated from `eslint-plugin-typescript` to `@typescript-eslint/eslint-plugin`. If you have any rules defined under the typescript namespace, you will need to change those to use the new `@typescript-eslint` namespace.
 
 For example:
 
@@ -21,6 +21,37 @@ Will become:
   "@typescript-eslint/restrict-plus-operands": "error"
 }
 ```
+
+### Config Changes
+
+- **Breaking Change** The `plugin:shopify/react` is no longer a core config and must augment one of the `plugin:shopify/typescript` or `plugin:shopify/esnext` configs. See examples below
+
+_Example config for react without typescript projects:_
+
+```json
+{
+  "extends": [
+    "plugin:shopify/esnext",
+    "plugin:shopify/react"
+    // ...other configs
+  ]
+}
+```
+
+_Example config for react with typescript projects:_
+
+```json
+{
+  "extends": [
+    "plugin:shopify/typescript",
+    "plugin:shopify/react"
+    // ...other configs
+  ]
+}
+```
+
+- **Note** If using the `plugin:shopify/typescript-type-checking` augmented config, you must specify a path to your tsconfig.json file in the "project" property of "parserOptions"
+
 
 ### New Rules
 

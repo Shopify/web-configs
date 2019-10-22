@@ -39,6 +39,7 @@ module.exports = {
     esnext: require('./lib/config/esnext'),
     react: require('./lib/config/react'),
     typescript: require('./lib/config/typescript'),
+    'typescript-type-checking': require('./lib/config/typescript-type-checking'),
 
     // Augmenting configs - When extending, these go after the core config
     graphql: require('./lib/config/graphql'),

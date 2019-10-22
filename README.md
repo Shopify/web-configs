@@ -2,7 +2,7 @@
 
 [![NPM version][npm-image]][npm-url]
 [![Circle CI](https://circleci.com/gh/Shopify/eslint-plugin-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/eslint-plugin-shopify)
-[![David DM](https://david-dm.org/Shopify/eslint-plugin-shopify.svg)](https://david-dm.org/Shopify/eslint-plugin-shopify) 
+[![David DM](https://david-dm.org/Shopify/eslint-plugin-shopify.svg)](https://david-dm.org/Shopify/eslint-plugin-shopify)
 
 Shopify’s ESLint rules and configs.
 
@@ -46,15 +46,7 @@ Shopify’s ESLint configs come bundled in this package. In order to use them, y
 }
 ```
 
-If using React, extend the React version of the configuration (which adds some React-specific rules to those in the ESNext config):
-
-```json
-{
-  "extends": "plugin:shopify/react"
-}
-```
-
-If working on an ES5 project, extend the ES5 version of the configuration:
+If you are working on an ES5 project, extend the ES5 version of the configuration:
 
 ```json
 {
@@ -62,13 +54,25 @@ If working on an ES5 project, extend the ES5 version of the configuration:
 }
 ```
 
-You can also add some "augmenting" configs on top of the "core" config by extending an array of linting configs. For example, this package provides a jest config, which can be added to the ESNext config with the following configuration file:
+You can also add some "augmenting" configs on top of the "core" config by extending an array of linting configs. For example, the following configuration would provide a base ESNext config that is augmented by a React config:
 
 ```json
 {
   "extends": [
     "plugin:shopify/esnext",
-    "plugin:shopify/jest",
+    "plugin:shopify/react"
+  ]
+}
+```
+
+Likewise, if you are using TypeScript and React, the following configuration extends the TypeScript base config with the React-specific rules provided by the React configuration file. To demonstrate multiple augmentations, we've also added the Prettier config, which disables rules that will conflict in projects using prettier.
+
+```json
+{
+  "extends": [
+    "plugin:shopify/typescript",
+    "plugin:shopify/react",
+    "plugin:shopify/prettier",
   ]
 }
 ```
@@ -78,15 +82,28 @@ You can also add some "augmenting" configs on top of the "core" config by extend
 This plugin provides the following core configurations:
 
 - [esnext](lib/config/esnext.js): Use this for anything written with ES2015+ features.
-- [react](lib/config/react.js): Use this for React projects.
+- [typescript](lib/config/typescript.js): Use this for Typescript projects. The rules enabled in this confige do not require type-checking to run. To enable all Typescript rules, you must augment this config with the `typescript-type-checking` config mentioned below.
 - [es5](lib/config/es5.js): Use this for legacy projects.
 
 This plugin also provides the following tool-specific configurations, which can be used on top of the core configurations:
 
+- [typescript-type-checking](lib/config/typescript-type-checking.js) Use this config to augment the `typescript` config to enable all TypeScript rules, including those that require type checking. These rules are slower to run and and you will need to specify a path to your tsconfig.json file in the "project" property of "parserOptions". The following example would provide all of the TypeScript rules, assuming the tsconfig.json is in the same directory as you ESlint configuration.
+
+```json
+{
+  "extends": [
+    "plugin:shopify/typescript",
+    "plugin:shopify/typescript-type-checking"
+  ],
+  "parserOptions": {
+    "project": "tsconfig.json"
+  }
+}
+```
+- [react](lib/config/react.js): Use this for React projects.
 - [graphql](lib/config/graphql.js): Use this for projects that use [graphql-config](https://github.com/prisma/graphql-config) for graphql validation.
 - [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components/get-started).
 - [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting. Prettier must be installed within your project, as eslint-plugin-shopify does not provide the dependency itself.
-- [typescript-prettier](lib/config/typescript-prettier.js): Use [prettier](https://github.com/prettier/prettier) on typescript projects. Prettier must be installed within your project, as eslint-plugin-shopify does not provide the dependency itself.
 - [webpack](lib/config/webpack.js): Use this for projects built by [webpack](https://webpack.js.org/).
 
 ### node
@@ -103,6 +120,10 @@ A node project that will use Babel for transpilation would need the following ES
   ]
 }
 ```
+
+### Supported Typescript version
+
+The version range of TypeScript currently supported by this plugin is `>=3.2.1 <3.8.0`. This is constrained by the [@typescipt-eslint parser support](https://github.com/typescript-eslint/typescript-eslint#supported-typescript-version).
 
 ## Plugin-Provided Rules
 
