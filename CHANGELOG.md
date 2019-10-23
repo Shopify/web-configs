@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [31.0.0] - 2019-10-23
+
 ### Using `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`
 
 - **Breaking Change** Updated from `eslint-plugin-typescript` to `@typescript-eslint/eslint-plugin`. If you have any rules defined under the typescript namespace, you will need to change those to use the new `@typescript-eslint` namespace.
