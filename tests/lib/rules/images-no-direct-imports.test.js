@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/images-no-direct-imports');
 

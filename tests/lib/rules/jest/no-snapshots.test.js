@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../../lib/rules/jest/no-snapshots');
 
 const ruleTester = new RuleTester();

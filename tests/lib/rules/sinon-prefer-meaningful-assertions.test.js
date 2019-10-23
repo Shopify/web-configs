@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../lib/rules/sinon-prefer-meaningful-assertions');
 
 const ruleTester = new RuleTester();

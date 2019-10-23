@@ -1,4 +1,5 @@
 const {RuleTester} = require('eslint');
+
 const rule = require('../../../../lib/rules/webpack/no-unnamed-dynamic-imports');
 
 const ruleTester = new RuleTester({
