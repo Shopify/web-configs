@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- `jest/valid-title`
+- `jest/prefer-hooks-on-top`
+- `jest/require-top-level-describe`
+
 ## [31.0.0] - 2019-10-23
 
 ### Using `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`

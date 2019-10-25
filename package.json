@@ -69,9 +69,9 @@
     "istanbul": "^0.4.5",
     "jest": "^24.8.0",
     "prettier": "^1.17.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "typescript": "^3.5.3"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "typescript": "^3.6.4"
   },
   "peerDependencies": {
     "eslint": "^6.0.0"
@@ -87,13 +87,13 @@
     "eslint-plugin-eslint-comments": "3.1.2",
     "eslint-plugin-graphql": "3.1.0",
     "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-jest": "22.15.2",
+    "eslint-plugin-jest": "22.20.0",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-node": "9.1.0",
     "eslint-plugin-prettier": "3.1.0",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.16.0",
-    "eslint-plugin-react-hooks": "^2.0.1",
+    "eslint-plugin-react-hooks": "^2.2.0",
     "eslint-plugin-sort-class-members": "1.6.0",
     "eslint-plugin-typescript": "0.14.0",
     "merge": "1.2.1",
