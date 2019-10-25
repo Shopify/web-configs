@@ -56,19 +56,19 @@
     "collectCoverage": false
   },
   "devDependencies": {
-    "@babel/core": "^7.4.4",
+    "@babel/core": "^7.6.4",
     "@babel/register": "7.6.2",
-    "@babel/runtime-corejs2": "^7.4.3",
+    "@babel/runtime-corejs2": "^7.6.3",
     "babel-preset-shopify": "^20.0.0",
     "chai": "^4.2.0",
-    "eslint": "^6.0.1",
+    "eslint": "^6.5.1",
     "eslint-find-rules": "^3.3.1",
     "eslint-index": "^1.5.0",
     "eslint-plugin-self": "^1.2.0",
     "graphql": "^14.2.1",
     "istanbul": "^0.4.5",
     "jest": "^24.8.0",
-    "prettier": "^1.17.0",
+    "prettier": "^1.18.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "typescript": "^3.6.4"
