@@ -2,9 +2,14 @@
 
 ## Unreleased
 
+- `shopify/no-all-mocks-methods` ([#204](https://github.com/Shopify/eslint-plugin-shopify/pull/204))
 - `jest/valid-title`
 - `jest/prefer-hooks-on-top`
 - `jest/require-top-level-describe`
+
+## [32.0.0] - 2019-11-05
+
+- Enforce new-lines between groups import groups ([#409](https://github.com/Shopify/eslint-plugin-shopify/pull/409))
 
 ## [31.0.0] - 2019-10-23
 

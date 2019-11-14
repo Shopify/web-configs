@@ -3,6 +3,7 @@ module.exports = {
     'binary-assignment-parens': require('./lib/rules/binary-assignment-parens'),
     'class-property-semi': require('./lib/rules/class-property-semi'),
     'images-no-direct-imports': require('./lib/rules/images-no-direct-imports'),
+    'jest/no-all-mocks-methods': require('./lib/rules/jest/no-all-mocks-methods'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
     'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
     'jsx-no-complex-expressions': require('./lib/rules/jsx-no-complex-expressions'),
