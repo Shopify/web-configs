@@ -24,7 +24,7 @@
     "lint": "eslint . --max-warnings 0 --format codeframe",
     "prettier": "eslint --format codeframe . --fix",
     "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
-    "test": "jest"
+    "test": "jest --maxWorkers=2"
   },
   "license": "MIT",
   "babel": {
