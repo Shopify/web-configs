@@ -160,9 +160,5 @@ This plugin provides the following custom rules, which are included as appropria
 - [typescript/prefer-singular-enums](docs/rules/typescript/prefer-singular-enums.md): Prefer TypeScript enums be singular.
 - [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
 
-## Creating New Rules
-
-The easiest way to add new rules is to use the [ESLint Yeoman generator](https://www.npmjs.com/package/generator-eslint). Running `yo eslint:rule` from the root of this project should add the required main file, docs, and test for your new rules. Make sure that these are all filled out and consistent with the other rules before merging. All tests can be run using `npm test`.
-
 [npm-url]: https://npmjs.org/package/eslint-plugin-shopify
 [npm-image]: http://img.shields.io/npm/v/eslint-plugin-shopify.svg?style=shield
