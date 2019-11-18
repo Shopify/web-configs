@@ -29,3 +29,13 @@ A series of 45 minute workshops for context building.  The series is targeted fo
 ### Owners
 
 * [Jared Dykstra](https://github.com/jared-dykstra)
+
+## React Internals
+
+* [Outline](https://github.com/Shopify/fed-sandbox/blob/master/workshops/react-internals.md)
+
+This is a 2 hour workshop originally delivered remotely, via Session, with live-coding throughout. It is a follow up to a previous Virtual DOM workshop that goes more in-depth. The workshop covers the basics of functional programming that React makes use of, the internals of the react renderer, and guides you through implementation of a simnple renderer with support for state and components, with some discussion of performance optimization.
+
+### Owners
+
+* [Andre Rocha](https://github.com/amrocha)
