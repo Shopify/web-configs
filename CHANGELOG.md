@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+### Breaking Change
+
+- The `graphql` configs have been pushed to an `override` for files matching a `.graphql` extension. This will allow this config to chain together with other parser-setting configs without changing the parser value. Consider the following config:
+
+```
+// .eslintrc
+{
+  extends: [
+    "plugin:shopify/typescript",
+    "plugin:shopify/graphql"
+  ]
+}
+```
+
+**Before this change** the final parser becomes `babel-eslint` for all files. This will cause errors when parsing TypeScript files even though we are extending the typescript config :( You could workaround this by moving the `plugin:shopify/graphql` first in the extends array or lint GraphQL files in a seperate script.
+
+**After this change** Final parser is `babel-eslint` for only `.graphql` files while `@typescript-eslint/parser` is set for all `.ts` and `.tsx` files. This should not cause any parser-related errors :)
+
 ### New Rules
 
 - `shopify/no-all-mocks-methods` ([#204](https://github.com/Shopify/eslint-plugin-shopify/pull/204))
