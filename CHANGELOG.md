@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## [33.0.0] - 2019-11-20
+
 ### Breaking Change
 
 - The `graphql` configs have been pushed to an `override` for files matching a `.graphql` extension. This will allow this config to chain together with other parser-setting configs without changing the parser value. Consider the following config:
