@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- removed `jest/no-empty-title` and renamed `jest/require-tothrow-message` to `jest/require-to-throw-message` ([499](https://github.com/Shopify/eslint-plugin-shopify/pull/499))
+
 ## [33.0.0] - 2019-11-20
 
 ### Breaking Change
