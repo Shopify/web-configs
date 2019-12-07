@@ -4,6 +4,14 @@
 
 - removed `jest/no-empty-title` and renamed `jest/require-tothrow-message` to `jest/require-to-throw-message` ([499](https://github.com/Shopify/eslint-plugin-shopify/pull/499))
 
+### New Rules
+The followiing new rules were introduced in `eslint@6.7.0`. More information can be found on the [eslint blog](https://eslint.org/blog/2019/11/eslint-v6.7.0-released).
+- [`grouped-accessor-pairs`](https://eslint.org/docs/rules/grouped-accessor-pairs)
+- [`no-constructor-return`](https://eslint.org/docs/rules/no-constructor-return)
+- [`no-dupe-else-if`](https://eslint.org/docs/rules/no-dupe-else-if)
+- [`no-setter-return`](https://eslint.org/docs/rules/no-setter-return)
+- [`prefer-exponentiation-operator`](https://eslint.org/docs/rules/prefer-exponentiation-operator)
+
 ## [33.0.0] - 2019-11-20
 
 ### Breaking Change
