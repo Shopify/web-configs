@@ -1,6 +1,10 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Updated
+
+- `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions
 
 ## 20.1.0 - 2019-09-24
 
