@@ -18,9 +18,13 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
     // proposal-class-properties must be used in loose mode
     // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
     plugins.push(
+      require.resolve('@babel/plugin-syntax-nullish-coalescing-operator'),
+      require.resolve('@babel/plugin-syntax-optional-chaining'),
       [require.resolve('@babel/plugin-proposal-decorators'), {legacy: true}],
       [require.resolve('@babel/plugin-proposal-class-properties'), {loose: true}],
       require.resolve('@babel/plugin-proposal-numeric-separator'),
+      [require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'), {loose: true}],
+      [require.resolve('@babel/plugin-proposal-optional-chaining'), {loose: true}],
     );
   } else {
     plugins.push(require.resolve('@babel/plugin-proposal-class-properties'));

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- Added support for null coalescing and optional chaining operators [[#48](https://github.com/Shopify/babel-preset-shopify/pull/48)]
+
 ### Updated
 
 - `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions
