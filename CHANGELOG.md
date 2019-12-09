@@ -8,7 +8,7 @@
 
 ### Updated
 
-- `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions
+- `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions [[#47](https://github.com/Shopify/babel-preset-shopify/pull/47)]
 
 ## 20.1.0 - 2019-09-24
 
