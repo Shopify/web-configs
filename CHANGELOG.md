@@ -1,6 +1,10 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [7.3.0] - 2019-12-14
+
+## Added
 
 - Forbid `display: table` for better Safari + VoiceOver + iOS compatibility ([#52](https://github.com/Shopify/stylelint-config-shopify/pull/52))
 
@@ -242,7 +246,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.1...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.3.0...HEAD
+[7.3.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.1...v7.3.0
 [7.2.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.0...v7.2.1
 [7.2.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.0.4...v7.1.0
