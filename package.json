@@ -38,9 +38,9 @@
   "dependencies": {
     "merge": "1.2.x",
     "stylelint-config-prettier": "^4.0.0",
-    "stylelint-order": "1.0.0",
-    "stylelint-prettier": "1.0.6",
-    "stylelint-scss": "3.3.0"
+    "stylelint-order": "2.2.1",
+    "stylelint-prettier": "1.1.2",
+    "stylelint-scss": "3.13.0"
   },
   "devDependencies": {
     "eslint": "^5.4.0",
