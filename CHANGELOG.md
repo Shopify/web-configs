@@ -2,6 +2,23 @@
 
 <!-- ## [Unreleased] -->
 
+## [7.4.0] - 2019-12-16
+
+### Added
+
+- New Rules ([#54](https://github.com/Shopify/stylelint-config-shopify/pull/54)):
+  - [`scss/at-if-no-null`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-if-no-null)
+  - [`scss/at-each-key-value-single-line`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-each-key-value-single-line)
+  - [`scss/at-rule-conditional-no-parentheses`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-rule-conditional-no-parentheses)
+  - [`scss/dimension-no-non-numeric-values`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/dimension-no-non-numeric-values)
+  - [`scss/function-unquote-no-unquoted-strings-inside`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/function-unquote-no-unquoted-strings-inside)
+  - [`scss/selector-no-union-class-name`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/selector-no-union-class-name)
+  - [`scss/no-duplicate-mixins`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/no-duplicate-mixins)
+
+### Changed
+
+- Bump stylelint-prettier v1.1.2 ([#54](https://github.com/Shopify/stylelint-config-shopify/pull/54)
+
 ## [7.3.0] - 2019-12-14
 
 ### Added
@@ -246,7 +263,8 @@ property: <top> <right> <bottom> <left>
 * Initial release
 
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.3.0...HEAD
+[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.4.0...HEAD
+[7.3.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.3.0...v7.4.0
 [7.3.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.1...v7.3.0
 [7.2.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.0...v7.2.1
 [7.2.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.1.0...v7.2.0
