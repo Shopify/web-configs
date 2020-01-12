@@ -70,6 +70,30 @@ ruleTester.run('no-vague-titles', rule, {
       code: `someFunction('appropriately')`,
     },
     {
+      code: `someFunction('proper')`,
+    },
+    {
+      code: `someFunction('inproper')`,
+    },
+    {
+      code: `someFunction('Proper')`,
+    },
+    {
+      code: `someFunction('properly')`,
+    },
+    {
+      code: `someFunction('necessary')`,
+    },
+    {
+      code: `someFunction('unnecessary')`,
+    },
+    {
+      code: `someFunction('Necessary')`,
+    },
+    {
+      code: `someFunction('necessaryly')`,
+    },
+    {
       code: `someFunction.only('correct')`,
     },
     {
