@@ -91,7 +91,7 @@ ruleTester.run('no-vague-titles', rule, {
       code: `someFunction('Necessary')`,
     },
     {
-      code: `someFunction('necessaryly')`,
+      code: `someFunction('necessarily')`,
     },
     {
       code: `someFunction.only('correct')`,
@@ -155,6 +155,38 @@ ruleTester.run('no-vague-titles', rule, {
       ],
     },
     {
+      code: "describe('necessarily')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "describe('unnecessarily')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "test('necessarily')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "test('unnecessarily')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
       code: "test('necessary')",
       errors: [
         {
@@ -180,6 +212,22 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('properly')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "it('improperly')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "describe('proper')",
       errors: [
         {
           messageId: 'containsVagueWord',
@@ -630,6 +678,22 @@ ruleTester.run('no-vague-titles', rule, {
       ],
     },
     {
+      code: "describe('inappropriate')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "describe('inappropriately')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
       code: "it('appropriate')",
       errors: [
         {
@@ -655,6 +719,14 @@ ruleTester.run('no-vague-titles', rule, {
     },
     {
       code: "it('Appropriate')",
+      errors: [
+        {
+          messageId: 'containsVagueWord',
+        },
+      ],
+    },
+    {
+      code: "it('Appropriately')",
       errors: [
         {
           messageId: 'containsVagueWord',
