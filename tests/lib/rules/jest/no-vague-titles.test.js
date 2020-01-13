@@ -91,7 +91,7 @@ ruleTester.run('no-vague-titles', rule, {
       code: `someFunction('Necessary')`,
     },
     {
-      code: `someFunction('necessaryly')`,
+      code: `someFunction('necessarily')`,
     },
     {
       code: `someFunction.only('correct')`,
