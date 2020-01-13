@@ -1,7 +1,8 @@
 # Changelog
 
-## Unreleased
+## [34.0.0] - 2019-01-13
 
+- changed `no-vague-titles` rule to catch blacklisted **words** (instead of **sequences**) in the title ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/514))
 - removed `jest/no-empty-title` and renamed `jest/require-tothrow-message` to `jest/require-to-throw-message` ([499](https://github.com/Shopify/eslint-plugin-shopify/pull/499))
 
 ### New Rules
@@ -250,27 +251,27 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 #### Updated Plugins
 
-| Package | Old version | New version |
-| ------- | ----------- | ----------- |
-| `eslint-plugin-sort-class-members` | `1.3.1` | `1.4.0` |
-| `eslint-plugin-promise` | `4.0.0` | `4.0.1` |
-| `eslint-plugin-node` | `7.0.1` | `8.0.1` |
-| `eslint-plugin-jsx-a11y` | `6.1.1"`  | `6.2.1` |
-| `eslint-plugin-jest` | `21.22.0`  | `21.23.0` |
-| `eslint-plugin-import` | `2.14.0`  | `2.16.0` |
-| `eslint-plugin-graphql` | `2.1.0-0`  | `3.0.3` |
-| `eslint-plugin-eslint-comments` | `3.0.1`  | `3.1.1` |
-| `eslint-plugin-babel` | `5.1.0`  | `5.3.0` |
-| `eslint-plugin-utils` | `2.1.0`  | `2.3.0` |
+| Package                            | Old version | New version |
+| ---------------------------------- | ----------- | ----------- |
+| `eslint-plugin-sort-class-members` | `1.3.1`     | `1.4.0`     |
+| `eslint-plugin-promise`            | `4.0.0`     | `4.0.1`     |
+| `eslint-plugin-node`               | `7.0.1`     | `8.0.1`     |
+| `eslint-plugin-jsx-a11y`           | `6.1.1"`    | `6.2.1`     |
+| `eslint-plugin-jest`               | `21.22.0`   | `21.23.0`   |
+| `eslint-plugin-import`             | `2.14.0`    | `2.16.0`    |
+| `eslint-plugin-graphql`            | `2.1.0-0`   | `3.0.3`     |
+| `eslint-plugin-eslint-comments`    | `3.0.1`     | `3.1.1`     |
+| `eslint-plugin-babel`              | `5.1.0`     | `5.3.0`     |
+| `eslint-plugin-utils`              | `2.1.0`     | `2.3.0`     |
 
 #### Added Plugins
 
-| Package | Version |
-| ------- | ------- |
-| eslint-plugin-react-hooks | 1.5.0 |
-| @typescript-eslint/eslint-plugin | 1.5.0 |
-| "@typescript-eslint/parser | 1.5.0 |
-| babel-eslint | 10.0.1 |
+| Package                          | Version |
+| -------------------------------- | ------- |
+| eslint-plugin-react-hooks        | 1.5.0   |
+| @typescript-eslint/eslint-plugin | 1.5.0   |
+| "@typescript-eslint/parser       | 1.5.0   |
+| babel-eslint                     | 10.0.1  |
 
 #### Removed Plugins
 
@@ -500,17 +501,17 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 * Updated dependencies that support the new ESLint documentation URL metadata. Errors from these plugins are accompanied by a link to the documentation for the broken rule.
 * Dependencies are now strictly versioned for tighter control over the exact rules the plugin enforces.
 
-| Package | old | new |
-| ------- | --- | --- |
-| `eslint-plugin-ava` | `^4.4.0` | `4.5.1` |
-| `eslint-plugin-import` | `^2.8.0` | `2.9.0` |
-| `eslint-plugin-jest` | `^21.5.0` | `21.14.1` |
-| `eslint-plugin-lodash` | `^2.5.0`  | `2.6.1` |
-| `eslint-plugin-node` | `^5.2.1`  | `6.0.1` |
-| `eslint-plugin-prettier` | `^2.4.0`  | `2.6.0` |
-| `eslint-plugin-promise` | `^3.6.0`  | `3.7.0` |
-| `eslint-plugin-react` | `^7.5.1`  | `7.7.0` |
-| `eslint-plugin-typescript` | `^0.8.1`  | `0.10.0` |
+| Package                    | old       | new       |
+| -------------------------- | --------- | --------- |
+| `eslint-plugin-ava`        | `^4.4.0`  | `4.5.1`   |
+| `eslint-plugin-import`     | `^2.8.0`  | `2.9.0`   |
+| `eslint-plugin-jest`       | `^21.5.0` | `21.14.1` |
+| `eslint-plugin-lodash`     | `^2.5.0`  | `2.6.1`   |
+| `eslint-plugin-node`       | `^5.2.1`  | `6.0.1`   |
+| `eslint-plugin-prettier`   | `^2.4.0`  | `2.6.0`   |
+| `eslint-plugin-promise`    | `^3.6.0`  | `3.7.0`   |
+| `eslint-plugin-react`      | `^7.5.1`  | `7.7.0`   |
+| `eslint-plugin-typescript` | `^0.8.1`  | `0.10.0`  |
 
 * Added rules:
   - [`react/forbid-dom-props`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-dom-props.md) (disabled)
