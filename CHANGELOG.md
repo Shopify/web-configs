@@ -1,5 +1,9 @@
 # Changelog
 
+## [34.0.1] - 2019-01-13
+
+- fix enabled graphql rules by specifying `env: 'literal'` ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/518))
+
 ## [34.0.0] - 2019-01-13
 
 - changed `no-vague-titles` rule to catch blacklisted **words** (instead of **sequences**) in the title ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/514))
