@@ -8,7 +8,6 @@ const ruleTester = new RuleTester({
 
 function errorWithName(name) {
   return {
-    type: 'Identifier',
     message: `Enum '${name}' should use Pascal case.`,
   };
 }
@@ -43,6 +42,10 @@ ruleTester.run('prefer-pascal-case-enums', rule, {
     {
       code: `enum SortOrder {MOSTRECENT, least_recent, Newest, Oldest}`,
       errors: [errorWithName('MOSTRECENT'), errorWithName('least_recent')],
+    },
+    {
+      code: `enum Example {'foo' = 'bar', '1024x1024' = '1024x1024', Oldest}`,
+      errors: [errorWithName('foo')],
     },
   ],
 });
