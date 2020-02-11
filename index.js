@@ -5,7 +5,6 @@ module.exports = {
     'images-no-direct-imports': require('./lib/rules/images-no-direct-imports'),
     'jest/no-all-mocks-methods': require('./lib/rules/jest/no-all-mocks-methods'),
     'jest/no-snapshots': require('./lib/rules/jest/no-snapshots'),
-    'jest/no-vague-titles': require('./lib/rules/jest/no-vague-titles'),
     'jsx-no-complex-expressions': require('./lib/rules/jsx-no-complex-expressions'),
     'jsx-no-hardcoded-content': require('./lib/rules/jsx-no-hardcoded-content'),
     'jsx-prefer-fragment-wrappers': require('./lib/rules/jsx-prefer-fragment-wrappers'),

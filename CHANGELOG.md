@@ -1,5 +1,9 @@
 # Changelog
 
+## [Unreleased]
+
+- remove `no-vague-titles` because the rule was adopted into `eslint-plugin-jest`'s `valid-title` rule. See [the `valid-title` documentation](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md#disallowedwords)
+
 ## [34.0.1] - 2019-01-13
 
 - fix enabled graphql rules by specifying `env: 'literal'` ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/518))
