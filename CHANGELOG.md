@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [35.0.0] - 2020-02-14
+
 - remove `no-vague-titles` because the rule was adopted into `eslint-plugin-jest`'s `valid-title` rule. See [the `valid-title` documentation](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md#disallowedwords)
 - Fixed an issue with `typescript/prefer-pascal-case-enum` when you had enum with key as string. ([517](https://github.com/Shopify/eslint-plugin-shopify/pull/517))
 
