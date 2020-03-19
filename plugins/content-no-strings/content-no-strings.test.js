@@ -1,7 +1,6 @@
-const testRule = require('stylelint-test-rule-tape');
 const contentNoStrings = require('.');
 
-testRule(contentNoStrings.rule, {
+testRule(contentNoStrings, {
   ruleName: contentNoStrings.ruleName,
   config: true,
   skipBasicChecks: true,

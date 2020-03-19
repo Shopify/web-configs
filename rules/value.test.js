@@ -1,4 +1,3 @@
-const testRule = require('stylelint-test-rule-tape');
 const rule = require('stylelint/lib/rules/value-keyword-case');
 
 testRule(rule, {

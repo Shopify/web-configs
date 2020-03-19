@@ -10,12 +10,10 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "check": "yarn lint && yarn test",
-    "test:rules": "tape ./rules/*.test.js",
-    "test:plugins": "tape ./plugins/**/*.test.js",
-    "test": "yarn test:rules && yarn test:plugins"
+    "test": "jest ./rules/*.test.js ./plugins/**/*.test.js"
   },
   "engines": {
-    "node": ">=8.10.0"
+    "node": ">=8.12.0"
   },
   "keywords": [
     "stylelint",
@@ -32,8 +30,12 @@
   "eslintConfig": {
     "extends": [
       "plugin:shopify/esnext",
-      "plugin:shopify/node"
-    ]
+      "plugin:shopify/node",
+      "plugin:shopify/jest"
+    ],
+    "globals": {
+      "testRule": "readonly"
+    }
   },
   "dependencies": {
     "merge": "1.2.x",
@@ -45,14 +47,18 @@
   "devDependencies": {
     "eslint": "^5.4.0",
     "eslint-plugin-shopify": "^24.0.0",
-    "stylelint": "9.5.0",
-    "stylelint-test-rule-tape": "^0.2.0",
-    "tape": "^4.9.1"
+    "jest": "^25.1.0",
+    "stylelint": "9.5.0"
   },
   "peerDependencies": {
     "stylelint": ">=9.4.0"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jest-setup.js"
+    ]
   }
 }
