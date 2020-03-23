@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [35.1.0] - 2020-03-23
+
+- Update `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` to 2.25.0, to support new syntax introduced in Typescript 3.8. ([#523](https://github.com/Shopify/eslint-plugin-shopify/pull/523))
+
 ## [35.0.0] - 2020-02-14
 
 - remove `no-vague-titles` because the rule was adopted into `eslint-plugin-jest`'s `valid-title` rule. See [the `valid-title` documentation](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md#disallowedwords)
