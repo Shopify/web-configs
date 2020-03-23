@@ -2,4 +2,4 @@ name: stylelint-config-shopify
 up:
   - node:
       yarn: v1.19.1
-      version: v10.17.0
+      version: v10.10.0
