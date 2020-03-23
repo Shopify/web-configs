@@ -1,6 +1,8 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+- Add jest and bump node to 10.0.0 ([#55](https://github.com/Shopify/stylelint-config-shopify/pull/55)
 
 ## [7.4.0] - 2019-12-16
 
