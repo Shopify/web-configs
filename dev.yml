@@ -1,0 +1,5 @@
+name: eslint-plugin-shopify
+up:
+  - node:
+      yarn: v1.19.1
+      version: v8.10.0
