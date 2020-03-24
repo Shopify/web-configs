@@ -2,7 +2,10 @@
 
 ## [Unreleased]
 
+### Changed
+
 - Add jest and bump node to 10.0.0 ([#55](https://github.com/Shopify/stylelint-config-shopify/pull/55)
+- Rename "rules" folder - which contains config for existing rules to be "config"; Rename "plugins" folder which contains our custom rule definitions to be "rules". This matches the layout used by eslint-plugin-shopify. ([#56](https://github.com/Shopify/stylelint-config-shopify/pull/56))
 
 ## [7.4.0] - 2019-12-16
 

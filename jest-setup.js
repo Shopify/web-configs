@@ -3,7 +3,7 @@ const stylelint = require('stylelint');
 // this is kinda wonky, and if we update stylelint and use the standalone
 // version I think we can avoid needing this, but that's a job for later
 const plugins = [
-  './plugins/content-no-strings',
+  './rules/content-no-strings',
 ];
 
 
