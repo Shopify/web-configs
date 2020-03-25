@@ -1,5 +1,5 @@
 {
   "presets": [
-    ["shopify/node", {"modules": "commonjs"}]
+    ["babel-preset-shopify/node", {"modules": "commonjs"}]
   ]
 }
