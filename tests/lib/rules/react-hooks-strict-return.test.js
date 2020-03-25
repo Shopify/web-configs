@@ -133,6 +133,11 @@ ruleTester.run('react-hooks-strict-return', rule, {
         return;
       }`,
     },
+    {
+      code: `export default function() {
+        return;
+      }`,
+    },
   ],
   invalid: [
     {
