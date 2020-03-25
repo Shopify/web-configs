@@ -1,0 +1,5 @@
+{
+  // See https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser#configuration
+  // we need to specify which files we want to lint
+  "include": ["./*.ts", "../prettier-config/*.ts"]
+}

@@ -1,0 +1,104 @@
+{
+  "name": "eslint-plugin-shopify",
+  "version": "35.1.0",
+  "description": "Shopify’s ESLint rules and configs.",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslintplugin",
+    "eslint-config",
+    "eslint-plugin"
+  ],
+  "author": "Shopify",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "check": "yarn run lint && yarn test",
+    "rules-status": "eslint-index tests/enable-all-configs.js --format table",
+    "rules-omitted": "eslint-index tests/enable-all-configs.js --status omitted",
+    "find-rules": "eslint-find-rules ./lib/config/all.js",
+    "lint": "eslint . --max-warnings 0 --format codeframe",
+    "prettier": "eslint --format codeframe . --fix",
+    "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check",
+    "test": "jest --maxWorkers=2"
+  },
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "shopify"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/eslint-plugin-shopify/issues"
+  },
+  "homepage": "https://github.com/Shopify/eslint-plugin-shopify",
+  "repository": "https://github.com/Shopify/eslint-plugin-shopify",
+  "eslintConfig": {
+    "plugins": [
+      "self"
+    ],
+    "extends": [
+      "plugin:self/esnext",
+      "plugin:self/node",
+      "plugin:self/prettier",
+      "plugin:self/jest"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/fixtures"
+    ],
+    "collectCoverage": false
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/register": "7.7.4",
+    "@babel/runtime-corejs2": "^7.6.3",
+    "babel-preset-shopify": "^21.0.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.7.2",
+    "eslint-find-rules": "^3.3.1",
+    "eslint-index": "^1.5.0",
+    "eslint-plugin-self": "^1.2.0",
+    "graphql": "^14.2.1",
+    "istanbul": "^0.4.5",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "eslint": "^6.0.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "babel-eslint": "10.0.3",
+    "change-case": "^4.0.1",
+    "common-tags": "^1.8.0",
+    "eslint-config-prettier": "6.7.0",
+    "eslint-module-utils": "2.5.0",
+    "eslint-plugin-babel": "5.3.0",
+    "eslint-plugin-eslint-comments": "3.1.2",
+    "eslint-plugin-graphql": "3.1.0",
+    "eslint-plugin-import": "2.19.1",
+    "eslint-plugin-jest": "23.7.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-prettier": "3.1.2",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "7.17.0",
+    "eslint-plugin-react-hooks": "2.3.0",
+    "eslint-plugin-sort-class-members": "1.6.0",
+    "eslint-plugin-typescript": "0.14.0",
+    "merge": "1.2.1",
+    "pkg-dir": "4.2.0",
+    "pluralize": "^8.0.0"
+  }
+}

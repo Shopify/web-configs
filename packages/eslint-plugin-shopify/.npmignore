@@ -1,0 +1,7 @@
+tests
+node_modules
+.editorconfig
+.eslintignore
+coverage
+*.log
+shipit.yml
