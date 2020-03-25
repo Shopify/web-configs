@@ -1,0 +1,59 @@
+{
+  "name": "babel-preset-shopify",
+  "version": "21.0.0",
+  "description": "Shopify's org-wide Babel preset",
+  "main": "index.js",
+  "author": {
+    "name": "Shopify",
+    "email": "dev@shopify.com"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/Shopify/babel-preset-shopify",
+  "repository": "https://github.com/Shopify/babel-preset-shopify",
+  "scripts": {
+    "check": "yarn run lint",
+    "lint": "eslint --max-warnings=0 ."
+  },
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "shopify"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/babel-preset-shopify/issues"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:shopify/esnext",
+      "plugin:shopify/node"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-shopify": "^33.0.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-dynamic-import": "^7.7.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/plugin-syntax-nullish-coalescing-operator": "^7.7.4",
+    "@babel/plugin-syntax-optional-chaining": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "@babel/plugin-transform-react-constant-elements": "^7.7.4",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.4",
+    "babel-plugin-react-test-id": "^1.0.2",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.3"
+  },
+  "optionalDependencies": {
+    "react-hot-loader": "^4.6.0"
+  }
+}
