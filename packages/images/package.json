@@ -1,0 +1,34 @@
+{
+  "name": "@shopify/images",
+  "version": "2.0.0",
+  "description": "Packages to help us wrangle images at Shopify.",
+  "license": "MIT",
+  "typings": "index.d.ts",
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "test": "jest --config ./config/jest/config.json",
+    "test:watch": "yarn run test -- --watch",
+    "check": "yarn run lint && yarn run test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:shopify/esnext",
+      "plugin:shopify/node"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/images.git"
+  },
+  "devDependencies": {
+    "babel-jest": "^25.1.0",
+    "babel-preset-shopify": "^21.0.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-shopify": "^35.1.0",
+    "jest": "^25.1.0",
+    "svgo": "^1.3.2"
+  }
+}
