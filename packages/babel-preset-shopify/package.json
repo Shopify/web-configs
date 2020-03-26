@@ -12,10 +12,6 @@
   },
   "homepage": "https://github.com/Shopify/babel-preset-shopify",
   "repository": "https://github.com/Shopify/babel-preset-shopify",
-  "scripts": {
-    "check": "yarn run lint",
-    "lint": "eslint --max-warnings=0 ."
-  },
   "license": "MIT",
   "babel": {
     "presets": [
@@ -24,16 +20,6 @@
   },
   "bugs": {
     "url": "https://github.com/Shopify/babel-preset-shopify/issues"
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:shopify/esnext",
-      "plugin:shopify/node"
-    ]
-  },
-  "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-plugin-shopify": "^33.0.0"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",

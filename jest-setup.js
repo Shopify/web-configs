@@ -3,9 +3,8 @@ const stylelint = require('stylelint');
 // this is kinda wonky, and if we update stylelint and use the standalone
 // version I think we can avoid needing this, but that's a job for later
 const plugins = [
-  './rules/content-no-strings',
+  './packages/stylelint-config-shopify/rules/content-no-strings',
 ];
-
 
 global.testRule = (rule, schema) => {
   expect.extend({
@@ -54,13 +53,11 @@ global.testRule = (rule, schema) => {
 
               // Check the fix
               // eslint-disable-next-line promise/no-nesting, consistent-return
-              return stylelint
-                .lint({fix: true, ...options})
-                .then((output2) => {
-                  const fixedCode = getOutputCss(output2);
+              return stylelint.lint({fix: true, ...options}).then((output2) => {
+                const fixedCode = getOutputCss(output2);
 
-                  expect(fixedCode).toBe(testCase.code);
-                });
+                expect(fixedCode).toBe(testCase.code);
+              });
             });
           });
         });
@@ -111,13 +108,11 @@ global.testRule = (rule, schema) => {
 
               // Check the fix
               // eslint-disable-next-line promise/no-nesting, consistent-return
-              return stylelint
-                .lint({fix: true, ...options})
-                .then((output2) => {
-                  const fixedCode = getOutputCss(output2);
+              return stylelint.lint({fix: true, ...options}).then((output2) => {
+                const fixedCode = getOutputCss(output2);
 
-                  expect(fixedCode).toBe(testCase.fixed);
-                });
+                expect(fixedCode).toBe(testCase.fixed);
+              });
             });
           });
         });

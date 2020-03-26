@@ -1,0 +1,10 @@
+node_modules
+/coverage
+
+
+# Ignoring this for now as we can unpick it later.
+# This breaks because of how eslint-plugin-shopify used to be used to lint
+# itself and I've not yet worked out how to deal with that
+# Fun times: Commenting this out breaks end-to-end tests in eslint-plugin-shopify
+# Work out how to make that resilient
+packages/eslint-plugin-shopify/tests/fixtures

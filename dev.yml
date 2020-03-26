@@ -1,4 +1,4 @@
-name: stylelint-config-shopify
+name: web-foundation
 up:
   - node:
       yarn: v1.19.1
