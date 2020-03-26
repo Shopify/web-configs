@@ -2,8 +2,16 @@
 
 This repo is the living guide to how we build web UI at Shopify. It captures the [principles](Principles) we use to make decisions, our [best practices](Best%20practices) and [styleguides](Styleguides) for writing UI code, and a [log of decisions](Decision%20records) that led us to this foundation. It also provides a list of [resources](Resources) for mastering the different parts of web UI development.
 
-## Contributions
+## Want to contribute?
 
-The foundation, contrary to its name, is not set in stone. We expect tools, best practices, and even principles to evolve over time as our needs change. Importantly, there is no `.github/CODEOWNERS` file in this repo; we hope that every developer at Shopify will lend a hand in evolving our web foundation to make things better for every developer (and, merchant!) that uses a Shopify product on the web.
+Check out our [Contributing Guide](./.github/CONTRIBUTING.md)
 
-If you want to recommend changes, create a PR. If you want to start a discussion about how we can improve our existing standards, open an issue. If you’ve done a deep dive into an architectural decision and want to codify it for future developers, create a decision record and commit it to the repo.
+## Questions?
+
+For Shopifolk, you can reach out to us in Slack in the `#web-foundation-tech` channel. For external inquiries, we welcome bug reports, enhancements, and feature requests via Github issues.
+
+## License
+
+MIT &copy; [Shopify](https://shopify.com/), see [LICENSE.md](LICENSE.md) for details.
+
+<a href="http://www.shopify.com/"><img src="https://cdn.shopify.com/assets2/brand-assets/shopify-logo-main-8ee1e0052baf87fd9698ceff7cbc01cc36a89170212ad227db3ff2706e89fd04.svg" alt="Shopify" width="200" /></a>
