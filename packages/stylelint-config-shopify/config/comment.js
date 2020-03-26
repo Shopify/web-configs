@@ -1,9 +1,12 @@
 module.exports = {
   // Require or disallow an empty line before comments.
-  'comment-empty-line-before': ['always', {
-    except: ['first-nested'],
-    ignore: ['stylelint-commands'],
-  }],
+  'comment-empty-line-before': [
+    'always',
+    {
+      except: ['first-nested'],
+      ignore: ['stylelint-commands'],
+    },
+  ],
   // Disallow empty comments.
   'comment-no-empty': true,
   // Require a single space or disallow whitespace on the inside of comment markers.

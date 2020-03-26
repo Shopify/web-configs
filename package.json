@@ -6,13 +6,12 @@
   ],
   "scripts": {
     "test": "jest",
-    "lint": "eslint . --max-warnings 0 --format codeframe",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "publish": "lerna publish"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-self": "^1.2.0",
     "jest": "^25.2.0",
     "lerna": "^3.20.2",
     "prettier": "^2.0.2"
@@ -24,23 +23,6 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/fixtures"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "plugin:shopify/esnext",
-      "plugin:shopify/node",
-      "plugin:shopify/prettier",
-      "plugin:shopify/jest"
-    ],
-    "globals": {
-      "testRule": "readonly"
-    },
-    "overrides": [
-      {
-        "files": ["packages/eslint-plugin-shopify/tests/fixtures/**/*"],
-        "rules": {"prettier/prettier": "off"}
-      }
     ]
   }
 }

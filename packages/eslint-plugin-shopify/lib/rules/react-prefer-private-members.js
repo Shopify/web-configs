@@ -36,7 +36,7 @@ module.exports = {
         }
         componentName = node.id.name;
       },
-      'ClassDeclaration:exit': function(node) {
+      'ClassDeclaration:exit': function (node) {
         if (utils.isES6Component(node)) {
           isES6Component--;
         }

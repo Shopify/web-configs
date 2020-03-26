@@ -1,9 +1,7 @@
 module.exports = function shopifyNonStandardPlugins(options = {}) {
   const {inlineEnv = false, typescript = false} = options;
 
-  const plugins = [
-    require.resolve('@babel/plugin-syntax-dynamic-import'),
-  ];
+  const plugins = [require.resolve('@babel/plugin-syntax-dynamic-import')];
 
   if (inlineEnv) {
     plugins.push(
@@ -21,10 +19,19 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
       require.resolve('@babel/plugin-syntax-nullish-coalescing-operator'),
       require.resolve('@babel/plugin-syntax-optional-chaining'),
       [require.resolve('@babel/plugin-proposal-decorators'), {legacy: true}],
-      [require.resolve('@babel/plugin-proposal-class-properties'), {loose: true}],
+      [
+        require.resolve('@babel/plugin-proposal-class-properties'),
+        {loose: true},
+      ],
       require.resolve('@babel/plugin-proposal-numeric-separator'),
-      [require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'), {loose: true}],
-      [require.resolve('@babel/plugin-proposal-optional-chaining'), {loose: true}],
+      [
+        require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
+        {loose: true},
+      ],
+      [
+        require.resolve('@babel/plugin-proposal-optional-chaining'),
+        {loose: true},
+      ],
     );
   } else {
     plugins.push(require.resolve('@babel/plugin-proposal-class-properties'));

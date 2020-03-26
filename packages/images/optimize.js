@@ -1,9 +1,6 @@
 function svgOptions() {
   return {
-    plugins: [
-      {removeTitle: true},
-      {removeViewBox: false},
-    ],
+    plugins: [{removeTitle: true}, {removeViewBox: false}],
   };
 }
 

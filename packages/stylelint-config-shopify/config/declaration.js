@@ -1,12 +1,18 @@
 module.exports = {
   // Disallow duplicate properties within declaration blocks.
-  'declaration-block-no-duplicate-properties': [true, {
-    ignore: 'consecutive-duplicates',
-  }],
+  'declaration-block-no-duplicate-properties': [
+    true,
+    {
+      ignore: 'consecutive-duplicates',
+    },
+  ],
   // Disallow longhand properties that can be combined into one shorthand property.
-  'declaration-block-no-redundant-longhand-properties': [true, {
-    ignoreShorthands: ['/^grid.*/'],
-  }],
+  'declaration-block-no-redundant-longhand-properties': [
+    true,
+    {
+      ignoreShorthands: ['/^grid.*/'],
+    },
+  ],
   // Disallow shorthand properties that override related longhand properties within declaration blocks.
   'declaration-block-no-shorthand-property-overrides': true,
   // Require a newline or disallow whitespace after the semicolons of declaration blocks.
@@ -32,9 +38,12 @@ module.exports = {
   // Require a single space or disallow whitespace before the colon of declarations.
   'declaration-colon-space-before': 'never',
   //  Require or disallow an empty line before declarations.
-  'declaration-empty-line-before': ['never', {
-    ignore: ['after-declaration', 'inside-single-line-block'],
-  }],
+  'declaration-empty-line-before': [
+    'never',
+    {
+      ignore: ['after-declaration', 'inside-single-line-block'],
+    },
+  ],
   // Disallow !important within declarations.
   'declaration-no-important': true,
   // Specify a blacklist of disallowed property and unit pairs within declarations.

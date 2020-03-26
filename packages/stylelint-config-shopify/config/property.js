@@ -1,9 +1,12 @@
 module.exports = {
   // Require or disallow an empty line before custom properties.
-  'custom-property-empty-line-before': ['always', {
-    except: ['after-comment', 'after-custom-property', 'first-nested'],
-    ignore: ['inside-single-line-block'],
-  }],
+  'custom-property-empty-line-before': [
+    'always',
+    {
+      except: ['after-comment', 'after-custom-property', 'first-nested'],
+      ignore: ['inside-single-line-block'],
+    },
+  ],
   // Specify pattern of custom properties.
   'custom-property-pattern': null,
   // Specify a blacklist of disallowed properties.

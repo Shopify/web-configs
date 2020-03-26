@@ -1,11 +1,7 @@
 const merge = require('merge');
 
 module.exports = {
-  plugins: [
-    'stylelint-scss',
-    'stylelint-order',
-    './rules/content-no-strings',
-  ],
+  plugins: ['stylelint-scss', 'stylelint-order', './rules/content-no-strings'],
   rules: merge(
     require('./config/at-rule'),
     require('./config/block'),

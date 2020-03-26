@@ -1,7 +1,7 @@
 const {docsUrl} = require('../utilities');
 
 function createSinonMatcher(aliases, injected) {
-  return function(object) {
+  return function (object) {
     return (
       (injected && object.type === 'ThisExpression') ||
       (object.type === 'Identifier' && aliases.indexOf(object.name) >= 0)
@@ -10,7 +10,7 @@ function createSinonMatcher(aliases, injected) {
 }
 
 function createPropertyMatcher(properties) {
-  return function(property) {
+  return function (property) {
     return (
       property.type === 'Identifier' && properties.indexOf(property.name) >= 0
     );

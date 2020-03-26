@@ -19,22 +19,12 @@ module.exports = {
     // Weird properties
     {
       order: 'flexible',
-      properties: [
-        'content',
-        'quotes',
-      ],
+      properties: ['content', 'quotes'],
     },
     // Positioning
     {
       order: 'flexible',
-      properties: [
-        'position',
-        'z-index',
-        'top',
-        'right',
-        'bottom',
-        'left',
-      ],
+      properties: ['position', 'z-index', 'top', 'right', 'bottom', 'left'],
     },
     // Box model
     {

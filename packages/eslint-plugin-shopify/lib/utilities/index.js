@@ -82,13 +82,7 @@ function normalizeSource(source, context) {
 
   const sourceWithoutExtension = INDEX_FILE.test(sourceBasename)
     ? sourceDir
-    : join(
-        sourceDir,
-        sourceBasename
-          .split('.')
-          .slice(0, -1)
-          .join('.'),
-      );
+    : join(sourceDir, sourceBasename.split('.').slice(0, -1).join('.'));
 
   return sourceWithoutExtension.replace(/^node_modules\//, '');
 }

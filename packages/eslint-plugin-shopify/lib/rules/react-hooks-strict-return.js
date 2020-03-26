@@ -27,7 +27,7 @@ module.exports = {
 
         inHook++;
       },
-      'VariableDeclarator:exit': function(node) {
+      'VariableDeclarator:exit': function (node) {
         if (!isHook(node)) {
           return;
         }
@@ -41,7 +41,7 @@ module.exports = {
 
         inHook++;
       },
-      'FunctionDeclaration:exit': function(node) {
+      'FunctionDeclaration:exit': function (node) {
         if (!isHook(node)) {
           return;
         }
@@ -150,7 +150,7 @@ function flatten(arr) {
   if (!Array.isArray(arr)) {
     return arr;
   }
-  return arr.reduce(function(flat, toFlatten) {
+  return arr.reduce(function (flat, toFlatten) {
     return flat.concat(
       Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten,
     );

@@ -11,21 +11,21 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
   } = options;
 
   const presets = [
-    [require.resolve('@babel/preset-env'), {
-      modules,
-      useBuiltIns,
-      corejs,
-      targets: browsers,
-      debug,
-    }],
+    [
+      require.resolve('@babel/preset-env'),
+      {
+        modules,
+        useBuiltIns,
+        corejs,
+        targets: browsers,
+        debug,
+      },
+    ],
   ];
 
   if (typescript) {
-    presets.push(
-      require.resolve('@babel/preset-typescript'),
-    );
+    presets.push(require.resolve('@babel/preset-typescript'));
   }
-
 
   return {
     presets,

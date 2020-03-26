@@ -13,7 +13,7 @@ module.exports = function shopifyReactPreset(api, options = {}) {
     );
   }
 
-  const isDevelopment = (env === 'development') || (env === 'test');
+  const isDevelopment = env === 'development' || env === 'test';
   if (isDevelopment && options.hot) {
     plugins.unshift(
       // Enable hot loading
@@ -27,12 +27,15 @@ module.exports = function shopifyReactPreset(api, options = {}) {
 
   return {
     presets: [
-      [require.resolve('@babel/preset-react'), {
-        useBuiltIns: true,
-        pragma,
-        pragmaFrag,
-        development: isDevelopment,
-      }],
+      [
+        require.resolve('@babel/preset-react'),
+        {
+          useBuiltIns: true,
+          pragma,
+          pragmaFrag,
+          development: isDevelopment,
+        },
+      ],
     ],
     plugins,
   };
