@@ -1,24 +1,28 @@
 {
   "name": "postcss-shopify",
   "version": "2.2.1",
-  "description": "All of Shopify’s recommended PostCSS plugins in one easy-to-use preset.",
-  "main": "index.js",
-  "repository": "https://github.com/Shopify/postcss-shopify.git",
-  "author": "Shopify <dev@shopify.com>",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
+  "description": "All of Shopify’s recommended PostCSS plugins in one easy-to-use preset.",
   "keywords": [
     "postcss",
     "postcss-plugin",
     "css",
     "shopify"
   ],
-  "scripts": {
-    "lint": "eslint . --max-warnings 0 --format codeframe",
-    "check": "yarn run lint"
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
   },
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "directory": "packages/postcss-shopify"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/web-foundation/issues"
+  },
+  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/postcss-shopify/README.md",
   "dependencies": {
     "autoprefixer": "9.3.1",
     "cssnano": "^4.1.7",
