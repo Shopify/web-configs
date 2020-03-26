@@ -1,6 +1,6 @@
 # Changelog
 
-<!-- ## Unreleased -->
+## [Unreleased]
 
 ## 21.0.0
 

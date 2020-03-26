@@ -1,5 +1,7 @@
 # Changelog
 
+<!-- ## [Unreleased] -->
+
 ## 2.0.0 - 2019-06-03
 
 - Removed `removeDimensions` svg optimization ([#13](https://github.com/Shopify/images/pull/13))
