@@ -1,5 +1,7 @@
 {
   "name": "web-foundation",
+  "author": "Shopify Inc.",
+  "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/*"
