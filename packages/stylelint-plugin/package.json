@@ -25,16 +25,16 @@
   },
   "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/stylelint-plugin/README.md",
   "dependencies": {
-    "merge": "1.2.x",
-    "stylelint-config-prettier": "^4.0.0",
-    "stylelint-order": "2.2.1",
-    "stylelint-prettier": "1.1.2",
-    "stylelint-scss": "3.13.0"
+    "merge": "^1.2.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-order": "^4.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.16.0"
   },
   "devDependencies": {
-    "stylelint": "9.5.0"
+    "stylelint": "^13.2.1"
   },
   "peerDependencies": {
-    "stylelint": ">=9.4.0"
+    "stylelint": ">=13.0.0"
   }
 }

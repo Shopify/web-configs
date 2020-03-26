@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+- Bump `stylelint-config-prettier@^4.0.0` to `stylelint-config-prettier@^8.0.1`
+- Bump `stylelint-order@^2.2.1` to `stylelint-order@^4.0.0`
+- Bump `stylelint-scss@^3.13.0` to `stylelint-scss@^3.16.0`
+- Bump the `stylelint` peerDependencies to `stylelint@>=13.0.0`
+
 The stylelint config is now scoped undo the `@shopify` name. This mean the name of the plugin is now `@shopify/stylelint-plugin`.
 
 
