@@ -28,6 +28,23 @@ function hasLineChunkNameComment(comments) {
     .find(isChunkNameComment);
 }
 
+function generateReport(node, comments) {
+  const chunkNameBlockComment = comments
+    .filter((comment) => comment.type === 'Block')
+    .find(isChunkNameComment);
+
+  if (!chunkNameBlockComment) {
+    return {
+      node,
+      message: hasLineChunkNameComment(comments)
+        ? 'webpackChunkName must be in a /* */ block comment'
+        : 'imports should have a webpackChunkName (https://webpack.js.org/api/module-methods/#import-)',
+    };
+  }
+
+  return null;
+}
+
 module.exports = {
   meta: {
     docs: {
@@ -41,24 +58,26 @@ module.exports = {
 
   create(context) {
     const source = context.getSourceCode();
+
     return {
+      'FunctionDeclaration ImportExpression': function (node) {
+        const comments = source.getComments(node.source).leading;
+        const report = generateReport(node, comments);
+
+        if (report != null) {
+          context.report(report);
+        }
+      },
       CallExpression(node) {
         if (!isDynamicImport(node)) {
           return;
         }
 
         const comments = source.getComments(node.arguments[0]).leading;
-        const chunkNameBlockComment = comments
-          .filter((comment) => comment.type === 'Block')
-          .find(isChunkNameComment);
+        const report = generateReport(node, comments);
 
-        if (!chunkNameBlockComment) {
-          context.report({
-            node,
-            message: hasLineChunkNameComment(comments)
-              ? 'webpackChunkName must be in a /* */ block comment'
-              : 'imports should have a webpackChunkName (https://webpack.js.org/api/module-methods/#import-)',
-          });
+        if (report != null) {
+          context.report(report);
         }
       },
     };
