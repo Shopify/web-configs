@@ -2,6 +2,24 @@
 
 ## [Unreleased]
 
+The stylelint config is now scoped undo the `@shopify` name. This mean the name of the plugin is now `@shopify/stylelint-plugin`.
+
+
+### Before
+
+```
+"stylelint": {
+  "extends": ["stylelint-config-shopify/prettier"]
+}
+```
+
+#### After
+```
+"stylelint": {
+  "extends": ["@shopify/stylelint-plugin/prettier"]
+}
+```
+
 ### Changed
 
 - Add jest and bump node to 10.0.0 ([#55](https://github.com/Shopify/stylelint-config-shopify/pull/55)

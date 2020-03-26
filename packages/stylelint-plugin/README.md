@@ -1,29 +1,30 @@
-# stylelint-config-shopify
-[![Circle CI](https://circleci.com/gh/Shopify/stylelint-config-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/stylelint-config-shopify)
-[![David-DM](https://david-dm.org/shopify/stylelint-config-shopify.svg)](https://david-dm.org/Shopify/stylelint-config-shopify)
+# `@shopify/stylelint-plugin`
+
+[![Build Status](https://travis-ci.org/Shopify/web-foundation.svg?branch=master)](https://travis-ci.org/Shopify/web-foundation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg) [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@shopify/stylelint-plugin.svg)](https://img.shields.io/bundlephobia/minzip/@shopify/stylelint-plugin.svg)
 
 Shopify's stylelint rules and config
 
 ## Installation
 
-Install [stylelint](https://stylelint.io/) and `stylelint-config-shopify`:
+Install [stylelint](https://stylelint.io/) and `@shopify/stylelint-plugin`:
 
 **With Yarn**
 ```
-yarn add --dev stylelint stylelint-config-shopify
+yarn add --dev stylelint @shopify/stylelint-plugin
 ```
 
 **With npm**
 ```
-npm install stylelint stylelint-config-shopify --save-dev
+npm install stylelint @shopify/stylelint-plugin --save-dev
 ```
 
 
 ## Usage
-Shopify’s stylelint rules come bundled in `stylelint-config-shopify`. To enable these rules, add a `stylelint` property in your `package.json`. See the [stylelint configuration docs](https://stylelint.io/user-guide/configuration/) for more details.
+Shopify’s stylelint rules come bundled in `@shopify/stylelint-pluginv`. To enable these rules, add a `stylelint` property in your `package.json`. See the [stylelint configuration docs](https://stylelint.io/user-guide/configuration/) for more details.
 ```
 "stylelint": {
-  "extends": ["stylelint-config-shopify"]
+  "extends": ["@shopify/stylelint-plugin"]
 }
 ```
 
@@ -61,7 +62,7 @@ Extend the config in your `package.json`:
 ```json
 "stylelint": {
   "extends": [
-    "stylelint-config-shopify/prettier"
+    "@shopify/stylelint-plugin/prettier"
   ]
 }
 ```

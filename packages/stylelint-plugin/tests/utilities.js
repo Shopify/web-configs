@@ -1,8 +1,6 @@
 const stylelint = require('stylelint');
 
-const plugins = [
-  './packages/stylelint-config-shopify/rules/content-no-strings',
-];
+const plugins = ['./packages/stylelint-plugin/rules/content-no-strings'];
 
 export function testRule(rule, schema) {
   expect.extend({
