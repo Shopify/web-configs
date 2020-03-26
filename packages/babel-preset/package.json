@@ -1,22 +1,23 @@
 {
-  "name": "babel-preset-shopify",
+  "name": "@shopify/babel-preset",
   "version": "21.0.0",
   "license": "MIT",
   "description": "Shopify's org-wide Babel preset",
   "main": "index.js",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
   },
   "author": "Shopify Inc.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Shopify/web-foundation.git",
-    "directory": "packages/babel-preset-shopify"
+    "directory": "packages/babel-preset"
   },
   "bugs": {
     "url": "https://github.com/Shopify/web-foundation/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/babel-preset-shopify/README.md",
+  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/babel-preset/README.md",
   "dependencies": {
     "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-class-properties": "^7.7.4",

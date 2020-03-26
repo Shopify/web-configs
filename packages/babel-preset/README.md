@@ -1,6 +1,7 @@
-# babel-preset-shopify
+# `@shopify/babel-preset`
 
-[![NPM version][npm-image]][npm-url]
+[![Build Status](https://travis-ci.org/Shopify/web-foundation.svg?branch=master)](https://travis-ci.org/Shopify/web-foundation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fbabel-preset.svg)](https://badge.fury.io/js/%40shopify%2Fbabel-preset.svg) [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@shopify/babel-preset.svg)](https://img.shields.io/bundlephobia/minzip/@shopify/babel-preset.svg)
 
 Shopify’s org-wide set of Babel transforms.
 
@@ -11,13 +12,13 @@ Install this package, as well as the parts of Babel you wish to use:
 **With Yarn**
 
 ```bash
-yarn add --dev --exact babel-core babel-preset-shopify
+yarn add --dev --exact babel-core @shopify/babel-preset
 ```
 
 **With npm**
 
 ```bash
-npm install babel-core babel-preset-shopify --save-dev --save-exact
+npm install babel-core @shopify/babel-preset --save-dev --save-exact
 ```
 
 Then, in your Babel configuration (which should be under the `babel` key of your `package.json`), set this package as the babel preset you’d like to use:
@@ -25,7 +26,7 @@ Then, in your Babel configuration (which should be under the `babel` key of your
 ```json
 {
   "babel": {
-    "presets": ["babel-preset-shopify/web"]
+    "presets": ["@shopify/babel-preset/web"]
   }
 }
 ```
@@ -34,9 +35,9 @@ Then, in your Babel configuration (which should be under the `babel` key of your
 
 This packages comes with several different presets for you to use, depending on your project:
 
-- `babel-preset-shopify`: The same as `babel-preset-shopify/web`.
+- `@shopify/babel-preset`: The same as `@shopify/babel-preset/web`.
 
-- `babel-preset-shopify/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that you have specified in your [browserslist config](https://github.com/browserslist/browserslist). Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`@shopify/polyfills`](https://github.com/Shopify/quilt/tree/master/packages/polyfills), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
+- `@shopify/babel-preset/web`: A preset to use for JavaScript that is meant to run in browsers. It compiles down features to only those supported by browsers that you have specified in your [browserslist config](https://github.com/browserslist/browserslist). Note that many modern JavaScript features, like `Map`s, `Set`s, `for of` loops, and more, require runtime polyfills (we recommend [`@shopify/polyfills`](https://github.com/Shopify/quilt/tree/master/packages/polyfills), as our `web` and `node` configs will reduce these imports to the set of features needed to polyfill your target environment).
 
   This preset accepts an options object. The following options are allowed:
 
@@ -46,7 +47,7 @@ This packages comes with several different presets for you to use, depending on 
       {
         "babel": {
           "presets": [
-            ["babel-preset-shopify/web", {"modules": false}]
+            ["@shopify/babel-preset/web", {"modules": false}]
           ]
         }
       }
@@ -58,7 +59,7 @@ This packages comes with several different presets for you to use, depending on 
       {
         "babel": {
           "presets": [
-            ["babel-preset-shopify/web", {
+            ["@shopify/babel-preset/web", {
               "browsers": ["last 3 versions"]
             }]
           ]
@@ -76,13 +77,13 @@ This packages comes with several different presets for you to use, depending on 
 
     - `useBuiltIns`, a string that is passed to the [`useBuiltIns` option of `@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env#usebuiltins)
 
-- `babel-preset-shopify/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules`, `typescript`, `inlineEnv`,`debug`, `corejs` and `useBuiltIns` options do the same thing they do in `babel-preset-shopify/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
+- `@shopify/babel-preset/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules`, `typescript`, `inlineEnv`,`debug`, `corejs` and `useBuiltIns` options do the same thing they do in `@shopify/babel-preset/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 
   ```json
   {
     "babel": {
       "presets": [
-        ["babel-preset-shopify/node", {
+        ["@shopify/babel-preset/node", {
           "modules": false,
           "version": 4
         }]
@@ -91,7 +92,7 @@ This packages comes with several different presets for you to use, depending on 
   }
   ```
 
-- `babel-preset-shopify/react`: Adds plugins that transform React (including JSX). You can use this preset with the `babel-preset-shopify/web` or `babel-preset-shopify/node` configuration.
+- `@shopify/babel-preset/react`: Adds plugins that transform React (including JSX). You can use this preset with the `@shopify/babel-preset/web` or `@shopify/babel-preset/node` configuration.
 
   This preset accepts an options object.
   - `hot` : Will automatically add plugins to enable hot reloading of React components. Note that this requires you to have a recent version of `react-hot-loader` installed as a dependency in your project.
@@ -102,7 +103,7 @@ This packages comes with several different presets for you to use, depending on 
   {
     "babel": {
       "presets": [
-        ["babel-preset-shopify/react", {"hot": true}]
+        ["@shopify/babel-preset/react", {"hot": true}]
       ]
     }
   }
@@ -115,8 +116,8 @@ As noted above, you can include multiple of these presets together. Some common 
 {
   "babel": {
     "presets": [
-      "babel-preset-shopify/web",
-      "babel-preset-shopify/react"
+      "@shopify/babel-preset/web",
+      "@shopify/babel-preset/react"
     ]
   }
 }
@@ -125,11 +126,8 @@ As noted above, you can include multiple of these presets together. Some common 
 {
   "babel": {
     "presets": [
-      ["babel-preset-shopify/node", {"modules": false}]
+      ["@shopify/babel-preset/node", {"modules": false}]
     ]
   }
 }
 ```
-
-[npm-url]: https://npmjs.org/package/babel-preset-shopify
-[npm-image]: http://img.shields.io/npm/v/babel-preset-shopify.svg?style=flat-square
