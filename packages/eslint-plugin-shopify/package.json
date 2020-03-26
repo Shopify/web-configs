@@ -1,6 +1,7 @@
 {
   "name": "eslint-plugin-shopify",
   "version": "35.1.0",
+  "license": "MIT",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
     "eslint",
@@ -9,44 +10,22 @@
     "eslint-config",
     "eslint-plugin"
   ],
-  "author": "Shopify",
-  "engines": {
-    "node": ">=8.10.0"
-  },
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "rules-status": "eslint-index tests/enable-all-configs.js --format table",
-    "rules-omitted": "eslint-index tests/enable-all-configs.js --status omitted",
-    "find-rules": "eslint-find-rules ./lib/config/all.js",
-    "prettier-check": "eslint --print-config ./lib/config/prettier.js | eslint-config-prettier-check"
-  },
-  "license": "MIT",
-  "babel": {
-    "presets": [
-      "shopify"
-    ]
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "directory": "packages/eslint-plugin-shopify"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/eslint-plugin-shopify/issues"
+    "url": "https://github.com/Shopify/web-foundation/issues"
   },
-  "homepage": "https://github.com/Shopify/eslint-plugin-shopify",
-  "repository": "https://github.com/Shopify/eslint-plugin-shopify",
+  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/eslint-plugin-shopify/README.md",
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/register": "7.7.4",
-    "@babel/runtime-corejs2": "^7.6.3",
-    "babel-preset-shopify": "^21.0.0",
-    "chai": "^4.2.0",
-    "eslint": "^6.8.0",
-    "eslint-find-rules": "^3.3.1",
-    "eslint-index": "^1.5.0",
+    "react": "^16.13.1",
     "graphql": "^14.2.1",
-    "istanbul": "^0.4.5",
-    "prettier": "^1.18.2",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
