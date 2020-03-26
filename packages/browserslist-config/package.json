@@ -1,25 +1,27 @@
 {
   "name": "@shopify/browserslist-config",
   "version": "2.1.0",
+  "license": "MIT",
   "description": "Shareable browserslist configuration for Shopify.",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shopify/browserslist-config.git"
-  },
   "keywords": [
     "Shopify",
     "browserslist"
   ],
-  "author": "Shopify Inc.",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Shopify/browserslist-config/issues"
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
   },
-  "homepage": "https://github.com/Shopify/browserslist-config#readme",
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "directory": "packages/browserslist-config"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/web-foundation/issues"
+  },
+  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/browserslist-config/README.md",
   "devDependencies": {
     "browserslist": "^4.3.4"
   }
