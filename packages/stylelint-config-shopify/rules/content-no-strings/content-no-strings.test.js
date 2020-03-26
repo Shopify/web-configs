@@ -1,3 +1,5 @@
+import {testRule} from '../../tests/utilities';
+
 const contentNoStrings = require('.');
 
 testRule(contentNoStrings, {

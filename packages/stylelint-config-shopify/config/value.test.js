@@ -1,5 +1,7 @@
 const rule = require('stylelint/lib/rules/value-keyword-case');
 
+const {testRule} = require('../tests/utilities');
+
 testRule(rule, {
   ruleName: rule.ruleName,
   config: require('./value')['value-keyword-case'],

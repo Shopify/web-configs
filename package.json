@@ -15,14 +15,5 @@
     "jest": "^25.2.0",
     "lerna": "^3.20.2",
     "prettier": "^2.0.2"
-  },
-  "jest": {
-    "setupFiles": [
-      "./jest-setup.js"
-    ],
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/fixtures"
-    ]
   }
 }

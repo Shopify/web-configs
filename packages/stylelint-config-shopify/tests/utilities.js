@@ -1,12 +1,10 @@
 const stylelint = require('stylelint');
 
-// this is kinda wonky, and if we update stylelint and use the standalone
-// version I think we can avoid needing this, but that's a job for later
 const plugins = [
   './packages/stylelint-config-shopify/rules/content-no-strings',
 ];
 
-global.testRule = (rule, schema) => {
+export function testRule(rule, schema) {
   expect.extend({
     toHaveMessage(testCase) {
       if (testCase.message === undefined) {
@@ -23,8 +21,7 @@ global.testRule = (rule, schema) => {
     },
   });
 
-  // eslint-disable-next-line jest/valid-describe
-  describe(schema.ruleName, () => {
+  describe(`${schema.ruleName}`, () => {
     const stylelintConfig = {
       plugins,
       rules: {
@@ -46,16 +43,17 @@ global.testRule = (rule, schema) => {
             };
 
             return stylelint.lint(options).then((output) => {
-              expect(output.results[0].warnings).toEqual([]);
+              // eslint-disable-next-line jest/no-standalone-expect
+              expect(output.results[0].warnings).toStrictEqual([]);
               if (!schema.fix) {
                 return;
               }
 
-              // Check the fix
-              // eslint-disable-next-line promise/no-nesting, consistent-return
+              // eslint-disable-next-line promise/no-nesting
               return stylelint.lint({fix: true, ...options}).then((output2) => {
                 const fixedCode = getOutputCss(output2);
 
+                // eslint-disable-next-line jest/no-standalone-expect
                 expect(fixedCode).toBe(testCase.code);
               });
             });
@@ -81,18 +79,22 @@ global.testRule = (rule, schema) => {
               const warnings = output.results[0].warnings;
               const warning = warnings[0];
 
+              // eslint-disable-next-line jest/no-standalone-expect
               expect(warnings.length).toBeGreaterThanOrEqual(1);
               // expect(testCase).toHaveMessage();
 
               if (testCase.message !== undefined) {
+                // eslint-disable-next-line jest/no-standalone-expect
                 expect(warning.text).toBe(testCase.message);
               }
 
               if (testCase.line !== undefined) {
+                // eslint-disable-next-line jest/no-standalone-expect
                 expect(warning.line).toBe(testCase.line);
               }
 
               if (testCase.column !== undefined) {
+                // eslint-disable-next-line jest/no-standalone-expect
                 expect(warning.column).toBe(testCase.column);
               }
 
@@ -107,10 +109,11 @@ global.testRule = (rule, schema) => {
               }
 
               // Check the fix
-              // eslint-disable-next-line promise/no-nesting, consistent-return
+              // eslint-disable-next-line promise/no-nesting
               return stylelint.lint({fix: true, ...options}).then((output2) => {
                 const fixedCode = getOutputCss(output2);
 
+                // eslint-disable-next-line jest/no-standalone-expect
                 expect(fixedCode).toBe(testCase.fixed);
               });
             });
@@ -119,7 +122,7 @@ global.testRule = (rule, schema) => {
       });
     }
   });
-};
+}
 
 function getOutputCss(output) {
   const result = output.results[0]._postcssResult;
@@ -127,39 +130,3 @@ function getOutputCss(output) {
 
   return css;
 }
-
-global.testConfig = (input) => {
-  let testFn;
-
-  if (input.only) {
-    testFn = test.only;
-  } else if (input.skip) {
-    testFn = test.skip;
-  } else {
-    testFn = test;
-  }
-
-  testFn(input.description, () => {
-    const config = {
-      plugins,
-      rules: {
-        [input.ruleName]: input.config,
-      },
-    };
-
-    return stylelint
-      .lint({
-        code: '',
-        config,
-      })
-      .then((data) => {
-        const invalidOptionWarnings = data.results[0].invalidOptionWarnings;
-
-        if (input.valid) {
-          expect(invalidOptionWarnings).toHaveLength(0);
-        } else {
-          expect(invalidOptionWarnings[0].text).toBe(input.message);
-        }
-      });
-  });
-};
