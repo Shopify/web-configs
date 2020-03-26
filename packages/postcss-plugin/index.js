@@ -2,7 +2,7 @@ const postcss = require('postcss');
 
 const features = require('./features');
 
-const plugin = postcss.plugin('postcss-shopify', (options = {}) => {
+const plugin = postcss.plugin('@shopify/postcss-plugin', (options = {}) => {
   const processor = postcss();
 
   Object.keys(features).forEach((key) => {

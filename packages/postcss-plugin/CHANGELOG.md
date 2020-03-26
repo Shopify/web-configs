@@ -1,6 +1,28 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+The postcss plugin is now scoped undo the `@shopify` name. This mean the name of the plugin is now `@shopify/postcss-plugin`.
+
+
+### Before
+
+```
+module.exports = {
+  plugins: {
+    'postcss-shopify',
+  },
+};
+```
+
+#### After
+```
+module.exports = {
+  plugins: {
+    '@shopify/postcss-plugin',
+  },
+};
+```
 
 ## [2.2.1] - 2019-01-17
 

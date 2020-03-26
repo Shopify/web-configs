@@ -1,18 +1,18 @@
-# postcss-shopify
+# `@shopify/postcss-plugin`
 
-[![NPM version][npm-image]][npm-url]
-[![Circle CI](https://circleci.com/gh/Shopify/postcss-shopify.svg?style=shield)](https://circleci.com/gh/Shopify/postcss-shopify)
+[![Build Status](https://travis-ci.org/Shopify/web-foundation.svg?branch=master)](https://travis-ci.org/Shopify/web-foundation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin.svg) [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@shopify/postcss-plugin.svg)](https://img.shields.io/bundlephobia/minzip/@shopify/postcss-plugin.svg)
 
 All of Shopify’s preferred [PostCSS](https://github.com/postcss/postcss) plugins wrapped up in a single, easy-to-use plugin.
 
 ## Installation
 
 ```bash
-yarn add --dev postcss-shopify
+yarn add --dev @shopify/postcss-plugin
 
 # or, with npm
 
-npm i postcss-shopify --save-dev
+npm i @shopify/postcss-plugin --save-dev
 ```
 
 ## Features
@@ -29,6 +29,3 @@ This plugin wraps around the following PostCSS transformations:
 ## Options
 
 This plugin accepts a single option, `minimize`. Passing `minimize: true` will turn on CSS minification via [cssnano](https://cssnano.co).
-
-[npm-url]: https://npmjs.org/package/postcss-shopify
-[npm-image]: http://img.shields.io/npm/v/postcss-shopify.svg?style=shield
