@@ -16,7 +16,7 @@ Testing is a vitally important part of writing code that is meant to withstand t
 
 ### Test the interface, not the implementation
 
-Unless required by a limitation of the test framework, you should never have to change your code exclusively for testing. Decide what parts of your API should be private, and maintain this restriction in your tests. If you depend on external functions in the code under test, consider mocking out those dependencies or, at a minimum, avoid testing them directly. This is an important part of our principle of considering [API over implementation](https://github.com/Shopify/web-foundation/blob/master/Principles/2%20-%20API%20over%20implementation.md).
+Unless required by a limitation of the test framework, you should never have to change your code exclusively for testing. Decide what parts of your API should be private, and maintain this restriction in your tests. If you depend on external functions in the code under test, consider mocking out those dependencies or, at a minimum, avoid testing them directly. This is an important part of our principle of considering [API over implementation](../Principles/2%20-%20API%20over%20implementation.md).
 
 Note that the meaning and size of “the interface” will depend greatly on the type of test, but that this rule applies regardless. When running unit tests, the interface is mostly comprised of functions. When running e2e tests, the interface includes things like the URL structure and user interface events.
 
@@ -42,7 +42,7 @@ Below are some specific applications of this principle:
 
   > Why? It is easy for test state to leak when using variables that are in scope of the entire test suite. It also means that the test has a clear "setup" step, allowing it to better stand on its own. Globals need to be mocked in these lifecycle hooks so that they can be restored correctly after the test; you should not restore mocks at the end of tests as it hurts the flow of the test and may not be run if the test fails.
   >
-  > This preference is an example of [preferring explicit over automatic](https://github.com/Shopify/web-foundation/blob/master/Principles/3%20-%20Explicit%20over%20automatic.md).
+  > This preference is an example of [preferring explicit over automatic](../Principles/3%20-%20Explicit%20over%20automatic.md).
 
   ```js
   // Example using Jest
@@ -182,7 +182,7 @@ Below are some specific applications of this principle:
 
 ### Tests support building software, never hinder it
 
-In order to prioritize the [user over ourselves](https://github.com/Shopify/web-foundation/blob/master/Principles/1%20-%20User%20over%20team%20over%20self.md), you should only write as many tests as you need to ensure quality and a lack of regressions over time. Do not be dogmatic about testing; don’t seek 100% code coverage for non-mission-critical systems, don’t test trivial code, and don’t test code that you already have confidence over through other mechanisms, like the type system.
+In order to prioritize the [user over ourselves](../Principles/1%20-%20User%20over%20team%20over%20self.md), you should only write as many tests as you need to ensure quality and a lack of regressions over time. Do not be dogmatic about testing; don’t seek 100% code coverage for non-mission-critical systems, don’t test trivial code, and don’t test code that you already have confidence over through other mechanisms, like the type system.
 
 In addition to the above, tests should be as simple as possible but no simpler. They should be easy to read and maintain, and should be as cheap to add and update as possible.
 

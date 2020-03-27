@@ -32,4 +32,4 @@ jest.mock();
 
 ## Further Reading
 
-- [Shopify Jest Best Practices](https://github.com/Shopify/web-foundation/blob/master/Best%20practices/Jest.md#best-practices)
+- [Shopify Jest Best Practices](https://github.com/Shopify/web-foundation/blob/master/handbook/Best%20practices/Jest.md#best-practices)

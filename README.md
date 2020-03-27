@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/Shopify/web-foundation/branch/master/graph/badge.svg)](https://codecov.io/gh/Shopify/web-foundation)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
-This repo is the living guide to how we build web UI at Shopify. It captures the [principles](Principles) we use to make decisions, our [best practices](Best%20practices) and [styleguides](Styleguides) for writing UI code, and a [log of decisions](Decision%20records) that led us to this foundation. It also provides a list of [resources](Resources) for mastering the different parts of web UI development.
+This repository contains common configuration and living [guidances](handbook) that Shopify uses to build web UI.
 
 ## Usage
 

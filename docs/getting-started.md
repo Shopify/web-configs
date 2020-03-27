@@ -2,7 +2,7 @@
 
 ## Technical foundation
 
-We are adding documentation as we go. You will find our [decision records](../Decision%20records), [principles](../Principles), [best practices](../Best%20practices) and [styleguides](../Styleguides) for writing and [testing](../Testing.md) different kinds of components.
+We are adding documentation as we go. You will find our [decision records](../handbook/Decision%20records), [principles](../handbook/Principles), [best practices](../handbook/Best%20practices) and [styleguides](../handbook/Styleguides) for writing and [testing](../handbook/Testing.md) different kinds of components.
 
 In addition to this documentation, contributors generally have an in-depth understanding of the following technologies:
 

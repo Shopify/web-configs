@@ -32,7 +32,7 @@ We recommend having a dedicated subdirectory for each hook "type", rather than h
 /app/hooks/form/tests/form.test.ts
 ```
 
-The example above works very well for hook-only situations, but does not work well when you also need to export context or other components alongside the hook. In cases like this, we prefer collocation of the files along the "theme" of the files, not based on the values exported from them (an application of [isolation over integration](https://github.com/Shopify/web-foundation/blob/master/Principles/4%20-%20Isolation%20over%20integration.md)). If you have code like this, follow the [context-based library organization](#context-based-library), but placed in a nested `utilities` directory:
+The example above works very well for hook-only situations, but does not work well when you also need to export context or other components alongside the hook. In cases like this, we prefer collocation of the files along the "theme" of the files, not based on the values exported from them (an application of [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration.md)). If you have code like this, follow the [context-based library organization](#context-based-library), but placed in a nested `utilities` directory:
 
 ```
 /app/components/MyComponent/utilities/my-feature/index.ts
@@ -145,7 +145,7 @@ export default function Routes() {
 }
 ```
 
-If your component depends on getting some of its properties "filled" by the route, we recommend putting that logic in this component. While components can conceivably get details about URL params and other details from within their component, doing so separates the logic of setting up the routes from where that logic is relied upon. Given that none of this logic is type-safe in most routing libraries, it is a recipe for hard-to-track bugs, and violates our principle of preferring [explicit over automatic patterns](https://github.com/Shopify/web-foundation/blob/master/Principles/3%20-%20Explicit%20over%20automatic.md).
+If your component depends on getting some of its properties "filled" by the route, we recommend putting that logic in this component. While components can conceivably get details about URL params and other details from within their component, doing so separates the logic of setting up the routes from where that logic is relied upon. Given that none of this logic is type-safe in most routing libraries, it is a recipe for hard-to-track bugs, and violates our principle of preferring [explicit over automatic patterns](../../Principles/3%20-%20Explicit%20over%20automatic.md).
 
 ```tsx
 // /app/foundation/Routes/Routes.tsx
