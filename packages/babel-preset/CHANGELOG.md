@@ -4,7 +4,7 @@
 
 🚨Package rename
 
-The babel preset is now scoped under the `@shopify` name. This mean the name of the preset is now `@shopify/babel-preset`.
+This package has been renamed from `babel-preset-shopify` to `@shopify/babel-preset`.
 
 
 ### Before

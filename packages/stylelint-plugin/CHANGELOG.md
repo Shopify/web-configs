@@ -9,7 +9,7 @@
 
 🚨Package rename
 
-The stylelint config is now scoped undo the `@shopify` name. This mean the name of the plugin is now `@shopify/stylelint-plugin`.
+This package has been renamed from `stylelint-config-shopify` to `@shopify/stylelint-plugin.`. Update any configuration to use this new name.
 
 
 ### Before

@@ -6,10 +6,7 @@
 
 🚨Package rename
 
-The ESLint plugin is now scoped under the `@shopify` name. This mean the name of the plugin is now `@shopify`.
-Every shopify rules are now prefixed with the `@shopify` instead of only `shopify`.
-
-Your `eslintrc.js` config must change.
+This package has been renamed from `eslint-plugin-shopify` to `@shopify/eslint-plugin`. You must update you eslint config to account for the new name, when referencing the plugin and individual rules.
 
 ### Before
 

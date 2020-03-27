@@ -4,7 +4,7 @@
 
 🚨Package rename
 
-The postcss plugin is now scoped under the `@shopify` name. This mean the name of the plugin is now `@shopify/postcss-plugin`.
+This package has been renamed from `postcss-shopify` to `@shopify/postcss-plugin.`. Update any configuration to use this new name
 
 
 ### Before
