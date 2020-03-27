@@ -12,7 +12,7 @@ In addition to this documentation, contributors generally have an in-depth under
 - Node.JS
 - Jest
 
-If you're looking to enhance your understanding of these technologies, fell free to reach out in `#web-foundation-tech` on Slack.
+If you're looking to enhance your understanding of these technologies, feel free to reach out in `#web-foundation-tech` on Slack.
 
 ## Tools
 

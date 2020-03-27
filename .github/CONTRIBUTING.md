@@ -33,12 +33,12 @@ dev up
 
 We are adding documentation as we go in the [Web Foundation repo](https://github.com/Shopify/web-foundation). There you will find our [decision records](https://github.com/Shopify/web-foundation/tree/master/Decision%20records), [principles](https://github.com/Shopify/web-foundation/tree/master/Principles), [best practices](https://github.com/Shopify/web-foundation/tree/master/Best%20practices) and [styleguides](https://github.com/Shopify/web-foundation/tree/master/Styleguides) for writing and [testing](https://github.com/Shopify/web-foundation/blob/master/Best%20practices/Testing.md) different kinds of components.
 
-The [documentation](../documentation) directory in this repo covers the more granular technical aspects of this project. Of particular note for new folks are the following:
+The [documentation](../docs) directory in this repo covers the more granular technical aspects of this project. Of particular note for new folks are the following:
 
-- [Guides](../documentation/guides): a set of guides to help you get started developing with `web-foundation`. Of particular note for developers just starting on the project is our guide to [creating a new package](../documentation/guides/creating-a-new-package.md).
-- [FAQ](../documentation/FAQ.md): common questions about the project in general, as well as some of the technical pieces within.
-- [Resources](../documentation/resources.md): good resources for understanding this project’s tech stack.
-- [Getting started](../documentation/getting-started.md): some tools we recommend for getting the most out of this project.
+- [Guides](../docs/guides): a set of guides to help you get started developing with `web-foundation`. Of particular note for developers just starting on the project is our guide to [creating a new package](../docs/guides/creating-a-new-package.md).
+- [FAQ](../docs/FAQ.md): common questions about the project in general, as well as some of the technical pieces within.
+- [Resources](../docs/resources.md): good resources for understanding this project’s tech stack.
+- [Getting started](../docs/getting-started.md): some tools we recommend for getting the most out of this project.
 
 ## Testing your changes in a local project
 
@@ -46,11 +46,7 @@ To try out your changes in another locally cloned project, you can use `yarn top
 
 Example: To test my changes to `@shopify/react-form-state` in my local project named `cool-proj`, I would run `yarn tophat react-form-state ../path/to/cool-proj`.
 
-More usage instructions on the `tophat` command can be [found here](https://github.com/Shopify/webgen/blob/master/docs/TOPHAT.md).
-
-### Emoji commits
-
-We have found that prefacing a commit message or PR title with an emoji can be a great way to improve the developer experience when browsing the repo code. Additionally, it is a terse way to convey information. Many of our contributors have found the guide at https://gitmoji.carloscuesta.me/ to be helpful in preserving this dynamic.
+More usage instructions on the `tophat` command can be [found here](https://github.com/Shopify/tophat-web).
 
 ### Documentation
 
@@ -63,7 +59,7 @@ reflect this. Documentation is in the `README.md` files of each package. If furt
 
 The packages in Web-Foundation are used in mission-critical production scenarios. As such, we try not to merge any untested code. The coverage doesn't strictly need to be 100% across the board, but testing should remain a primary concern.
 
-To run the full test suite, simply run `dev test`. In order for tests to run properly, you may need to first run `dev build`
+To run the full test suite, simply run `dev test`.
 
 ### TODO Comments
 
@@ -79,7 +75,7 @@ Another option, if you'd like to break work down into reviewable chunks, is to u
 
 ## Releasing
 
-The release process currently involves some manual steps to complete. Please ping Web Foundations ATC in the `#web-foundation-tech` Slack channel when you're ready to merge a new PR into `master`, and we will orchestrate a new release. The repo owner can follow [this guide](../documentation/guides/release-and-deploy.md) to create a release.
+The release process currently involves some manual steps to complete. Please ping Web Foundations ATC in the `#web-foundation-tech` Slack channel when you're ready to merge a new PR into `master`, and we will orchestrate a new release. The repo owner can follow [this guide](../docs/guides/release-and-deploy.md) to create a release.
 
 **Note** Version numbers in `package.json` files should never be altered manually. This will be done via scripts as part of the release process.
 
