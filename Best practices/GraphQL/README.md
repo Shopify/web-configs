@@ -30,7 +30,7 @@ In addition to Sewing Kit’s GraphQL support, we have a number of GraphQL-speci
 
 The GraphQL client is a part of your application code responsible for making GraphQL network requests and, optionally, storing the data in some form of cache. Developers should use the simplest GraphQL "client" that suits the needs of their application. For simple applications, or applications that do not benefit from a cache of previously-requested data, this might mean performing raw `fetch` calls to a GraphQL endpoint.
 
-For more complex applications, we [recommend using Apollo](../../Decision%20records/02%20-%20Use%20Apollo%20as%20our%20GraphQL%20client). It offers an excellent balance of flexibility and built-in features for handling a wide variety of use cases.
+For more complex applications, we [recommend using Apollo](../../Decision%20records/02%20-%20Use%20Apollo%20as%20our%20GraphQL%20client.md). It offers an excellent balance of flexibility and built-in features for handling a wide variety of use cases.
 
 ### Where to construct a GraphQL client
 
