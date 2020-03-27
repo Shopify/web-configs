@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+- Changed the default `corejs` version for `node` and `web` presets (default = `3`) [[#48](https://github.com/Shopify/babel-preset-shopify/pull/48)]
+
 🚨Package rename
 
 This package has been renamed from `babel-preset-shopify` to `@shopify/babel-preset`.
