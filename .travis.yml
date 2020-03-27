@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '10.17.0'
+cache: yarn
+
+jobs:
+  include:
+    - name: 'Lint'
+      script:
+        - yarn run lint
+
+    - name: 'Unit Tests'
+      script:
+        - yarn run test --coverage
+        - yarn run codecov

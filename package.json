@@ -1,0 +1,31 @@
+{
+  "name": "web-foundation",
+  "author": "Shopify Inc.",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "publish": "lerna publish",
+    "release": "lerna publish",
+    "check": "lerna run check",
+    "release-beta": "lerna publish --dist-tag beta",
+    "generate": "plop",
+    "generate:package": "plop package && yarn plop docs",
+    "tophat": "tophat"
+  },
+  "devDependencies": {
+    "@shopify/tophat": "^0.0.4",
+    "codecov": "^3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.0",
+    "lerna": "^3.20.2",
+    "plop": "^2.6.0",
+    "prettier": "^2.0.2",
+    "watchpack": "^1.6.1"
+  }
+}

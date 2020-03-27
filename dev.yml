@@ -1,0 +1,12 @@
+name: web-foundation
+up:
+  - node:
+      yarn: v1.19.1
+      version: v10.17.0
+commands:
+  __default__: start
+  check: yarnpkg check
+  lint: yarnpkg lint
+  start: echo "Running web-foundation is not really a concept that makes sense."
+  test: yarnpkg test
+  generate: yarnpkg generate

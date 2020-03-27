@@ -17,12 +17,9 @@ Each package has its own `README` and documentation describing usage.
 
 | package |     |     |
 | ------- | --- | --- |
-| babel-preset | [directory](packages/babel-preset) | [![npm version](https://badge.fury.io/js/%40shopify%2Fbabel-preset.svg)](https://badge.fury.io/js/%40shopify%2Fbabel-preset) |
-| browserslist-config | [directory](packages/browserslist-config) | [![npm version](https://badge.fury.io/js/%40shopify%2Fbrowserslist-config.svg)](https://badge.fury.io/js/%40shopify%2Fbrowserslist-config) |
-| eslint-plugin | [directory](packages/eslint-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Feslint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Feslint-plugin) |
-| images | [directory](packages/images) | [![npm version](https://badge.fury.io/js/%40shopify%2Fimages.svg)](https://badge.fury.io/js/%40shopify%2Fimages) |
-| postcss-plugin | [directory](packages/postcss-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin) |
-| stylelint-plugin | [directory](packages/stylelint-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin) |
+{{#each jsPackageNames}}
+| {{this}} | [directory](packages/{{this}}) | [![npm version](https://badge.fury.io/js/%40shopify%2F{{this}}.svg)](https://badge.fury.io/js/%40shopify%2F{{this}}) |
+{{/each}}
 
 ## Want to contribute?
 

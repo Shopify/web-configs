@@ -1,0 +1,3 @@
+ci:
+  require:
+    - continuous-integration/travis-ci/push
