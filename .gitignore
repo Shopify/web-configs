@@ -43,7 +43,6 @@ lerna-debug.log
 tmp
 **/test.log
 
-*.tsbuildinfo# Built style type definitions
 *.scss.d.ts
 *.graphql.d.ts
 
