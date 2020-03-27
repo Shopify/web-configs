@@ -12,7 +12,7 @@ Shareable [browserslist](https://github.com/ai/browserslist) configuration for S
 | Chrome & Chrome for Android | last 3  |
 | Firefox                     | last 3  |
 | Opera                       | last 3  |
-| Edge                        | last 2  |
+| Edge                        | last 3  |
 | Safari                      | 10      |
 | iOS                         | 10      |
 
@@ -35,5 +35,3 @@ $ yarn add @shopify/browserslist-config
   "browserslist": ["extends @shopify/browserslist-config"]
 }
 ```
-
-<a href="http://www.shopify.com/"><img src="https://cdn.shopify.com/assets2/press/brand/shopify-logo-main-small-f029fcaf14649a054509f6790ce2ce94d1f1c037b4015b4f106c5a67ab033f5b.png" alt="Shopify" width="200" /></a>
