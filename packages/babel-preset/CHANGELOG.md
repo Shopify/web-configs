@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
-The babel preset is now scoped undo the `@shopify` name. This mean the name of the preset is now `@shopify/babel-preset`.
+🚨Package rename
+
+The babel preset is now scoped under the `@shopify` name. This mean the name of the preset is now `@shopify/babel-preset`.
 
 
 ### Before

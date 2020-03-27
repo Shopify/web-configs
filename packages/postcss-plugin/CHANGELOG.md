@@ -2,7 +2,9 @@
 
 ## [Unreleased]
 
-The postcss plugin is now scoped undo the `@shopify` name. This mean the name of the plugin is now `@shopify/postcss-plugin`.
+🚨Package rename
+
+The postcss plugin is now scoped under the `@shopify` name. This mean the name of the plugin is now `@shopify/postcss-plugin`.
 
 
 ### Before
