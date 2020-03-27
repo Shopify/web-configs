@@ -1,7 +1,7 @@
 # `@shopify/stylelint-plugin`
 
 [![Build Status](https://travis-ci.org/Shopify/web-foundation.svg?branch=master)](https://travis-ci.org/Shopify/web-foundation)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg) [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@shopify/stylelint-plugin.svg)](https://img.shields.io/bundlephobia/minzip/@shopify/stylelint-plugin.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)
 
 Shopify's stylelint rules and config
 

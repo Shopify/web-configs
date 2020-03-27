@@ -1,6 +1,7 @@
-# images
+# `@shopify/images`
 
-[![CircleCI](https://circleci.com/gh/Shopify/images.svg?style=shield)](https://circleci.com/gh/Shopify/images)
+[![Build Status](https://travis-ci.org/Shopify/web-foundation.svg?branch=master)](https://travis-ci.org/Shopify/web-foundation)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fimages.svg)](https://badge.fury.io/js/%40shopify%2Fimages.svg)
 
 Tools to help us wrangle images at Shopify.
 
