@@ -4,4 +4,4 @@ ci:
 
 deploy:
   override:
-    - node_modules/.bin/lerna publish from-package --no-push --no-git-tag-version --dist-tag=next
+    - node_modules/.bin/lerna publish from-git --no-push --no-git-tag-version --dist-tag=next
