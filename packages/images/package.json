@@ -1,6 +1,6 @@
 {
   "name": "@shopify/images",
-  "version": "2.0.0-initial-release-beta.4",
+  "version": "2.0.0-initial-release-beta.5",
   "license": "MIT",
   "description": "Packages to help us wrangle images at Shopify.",
   "typings": "index.d.ts",
