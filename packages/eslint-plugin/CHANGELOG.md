@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [36.0.1] - 2020-03-28
+
+- Fix an bug with '@shopify/react-no-multiple-render-methods'.
+
 ## [36.0.0] - 2020-03-28
 
 ### Breaking Change
