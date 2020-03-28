@@ -26,6 +26,13 @@ ruleTester.run('react-no-multiple-render-methods', rule, {
         render() {}
       }`,
     },
+    {
+      code: `class Button extends React.Component {
+        otherMethod() {
+          return () => {}
+        }
+      }`,
+    },
   ],
   invalid: [
     {

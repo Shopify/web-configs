@@ -39,7 +39,7 @@ module.exports = {
       },
 
       MethodDefinition(node) {
-        if (!isES6Component || isRenderMethod(node)) {
+        if (!isES6Component || !isRenderMethod(node)) {
           return;
         }
 
@@ -47,7 +47,7 @@ module.exports = {
       },
 
       ArrowFunctionExpression(node) {
-        if (!isES6Component || isRenderMethod(node)) {
+        if (!isES6Component || !isRenderMethod(node)) {
           return;
         }
 
@@ -59,7 +59,12 @@ module.exports = {
 
 function isRenderMethod(node) {
   const name = getMethodName(node);
-  return !name.match(/^render[a-zA-Z0-9]+/i);
+
+  if (name == null) {
+    return false;
+  }
+
+  return name.match(/^render[a-zA-Z0-9]+/i);
 }
 
 function getMethodName(node) {
