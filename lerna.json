@@ -3,9 +3,10 @@
   "npmClient": "yarn",
   "useWorkspaces": true,
   "version": "independent",
-  "command": {
-    "version": {
-      "ignoreChanges": ["**/*.md", "**/tests/**", "**/test/**"]
+  "commands": {
+    "publish": {
+      "skipNpm": true,
+      "ignore": ["**/*.md", "**/tests/**", "**/test/**"]
     }
   }
 }

@@ -11,7 +11,8 @@
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "check": "lerna run check",
     "generate": "plop",
-    "release": "lerna version --no-push",
+    "release": "lerna publish",
+    "release-beta": "lerna publish --dist-tag beta",
     "generate:package": "plop package && yarn plop docs",
     "tophat": "tophat"
   },
@@ -21,7 +22,7 @@
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25.2.0",
-    "lerna": "^3.20.2",
+    "lerna": "^2.11.0",
     "plop": "^2.6.0",
     "prettier": "^2.0.2",
     "watchpack": "^1.6.1"
