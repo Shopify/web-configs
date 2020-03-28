@@ -1,6 +1,6 @@
 {
   "name": "@shopify/stylelint-plugin",
-  "version": "7.4.0-initial-release-beta.2",
+  "version": "7.4.0-initial-release-beta.3",
   "license": "MIT",
   "description": "Shopify's stylelint rules and config",
   "keywords": [
