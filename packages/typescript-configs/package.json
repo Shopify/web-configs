@@ -1,0 +1,20 @@
+{
+  "name": "@shopify/typescript-configs",
+  "version": "2.0.1",
+  "license": "MIT",
+  "description": "A set of typescript configuration files that can be extended.",
+  "author": "Shopify Inc.",
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "directory": "packages/typescript-configs"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/web-foundation/issues"
+  },
+  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/typescript-configs/README.md"
+}

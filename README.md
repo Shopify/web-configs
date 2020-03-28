@@ -23,6 +23,7 @@ Each package has its own `README` and documentation describing usage.
 | images | [directory](packages/images) | [![npm version](https://badge.fury.io/js/%40shopify%2Fimages.svg)](https://badge.fury.io/js/%40shopify%2Fimages) |
 | postcss-plugin | [directory](packages/postcss-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin) |
 | stylelint-plugin | [directory](packages/stylelint-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin) |
+| typescript-configs | [directory](packages/typescript-configs) | [![npm version](https://badge.fury.io/js/%40shopify%2Ftypescript-configs.svg)](https://badge.fury.io/js/%40shopify%2Ftypescript-configs) |
 
 ## Want to contribute?
 
