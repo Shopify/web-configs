@@ -1,6 +1,6 @@
 {
   "name": "@shopify/browserslist-config",
-  "version": "2.1.0-initial-release-beta.1",
+  "version": "2.1.0-initial-release-beta.2",
   "license": "MIT",
   "description": "Shareable browserslist configuration for Shopify.",
   "keywords": [
@@ -24,5 +24,6 @@
   "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/browserslist-config/README.md",
   "devDependencies": {
     "browserslist": "^4.3.4"
-  }
+  },
+  "gitHead": "3bd5cbc28fff30f6a92c531fca80512776eedce4"
 }
