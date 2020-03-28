@@ -24,6 +24,5 @@
   "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/browserslist-config/README.md",
   "devDependencies": {
     "browserslist": "^4.3.4"
-  },
-  "gitHead": "3bd5cbc28fff30f6a92c531fca80512776eedce4"
+  }
 }
