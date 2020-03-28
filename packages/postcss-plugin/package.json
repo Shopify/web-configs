@@ -33,6 +33,5 @@
     "postcss-flexbugs-fixes": "4.1.0",
     "postcss-selector-matches": "4.0.0",
     "postcss-will-change": "3.0.0"
-  },
-  "gitHead": "3bd5cbc28fff30f6a92c531fca80512776eedce4"
+  }
 }

@@ -56,6 +56,5 @@
     "merge": "1.2.1",
     "pkg-dir": "4.2.0",
     "pluralize": "^8.0.0"
-  },
-  "gitHead": "3bd5cbc28fff30f6a92c531fca80512776eedce4"
+  }
 }

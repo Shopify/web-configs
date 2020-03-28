@@ -38,6 +38,5 @@
   },
   "optionalDependencies": {
     "react-hot-loader": "^4.6.0"
-  },
-  "gitHead": "3bd5cbc28fff30f6a92c531fca80512776eedce4"
+  }
 }
