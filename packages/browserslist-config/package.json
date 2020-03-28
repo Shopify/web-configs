@@ -1,6 +1,6 @@
 {
   "name": "@shopify/browserslist-config",
-  "version": "2.1.0",
+  "version": "2.1.0-initial-release-beta",
   "license": "MIT",
   "description": "Shareable browserslist configuration for Shopify.",
   "keywords": [
