@@ -9,11 +9,9 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
-    "publish": "lerna publish",
-    "release": "lerna publish",
     "check": "lerna run check",
-    "release-beta": "lerna publish --dist-tag beta",
     "generate": "plop",
+    "release": "lerna version --no-push",
     "generate:package": "plop package && yarn plop docs",
     "tophat": "tophat"
   },
