@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [2.0.1] - 2020-03-28
+
+- Update internal dependencies and update tests ([#10](https://github.com/Shopify/images/pull/10))
+
 ## 2.0.0 - 2019-06-03
 
 - Removed `removeDimensions` svg optimization ([#13](https://github.com/Shopify/images/pull/13))

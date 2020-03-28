@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [36.0.0] - 2020-03-28
 
 ### Breaking Change
 

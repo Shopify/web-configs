@@ -1,6 +1,8 @@
 # Changelog
 
-## [Unreleased]
+<!-- ## [Unreleased] -->
+
+## [8.0.0] - 2020-03-28
 
 - Bump `stylelint-config-prettier@^4.0.0` to `stylelint-config-prettier@^8.0.1`
 - Bump `stylelint-order@^2.2.1` to `stylelint-order@^4.0.0`
