@@ -1,3 +1,7 @@
 ci:
   require:
     - Travis CI - Branch
+
+deploy:
+  override:
+    - node_modules/.bin/lerna publish from-package --no-push --no-git-tag-version --dist-tag=next
