@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
-## [2.0.1] - 2020-03-28
+## [2.0.2] - 2020-03-28
 
 - Start of Changelog
+- Move the package from [`sewing-kit`](https://github.com/Shopify/sewing-kit).
+
