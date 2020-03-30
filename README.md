@@ -1,4 +1,7 @@
 [comment]: # (NOTE: This file is generated and should not be modify directly. Update `templates/ROOT_README.hbs.md` instead)
+
+**Note: Old documentations on the root level had been move inside the [handbook](handbook) directory of this repository**
+
 # Web foundation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
