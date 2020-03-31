@@ -95,7 +95,6 @@ This packages comes with several different presets for you to use, depending on 
 - `@shopify/babel-preset/react`: Adds plugins that transform React (including JSX). You can use this preset with the `@shopify/babel-preset/web` or `@shopify/babel-preset/node` configuration.
 
   This preset accepts an options object.
-  - `hot` : Will automatically add plugins to enable hot reloading of React components. Note that this requires you to have a recent version of `react-hot-loader` installed as a dependency in your project.
   - `pragma` : Replace the function used when compiling JSX expressions. Defaults to `React.createElement`.
   - `pragmaFrag`: Replace the function used when compiling JSX fragment expressions. Defaults to `React.Fragment`.
 
@@ -103,7 +102,7 @@ This packages comes with several different presets for you to use, depending on 
   {
     "babel": {
       "presets": [
-        ["@shopify/babel-preset/react", {"hot": true}]
+        ["@shopify/babel-preset/react", {"pragma": "React.createElement"}]
       ]
     }
   }

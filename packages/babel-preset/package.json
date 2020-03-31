@@ -35,8 +35,5 @@
     "@babel/preset-typescript": "^7.7.4",
     "babel-plugin-react-test-id": "^1.0.2",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3"
-  },
-  "optionalDependencies": {
-    "react-hot-loader": "^4.6.0"
   }
 }

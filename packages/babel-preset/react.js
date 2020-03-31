@@ -14,12 +14,6 @@ module.exports = function shopifyReactPreset(api, options = {}) {
   }
 
   const isDevelopment = env === 'development' || env === 'test';
-  if (isDevelopment && options.hot) {
-    plugins.unshift(
-      // Enable hot loading
-      require.resolve('react-hot-loader/babel'),
-    );
-  }
 
   if (env !== 'test') {
     plugins.push(require.resolve('babel-plugin-react-test-id'));
