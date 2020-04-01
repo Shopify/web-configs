@@ -6,107 +6,58 @@ This section describes a sensible starting point for organizing a React applicat
 
 ## Application
 
-### React Components and Sub-components
+### React Components (and sub-components)
 
 React Components should always exist in a `components/` folder, but the component's internal structure may change depending on their complexity.
 
-
 #### 1. Start with a file and a test
 
-At its simplest a component will exist as a component and a test at the `components/` level.
-
-If you foresee this component growing quickly in complexity or needing a subcomponent, feel free to jump straight to #2.
-```
-.
-└── components
-    ├── ...
-    ├── MyComponent.tsx
-    └── tests
-        ├── ...
-        └── MyComponent.test.tsx
-```
-
-
-#### 2. Isolate your component to a folder (of the same name) as the component grows
+For a new component, start with a PascalCased folder to contain all the files and create an `index.ts` file for the components exports, the component file and it's test.
 
 ```
-├── component.tsx
-└── components
-    └── MyComponent
-        ├── MyComponent.tsx
-        ├── MyComponent.scss
-        └── MyComponent.test.tsx
+MyComponent/
+├── index.ts
+├── MyComponent.tsx
+└── MyComponent.test.tsx
 ```
 
-When you move your component into it's own folder, you will need to figure out how to maintain all existing import paths.
+#### 2. Group related component files in folders
+
+As your component increases in complexity, it will start to have many dependencies. You'll create subcomponents, hooks, as well as multiple tests for all those extra dependencies. This is when we start to add folders to organize the complexity (and not before).
 
 ```
-import {MyComponent} from './components/MyComponent';
-// would need to become 👇
-import {MyComponent} from './components/MyComponent/MyComponent';
+MyComponent/
+├── index.ts
+├── MyComponent.tsx
+├── tests <--------------------------------- More than one test? Add a `tests/` folder!
+│   ├── MyComponent-layout.test.tsx
+│   └── MyComponent-uploader.test.tsx
+├── components <---------------------------- More than one subcomponent? Add a `components/` folder!
+│   ├── SubComponent.tsx
+│   └── OtherSubComponent.tsx
+└── index.ts
 ```
 
-You have several options to fix this problem:
+#### 3. If subcomponents get complex, continue the pattern
 
-1. rename the component's filename from `MyComponent.tsx` to `index.tsx` to
-2. create an `index.tsx` inside the component's folder that exports `MyComponent.tsx`
-3. create a `components.tsx` file next to the component's folder that exports each component in the `components/` folder.
+If one of your dependencies grows in size/complexity, continue applying steps 1-3 as needed.
 
-#### 3. As your component grows, group like-files in folders.
-
-Common types to group inside a component:
-- Multiple tests into `./tests/`
-- GraphQL queries and mutations in `./graphql/` (if there are still too many feel free to group those as well)
-- Utility files containing helpers in `./utilities/`
-- Sub-components of the component in it's own `./components/` subfolder
-- Hooks used in the component go to `./hooks/`
-- And so on...
-
-A more complex component could start to look like either of these examples. As always, choose the grouping or abstraction that makes sense to you.
+e.g. A subcomponent now needs a test? Apply rule #1 in the components folder 👇
 
 ```
-components
-└── ImportInventory
-    ├── index.ts
-    ├── ImportInventory.tsx
-    ├── components
-    │   ├── ImportCreated
-    │   │   ├── ImportCreated.tsx
-    │   │   └── ImportCreated.test.tsx
-    │   ├── ImportSubmitted
-    │   │   ├── ImportSubmitted.tsx
-    │   │   └── ImportSubmitted.test.tsx
-    │   └── InitialState
-    │       ├── InitialState.tsx
-    │       └── InitialState.test.tsx
-    ├── graphql
-    │   ├── InventoryImportCreateMutation.graphql
-    │   ├── InventoryImportSubmitMutation.graphql
-    │   └── InventoryStagedUploadMutation.graphql
-    └── tests
-        └── ImportInventory.test.tsx
-```
-
-or
-
-```
-components
-└── ImportInventory
-    ├── index.ts
-    ├── components
-    │   ├── ImportInventory.tsx
-    │   ├── ImportCreated.tsx
-    │   ├── ImportSubmitted.tsx
-    │   ├── InitialState.tsx
-    │   └── tests
-    │       ├── ImportCreated.test.tsx
-    │       ├── ImportSubmitted.test.tsx
-    │       ├── InitialState.test.tsx
-    │       └── ImportInventory.test.tsx
-    └── graphql
-        ├── InventoryImportCreateMutation.graphql
-        ├── InventoryImportSubmitMutation.graphql
-        └── InventoryStagedUploadMutation.graphql
+MyComponent/
+├── index.ts
+├── MyComponent.tsx
+├── tests
+│   ├── MyComponent-layout.test.tsx
+│   └── MyComponent-uploader.test.tsx
+├── components
+│   ├── SubComponent <---------------------- Notice how our SubComponent follows "Step #1"s structure?
+│   │   ├── index.ts
+│   │   ├── SubComponent.test.tsx
+│   │   └── SubComponent.tsx
+│   └── OtherSubComponent.tsx
+└── index.ts
 ```
 
 
