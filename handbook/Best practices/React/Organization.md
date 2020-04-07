@@ -5,8 +5,10 @@
 This section describes a sensible starting point for organizing a React application that supports server-side rendering.
 
 ## Application
+> `/app`
 
 ### React Components (and sub-components)
+> `/app/components` and `<Component>/components`
 
 React Components should always exist in a `components/` folder, but the component's internal structure may change depending on their complexity.
 
