@@ -1,6 +1,6 @@
 # TypeScript
 
-[TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript that we strongly advise projects to use in favour of vanilla JavaScript. This enables projects to leverage TypeScript's compiler to help catch a number of potential bugs and errors in projects well before it ships. In complement with TypeScript, the [VSCode editor](https://code.visualstudio.com/docs/languages/typescript) provides TypeScript language-specific features such as inline feedback from TypeScript typechecker. 
+[TypeScript](https://www.typescriptlang.org/) is a typed superset of JavaScript that we strongly advise projects to use in favour of vanilla JavaScript. This enables projects to leverage TypeScript's compiler to help catch a number of potential bugs and errors in projects well before it ships. In complement with TypeScript, the [VSCode editor](https://code.visualstudio.com/docs/languages/typescript) provides TypeScript language-specific features such as inline feedback from TypeScript's typechecker. 
 
 
 ## Table of contents
