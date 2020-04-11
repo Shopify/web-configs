@@ -6,8 +6,8 @@ March 28, 2017
 
 ## Contributors
 
-- Chris Sauve
-- Mallory Allen
+- Chris Sauvé
+- Mathew Allen
 - Utkarsh Saxena
 
 ## Summary
