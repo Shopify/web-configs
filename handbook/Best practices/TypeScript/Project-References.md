@@ -3,6 +3,7 @@
 ## Table of contents
 
 1. [What are Project References?](#what-are-project-references)
+1. [Why use Project References?](#why-use-project-references)
 1. [Migrating a codebase](#migrating-a-codebase)
 1. [Tips](#tips)
 1. [Caveats](#caveats)
@@ -10,6 +11,8 @@
 ## What are Project References?
 
 [Project References](https://www.typescriptlang.org/docs/handbook/project-references.html) is a new feature in TypeScript 3.0 that provides projects with built-in scalability by allowing you to better structure your code. By doing this, you can greatly improve build times, enforce logical separation between components, and organize your code in new and better ways.
+
+## Why use Project References?
 
 ### Code structure
 
