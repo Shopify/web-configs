@@ -9,9 +9,9 @@
 
 ## What are Project References?
 
-[Project References](https://www.typescriptlang.org/docs/handbook/project-references.html) provides built-in scalability for TypeScript. 
+[Project References](https://www.typescriptlang.org/docs/handbook/project-references.html) is a new feature in TypeScript 3.0 that provides projects with built-in scalability by allowing you to better structure your code. By doing this, you can greatly improve build times, enforce logical separation between components, and organize your code in new and better ways.
 
-### Code strucutre
+### Code structure
 
 Project references provide developers tools to separate their code into smaller blocks. This enforces logical guidelines across the codebase which results in healthier code over time. 
 
@@ -27,7 +27,7 @@ TypeScript's documentation and guidance on [Project References](https://www.type
 
 In most large codebases, migrating to Project References in one go is likely, not feasible. The migration would have to be done gradually over time. 
 
-We recommend starting out but identifying the leaf nodes in your project's depdency graph. These leaf nodes generally include the most widely used parts of your codebase. A good place to start might be the `packages/`, `tests/` or `app/utilities`. 
+We recommend starting out but identifying the leaf nodes in your project's dependency graph. These leaf nodes generally include the most widely used parts of your codebase. A good place to start might be the `packages/`, `tests/` or `app/utilities`. 
 
 In our experience, we've noticed that some `app/utilties` may be tightly coupled with `tests` utilties, `app` code and `packages/` . In some cases even resulting in circular dependencies. We suggest you identifying some of the these utilties and extracting them into isolated project references hosted in `packages/@<project>-utilties`.
 
@@ -35,7 +35,7 @@ In our experience, we've noticed that some `app/utilties` may be tightly coupled
 
 Start by creating an entrypoint for your project references. For simplicity, let's assume the leave nodes of your app consists of a `packages/` and `tests` directory. 
 
-```json
+```jsonc
 // config/typescript/project-references.tsconfig.json
 
 {
@@ -57,9 +57,9 @@ Start by creating an entrypoint for your project references. For simplicity, let
 }
 ```
 
-Whenever a project is referenced, that respective folder requires a root level `tsconfig.json` specifying the depedendcies that project references in-turn. In the case of the above mentioned `project-references.tsconfig.json`, the `../../packages` path reference looks for a `packages/tsconfig.json`. 
+Whenever a project is referenced, that respective folder requires a root level `tsconfig.json` specifying the dependencies that project references in turn. In the case of the above mentioned `project-references.tsconfig.json`, the `../../packages` path reference looks for a `packages/tsconfig.json`. 
 
-```json
+```jsonc
 // packages/tsconfig.json
 
 {
@@ -73,7 +73,7 @@ Whenever a project is referenced, that respective folder requires a root level `
 }
 ```
 
-```json
+```jsonc
 // packages/@shopify/package-a/tsconfig.json
 
 {
@@ -96,7 +96,7 @@ Whenever a project is referenced, that respective folder requires a root level `
 
 With the leaf nodes migrated to project references, you can now run the TypeScript compiler
 
-```
+```bash
 $ yarn run tsc -b config/typescript/project-references.tsconfig.json
 ```
 
@@ -112,7 +112,7 @@ It's very likely that you'll get a number of errors. The most common being that 
 
 With the leaf nodes migrated, the rest of the codebase should be better equipped to start migrating over. Start by deciding which top-level folders you would like to migrate. Then gradually pick which sections you would like to convert over and create a `tsconfig.json` for that respective section. 
 
-```
+```jsonc
 // app/sections/tsconfig.json
 
 {
