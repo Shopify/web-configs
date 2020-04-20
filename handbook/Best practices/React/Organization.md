@@ -4,11 +4,64 @@
 
 This section describes a sensible starting point for organizing a React application that supports server-side rendering.
 
-## `/app`
+## Application
+> `/app`
 
-### `/app/components` and `<Component>/components`
+### React Components (and sub-components)
+> `/app/components` and `<Component>/components`
 
-TODO
+React Components should always exist in a `components/` folder, but the component's internal structure may change depending on their complexity.
+
+#### 1. Start with a file and a test
+
+For a new component, start with a PascalCased folder to contain all the files and create an `index.ts` file for the components exports, the component file and it's test.
+
+```
+MyComponent/
+├── index.ts
+├── MyComponent.tsx
+└── MyComponent.test.tsx
+```
+
+#### 2. Group related component files in folders
+
+As your component increases in complexity, it will start to have many dependencies. You'll create subcomponents, hooks, as well as multiple tests for all those extra dependencies. This is when we start to add folders to organize the complexity (and not before).
+
+```
+MyComponent/
+├── index.ts
+├── MyComponent.tsx
+├── tests <--------------------------------- More than one test? Add a `tests/` folder!
+│   ├── MyComponent-layout.test.tsx
+│   └── MyComponent-uploader.test.tsx
+├── components <---------------------------- More than one subcomponent? Add a `components/` folder!
+│   ├── SubComponent.tsx
+│   └── OtherSubComponent.tsx
+└── index.ts
+```
+
+#### 3. If subcomponents get complex, continue the pattern
+
+If one of your dependencies grows in size/complexity, continue applying steps 1-3 as needed.
+
+e.g. A subcomponent now needs a test? Apply rule #1 in the components folder 👇
+
+```
+MyComponent/
+├── index.ts
+├── MyComponent.tsx
+├── tests
+│   ├── MyComponent-layout.test.tsx
+│   └── MyComponent-uploader.test.tsx
+├── components
+│   ├── SubComponent <---------------------- Notice how our SubComponent follows "Step #1"s structure?
+│   │   ├── index.ts
+│   │   ├── SubComponent.test.tsx
+│   │   └── SubComponent.tsx
+│   └── OtherSubComponent.tsx
+└── index.ts
+```
+
 
 ### `/app/hooks` and `<Component>/hooks`
 
