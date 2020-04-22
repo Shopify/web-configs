@@ -102,7 +102,7 @@ This packages comes with several different presets for you to use, depending on 
   {
     "babel": {
       "presets": [
-        ["@shopify/babel-preset/react", {"pragma": "React.createElement"}]
+        ["@shopify/babel-preset/react", {"pragma": "h"}]
       ]
     }
   }
