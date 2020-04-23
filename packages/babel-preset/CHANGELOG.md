@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [23.0.0] - 2020-04-23
+
+Remove `react-hot-loader` since `react-fast-refresh` is now used in sewing-kit [[#145](https://github.com/Shopify/web-foundation/pull/145)]
+
 ## [22.0.0] - 2020-03-28
 
 🚨Package rename
