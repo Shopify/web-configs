@@ -32,7 +32,7 @@ In most large codebases, migrating to Project References in one go is likely, no
 
 We recommend starting out but identifying the leaf nodes in your project's dependency graph. These leaf nodes generally include the most widely used parts of your codebase. A good place to start might be the `packages/`, `tests/` or `app/utilities`. 
 
-In our experience, we've noticed that some `app/utilties` may be tightly coupled with `tests` utilties, `app` code and `packages/` . In some cases even resulting in circular dependencies. We suggest you identifying some of the these utilties and extracting them into isolated project references hosted in `packages/@<project>-utilties`.
+In our experience, we've noticed that some `app/utilities` may be tightly coupled with `tests` utilities, `app` code and `packages/` . In some cases even resulting in circular dependencies. We suggest you identifying some of the these utilities and extracting them into isolated project references hosted in `packages/@<project>-utilities`.
 
 ### Starting at the leaf nodes
 
