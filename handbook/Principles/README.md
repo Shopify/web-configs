@@ -8,6 +8,6 @@ Note that the principles are ordered by their importance. Earlier principles sho
 * [Explicit over automatic](3%20-%20Explicit%20over%20automatic.md)
 * [Isolation over integration](4%20-%20Isolation%20over%20integration.md)
 * [Community over ownership](5%20-%20Community%20over%20ownership.md)
-* [Declarative over imperative](6%20-%20Declarative%20over%imperative.md)
+* [Declarative over imperative](6%20-%20Declarative%20over%20imperative.md)
 
 Finally, remember that these are only our principles, and they only exist for now; they will not make every decision, and they are not set in stone. As our needs change, we may update our principles, and as we encounter new problems, we should document how we applied these ideas to build solutions.
