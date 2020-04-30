@@ -14,8 +14,30 @@ module.exports = {
       uri: docsUrl('strict-component-boundaries'),
     },
     fixable: null,
+    schema: [
+      {
+        type: 'object',
+        properties: {
+          allow: {
+            type: 'array',
+            items: {type: 'string'},
+          },
+          maxDepth: {
+            type: 'integer',
+          },
+        },
+        additionalProperties: false,
+      },
+    ],
   },
   create(context) {
+    const {
+      options: [{allow = [], maxDepth = 1} = {}],
+    } = context;
+    const allowRegexps = (allow || []).map(
+      (pattern) => new RegExp(pattern, 'i'),
+    );
+
     function report(node) {
       context.report({
         node,
@@ -29,6 +51,7 @@ module.exports = {
         const resolvedSource = resolve(importSource, context);
 
         if (
+          isPathAllowed(allowRegexps, importSource) ||
           isCoreModule(resolvedSource) ||
           isNotFound(resolvedSource) ||
           inNodeModules(pathSegmantsFromSource(resolvedSource))
@@ -41,7 +64,7 @@ module.exports = {
 
         if (
           hasAnotherComponentInPath(pathDifferenceParts) &&
-          pathDifferenceParts.length > 1 &&
+          pathDifferenceParts.length > maxDepth &&
           !indexFile(pathDifference) &&
           !validFixtureImport(pathDifferenceParts)
         ) {
@@ -51,7 +74,7 @@ module.exports = {
 
         if (
           hasDirectoryInPath(pathDifferenceParts, 'components') &&
-          pathDifferenceParts.length > 2 &&
+          pathDifferenceParts.length > maxDepth + 1 &&
           !validFixtureImport(pathDifferenceParts)
         ) {
           report(node);
@@ -60,6 +83,10 @@ module.exports = {
     };
   },
 };
+
+function isPathAllowed(allowRegexps, importSource) {
+  return allowRegexps.some((re) => re.test(importSource));
+}
 
 function isNotFound(resolvedSource) {
   return resolvedSource === undefined;

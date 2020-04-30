@@ -62,6 +62,18 @@ ruleTester.run('strict-component-boundaries', rule, {
         'basic-app/app/components/Foo/components/Bar/index.js',
       ),
     },
+    {
+      code: `import someThing from './components/Foo';`,
+      parserOptions,
+      options: [{allow: ['components/\\w+$']}],
+      filename: fixtureFile('basic-app/app/index.js'),
+    },
+    {
+      code: `import someThing from './components/Foo';`,
+      parserOptions,
+      options: [{maxDepth: 2}],
+      filename: fixtureFile('basic-app/app/index.js'),
+    },
   ],
   invalid: [
     {
@@ -87,6 +99,20 @@ ruleTester.run('strict-component-boundaries', rule, {
       parserOptions,
       errors,
       filename: fixtureFile('basic-app/app/components/Foo/index.js'),
+    },
+    {
+      code: `import someThing from './components/Foo/Foo';`,
+      parserOptions,
+      options: [{allow: ['components/\\w+$']}],
+      errors,
+      filename: fixtureFile('basic-app/app/index.js'),
+    },
+    {
+      code: `import someThing from './components/Foo/Foo';`,
+      parserOptions,
+      options: [{maxDepth: 2}],
+      errors,
+      filename: fixtureFile('basic-app/app/index.js'),
     },
   ],
 });
