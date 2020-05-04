@@ -5,6 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Breaking Change
+
+The Shopify stylelint rules have been renamed to follow the `@shopify` namespace convention
+
+Before: 
+
+```
+module.exports = {
+  extends: ['@shopify/stylelint-plugin/prettier'],
+  rules: {
+    'shopify/content-no-strings': true,
+  },
+};
+```
+
+After: 
+
+```
+module.exports = {
+  extends: ['@shopify/stylelint-plugin/prettier'],
+  rules: {
+    '@shopify/content-no-strings': true,
+  },
+};
+```
+
 ## [8.1.0] - 2020-05-12
 
 - Loosen the `selector-class-pattern` rule to allow for hypens in class names ([#153](https://github.com/Shopify/web-foundation/pull/153))

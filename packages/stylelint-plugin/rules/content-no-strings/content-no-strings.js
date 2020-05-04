@@ -1,6 +1,6 @@
 const stylelint = require('stylelint');
 
-const ruleName = 'shopify/content-no-strings';
+const ruleName = '@shopify/content-no-strings';
 
 const messages = stylelint.utils.ruleMessages(ruleName, {
   rejected:
