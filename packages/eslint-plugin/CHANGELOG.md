@@ -2,6 +2,10 @@
 
 <!-- ## [Unreleased] -->
 
+## [36.1.0] - 2020-05-05
+
+- adding `allow` and `maxDepth` options to `strict-component-boundaries` rule. ([#150](https://github.com/Shopify/web-foundation/pull/150))
+
 ## [36.0.1] - 2020-03-28
 
 - Fix an bug with '@shopify/react-no-multiple-render-methods'.
