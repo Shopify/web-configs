@@ -25,6 +25,7 @@ Each package has its own `README` and documentation describing usage.
 | eslint-plugin | [directory](packages/eslint-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Feslint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Feslint-plugin) |
 | images | [directory](packages/images) | [![npm version](https://badge.fury.io/js/%40shopify%2Fimages.svg)](https://badge.fury.io/js/%40shopify%2Fimages) |
 | postcss-plugin | [directory](packages/postcss-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fpostcss-plugin) |
+| prettier-config | [directory](packages/prettier-config) | [![npm version](https://badge.fury.io/js/%40shopify%2Fprettier-config.svg)](https://badge.fury.io/js/%40shopify%2Fprettier-config) |
 | stylelint-plugin | [directory](packages/stylelint-plugin) | [![npm version](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Fstylelint-plugin) |
 | typescript-configs | [directory](packages/typescript-configs) | [![npm version](https://badge.fury.io/js/%40shopify%2Ftypescript-configs.svg)](https://badge.fury.io/js/%40shopify%2Ftypescript-configs) |
 
