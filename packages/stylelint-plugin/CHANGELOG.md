@@ -1,6 +1,8 @@
 # Changelog
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+- Loosen the `selector-class-pattern` rule to allow for hypens in class names ([#153](https://github.com/Shopify/web-foundation/pull/153))
 
 ## [8.0.0] - 2020-03-28
 
