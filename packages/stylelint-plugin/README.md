@@ -21,6 +21,7 @@ npm install stylelint @shopify/stylelint-plugin --save-dev
 
 
 ## Usage
+
 Shopify’s stylelint rules come bundled in `@shopify/stylelint-pluginv`. To enable these rules, add a `stylelint` property in your `package.json`. See the [stylelint configuration docs](https://stylelint.io/user-guide/configuration/) for more details.
 ```
 "stylelint": {

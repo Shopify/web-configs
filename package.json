@@ -9,9 +9,10 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
+    "lint:changelogs": "node scripts/lint-changelogs.js",
     "check": "lerna run check",
     "generate": "plop",
-    "release": "lerna publish",
+    "release": "yarn lint:changelogs && lerna publish",
     "release-beta": "lerna publish --dist-tag beta",
     "generate:package": "plop package && yarn plop docs",
     "tophat": "tophat"
@@ -21,6 +22,8 @@
     "codecov": "^3.6.5",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
+    "fs-extra": "^9.0.0",
+    "glob": "^7.1.6",
     "jest": "^25.2.0",
     "lerna": "^2.11.0",
     "plop": "^2.6.0",

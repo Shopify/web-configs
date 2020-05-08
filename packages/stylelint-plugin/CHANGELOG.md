@@ -1,5 +1,10 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
 ## [Unreleased]
 
 - Loosen the `selector-class-pattern` rule to allow for hypens in class names ([#153](https://github.com/Shopify/web-foundation/pull/153))
@@ -15,8 +20,7 @@
 
 This package has been renamed from `stylelint-config-shopify` to `@shopify/stylelint-plugin.`. Update any configuration to use this new name.
 
-
-### Before
+Before:
 
 ```
 "stylelint": {
@@ -24,7 +28,8 @@ This package has been renamed from `stylelint-config-shopify` to `@shopify/style
 }
 ```
 
-#### After
+After:
+
 ```
 "stylelint": {
   "extends": ["@shopify/stylelint-plugin/prettier"]
@@ -114,7 +119,7 @@ This package has been renamed from `stylelint-config-shopify` to `@shopify/style
 
 - Changed dependency: Use `stylelint-prettier` for prettier integration instead of `prettier-stylelint-formatter`. `stylelint-prettier` is a stylelint plugin that exposes prettier issues as stylelint rule violations. This means you can use `stylelint --fix` to fix formatting issues that prettier raises instead of having to use different executables for showing and autofixing issues.
 
-### Migration Suggestions
+Migration Suggestions:
 
 - If `stylelint-config-shopify/prettier` is used, please remove `prettier-stylelint-formatter` and update any scripts that referenced it to use run `stylelint --fix '**/*.scss'` to autofix issues.
 
@@ -151,7 +156,7 @@ The following patterns are _not_ considered violations:
 .foo::before { content: open-quote counter(section_counter) close-quote; }
 ```
 
-## [5.1.0] - 2018-07-05 [YANKED]
+## [5.1.0] - 2018-07-05
 
 - Use 5.1.1 instead.
 
@@ -170,7 +175,8 @@ The following patterns are _not_ considered violations:
 
 - Replaces [`prettier-stylelint`](https://github.com/hugomrdias/prettier-stylelint) with a [forked](https://github.com/ismail-syed/prettier-stylelint-formatter) version addressing an [issue](https://github.com/hugomrdias/prettier-stylelint/issues/3) [#23](https://github.com/Shopify/stylelint-config-shopify/pull/23)
 
-### Migration Suggestions
+Migration Suggestions:
+
 - If `stylelint-config-shopify/prettier` is used, please replace `prettier-stylelint` with `prettier-stylelint-formatter`.
 
     ```
@@ -188,14 +194,14 @@ The following patterns are _not_ considered violations:
 - Enforce property grouping, see [#10](https://github.com/Shopify/stylelint-config-shopify/pull/10)
 - Turn off `order/order` [#19](https://github.com/Shopify/stylelint-config-shopify/pull/19)
 
-### tl;dr
+tl;dr:
 
 - Put variables & custom properties at the top (unless anyone feels strongly about this)
 - Then come weird props, positioning & box model properties
 - All other properties come after
 - No specific property order is enforced
 
-### The following patterns are _not_ considered warnings:
+The following patterns are _not_ considered warnings:
 
 ```scss
 .Foo {
@@ -215,7 +221,7 @@ The following patterns are _not_ considered violations:
 }
 ```
 
-### The following patterns are considered warnings:
+The following patterns are considered warnings:
 
 ```scss
 .Foo {
@@ -232,21 +238,21 @@ The following patterns are _not_ considered violations:
   display: block;
 }
 ```
-
 
 ## [2.1.0] - 2017-08-25
 
-### Updated
-* [stylelint-scss](https://github.com/kristerkari/stylelint-scss) from `1.4.x` to `^2.0.1`
-* Replaced deprecated `scss/at-mixin-no-argumentless-call-parentheses` rule with its equivalent `scss/at-mixin-argumentless-call-parentheses`
-* `eslint-plugin-shopify` to the latest version, and updated ESLint to the appropriate version
 
 ### Changed
+
 * `media-feature-name-no-unknown` to ignore `prefers-reduced-motion`
+* [stylelint-scss](https://github.com/kristerkari/stylelint-scss) from `1.4.x` to `^2.0.1`
+* Replaced deprecated `scss/at-mixin-no-argumentless-call-parentheses` rule with its equivalent `scss/at-mixin-argumentless-call-parentheses`
+* Updated `eslint-plugin-shopify` to the latest version, and updated ESLint to the appropriate version
 
 ## [2.0.1] - 2017-07-28
 
 ### Changed
+
 * Set `selector-max-type` to 1
 
 ## [2.0.0] - 2017-07-27
@@ -293,9 +299,9 @@ The following patterns are _not_ considered violations:
 property: <top> <right> <bottom> <left>
 ```
 
-## 1.0.0 - 2017-05-29
-* Initial release
+## [1.0.0] - 2017-05-29
 
+* Initial release
 
 [Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.4.0...HEAD
 [7.3.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.3.0...v7.4.0
