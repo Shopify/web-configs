@@ -1,5 +1,10 @@
 # Changelog
 
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
 <!-- ## [Unreleased] -->
 
 ## [3.0.0] - 2020-03-28
@@ -8,8 +13,7 @@
 
 This package has been renamed from `postcss-shopify` to `@shopify/postcss-plugin.`. Update any configuration to use this new name
 
-
-### Before
+Before:
 
 ```
 module.exports = {
@@ -19,7 +23,8 @@ module.exports = {
 };
 ```
 
-#### After
+After:
+
 ```
 module.exports = {
   plugins: {
@@ -53,9 +58,11 @@ Breaking change: updated dependencies to use PostCSS 7.0.
 - Updated postcss-will-change: `^1.1.0` -> `^2.0.0` ([changelog](https://github.com/postcss/postcss-will-change/blob/master/CHANGELOG.md))
 
 ## [1.0.1] - 2018-01-17
+
 - Discard comments in the last processing step, allowing to use comments such as `/* autoprefixer: off */` ([#2](https://github.com/Shopify/postcss-shopify/pull/2))
 
-## 1.0.0 - 2017-03-05
+## [1.0.0] - 2017-03-05
+
 - Initial release
 
 [Unreleased]: https://github.com/Shopify/postcss-shopify/compare/v2.0.0...master
