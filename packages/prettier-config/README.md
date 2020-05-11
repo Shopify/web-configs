@@ -8,7 +8,14 @@ Shared prettier configuration
 ## Installation
 
 ```bash
-$ yarn add @shopify/prettier-config
+$ yarn add --dev @shopify/prettier-config
 ```
 
 ## Usage
+Shopify’s shared prettier config comes bundled in `@shopify/prettier-config`. To enable these rules, add a `prettier` property in your `package.json` and reference this shared config as follows:
+```
+"prettier": "@shopify/prettier-config"
+```
+Previously, rules had been defined directly in a `.prettierrc` or `package.json` 
+
+Any previous `.prettierrc` should be removed in favour of the shared config.
