@@ -1,0 +1,23 @@
+{
+  "name": "@shopify/prettier-config",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Shared prettier configuration",
+  "main": "index.json",
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "@shopify:registry": "https://registry.npmjs.org"
+  },
+  "author": "Shopify Inc.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "directory": "packages/prettier-config"
+  },
+  "bugs": {
+    "url": "https://github.com/Shopify/web-foundation/issues"
+  },
+  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/prettier-config/README.md",
+  "dependencies": {}
+}
