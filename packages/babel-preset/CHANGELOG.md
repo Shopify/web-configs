@@ -5,11 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Changed
+
+- Update `@babel/core`, `@babel/preset-env`, `@babel/plugin-transform-modules-commonjs` to `7.9.6` [[#155](https://github.com/Shopify/web-foundation/pull/155)]
 
 ## [23.0.0] - 2020-04-23
 
-Remove `react-hot-loader` since `react-fast-refresh` is now used in sewing-kit [[#145](https://github.com/Shopify/web-foundation/pull/145)]
+### Changed
+
+- Remove `react-hot-loader` since `react-fast-refresh` is now used in sewing-kit [[#145](https://github.com/Shopify/web-foundation/pull/145)]
 
 ## [22.0.0] - 2020-03-28
 
