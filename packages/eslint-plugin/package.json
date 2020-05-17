@@ -1,6 +1,6 @@
 {
   "name": "@shopify/eslint-plugin",
-  "version": "36.1.0",
+  "version": "37.0.0-packages-bump-beta.1",
   "license": "MIT",
   "description": "Shopify’s ESLint rules and configs.",
   "keywords": [
