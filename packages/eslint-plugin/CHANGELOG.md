@@ -7,6 +7,35 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+### Added
+
+The following new rules were introduced. More information can be found ([#157](https://github.com/Shopify/web-foundation/pull/157)).
+- [`react/jsx-no-script-url`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md)
+
+Facebook improved the `eslint-plugin-react-hooks` plugin. We may have to update the dependencies of some hooks.
+
+
+#### Updated Plugins
+
+| Package                            | Old version | New version |
+| ---------------------------------- | ----------- | ----------- |
+| `@typescript-eslint/eslint-plugin` | `2.25.0`    | `2.33.0`    |
+| `@typescript-eslint/parser`        | `2.25.0`    | `2.33.0`    |
+| `babel-eslint`                     | `10.0.3`    | `10.1.0`    |
+| `change-case`                      | `4.0.1`     | `4.1.1`     |
+| `eslint-config-prettier`           | `6.7.0`     | `6.11.0`    |
+| `eslint-module-utils`              | `2.5.0`     | `2.6.0`     |
+| `eslint-plugin-graphql`            | `3.1.0`     | `3.1.1`     |
+| `eslint-plugin-import`             | `2.19.1`    | `2.20.2`    |
+| `eslint-plugin-jest`               | `23.7.0`    | `23.13.0`   |
+| `eslint-plugin-node`               | `10.0.0`    | `11.1.0`    |
+| `eslint-plugin-prettier`           | `3.1.2`     | `3.1.3`     |
+| `eslint-plugin-react`              | `7.17.0`    | `7.20.0`    |
+| `eslint-plugin-react-hooks`        | `2.3.0`     | `4.0.2`     |
+| `eslint-plugin-sort-class-members` | `1.6.0`     | `1.7.0`     |
+| `merge`                            | `1.2.1`     | `1.2.1`     |
+| `pkg-dir`                          | `4.2.0`     | `4.2.0`     |
+
 ## [36.1.0] - 2020-05-05
 
 - adding `allow` and `maxDepth` options to `strict-component-boundaries` rule. ([#150](https://github.com/Shopify/web-foundation/pull/150))
