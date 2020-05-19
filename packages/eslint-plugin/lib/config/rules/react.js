@@ -99,6 +99,8 @@ module.exports = {
   'react/style-prop-object': 'error',
   // Prevent void DOM elements (e.g. <img />, <br />) from receiving children
   'react/void-dom-elements-no-children': 'error',
+  // Prevent usage of javascript: in URLs
+  'react/jsx-no-script-url': 'error',
 
   // JSX
 

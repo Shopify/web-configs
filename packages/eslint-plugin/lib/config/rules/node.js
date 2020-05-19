@@ -1,28 +1,40 @@
 // see http://eslint.org/docs/rules/#nodejs and https://github.com/mysticatea/eslint-plugin-node
 
 module.exports = {
-  // Enforce return after a callback
-  'callback-return': ['error', ['callback', 'cb', 'next']],
-  // Disallow require() outside of the top-level module scope
+  // Those rules will be remove with ESLint 7.0. We use the one from
+  // the node package, they can be remove when we move to eslint 7.0.
+  'callback-return': 'off',
   'global-require': 'off',
+  'handle-callback-err': 'off',
+  'no-mixed-requires': 'off',
+  'no-new-require': 'off',
+  'no-path-concat': 'off',
+  'no-process-exit': 'off',
+  'no-restricted-import': 'off',
+  'no-restricted-modules': 'off',
+  'no-sync': 'off',
+  // Enforce return after a callback
+  'node/callback-return': ['error', ['callback', 'cb', 'next']],
+  // Disallow require() outside of the top-level module scope
+  'node/global-require': 'off',
   // Enforces error handling in callbacks
-  'handle-callback-err': ['error', '^.*(e|E)rr(or)?$'],
+  'node/handle-callback-err': ['error', '^.*(e|E)rr(or)?$'],
   // Disallow use of the Buffer() constructor
   'no-buffer-constructor': 'error',
   // Disallow mixing regular variable and require declarations
-  'no-mixed-requires': 'off',
+  'node/no-mixed-requires': 'off',
   // Disallow use of new operator with the require function
-  'no-new-require': 'error',
+  'node/no-new-require': 'error',
   // Disallow string concatenation with __dirname and __filename
-  'no-path-concat': 'error',
+  'node/no-path-concat': 'error',
   // Disallow process.exit()
-  'no-process-exit': 'off',
+  'node/no-process-exit': 'off',
   // Restrict usage of specified node imports
-  'no-restricted-imports': 'off',
+  'node/no-restricted-import': 'off',
   // Restrict usage of specified node modules
-  'no-restricted-modules': 'off',
+  'node/no-restricted-require': 'off',
   // Disallow use of synchronous methods
-  'no-sync': 'off',
+  'node/no-sync': 'off',
   // Disallow import declarations of extraneous packages
   // defer to import/no-extraneous-dependencies
   'node/no-extraneous-import': 'off',

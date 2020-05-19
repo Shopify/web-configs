@@ -1,6 +1,13 @@
 // See https://github.com/typescript-eslint/typescript-eslint
 
 module.exports = {
+  // This rule extends the base eslint/keyword-spacing rule.
+  // This version adds support for generic type parameters on function calls.
+  'keyword-spacing': 'off',
+  '@typescript-eslint/keyword-spacing': [
+    'error',
+    {before: true, after: true, overrides: {}},
+  ],
   // Enforce one space after the colon and zero spaces before the colon of a type annotation.
   '@typescript-eslint/type-annotation-spacing': ['error'],
   // Require explicit return types on functions and class methods

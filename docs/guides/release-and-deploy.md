@@ -54,7 +54,7 @@ git push origin master --follow-tags
 
 ### Step 1 - Publish a `beta` release for testing
 
-- In your branch, run `yarn run release`. Lerna will launch it's CLI to select a version for the changed packages. Select the `Custom` option and enter a version with an appended `-beta.X` (eg. `0.29.10-my-feature-beta.1`). Many packages reference others. If your are prompted to version other packages, it is safe to do so.
+- In your branch, run `yarn run release-beta`. Lerna will launch it's CLI to select a version for the changed packages. Select the `Custom` option and enter a version with an appended `-beta.X` (eg. `0.29.10-my-feature-beta.1`). Many packages reference others. If your are prompted to version other packages, it is safe to do so.
 
   **Note:** Ensure your version includes the `-beta` text. This is how [shipit dictates](https://github.com/Shopify/shipit-engine/blob/master/lib/snippets/publish-lerna-independent-packages#L7-L12) a beta release.
 
