@@ -119,7 +119,7 @@ module.exports = {
   // Enforce or disallow spaces around equal signs in JSX attributes
   'react/jsx-equals-spacing': ['error', 'never'],
   // Restrict file extensions that may contain JSX
-  'react/jsx-filename-extension': ['error', {extensions: ['.js']}],
+  'react/jsx-filename-extension': ['error', {extensions: ['.jsx']}],
   // Enforce position of the first prop in JSX
   'react/jsx-first-prop-new-line': ['error', 'multiline'],
   // Enforce event handler naming conventions in JSX
