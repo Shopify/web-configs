@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [37.0.0] - 2020-05-19
+
 ### Added
 
 The following new rules were introduced. More information can be found ([#157](https://github.com/Shopify/web-foundation/pull/157)).
