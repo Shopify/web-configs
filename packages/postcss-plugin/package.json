@@ -1,6 +1,6 @@
 {
   "name": "@shopify/postcss-plugin",
-  "version": "3.0.1",
+  "version": "4.0.0-bump-deps-beta.1",
   "license": "MIT",
   "description": "All of Shopify’s recommended PostCSS plugins in one easy-to-use preset.",
   "keywords": [
