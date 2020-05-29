@@ -24,7 +24,7 @@ module.exports = {
     require('./config/unit'),
     require('./config/value'),
     {
-      'shopify/content-no-strings': null,
+      '@shopify/content-no-strings': null,
     },
   ),
 };
