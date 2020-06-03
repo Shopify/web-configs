@@ -13,8 +13,8 @@ Shareable [browserslist](https://github.com/ai/browserslist) configuration for S
 | Firefox                     | last 3  |
 | Opera                       | last 3  |
 | Edge                        | last 3  |
-| Safari                      | 10      |
-| iOS                         | 10      |
+| Safari                      | >=10    |
+| iOS                         | >=10    |
 
 [List all supported browsers](https://browserl.ist/?q=last+3+chrome+versions%2C+last+3+chromeandroid+versions%2C+last+3+firefox+versions%2C+last+3+opera+versions%2C+last+2+edge+versions%2C+safari+%3E%3D+10%2C+ios+%3E%3D+10%2C+android+%3E%3D+4.4)
 
