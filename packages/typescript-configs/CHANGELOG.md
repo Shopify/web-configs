@@ -11,6 +11,20 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Breaking Change
 
+The Shopify typescript definition for `.scss` and `.css` have changed.
+
+Before: 
+
+```
+import * as styles from 'foo.scss';
+```
+
+After: 
+
+```
+import styles from 'foo.scss';
+```
+
 - Updated the `*.scss` and `*.css` types for esmodules [[#165](https://github.com/Shopify/web-foundation/pull/165)]
 
 ## [2.0.2] - 2020-03-28
