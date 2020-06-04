@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [3.0.0] - 2020-06-04
+
 ### Breaking Change
 
 - Updated the `*.scss` and `*.css` types for esmodules [[#165](https://github.com/Shopify/web-foundation/pull/165)]
