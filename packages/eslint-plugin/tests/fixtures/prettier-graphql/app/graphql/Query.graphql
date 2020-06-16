@@ -1,6 +1,6 @@
 query IgnoredFooQuery {
-  foo        {
+  foo {
+    id
     bar
-
   }
 }
