@@ -72,6 +72,7 @@ function isValid(node) {
 function isReactLifeCycleMethod({key: {name}}) {
   return [
     'getDerivedStateFromProps',
+    'getDerivedStateFromError',
     'componentWillMount',
     'UNSAFE_componentWillMount',
     'componentDidMount',
