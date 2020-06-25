@@ -45,6 +45,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         constructor() {}
         getChildContext() {}
         getDerivedStateFromProps() {}
+        getDerivedStateFromError() {}
         componentWillMount() {}
         UNSAFE_componentWillMount() {}
         componentDidMount() {}
