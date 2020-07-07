@@ -30,7 +30,7 @@ TypeScript's documentation and guidance on [Project References](https://www.type
 
 In most large codebases, migrating to Project References in one go is likely, not feasible. The migration would have to be done gradually over time. 
 
-We recommend starting out but identifying the leaf nodes in your project's dependency graph. These leaf nodes generally include the most widely used parts of your codebase. A good place to start might be the `packages/`, `tests/` or `app/utilities`. 
+We recommend starting out by identifying the leaf nodes in your project's dependency graph. These leaf nodes generally include the most widely used parts of your codebase. A good place to start might be the `packages/`, `tests/` or `app/utilities`. 
 
 In our experience, we've noticed that some `app/utilities` may be tightly coupled with `tests` utilities, `app` code and `packages/` . In some cases even resulting in circular dependencies. We suggest you identifying some of the these utilities and extracting them into isolated project references hosted in `packages/@<project>-utilities`.
 
