@@ -14,7 +14,7 @@ React Components should always exist in a `components/` folder, but the componen
 
 #### 1. Start with a file and a test
 
-For a new component, start with a PascalCased folder to contain all the files and create an `index.ts` file for the components exports, the component file and it's test.
+For a new component, start with a PascalCased folder to contain all the files and create an `index.ts` file for the components exports, the component file, and its test.
 
 ```
 MyComponent/
@@ -65,8 +65,6 @@ MyComponent/
 
 ### `/app/hooks` and `<Component>/hooks`
 
-> **Note:** because hooks are so new, we haven’t been able to test these recommendations as much as we have for other parts of project structure. If you are trying to figure out where a hook should go, you should come discuss it with us in the `#web-foundation-tech` slack channel.
-
 [React Hooks](https://reactjs.org/docs/hooks-overview.html) provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). You should import from the subdirectory of `hooks`, like you would for `utilities`:
 
 ```tsx
@@ -85,7 +83,7 @@ We recommend having a dedicated subdirectory for each hook "type", rather than h
 /app/hooks/form/tests/form.test.ts
 ```
 
-The example above works very well for hook-only situations, but does not work well when you also need to export context or other components alongside the hook. In cases like this, we prefer collocation of the files along the "theme" of the files, not based on the values exported from them (an application of [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration.md)). If you have code like this, follow the [context-based library organization](#context-based-library), but placed in a nested `utilities` directory:
+The example above works very well for hook-only situations, but it does not work well when you also need to export context or other components alongside the hook. In cases like this, we prefer colocation of the files along the "theme" of the files, not based on the values exported from them (an application of [isolation over integration](../../Principles/4%20-%20Isolation%20over%20integration.md)). If you have code like this, follow the [context-based library organization](#context-based-library), but placed in a nested `utilities` directory:
 
 ```
 /app/components/MyComponent/utilities/my-feature/index.ts
@@ -126,7 +124,7 @@ TODO
 
 ### `/app/sections` or `/app/features`
 
-This directory is similar `/app/components`; it should export only named exports, and all exports are React components. However, the nature of these components is special: they should represent discrete "features" within the app. In general, this will mean that these components should be the top-level components rendered for a given route in your application.
+This directory is similar to `/app/components`; it should export only named exports, and all exports are React components. However, the nature of these components is special: they should represent discrete "features" within the app. In general, this will mean that these components should be the top-level components rendered for a given route in your application.
 
 The top-level `index` file in this directory should only re-export components. To actually create a routing scheme, you should add references to these components in [`app/foundation/Routes`](#appfoundationroutes).
 
@@ -142,9 +140,9 @@ While it may seem wasteful to have this directory when the `/app/components` dir
 
 If your application has more than a few pages, this directory should be split into subdirectories that group like features together. For example, Shopify Web contains directories for `Products`, `Discounts`, and more. If some features have only a single component representing them, you can mix this approach with the one described for simpler cases above.
 
-This provides an additional directory to add a `components` folder, which can contain components that related to all features of a particular type (for example, components used by many pages related to products, but not used elsewhere in the app).
+This provides an additional directory to add a `components` folder, which can contain components that are related to all features of a particular type (for example, components used by many pages related to products but not used elsewhere in the app).
 
-This intermediate directory should have top level folders for each feature in that group, and should simply re-export the React components.
+This intermediate directory should have top-level folders for each feature in that group, and it should simply re-export the React components.
 
 ```
 /app/sections/Home/Home.tsx // Simple case, no nesting
@@ -164,7 +162,7 @@ This intermediate directory should have top level folders for each feature in th
 
 This directory contains components that are only ever used once, usually to create the core infrastructure for the application. This can include everything from providers for app-wide features like i18n or GraphQL, tracking/ analytics, and more. These components should [limit their use of dependencies](../Performance.md#foundation), since they are typically included in the main bundle for an application.
 
-In this directory, you should include a few top-level component directories. These directories represent the parts of the foundation that are considered part of "feature space"; that is, they will need to be adjusted as features are added or removed from the application. When these components need to be split up, they can have their own nested `components` directory, as we do for "regular" components elsewhere in the application.
+In this directory, you should include a few top-level component directories. These directories represent the parts of the foundation that are considered part of "feature space", that is, they will need to be adjusted as features are added or removed from the application. When these components need to be split up, they can have their own nested `components` directory, as we do for "regular" components elsewhere in the application.
 
 #### `/app/foundation/App`
 
@@ -198,7 +196,7 @@ export default function Routes() {
 }
 ```
 
-If your component depends on getting some of its properties "filled" by the route, we recommend putting that logic in this component. While components can conceivably get details about URL params and other details from within their component, doing so separates the logic of setting up the routes from where that logic is relied upon. Given that none of this logic is type-safe in most routing libraries, it is a recipe for hard-to-track bugs, and violates our principle of preferring [explicit over automatic patterns](../../Principles/3%20-%20Explicit%20over%20automatic.md).
+If your component depends on getting some of its properties "filled" by the route, we recommend putting that logic in this component. While components can conceivably get details about URL params and other aspects from within their component, doing so separates the logic of setting up the routes from where that logic is relied upon. Given that none of this logic is type-safe in most routing libraries, it is a recipe for hard-to-track bugs and violates our principle of preferring [explicit over automatic patterns](../../Principles/3%20-%20Explicit%20over%20automatic.md).
 
 ```tsx
 // /app/foundation/Routes/Routes.tsx
