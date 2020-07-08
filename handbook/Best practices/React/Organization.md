@@ -65,8 +65,6 @@ MyComponent/
 
 ### `/app/hooks` and `<Component>/hooks`
 
-> **Note:** because hooks are so new, we haven’t been able to test these recommendations as much as we have for other parts of project structure. If you are trying to figure out where a hook should go, you should come discuss it with us in the `#web-foundation-tech` slack channel.
-
 [React Hooks](https://reactjs.org/docs/hooks-overview.html) provide an alternative form of composition that can be extremely useful for sharing logic in an application. Because of this important role, hooks should generally be given their own top-level directory; anywhere you might have a `components` directory for nested components, you can also place a `hooks` directory for nested hooks (including at the root of the project). You should import from the subdirectory of `hooks`, like you would for `utilities`:
 
 ```tsx
