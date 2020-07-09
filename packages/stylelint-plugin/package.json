@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Shopify/web-foundation/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/stylelint-plugin/README.md",
+  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/stylelint-plugin/README.md",
   "dependencies": {
     "merge": "^1.2.1",
     "stylelint-config-prettier": "^8.0.1",

@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Shopify/web-foundation/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/browserslist-config/README.md",
+  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/browserslist-config/README.md",
   "devDependencies": {
     "browserslist": "^4.3.4"
   }
