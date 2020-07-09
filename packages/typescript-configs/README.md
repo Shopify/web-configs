@@ -1,6 +1,6 @@
 # `@shopify/typescript-configs`
 
-[![Build Status](https://travis-ci.com/Shopify/web-foundation.svg?branch=master)](https://travis-ci.com/Shopify/web-foundation)
+[![Build Status](https://travis-ci.com/Shopify/web-foundation.svg?branch=main)](https://travis-ci.com/Shopify/web-foundation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](../../LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Ftypescript-configs.svg)](https://badge.fury.io/js/%40shopify%2Ftypescript-configs.svg)
 
 In TypeScript, the configuration file can extend from a base file. This package provided a few common base configuration files to simplify TypeScript project setup.

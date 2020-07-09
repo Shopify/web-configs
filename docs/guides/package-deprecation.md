@@ -29,7 +29,7 @@ run `yarn plop docs` to remove `{deprecated-package-name}` from the main README
 
 ## 5. Create your deprecation PR
 
-Create your PR with all the above changes and follow the normal PR review protocol to merge into master.
+Create your PR with all the above changes and follow the normal PR review protocol to merge into `main`.
 
 ## 6. Deprecate the package on npm
 
