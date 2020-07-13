@@ -137,7 +137,7 @@ function getRootObject(memberExpression) {
 }
 
 function docsUrl(ruleName) {
-  return `${REPO_URL}/blob/master/packages/eslint-plugin/docs/rules/${ruleName}.md`;
+  return `${REPO_URL}/blob/main/packages/eslint-plugin/docs/rules/${ruleName}.md`;
 }
 
 module.exports = {

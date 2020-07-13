@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Shopify/web-foundation/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/eslint-plugin/README.md",
+  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/eslint-plugin/README.md",
   "devDependencies": {
     "graphql": "^14.6.0",
     "react": "^16.13.1",

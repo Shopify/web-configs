@@ -18,6 +18,6 @@
   "bugs": {
     "url": "https://github.com/Shopify/web-foundation/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/master/packages/{{name}}/README.md",
+  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/{{name}}/README.md",
   "dependencies": {}
 }

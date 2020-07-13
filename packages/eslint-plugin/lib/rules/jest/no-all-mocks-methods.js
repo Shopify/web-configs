@@ -5,7 +5,7 @@ module.exports = {
       category: 'Best Practices',
       recommended: false,
       uri:
-        'https://github.com/Shopify/web-foundation/blob/master/packages/eslint-plugin/docs/rules/jest/no-all-mocks-methods.md',
+        'https://github.com/Shopify/web-foundation/blob/main/packages/eslint-plugin/docs/rules/jest/no-all-mocks-methods.md',
     },
   },
   messages: {
