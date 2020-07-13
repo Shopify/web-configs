@@ -16,14 +16,19 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
     // proposal-class-properties must be used in loose mode
     // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
     plugins.push(
-      require.resolve('@babel/plugin-syntax-nullish-coalescing-operator'),
-      require.resolve('@babel/plugin-syntax-optional-chaining'),
       [require.resolve('@babel/plugin-proposal-decorators'), {legacy: true}],
       [
         require.resolve('@babel/plugin-proposal-class-properties'),
         {loose: true},
       ],
       require.resolve('@babel/plugin-proposal-numeric-separator'),
+      // nullish-coalescing and optional-chaining are handled by preset-env
+      // But they aren't yet supported in webpack 4 because of missing support
+      // in acorn v6 (support is in acorn v7, which is used in webpack v5).
+      // So we want to always transpile this synax away
+      // See https://github.com/webpack/webpack/issues/10227
+      // Can be removed once we drop support for webpack v4 (or these features
+      // are backported to acorn v6)
       [
         require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
         {loose: true},
