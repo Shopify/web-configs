@@ -19,6 +19,7 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
         corejs,
         targets: browsers,
         debug,
+        bugfixes: true,
       },
     ],
   ];

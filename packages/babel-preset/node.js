@@ -21,6 +21,7 @@ module.exports = function shopifyNodePreset(_api, options = {}) {
           node: version,
         },
         debug,
+        bugfixes: true,
       },
     ],
   ];
