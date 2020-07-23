@@ -22,6 +22,7 @@ MyComponent/
 ├── MyComponent.tsx
 └── MyComponent.test.tsx
 ```
+Refer to this [React styleguide](https://github.com/Shopify/javascript/tree/master/react) for [naming files and components](https://github.com/Shopify/javascript/tree/master/react#6.2), and for further guidance on [naming components and props](https://github.com/Shopify/javascript/tree/master/react#1.2).  
 
 #### 2. Group related component files in folders
 
