@@ -6,7 +6,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.com/Shopify/web-foundation.svg?branch=main)](https://travis-ci.com/Shopify/web-foundation)
-[![codecov](https://codecov.io/gh/Shopify/web-foundation/branch/main/graph/badge.svg)](https://codecov.io/gh/Shopify/web-foundation)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 This repository contains common configuration and living [guidances](handbook) that Shopify uses to build web UI.
