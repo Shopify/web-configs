@@ -12,4 +12,3 @@ jobs:
     - name: 'Unit Tests'
       script:
         - yarn run test --coverage
-        - yarn run codecov
