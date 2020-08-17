@@ -7,6 +7,17 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [Unreleased]
+
+### Breaking Change
+
+- Dropping `eslint-plugin-typescript` and upgrading `@typescript-eslint/eslint-plugin` from `2.33.0` to `3.9.1`. The update brings breaking changes from [the version 3 release of `@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/releases/tag/v3.0.0).
+
+- Removal of `@typescript-eslint/class-name-casing` and `@typescript-eslint/camelcase` for `@typescript-eslint/naming-convention`. Please update your ignore statements.
+
+- Removal of `@typescript-eslint/ban-ts-ignore` for `@typescript-eslint/ban-ts-comment`. Please update your ignore statements.
+
+
 ## [37.0.0] - 2020-05-19
 
 ### Added

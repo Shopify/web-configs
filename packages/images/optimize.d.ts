@@ -1,1 +1,1 @@
-export function svgOptions(): object;
+export function svgOptions(): Record<string, unknown>;

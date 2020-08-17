@@ -72,11 +72,6 @@ module.exports = {
   '@typescript-eslint/adjacent-overload-signatures': 'error',
   // Disallow parameter properties in class constructors. (no-parameter-properties from TSLint)
   '@typescript-eslint/no-parameter-properties': 'off',
-  // Enforce PascalCased class and interface names. (class-name from TSLint)
-  '@typescript-eslint/class-name-casing': [
-    'error',
-    {allowUnderscorePrefix: false},
-  ],
   // Enforce a member delimiter style in interfaces and type literals.
   '@typescript-eslint/member-delimiter-style': [
     'error',
@@ -114,8 +109,29 @@ module.exports = {
       },
     },
   ],
-  // Enforce camelCase naming convention
-  '@typescript-eslint/camelcase': ['error', {properties: 'always'}],
+  // Enforce camelCase naming convention and PascalCase class and interface names
+  '@typescript-eslint/naming-convention': [
+    'error',
+    {
+      selector: 'default',
+      format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+      leadingUnderscore: 'allow',
+      trailingUnderscore: 'allow',
+    },
+    {
+      selector: 'default',
+      filter: {
+        match: true,
+        // Allow double underscores and React UNSAFE_ (for lifecycle hooks that are to be deprecated)
+        regex: '^(__|UNSAFE_).+$',
+      },
+      format: null,
+    },
+    {
+      selector: 'typeLike',
+      format: ['PascalCase'],
+    },
+  ],
   // Enforces naming of generic type variables
   '@typescript-eslint/generic-type-naming': 'off',
   // Enforce consistent indentation
@@ -141,7 +157,7 @@ module.exports = {
   // Functions that return promises must be async
   '@typescript-eslint/promise-function-async': 'off',
   // Bans “// @ts-ignore” comments from being used
-  '@typescript-eslint/ban-ts-ignore': 'error',
+  '@typescript-eslint/ban-ts-comment': 'error',
   // Enforce consistent brace style for blocks
   '@typescript-eslint/brace-style': 'error',
   // Enforces consistent usage of type assertions.
