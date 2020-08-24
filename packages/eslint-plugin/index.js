@@ -30,6 +30,7 @@ module.exports = {
     'strict-component-boundaries': require('./lib/rules/strict-component-boundaries'),
     'typescript/prefer-pascal-case-enums': require('./lib/rules/typescript/prefer-pascal-case-enums'),
     'typescript/prefer-singular-enums': require('./lib/rules/typescript/prefer-singular-enums'),
+    'typescript/prefer-build-client-schema': require('./lib/rules/typescript/prefer-build-client-schema'),
     'webpack/no-unnamed-dynamic-imports': require('./lib/rules/webpack/no-unnamed-dynamic-imports'),
   },
 

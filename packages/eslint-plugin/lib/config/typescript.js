@@ -67,6 +67,8 @@ module.exports = {
         '@shopify/typescript/prefer-pascal-case-enums': 'error',
         // Prefer TypeScript enums be defined using singular names
         '@shopify/typescript/prefer-singular-enums': 'error',
+        // Prefer buildClientSchema for schema building.
+        '@shopify/typescript/prefer-build-client-schema': 'error',
       }),
     },
   ],

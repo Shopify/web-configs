@@ -155,4 +155,5 @@ This plugin provides the following custom rules, which are included as appropria
 - [strict-component-boundaries](docs/rules/strict-component-boundaries.md): Prevent module imports between components.
 - [typescript/prefer-pascal-case-enums](docs/rules/typescript/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using Pascal case.
 - [typescript/prefer-singular-enums](docs/rules/typescript/prefer-singular-enums.md): Prefer TypeScript enums be singular.
+- [typescript/prefer-build-client-schema](docs/rules/typescript/prefer-build-client-schema.md): Prefer buildClientSchema for schema building.
 - [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.

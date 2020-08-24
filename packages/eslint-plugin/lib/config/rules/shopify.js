@@ -59,6 +59,8 @@ module.exports = {
   '@shopify/typescript/prefer-pascal-case-enums': 'off',
   // Enforces all TypeScript enums to be singular
   '@shopify/typescript/prefer-singular-enums': 'off',
+  // Prefer buildClientSchema for schema building.
+  '@shopify/typescript/prefer-build-client-schema': 'error',
   // Require that all dynamic imports contain a `webpackChunkName` comment.
   '@shopify/webpack/no-unnamed-dynamic-imports': 'off',
 };
