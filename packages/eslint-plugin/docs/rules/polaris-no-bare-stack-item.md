@@ -23,7 +23,7 @@ The following patterns are not warnings:
 ```js
 import {Stack} from '@shopify/polaris';
 
-<Stack.Item fill>Content</Stack.Item>
-<Stack>No wrapping item</Stack>
+<Stack.Item fill><span>Content</span></Stack.Item>
+<Stack><span>No wrapping item</span></Stack>
 ```
 
