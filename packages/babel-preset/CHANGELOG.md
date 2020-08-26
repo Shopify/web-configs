@@ -8,6 +8,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## [23.1.1] - 2020-08-26
+
 - Update `@babel/preset-env` and other babel packages to 7.10.4 and enable preset-env's [`bugfixes`](https://babeljs.io/docs/en/babel-preset-env#bugfixes) option [[#172](https://github.com/Shopify/web-foundation/pull/172)]
 
 ## [23.1.0] - 2020-05-12
