@@ -9,6 +9,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Added
+
+- Created a new rule, `@shopify/typescript/prefer-build-client-schema` ([#176](https://github.com/Shopify/web-foundation/pull/176))
+
 ### Breaking Change
 
 - Dropping `eslint-plugin-typescript` and upgrading `@typescript-eslint/eslint-plugin` from `2.33.0` to `3.9.1`. The update brings breaking changes from [the version 3 release of `@typescript-eslint/eslint-plugin`](https://github.com/typescript-eslint/typescript-eslint/releases/tag/v3.0.0).
