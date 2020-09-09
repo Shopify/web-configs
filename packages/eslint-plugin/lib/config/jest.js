@@ -10,7 +10,7 @@ module.exports = {
     sourceType: 'module',
   },
 
-  plugins: ['jest', '@shopify'],
+  plugins: ['jest', 'jest-formatting', '@shopify'],
 
   rules: merge(require('./rules/jest'), {
     'jest/valid-title': [
