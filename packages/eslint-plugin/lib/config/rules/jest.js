@@ -44,7 +44,7 @@ module.exports = {
   // Disallow setup and teardown hooks
   'jest/no-hooks': 'off',
   // Using a callback in asynchronous tests
-  'jest/no-test-callback': 'error',
+  'jest/no-done-callback': 'error',
   // Disallow using toBeTruthy() & toBeFalsy()
   'jest/no-truthy-falsy': 'error',
   // Suggest using toBeCalledWith() OR toHaveBeenCalledWith()
