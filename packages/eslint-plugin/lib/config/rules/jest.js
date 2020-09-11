@@ -13,6 +13,8 @@ module.exports = {
   'jest/no-jasmine-globals': 'error',
   // Limited snapshot sizes to keep snapshops manageable and reviewable.
   'jest/no-large-snapshots': ['error', {maxSize: 12}],
+  // Disallow interpolation in snapshots to ensure they can be automatically updated.
+  'jest/no-interpolation-in-snapshots': 'error',
   // For better failure messages, use `toHaveLength()` to on object lengths.
   'jest/prefer-to-have-length': 'error',
   // Suggest using toMatchInlineSnapshot()
@@ -67,8 +69,8 @@ module.exports = {
   'jest/no-duplicate-hooks': 'error',
   // Disallow conditional logic
   'jest/no-if': 'error',
-  // Prevent assertions in catch blocks.
-  'jest/no-try-expect': 'error',
+  // Prevent assertions that are conditional.
+  'jest/no-conditional-expect': 'error',
   // Disallow export from test files
   'jest/no-export': 'error',
   // Prevents `expect` statements outside of a `test` or `it` block
@@ -81,4 +83,6 @@ module.exports = {
   'jest/prefer-hooks-on-top': 'error',
   // Require top-level describe block
   'jest/require-top-level-describe': 'error',
+  // Avoid using deprecated functions
+  'jest/no-deprecated-functions': 'error',
 };
