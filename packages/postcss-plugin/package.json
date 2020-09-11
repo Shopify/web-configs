@@ -25,12 +25,12 @@
   },
   "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/postcss-plugin/README.md",
   "dependencies": {
-    "autoprefixer": "9.3.1",
-    "cssnano": "^4.1.7",
-    "postcss": "7.0.6",
-    "postcss-calc": "7.0.1",
-    "postcss-discard-comments": "4.0.1",
-    "postcss-flexbugs-fixes": "4.1.0",
+    "autoprefixer": "9.8.6",
+    "cssnano": "4.1.10",
+    "postcss": "7.0.32",
+    "postcss-calc": "7.0.4",
+    "postcss-discard-comments": "4.0.2",
+    "postcss-flexbugs-fixes": "4.2.1",
     "postcss-selector-matches": "4.0.0",
     "postcss-will-change": "3.0.0"
   }
