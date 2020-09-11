@@ -156,7 +156,7 @@ module.exports = {
   '@typescript-eslint/prefer-function-type': 'off',
   // Functions that return promises must be async
   '@typescript-eslint/promise-function-async': 'off',
-  // Bans “// @ts-ignore” comments from being used
+  // Bans “// @ts-ignore” comments from being used. "@ts-expect-error: some comment describing why it's disabled" is allowed
   '@typescript-eslint/ban-ts-comment': 'error',
   // Enforce consistent brace style for blocks
   '@typescript-eslint/brace-style': 'error',

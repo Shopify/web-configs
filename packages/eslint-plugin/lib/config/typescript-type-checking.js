@@ -34,10 +34,7 @@ module.exports = {
         // When adding two variables, operands must both be of type number or of type string
         '@typescript-eslint/restrict-plus-operands': 'error',
         // Prevents conditionals where the type is always truthy or always falsy
-        '@typescript-eslint/no-unnecessary-condition': [
-          'error',
-          {ignoreRhs: true},
-        ],
+        '@typescript-eslint/no-unnecessary-condition': ['error'],
         // Warns if an explicitly specified type argument is the default for that type parameter
         '@typescript-eslint/no-unnecessary-type-arguments': 'error',
         // Requires that private members are marked as readonly if they're never modified outside of the constructor
