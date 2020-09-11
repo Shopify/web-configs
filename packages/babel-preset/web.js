@@ -3,7 +3,7 @@ const nonStandardPlugins = require('./non-standard-plugins');
 module.exports = function shopifyWebPreset(_api, options = {}) {
   const {
     modules = 'commonjs',
-    corejs = 2,
+    corejs = 3,
     debug = false,
     browsers,
     useBuiltIns = 'entry',

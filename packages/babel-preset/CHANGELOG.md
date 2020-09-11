@@ -26,6 +26,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [22.0.0] - 2020-03-28
 
+- Changed the default `corejs` version for `node` and `web` presets (default = `3`) [[#48](https://github.com/Shopify/babel-preset-shopify/pull/48)]
+
 🚨Package rename
 
 This package has been renamed from `babel-preset-shopify` to `@shopify/babel-preset`.
