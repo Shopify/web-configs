@@ -11,6 +11,23 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Added `id` field to `graphql/required-fields` rule. ([#166](https://github.com/Shopify/web-foundation/pull/166)).
 
+#### Updated Plugins
+
+| Package                            | Old version | New version |
+| ---------------------------------- | ----------- | ----------- |
+| `@typescript-eslint/eslint-plugin` | `3.9.1`     | `4.1.0`     |
+| `@typescript-eslint/parser`        | `3.9.1`     | `4.1.0`     |
+| `eslint-plugin-babel`              | `5.3.0`     | `5.3.1`     |
+| `eslint-plugin-eslint-comments`    | `3.1.2`     | `3.2.0`     |
+| `eslint-plugin-graphql`            | `3.1.1`     | `4.0.0`     |
+| `eslint-plugin-jest`               | `23.13.0`   | `24.0.0`    |
+| `eslint-plugin-jsx-a11y`           | `6.2.3`     | `6.3.1`     |
+| `eslint-plugin-node`               | `3.1.3`     | `3.1.4`     |
+| `eslint-plugin-react`              | `7.20.0`    | `7.20.6`    |
+| `eslint-plugin-react-hooks`        | `4.0.2`     | `4.1.1`     |
+| `eslint-plugin-sort-class-members` | `1.7.0`     | `1.8.0`     |
+
+
 ## [38.0.0]
 
 ### Added
