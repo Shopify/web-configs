@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+#### [3.1.0] - 2020-09-17
+
+- Dependency updates [[#159](https://github.com/Shopify/web-foundations/pull/159)]
+
 ## [3.0.0] - 2020-03-28
 
 🚨Package rename
