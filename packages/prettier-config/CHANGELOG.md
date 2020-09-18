@@ -15,4 +15,4 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Created `@shopify/prettier-config` package ([#152](https://github.com/Shopify/web-foundation/pull/152))
+- Created `@shopify/prettier-config` package ([#152](https://github.com/Shopify/web-configs/pull/152))

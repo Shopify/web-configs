@@ -5,17 +5,13 @@ There are many steps involved in creating a new package, and you can contribute 
 ## Filing issues
 
 Discovered a problem that you'd like us to solve? Have an idea for a new package?
-Submit a [feature request](https://github.com/Shopify/web-foundation/issues/new?template=FEATURE_REQUEST.md).
+Submit a [feature request](https://github.com/Shopify/web-configs/issues/new?template=FEATURE_REQUEST.md).
 
 ## Development
 
 Once we've identified a package you would like to add, it's time to begin the process of creating a PR. If you haven't set up your development environment, there are instructions for getting started in our [contributing guide](../../.github/CONTRIBUTING.md).
 
 You should create your new package with the generator. Simply run `yarn generate:package` and follow the prompts to set up the initial boilerplate.
-
-### Naming
-
-If you need help with finding a good name for your package, feel free to reach our in `#web-foundation-tech` on Slack, or else just pick a relevant name and add a comment to the PR asking for feedback.
 
 ## Trading in a PR
 

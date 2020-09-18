@@ -16,8 +16,8 @@
     "directory": "packages/{{name}}"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/{{name}}/README.md",
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/{{name}}/README.md",
   "dependencies": {}
 }

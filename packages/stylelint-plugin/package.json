@@ -17,13 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "url": "git+https://github.com/Shopify/web-configs.git",
     "directory": "packages/stylelint-plugin"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/stylelint-plugin/README.md",
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/stylelint-plugin/README.md",
   "dependencies": {
     "merge": "^1.2.1",
     "stylelint-config-prettier": "^8.0.1",

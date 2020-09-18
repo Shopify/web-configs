@@ -12,11 +12,11 @@
   "author": "Shopify Inc.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "url": "git+https://github.com/Shopify/web-configs.git",
     "directory": "packages/prettier-config"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/prettier-config/README.md"
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/prettier-config/README.md"
 }

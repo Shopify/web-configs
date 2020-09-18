@@ -18,8 +18,8 @@ This guide covers Shopify's approach to using TypeScript. It also highlights our
 
 Additional tooling is heavily integrated into TypeScript projects at Shopify to improve our development experience and developer confidence.
 
-* [`@shopify/typescript-configs`](https://github.com/Shopify/web-foundation/tree/main/packages/typescript-configs): Common base configuration files to simplify TypeScript project setup.
-* [`@shopify/eslint-plugin` TypeScript config](https://github.com/Shopify/web-foundation/blob/main/packages/eslint-plugin/lib/config/typescript.js) ESLint config for TypeScript codebases
+* [`@shopify/typescript-configs`](https://github.com/Shopify/web-configs/tree/main/packages/typescript-configs): Common base configuration files to simplify TypeScript project setup.
+* [`@shopify/eslint-plugin` TypeScript config](https://github.com/Shopify/web-configs/blob/main/packages/eslint-plugin/lib/config/typescript.js) ESLint config for TypeScript codebases
 * [`graphql-typescript-definitions`](https://github.com/Shopify/graphql-tools-web/tree/main/packages/graphql-typescript-definitions): Tooling to generate TypeScript definition files from .graphql documents
 * [`@shopify/useful-types`](https://github.com/Shopify/quilt/tree/main/packages/useful-types): A few handy TypeScript types.
 

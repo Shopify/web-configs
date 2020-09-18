@@ -11,13 +11,13 @@
   "author": "Shopify Inc.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "url": "git+https://github.com/Shopify/web-configs.git",
     "directory": "packages/babel-preset"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/babel-preset/README.md",
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/babel-preset/README.md",
   "dependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",

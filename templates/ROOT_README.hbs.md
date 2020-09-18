@@ -1,19 +1,15 @@
 [comment]: # (NOTE: This file is generated and should not be modify directly. Update `templates/ROOT_README.hbs.md` instead)
 
-**Note: Old documentations on the root level had been move inside the [handbook](handbook) directory of this repository**
-
-# Web foundation
+# Web Configs
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE.md)
-[![Build Status](https://travis-ci.com/Shopify/web-foundation.svg?branch=main)](https://travis-ci.com/Shopify/web-foundation)
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 This repository contains common configuration and living [guidances](handbook) that Shopify uses to build web UI.
 
 ## Usage
 
-The Web foundation repo is managed as a monorepo that is composed of many npm packages.
-Each package has its own `README` and documentation describing usage.
+This repo is managed as a monorepo that is composed of many npm packages, where each package has its own `README` and documentation describing usage.
 
 ### Package Index
 
@@ -25,11 +21,7 @@ Each package has its own `README` and documentation describing usage.
 
 ## Want to contribute?
 
-Check out our [Contributing Guide](./.github/CONTRIBUTING.md)
-
-## Questions?
-
-For Shopifolk, you can reach out to us in Slack in the `#web-foundation-tech` channel. For external inquiries, we welcome bug reports, enhancements, and feature requests via Github issues.
+Check out our [Contributing Guide](./.github/CONTRIBUTING.md). We welcome bug reports, enhancements, and feature requests via Github issues.
 
 ## License
 

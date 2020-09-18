@@ -25,7 +25,7 @@ After:
 import styles from 'foo.scss';
 ```
 
-- Updated the `*.scss` and `*.css` types for esmodules [[#165](https://github.com/Shopify/web-foundation/pull/165)]
+- Updated the `*.scss` and `*.css` types for esmodules [[#165](https://github.com/Shopify/web-configs/pull/165)]
 
 ## [2.0.2] - 2020-03-28
 

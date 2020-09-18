@@ -3,7 +3,7 @@ const {join, dirname, relative, basename} = require('path');
 const resolve = require('eslint-module-utils/resolve').default;
 const pkgDir = require('pkg-dir');
 
-const REPO_URL = 'https://github.com/Shopify/web-foundation';
+const REPO_URL = 'https://github.com/Shopify/web-configs';
 
 function uncast(node) {
   let currentNode = node;

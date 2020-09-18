@@ -1,4 +1,4 @@
-name: web-foundation
+name: web-configs
 up:
   - node:
       yarn: v1.19.1
@@ -7,6 +7,6 @@ commands:
   __default__: start
   check: yarnpkg check
   lint: yarnpkg lint
-  start: echo "Running web-foundation is not really a concept that makes sense."
+  start: echo "Running web-configs is not really a concept that makes sense."
   test: yarnpkg test
   generate: yarnpkg generate

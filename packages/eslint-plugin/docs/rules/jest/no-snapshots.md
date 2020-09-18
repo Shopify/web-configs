@@ -36,4 +36,4 @@ If you do not wish to prevent the use of jest snapshots, you can safely disable 
 
 ## Further Reading
 
-- [Shopify Jest Best Practices](https://github.com/Shopify/web-foundation/blob/main/handbook/Best%20practices/Jest.md#best-practices)
+- [Shopify Jest Best Practices](https://github.com/Shopify/web-configs/blob/main/handbook/Best%20practices/Jest.md#best-practices)

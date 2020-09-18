@@ -17,13 +17,13 @@
   "author": "Shopify Inc.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "url": "git+https://github.com/Shopify/web-configs.git",
     "directory": "packages/postcss-plugin"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/postcss-plugin/README.md",
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/postcss-plugin/README.md",
   "dependencies": {
     "autoprefixer": "9.8.6",
     "cssnano": "4.1.10",
