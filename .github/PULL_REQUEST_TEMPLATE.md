@@ -1,19 +1,15 @@
 ## Description
 
-Fixes (issue #)
-
 <!--
-Please include a summary of what you want to achieve in this pull request. Remember to indicate the affected package(s).
+Please include a summary of what you want to achieve in this pull request.
+
+If this fixes an existing issue, please include the issue number.
 -->
 
 ## Type of change
 
 <!--
-If this pull request changes multiple packages, please indicate the type of change for each package.
-
-If this is a new package, you may disregard this section.
-
-Please delete options that are not relevant.
+Remember to indicate the affected package(s), as well as the type of change for each package.
 -->
 
 - [ ] <!--Package Name--> Patch: Bug (non-breaking change which fixes an issue)
@@ -22,4 +18,4 @@ Please delete options that are not relevant.
 
 ## Checklist
 
-- [ ] I have added a changelog entry, prefixed by the type of change noted above (Documentation fix and Test update does not need a changelog as we do not publish new version)
+- [ ] I have added a changelog entry, prefixed by the type of change noted above (Documentation fix and Test update does not need a changelog as we do not publish a new version for these changes)

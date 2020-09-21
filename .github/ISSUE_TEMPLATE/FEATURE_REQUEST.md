@@ -15,7 +15,7 @@ about: Suggest a new feature, or changes to an existing one
 ## Motivation
 
 > What inspired this feature request? What problems were you facing,
-> or what else makes you think this should be in `web-foundation`?
+> or what else makes you think this should be included?
 
 ...
 

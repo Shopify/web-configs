@@ -1,3 +1,0 @@
-ci:
-  require:
-    - Travis CI - Branch
