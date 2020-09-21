@@ -15,7 +15,7 @@ We implement our common non-tooling non-polaris libraries as a monorepo based on
 
 ## Problem space
 
-The web foundation team's number of open source packages is set to grow exponentially as we pull libraries out of web. As of now we estimate [at least 19 new libraries](https://github.com/Shopify/web/projects/17) will need to be available to our React web projects.
+The Web Foundations team's number of open source packages is set to grow exponentially as we pull libraries out of web. As of now we estimate [at least 19 new libraries](https://github.com/Shopify/web/projects/17) will need to be available to our React web projects.
 
 In the past we've tried pulling common bits of functionality into some chunky overly-broadly-named repos, such as [@shopify/javascript-utilities](https://github.com/Shopify/javascript-utilities) and [@shopify/react-utilities](https://github.com/Shopify/react-utilities). We wanted to avoid problems with maintaining highly granular packages by essentially packing multiple simple packages into domain-based mega-packages. However, thanks to the dependency between the two, even at this level these ended up underdeveloped and poorly maintained. They fell victim to the same set of problems that most multi-repo dependency graphs must overcome:
 

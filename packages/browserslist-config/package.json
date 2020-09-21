@@ -15,13 +15,13 @@
   "author": "Shopify Inc.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "url": "git+https://github.com/Shopify/web-configs.git",
     "directory": "packages/browserslist-config"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/browserslist-config/README.md",
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/browserslist-config/README.md",
   "devDependencies": {
     "browserslist": "^4.3.4"
   }

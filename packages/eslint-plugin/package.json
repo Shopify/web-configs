@@ -17,13 +17,13 @@
   "author": "Shopify Inc.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shopify/web-foundation.git",
+    "url": "git+https://github.com/Shopify/web-configs.git",
     "directory": "packages/eslint-plugin"
   },
   "bugs": {
-    "url": "https://github.com/Shopify/web-foundation/issues"
+    "url": "https://github.com/Shopify/web-configs/issues"
   },
-  "homepage": "https://github.com/Shopify/web-foundation/blob/main/packages/eslint-plugin/README.md",
+  "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/eslint-plugin/README.md",
   "devDependencies": {
     "graphql": "^14.6.0",
     "react": "^16.13.1",

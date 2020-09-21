@@ -1,29 +1,27 @@
-# Web Foundation: a contributor's guide
+# Web Configs: a contributor's guide
 
 This guide is tailored to Shopifolk, although we welcome contributions from [the broader development community](#external-contributors) as well.
 
 ## [Code of conduct](./CODE_OF_CONDUCT.md).
 
-Shopify has adopted a Code of Conduct that we expect Web Foundation contributors to adhere to. Please read the [full text](./CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+Shopify has adopted a Code of Conduct that we expect contributors to adhere to. Please read the [full text](./CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ## Ways to contribute
 
-There are many ways to contribute to Web Foundation, some of which are:
+There are many ways to contribute, some of which are:
 
-- Filing [bug reports](https://github.com/Shopify/web-foundation/issues/new?template=BUG_REPORT.md)
-- Requesting new features or packages via [an issue](https://github.com/Shopify/web-foundation/issues/new/choose)
+- Filing [bug reports](https://github.com/Shopify/web-configs/issues/new?template=BUG_REPORT.md)
+- Requesting new features or packages via [an issue](https://github.com/Shopify/web-configs/issues/new/choose)
   - Bringing up areas for enhancement
-- Hacking away on an issue from our [backlog](https://github.com/Shopify/web-foundation/issues)
+- Hacking away on an issue from our [backlog](https://github.com/Shopify/web-configs/issues)
 - Improving tests or documentation
-
-Want to contribute, but not sure how? Find us on Slack in `#web-foundation-tech`.
 
 ## Development
 
 ### Getting Started
 
 ```bash
-dev clone web-foundation
+dev clone web-configs
 dev up
 ```
 
@@ -35,7 +33,7 @@ We are adding documentation as we go in the [handbook](../handbook). There you w
 
 The [documentation](../docs) directory in this repo covers the more granular technical aspects of this project. Of particular note for new folks are the following:
 
-- [Guides](../docs/guides): a set of guides to help you get started developing with `web-foundation`. Of particular note for developers just starting on the project is our guide to [creating a new package](../docs/guides/creating-a-new-package.md).
+- [Guides](../docs/guides): a set of guides to help you get started developing with `web-configs`. Of particular note for developers just starting on the project is our guide to [creating a new package](../docs/guides/creating-a-new-package.md).
 - [FAQ](../docs/FAQ.md): common questions about the project in general, as well as some of the technical pieces within.
 - [Resources](../docs/resources.md): good resources for understanding this project’s tech stack.
 - [Getting started](../docs/getting-started.md): some tools we recommend for getting the most out of this project.
@@ -50,14 +48,14 @@ More usage instructions on the `tophat` command can be [found here](https://gith
 
 ### Documentation
 
-If your change affects the public API of any packages within Web-Foundation (i.e. adding or
+If your change affects the public API of any packages within this repository (i.e. adding or
 changing arguments to a function, adding a new function, changing the
 return value, etc), please ensure the documentation is also updated to
 reflect this. Documentation is in the `README.md` files of each package. If further documentation is needed please communicate via Github Issues.
 
 ### Testing
 
-The packages in Web-Foundation are used in mission-critical production scenarios. As such, we try not to merge any untested code. The coverage doesn't strictly need to be 100% across the board, but testing should remain a primary concern.
+The packages in this repository are used in mission-critical production scenarios. As such, we try not to merge any untested code. The coverage doesn't strictly need to be 100% across the board, but testing should remain a primary concern.
 
 To run the full test suite, simply run `dev test`.
 
@@ -75,7 +73,7 @@ Another option, if you'd like to break work down into reviewable chunks, is to u
 
 ## Releasing
 
-The release process currently involves some manual steps to complete. Please ping Web Foundations ATC in the `#web-foundation-tech` Slack channel when you're ready to merge a new PR into `main`, and we will orchestrate a new release. The repo owner can follow [this guide](../docs/guides/release-and-deploy.md) to create a release.
+The release process currently involves some manual steps to complete. Once your PR has been merged, our team will orchestrate when to cut a new release.
 
 **Note** Version numbers in `package.json` files should never be altered manually. This will be done via scripts as part of the release process.
 
@@ -86,7 +84,7 @@ The release process currently involves some manual steps to complete. Please pin
 To start working on the codebase, first fork the repo, then clone it:
 
 ```
-git clone git@github.com:your-username/web-foundation.git
+git clone git@github.com:your-username/web-configs.git
 ```
 
 _Note: replace "your-username" with your Github handle_
