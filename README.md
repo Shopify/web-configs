@@ -57,6 +57,14 @@ yarn lerna bootstrap
 
 `dev` is a tool to standardize a small set of common tasks across all projects at Shopify. If you're wondering how to execute the dev <cmd> commands as an external contributor, you can see where they are defined in this project's `dev.yml` file.
 
+#### Testing your changes in a local project
+
+To try out your changes in another locally cloned project, you can use `yarn tophat <package-name-without-@shopify-prefix> <relative-path-to-project>`. Using this command rather than `yarn link` will set up a watcher let you make changes without needing to rerun any commands.
+
+Example: To test my changes to `@shopify/react-form-state` in my local project named `my-project`, I would run `yarn tophat react-form-state ../path/to/my-project`.
+
+More usage instructions on the `tophat` command can be [found here](https://github.com/Shopify/tophat-web).
+
 #### Documentation
 
 If your change affects the public API of any packages within this repository (i.e. adding or changing arguments to a function, adding a new function, changing the return value, etc), please ensure the documentation is updated,  and a changelog is added to reflect this. Documentation is in the `README.md` files of each package. If further documentation is needed please communicate via a GitHub Issue.
