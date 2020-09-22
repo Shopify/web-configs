@@ -1,3 +1,0 @@
-# State management
-
-Coming soon.
