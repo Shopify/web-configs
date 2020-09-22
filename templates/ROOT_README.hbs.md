@@ -43,7 +43,7 @@ dev clone web-configs
 dev up
 
 # External Contributor - To start working on the codebase, first fork the repo, then clone it
-git clone git@github.com:{your-username}/web-configs.git # replace {your-username} with your GitHub Handle
+git clone git@github.com:{your-username}/web-configs.git # replace {your-username} with your GitHub handle
 yarn # install project dependencies
 yarn lerna bootstrap
 ```
@@ -62,7 +62,7 @@ More usage instructions on the `tophat` command can be [found here](https://gith
 
 #### Documentation
 
-If your change affects the public API of any packages within this repository (i.e. adding or changing arguments to a function, adding a new function, changing the return value, etc), please ensure the documentation is updated,  and a changelog is added to reflect this. Documentation is in the `README.md` files of each package. If further documentation is needed please communicate via a GitHub Issue.
+If your change affects the public API of any packages within this repository (i.e. adding or changing arguments to a function, adding a new function, changing the return value, etc), please ensure the documentation is updated,  and a changelog is added to reflect this. Documentation is in the `README.md` files of each package. If further documentation is needed please communicate via a GitHub issue.
 
 #### Testing
 
