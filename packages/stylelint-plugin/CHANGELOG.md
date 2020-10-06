@@ -7,6 +7,13 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [10.0.0] - 2020-06-04
+
+### Breaking Change
+
+- Projects will need to use stylelint v13.7.0 or higher 
+- Stylelint rules have been renamed. `*-blacklist`, `*-requirelist` and `*-whitelist` rules have been replaced in favour of the new `*-disallowed-list`, `*-required-list` and `*-allowed-list` ones.
+
 ## [9.0.0] - 2020-06-04
 
 ### Breaking Change

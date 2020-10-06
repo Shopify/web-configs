@@ -1,6 +1,6 @@
 module.exports = {
-  // Specify a blacklist of disallowed at-rules.
-  'at-rule-blacklist': ['debug'],
+  // Specify a disallowed-list of disallowed at-rules.
+  'at-rule-disallowed-list': ['debug'],
   // Require or disallow an empty line before @rules.
   'at-rule-empty-line-before': [
     'always',
@@ -43,8 +43,8 @@ module.exports = {
   'at-rule-no-vendor-prefix': true,
   // Require a newline after the semicolon of at-rules.
   'at-rule-semicolon-newline-after': 'always',
-  // Specify a whitelist of allowed at-rules.
-  'at-rule-whitelist': null,
+  // Specify a allowed-list of allowed at-rules.
+  'at-rule-allowed-list': null,
   // Require a single space or disallow whitespace before the semicolons of at-rules.
   'at-rule-semicolon-space-before': 'never',
 };

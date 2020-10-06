@@ -1,6 +1,6 @@
 module.exports = {
-  // Specify a blacklist of disallowed functions.
-  'function-blacklist': null,
+  // Specify a disallowed list of disallowed functions.
+  'function-disallowed-list': null,
   // Disallow an unspaced operator within calc functions.
   'function-calc-no-unspaced-operator': true,
   // Require a newline or disallow whitespace after the commas of functions.
@@ -25,12 +25,12 @@ module.exports = {
   'function-url-no-scheme-relative': true,
   // Require or disallow quotes for urls.
   'function-url-quotes': 'always',
-  // Specify a blacklist of disallowed url schemes.
-  'function-url-scheme-blacklist': null,
-  // Specify a whitelist of allowed url schemes.
-  'function-url-scheme-whitelist': ['http', 'https'],
-  // Specify a whitelist of only allowed functions.
-  'function-whitelist': null,
+  // Specify a disallowed list of disallowed url schemes.
+  'function-url-scheme-disallowed-list': null,
+  // Specify a allowed list of allowed url schemes.
+  'function-url-scheme-allowed-list': ['http', 'https'],
+  // Specify a allowed-list of only allowed functions.
+  'function-allowed-list': null,
   // Require a single space or disallow whitespace after functions.
   'function-whitespace-after': 'always',
 };
