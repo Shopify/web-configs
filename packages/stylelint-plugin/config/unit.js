@@ -1,10 +1,10 @@
 module.exports = {
-  // Specify a blacklist of disallowed units.
-  'unit-blacklist': [],
+  // Specify a disallow list of disallowed units.
+  'unit-disallowed-list': [],
   // Specify lowercase or uppercase for units.
   'unit-case': 'lower',
   // Disallow unknown units.
   'unit-no-unknown': true,
-  // Specify a whitelist of allowed units.
-  'unit-whitelist': null,
+  // Specify a allowed-list of allowed units.
+  'unit-allowed-list': null,
 };

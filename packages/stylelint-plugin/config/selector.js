@@ -1,14 +1,14 @@
 module.exports = {
   // Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
   'selector-attribute-brackets-space-inside': 'never',
-  // Specify a blacklist of disallowed attribute operators.
-  'selector-attribute-operator-blacklist': null,
+  // Specify a disallowed-list of disallowed attribute operators.
+  'selector-attribute-operator-disallowed-list': null,
   // Require a single space or disallow whitespace after operators within attribute selectors.
   'selector-attribute-operator-space-after': 'never',
   // Require a single space or disallow whitespace before operators within attribute selectors.
   'selector-attribute-operator-space-before': 'never',
-  // Specify a whitelist of allowed attribute operators.
-  'selector-attribute-operator-whitelist': null,
+  // Specify a allowed-list of allowed attribute operators.
+  'selector-attribute-operator-allowed-list': null,
   // Require or disallow quotes for attribute values.
   'selector-attribute-quotes': 'always',
   // Specify a pattern for class selectors.
@@ -51,16 +51,16 @@ module.exports = {
   'selector-no-qualifying-type': true,
   // Disallow vendor prefixes for selectors.
   'selector-no-vendor-prefix': true,
-  // Specify a blacklist of disallowed pseudo-class selectors.
-  'selector-pseudo-class-blacklist': null,
+  // Specify a disallowed-list of disallowed pseudo-class selectors.
+  'selector-pseudo-class-disallowed-list': null,
   //  Specify lowercase or uppercase for pseudo-class selectors.
   'selector-pseudo-class-case': 'lower',
   // Disallow unknown pseudo-class selectors.
   'selector-pseudo-class-no-unknown': true,
   // Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.
   'selector-pseudo-class-parentheses-space-inside': 'never',
-  // Specify a whitelist of allowed pseudo-class selectors.
-  'selector-pseudo-class-whitelist': null,
+  // Specify a allowed-list of allowed pseudo-class selectors.
+  'selector-pseudo-class-allowed-list': null,
   // Specify lowercase or uppercase for pseudo-element selectors.
   'selector-pseudo-element-case': 'lower',
   // Specify single or double colon notation for applicable pseudo-elements.
