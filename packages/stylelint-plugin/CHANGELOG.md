@@ -7,7 +7,11 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
-## [10.0.0] - 2020-06-04
+## [10.0.1] - 2020-10-07
+
+- Update styleling peer dependency to `>=13.7.0"`
+
+## [10.0.0] - 2020-10-06
 
 ### Breaking Change
 
