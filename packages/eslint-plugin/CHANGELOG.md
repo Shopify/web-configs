@@ -5,7 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Changed
+
+- Updated `eslint-plugin` plugins  ([#194](https://github.com/Shopify/web-foundation/pull/194)).
+
+| Package                            | Old version | New version |
+| ---------------------------------- | ----------- | ----------- |
+| `eslint-config-prettier`           | `6.11.0`    | `6.14.0`    |
+| `eslint-plugin-jsx-a11y`           | `6.3.1`     | `6.4.1`     |
+| `eslint-plugin-import`             | `2.22.0`    | `2.22.1`    |
+| `eslint-plugin-jest`               | `24.0.0`    | `24.1.0`    |
+| `eslint-plugin-react`              | `7.20.6`    | `7.21.5`    |
+| `eslint-plugin-react-hooks`        | `4.1.1`     | `4.1.2`     |
+
 
 ## [39.0.0] - 2020-09-17
 
