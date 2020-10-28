@@ -35,7 +35,7 @@ module.exports = {
         }
 
         const scope = context.getScope();
-        if (scope.type !== 'module') {
+        if (!['module', 'global'].includes(scope.type)) {
           context.report(
             node,
             'You must place screaming snake case at module scope. If this is not meant to be a module-scoped variable, use camelcase instead.',

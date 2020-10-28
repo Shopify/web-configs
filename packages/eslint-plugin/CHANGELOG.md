@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Fixed
+
+- Add support for CommonJS in `prefer-module-scope-constants` ([#195](https://github.com/Shopify/web-configs/pull/195)).
+
 ### Changed
 
 - Updated `eslint-plugin` plugins  ([#194](https://github.com/Shopify/web-foundation/pull/194)).
