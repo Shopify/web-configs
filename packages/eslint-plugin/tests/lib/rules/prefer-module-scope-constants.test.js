@@ -36,6 +36,16 @@ ruleTester.run('prefer-module-scope-constants', rule, {
     {code: 'function foo() { const [FOO] = bar; }', parserOptions},
     {code: '{ let [FOO] = bar; }', parserOptions},
     {code: 'function foo() { let [FOO] = bar; }', parserOptions},
+    {
+      code: `
+        const FOO = true;
+
+        module.exports = () => {
+          console.log(FOO);
+        };
+      `,
+      parserOptions,
+    },
   ],
   invalid: [
     {code: 'let FOO = true;', parserOptions, errors: nonConstErrors},
