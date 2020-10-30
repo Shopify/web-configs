@@ -4,7 +4,6 @@ const rule = require('../../../lib/rules/prefer-module-scope-constants');
 
 const ruleTester = new RuleTester();
 
-const parserOptions = {ecmaVersion: 6, sourceType: 'module'};
 const moduleScopeErrors = [
   {
     kind: 'VariableDeclarator',
@@ -20,46 +19,63 @@ const nonConstErrors = [
   },
 ];
 
-ruleTester.run('prefer-module-scope-constants', rule, {
-  valid: [
-    {code: 'const FOO = true;', parserOptions},
-    {code: 'const foo = true;', parserOptions},
-    {code: '{ const foo = true; }', parserOptions},
-    {code: 'const foo = true, FOO = true;', parserOptions},
-    {code: 'const {FOO} = bar', parserOptions},
-    {code: '{ const {FOO} = bar; }', parserOptions},
-    {code: 'function foo() { const {FOO} = bar; }', parserOptions},
-    {code: '{ let {FOO} = bar; }', parserOptions},
-    {code: 'function foo() { let {FOO} = bar; }', parserOptions},
-    {code: 'const [FOO] = bar', parserOptions},
-    {code: '{ const [FOO] = bar; }', parserOptions},
-    {code: 'function foo() { const [FOO] = bar; }', parserOptions},
-    {code: '{ let [FOO] = bar; }', parserOptions},
-    {code: 'function foo() { let [FOO] = bar; }', parserOptions},
-  ],
-  invalid: [
-    {code: 'let FOO = true;', parserOptions, errors: nonConstErrors},
-    {code: '{ let FOO = true; }', parserOptions, errors: nonConstErrors},
-    {
-      code: 'function foo() { let FOO = true; }',
-      parserOptions,
-      errors: nonConstErrors,
-    },
-    {
-      code: 'let foo = false, FOO = true;',
-      parserOptions,
-      errors: nonConstErrors,
-    },
-    {code: '{ const FOO = true; }', parserOptions, errors: moduleScopeErrors},
-    {
-      code: 'function foo() { const FOO = true; }',
-      parserOptions,
-      errors: moduleScopeErrors,
-    },
-    {
-      code: '{ const foo = false, FOO = true; }',
-      parserOptions,
-      errors: moduleScopeErrors,
-    },
-  ],
+const supportedParserOptions = [
+  {ecmaVersion: 6, sourceType: 'module'},
+  {ecmaVersion: 6, sourceType: 'script'},
+];
+
+supportedParserOptions.forEach((parserOptions) => {
+  ruleTester.run('prefer-module-scope-constants', rule, {
+    valid: [
+      {code: 'const FOO = true;', parserOptions},
+      {code: 'const foo = true;', parserOptions},
+      {code: '{ const foo = true; }', parserOptions},
+      {code: 'const foo = true, FOO = true;', parserOptions},
+      {code: 'const {FOO} = bar', parserOptions},
+      {code: '{ const {FOO} = bar; }', parserOptions},
+      {code: 'function foo() { const {FOO} = bar; }', parserOptions},
+      {code: '{ let {FOO} = bar; }', parserOptions},
+      {code: 'function foo() { let {FOO} = bar; }', parserOptions},
+      {code: 'const [FOO] = bar', parserOptions},
+      {code: '{ const [FOO] = bar; }', parserOptions},
+      {code: 'function foo() { const [FOO] = bar; }', parserOptions},
+      {code: '{ let [FOO] = bar; }', parserOptions},
+      {code: 'function foo() { let [FOO] = bar; }', parserOptions},
+      {
+        code: `
+          const MY_VALUE = true;
+
+          module.exports = () => {
+            console.log(MY_VALUE);
+          };
+        `,
+        parserOptions,
+      },
+    ],
+    invalid: [
+      {code: 'let FOO = true;', parserOptions, errors: nonConstErrors},
+      {code: '{ let FOO = true; }', parserOptions, errors: nonConstErrors},
+      {
+        code: 'function foo() { let FOO = true; }',
+        parserOptions,
+        errors: nonConstErrors,
+      },
+      {
+        code: 'let foo = false, FOO = true;',
+        parserOptions,
+        errors: nonConstErrors,
+      },
+      {code: '{ const FOO = true; }', parserOptions, errors: moduleScopeErrors},
+      {
+        code: 'function foo() { const FOO = true; }',
+        parserOptions,
+        errors: moduleScopeErrors,
+      },
+      {
+        code: '{ const foo = false, FOO = true; }',
+        parserOptions,
+        errors: moduleScopeErrors,
+      },
+    ],
+  });
 });
