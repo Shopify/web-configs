@@ -1,4 +1,5 @@
 module.exports = [
+  'last 1 firefoxandroid versions',
   'last 3 chrome versions',
   'last 3 chromeandroid versions',
   'last 3 firefox versions',
