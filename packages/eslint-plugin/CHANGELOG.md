@@ -7,6 +7,12 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [39.0.3] - 2020-11-17
+
+### Fixed
+
+- Fixed a syntax error in `peerDependencies` to allow eslint@^7.0.0 ([#196](https://github.com/Shopify/web-configs/pull/196)).
+
 ## [39.0.2] - 2020-11-03
 
 ### Fixed
