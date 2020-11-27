@@ -77,6 +77,14 @@ module.exports = {
             format: ['PascalCase'],
             prefix: ['T'],
           },
+          {
+            selector: 'interface',
+            format: ['PascalCase'],
+            custom: {
+              regex: '^I[A-Z]',
+              match: false,
+            },
+          },
         ],
       }),
     },
