@@ -6,7 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-<!-- ## Unreleased -->
+## [Unreleased]
+
+- Changed the default `corejs` version for `node` and `web` presets (default = `3`) [[#199](https://github.com/Shopify/web-configs/pull/199)]
+- Changed the default `useBuiltIns` option for `node` and `web` presets (default = `usage`) [[#199](https://github.com/Shopify/web-configs/pull/199)]
 
 ## [23.1.1] - 2020-08-26
 

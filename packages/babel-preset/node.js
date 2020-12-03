@@ -4,9 +4,9 @@ module.exports = function shopifyNodePreset(_api, options = {}) {
   const {
     version = 'current',
     modules = 'commonjs',
-    corejs = 2,
+    corejs = 3,
     debug = false,
-    useBuiltIns = 'entry',
+    useBuiltIns = 'usage',
     typescript = false,
   } = options;
 
