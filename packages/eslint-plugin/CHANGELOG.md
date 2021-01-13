@@ -9,6 +9,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Updated TypeScript naming rules to ensure type name start with a "T" and interface names don't start with an "I" ([#198](https://github.com/Shopify/web-configs/pull/198))
 - Updated `eslint-config-prettier` dependency to v3.3.0 ([#202](https://github.com/Shopify/web-configs/pull/202))
 
 ## [39.0.3] - 2020-11-17
