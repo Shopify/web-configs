@@ -10,7 +10,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Added the ability to disable `@babel/plugin-transform-react-constant-elements` [[#155](https://github.com/Shopify/web-foundation/pull/155)]
+- Added the ability to disable `@babel/plugin-transform-react-constant-elements` [[#205](https://github.com/Shopify/web-foundation/pull/205)]
 
 ## [23.1.1] - 2020-08-26
 
