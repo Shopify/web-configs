@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## [23.2.0] - 2021-02-09
+
 ### Added
 
 - Added the ability to disable `@babel/plugin-transform-react-constant-elements` [[#205](https://github.com/Shopify/web-foundation/pull/205)]
