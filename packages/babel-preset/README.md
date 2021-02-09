@@ -96,6 +96,7 @@ This packages comes with several different presets for you to use, depending on 
   This preset accepts an options object.
   - `pragma` : Replace the function used when compiling JSX expressions. Defaults to `React.createElement`.
   - `pragmaFrag`: Replace the function used when compiling JSX fragment expressions. Defaults to `React.Fragment`.
+  - `transformReactConstantElements`: Adds the `@babel/plugin-transform-react-constant-elements` plugin for production environments. Defaults to `true`.
 
   ```json
   {
