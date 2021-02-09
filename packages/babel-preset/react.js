@@ -3,9 +3,10 @@ module.exports = function shopifyReactPreset(api, options = {}) {
 
   const pragma = options.pragma || 'React.createElement';
   const pragmaFrag = options.pragmaFrag || 'React.Fragment';
+  const transformReactConstantElements = options.transformReactConstantElements || true;
   const plugins = [];
 
-  if (env === 'production') {
+  if (env === 'production' && transformReactConstantElements) {
     plugins.push(
       // Hoist constant JSX elements to the top of their scope, which can
       // result in faster reconciliation

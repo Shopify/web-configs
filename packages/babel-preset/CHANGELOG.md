@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Added
+
+- Added the ability to disable `@babel/plugin-transform-react-constant-elements` [[#155](https://github.com/Shopify/web-foundation/pull/155)]
 
 ## [23.1.1] - 2020-08-26
 
