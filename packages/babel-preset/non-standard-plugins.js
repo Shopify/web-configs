@@ -3,6 +3,13 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
     inlineEnv = false,
     typescript = false,
     transformRuntime = false,
+    transformRuntimeOptions = {
+      useESModules: false,
+      corejs: false,
+      regenerator: true,
+      helpers: true,
+      absoluteRuntime: false,
+    },
   } = options;
 
   const plugins = [require.resolve('@babel/plugin-syntax-dynamic-import')];
@@ -51,6 +58,7 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
       plugins.push([
         '@babel/plugin-transform-runtime',
         {
+          ...transformRuntimeOptions,
           version: require('@babel/plugin-transform-runtime/package.json')
             .version,
         },
