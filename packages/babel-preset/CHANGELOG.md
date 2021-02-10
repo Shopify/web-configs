@@ -6,6 +6,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
+
 ### Changed
 
 - Improved how options are defined in `@shopify/babel-preset/react` [[#209](https://github.com/Shopify/web-configs/pull/209)]
