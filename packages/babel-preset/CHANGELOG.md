@@ -11,6 +11,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Updated `@babel/*` presets and plugins to version `7.12` [[#207](https://github.com/Shopify/web-foundation/pull/207)]
 
+### Added
+
+- Added the ability to add `@babel/plugin-transform-runtime` [[#206](https://github.com/Shopify/web-configs/pull/206)]
+
 ## [23.2.0] - 2021-02-09
 
 ### Added
