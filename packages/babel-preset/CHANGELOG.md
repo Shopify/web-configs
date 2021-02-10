@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## [23.3.1] - 2021-02-10
+
 ### Changed
 
 - Bugfix for disabling `transformReactConstantElements` [[#208](https://github.com/Shopify/web-configs/pull/208)]
