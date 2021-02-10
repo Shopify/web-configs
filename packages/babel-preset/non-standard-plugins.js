@@ -1,5 +1,16 @@
 module.exports = function shopifyNonStandardPlugins(options = {}) {
-  const {inlineEnv = false, typescript = false} = options;
+  const {
+    inlineEnv = false,
+    typescript = false,
+    transformRuntime = false,
+    transformRuntimeOptions = {
+      useESModules: false,
+      corejs: false,
+      regenerator: true,
+      helpers: true,
+      absoluteRuntime: false,
+    },
+  } = options;
 
   const plugins = [require.resolve('@babel/plugin-syntax-dynamic-import')];
 
@@ -38,6 +49,21 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
         {loose: true},
       ],
     );
+
+    if (transformRuntime) {
+      // When compiling TypeScript with only babel-loader, extra helpers are
+      // inlined in each source module. This normally adds some bulks to files,
+      // but `transform-runtime` converts these blocks into common helper imports
+      // that webpack can collate into shared assets.
+      plugins.push([
+        '@babel/plugin-transform-runtime',
+        {
+          ...transformRuntimeOptions,
+          version: require('@babel/plugin-transform-runtime/package.json')
+            .version,
+        },
+      ]);
+    }
   } else {
     plugins.push(require.resolve('@babel/plugin-proposal-class-properties'));
   }

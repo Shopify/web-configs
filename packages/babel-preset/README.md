@@ -76,6 +76,10 @@ This packages comes with several different presets for you to use, depending on 
 
     - `useBuiltIns`, a string that is passed to the [`useBuiltIns` option of `@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env#usebuiltins)
 
+    - `transformRuntime`, a boolean (defaults to `false` and requires `typescript` to be `true`) to add the [`@babel/plugin-transform-runtime` plugin](https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-runtime).
+
+    - `transformRuntimeOptions`, allows the [`@babel/plugin-transform-runtime` plugin](https://babeljs.io/docs/en/babel-plugin-transform-runtime#options) to be configured.
+
 - `@shopify/babel-preset/node`: This preset transpiles features to a specified version of Node, defaulting to the currently active version. It accepts an options object. The `modules`, `typescript`, `inlineEnv`,`debug`, `corejs` and `useBuiltIns` options do the same thing they do in `@shopify/babel-preset/web`, detailed above. You can also pass a version of Node to target during transpilation using the `version` option:
 
   ```json
