@@ -10,6 +10,8 @@ module.exports = {
     '@shopify/class-property-semi': 'off',
     '@shopify/binary-assignment-parens': 'off',
     'babel/semi': 'off',
+    'prefer-arrow-callback': 'off',
+    'arrow-body-style': 'off',
 
     // Special rule for 'lines-around-comment'
     // https://github.com/prettier/eslint-config-prettier/blob/984de70e8c6b57684b444283561019389ccebd11/README.md#lines-around-comment
