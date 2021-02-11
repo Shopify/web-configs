@@ -1,11 +1,12 @@
-module.exports = function shopifyReactPreset(api, options = {}) {
-  const env = api.env();
-
-  const {
+module.exports = function shopifyReactPreset(
+  api,
+  {
     pragma = 'React.createElement',
     pragmaFrag = 'React.Fragment',
     transformReactConstantElements = true,
-  } = options;
+  } = {},
+) {
+  const env = api.env();
 
   const plugins = [];
 
