@@ -6,14 +6,14 @@ const ruleTester = new RuleTester();
 
 const moduleScopeErrors = [
   {
-    kind: 'VariableDeclarator',
+    type: 'VariableDeclarator',
     message:
       'You must place screaming snake case at module scope. If this is not meant to be a module-scoped variable, use camelcase instead.',
   },
 ];
 const nonConstErrors = [
   {
-    kind: 'VariableDeclarator',
+    type: 'VariableDeclarator',
     message:
       'You must use `const` when defining screaming snake case variables. If this is not a constant, use camelcase instead.',
   },

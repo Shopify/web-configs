@@ -61,7 +61,7 @@ module.exports = {
 
     return {
       'FunctionDeclaration ImportExpression': function (node) {
-        const comments = source.getComments(node.source).leading;
+        const comments = source.getCommentsBefore(node.source);
         const report = generateReport(node, comments);
 
         if (report != null) {
@@ -73,7 +73,7 @@ module.exports = {
           return;
         }
 
-        const comments = source.getComments(node.arguments[0]).leading;
+        const comments = source.getCommentsBefore(node.arguments[0]);
         const report = generateReport(node, comments);
 
         if (report != null) {

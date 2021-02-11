@@ -10,5 +10,6 @@ module.exports = {
   rules: merge(require('./rules/node'), {
     'no-process-env': 'off',
     'no-console': 'off',
+    'no-useless-token-range': 'off',
   }),
 };
