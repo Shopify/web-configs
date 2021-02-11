@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## [23.3.2] - 2021-02-11
+
 ### Changed
 
 - Improved how options are defined in `@shopify/babel-preset/react` [[#209](https://github.com/Shopify/web-configs/pull/209)]
