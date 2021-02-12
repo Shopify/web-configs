@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+### Changed
+
+- Include jest formatting in `@shopify/eslint-plugin` ruleset ([#xxx](https://github.com/Shopify/web-configs/pull/xxx))
+
 ## [40.0.1] - 2021-02-12
 
 ### Changed
