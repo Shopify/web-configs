@@ -1,5 +1,6 @@
-query LintErrorFooQuery {
+query AllTestQuery {
   foo {
-    DOES_NOT_EXIST
+    id
+    bar
   }
 }

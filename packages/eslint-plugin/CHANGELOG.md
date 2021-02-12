@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+### Changed
+
+- Updated `eslint-plugin` test to prepare for `eslint@7` upgrade ([#211](https://github.com/Shopify/web-configs/pull/211))
+
 ## [39.0.4] - 2022-01-13
 
 ### Changed
