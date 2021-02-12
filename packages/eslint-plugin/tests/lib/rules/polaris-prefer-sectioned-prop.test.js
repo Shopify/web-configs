@@ -13,7 +13,7 @@ const parserOptions = {
 function errorsFor(component) {
   return [
     {
-      kind: 'JSXElement',
+      type: 'JSXElement',
       message: `Use the \`sectioned\` prop on ${component} instead of wrapping all its contents in a ${component}.Section`,
     },
   ];

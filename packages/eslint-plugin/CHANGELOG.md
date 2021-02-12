@@ -11,6 +11,22 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Updated `eslint-plugin` test to prepare for `eslint@7` upgrade ([#211](https://github.com/Shopify/web-configs/pull/211))
 
+### Breaking Change
+
+- Updated `eslint-plugin` plugins and removed support for `eslint@6`  ([#194](https://github.com/Shopify/web-foundation/pull/194)).
+
+| Package                                   | Old version | New version |
+| ----------------------------------------- | ----------- | ----------- |
+| `eslint-config-prettier`                  | `6.14.0`    | `7.2.0`     |
+| `eslint-plugin-jest-formatting`           | `2.0.0`     | `2.0.1`     |
+| `eslint-plugin-promise`                   | `4.2.1`     | `4.3.1`     |
+| `eslint-plugin-jest`                      | `24.1.0`    | `24.1.3`    |
+| `eslint-plugin-react`                     | `7.21.5`    | `7.22.0`    |
+| `eslint-plugin-sort-class-members`        | `1.8.0`     | `1.9.0`     |
+| `@typescript-eslint/eslint-plugin`        | `4.1.0`     | `4.15.0`    |
+| `@typescript-eslint/parser`               | `4.1.0`     | `4.15.0`    |
+| `change-case`                             | `4.1.0`     | `4.1.2`     |
+
 ## [39.0.4] - 2022-01-13
 
 ### Changed

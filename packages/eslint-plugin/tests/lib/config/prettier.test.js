@@ -13,7 +13,7 @@ describe('config', () => {
     it('validates TypeScript source files using prettier', () => {
       expect(
         execESLint(
-          `--ext .ts --config ${fixtureFile(
+          `--config ${fixtureFile(
             'prettier-typescript/.eslintrc.js',
           )} ${fixtureFile('prettier-typescript')}`,
         ),
@@ -23,7 +23,7 @@ describe('config', () => {
     it('does not generate prettier errors in graphql files', () => {
       expect(
         execESLint(
-          `--ext .graphql --ignore-pattern "**/prettier-graphql/build/*" --config "${fixtureFile(
+          `--ignore-pattern "**/prettier-graphql/build/*" --config "${fixtureFile(
             'prettier-graphql/.eslintrc.js',
           )}" "${fixtureFile('prettier-graphql')}"`,
         ),
@@ -43,7 +43,7 @@ describe('config', () => {
     it('uses .prettierrc as the source of prettier rules for TypeScript', () => {
       expect(
         execESLint(
-          `--ext .ts --config ${fixtureFile(
+          `--config ${fixtureFile(
             'prettier-typescript/.eslintrc.js',
           )} ${fixtureFile('prettier-config')}`,
         ),

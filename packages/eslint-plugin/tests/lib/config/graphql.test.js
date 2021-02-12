@@ -5,7 +5,7 @@ describe('config', () => {
     it('validates .graphql files using graphql plugin', () => {
       expect(
         execESLint(
-          `--ext .graphql --ignore-pattern "**/graphql-lint-error/build/*" --config "${configFile(
+          `--ignore-pattern "**/graphql-lint-error/build/*" --config "${configFile(
             'graphql',
           )}" "${fixtureFile('graphql-lint-error')}"`,
         ),
@@ -15,7 +15,7 @@ describe('config', () => {
     it('validates .graphql files with required `id` field using graphql plugin', () => {
       expect(
         execESLint(
-          `--ext .graphql --ignore-pattern "**/graphql-lint-error/build/*" --config "${configFile(
+          `--ignore-pattern "**/graphql-lint-error/build/*" --config "${configFile(
             'graphql',
           )}" "${fixtureFile('graphql-lint-error')}"`,
         ),
@@ -25,7 +25,7 @@ describe('config', () => {
     it('validates .graphql file syntax using graphql plugin', () => {
       expect(
         execESLint(
-          `--ext .graphql --ignore-pattern "**/graphql-syntax-error/build/*" --config "${configFile(
+          `--ignore-pattern "**/graphql-syntax-error/build/*" --config "${configFile(
             'graphql',
           )}" "${fixtureFile('graphql-syntax-error')}"`,
         ),

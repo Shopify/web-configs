@@ -4,7 +4,7 @@ describe('config', () => {
   it('has valid plugins and requires', () => {
     expect(
       execESLint(
-        `--ext .js,.graphql --ignore-pattern "**/all/build/*" --config ${fixtureFile(
+        `--ignore-pattern "**/all/build/*" --config ${fixtureFile(
           'all/.eslintrc.js',
         )} ${fixtureFile('all')}`,
       ),

@@ -1,1 +1,1 @@
-export function svgOptions(): Record<string, unknown>;
+export function svgOptions(): {[key: string]: unknown};
