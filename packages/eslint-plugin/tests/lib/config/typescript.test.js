@@ -5,7 +5,7 @@ describe('config', () => {
     it('ignores files not handled by TypeScript', () => {
       expect(
         execESLint(
-          `--ext .js --ext .ts --config ${fixtureFile(
+          `--config ${fixtureFile(
             'typescript-no-js/.eslintrc.js',
           )} ${fixtureFile('typescript-no-js')}`,
         ),
@@ -15,9 +15,9 @@ describe('config', () => {
 
   it('identifies import path issues', () => {
     const esLintOutput = execESLint(
-      `--ext .ts --config ${fixtureFile(
-        'typescript-imports/.eslintrc.js',
-      )} ${fixtureFile('typescript-imports')}`,
+      `--config ${fixtureFile('typescript-imports/.eslintrc.js')} ${fixtureFile(
+        'typescript-imports',
+      )}`,
     );
 
     expect(esLintOutput).toStrictEqual(
