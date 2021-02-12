@@ -245,4 +245,9 @@ module.exports = {
   // disabling the base rule as it can report incorrect errors
   'object-curly-spacing': 'off',
   '@typescript-eslint/object-curly-spacing': 'error',
+
+  // This rule is aimed at ensuring there are spaces around infix operators.
+  // disabling the base rule as it can report incorrect errors
+  'space-infix-ops': 'off',
+  '@typescript-eslint/space-infix-ops': 'error',
 };
