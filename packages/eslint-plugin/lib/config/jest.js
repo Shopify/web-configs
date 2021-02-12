@@ -12,7 +12,7 @@ module.exports = {
 
   plugins: ['jest', 'jest-formatting', '@shopify'],
 
-  rules: merge(require('./rules/jest'), require('./rules/jest-formatting'), {
+  rules: merge(require('./rules/jest'), {
     'jest/valid-title': [
       'error',
       {
