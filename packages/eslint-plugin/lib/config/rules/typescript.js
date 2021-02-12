@@ -88,11 +88,11 @@ module.exports = {
   ],
   // Disallow the declaration of empty interfaces. (no-empty-interface from TSLint)
   '@typescript-eslint/no-empty-interface': 'off',
-  // Requires using either T[] or Array<T> for arrays (array-type)
+  // Requires using either T[] for arrays (array-type)
   '@typescript-eslint/array-type': [
     'error',
     {
-      default: 'array-simple',
+      default: 'array',
       readonly: 'generic',
     },
   ],
