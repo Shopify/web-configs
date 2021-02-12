@@ -9,7 +9,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Updated `eslint-plugin` to fix incompatibility between `@typescript-eslint/array-type` and `@typescript-eslint/ban-types` ([#212](https://github.com/Shopify/web-configs/pull/212))
+- Fix incompatibility between `@typescript-eslint/array-type` and `@typescript-eslint/ban-types` ([#212](https://github.com/Shopify/web-configs/pull/212))
 
 ## [40.0.0] - 2021-02-12
 
