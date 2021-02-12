@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [40.0.0] - 2021-02-12
+
 ### Changed
 
 - Updated `eslint-plugin` test to prepare for `eslint@7` upgrade ([#211](https://github.com/Shopify/web-configs/pull/211))
@@ -27,7 +29,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 | `@typescript-eslint/parser`               | `4.1.0`     | `4.15.0`    |
 | `change-case`                             | `4.1.0`     | `4.1.2`     |
 
-## [39.0.4] - 2022-01-13
+## [39.0.4] - 2021-01-13
 
 ### Changed
 
