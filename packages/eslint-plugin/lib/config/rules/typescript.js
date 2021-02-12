@@ -233,4 +233,16 @@ module.exports = {
   '@typescript-eslint/no-unnecessary-type-arguments': 'off',
   // Requires that private members are marked as readonly if they're never modified outside of the constructor
   '@typescript-eslint/prefer-readonly': 'off',
+  // This rule enforces a consistent way to define records.
+  '@typescript-eslint/consistent-indexed-object-style': [
+    'error',
+    'index-signature',
+  ],
+  // Disallows unnecessary constraints on generic types
+  '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+
+  // Enforce consistent spacing inside braces
+  // disabling the base rule as it can report incorrect errors
+  'object-curly-spacing': 'off',
+  '@typescript-eslint/object-curly-spacing': 'error',
 };

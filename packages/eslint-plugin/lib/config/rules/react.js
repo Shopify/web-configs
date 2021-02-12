@@ -99,11 +99,15 @@ module.exports = {
   'react/style-prop-object': 'error',
   // Prevent void DOM elements (e.g. <img />, <br />) from receiving children
   'react/void-dom-elements-no-children': 'error',
-  // Prevent usage of javascript: in URLs
-  'react/jsx-no-script-url': 'error',
 
   // JSX
 
+  // Enforce a new line after jsx elements and expressions
+  'react/jsx-newline': 'off',
+  // Prevent usage of javascript: in URLs
+  'react/jsx-no-script-url': 'error',
+  // Prevent react contexts from taking non-stable values
+  'react/jsx-no-constructed-context-values': 'error',
   // Enforce boolean attributes notation in JSX
   'react/jsx-boolean-value': 'error',
   // Enforce or disallow spaces inside of curly braces in JSX attributes and expressions
@@ -129,7 +133,15 @@ module.exports = {
   // Validate JSX indentation
   'react/jsx-indent': ['error', 2],
   // Validate JSX has key prop when in array or iterator
-  'react/jsx-key': 'error',
+  // checkFragmentShorthand - When true the rule will check if usage of the shorthand fragment syntax requires a key.
+  // checkKeyMustBeforeSpread - When true the rule will check if key prop after spread to avoid createElement fallback.
+  'react/jsx-key': [
+    'error',
+    {
+      checkFragmentShorthand: true,
+      checkKeyMustBeforeSpread: true,
+    },
+  ],
   // Validate a specific depth for JSX
   'react/jsx-max-depth': 'off',
   // Limit maximum of props on a single line in JSX
