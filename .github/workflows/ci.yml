@@ -36,12 +36,3 @@ jobs:
       - run: yarn run lint
 
       - run: yarn run test --coverage
-
-
- - name: 'Lint'
-      script:
-        - yarn run lint
-
-    - name: 'Unit Tests'
-      script:
-        - yarn run test --coverage
