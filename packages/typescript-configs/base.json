@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "esModuleInterop": true,
+    "isolatedModules": true,
     "experimentalDecorators": true,
     "lib": ["dom", "es2018", "esnext.asynciterable"],
     "moduleResolution": "node",
