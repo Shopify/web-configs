@@ -7,9 +7,13 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+# Changed
+
+- Update `stylelint`, `stylelint-prettier`, and `stylelint-scss` [[#224](https://github.com/Shopify/web-configs/pull/224)]
+
 ## [10.0.1] - 2020-10-07
 
-- Update styleling peer dependency to `>=13.7.0"`
+- Update stylelint peer dependency to `>=13.7.0"`
 
 ## [10.0.0] - 2020-10-06
 
