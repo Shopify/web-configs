@@ -33,8 +33,8 @@
     "eslint": "^7.0.0"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.15.0",
-    "@typescript-eslint/parser": "^4.15.0",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
     "babel-eslint": "10.1.0",
     "change-case": "^4.1.2",
     "common-tags": "^1.8.0",
