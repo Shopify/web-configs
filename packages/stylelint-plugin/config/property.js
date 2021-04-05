@@ -21,4 +21,6 @@ module.exports = {
   'property-allowed-list': null,
   // Disallow redundant values in shorthand properties.
   'shorthand-property-no-redundant-values': true,
+  // Disallow duplicate custom properties within declaration blocks.
+  'declaration-block-no-duplicate-custom-properties': true,
 };

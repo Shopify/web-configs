@@ -23,4 +23,6 @@ module.exports = {
   'no-missing-end-of-source-newline': true,
   // Disallow animation names that do not correspond to a @keyframes declaration.
   'no-unknown-animations': true,
+  // Disallow invalid position `@import` rules within a stylesheet.
+  'no-invalid-position-at-import-rule': true,
 };
