@@ -2,7 +2,7 @@
 
 Image files should live in a directory (e.g. `icons`, `illustrations` or `images`) that must contain a dedicated index file that re-exports all the images in that directory.
 
-Files that consume images must import from that index file instead of importing images directly. This rule enforces that convention by disallowing importing directly from an image in any file except the index file in the same dorectory as the image.
+Files that consume images must import from that index file instead of importing images directly. This rule enforces that convention by disallowing importing directly from an image in any file except the index file in the same directory as the image.
 
 ## Rule Details
 
