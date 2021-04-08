@@ -8,4 +8,5 @@ module.exports = {
   '@typescript-eslint/no-extra-parens': 'off',
   '@typescript-eslint/semi': 'off',
   '@typescript-eslint/type-annotation-spacing': 'off',
+  '@typescript-eslint/object-curly-spacing': 'off',
 };
