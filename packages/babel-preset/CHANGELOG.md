@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Added
+
+- Created a `common` babel-preset [[#231](https://github.com/Shopify/web-foundation/pull/231)]
+
+### Changed
+
+- Updated `@babel/*` presets and plugins to version `7.13.x` [[#231](https://github.com/Shopify/web-foundation/pull/231)]
+
 
 ### Changed
 
