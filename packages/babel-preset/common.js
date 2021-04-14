@@ -36,10 +36,10 @@ module.exports = function shopifyCommonPreset(_api, options = {}) {
         bugfixes: true,
       },
     ],
-  ];
+    typescript && require.resolve('@babel/preset-typescript'),
+  ].filter(Boolean);
 
   const plugins = [
-    typescript && require.resolve('@babel/preset-typescript'),
     // proposal-decorators must go before proposal-class-properties.
     // Typescript implements the stage 1 version of decorators, which is the
     // "legacy" version. When decorators are used in legacy mode,
