@@ -1,6 +1,5 @@
-module.exports = function shopifyCommonPreset(api, options = {}) {
+module.exports = function shopifyCommonPreset(_api, options = {}) {
   const {
-    targets = 'current node',
     corejs = 3,
     debug = false,
     modules = 'auto',
@@ -82,5 +81,5 @@ module.exports = function shopifyCommonPreset(api, options = {}) {
     ],
   ].filter(Boolean);
 
-  return {targets, presets, plugins};
+  return {presets, plugins};
 };
