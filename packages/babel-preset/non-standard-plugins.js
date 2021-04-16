@@ -4,7 +4,6 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
     typescript = false,
     transformRuntime = false,
     transformRuntimeOptions = {
-      useESModules: false,
       corejs: false,
       regenerator: true,
       helpers: true,
