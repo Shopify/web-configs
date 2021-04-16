@@ -112,6 +112,19 @@ This packages comes with several different presets for you to use, depending on 
   }
   ```
 
+- `@shopify/babel-preset/common`: This preset transpiles features to a specified version of Node and Browsers. It relies on the [top-level targets](https://babeljs.io/blog/2021/02/22/7.13.0#top-level-targets-option-12189httpsgithubcombabelbabelpull12189-rfchttpsgithubcombabelrfcspull2) option set on the babel configuration. It accepts an options object. The `modules`, `typescript`,`debug`, `corejs`, `transformRuntime`, `transformRuntimeOptions`, and `useBuiltIns` options do the same thing they do in `@shopify/babel-preset/web`, detailed above.
+
+  ```json
+  {
+    "babel": {
+      "targets": "current node",
+      "presets": [
+        "@shopify/babel-preset/common"
+      ]
+    }
+  }
+  ```
+
 As noted above, you can include multiple of these presets together. Some common recipes are shown below:
 
 ```js
