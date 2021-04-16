@@ -14,10 +14,6 @@ module.exports = function shopifyCommonPreset(_api, options = {}) {
       // https://github.com/babel/babel/issues/10261
       version: require('@babel/runtime/package.json').version,
       regenerator: true,
-      // https://babeljs.io/docs/en/babel-plugin-transform-runtime#useesmodules
-      // We should turn this on once the lowest version of Node LTS
-      // supports ES Modules and exports maps.
-      useESModules: false,
       // This allows users to run transform-runtime broadly across a whole project.
       // By default, transform-runtime imports from @babel/runtime/foo directly, but
       // that only works if @babel/runtime is in the node_modules of the file that is being compiled.
