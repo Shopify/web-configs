@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+- Update `cssnano` to version `5.0.0`. [[#233](https://github.com/Shopify/web-configs/pull/233)]
+
 ## [4.0.0] - 2021-04-16
 
 - Updating to postcss 8 (which drops support for node 11/13 but no major api changes). [[#225](https://github.com/Shopify/web-configs/pull/225)]
