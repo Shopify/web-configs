@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [10.1.0] - 2021-03-10
+
 ### Changed
 
 - Update `stylelint`, `stylelint-prettier`, and `stylelint-scss` [[#224](https://github.com/Shopify/web-configs/pull/224)]
