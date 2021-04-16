@@ -15,7 +15,8 @@
     "release": "yarn lint:changelogs && lerna publish",
     "release-beta": "lerna publish --dist-tag beta",
     "generate:package": "plop package && yarn plop docs",
-    "tophat": "tophat"
+    "tophat": "tophat",
+    "updated": "lerna updated"
   },
   "devDependencies": {
     "@shopify/tophat": "^0.0.4",
