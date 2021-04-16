@@ -13,6 +13,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Added `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`([217](https://github.com/Shopify/web-configs/pull/218))
 - Updated `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` to version `4.20.0` [[#223](https://github.com/Shopify/web-foundation/pull/223)]
+- Fixed a conflict between Prettier and rules `*/object-curly-spacing` ([227](https://github.com/Shopify/web-configs/pull/227))
 
 ## [40.1.0] - 2021-02-24
 

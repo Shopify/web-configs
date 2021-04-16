@@ -10,6 +10,7 @@ module.exports = {
     '@shopify/class-property-semi': 'off',
     '@shopify/binary-assignment-parens': 'off',
     'babel/semi': 'off',
+    'babel/object-curly-spacing': 'off',
     'prefer-arrow-callback': 'off',
     'arrow-body-style': 'off',
 
