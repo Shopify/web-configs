@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [4.0.1] - 2021-04-19
+
+Change images.d.ts *.SVG files definitions from `any` to `string`
+
 ## [4.0.0] - 2021-02-24
 
 ### Breaking Change
