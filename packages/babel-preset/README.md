@@ -181,7 +181,7 @@ Enables `@babel/preset-typescript` to transfrom TypeScript into Javascript.
 
 #### `typescriptOptions`
 
-See all avaialble [options](https://babeljs.io/docs/en/babel-preset-typescript).
+See all available [options](https://babeljs.io/docs/en/babel-preset-typescript).
 
 #### `transformRuntime`
 
