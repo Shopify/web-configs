@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## [23.5.1] - 2021-04-20
+
 ### Changed
 
 - Updated `@babel/core`, `@babel/runtime`, and fixes `@shopify/babel-preset` react settings [[#235](https://github.com/Shopify/web-foundation/pull/235)]
