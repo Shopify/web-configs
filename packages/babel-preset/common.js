@@ -91,7 +91,7 @@ module.exports = function shopifyCommonPreset(
     typescript &&
       require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
 
-    typescript && [require.resolve('@babel/plugin-proposal-optional-chaining')],
+    typescript && require.resolve('@babel/plugin-proposal-optional-chaining'),
     // Polyfills the runtime needed for async/await, generators, and friends
     // https://babeljs.io/docs/en/babel-plugin-transform-runtime
     transformRuntime && [
