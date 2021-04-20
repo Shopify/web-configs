@@ -25,12 +25,6 @@ module.exports = function shopifyCommonPreset(
     reactOptions = {
       // Will use the native built-in instead of trying to polyfill behavior for any plugins that require one.
       useBuiltIns: true,
-      // Replace the function used when compiling JSX expressions.
-      pragma: 'React.createElement',
-      // Replace the component used when compiling JSX fragments.
-      pragmaFrag: 'React.Fragment',
-      // When spreading props, use inline object with spread elements directly instead of Babel's extend helper or Object.assign.
-      useSpread: true,
     },
     transformReactConstantElements = false,
   } = {},
