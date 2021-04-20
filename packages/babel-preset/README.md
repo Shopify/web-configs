@@ -155,7 +155,7 @@ The `@shopify/babel-preset/common` preset is designed to be a common import that
 
 #### Targets
 
-This preset uses the top-level `targets` to determine what runtime is being built.
+This preset does not specify any targets to control what is transpiled. You should use Babel's top-level `targets` option to specify build targets. For instance to target the current node version:
 
 ```json
 {
