@@ -221,7 +221,7 @@ When spreading props, use inline object with spread elements directly instead of
 
 `boolean`, defaults to `false`.
 
-This option when `true` will enable the `@babel/plugin-transform-react-constant-elements` preset.
+This option when `true` will enable the `@babel/plugin-transform-react-constant-elements` plugin in production mode.
 
 [Documentation](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements)
     
