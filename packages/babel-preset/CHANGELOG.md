@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## [23.5.0] - 2021-04-20
+
 ### Added
 
 - Created an experimental `common` babel-preset [[#231](https://github.com/Shopify/web-foundation/pull/231)]

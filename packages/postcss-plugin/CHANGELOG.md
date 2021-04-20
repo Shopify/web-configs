@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## [Unreleased] -->
 
+## [4.1.0] - 2021-04-16
+
 - Update `cssnano` to version `5.0.0`. [[#233](https://github.com/Shopify/web-configs/pull/233)]
 
 ## [4.0.0] - 2021-04-16

@@ -1,6 +1,6 @@
 {
   "name": "@shopify/postcss-plugin",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "license": "MIT",
   "description": "All of Shopify’s recommended PostCSS plugins in one easy-to-use preset.",
   "keywords": [
