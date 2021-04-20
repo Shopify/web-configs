@@ -1,11 +1,12 @@
-module.exports = function shopifyCommonPreset(api, options = {}) {
-  const {
+module.exports = function shopifyCommonPreset(
+  api,
+  {
     corejs = 3,
     debug = false,
     modules = 'auto',
+    useBuiltIns = 'entry',
     typescript = false,
     typescriptOptions = {},
-    useBuiltIns = 'entry',
     transformRuntime = false,
     transformRuntimeOptions = {
       corejs: false,
@@ -20,8 +21,8 @@ module.exports = function shopifyCommonPreset(api, options = {}) {
       // that only works if @babel/runtime is in the node_modules of the file that is being compiled.
       absoluteRuntime: false,
     },
-    includeReactPreset = false,
-    reactPresetOptions = {
+    react = false,
+    reactOptions = {
       // Will use the native built-in instead of trying to polyfill behavior for any plugins that require one.
       useBuiltIns: true,
       // Replace the function used when compiling JSX expressions.
@@ -32,10 +33,12 @@ module.exports = function shopifyCommonPreset(api, options = {}) {
       useSpread: true,
     },
     transformReactConstantElements = false,
-  } = options;
-
+  } = {},
+) {
   const env = api.env();
   const isDevelopment = env === 'development' || env === 'test';
+  const includeTransformReactConstantElements =
+    !isDevelopment && transformReactConstantElements && react;
 
   const presets = [
     [
@@ -52,12 +55,12 @@ module.exports = function shopifyCommonPreset(api, options = {}) {
       require.resolve('@babel/preset-typescript'),
       {...typescriptOptions},
     ],
-    includeReactPreset && [
+    react && [
       require.resolve('@babel/preset-react'),
       {
         // This toggles behavior specific to development, such as adding __source and __self.
         development: isDevelopment,
-        ...reactPresetOptions,
+        ...reactOptions,
       },
     ],
   ].filter(Boolean);
@@ -85,9 +88,9 @@ module.exports = function shopifyCommonPreset(api, options = {}) {
     // Can be removed once we drop support for webpack v4 (or these features
     // are backported to acorn v6)
     typescript && require.resolve('@babel/plugin-proposal-numeric-separator'),
-    typescript && [
+    typescript &&
       require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
-    ],
+
     typescript && [require.resolve('@babel/plugin-proposal-optional-chaining')],
     // Polyfills the runtime needed for async/await, generators, and friends
     // https://babeljs.io/docs/en/babel-plugin-transform-runtime
@@ -100,8 +103,7 @@ module.exports = function shopifyCommonPreset(api, options = {}) {
     ],
     // Hoist constant JSX elements to the top of their scope, which can
     // result in faster reconciliation
-    !isDevelopment &&
-      transformReactConstantElements &&
+    includeTransformReactConstantElements &&
       require.resolve('@babel/plugin-transform-react-constant-elements'),
   ].filter(Boolean);
 
