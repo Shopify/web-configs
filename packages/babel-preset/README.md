@@ -138,6 +138,7 @@ As noted above, you can include multiple of these presets together. Some common 
 ## Experimental Presets
 
 ## `@shopify/babel-preset/common`
+
 The `@shopify/babel-preset/common` preset is designed to be a common import that offers more options. It is a combination of the `web`, `node`, and `react` presets all in one.
 
 ### Usage
