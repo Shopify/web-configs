@@ -1,9 +1,10 @@
-module.exports = function shopifyCommonPreset(_api, options = {}) {
+module.exports = function shopifyCommonPreset(api, options = {}) {
   const {
     corejs = 3,
     debug = false,
     modules = 'auto',
     typescript = false,
+    typescriptOptions = {},
     useBuiltIns = 'entry',
     transformRuntime = false,
     transformRuntimeOptions = {
@@ -19,7 +20,22 @@ module.exports = function shopifyCommonPreset(_api, options = {}) {
       // that only works if @babel/runtime is in the node_modules of the file that is being compiled.
       absoluteRuntime: false,
     },
+    includeReactPreset = false,
+    reactPresetOptions = {
+      // Will use the native built-in instead of trying to polyfill behavior for any plugins that require one.
+      useBuiltIns: true,
+      // Replace the function used when compiling JSX expressions.
+      pragma: 'React.createElement',
+      // Replace the component used when compiling JSX fragments.
+      pragmaFrag: 'React.Fragment',
+      // When spreading props, use inline object with spread elements directly instead of Babel's extend helper or Object.assign.
+      useSpread: true,
+    },
+    transformReactConstantElements = false,
   } = options;
+
+  const env = api.env();
+  const isDevelopment = env === 'development' || env === 'test';
 
   const presets = [
     [
@@ -32,7 +48,18 @@ module.exports = function shopifyCommonPreset(_api, options = {}) {
         bugfixes: true,
       },
     ],
-    typescript && require.resolve('@babel/preset-typescript'),
+    typescript && [
+      require.resolve('@babel/preset-typescript'),
+      {...typescriptOptions},
+    ],
+    includeReactPreset && [
+      require.resolve('@babel/preset-react'),
+      {
+        // This toggles behavior specific to development, such as adding __source and __self.
+        development: isDevelopment,
+        ...reactPresetOptions,
+      },
+    ],
   ].filter(Boolean);
 
   const plugins = [
@@ -60,12 +87,8 @@ module.exports = function shopifyCommonPreset(_api, options = {}) {
     typescript && require.resolve('@babel/plugin-proposal-numeric-separator'),
     typescript && [
       require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
-      {loose: true},
     ],
-    typescript && [
-      require.resolve('@babel/plugin-proposal-optional-chaining'),
-      {loose: true},
-    ],
+    typescript && [require.resolve('@babel/plugin-proposal-optional-chaining')],
     // Polyfills the runtime needed for async/await, generators, and friends
     // https://babeljs.io/docs/en/babel-plugin-transform-runtime
     transformRuntime && [
@@ -75,6 +98,11 @@ module.exports = function shopifyCommonPreset(_api, options = {}) {
         version: require('@babel/runtime/package.json').version,
       },
     ],
+    // Hoist constant JSX elements to the top of their scope, which can
+    // result in faster reconciliation
+    !isDevelopment &&
+      transformReactConstantElements &&
+      require.resolve('@babel/plugin-transform-react-constant-elements'),
   ].filter(Boolean);
 
   return {presets, plugins};

@@ -112,19 +112,6 @@ This packages comes with several different presets for you to use, depending on 
   }
   ```
 
-- `@shopify/babel-preset/common`: This preset transpiles features to a specified version of Node and Browsers. It relies on the [top-level targets](https://babeljs.io/blog/2021/02/22/7.13.0#top-level-targets-option-12189httpsgithubcombabelbabelpull12189-rfchttpsgithubcombabelrfcspull2) option set on the babel configuration. It accepts an options object. The `modules`, `typescript`,`debug`, `corejs`, `transformRuntime`, `transformRuntimeOptions`, and `useBuiltIns` options do the same thing they do in `@shopify/babel-preset/web`, detailed above.
-
-  ```json
-  {
-    "babel": {
-      "targets": "current node",
-      "presets": [
-        "@shopify/babel-preset/common"
-      ]
-    }
-  }
-  ```
-
 As noted above, you can include multiple of these presets together. Some common recipes are shown below:
 
 ```js
@@ -147,3 +134,131 @@ As noted above, you can include multiple of these presets together. Some common 
   }
 }
 ```
+
+## Experimental Presets
+
+## `@shopify/babel-preset/common`
+The `@shopify/babel-preset/common` preset is designed to be a common import that offers more options. It is a combination of the `web`, `node`, and `react` presets all in one.
+
+### Usage
+
+```javascript
+{
+  "babel": {
+    "presets": [
+      ["@shopify/babel-preset/common", {"typescript": true}]
+    ]
+  }
+}
+```
+
+### Options
+
+#### `debug`
+
+`boolean`, defaults to `false`.
+
+Outputs to console.log the polyfills and transform plugins enabled by preset-env and, if applicable, which one of your targets that needed it.
+
+[Documentation](https://babeljs.io/docs/en/babel-preset-env#debug)
+
+
+#### `modules`
+
+`"amd" | "umd" | "systemjs" | "commonjs" | "cjs" | "auto" | false`, defaults to `"auto"`.
+
+Enable transformation of ES module syntax to another module type. Note that `cjs` is just an alias for `commonjs`.
+
+Setting this to `false` will preserve ES modules. Use this only if you intend to ship native ES Modules to browsers. If you are using a bundler with Babel, the default `modules: "auto"` is always preferred.
+
+##### `modules: "auto"`
+
+By default `@babel/preset-env` uses [`caller`](options.md#caller) data to determine whether ES modules and module features (e.g. `import()`) should be transformed. Generally `caller` data will be specified in the bundler plugins (e.g. `babel-loader`, `@rollup/plugin-babel`) and thus it is not recommended to pass `caller` data yourself -- The passed `caller` may overwrite the one from bundler plugins and in the future you may get suboptimal results if bundlers supports new module features.
+
+[Documentation](https://babeljs.io/docs/en/babel-preset-env#modules)
+
+#### `typescript`
+Enables `@babel/preset-typescript` to transfrom TypeScript into Javascript.
+
+[Documentation](https://babeljs.io/docs/en/babel-preset-typescript)
+
+#### `useBuiltIns`
+
+`"usage"` | `"entry"` | `false`, defaults to `false`.
+
+This option configures how `@babel/preset-env` handles polyfills.
+
+When either the `usage` or `entry` options are used, `@babel/preset-env` will add direct references to `core-js` modules as bare imports (or requires). This means `core-js` will be resolved relative to the file itself and needs to be accessible.
+
+[Documentation](https://babeljs.io/docs/en/babel-preset-env#usebuiltins)
+
+#### `transformRuntime`
+
+`boolean`, defaults to `false`
+
+This option when `true` will enable the `@babel/plugin-transform-runtime` plugin.
+
+[Documentation](https://babeljs.io/docs/en/babel-plugin-transform-runtime)
+
+#### `transformRuntimeOptions`
+
+This option configures the `@babel/plugin-transform-runtime` plugin when the `transformRuntime` option has been enabled.
+
+##### `transformRuntimeOptions.corejs`
+`false`, `2`, `3` or `{ version: 2 | 3, proposals: boolean }`, defaults to `false`.
+
+##### `transformRuntimeOptions.helpers`
+`boolean`, defaults to `true`
+
+Toggles whether or not inlined Babel helpers (classCallCheck, extends, etc.) are replaced with calls to moduleName.
+
+For more information, see [Helper aliasing](https://babeljs.io/docs/en/babel-plugin-transform-runtime#helper-aliasing).
+
+##### `transformRuntimeOptions.regenerator`
+`boolean`, defaults to `true`
+
+Toggles whether or not generator functions are transformed to use a regenerator runtime that does not pollute the global scope.
+
+For more information, see [Regenerator aliasing](https://babeljs.io/docs/en/babel-plugin-transform-runtime#regenerator-aliasing).
+
+##### `transformRuntimeOptions.absoluteRuntime`
+`boolean` | `string`, defaults to `false`
+
+This allows users to run transform-runtime broadly across a whole project.
+By default, transform-runtime imports from @babel/runtime/foo directly, but that only works if @babel/runtime is in the node_modules of the file that is being compiled.
+
+
+#### `includeReactPreset`
+`boolean`, defaults to `false`.
+
+This option when `true` will enable the `@babel/preset-react` preset.
+
+[Documentation](https://babeljs.io/docs/en/babel-preset-react)
+
+##### `reactPresetOptions.useBuiltIns`
+`boolean`, defaults to `true`
+
+Will use the native built-in instead of trying to polyfill behavior for any plugins that require one.
+
+##### `reactPresetOptions.pragma`
+`string`, defaults to `React.createElement`
+
+Replace the function used when compiling JSX expressions.
+
+##### `reactPresetOptions.pragmaFrag`
+`string`, defaults to `React.Fragment`
+
+Replace the component used when compiling JSX fragments.
+
+##### `reactPresetOptions.useSpread`
+`boolean`, defaults to `true`
+
+When spreading props, use inline object with spread elements directly instead of Babel's extend helper or Object.assign.
+
+#### `transformReactConstantElements`
+`boolean`, defaults to `false`.
+
+This option when `true` will enable the `@babel/plugin-transform-react-constant-elements` preset.
+
+[Documentation](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements)
+    
