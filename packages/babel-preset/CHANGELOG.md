@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+### Added
+
+- Add the `nodeWebpack` option to the `common` babel-preset [[#236](https://github.com/Shopify/web-foundation/pull/236)]
+
 ## [23.5.1] - 2021-04-20
 
 ### Changed
