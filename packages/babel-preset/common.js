@@ -27,6 +27,7 @@ module.exports = function shopifyCommonPreset(
       useBuiltIns: true,
     },
     transformReactConstantElements = false,
+    nodeWebpack = false,
   } = {},
 ) {
   const env = api.env();
@@ -99,6 +100,11 @@ module.exports = function shopifyCommonPreset(
     // result in faster reconciliation
     includeTransformReactConstantElements &&
       require.resolve('@babel/plugin-transform-react-constant-elements'),
+    // @babel/plugin-proposal-dynamic-import and @babel/plugin-transform-modules-commonjs
+    // must be enabled together when compiling for node and webpack that contains
+    // dynamic imports
+    nodeWebpack && require.resolve('@babel/plugin-proposal-dynamic-import'),
+    nodeWebpack && require.resolve('@babel/plugin-transform-modules-commonjs'),
   ].filter(Boolean);
 
   return {presets, plugins};

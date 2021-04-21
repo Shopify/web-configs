@@ -225,3 +225,8 @@ This option when `true` will enable the `@babel/plugin-transform-react-constant-
 
 [Documentation](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements)
     
+#### `nodeWebpack`
+
+`boolean`, defaults to `false`.
+
+This option when `true` will enable the `'@babel/plugin-proposal-dynamic-import'` and the `'@babel/plugin-transform-modules-commonjs'` plugins.
