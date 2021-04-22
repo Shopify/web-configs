@@ -5,7 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## [Unreleased] -->
+## [Unreleased]
+
+### Changed
+
+- Remove `no-invalid-position-at-import-rule` rule as it is not in a currently released version of stylelint [[#237](https://github.com/Shopify/web-configs/pull/237)]
+- Update peer dependency to `>=13.12.0` [[#237](https://github.com/Shopify/web-configs/pull/237)]
 
 ## [10.1.0] - 2021-03-10
 
@@ -350,7 +355,6 @@ property: <top> <right> <bottom> <left>
 
 * Initial release
 
-[Unreleased]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.4.0...HEAD
 [7.3.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.3.0...v7.4.0
 [7.3.0]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.1...v7.3.0
 [7.2.1]: https://github.com/Shopify/stylelint-config-shopify/compare/v7.2.0...v7.2.1
