@@ -5,34 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## [Unreleased] -->
+<!-- ## Unreleased -->
 
-## [40.2.1] - 2021-04-16
+## 40.2.1 - 2021-04-16
 
 ### Changed
 
 - Fixed a conflict between Prettier and rules `*/object-curly-spacing` ([227](https://github.com/Shopify/web-configs/pull/227))
 
-## [40.2.0] - 2021-04-16
+## 40.2.0 - 2021-04-16
 
 ### Changed
 
 - Added `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`([217](https://github.com/Shopify/web-configs/pull/218))
 - Updated `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` to version `4.20.0` [[#223](https://github.com/Shopify/web-foundation/pull/223)]
 
-## [40.1.0] - 2021-02-24
+## 40.1.0 - 2021-02-24
 
 ### Changed
 
 - Include jest formatting in `@shopify/eslint-plugin` ruleset ([#213](https://github.com/Shopify/web-configs/pull/213))
 
-## [40.0.1] - 2021-02-12
+## 40.0.1 - 2021-02-12
 
 ### Changed
 
 - Fix incompatibility between `@typescript-eslint/array-type` and `@typescript-eslint/ban-types` ([#212](https://github.com/Shopify/web-configs/pull/212))
 
-## [40.0.0] - 2021-02-12
+## 40.0.0 - 2021-02-12
 
 ### Changed
 
@@ -54,20 +54,20 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 | `@typescript-eslint/parser`               | `4.1.0`     | `4.15.0`    |
 | `change-case`                             | `4.1.0`     | `4.1.2`     |
 
-## [39.0.4] - 2021-01-13
+## 39.0.4 - 2021-01-13
 
 ### Changed
 
 - Updated TypeScript naming rules to ensure type name start with a "T" and interface names don't start with an "I" ([#198](https://github.com/Shopify/web-configs/pull/198))
 - Updated `eslint-config-prettier` dependency to v3.3.0 ([#202](https://github.com/Shopify/web-configs/pull/202))
 
-## [39.0.3] - 2020-11-17
+## 39.0.3 - 2020-11-17
 
 ### Fixed
 
 - Fixed a syntax error in `peerDependencies` to allow eslint@^7.0.0 ([#196](https://github.com/Shopify/web-configs/pull/196)).
 
-## [39.0.2] - 2020-11-03
+## 39.0.2 - 2020-11-03
 
 ### Fixed
 
@@ -87,7 +87,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 | `eslint-plugin-react-hooks`        | `4.1.1`     | `4.1.2`     |
 
 
-## [39.0.0] - 2020-09-17
+## 39.0.0 - 2020-09-17
 
 ### Breaking Change
 
@@ -110,7 +110,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 | `eslint-plugin-sort-class-members` | `1.7.0`     | `1.8.0`     |
 
 
-## [38.0.0]
+## 38.0.0
 
 ### Added
 
@@ -125,7 +125,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 - Removal of `@typescript-eslint/ban-ts-ignore` for `@typescript-eslint/ban-ts-comment`. Please update your ignore statements.
 
 
-## [37.0.0] - 2020-05-19
+## 37.0.0 - 2020-05-19
 
 ### Added
 
@@ -156,15 +156,15 @@ Facebook improved the `eslint-plugin-react-hooks` plugin. We may have to update 
 | `merge`                            | `1.2.1`     | `1.2.1`     |
 | `pkg-dir`                          | `4.2.0`     | `4.2.0`     |
 
-## [36.1.0] - 2020-05-05
+## 36.1.0 - 2020-05-05
 
 - adding `allow` and `maxDepth` options to `strict-component-boundaries` rule. ([#150](https://github.com/Shopify/web-foundation/pull/150))
 
-## [36.0.1] - 2020-03-28
+## 36.0.1 - 2020-03-28
 
 - Fix an bug with '@shopify/react-no-multiple-render-methods'.
 
-## [36.0.0] - 2020-03-28
+## 36.0.0 - 2020-03-28
 
 ### Breaking Change
 
@@ -192,20 +192,20 @@ rules: {
 }
 ```
 
-## [35.1.0] - 2020-03-23
+## 35.1.0 - 2020-03-23
 
 - Update `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` to 2.25.0, to support new syntax introduced in Typescript 3.8. ([#523](https://github.com/Shopify/eslint-plugin-shopify/pull/523))
 
-## [35.0.0] - 2020-02-14
+## 35.0.0 - 2020-02-14
 
 - remove `no-vague-titles` because the rule was adopted into `eslint-plugin-jest`'s `valid-title` rule. See [the `valid-title` documentation](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md#disallowedwords)
 - Fixed an issue with `typescript/prefer-pascal-case-enum` when you had enum with key as string. ([517](https://github.com/Shopify/eslint-plugin-shopify/pull/517))
 
-## [34.0.1] - 2019-01-13
+## 34.0.1 - 2019-01-13
 
 - fix enabled graphql rules by specifying `env: 'literal'` ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/518))
 
-## [34.0.0] - 2019-01-13
+## 34.0.0 - 2019-01-13
 
 - changed `no-vague-titles` rule to catch blacklisted **words** (instead of **sequences**) in the title ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/514))
 - removed `jest/no-empty-title` and renamed `jest/require-tothrow-message` to `jest/require-to-throw-message` ([499](https://github.com/Shopify/eslint-plugin-shopify/pull/499))
@@ -219,7 +219,7 @@ The followiing new rules were introduced in `eslint@6.7.0`. More information can
 - [`no-setter-return`](https://eslint.org/docs/rules/no-setter-return)
 - [`prefer-exponentiation-operator`](https://eslint.org/docs/rules/prefer-exponentiation-operator)
 
-## [33.0.0] - 2019-11-20
+## 33.0.0 - 2019-11-20
 
 ### Breaking Change
 
@@ -244,14 +244,14 @@ The followiing new rules were introduced in `eslint@6.7.0`. More information can
 - `shopify/no-all-mocks-methods` ([#204](https://github.com/Shopify/eslint-plugin-shopify/pull/204))
 - `shopify/no-namespace-imports` Prevent namespace import declarations. ([262](https://github.com/Shopify/eslint-plugin-shopify/pull/262))
 
-## [32.0.0] - 2019-11-05
+## 32.0.0 - 2019-11-05
 
 - `jest/valid-title`
 - `jest/prefer-hooks-on-top`
 - `jest/require-top-level-describe`
 - Enforce new-lines between groups import groups ([#409](https://github.com/Shopify/eslint-plugin-shopify/pull/409))
 
-## [31.0.0] - 2019-10-23
+## 31.0.0 - 2019-10-23
 
 ### Breaking Change
 
@@ -308,11 +308,11 @@ _Example config for react with typescript projects:_
 - `jest/no-expect-resolves` Avoid using `expect().resolves` ([370](https://github.com/Shopify/eslint-plugin-shopify/pull/370))
 
 
-## [30.0.1] - 2019-06-24
+## 30.0.1 - 2019-06-24
 
 - bump eslint peer depndency to 6
 
-## [30.0.0] - 2019-06-24
+## 30.0.0 - 2019-06-24
 
 ### Changed
 
@@ -327,19 +327,19 @@ _Example config for react with typescript projects:_
 
 - [Patch] Fix `jest/no-if` from falsely reporting if statements inside of functions ([331](https://github.com/Shopify/eslint-plugin-shopify/pull/331))
 
-## [29.0.2] - 2019-06-18
+## 29.0.2 - 2019-06-18
 
 ### Changed
 
 - Removed `react/prop-types` in typescript config ([309](https://github.com/Shopify/eslint-plugin-shopify/pull/309))
 
-## [29.0.1] - 2019-06-18
+## 29.0.1 - 2019-06-18
 
 ### Changed
 
 - Removed `import/no-namespace` ([308](https://github.com/Shopify/eslint-plugin-shopify/pull/308))
 
-## [29.0.0] - 2019-06-17
+## 29.0.0 - 2019-06-17
 
 ### Changed
 
@@ -361,7 +361,7 @@ _Example config for react with typescript projects:_
 - `shopify/jest/no-if` ignores if statements nested within block statements ([299](https://github.com/Shopify/eslint-plugin-shopify/pull/299))
 - `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. ([258](https://github.com/Shopify/eslint-plugin-shopify/pull/258))
 
-## [28.0.0] - 2019-04-26
+## 28.0.0 - 2019-04-26
 
 ### Changed
 
@@ -401,7 +401,7 @@ _Example config for react with typescript projects:_
 
 * turned off `node/no-extraneous-require` because it duplicates reported violations from `import/no-extraneous-dependencies` ([#240](https://github.com/Shopify/eslint-plugin-shopify/pull/240)
 
-## [27.0.1] - 2019-04-10
+## 27.0.1 - 2019-04-10
 
 ### Changed
 
@@ -414,7 +414,7 @@ _Example config for react with typescript projects:_
 * turned off `babel/camelcase` in typescript config because it overlaps with `@typescript-eslint/camelcase`. ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
 * `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. ([#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235))
 
-## [27.0.0] - 2019-04-08
+## 27.0.0 - 2019-04-08
 
 ### Added
 
@@ -494,19 +494,19 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * `jest/no-vague-titles` added `every` and `descriptive` as vague words. ([#221](https://github.com/Shopify/eslint-plugin-shopify/pull/221))
 
-## [26.3.0] - 2019-02-21
+## 26.3.0 - 2019-02-21
 
 ### Added
 
 * Updated `eslint-plugin-react` and enabled `react/jsx-fragments` rule to prefer using `<>` over `<React.Fragment>` when defining fragments ([#223](https://github.com/Shopify/eslint-plugin-shopify/pull/223))
 
-## [26.2.0] - 2019-02-14
+## 26.2.0 - 2019-02-14
 
 ### Added
 
 * `images-no-direct-imports` ([#219](https://github.com/Shopify/eslint-plugin-shopify/pull/219))
 
-## [26.1.2] - 2019-01-02
+## 26.1.2 - 2019-01-02
 
 ### Fixed
 
@@ -517,13 +517,13 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words. ([#208](https://github.com/Shopify/eslint-plugin-shopify/pull/208))
 
-## [26.1.1] - 2018-10-31
+## 26.1.1 - 2018-10-31
 
 ### Fixed
 
 * `typescript-eslint-parser` pinned at `20.0.0` to avoid [a known issue](https://github.com/eslint/typescript-eslint-parser/issues/535) ([#201](https://github.com/Shopify/eslint-plugin-shopify/pull/201))
 
-## [26.1.0] - 2018-10-30
+## 26.1.0 - 2018-10-30
 
 ### Added
 
@@ -533,7 +533,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * Set TypeScript parser only on TS files. This makes sure you can extend from the typescript and react configs in either order. Previously you had to make sure typescript came first to avoid using the babel-eslint parser on typescript files. Now we suggest to extend from typescript, and then react to ensure some rules some JSX rules don't get inadventently disabled. ([#200](https://github.com/Shopify/eslint-plugin-shopify/pull/200))
 
-## [26.0.0] - 2018-10-26
+## 26.0.0 - 2018-10-26
 
 ### Added
 
@@ -559,26 +559,26 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * Rolling back `eslint-plugin-graphql` to `2.1.0-0` for multiple schema support ([#195](https://github.com/Shopify/eslint-plugin-shopify/pull/195))
 
-## [25.1.0] - 2018-10-01
+## 25.1.0 - 2018-10-01
 
 ### Changed
 
 * Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. ([#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176))
 
-## [25.0.1] - 2018-09-25
+## 25.0.1 - 2018-09-25
 
 ### Fixed
 
 * Restored `typescript-prettier` config to override `prettier` plugin parser. ([#171](https://github.com/Shopify/eslint-plugin-shopify/pull/171))
 
-## [25.0.0] - 2018-09-25
+## 25.0.0 - 2018-09-25
 
 ### Fixed
 
 * Updated `plugin:shopify/prettier` to enable prettier linting. ([#170](https://github.com/Shopify/eslint-plugin-shopify/pull/170))
 * `strict-component-boundaries` now consistently uses the resolved path from the app root to perform its checks. This fixes a number of false-positives. ([#160](https://github.com/Shopify/eslint-plugin-shopify/pull/160))
 
-## [24.2.0] - 2018-09-21
+## 24.2.0 - 2018-09-21
 
 ### Added
 
@@ -588,17 +588,17 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * Updated `no-vague-titles` rule to fix parsing issues in `getMethodName`. ([#167](https://github.com/Shopify/eslint-plugin-shopify/pull/167))
 
-## [24.1.1] - 2018-09-19
+## 24.1.1 - 2018-09-19
 
 * Same as `24.1.0`
 
-## [24.1.0] - 2018-09-19
+## 24.1.0 - 2018-09-19
 
 ### Added
 
 * Added `shopify/graphql` config using new `eslint-plugin-graphql` (`2.1.1.`) dependency. ([#165](https://github.com/Shopify/eslint-plugin-shopify/pull/165))
 
-## [24.0.0] - 2018-08-30
+## 24.0.0 - 2018-08-30
 
 ### Fixed
 
@@ -650,7 +650,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
   * [`typescript/no-var-requires`](https://github.com/nzakas/eslint-plugin-typescript/blob/master/docs/rules/no-var-requires.md)
 
 
-## [23.1.0] - 2018-08-02
+## 23.1.0 - 2018-08-02
 
 ### Fixed
 
@@ -661,7 +661,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * Included `all` as a vague term for `no-vague-titles` ([#114](https://github.com/Shopify/eslint-plugin-shopify/pull/114))
 
-## [23.0.0] - 2018-07-16
+## 23.0.0 - 2018-07-16
 
 * **Breaking** `eslint-plugin-shopify` will no longer install `prettier` as a dependency. Please ensure you have added `prettier` to your `package.json` if you wish to use it.
 
@@ -676,7 +676,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 * **Breaking** Moved prettier to be a peerDependency, this avoids the potential for having multiple versions of prettier in the dependency graph. If you use prettier you will need to ensure you have it installed in your project as eslint-plugin-shopify will no longer install it for you ([#107](https://github.com/Shopify/eslint-plugin-shopify/pull/107))
 * **Breaking** Updated `typescript-eslint-parser` to support `typescript@2.9.1` ([#102](https://github.com/Shopify/eslint-plugin-shopify/pull/102))
 
-## [22.1.0] - 2018-06-08
+## 22.1.0 - 2018-06-08
 
 ### Fixed
 
@@ -687,16 +687,16 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 * `shopify/prefer-pascal-case-enums` ([#96](https://github.com/Shopify/eslint-plugin-shopify/pull/96))
 * `shopify/react-prefer-private-members` ([#95](https://github.com/Shopify/eslint-plugin-shopify/pull/95))
 
-## [22.0.0]
+## 22.0.0
 
 * Updated dependencies
 * Added support for TypeScript 2.8
 
-## [21.0.1] - 2018-04-25
+## 21.0.1 - 2018-04-25
 
 * Fixed the publish config for the package.
 
-## [21.0.0] - 2018-04-25
+## 21.0.0 - 2018-04-25
 
 ### Added
 
@@ -717,7 +717,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 * Fixed an issue where various rules were not correctly resolving paths in `node_modules`.
 
-## [20.0.0] - 2018-03-15
+## 20.0.0 - 2018-03-15
 
 * **Breaking:** the version of TypeScript supported by this plugin is 2.7.x (in line with [typescript-eslint-parser](https://github.com/eslint/typescript-eslint-parser)’s TypeScript support)
 * Updated dependencies that support the new ESLint documentation URL metadata. Errors from these plugins are accompanied by a link to the documentation for the broken rule.
@@ -759,13 +759,13 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 * Updated `import/extensions` due to changes in its implementation: some extensions are explicitly allowed in `import`s: `.svg`, `.png`, `.jpg`, `.ico`, `.css`, `.sass`, `.scss`, `.less`, `.styl`. `.json` is still required as well.
 * Chore: updated CircleCI from v1 to v2.
 
-## [19.0.1] - 2018-03-12
+## 19.0.1 - 2018-03-12
 
 ### Fixed
 
 * `shopify/jsx-no-hardcoded-content` rule now does not warn on all-whitespace strings as children. This was causing issues with indented JSX content, and is typically not an issue for different locales.
 
-## [19.0.0] - 2018-01-17
+## 19.0.0 - 2018-01-17
 
 ### Added
 
@@ -841,25 +841,25 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
     ```
 * Prettified source files using the new config
 
-## [18.3.1] - 2017-12-21
+## 18.3.1 - 2017-12-21
 
 ### Changed
 
 * Changed `eslint-config-shopify` codebase to follow es5 trailingComma [[#61](https://github.com/Shopify/eslint-plugin-shopify/pull/61)]
 
-## [18.3.0] - 2017-12-18
+## 18.3.0 - 2017-12-18
 
 ### Added
 
 * Added `shopify/no-debugger`, which behaves the same as ESLint's `no-debugger` but without a fixer.
 
-## [18.2.0] - 2017-12-04
+## 18.2.0 - 2017-12-04
 
 ### Added
 
 * Added a `typescript-prettier` config to run prettier against typescript projects.
 
-## [18.1.0] - 2017-12-01
+## 18.1.0 - 2017-12-01
 
 ### Added
 
@@ -881,19 +881,19 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
   }
   ```
 
-## [18.0.0] - 2017-10-31
+## 18.0.0 - 2017-10-31
 
 ### Changed
 
 * Turned off `class-methods-use-this`
 
-## [17.2.1] - 2017-10-30
+## 17.2.1 - 2017-10-30
 
 ### Changed
 
 * Turned off `babel/semi` rule in prettier config
 
-## [17.2.0] - 2017-10-25
+## 17.2.0 - 2017-10-25
 
 ### Added
 
@@ -919,7 +919,7 @@ Example:
 * `lines-around-directive` was deprecated in ESLint `v4.0.0`. [[#44](https://github.com/Shopify/eslint-plugin-shopify/pull/44)]
 
 
-## [17.1.0] - 2017-09-19
+## 17.1.0 - 2017-09-19
 
 ### Added
 
@@ -960,7 +960,7 @@ Example:
 
 - `jsx-a11y/href-no-hash` replaced with `jsx-a11y/anchor-is-valid`
 
-## [17.0.0] - 2017-08-17
+## 17.0.0 - 2017-08-17
 
 ### Changed
 
@@ -975,13 +975,13 @@ Example:
   - `eslint-plugin-react`: `^7.0.0` → `^7.0.1`.
 
 
-## [16.0.1] - 2017-05-29
+## 16.0.1 - 2017-05-29
 
 ### Changed
 
 - Turned off [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring) ([#30](https://github.com/Shopify/eslint-plugin-shopify/pull/30))
 
-## [16.0.0] - 2017-05-16
+## 16.0.0 - 2017-05-16
 
 ### Added
 
@@ -1024,19 +1024,19 @@ Example:
 - Deprecated: [`jsx-a11y/jsx-space-before-closing`](https://github.com/yannickcr/eslint-plugin-react/blob/master/CHANGELOG.md#700---2017-05-06)
 
 
-## [15.2.0] - 2017-03-06
+## 15.2.0 - 2017-03-06
 
 ### Changed
 
 - `eslint` upgrade to `3.17.x`
 
-## [15.1.2] - 2017-02-23
+## 15.1.2 - 2017-02-23
 
 ### Fixed
 
 - `jquery-dollar-sign-reference` now checks assignments from `LogicalExpression` / `BinaryExpression`
 
-## [15.1.1] - 2017-01-17
+## 15.1.1 - 2017-01-17
 
 ### Added
 
@@ -1055,36 +1055,6 @@ Example:
 
 - Removed `eslint-find-rules` package ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
 
-## [15.1.0]
+## 15.1.0
 
 Changes were originally tracked in Shopify's [JavaScript monorepo](https://github.com/Shopify/javascript/blob/f10bf7ddbdae07370cfe7c94617c450257731552/CHANGELOG.md).
-
-[Unreleased]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.3.0...HEAD
-[26.3.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.2.0...v26.3.0
-[26.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.2...v26.2.0
-[26.1.2]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.1...v26.1.2
-[26.1.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.1.0...v26.1.1
-[26.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v26.0.0...v26.1.0
-[26.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.1.0...v26.0.0
-[25.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.0.1...v25.1.0
-[25.0.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v25.0.0...v25.0.1
-[25.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.2.0...v25.0.0
-[24.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.1...v24.2.0
-[24.1.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.1.0...v24.1.1
-[24.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v24.0.0...v24.1.0
-[24.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.1.0...v24.0.0
-[23.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v23.0.0...v23.1.0
-[23.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.1.0...v23.0.0
-[22.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v22.0.0...v22.1.0
-[22.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v21.0.1...v22.0.0
-[21.0.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v21.0.0...v21.0.1
-[21.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v20.0.0...v21.0.0
-[20.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.1...v20.0.0
-[19.0.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v19.0.0...v19.0.1
-[19.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.1...v19.0.0
-[18.3.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.3.0...v18.3.1
-[18.3.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.2.0...v18.3.0
-[18.2.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.1.0...v18.2.0
-[18.1.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v18.0.0...v18.1.0
-[18.0.0]: https://github.com/Shopify/eslint-plugin-shopify/compare/v17.2.1...v18.0.0
-[17.2.1]: https://github.com/Shopify/eslint-plugin-shopify/compare/v17.2.0...v17.2.1
