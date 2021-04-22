@@ -7,13 +7,13 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
-## [23.5.1] - 2021-04-20
+## 23.5.1 - 2021-04-20
 
 ### Changed
 
 - Updated `@babel/core`, `@babel/runtime`, and fixes `@shopify/babel-preset` react settings [[#235](https://github.com/Shopify/web-foundation/pull/235)]
 
-## [23.5.0] - 2021-04-20
+## 23.5.0 - 2021-04-20
 
 ### Added
 
@@ -23,31 +23,31 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Updated `@babel/*` presets and plugins to version `7.13.x` [[#231](https://github.com/Shopify/web-foundation/pull/231)]
 
-## [23.4.1] - 2021-04-16
+## 23.4.1 - 2021-04-16
 
 ### Changed
 
 - Updated `@babel/*` presets and plugins to version `7.13.x` [[#222](https://github.com/Shopify/web-foundation/pull/222)]
 
-## [23.4.0] - 2021-03-10
+## 23.4.0 - 2021-03-10
 
 ### Changed
 
 - Updated `@babel/*` presets and plugins to version `7.13` [[#219](https://github.com/Shopify/web-foundation/pull/219)]
 
-## [23.3.2] - 2021-02-11
+## 23.3.2 - 2021-02-11
 
 ### Changed
 
 - Improved how options are defined in `@shopify/babel-preset/react` [[#209](https://github.com/Shopify/web-configs/pull/209)]
 
-## [23.3.1] - 2021-02-10
+## 23.3.1 - 2021-02-10
 
 ### Changed
 
 - Bugfix for disabling `transformReactConstantElements` [[#208](https://github.com/Shopify/web-configs/pull/208)]
 
-## [23.3.0] - 2021-02-10
+## 23.3.0 - 2021-02-10
 
 ### Changed
 
@@ -57,29 +57,29 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Added the ability to add `@babel/plugin-transform-runtime` [[#206](https://github.com/Shopify/web-configs/pull/206)]
 
-## [23.2.0] - 2021-02-09
+## 23.2.0 - 2021-02-09
 
 ### Added
 
 - Added the ability to disable `@babel/plugin-transform-react-constant-elements` [[#205](https://github.com/Shopify/web-foundation/pull/205)]
 
-## [23.1.1] - 2020-08-26
+## 23.1.1 - 2020-08-26
 
 - Update `@babel/preset-env` and other babel packages to 7.10.4 and enable preset-env's [`bugfixes`](https://babeljs.io/docs/en/babel-preset-env#bugfixes) option [[#172](https://github.com/Shopify/web-foundation/pull/172)]
 
-## [23.1.0] - 2020-05-12
+## 23.1.0 - 2020-05-12
 
 ### Changed
 
 - Update `@babel/core`, `@babel/preset-env`, `@babel/plugin-transform-modules-commonjs` to `7.9.6` [[#155](https://github.com/Shopify/web-foundation/pull/155)]
 
-## [23.0.0] - 2020-04-23
+## 23.0.0 - 2020-04-23
 
 ### Changed
 
 - Remove `react-hot-loader` since `react-fast-refresh` is now used in sewing-kit [[#145](https://github.com/Shopify/web-foundation/pull/145)]
 
-## [22.0.0] - 2020-03-28
+## 22.0.0 - 2020-03-28
 
 🚨Package rename
 
@@ -101,7 +101,7 @@ module.exports = {
 };
 ```
 
-## [21.0.0]
+## 21.0.0
 
 ### Added
 
@@ -111,55 +111,55 @@ module.exports = {
 
 - Updated `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions [[#47](https://github.com/Shopify/babel-preset-shopify/pull/47)]
 
-## [20.1.0] - 2019-09-24
+## 20.1.0 - 2019-09-24
 
 - Pass `browsers` web preset config string directly into babel-preset-env's targets option, so that if it is unset we shall read honor browserslist config in package.json / .browserslistrc
 
-## [20.0.0] - 2019-06-03
+## 20.0.0 - 2019-06-03
 
 - Add `babel-plugin-dynamic-import-node` to the node preset. This was originally added in 19.1.0 then reverted in 19.1.1 as it was a breaking change in some circumstances
 
-## [19.1.1] - 2019-06-03
+## 19.1.1 - 2019-06-03
 
 - Revert Adding `babel-plugin-dynamic-import-node` to the node preset as this may be a breaking change in some circumstances
 
-## [19.1.0] - 2019-05-29
+## 19.1.0 - 2019-05-29
 
 - Added `typescript` option to node and web presets to allow babel to read typescript files when set to true.
 - Added `babel-plugin-dynamic-import-node` to the node preset
 - Removed `@babel/plugin-proposal-optional-catch-binding` because it is already handled by `@babel/preset-env` if you specify an environment where it is needed.
 
-## [19.0.1] - 2019-05-23
+## 19.0.1 - 2019-05-23
 
 - Added `@babel/plugin-proposal-optional-catch-binding` to `node` and `web` presets
 
-## [19.0.0] - 2019-05-06
+## 19.0.0 - 2019-05-06
 
 - Switched the default `useBuiltIns` option back to `entry`, since it has a smaller bundle impact on large applications
 
-## [18.1.1] - 2019-05-03
+## 18.1.1 - 2019-05-03
 
 - `web` preset now accepts a `useBuiltIn` value (default = `usage`)
 
-## [18.1.0] - 2019-04-22
+## 18.1.0 - 2019-04-22
 
 ### Added
 
 - `node` and `web` presets now accept a `corejs` option (default = `2`)
 
-## [18.0.0] - 2019-03-19
+## 18.0.0 - 2019-03-19
 
 ### Changed
 
 - `node` and `web` presets now use `useBuiltIns: 'usage'` for including `corejs` polyfills.
 
-## [17.0.1] - 2019-01-09
+## 17.0.1 - 2019-01-09
 
 ### Fixed
 
 - Honor the `envName` defined in your babel config.
 
-## [17.0.0] - 2019-01-03
+## 17.0.0 - 2019-01-03
 
 ### Changed
 
@@ -175,13 +175,13 @@ module.exports = {
 
 - The `shopify/react` preset now accepts a `pragmaFrag` option for specifying the component to use in JSX fragment expressions.
 
-## [16.7.0] - 2018-12-18
+## 16.7.0 - 2018-12-18
 
 ### Changed
 
 - Removed `babel-plugin-transform-react-pure-to-component`.
 
-## [16.6.0] - 2018-10-11
+## 16.6.0 - 2018-10-11
 
 ### Changed
 
@@ -195,49 +195,49 @@ module.exports = {
 
 - Switch from Circle CI to Travis.
 
-## [16.5.0] - 2018-05-01
+## 16.5.0 - 2018-05-01
 
 ### Chore
 
 - Added `publishConfig` to fix deployments.
 
-## [16.4.0] - 2018-05-01
+## 16.4.0 - 2018-05-01
 
 ### Added
 
 - `shopify/react` preset now accepts an additional option, `pragma`. Defaults to `React.createElement`.
 
-## [16.3.0] - 2018-03-14
+## 16.3.0 - 2018-03-14
 
 ### Added
 
 - `shopify/web` and `shopify/node` now accept an additional option, `debug`. When passed, this enables `babel-preset-env`'s debugging to show why transforms are being included in a project. Defaults to `false` (current behaviour).
 
-## [16.2.0] - 2017-08-23
+## 16.2.0 - 2017-08-23
 
 ### Added
 
 - Added `babel-plugin-syntax-dynamic-import` to the web config.
 
-## [16.1.0] - 2017-06-08
+## 16.1.0 - 2017-06-08
 
 ### Added
 
 - Added a Babel plugin to remove `testID` props in non-test environments.
 
-## [16.0.2] - 2017-02-18
+## 16.0.2 - 2017-02-18
 
 ### Changed
 
 - Integrated bugfix from most recent version of `babel-plugin-transform-react-pure-to-component`.
 
-## [16.0.1] - 2017-02-17
+## 16.0.1 - 2017-02-17
 
 ### Fixed
 
 - `shopify/web` and `shopify/node` now correctly default the `modules` option to `'commonjs'` instead of `true`.
 
-## [16.0.0] - 2017-02-07
+## 16.0.0 - 2017-02-07
 
 ### Added
 
@@ -251,6 +251,6 @@ module.exports = {
 - `shopify/web` and `shopify/node` presets now use [`babel-preset-env`](https://github.com/babel/babel-preset-env) to transpile only the features needed for the target environment.
 - Updated all versions of dependend-on plugins and presets.
 
-## [15.0.1]
+## 15.0.1
 
 - Initial move from combined `javascript` repo.
