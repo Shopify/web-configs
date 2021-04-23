@@ -5,12 +5,11 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "es2017",
-      "esnext.asynciterable",
-      "scripthost"
+      "scripthost",
+      "es2020"
     ],
     "module": "esnext",
-    "target": "es2017"
+    "target": "es2020"
   },
   "files": ["./definitions/images.d.ts", "./definitions/styles.d.ts"]
 }

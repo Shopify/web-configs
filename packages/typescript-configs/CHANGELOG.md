@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Breaking Change
+
+Increased the target and lib definitions to es2020 in both `base.json` and `dom.json`. This allows for a greater range of standard features to be defined and used. We expect typescript will be ran through Babel to downlevel/polyfill all features required for your target environment [[#239](https://github.com/Shopify/web-configs/pull/239)]
 
 ## 4.0.0 - 2021-02-24
 
