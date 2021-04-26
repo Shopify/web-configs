@@ -4,6 +4,7 @@ const rule = require('../../../lib/rules/react-initialize-state');
 
 const ruleTester = new RuleTester({
   parser: require.resolve('babel-eslint'),
+  settings: {react: {version: 'detect'}},
 });
 
 const typeScriptParser = require.resolve('@typescript-eslint/parser');
