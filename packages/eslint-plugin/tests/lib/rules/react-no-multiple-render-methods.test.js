@@ -4,6 +4,7 @@ const rule = require('../../../lib/rules/react-no-multiple-render-methods');
 
 const ruleTester = new RuleTester({
   parser: require.resolve('babel-eslint'),
+  settings: {react: {version: 'detect'}},
 });
 
 function error(memberName, type = 'MethodDefinition') {

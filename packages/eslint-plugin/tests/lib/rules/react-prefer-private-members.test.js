@@ -4,6 +4,7 @@ const rule = require('../../../lib/rules/react-prefer-private-members');
 
 const ruleTester = new RuleTester({
   parser: require.resolve('@typescript-eslint/parser'),
+  settings: {react: {version: 'detect'}},
 });
 
 const babelParser = require.resolve('babel-eslint');
