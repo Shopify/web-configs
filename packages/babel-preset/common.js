@@ -72,9 +72,9 @@ module.exports = function shopifyCommonPreset(
     // Enable loose mode to use assignment instead of defineProperty when typescript is enabled
     // As of 7.14.0 this is enabled in preset-env, however webpack doesn't support this until 5.36.0
     // @see https://babeljs.io/blog/2021/04/29/7.14.0#new-class-features-enabled-by-default
-    [
+    typescript && [
       require.resolve('@babel/plugin-proposal-class-properties'),
-      {loose: typescript},
+      {loose: true},
     ],
     // nullish-coalescing, optional-chaining, and numeric separators are handled by preset-env
     // But they aren't yet supported in webpack 4 because of missing support
