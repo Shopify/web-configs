@@ -12,8 +12,7 @@
     "lint:changelogs": "node scripts/lint-changelogs.js",
     "check": "lerna run check",
     "generate": "plop",
-    "release": "yarn lint:changelogs && lerna publish",
-    "release-beta": "lerna publish --dist-tag beta",
+    "version-bump": "lerna version --no-push --include-merged-tags",
     "generate:package": "plop package && yarn plop docs",
     "tophat": "tophat",
     "updated": "lerna updated"
@@ -24,7 +23,7 @@
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
     "jest": "^26.6.3",
-    "lerna": "^2.11.0",
+    "lerna": "^3.22.1",
     "plop": "^2.6.0",
     "prettier": "^2.0.5",
     "watchpack": "^1.6.1"
