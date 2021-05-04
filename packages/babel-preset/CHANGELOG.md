@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## 23.6.0 - 2021-05-04
+
 ### Changed
 
 - Updated `@babel/*` presets and plugins to version `7.14.x` [[#241](https://github.com/Shopify/web-configs/pull/241)]
