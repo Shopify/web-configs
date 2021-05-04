@@ -70,9 +70,11 @@ module.exports = function shopifyCommonPreset(
       {legacy: true},
     ],
     // Enable loose mode to use assignment instead of defineProperty when typescript is enabled
-    [
+    // class-properties are handled by preset-env
+    // But when using typescript we need to transpile them in loose mode to support proposal-decorators's legacy mode
+    typescript && [
       require.resolve('@babel/plugin-proposal-class-properties'),
-      {loose: typescript},
+      {loose: true},
     ],
     // nullish-coalescing, optional-chaining, and numeric separators are handled by preset-env
     // But they aren't yet supported in webpack 4 because of missing support
