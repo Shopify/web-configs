@@ -76,6 +76,11 @@ module.exports = function shopifyCommonPreset(
       require.resolve('@babel/plugin-proposal-class-properties'),
       {loose: true},
     ],
+    // The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods
+    typescript && [
+      require.resolve('@babel/plugin-proposal-private-methods'),
+      {loose: true},
+    ],
     // nullish-coalescing, optional-chaining, and numeric separators are handled by preset-env
     // But they aren't yet supported in webpack 4 because of missing support
     // in acorn v6 (support is in acorn v7, which is used in webpack v5).
