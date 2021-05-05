@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## 40.2.2 - 2021-05-05
+
 ### Changed
 
 - Update `merge` to `2.1.1` [[#244](https://github.com/Shopify/web-configs/pull/244)]
