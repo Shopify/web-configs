@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## 23.6.1 - 2021-05-05
+
 ### Changed
 
 - Fix loose warning for `@babel/plugin-proposal-private-methods` [[#245](https://github.com/Shopify/web-configs/pull/245)]
