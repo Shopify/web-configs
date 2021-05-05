@@ -27,5 +27,8 @@
     "plop": "^2.6.0",
     "prettier": "^2.0.5",
     "watchpack": "^1.6.1"
+  },
+  "dependencies": {
+    "merge": "^2.1.1"
   }
 }
