@@ -131,6 +131,19 @@ module.exports = {
       selector: 'typeLike',
       format: ['PascalCase'],
     },
+    {
+      selector: 'typeParameter',
+      format: ['PascalCase'],
+      prefix: ['T'],
+    },
+    {
+      selector: 'interface',
+      format: ['PascalCase'],
+      custom: {
+        regex: '^I[A-Z]',
+        match: false,
+      },
+    },
   ],
   // Enforces naming of generic type variables
   '@typescript-eslint/generic-type-naming': 'off',
