@@ -69,23 +69,6 @@ module.exports = {
         '@shopify/typescript/prefer-singular-enums': 'error',
         // Prefer buildClientSchema for schema building.
         '@shopify/typescript/prefer-build-client-schema': 'error',
-
-        '@typescript-eslint/naming-convention': [
-          'error',
-          {
-            selector: 'typeParameter',
-            format: ['PascalCase'],
-            prefix: ['T'],
-          },
-          {
-            selector: 'interface',
-            format: ['PascalCase'],
-            custom: {
-              regex: '^I[A-Z]',
-              match: false,
-            },
-          },
-        ],
       }),
     },
   ],
