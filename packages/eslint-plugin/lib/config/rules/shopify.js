@@ -45,6 +45,8 @@ module.exports = {
   '@shopify/react-no-multiple-render-methods': 'off',
   // Prefer all non-React-specific members be marked private in React class components.
   '@shopify/react-prefer-private-members': 'off',
+  // Require input elements to have autocomplete values
+  '@shopify/react-require-autocomplete': 'off',
   // Require that React component state be typed in TypeScript.
   '@shopify/react-type-state': 'off',
   // Prevent importing the entirety of a package.
