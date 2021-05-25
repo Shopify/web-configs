@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime';
 import SVGO from 'svgo';
 
 import {svgOptions} from '../optimize';

@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/images/README.md",
   "devDependencies": {
+    "regenerator-runtime": "^0.13.7",
     "svgo": "^1.3.2"
   }
 }
