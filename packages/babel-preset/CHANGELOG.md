@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+### Breaking Change
+
+- Removed `web`, `node`, `react`, and `common` presets for a single `@shopify/babel-preset` import. See [documentation](./README.md) for usage. [[#252](https://github.com/Shopify/web-configs/pull/252)]
+
 ## 23.6.1 - 2021-05-05
 
 ### Changed

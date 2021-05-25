@@ -1,3 +1,4 @@
 module.exports = {
-  presets: [['@shopify/babel-preset/node', {modules: 'commonjs'}]],
+  targets: 'current node',
+  presets: [['@shopify/babel-preset', {modules: 'commonjs'}]],
 };
