@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+### Changed
+
+- Updated `@babel/*` presets and plugins to version `7.14.2` [[#254](https://github.com/Shopify/web-configs/pull/254)]
+
 ### Breaking Change
 
 - Removed `web`, `node`, `react`, and `common` presets for a single `@shopify/babel-preset` import. See [documentation](./README.md) for usage. [[#252](https://github.com/Shopify/web-configs/pull/252)]
