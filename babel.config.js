@@ -1,3 +1,3 @@
 module.exports = {
-  presets: [['@shopify/babel-preset/node', {modules: 'commonjs'}]],
+  presets: [['@shopify/babel-preset/common', {modules: 'commonjs'}]],
 };
