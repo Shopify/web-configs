@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](../../LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Fbabel-preset.svg)](https://badge.fury.io/js/%40shopify%2Fbabel-preset.svg)
 
-Shopify’s org-wide set of Babel transforms.
+Shopify’s org-wide Babel transform.
 
 ## Usage
 
@@ -30,9 +30,9 @@ Then, in your Babel configuration (which should be under the `babel` key of your
 }
 ```
 
-## `@shopify/babel-preset/common`
+## Preset
 
-The `@shopify/babel-preset/common` preset is designed to be a common import that offers more options. It is a combination of the `web`, `node`, and `react` presets all in one.
+The `@shopify/babel-preset` preset is designed to be a common import that can be used for the browser or the server.
 
 ### Usage
 
@@ -40,7 +40,7 @@ The `@shopify/babel-preset/common` preset is designed to be a common import that
 {
   "babel": {
     "presets": [
-      ["@shopify/babel-preset/common", {"typescript": true}]
+      ["@shopify/babel-preset", {"typescript": true}]
     ]
   }
 }
@@ -53,7 +53,7 @@ This preset does not specify any targets to control what is transpiled. You shou
 ```json
 {
   "targets": "current node",
-  "presets": ["@shopify/babel-preset/common"],
+  "presets": ["@shopify/babel-preset"],
   "plugins": ["polyfill-es-shims"]
 }
 ```
