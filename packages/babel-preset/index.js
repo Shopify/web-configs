@@ -1,1 +1,1 @@
-module.exports = require('./web');
+module.exports = require('./common');
