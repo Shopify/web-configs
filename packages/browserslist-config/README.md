@@ -15,7 +15,9 @@ Shareable [browserslist](https://github.com/ai/browserslist) configuration for S
 | Safari                      | >=10    |
 | iOS                         | >=10    |
 
-[List all supported browsers](https://browserl.ist/?q=last+3+chrome+versions%2C+last+3+chromeandroid+versions%2C+last+3+firefox+versions%2C+last+3+opera+versions%2C+last+2+edge+versions%2C+safari+%3E%3D+10%2C+ios+%3E%3D+10%2C+android+%3E%3D+4.4)
+You can list all supported browsers by running `npx browserslist "last 1 firefoxandroid versions, last 3 chrome versions, last 3 chromeandroid versions, last 3 firefox versions, last 3 opera versions, last 3 edge versions, safari >= 10, ios >= 10"`
+
+To learn more about browser and iOS support at Shopify visit [our vault page](https://vault.shopify.io/pages/1524-Browser-support)
 
 ## Installation
 
