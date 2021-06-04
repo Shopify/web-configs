@@ -7,6 +7,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## 24.0.2 - 2021-06-04
+
 ### Changed
 
 - Update `@babel/preset-env`, `@babel/plugin-transform-typescript`, and `@babel/parser` to `7.14.4` [[#256](https://github.com/Shopify/web-configs/pull/256)]
