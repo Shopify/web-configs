@@ -2,7 +2,7 @@ name: web-configs
 up:
   - node:
       yarn: v1.19.1
-      version: v10.17.0
+      version: v10.18.0
 commands:
   __default__: start
   check: yarnpkg check
