@@ -1,6 +1,10 @@
+const {extendDefaultPlugins} = require('svgo');
+
 function svgOptions() {
   return {
-    plugins: [{removeTitle: true}, {removeViewBox: false}],
+    plugins: extendDefaultPlugins([{name: 'removeTitle'}]).filter(
+      (plugin) => plugin.name !== 'removeViewBox',
+    ),
   };
 }
 
