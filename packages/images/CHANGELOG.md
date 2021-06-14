@@ -7,7 +7,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
-### Breaking change
+### Breaking Change
 
 - `svgo` version `2.0.0` is required. ([#261](https://github.com/Shopify/web-configs/pull/261))
 - Update for `svgo` version `2.0.0` ([#261](https://github.com/Shopify/web-configs/pull/261))
