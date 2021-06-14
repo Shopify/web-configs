@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/images/README.md",
   "devDependencies": {
     "svgo": "^2.3.0"
+  },
+  "peerDependencies": {
+    "svgo": ">=2.0.0"
   }
 }
