@@ -1,4 +1,4 @@
-import SVGO from 'svgo';
+import {optimize} from 'svgo';
 
 import {svgOptions} from '../optimize';
 
@@ -6,9 +6,8 @@ import {getFixture} from './helpers';
 
 describe('optimize()', () => {
   describe('svg', () => {
-    it('removes all useless attributes', async () => {
-      const svgo = new SVGO(svgOptions());
-      const {data} = await svgo.optimize(getFixture('basic'));
+    it('removes all useless attributes', () => {
+      const {data} = optimize(getFixture('basic'), svgOptions());
       expect(data).not.toMatch(/title/);
     });
   });
