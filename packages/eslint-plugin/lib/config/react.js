@@ -26,6 +26,7 @@ module.exports = {
       '@shopify/react-initialize-state': 'error',
       '@shopify/react-no-multiple-render-methods': 'error',
       '@shopify/react-prefer-private-members': 'error',
+      '@shopify/react-require-autocomplete': 'error',
       '@shopify/react-type-state': 'error',
       '@shopify/jsx-no-complex-expressions': 'error',
       '@shopify/jsx-no-hardcoded-content': 'error',
