@@ -23,6 +23,7 @@ module.exports = {
     'react-initialize-state': require('./lib/rules/react-initialize-state'),
     'react-no-multiple-render-methods': require('./lib/rules/react-no-multiple-render-methods'),
     'react-prefer-private-members': require('./lib/rules/react-prefer-private-members'),
+    'react-require-autocomplete': require('./lib/rules/react-require-autocomplete'),
     'react-type-state': require('./lib/rules/react-type-state'),
     'restrict-full-import': require('./lib/rules/restrict-full-import'),
     'sinon-no-restricted-features': require('./lib/rules/sinon-no-restricted-features'),
