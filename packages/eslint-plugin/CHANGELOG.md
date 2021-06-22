@@ -9,6 +9,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Removed `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`([264](https://github.com/Shopify/web-configs/pull/264))
 - Add `react-require-autocomplete` lint rule to `@shopify/eslint-plugin` https://github.com/Shopify/web-configs/pull/251
 
 ## 40.2.3 - 2021-05-10

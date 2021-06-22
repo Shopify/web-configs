@@ -71,11 +71,4 @@ module.exports = {
   'jsx-a11y/scope': 'error',
   // Enforce tabIndex value is not greater than zero.
   'jsx-a11y/tabindex-no-positive': 'error',
-  // Ensure the autocomplete attribute is correct and suitable for the form field it is used with.
-  'jsx-a11y/autocomplete-valid': [
-    'error',
-    {
-      inputComponents: ['TextField', 'Select'],
-    },
-  ],
 };
