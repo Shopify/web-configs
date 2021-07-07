@@ -1,12 +1,12 @@
 const postcss = require('postcss');
 
-module.exports = ({calcOptions = {}, autopprefixerOptions = {}}) => {
+module.exports = ({calcOptions = {}, autoprefixerOptions = {}}) => {
   return {
     ...postcss([
       require('postcss-calc')(calcOptions),
       require('postcss-flexbugs-fixes'),
       require('postcss-will-change'),
-      require('autoprefixer')(autopprefixerOptions),
+      require('autoprefixer')(autoprefixerOptions),
     ]),
     postcssPlugin: '@shopify/postcss-plugin',
   };
