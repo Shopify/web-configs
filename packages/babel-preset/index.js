@@ -27,6 +27,7 @@ module.exports = function shopifyCommonPreset(
       useBuiltIns: true,
     },
     transformReactConstantElements = false,
+    isWebpack5 = false,
   } = {},
 ) {
   const env = api.env();
@@ -88,11 +89,16 @@ module.exports = function shopifyCommonPreset(
     // See https://github.com/webpack/webpack/issues/10227
     // Can be removed once we drop support for webpack v4 (or these features
     // are backported to acorn v6)
-    typescript && require.resolve('@babel/plugin-proposal-numeric-separator'),
-    typescript &&
+    !isWebpack5 &&
+      typescript &&
+      require.resolve('@babel/plugin-proposal-numeric-separator'),
+    !isWebpack5 &&
+      typescript &&
       require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
 
-    typescript && require.resolve('@babel/plugin-proposal-optional-chaining'),
+    !isWebpack5 &&
+      typescript &&
+      require.resolve('@babel/plugin-proposal-optional-chaining'),
     // Polyfills the runtime needed for async/await, generators, and friends
     // https://babeljs.io/docs/en/babel-plugin-transform-runtime
     transformRuntime && [
