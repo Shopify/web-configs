@@ -31,11 +31,9 @@
     "postcss-will-change": "^4.0.1"
   },
   "devDependencies": {
-    "cssnano": "^5.0.1",
     "postcss": "^8.2.8"
   },
   "peerDependencies": {
-    "cssnano": "^5.0.1",
     "postcss": "^8.2.8"
   }
 }

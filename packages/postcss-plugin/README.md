@@ -22,7 +22,3 @@ This plugin wraps around the following PostCSS transformations:
 - [`postcss-flexbugs-fixes`](https://github.com/luisrudge/postcss-flexbugs-fixes)
 - [`postcss-will-change`](https://github.com/postcss/postcss-will-change)
 - [`autoprefixer`](https://github.com/postcss/autoprefixer)
-
-## Options
-
-This plugin accepts a single option, `minimize`. Passing `minimize: true` will turn on CSS minification via [cssnano](https://cssnano.co).
