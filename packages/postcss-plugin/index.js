@@ -2,15 +2,13 @@ const postcss = require('postcss');
 
 const features = require('./features');
 
-const plugin = postcss.plugin('@shopify/postcss-plugin', (options = {}) => {
-  const processor = postcss();
-
+module.exports = (options = {}) => {
+  const postCssPlugins = [];
   Object.keys(features).forEach((key) => {
-    processor.use(features[key](options));
+    postCssPlugins.push(features[key](options));
   });
-
   if (options.minimize) {
-    processor.use(
+    postCssPlugins.push(
       require('cssnano')({
         preset: [
           'default',
@@ -29,8 +27,9 @@ const plugin = postcss.plugin('@shopify/postcss-plugin', (options = {}) => {
       }),
     );
   }
-
-  return processor;
-});
-
-module.exports = plugin;
+  return {
+    ...postcss([...postCssPlugins]),
+    postcssPlugin: '@shopify/postcss-plugin',
+  };
+};
+module.exports.postcss = true;

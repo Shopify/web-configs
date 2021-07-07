@@ -26,12 +26,16 @@
   "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/postcss-plugin/README.md",
   "dependencies": {
     "autoprefixer": "^10.2.5",
-    "cssnano": "5.0.1",
-    "postcss": "^8.2.8",
     "postcss-calc": "^8.0.0",
-    "postcss-discard-comments": "4.0.2",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-selector-matches": "4.0.0",
-    "postcss-will-change": "4.0.1"
+    "postcss-will-change": "^4.0.1"
+  },
+  "devDependencies": {
+    "cssnano": "^5.0.1",
+    "postcss": "^8.2.8"
+  },
+  "peerDependencies": {
+    "cssnano": "^5.0.1",
+    "postcss": "^8.2.8"
   }
 }

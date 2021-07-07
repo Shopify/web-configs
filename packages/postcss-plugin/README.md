@@ -20,10 +20,8 @@ This plugin wraps around the following PostCSS transformations:
 
 - [`postcss-calc`](https://github.com/postcss/postcss-calc)
 - [`postcss-flexbugs-fixes`](https://github.com/luisrudge/postcss-flexbugs-fixes)
-- [`postcss-selector-matches`](https://github.com/postcss/postcss-selector-matches)
 - [`postcss-will-change`](https://github.com/postcss/postcss-will-change)
 - [`autoprefixer`](https://github.com/postcss/autoprefixer)
-- [`postcss-discard-comments`](https://github.com/ben-eb/postcss-discard-comments)
 
 ## Options
 
