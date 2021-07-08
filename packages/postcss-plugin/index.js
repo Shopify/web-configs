@@ -1,6 +1,6 @@
 const postcss = require('postcss');
 
-module.exports = ({calcOptions = {}, autoprefixerOptions = {}}) => {
+module.exports = ({calcOptions = {}, autoprefixerOptions = {}} = {}) => {
   return {
     ...postcss([
       require('postcss-calc')(calcOptions),
