@@ -35,5 +35,8 @@
     "@babel/runtime": "^7.14.6",
     "babel-plugin-react-test-id": "^1.0.2",
     "babel-plugin-transform-inline-environment-variables": "^0.4.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5"
   }
 }
