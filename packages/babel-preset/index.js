@@ -69,6 +69,14 @@ module.exports = function shopifyCommonPreset(
       {legacy: true},
     ],
 
+    // class-properties are handled by preset-env
+    // But when using typescript we need to transpile them in loose mode to support proposal-decorators's legacy mode
+    // The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods
+    // this is now handle by setting assumptions as the bottom of this file.
+    // see https://babeljs.io/docs/en/assumptions
+    typescript && require.resolve('@babel/plugin-proposal-class-properties'),
+    typescript && require.resolve('@babel/plugin-proposal-private-methods'),
+
     // nullish-coalescing, optional-chaining, and numeric separators are handled by preset-env
     // But they aren't yet supported in webpack 4 because of missing support
     // in acorn v6 (support is in acorn v7, which is used in webpack v5).
