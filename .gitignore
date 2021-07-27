@@ -41,3 +41,5 @@ lerna-debug.log
 tmp
 **/test.log
 *.tsbuildinfo
+
+package-lock.json
