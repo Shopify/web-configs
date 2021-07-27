@@ -1,3 +1,44 @@
+const testScript = `
+export default function memoize(): any {
+  return function <T>(
+    _target: {[key: string]: unknown},
+    propertyKey: string | symbol,
+    descriptor: TypedPropertyDescriptor<T>,
+  ) {
+    const {value: method} = descriptor;
+
+    if (!method || !(method instanceof Function)) {
+      return descriptor;
+    }
+
+    return {
+      get: function get() {
+        const newDescriptor = {
+          configurable: true,
+          value: () => 'foo',
+        };
+
+        Object.defineProperty(this, propertyKey, newDescriptor);
+        return newDescriptor.value;
+      },
+    };
+  };
+}
+
+class ExampleClass {
+  @memoize()
+  method() {
+    return 'bar';
+  }
+}
+
+(() => {
+  const example = new ExampleClass();
+  console.log(example.method());
+})();
+`;
+
+const testScriptOutput = `
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -43,3 +84,42 @@ let ExampleClass = (_dec = memoize(), (_class = class ExampleClass {
   const example = new ExampleClass();
   console.log(example.method());
 })();
+`;
+
+const noDecorators = `
+export class ExampleClass {
+  method() {
+    return 'bar';
+  }
+}
+
+(() => {
+  const example = new ExampleClass();
+  console.log(example.method());
+})();
+`;
+
+const noDecoratorsOutput = `
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ExampleClass = void 0;
+
+class ExampleClass {
+  method() {
+    return 'bar';
+  }
+
+}
+
+exports.ExampleClass = ExampleClass;
+
+(() => {
+  const example = new ExampleClass();
+  console.log(example.method());
+})();
+`;
+
+export {testScript, testScriptOutput, noDecorators, noDecoratorsOutput};

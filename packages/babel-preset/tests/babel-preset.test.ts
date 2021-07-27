@@ -1,78 +1,38 @@
-import {exec} from 'child_process';
-import {readFileSync, writeFileSync} from 'fs';
 import {resolve as resolvePath} from 'path';
 
+import {transform} from '@babel/core';
+
 import shopifyCommonPreset from '../index';
+
+import {
+  testScript,
+  testScriptOutput,
+  noDecorators,
+  noDecoratorsOutput,
+} from './fixtures/samples';
 
 describe('babel-preset-e2e-test', () => {
   describe('legacy decorator tests', () => {
     it('runs babel successfully when typescript is true', async () => {
       const baseConfig = configFactory({typescript: true});
-      writeFileSync(
-        resolvePath(__dirname, './fixtures/babel.config.json'),
-        JSON.stringify(baseConfig, null, 2),
-        'utf-8',
-      );
-      const baseConfigPath = resolvePath(
-        __dirname,
-        './fixtures/babel.config.json',
-      );
-      const {stdout} = await runBuild(baseConfigPath, 'test-script.ts');
-      const exampleOutput = readFileSync(
-        resolvePath(__dirname, './fixtures/base.example.txt'),
-        'utf8',
-      );
+      const {code} = transform(testScript, baseConfig);
       expect(baseConfig.assumptions).toStrictEqual(
         expect.objectContaining({
           setPublicClassFields: true,
           privateFieldsAsProperties: true,
         }),
       );
-      expect(stdout.trim()).toBe(exampleOutput);
+      expect(code).toBe(testScriptOutput.trim());
     });
 
     it('runs babel without decorator proposals when typescript is false', async () => {
       const noDecorConfig = configFactory();
-      writeFileSync(
-        resolvePath(__dirname, './fixtures/babel.config.no-decorator.json'),
-        JSON.stringify(configFactory(), null, 2),
-        'utf-8',
-      );
-      const noDecorConfigPath = resolvePath(
-        __dirname,
-        './fixtures/babel.config.no-decorator.json',
-      );
-      const {stdout} = await runBuild(
-        noDecorConfigPath,
-        'test-script.no-decorator.ts',
-      );
-      const exampleOutput = readFileSync(
-        resolvePath(__dirname, './fixtures/no-decorator.example.txt'),
-        'utf8',
-      );
+      const {code} = transform(noDecorators, noDecorConfig);
       expect(noDecorConfig.assumptions).toStrictEqual({});
-      expect(stdout.trim()).toBe(exampleOutput);
+      expect(code).toBe(noDecoratorsOutput.trim());
     });
   });
 });
-
-function runBuild(
-  configPath: string,
-  scriptPath: string,
-): Promise<{error: any; stdout: string; stderr: string}> {
-  const root = resolvePath(__dirname, './fixtures');
-  return new Promise((resolve) => {
-    exec(
-      `npx babel --config-file ${configPath} ${scriptPath}`,
-      {
-        cwd: root,
-      },
-      (error, stdout, stderr) => {
-        resolve({error, stdout, stderr});
-      },
-    );
-  });
-}
 
 type FactoryOptions = Partial<{
   targets: string;
@@ -96,6 +56,8 @@ function configFactory({
     },
     {modules, typescript},
   );
+  config.filename = 'test-script.ts';
   config.targets = targets;
+  config.configFile = false;
   return config;
 }
