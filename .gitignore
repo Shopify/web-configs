@@ -41,6 +41,5 @@ lerna-debug.log
 tmp
 **/test.log
 *.tsbuildinfo
-**/fixtures/babel.**.json
 
 package-lock.json

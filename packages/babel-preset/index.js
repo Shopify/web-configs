@@ -61,21 +61,23 @@ module.exports = function shopifyCommonPreset(
   ].filter(Boolean);
 
   const plugins = [
-    // proposal-decorators must go before proposal-class-properties.
+    // class-properties and private-methods are handled by preset-env,
+    // however when enabling decorators you need to add them explicitly after
+    // proposal-decorators.
     // Typescript implements the stage 1 version of decorators, which is the
-    // "legacy" version.
-    typescript && [
-      require.resolve('@babel/plugin-proposal-decorators'),
-      {legacy: true},
-    ],
-
-    // class-properties are handled by preset-env
-    // But when using typescript we need to transpile them in loose mode to support proposal-decorators's legacy mode
-    // The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods
-    // this is now handle by setting assumptions as the bottom of this file.
-    // see https://babeljs.io/docs/en/assumptions
-    typescript && require.resolve('@babel/plugin-proposal-class-properties'),
-    typescript && require.resolve('@babel/plugin-proposal-private-methods'),
+    // "legacy" version. This means that the setPublicClassFields and
+    // privateFieldsAsProperties assumptiions must also be enabled (which is
+    // handled at the bottom of this function)
+    ...(typescript
+      ? [
+          [
+            require.resolve('@babel/plugin-proposal-decorators'),
+            {legacy: true},
+          ],
+          require.resolve('@babel/plugin-proposal-class-properties'),
+          require.resolve('@babel/plugin-proposal-private-methods'),
+        ]
+      : []),
 
     // nullish-coalescing, optional-chaining, and numeric separators are handled by preset-env
     // But they aren't yet supported in webpack 4 because of missing support
