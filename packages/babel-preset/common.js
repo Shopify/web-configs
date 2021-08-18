@@ -62,25 +62,13 @@ module.exports = function shopifyCommonPreset(
   const plugins = [
     // proposal-decorators must go before proposal-class-properties.
     // Typescript implements the stage 1 version of decorators, which is the
-    // "legacy" version. When decorators are used in legacy mode,
-    // proposal-class-properties must be used in loose mode
-    // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
+    // "legacy" version.
     typescript && [
       require.resolve('@babel/plugin-proposal-decorators'),
       {legacy: true},
     ],
-    // Enable loose mode to use assignment instead of defineProperty when typescript is enabled
-    // class-properties are handled by preset-env
-    // But when using typescript we need to transpile them in loose mode to support proposal-decorators's legacy mode
-    typescript && [
-      require.resolve('@babel/plugin-proposal-class-properties'),
-      {loose: true},
-    ],
-    // The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods
-    typescript && [
-      require.resolve('@babel/plugin-proposal-private-methods'),
-      {loose: true},
-    ],
+    typescript && [require.resolve('@babel/plugin-proposal-class-properties')],
+    typescript && [require.resolve('@babel/plugin-proposal-private-methods')],
     // nullish-coalescing, optional-chaining, and numeric separators are handled by preset-env
     // But they aren't yet supported in webpack 4 because of missing support
     // in acorn v6 (support is in acorn v7, which is used in webpack v5).
@@ -108,5 +96,17 @@ module.exports = function shopifyCommonPreset(
       require.resolve('@babel/plugin-transform-react-constant-elements'),
   ].filter(Boolean);
 
-  return {presets, plugins};
+  // When decorators are used in legacy mode proposal-class-properties, plugin-proposal-private-methods must be used in loose mode (this is now handled by these assumptions)
+  // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
+  // see https://babeljs.io/docs/en/babel-plugin-proposal-class-properties#loose
+  // see https://babeljs.io/docs/en/babel-plugin-proposal-private-methods#loose
+  // see https://babeljs.io/docs/en/assumptions
+  const assumptions = typescript
+    ? {
+        setPublicClassFields: true,
+        privateFieldsAsProperties: true,
+      }
+    : {};
+
+  return {presets, plugins, assumptions};
 };

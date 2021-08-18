@@ -20,17 +20,16 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
   }
 
   if (typescript) {
-    // proposal-decorators must go before proposal-class-properties.
-    // Typscript implements the stage 1 version of decorators, which is the
-    // "legacy" version. When decorators are used in legacy mode,
-    // proposal-class-properties must be used in loose mode
-    // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
+    // class-properties and private-methods are handled by preset-env,
+    // however when enabling decorators you need to add them explicitly after
+    // proposal-decorators.
+    // Typescript implements the stage 1 version of decorators, which is the
+    // "legacy" version. This means that the setPublicClassFields and
+    // privateFieldsAsProperties assumptiions must also be enabled (which is
+    // handled at the bottom of this function)
     plugins.push(
       [require.resolve('@babel/plugin-proposal-decorators'), {legacy: true}],
-      [
-        require.resolve('@babel/plugin-proposal-class-properties'),
-        {loose: true},
-      ],
+      require.resolve('@babel/plugin-proposal-class-properties'),
       require.resolve('@babel/plugin-proposal-numeric-separator'),
       // nullish-coalescing and optional-chaining are handled by preset-env
       // But they aren't yet supported in webpack 4 because of missing support
@@ -39,14 +38,8 @@ module.exports = function shopifyNonStandardPlugins(options = {}) {
       // See https://github.com/webpack/webpack/issues/10227
       // Can be removed once we drop support for webpack v4 (or these features
       // are backported to acorn v6)
-      [
-        require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
-        {loose: true},
-      ],
-      [
-        require.resolve('@babel/plugin-proposal-optional-chaining'),
-        {loose: true},
-      ],
+      require.resolve('@babel/plugin-proposal-nullish-coalescing-operator'),
+      require.resolve('@babel/plugin-proposal-optional-chaining'),
     );
 
     if (transformRuntime) {

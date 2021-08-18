@@ -28,8 +28,21 @@ module.exports = function shopifyWebPreset(_api, options = {}) {
     presets.push(require.resolve('@babel/preset-typescript'));
   }
 
+  // When decorators are used in legacy mode proposal-class-properties, plugin-proposal-private-methods must be used in loose mode (this is now handled by these assumptions)
+  // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
+  // see https://babeljs.io/docs/en/babel-plugin-proposal-class-properties#loose
+  // see https://babeljs.io/docs/en/babel-plugin-proposal-private-methods#loose
+  // see https://babeljs.io/docs/en/assumptions
+  const assumptions = typescript
+    ? {
+        setPublicClassFields: true,
+        privateFieldsAsProperties: true,
+      }
+    : {};
+
   return {
     presets,
     plugins: nonStandardPlugins(options),
+    assumptions,
   };
 };
