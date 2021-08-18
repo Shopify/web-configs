@@ -54,7 +54,6 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Refactored usage of `loose` options on plugins to use the top level `assumptions` object [[#282](https://github.com/Shopify/web-configs/pull/282)]
 
-
 ## 23.6.1 - 2021-05-05
 
 ### Changed
