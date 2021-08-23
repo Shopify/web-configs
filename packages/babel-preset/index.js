@@ -34,6 +34,7 @@ module.exports = function shopifyCommonPreset(
   const isDevelopment = env === 'development' || env === 'test';
   const includeTransformReactConstantElements =
     !isDevelopment && transformReactConstantElements && react;
+  const includeStripReactTestId = env !== 'test';
 
   const presets = [
     [
@@ -107,6 +108,9 @@ module.exports = function shopifyCommonPreset(
     // result in faster reconciliation
     includeTransformReactConstantElements &&
       require.resolve('@babel/plugin-transform-react-constant-elements'),
+
+    // Only include testID props in the test environment
+    includeStripReactTestId && require.resolve('babel-plugin-react-test-id'),
   ].filter(Boolean);
 
   // When decorators are used in legacy mode proposal-class-properties, plugin-proposal-private-methods must be used in loose mode (this is now handled by these assumptions)

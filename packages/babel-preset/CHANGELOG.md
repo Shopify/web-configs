@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Fixed
+
+- Re-add `babel-plugin-react-test-id` plugin when running in non-test environments. This was present in v23, but accidentally got removed in v24.0.0. [[#284](https://github.com/Shopify/web-configs/pull/284)]
 
 ## 24.1.2 - 2021-07-27
 
