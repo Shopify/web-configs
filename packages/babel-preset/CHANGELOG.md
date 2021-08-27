@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Changed
+
+- Updated `@babel/*` dependencies. [[#285](https://github.com/Shopify/web-configs/pull/285)]
 
 ## 24.1.3 - 2021-08-23
 
