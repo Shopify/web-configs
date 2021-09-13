@@ -7,6 +7,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+### Fixed
+
+- Added missing dependency [[#289](https://github.com/Shopify/web-configs/pull/289)]
+
 ### Changed
 
 - Updated `@babel/*` dependencies. [[#285](https://github.com/Shopify/web-configs/pull/285)]
