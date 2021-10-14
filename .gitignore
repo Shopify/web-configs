@@ -43,3 +43,5 @@ tmp
 *.tsbuildinfo
 
 package-lock.json
+
+.vscode
