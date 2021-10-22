@@ -50,7 +50,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "eslint-plugin-sort-class-members": "1.11.0",
     "jsx-ast-utils": "^3.2.0",
