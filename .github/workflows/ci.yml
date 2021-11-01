@@ -12,12 +12,16 @@ jobs:
   test:
     name: 'Test'
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['12.x', '14.x', '16.x']
     steps:
       - uses: actions/checkout@v2
 
       - uses: actions/setup-node@v2
+        name: Use Node.js ${{ matrix.node-version }}
         with:
-          node-version: '12.14.0'
+          node-version: ${{ matrix.node-version }}
           cache: 'yarn'
 
       - run: yarn --frozen-lockfile
