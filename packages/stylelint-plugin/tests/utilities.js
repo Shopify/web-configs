@@ -36,7 +36,7 @@ export function testRule(rule, schema) {
             const options = {
               code: testCase.code,
               config: stylelintConfig,
-              syntax: schema.syntax,
+              customSyntax: schema.syntax,
               codeFilename: schema.codeFilename,
             };
 
@@ -69,7 +69,7 @@ export function testRule(rule, schema) {
             const options = {
               code: testCase.code,
               config: stylelintConfig,
-              syntax: schema.syntax,
+              customSyntax: schema.syntax,
               codeFilename: schema.codeFilename,
             };
 
