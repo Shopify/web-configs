@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Breaking Change
+
+- Dependency updates to drop support for stylelint 13 and older Node.js versions [[#298](https://github.com/Shopify/web-configs/pull/298)]
 
 ## 10.2.0 - 2021-09-13
 
@@ -40,7 +44,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Breaking Change
 
-- Projects will need to use stylelint v13.7.0 or higher 
+- Projects will need to use stylelint v13.7.0 or higher
 - Stylelint rules have been renamed. `*-blacklist`, `*-requirelist` and `*-whitelist` rules have been replaced in favour of the new `*-disallowed-list`, `*-required-list` and `*-allowed-list` ones.
 
 ## 9.0.0 - 2020-06-04
@@ -49,7 +53,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 The Shopify stylelint rules have been renamed to follow the `@shopify` namespace convention
 
-Before: 
+Before:
 
 ```
 module.exports = {
@@ -60,7 +64,7 @@ module.exports = {
 };
 ```
 
-After: 
+After:
 
 ```
 module.exports = {
