@@ -1,8 +1,8 @@
 name: web-configs
 up:
   - node:
-      version: 16.13.0
-      yarn: 1.22.15
+      version: v12.14.0
+      yarn: v1.22.5
 commands:
   __default__: start
   check: yarnpkg check
@@ -10,3 +10,4 @@ commands:
   start: echo "Running web-configs is not really a concept that makes sense."
   test: yarnpkg test
   generate: yarnpkg generate
+  
