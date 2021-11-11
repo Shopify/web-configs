@@ -9,11 +9,15 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
+- Update ecmaVersion to 'latest' in `esnext.js` in eslint-plugin to ensure it's esnext. ([296](https://github.com/Shopify/web-configs/pull/296))
+
 - Loosen semver restrictions on `eslint` plugins ([297](https://github.com/Shopify/web-configs/pull/297))
 
 ## 40.4.0 - 2021-07-12
 
 ### Changed
+
+- Update ecmaVersion to 'latest' in `esnext.js` in eslint-plugin to ensure it's esnext. ([296](https://github.com/Shopify/web-configs/pull/296))
 
 - Update `eslint` and plugin dependencies ([272](https://github.com/Shopify/web-configs/pull/272))
 
