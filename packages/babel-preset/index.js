@@ -97,7 +97,7 @@ module.exports = function shopifyCommonPreset(
 
     // when this is still webpack4 and typescript is not enabled
     // the following methods must be enabled, this is because
-    // webpack5 is still on acron 6, not required for v5 of webpack
+    // webpack 4 is still on acron 6, not required for v5 of webpack
     ...(isWebpack5 === false && typescript === false
       ? [
           require.resolve('@babel/plugin-proposal-class-properties'),
