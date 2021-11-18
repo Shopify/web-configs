@@ -95,6 +95,16 @@ module.exports = function shopifyCommonPreset(
         ]
       : []),
 
+    // when this is still webpack4 and typescript is not enabled
+    // the following methods must be enabled, this is because
+    // webpack5 is still on acron 6, not required for v5 of webpack
+    ...(isWebpack5 === false && typescript === false
+      ? [
+          require.resolve('@babel/plugin-proposal-class-properties'),
+          require.resolve('@babel/plugin-proposal-private-methods'),
+        ]
+      : []),
+
     // Polyfills the runtime needed for async/await, generators, and friends
     // https://babeljs.io/docs/en/babel-plugin-transform-runtime
     transformRuntime && [
