@@ -7,6 +7,12 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## 24.1.5 - 2021-11-18
+
+### Changed
+
+- Updated `@babel/*` dependencies and fix bug with webpack4 [[#301](https://github.com/Shopify/web-configs/pull/301)]
+
 ## 24.1.4 - 2021-09-13
 
 ### Fixed

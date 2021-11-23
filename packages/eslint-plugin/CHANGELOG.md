@@ -7,11 +7,17 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
-## 40.5.0 - 2021-10-14
+## 40.6.0 - 2021-11-23
 
 ### Changed
 
 - Update `eslint-plugin-import` to support `eslint@8` ([293](https://github.com/Shopify/web-configs/pull/293))
+
+## 40.5.0 - 2021-11-18
+
+### Changed
+
+- Loosen semver restrictions on `eslint` plugins ([297](https://github.com/Shopify/web-configs/pull/297))
 
 ## 40.4.0 - 2021-07-12
 
