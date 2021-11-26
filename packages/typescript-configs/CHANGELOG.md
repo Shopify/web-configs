@@ -17,7 +17,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Breaking Change
 
-Increased the target and lib definitions to es2020 in both `base.json` and `dom.json`. This allows for a greater range of standard features to be defined and used. We expect typescript will be ran through Babel to downlevel/polyfill all features required for your target environment [[#239](https://github.com/Shopify/web-configs/pull/239)]
+Increased the target and lib definitions to es2020 in both `base.json` and `dom.json`. This allows for a greater range of standard features to be defined and used. We expect typescript will be ran through Babel to downlevel/polyfill all features required for your target environment. [[#239](https://github.com/Shopify/web-configs/pull/239)]
 
 ## 4.0.0 - 2021-02-24
 
@@ -43,7 +43,7 @@ After:
 import styles from 'foo.scss';
 ```
 
-- Updated the `*.scss` and `*.css` types for esmodules [[#165](https://github.com/Shopify/web-configs/pull/165)]
+- Updated the `*.scss` and `*.css` types for esmodules. [[#165](https://github.com/Shopify/web-configs/pull/165)]
 
 ## 2.0.2 - 2020-03-28
 

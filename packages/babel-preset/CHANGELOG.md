@@ -11,13 +11,13 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Updated `@babel/*` dependencies and fix bug with webpack4 [[#301](https://github.com/Shopify/web-configs/pull/301)]
+- Updated `@babel/*` dependencies and fix bug with webpack4. [[#301](https://github.com/Shopify/web-configs/pull/301)]
 
 ## 24.1.4 - 2021-09-13
 
 ### Fixed
 
-- Added missing dependency [[#289](https://github.com/Shopify/web-configs/pull/289)]
+- Added missing dependency. [[#289](https://github.com/Shopify/web-configs/pull/289)]
 
 ### Changed
 
@@ -33,32 +33,32 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Refactored usage of `loose` options on plugins to use the top level `assumptions` object [[#269](https://github.com/Shopify/web-configs/pull/269)]
+- Refactored usage of `loose` options on plugins to use the top level `assumptions` object. [[#269](https://github.com/Shopify/web-configs/pull/269)]
 
 ## 24.1.1 - 2021-07-12
 
 ### Changed
 
-- Updated `@babel/runtime`, `@babel/preset-env`, and `@babel/core` [[#273](https://github.com/Shopify/web-configs/pull/273)]
+- Updated `@babel/runtime`, `@babel/preset-env`, and `@babel/core`. [[#273](https://github.com/Shopify/web-configs/pull/273)]
 
 
 ## 24.1.0 - 2021-07-07
 
 ### Added
 
-- Added `isWebpack5` option to remove unneeded babel plugins [[#268](https://github.com/Shopify/web-configs/pull/268)]
+- Added `isWebpack5` option to remove unneeded babel plugins. [[#268](https://github.com/Shopify/web-configs/pull/268)]
 
 ## 24.0.2 - 2021-06-14
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.14.5` [[#260](https://github.com/Shopify/web-configs/pull/260)]
+- Updated `@babel/*` presets and plugins to version `7.14.5`. [[#260](https://github.com/Shopify/web-configs/pull/260)]
 
 ## 24.0.1 - 2021-06-04
 
 ### Changed
 
-- Update `@babel/preset-env`, `@babel/plugin-transform-typescript`, and `@babel/parser` to `7.14.4` [[#256](https://github.com/Shopify/web-configs/pull/256)]
+- Update `@babel/preset-env`, `@babel/plugin-transform-typescript`, and `@babel/parser` to `7.14.4`. [[#256](https://github.com/Shopify/web-configs/pull/256)]
 
 ## 24.0.0 - 2021-05-25
 
@@ -68,97 +68,97 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.14.2` [[#254](https://github.com/Shopify/web-configs/pull/254)]
+- Updated `@babel/*` presets and plugins to version `7.14.2`. [[#254](https://github.com/Shopify/web-configs/pull/254)]
 
 ## 23.6.2 - 2021-08-18
 
 ### Changed
 
-- Refactored usage of `loose` options on plugins to use the top level `assumptions` object [[#282](https://github.com/Shopify/web-configs/pull/282)]
+- Refactored usage of `loose` options on plugins to use the top level `assumptions` object. [[#282](https://github.com/Shopify/web-configs/pull/282)]
 
 ## 23.6.1 - 2021-05-05
 
 ### Changed
 
-- Fix loose warning for `@babel/plugin-proposal-private-methods` [[#245](https://github.com/Shopify/web-configs/pull/245)]
+- Fix loose warning for `@babel/plugin-proposal-private-methods`. [[#245](https://github.com/Shopify/web-configs/pull/245)]
 
 ## 23.6.0 - 2021-05-04
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.14.x` [[#241](https://github.com/Shopify/web-configs/pull/241)]
+- Updated `@babel/*` presets and plugins to version `7.14.x`. [[#241](https://github.com/Shopify/web-configs/pull/241)]
 
 ## 23.5.1 - 2021-04-20
 
 ### Changed
 
-- Updated `@babel/core`, `@babel/runtime`, and fixes `@shopify/babel-preset` react settings [[#235](https://github.com/Shopify/web-foundation/pull/235)]
+- Updated `@babel/core`, `@babel/runtime`, and fixes `@shopify/babel-preset` react settings. [[#235](https://github.com/Shopify/web-foundation/pull/235)]
 
 ## 23.5.0 - 2021-04-20
 
 ### Added
 
-- Created an experimental `common` babel-preset [[#231](https://github.com/Shopify/web-foundation/pull/231)]
+- Created an experimental `common` babel-preset. [[#231](https://github.com/Shopify/web-foundation/pull/231)]
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.13.x` [[#231](https://github.com/Shopify/web-foundation/pull/231)]
+- Updated `@babel/*` presets and plugins to version `7.13.x`. [[#231](https://github.com/Shopify/web-foundation/pull/231)]
 
 ## 23.4.1 - 2021-04-16
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.13.x` [[#222](https://github.com/Shopify/web-foundation/pull/222)]
+- Updated `@babel/*` presets and plugins to version `7.13.x`. [[#222](https://github.com/Shopify/web-foundation/pull/222)]
 
 ## 23.4.0 - 2021-03-10
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.13` [[#219](https://github.com/Shopify/web-foundation/pull/219)]
+- Updated `@babel/*` presets and plugins to version `7.13`. [[#219](https://github.com/Shopify/web-foundation/pull/219)]
 
 ## 23.3.2 - 2021-02-11
 
 ### Changed
 
-- Improved how options are defined in `@shopify/babel-preset/react` [[#209](https://github.com/Shopify/web-configs/pull/209)]
+- Improved how options are defined in `@shopify/babel-preset/react`. [[#209](https://github.com/Shopify/web-configs/pull/209)]
 
 ## 23.3.1 - 2021-02-10
 
 ### Changed
 
-- Bugfix for disabling `transformReactConstantElements` [[#208](https://github.com/Shopify/web-configs/pull/208)]
+- Bugfix for disabling `transformReactConstantElements`. [[#208](https://github.com/Shopify/web-configs/pull/208)]
 
 ## 23.3.0 - 2021-02-10
 
 ### Changed
 
-- Updated `@babel/*` presets and plugins to version `7.12` [[#207](https://github.com/Shopify/web-foundation/pull/207)]
+- Updated `@babel/*` presets and plugins to version `7.12`. [[#207](https://github.com/Shopify/web-foundation/pull/207)]
 
 ### Added
 
-- Added the ability to add `@babel/plugin-transform-runtime` [[#206](https://github.com/Shopify/web-configs/pull/206)]
+- Added the ability to add `@babel/plugin-transform-runtime`. [[#206](https://github.com/Shopify/web-configs/pull/206)]
 
 ## 23.2.0 - 2021-02-09
 
 ### Added
 
-- Added the ability to disable `@babel/plugin-transform-react-constant-elements` [[#205](https://github.com/Shopify/web-foundation/pull/205)]
+- Added the ability to disable `@babel/plugin-transform-react-constant-elements`. [[#205](https://github.com/Shopify/web-foundation/pull/205)]
 
 ## 23.1.1 - 2020-08-26
 
-- Update `@babel/preset-env` and other babel packages to 7.10.4 and enable preset-env's [`bugfixes`](https://babeljs.io/docs/en/babel-preset-env#bugfixes) option [[#172](https://github.com/Shopify/web-foundation/pull/172)]
+- Update `@babel/preset-env` and other babel packages to 7.10.4 and enable preset-env's [`bugfixes`](https://babeljs.io/docs/en/babel-preset-env#bugfixes) option. [[#172](https://github.com/Shopify/web-foundation/pull/172)]
 
 ## 23.1.0 - 2020-05-12
 
 ### Changed
 
-- Update `@babel/core`, `@babel/preset-env`, `@babel/plugin-transform-modules-commonjs` to `7.9.6` [[#155](https://github.com/Shopify/web-foundation/pull/155)]
+- Update `@babel/core`, `@babel/preset-env`, `@babel/plugin-transform-modules-commonjs` to `7.9.6`. [[#155](https://github.com/Shopify/web-foundation/pull/155)]
 
 ## 23.0.0 - 2020-04-23
 
 ### Changed
 
-- Remove `react-hot-loader` since `react-fast-refresh` is now used in sewing-kit [[#145](https://github.com/Shopify/web-foundation/pull/145)]
+- Remove `react-hot-loader` since `react-fast-refresh` is now used in sewing-kit. [[#145](https://github.com/Shopify/web-foundation/pull/145)]
 
 ## 22.0.0 - 2020-03-28
 
@@ -186,11 +186,11 @@ module.exports = {
 
 ### Added
 
-- Added support for null coalescing and optional chaining operators [[#48](https://github.com/Shopify/babel-preset-shopify/pull/48)]
+- Added support for null coalescing and optional chaining operators. [[#48](https://github.com/Shopify/babel-preset-shopify/pull/48)]
 
 ### Changed
 
-- Updated `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions [[#47](https://github.com/Shopify/babel-preset-shopify/pull/47)]
+- Updated `@babel/core`, `@babel/preset-env`, presets, and plugins updated to the latest `7.7.x` versions. [[#47](https://github.com/Shopify/babel-preset-shopify/pull/47)]
 
 ## 20.1.0 - 2019-09-24
 

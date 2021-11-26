@@ -15,67 +15,67 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Loosen semver restrictions on `eslint` plugins ([297](https://github.com/Shopify/web-configs/pull/297))
+- Loosen semver restrictions on `eslint` plugins. [[#297](https://github.com/Shopify/web-configs/pull/297)]
 
 ## 40.4.0 - 2021-07-12
 
 ### Changed
 
-- Update `eslint` and plugin dependencies ([272](https://github.com/Shopify/web-configs/pull/272))
+- Update `eslint` and plugin dependencies. [[#272](https://github.com/Shopify/web-configs/pull/272)]
 
 ## 40.3.0 - 2021-06-30
 
 ### Changed
 
-- Removed `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`([264](https://github.com/Shopify/web-configs/pull/264))
-- Add `react-require-autocomplete` lint rule to `@shopify/eslint-plugin` https://github.com/Shopify/web-configs/pull/251
+- Removed `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`. [[#264](https://github.com/Shopify/web-configs/pull/264)]
+- Add `react-require-autocomplete` lint rule to `@shopify/eslint-plugin`. [[#251](https://github.com/Shopify/web-configs/pull/251)]
 
 ## 40.2.3 - 2021-05-10
 
 ### Changed
 
-- Fix conflicting `@typescript-eslint/naming-convention` rules  [[#247](https://github.com/Shopify/web-configs/pull/247)]
+- Fix conflicting `@typescript-eslint/naming-convention` rules. [[#247](https://github.com/Shopify/web-configs/pull/247)]
 
 ## 40.2.2 - 2021-05-05
 
 ### Changed
 
-- Update `merge` to `2.1.1` [[#244](https://github.com/Shopify/web-configs/pull/244)]
+- Update `merge` to `2.1.1`. [[#244](https://github.com/Shopify/web-configs/pull/244)]
 
 ## 40.2.1 - 2021-04-16
 
 ### Changed
 
-- Fixed a conflict between Prettier and rules `*/object-curly-spacing` ([227](https://github.com/Shopify/web-configs/pull/227))
+- Fixed a conflict between Prettier and rules `*/object-curly-spacing`. [[#227](https://github.com/Shopify/web-configs/pull/227)]
 
 ## 40.2.0 - 2021-04-16
 
 ### Changed
 
-- Added `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`([217](https://github.com/Shopify/web-configs/pull/218))
-- Updated `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` to version `4.20.0` [[#223](https://github.com/Shopify/web-foundation/pull/223)]
+- Added `jsx-a11y/autocomplete-valid` rule for `eslint-plugin`. [[#217](https://github.com/Shopify/web-configs/pull/218)]
+- Updated `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` to version `4.20.0`. [[#223](https://github.com/Shopify/web-foundation/pull/223)]
 
 ## 40.1.0 - 2021-02-24
 
 ### Changed
 
-- Include jest formatting in `@shopify/eslint-plugin` ruleset ([#213](https://github.com/Shopify/web-configs/pull/213))
+- Include jest formatting in `@shopify/eslint-plugin` ruleset. [[#213](https://github.com/Shopify/web-configs/pull/213)]
 
 ## 40.0.1 - 2021-02-12
 
 ### Changed
 
-- Fix incompatibility between `@typescript-eslint/array-type` and `@typescript-eslint/ban-types` ([#212](https://github.com/Shopify/web-configs/pull/212))
+- Fix incompatibility between `@typescript-eslint/array-type` and `@typescript-eslint/ban-types`. [[#212](https://github.com/Shopify/web-configs/pull/212)]
 
 ## 40.0.0 - 2021-02-12
 
 ### Changed
 
-- Updated `eslint-plugin` test to prepare for `eslint@7` upgrade ([#211](https://github.com/Shopify/web-configs/pull/211))
+- Updated `eslint-plugin` test to prepare for `eslint@7` upgrade. [[#211](https://github.com/Shopify/web-configs/pull/211)]
 
 ### Breaking Change
 
-- Updated `eslint-plugin` plugins and removed support for `eslint@6`  ([#194](https://github.com/Shopify/web-foundation/pull/194)).
+- Updated `eslint-plugin` plugins and removed support for `eslint@6`. [[#194](https://github.com/Shopify/web-foundation/pull/194)]
 
 | Package                                   | Old version | New version |
 | ----------------------------------------- | ----------- | ----------- |
@@ -93,24 +93,24 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Updated TypeScript naming rules to ensure type name start with a "T" and interface names don't start with an "I" ([#198](https://github.com/Shopify/web-configs/pull/198))
-- Updated `eslint-config-prettier` dependency to v3.3.0 ([#202](https://github.com/Shopify/web-configs/pull/202))
+- Updated TypeScript naming rules to ensure type name start with a "T" and interface names don't start with an "I". [[#198](https://github.com/Shopify/web-configs/pull/198)]
+- Updated `eslint-config-prettier` dependency to v3.3.0. [[#202](https://github.com/Shopify/web-configs/pull/202)]
 
 ## 39.0.3 - 2020-11-17
 
 ### Fixed
 
-- Fixed a syntax error in `peerDependencies` to allow eslint@^7.0.0 ([#196](https://github.com/Shopify/web-configs/pull/196)).
+- Fixed a syntax error in `peerDependencies` to allow eslint@^7.0.0. [[#196](https://github.com/Shopify/web-configs/pull/196)]
 
 ## 39.0.2 - 2020-11-03
 
 ### Fixed
 
-- Add support for CommonJS in `prefer-module-scope-constants` ([#195](https://github.com/Shopify/web-configs/pull/195)).
+- Add support for CommonJS in `prefer-module-scope-constants`. [[#195](https://github.com/Shopify/web-configs/pull/195)]
 
 ### Changed
 
-- Updated `eslint-plugin` plugins  ([#194](https://github.com/Shopify/web-foundation/pull/194)).
+- Updated `eslint-plugin` plugins. [[#194](https://github.com/Shopify/web-foundation/pull/194)]
 
 | Package                            | Old version | New version |
 | ---------------------------------- | ----------- | ----------- |
@@ -126,7 +126,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Breaking Change
 
-- Added `id` field to `graphql/required-fields` rule. ([#166](https://github.com/Shopify/web-foundation/pull/166)).
+- Added `id` field to `graphql/required-fields` rule. [[#166](https://github.com/Shopify/web-foundation/pull/166)]
 
 #### Updated Plugins
 
@@ -149,7 +149,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-- Created a new rule, `@shopify/typescript/prefer-build-client-schema` ([#176](https://github.com/Shopify/web-foundation/pull/176))
+- Created a new rule, `@shopify/typescript/prefer-build-client-schema`. [[#176](https://github.com/Shopify/web-foundation/pull/176)]
 
 ### Breaking Change
 
@@ -164,7 +164,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Added
 
-The following new rules were introduced. More information can be found ([#157](https://github.com/Shopify/web-foundation/pull/157)).
+The following new rules were introduced. More information can be found. [[#157](https://github.com/Shopify/web-foundation/pull/157)]
 - [`react/jsx-no-script-url`](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md)
 
 Facebook improved the `eslint-plugin-react-hooks` plugin. We may have to update the dependencies of some hooks.
@@ -193,7 +193,7 @@ Facebook improved the `eslint-plugin-react-hooks` plugin. We may have to update 
 
 ## 36.1.0 - 2020-05-05
 
-- adding `allow` and `maxDepth` options to `strict-component-boundaries` rule. ([#150](https://github.com/Shopify/web-foundation/pull/150))
+- adding `allow` and `maxDepth` options to `strict-component-boundaries` rule. [[#150](https://github.com/Shopify/web-foundation/pull/150)]
 
 ## 36.0.1 - 2020-03-28
 
@@ -229,21 +229,21 @@ rules: {
 
 ## 35.1.0 - 2020-03-23
 
-- Update `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` to 2.25.0, to support new syntax introduced in Typescript 3.8. ([#523](https://github.com/Shopify/eslint-plugin-shopify/pull/523))
+- Update `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser` to 2.25.0, to support new syntax introduced in Typescript 3.8. [[#523](https://github.com/Shopify/eslint-plugin-shopify/pull/523)]
 
 ## 35.0.0 - 2020-02-14
 
 - remove `no-vague-titles` because the rule was adopted into `eslint-plugin-jest`'s `valid-title` rule. See [the `valid-title` documentation](https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md#disallowedwords)
-- Fixed an issue with `typescript/prefer-pascal-case-enum` when you had enum with key as string. ([517](https://github.com/Shopify/eslint-plugin-shopify/pull/517))
+- Fixed an issue with `typescript/prefer-pascal-case-enum` when you had enum with key as string. [[#517](https://github.com/Shopify/eslint-plugin-shopify/pull/517)]
 
 ## 34.0.1 - 2019-01-13
 
-- fix enabled graphql rules by specifying `env: 'literal'` ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/518))
+- fix enabled graphql rules by specifying `env: 'literal'`. [[#514](https://github.com/Shopify/eslint-plugin-shopify/pull/518)]
 
 ## 34.0.0 - 2019-01-13
 
-- changed `no-vague-titles` rule to catch blacklisted **words** (instead of **sequences**) in the title ([514](https://github.com/Shopify/eslint-plugin-shopify/pull/514))
-- removed `jest/no-empty-title` and renamed `jest/require-tothrow-message` to `jest/require-to-throw-message` ([499](https://github.com/Shopify/eslint-plugin-shopify/pull/499))
+- changed `no-vague-titles` rule to catch blacklisted **words** (instead of **sequences**) in the title. [[#514](https://github.com/Shopify/eslint-plugin-shopify/pull/514)]
+- removed `jest/no-empty-title` and renamed `jest/require-tothrow-message` to `jest/require-to-throw-message`. [[#499](https://github.com/Shopify/eslint-plugin-shopify/pull/499)]
 
 ### Added
 
@@ -276,15 +276,15 @@ The followiing new rules were introduced in `eslint@6.7.0`. More information can
 
 ### Added
 
-- `shopify/no-all-mocks-methods` ([#204](https://github.com/Shopify/eslint-plugin-shopify/pull/204))
-- `shopify/no-namespace-imports` Prevent namespace import declarations. ([262](https://github.com/Shopify/eslint-plugin-shopify/pull/262))
+- `shopify/no-all-mocks-methods`. [[#204](https://github.com/Shopify/eslint-plugin-shopify/pull/204)]
+- `shopify/no-namespace-imports` Prevent namespace import declarations. [[#262](https://github.com/Shopify/eslint-plugin-shopify/pull/262)]
 
 ## 32.0.0 - 2019-11-05
 
 - `jest/valid-title`
 - `jest/prefer-hooks-on-top`
 - `jest/require-top-level-describe`
-- Enforce new-lines between groups import groups ([#409](https://github.com/Shopify/eslint-plugin-shopify/pull/409))
+- Enforce new-lines between groups import groups. [[#409](https://github.com/Shopify/eslint-plugin-shopify/pull/409)]
 
 ## 31.0.0 - 2019-10-23
 
@@ -339,8 +339,8 @@ _Example config for react with typescript projects:_
 
 ### Added
 
-- `jest/no-standalone-expect` Prevents `expect` statements outside of a `test` or `it` block ([368](https://github.com/Shopify/eslint-plugin-shopify/pull/368))
-- `jest/no-expect-resolves` Avoid using `expect().resolves` ([370](https://github.com/Shopify/eslint-plugin-shopify/pull/370))
+- `jest/no-standalone-expect` Prevents `expect` statements outside of a `test` or `it` block. [[#368](https://github.com/Shopify/eslint-plugin-shopify/pull/368)]
+- `jest/no-expect-resolves` Avoid using `expect().resolves`. [[#370](https://github.com/Shopify/eslint-plugin-shopify/pull/370)]
 
 
 ## 30.0.1 - 2019-06-24
@@ -351,50 +351,50 @@ _Example config for react with typescript projects:_
 
 ### Changed
 
-- Enabled `jest/no-export` rule ([344](https://github.com/Shopify/eslint-plugin-shopify/pull/344))
-- [Major] depreciated `shopify/jest/no-try-expect` in favour of [`jest/no-try-expect`](https://github.com/jest-community/eslint-plugin-jest/pull/) ([331](https://github.com/jest-community/eslint-plugin-jest/pull/331))
-- [Major] depreciated `shopify/jest/no-if` in favour of [`jest/no-if`](https://github.com/jest-community/eslint-plugin-jest/pull/293) ([347](https://github.com/Shopify/eslint-plugin-shopify/pull/347))
-- [Major] Updated to eslint v6, enabled `no-console` and enabled `no-async-promise-executor` ([330](https://github.com/Shopify/eslint-plugin-shopify/pull/330))
+- Enabled `jest/no-export` rule. [[#344](https://github.com/Shopify/eslint-plugin-shopify/pull/344)]
+- [Major] depreciated `shopify/jest/no-try-expect` in favour of [`jest/no-try-expect`](https://github.com/jest-community/eslint-plugin-jest/pull/). [[#331](https://github.com/jest-community/eslint-plugin-jest/pull/331)]
+- [Major] depreciated `shopify/jest/no-if` in favour of [`jest/no-if`](https://github.com/jest-community/eslint-plugin-jest/pull/293). [[#347](https://github.com/Shopify/eslint-plugin-shopify/pull/347)]
+- [Major] Updated to eslint v6, enabled `no-console` and enabled `no-async-promise-executor`. [[#330](https://github.com/Shopify/eslint-plugin-shopify/pull/330)]
 - Enabled `typescript/interface-name-prefix` to prevent `I` prefixes in TypeScript interface names
-- Enabled `jest/no-duplicate-hooks` rule ([344](https://github.com/Shopify/eslint-plugin-shopify/pull/344))
+- Enabled `jest/no-duplicate-hooks` rule. [[#344](https://github.com/Shopify/eslint-plugin-shopify/pull/344)]
 
 ### Fixed
 
-- [Patch] Fix `jest/no-if` from falsely reporting if statements inside of functions ([331](https://github.com/Shopify/eslint-plugin-shopify/pull/331))
+- [Patch] Fix `jest/no-if` from falsely reporting if statements inside of functions. [[#331](https://github.com/Shopify/eslint-plugin-shopify/pull/331)]
 
 ## 29.0.2 - 2019-06-18
 
 ### Changed
 
-- Removed `react/prop-types` in typescript config ([309](https://github.com/Shopify/eslint-plugin-shopify/pull/309))
+- Removed `react/prop-types` in typescript config. [[#309](https://github.com/Shopify/eslint-plugin-shopify/pull/309)]
 
 ## 29.0.1 - 2019-06-18
 
 ### Changed
 
-- Removed `import/no-namespace` ([308](https://github.com/Shopify/eslint-plugin-shopify/pull/308))
+- Removed `import/no-namespace`. [[#308](https://github.com/Shopify/eslint-plugin-shopify/pull/308)]
 
 ## 29.0.0 - 2019-06-17
 
 ### Changed
 
-- added "necessary" to `shopify/jest/no-vague-titles` ([265](https://github.com/Shopify/eslint-plugin-shopify/pull/265))
-- `shopify/jest/no-if` now recognizes conditional statements ([298](https://github.com/Shopify/eslint-plugin-shopify/pull/298))
+- added "necessary" to `shopify/jest/no-vague-titles`. [[#265](https://github.com/Shopify/eslint-plugin-shopify/pull/265)]
+- `shopify/jest/no-if` now recognizes conditional statements. [[#298](https://github.com/Shopify/eslint-plugin-shopify/pull/298)]
 
 ### Added
 
 - New Rules:
-  - `jest/no-commented-out-tests` disallows commented out tests.([275](https://github.com/Shopify/eslint-plugin-shopify/pull/275))
-  - `jest/no-try-expect` disallows `expect` calls in `catch` blocks ([300](https://github.com/Shopify/eslint-plugin-shopify/pull/300))
-  - `node/prefer-promises/dns` and `node/prefer-promises/fs` These rules disallow the callback API in favor of promise API for the dns and fs modules. ([257](https://github.com/Shopify/eslint-plugin-shopify/pull/257))
-  - `jest/no-mocks-import` This rule disallows manually importing from `__mocks__` ([246](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
-  - `react/state-in-constructor` Enforce state initialization to be in a class property. ([256](https://github.com/Shopify/eslint-plugin-shopify/pull/246))
-  - `import/no-namespace` Prevents namespace imports. ([305](https://github.com/Shopify/eslint-plugin-shopify/pull/305))
+  - `jest/no-commented-out-tests` disallows commented out tests. [[#275](https://github.com/Shopify/eslint-plugin-shopify/pull/275)]
+  - `jest/no-try-expect` disallows `expect` calls in `catch` blocks. [[#300](https://github.com/Shopify/eslint-plugin-shopify/pull/300)]
+  - `node/prefer-promises/dns` and `node/prefer-promises/fs` These rules disallow the callback API in favor of promise API for the dns and fs modules. [[#257](https://github.com/Shopify/eslint-plugin-shopify/pull/257)]
+  - `jest/no-mocks-import` This rule disallows manually importing from `__mocks__`. [[#246](https://github.com/Shopify/eslint-plugin-shopify/pull/246)]
+  - `react/state-in-constructor` Enforce state initialization to be in a class property. [[#256](https://github.com/Shopify/eslint-plugin-shopify/pull/246)]
+  - `import/no-namespace` Prevents namespace imports. [[#305](https://github.com/Shopify/eslint-plugin-shopify/pull/305)]
 
 ### Fixed
 
-- `shopify/jest/no-if` ignores if statements nested within block statements ([299](https://github.com/Shopify/eslint-plugin-shopify/pull/299))
-- `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. ([258](https://github.com/Shopify/eslint-plugin-shopify/pull/258))
+- `shopify/jest/no-if` ignores if statements nested within block statements. [[#299](https://github.com/Shopify/eslint-plugin-shopify/pull/299)]
+- `react-prefer-private-members` from incorrectly reporting the members of a parent class if a React class is defined within its constructor. [[#258](https://github.com/Shopify/eslint-plugin-shopify/pull/258)]
 
 ## 28.0.0 - 2019-04-26
 
@@ -422,38 +422,38 @@ _Example config for react with typescript projects:_
 
 ### Fixed
 
-* `shopify/restrict-full-import` "empty" array pattern (eg: `const [, bar] = foo` errors ([#243](https://github.com/Shopify/eslint-plugin-shopify/pull/243))
-* Optimized `shopify/images/no-direct-imports` to be much faster in the common case ([#247](https://github.com/Shopify/eslint-plugin-shopify/pull/247))
-* `shopify/react-hooks-strict-return` from crashing when a hook returns undefined ([#251](https://github.com/Shopify/eslint-plugin-shopify/pull/251))
+* `shopify/restrict-full-import` "empty" array pattern (eg: `const [, bar] = foo` errors. [[#243](https://github.com/Shopify/eslint-plugin-shopify/pull/243)]
+* Optimized `shopify/images/no-direct-imports` to be much faster in the common case. [[#247](https://github.com/Shopify/eslint-plugin-shopify/pull/247)]
+* `shopify/react-hooks-strict-return` from crashing when a hook returns undefined. [[#251](https://github.com/Shopify/eslint-plugin-shopify/pull/251)]
 
 ### Added
 
 * updated `eslint-plugin-import` to version `22.4.1` which introduces the [`no-unused-modules`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md) rule.
 * updated `eslint-plugin-jest` to version `22.4.1` which introduces the [`no-empty-title`](https://github.com/jest-community/eslint-plugin-jest/commit/c793b7a) rule.
-* `shopify/react-hooks-strict-return` Restrict the number of returned items from React hooks. ([#237](https://github.com/Shopify/eslint-plugin-shopify/pull/237))
+* `shopify/react-hooks-strict-return` Restrict the number of returned items from React hooks. [[#237](https://github.com/Shopify/eslint-plugin-shopify/pull/237)]
 
 ### Removed
 
-* turned off `node/no-extraneous-require` because it duplicates reported violations from `import/no-extraneous-dependencies` ([#240](https://github.com/Shopify/eslint-plugin-shopify/pull/240)
+* turned off `node/no-extraneous-require` because it duplicates reported violations from `import/no-extraneous-dependencies`. [[#240](https://github.com/Shopify/eslint-plugin-shopify/pull/240)]
 
 ## 27.0.1 - 2019-04-10
 
 ### Changed
 
-* `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. ([#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235))
+* `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. [[#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235)]
 
 ### Removed
 
-* turned off `consistent-return` ([#236](https://github.com/Shopify/eslint-plugin-shopify/pull/236)
-* turned off `react/jsx-no-bind` ([#239](https://github.com/Shopify/eslint-plugin-shopify/pull/239))
-* turned off `babel/camelcase` in typescript config because it overlaps with `@typescript-eslint/camelcase`. ([#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238))
-* `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. ([#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235))
+* turned off `consistent-return`. [[#236](https://github.com/Shopify/eslint-plugin-shopify/pull/236)]
+* turned off `react/jsx-no-bind`. [[#239](https://github.com/Shopify/eslint-plugin-shopify/pull/239)]
+* turned off `babel/camelcase` in typescript config because it overlaps with `@typescript-eslint/camelcase`. [[#238](https://github.com/Shopify/eslint-plugin-shopify/pull/238)]
+* `shopify/jest/no-if` no longer considers if statements in describe blocks as invalid. [[#235](https://github.com/Shopify/eslint-plugin-shopify/pull/235)]
 
 ## 27.0.0 - 2019-04-08
 
 ### Added
 
-#### Plugin updates and additions ([#233](https://github.com/Shopify/eslint-plugin-shopify/pull/233))
+#### Plugin updates and additions. [[#233](https://github.com/Shopify/eslint-plugin-shopify/pull/233)]
 
 #### Breaking Changes
 
@@ -482,7 +482,7 @@ _Example config for react with typescript projects:_
 
 #### Added
 
-* `shopify/jest/no-if` ([#232](https://github.com/Shopify/eslint-plugin-shopify/pull/232))
+* `shopify/jest/no-if`. [[#232](https://github.com/Shopify/eslint-plugin-shopify/pull/232)]
 
 Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules.html) to learn more about the following rules.
 
@@ -527,46 +527,46 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Changed
 
-* `jest/no-vague-titles` added `every` and `descriptive` as vague words. ([#221](https://github.com/Shopify/eslint-plugin-shopify/pull/221))
+* `jest/no-vague-titles` added `every` and `descriptive` as vague words. [[#221](https://github.com/Shopify/eslint-plugin-shopify/pull/221)]
 
 ## 26.3.0 - 2019-02-21
 
 ### Added
 
-* Updated `eslint-plugin-react` and enabled `react/jsx-fragments` rule to prefer using `<>` over `<React.Fragment>` when defining fragments ([#223](https://github.com/Shopify/eslint-plugin-shopify/pull/223))
+* Updated `eslint-plugin-react` and enabled `react/jsx-fragments` rule to prefer using `<>` over `<React.Fragment>` when defining fragments. [[#223](https://github.com/Shopify/eslint-plugin-shopify/pull/223)]
 
 ## 26.2.0 - 2019-02-14
 
 ### Added
 
-* `images-no-direct-imports` ([#219](https://github.com/Shopify/eslint-plugin-shopify/pull/219))
+* `images-no-direct-imports`. [[#219](https://github.com/Shopify/eslint-plugin-shopify/pull/219)]
 
 ## 26.1.2 - 2019-01-02
 
 ### Fixed
 
-* `jest/no-vague-titles` no longer flags when the word `call` is used. ([#203](https://github.com/Shopify/eslint-plugin-shopify/pull/203))
-* Update `eslint-plugin-prettier` to 3.0.1 so it does not crash when given an unparsable file ([#212](https://github.com/Shopify/eslint-plugin-shopify/pull/212))
+* `jest/no-vague-titles` no longer flags when the word `call` is used. [[#203](https://github.com/Shopify/eslint-plugin-shopify/pull/203)]
+* Update `eslint-plugin-prettier` to 3.0.1 so it does not crash when given an unparsable file. [[#212](https://github.com/Shopify/eslint-plugin-shopify/pull/212)]
 
 ### Changed
 
-* `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words. ([#208](https://github.com/Shopify/eslint-plugin-shopify/pull/208))
+* `jest/no-vague-titles` added `should` and `properly` to vague rules and new configuration to `allow` words. [[#208](https://github.com/Shopify/eslint-plugin-shopify/pull/208)]
 
 ## 26.1.1 - 2018-10-31
 
 ### Fixed
 
-* `typescript-eslint-parser` pinned at `20.0.0` to avoid [a known issue](https://github.com/eslint/typescript-eslint-parser/issues/535) ([#201](https://github.com/Shopify/eslint-plugin-shopify/pull/201))
+* `typescript-eslint-parser` pinned at `20.0.0` to avoid [a known issue](https://github.com/eslint/typescript-eslint-parser/issues/535). [[#201](https://github.com/Shopify/eslint-plugin-shopify/pull/201)]
 
 ## 26.1.0 - 2018-10-30
 
 ### Added
 
-* `shopify/no-ancestor-directory-import` ([#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149))
+* `shopify/no-ancestor-directory-import`. [[#149](https://github.com/Shopify/eslint-plugin-shopify/pull/149)]
 
 ### Fixed
 
-* Set TypeScript parser only on TS files. This makes sure you can extend from the typescript and react configs in either order. Previously you had to make sure typescript came first to avoid using the babel-eslint parser on typescript files. Now we suggest to extend from typescript, and then react to ensure some rules some JSX rules don't get inadventently disabled. ([#200](https://github.com/Shopify/eslint-plugin-shopify/pull/200))
+* Set TypeScript parser only on TS files. This makes sure you can extend from the typescript and react configs in either order. Previously you had to make sure typescript came first to avoid using the babel-eslint parser on typescript files. Now we suggest to extend from typescript, and then react to ensure some rules some JSX rules don't get inadventently disabled. [[#200](https://github.com/Shopify/eslint-plugin-shopify/pull/200)]
 
 ## 26.0.0 - 2018-10-26
 
@@ -582,46 +582,46 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
   - `eslint-comments/no-restricted-disable` (disabled)
   - `eslint-comments/no-use` (disabled)
 
-* `shopify/jest/no-snapshots` ([#182](https://github.com/Shopify/eslint-plugin-shopify/pull/182))
+* `shopify/jest/no-snapshots`. [[#182](https://github.com/Shopify/eslint-plugin-shopify/pull/182)]
 
 ### Changed
 
-* Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides` ([#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173))
-* Updated `import/order` rule to enforce ordering of internal, parent and sibling imports ([#189](https://github.com/Shopify/eslint-plugin-shopify/pull/189))
-* Updated `func-style` rule to allow arrow functions ([#188](https://github.com/Shopify/eslint-plugin-shopify/pull/188))
+* Updated `plugin:shopify/prettier`, `plugin:shopify/react`, and `plugin:shopify/typescript` to use `overrides`. [[#173](https://github.com/Shopify/eslint-plugin-shopify/pull/173)]
+* Updated `import/order` rule to enforce ordering of internal, parent and sibling imports. [[#189](https://github.com/Shopify/eslint-plugin-shopify/pull/189)]
+* Updated `func-style` rule to allow arrow functions. [[#188](https://github.com/Shopify/eslint-plugin-shopify/pull/188)]
 
 ### Fixed
 
-* Rolling back `eslint-plugin-graphql` to `2.1.0-0` for multiple schema support ([#195](https://github.com/Shopify/eslint-plugin-shopify/pull/195))
+* Rolling back `eslint-plugin-graphql` to `2.1.0-0` for multiple schema support. [[#195](https://github.com/Shopify/eslint-plugin-shopify/pull/195)]
 
 ## 25.1.0 - 2018-10-01
 
 ### Changed
 
-* Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. ([#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176))
+* Updated `typescript-eslint-parser` dependency to version 19.0.2 to support `typescript-estree`. [[#176](https://github.com/Shopify/eslint-plugin-shopify/pull/176)]
 
 ## 25.0.1 - 2018-09-25
 
 ### Fixed
 
-* Restored `typescript-prettier` config to override `prettier` plugin parser. ([#171](https://github.com/Shopify/eslint-plugin-shopify/pull/171))
+* Restored `typescript-prettier` config to override `prettier` plugin parser. [[#171](https://github.com/Shopify/eslint-plugin-shopify/pull/171)]
 
 ## 25.0.0 - 2018-09-25
 
 ### Fixed
 
-* Updated `plugin:shopify/prettier` to enable prettier linting. ([#170](https://github.com/Shopify/eslint-plugin-shopify/pull/170))
-* `strict-component-boundaries` now consistently uses the resolved path from the app root to perform its checks. This fixes a number of false-positives. ([#160](https://github.com/Shopify/eslint-plugin-shopify/pull/160))
+* Updated `plugin:shopify/prettier` to enable prettier linting. [[#170](https://github.com/Shopify/eslint-plugin-shopify/pull/170)]
+* `strict-component-boundaries` now consistently uses the resolved path from the app root to perform its checks. This fixes a number of false-positives. [[#160](https://github.com/Shopify/eslint-plugin-shopify/pull/160)]
 
 ## 24.2.0 - 2018-09-21
 
 ### Added
 
-* Added `plugin:shopify/graphql` to module index. ([#168](https://github.com/Shopify/eslint-plugin-shopify/pull/168))
+* Added `plugin:shopify/graphql` to module index. [[#168](https://github.com/Shopify/eslint-plugin-shopify/pull/168)]
 
 ### Fixed
 
-* Updated `no-vague-titles` rule to fix parsing issues in `getMethodName`. ([#167](https://github.com/Shopify/eslint-plugin-shopify/pull/167))
+* Updated `no-vague-titles` rule to fix parsing issues in `getMethodName`. [[#167](https://github.com/Shopify/eslint-plugin-shopify/pull/167)]
 
 ## 24.1.1 - 2018-09-19
 
@@ -631,29 +631,29 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Added
 
-* Added `shopify/graphql` config using new `eslint-plugin-graphql` (`2.1.1.`) dependency. ([#165](https://github.com/Shopify/eslint-plugin-shopify/pull/165))
+* Added `shopify/graphql` config using new `eslint-plugin-graphql` (`2.1.1.`) dependency. [[#165](https://github.com/Shopify/eslint-plugin-shopify/pull/165)]
 
 ## 24.0.0 - 2018-08-30
 
 ### Fixed
 
-* `plugin:shopify/flow` now disables rules checked by Flow's static analyzer. ([#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135))
-* `plugin:shopify/prettier` and `plugin:shopify/typescript-prettier` defer missing semicolon rules to a project´s `.prettierrc`. ([#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135))
-* Updated `strict-component-boundaries` to exclude fixture imports. ([#117](https://github.com/Shopify/eslint-plugin-shopify/pull/117))
-* Updated `strict-component-boundaries` to exclude imports from node_modules. ([#140](https://github.com/Shopify/eslint-plugin-shopify/pull/140))
-* Updated `jest/no-vague-titles` to support `.each` syntax. ([#148](https://github.com/Shopify/eslint-plugin-shopify/pull/148))
+* `plugin:shopify/flow` now disables rules checked by Flow's static analyzer. [[#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135)]
+* `plugin:shopify/prettier` and `plugin:shopify/typescript-prettier` defer missing semicolon rules to a project´s `.prettierrc`. [[#135](https://github.com/Shopify/eslint-plugin-shopify/pull/135)]
+* Updated `strict-component-boundaries` to exclude fixture imports. [[#117](https://github.com/Shopify/eslint-plugin-shopify/pull/117)]
+* Updated `strict-component-boundaries` to exclude imports from node_modules. [[#140](https://github.com/Shopify/eslint-plugin-shopify/pull/140)]
+* Updated `jest/no-vague-titles` to support `.each` syntax. [[#148](https://github.com/Shopify/eslint-plugin-shopify/pull/148)]
 
 ### Changed
 
-* Namespaced `prefer-pascal-case-enums` and `prefer-singular-enums` under `typescript`. ([#141](https://github.com/Shopify/eslint-plugin-shopify/pull/141))
-* **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) node versions, we recommend `^8.10.0`. See details on the v4 to v5 [migration guide](https://eslint.org/docs/user-guide/migrating-to-5.0.0). ([#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151))
+* Namespaced `prefer-pascal-case-enums` and `prefer-singular-enums` under `typescript`. [[#141](https://github.com/Shopify/eslint-plugin-shopify/pull/141)]
+* **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) node versions, we recommend `^8.10.0`. See details on the v4 to v5 [migration guide](https://eslint.org/docs/user-guide/migrating-to-5.0.0). [[#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151)]
 
 ### Added
 
-* `shopify/prefer-singular-enums` ([#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132))
-* `shopify/react-no-multiple-render-methods` ([#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134))
+* `shopify/prefer-singular-enums`. [[#132](https://github.com/Shopify/eslint-plugin-shopify/pull/132)]
+* `shopify/react-no-multiple-render-methods`. [[#134](https://github.com/Shopify/eslint-plugin-shopify/pull/134)]
 
-* New eslint rules and plugins rules: ([#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151))
+* New eslint rules and plugins rules. [[#151](https://github.com/Shopify/eslint-plugin-shopify/pull/151)]
   * [`max-classes-per-file`](https://eslint.org/docs/rules/max-classes-per-file) (disabled)
   * [`no-self-assign`](https://eslint.org/docs/rules/no-self-assign)
   * [`require-unicode-regexp`](https://eslint.org/docs/rules/require-unicode-regexp) (disabled)
@@ -689,12 +689,12 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Fixed
 
-* Updated `typescript-eslint-parser` dependency to version 17.0.1 in order to support TypeScript 3. ([#121](https://github.com/Shopify/eslint-plugin-shopify/pull/121))
-* Removed default prettier configurations. `plugin:shopify/prettier` and `plugin:shopify/typescript-prettier` now defer Prettier's config to a project's `.prettierrc`. ([#121](https://github.com/Shopify/eslint-plugin-shopify/pull/121))
+* Updated `typescript-eslint-parser` dependency to version 17.0.1 in order to support TypeScript 3. [[#121](https://github.com/Shopify/eslint-plugin-shopify/pull/121)]
+* Removed default prettier configurations. `plugin:shopify/prettier` and `plugin:shopify/typescript-prettier` now defer Prettier's config to a project's `.prettierrc`. [[#121](https://github.com/Shopify/eslint-plugin-shopify/pull/121)]
 
 ### Changed
 
-* Included `all` as a vague term for `no-vague-titles` ([#114](https://github.com/Shopify/eslint-plugin-shopify/pull/114))
+* Included `all` as a vague term for `no-vague-titles`. [[#114](https://github.com/Shopify/eslint-plugin-shopify/pull/114)]
 
 ## 23.0.0 - 2018-07-16
 
@@ -702,14 +702,14 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Added
 
-* `shopify/jsx-prefer-fragment-wrappers` ([#94](https://github.com/Shopify/eslint-plugin-shopify/pull/94))
-* `shopify/jest/no-vague-titles` ([#93](https://github.com/Shopify/eslint-plugin-shopify/pull/93))
-* `shopify/strict-component-boundaries` ([#98](https://github.com/Shopify/eslint-plugin-shopify/pull/98))
+* `shopify/jsx-prefer-fragment-wrappers`. [[#94](https://github.com/Shopify/eslint-plugin-shopify/pull/94)]
+* `shopify/jest/no-vague-titles`. [[#93](https://github.com/Shopify/eslint-plugin-shopify/pull/93)]
+* `shopify/strict-component-boundaries`. [[#98](https://github.com/Shopify/eslint-plugin-shopify/pull/98)]
 
 ### Changed
 
-* **Breaking** Moved prettier to be a peerDependency, this avoids the potential for having multiple versions of prettier in the dependency graph. If you use prettier you will need to ensure you have it installed in your project as eslint-plugin-shopify will no longer install it for you ([#107](https://github.com/Shopify/eslint-plugin-shopify/pull/107))
-* **Breaking** Updated `typescript-eslint-parser` to support `typescript@2.9.1` ([#102](https://github.com/Shopify/eslint-plugin-shopify/pull/102))
+* **Breaking** Moved prettier to be a peerDependency, this avoids the potential for having multiple versions of prettier in the dependency graph. If you use prettier you will need to ensure you have it installed in your project as eslint-plugin-shopify will no longer install it for you. [[#107](https://github.com/Shopify/eslint-plugin-shopify/pull/107)]
+* **Breaking** Updated `typescript-eslint-parser` to support `typescript@2.9.1`. [[#102](https://github.com/Shopify/eslint-plugin-shopify/pull/102)]
 
 ## 22.1.0 - 2018-06-08
 
@@ -719,8 +719,8 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Added
 
-* `shopify/prefer-pascal-case-enums` ([#96](https://github.com/Shopify/eslint-plugin-shopify/pull/96))
-* `shopify/react-prefer-private-members` ([#95](https://github.com/Shopify/eslint-plugin-shopify/pull/95))
+* `shopify/prefer-pascal-case-enums`. [[#96](https://github.com/Shopify/eslint-plugin-shopify/pull/96)]
+* `shopify/react-prefer-private-members`. [[#95](https://github.com/Shopify/eslint-plugin-shopify/pull/95)]
 
 ## 22.0.0
 
@@ -880,7 +880,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Changed
 
-* Changed `eslint-config-shopify` codebase to follow es5 trailingComma [[#61](https://github.com/Shopify/eslint-plugin-shopify/pull/61)]
+* Changed `eslint-config-shopify` codebase to follow es5 trailingComma. [[#61](https://github.com/Shopify/eslint-plugin-shopify/pull/61)]
 
 ## 18.3.0 - 2017-12-18
 
@@ -898,12 +898,12 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Added
 
-* Added a `typescript` and `typescript-react` config [[#54](https://github.com/Shopify/eslint-plugin-shopify/pull/54)]
+* Added a `typescript` and `typescript-react` config. [[#54](https://github.com/Shopify/eslint-plugin-shopify/pull/54)]
 
 ### Changed
 
-* `plugin:shopify/prettier` will now enforce trailing commas in function parameter calls [[#55](https://github.com/Shopify/eslint-plugin-shopify/pull/55)]
-* `comma-dangle` will now enforce multi-line function parameters [[#55](https://github.com/Shopify/eslint-plugin-shopify/pull/55)]
+* `plugin:shopify/prettier` will now enforce trailing commas in function parameter calls. [[#55](https://github.com/Shopify/eslint-plugin-shopify/pull/55)]
+* `comma-dangle` will now enforce multi-line function parameters. [[#55](https://github.com/Shopify/eslint-plugin-shopify/pull/55)]
 * Removed `plugin:shopify/esnext` as an included extension of the `plugin:shopify/prettier` config. `plugin:shopify/esnext` must now be extended by the consumer to use the `plugin:shopify/prettier`. [[#53](https://github.com/Shopify/eslint-plugin-shopify/pull/53)]
 
   Example (`package.json`):
@@ -932,7 +932,7 @@ Refer to the [Rules of Hooks documentation](https://reactjs.org/docs/hooks-rules
 
 ### Added
 
-* Added a prettier config [[#46](https://github.com/Shopify/eslint-plugin-shopify/pull/46)]
+* Added a prettier config. [[#46](https://github.com/Shopify/eslint-plugin-shopify/pull/46)]
 
 Example:
 ```
@@ -945,9 +945,9 @@ Example:
 
 ### Changed
 
-* Replace all `warn` with `error` [[#48](https://github.com/Shopify/eslint-plugin-shopify/pull/48)]
-* `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`) [[#43](https://github.com/Shopify/eslint-plugin-shopify/pull/43)]
-* Enable `padding-line-between-statements` for directives.  [[#44](https://github.com/Shopify/eslint-plugin-shopify/pull/44)]
+* Replace all `warn` with `error`. [[#48](https://github.com/Shopify/eslint-plugin-shopify/pull/48)]
+* `space-before-function-paren` now uses `asyncArrow` option (eg. `async () => {}`). [[#43](https://github.com/Shopify/eslint-plugin-shopify/pull/43)]
+* Enable `padding-line-between-statements` for directives. [[#44](https://github.com/Shopify/eslint-plugin-shopify/pull/44)]
 
 ### Removed
 
@@ -958,7 +958,7 @@ Example:
 
 ### Added
 
-* New rules ([#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)):
+* New rules. [[#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)]:
   - `import/no-anonymous-default-export`
   - `jsx-a11y/anchor-is-valid`
   - `no-buffer-constructor`
@@ -982,7 +982,7 @@ Example:
 
 ### Changed
 
-- Updated dependencies ([#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)):
+- Updated dependencies. [[#41](https://github.com/Shopify/eslint-plugin-shopify/pull/41)]:
   - `eslint`
   - `babel-eslint`
   - `eslint-plugin-import`
@@ -1014,7 +1014,7 @@ Example:
 
 ### Changed
 
-- Turned off [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring) ([#30](https://github.com/Shopify/eslint-plugin-shopify/pull/30))
+- Turned off [`prefer-destructuring`](http://eslint.org/docs/rules/prefer-destructuring). [[#30](https://github.com/Shopify/eslint-plugin-shopify/pull/30)]
 
 ## 16.0.0 - 2017-05-16
 
@@ -1075,20 +1075,20 @@ Example:
 
 ### Added
 
-- Added `eslint-index` package ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
-- Added `rules-status` and `rules-omitted` scripts ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
-- Added new `eslint-plugin-react` rules: `no-array-index-key`, `require-default-props` ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
-- Added new `eslint-plugin-lodash` rules: `import-scope` ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
-- Added new `eslint-plugin-promise` rules: `no-return-wrap`, `no-nesting`, `no-promise-in-callback`, `no-callback-in-promise`, `avoid-new`, `prefer-await-to-then`, `prefer-await-to-callbacks` ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
+- Added `eslint-index` package. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
+- Added `rules-status` and `rules-omitted` scripts. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
+- Added new `eslint-plugin-react` rules: `no-array-index-key`, `require-default-props`. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
+- Added new `eslint-plugin-lodash` rules: `import-scope`. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
+- Added new `eslint-plugin-promise` rules: `no-return-wrap`, `no-nesting`, `no-promise-in-callback`, `no-callback-in-promise`, `avoid-new`, `prefer-await-to-then`, `prefer-await-to-callbacks`. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
 
 ### Changed
 
-- Updated `eslint-plugin-flowtype`, `eslint-plugin-lodash`, `eslint-plugin-mocha`, `eslint-plugin-promise`, `eslint-plugin-react` to their latest versions ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
-- Updated `react/prefer-stateless-function` rule to include `ignorePureComponents` flag ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
+- Updated `eslint-plugin-flowtype`, `eslint-plugin-lodash`, `eslint-plugin-mocha`, `eslint-plugin-promise`, `eslint-plugin-react` to their latest versions. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
+- Updated `react/prefer-stateless-function` rule to include `ignorePureComponents` flag. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
 
 ### Removed
 
-- Removed `eslint-find-rules` package ([#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4))
+- Removed `eslint-find-rules` package. [[#4](https://github.com/Shopify/eslint-plugin-shopify/pull/4)]
 
 ## 15.1.0
 

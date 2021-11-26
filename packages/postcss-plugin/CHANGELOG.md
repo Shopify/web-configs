@@ -25,7 +25,7 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## 3.1.0 - 2020-09-17
 
-- Dependency updates [[#159](https://github.com/Shopify/web-foundations/pull/159)]
+- Dependency updates. [[#159](https://github.com/Shopify/web-foundations/pull/159)]
 
 ## 3.0.0 - 2020-03-28
 
@@ -79,7 +79,7 @@ Breaking change: updated dependencies to use PostCSS 7.0.
 
 ## 1.0.1 - 2018-01-17
 
-- Discard comments in the last processing step, allowing to use comments such as `/* autoprefixer: off */` ([#2](https://github.com/Shopify/postcss-shopify/pull/2))
+- Discard comments in the last processing step, allowing to use comments such as `/* autoprefixer: off */`. [[#2](https://github.com/Shopify/postcss-shopify/pull/2)]
 
 ## 1.0.0 - 2017-03-05
 

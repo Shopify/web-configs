@@ -17,20 +17,20 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Update `merge` to `2.1.1` [[#244](https://github.com/Shopify/web-configs/pull/244)]
+- Update `merge` to `2.1.1`. [[#244](https://github.com/Shopify/web-configs/pull/244)]
 
 ## 10.1.1 - 2020-04-21
 
 ### Changed
 
-- Remove `no-invalid-position-at-import-rule` rule as it is not in a currently released version of stylelint [[#237](https://github.com/Shopify/web-configs/pull/237)]
-- Update peer dependency to `>=13.12.0` [[#237](https://github.com/Shopify/web-configs/pull/237)]
+- Remove `no-invalid-position-at-import-rule` rule as it is not in a currently released version of stylelint. [[#237](https://github.com/Shopify/web-configs/pull/237)]
+- Update peer dependency to `>=13.12.0`. [[#237](https://github.com/Shopify/web-configs/pull/237)]
 
 ## 10.1.0 - 2021-03-10
 
 ### Changed
 
-- Update `stylelint`, `stylelint-prettier`, and `stylelint-scss` [[#224](https://github.com/Shopify/web-configs/pull/224)]
+- Update `stylelint`, `stylelint-prettier`, and `stylelint-scss`. [[#224](https://github.com/Shopify/web-configs/pull/224)]
 
 ## 10.0.1 - 2020-10-07
 
@@ -73,7 +73,7 @@ module.exports = {
 
 ## 8.1.0 - 2020-05-12
 
-- Loosen the `selector-class-pattern` rule to allow for hypens in class names ([#153](https://github.com/Shopify/web-foundation/pull/153))
+- Loosen the `selector-class-pattern` rule to allow for hypens in class names. [[#153](https://github.com/Shopify/web-foundation/pull/153)]
 
 ## 8.0.0 - 2020-03-28
 
@@ -104,14 +104,14 @@ After:
 
 ### Changed
 
-- Add jest and bump node to 10.0.0 ([#55](https://github.com/Shopify/stylelint-config-shopify/pull/55)
-- Rename "rules" folder - which contains config for existing rules to be "config"; Rename "plugins" folder which contains our custom rule definitions to be "rules". This matches the layout used by eslint-plugin-shopify. ([#56](https://github.com/Shopify/stylelint-config-shopify/pull/56))
+- Add jest and bump node to 10.0.0. [[#55](https://github.com/Shopify/stylelint-config-shopify/pull/55]
+- Rename "rules" folder - which contains config for existing rules to be "config"; Rename "plugins" folder which contains our custom rule definitions to be "rules". This matches the layout used by eslint-plugin-shopify. [[#56](https://github.com/Shopify/stylelint-config-shopify/pull/56)]
 
 ## 7.4.0 - 2019-12-16
 
 ### Added
 
-- New Rules ([#54](https://github.com/Shopify/stylelint-config-shopify/pull/54)):
+- New Rules. [[#54](https://github.com/Shopify/stylelint-config-shopify/pull/54)]:
   - [`scss/at-if-no-null`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-if-no-null)
   - [`scss/at-each-key-value-single-line`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-each-key-value-single-line)
   - [`scss/at-rule-conditional-no-parentheses`](https://github.com/kristerkari/stylelint-scss/tree/master/src/rules/at-rule-conditional-no-parentheses)
@@ -122,30 +122,30 @@ After:
 
 ### Changed
 
-- Bump stylelint-prettier v1.1.2 ([#54](https://github.com/Shopify/stylelint-config-shopify/pull/54)
+- Bump stylelint-prettier v1.1.2. [[#54](https://github.com/Shopify/stylelint-config-shopify/pull/54)]
 
 ## 7.3.0 - 2019-12-14
 
 ### Added
 
-- Forbid `display: table` for better Safari + VoiceOver + iOS compatibility ([#52](https://github.com/Shopify/stylelint-config-shopify/pull/52))
+- Forbid `display: table` for better Safari + VoiceOver + iOS compatibility. [[#52](https://github.com/Shopify/stylelint-config-shopify/pull/52)]
 
 ## 7.2.1 - 2019-04-04
 
-- Fixed an regression where 7.2.0 introduced the need for stylelint 9.9.0 or above ([#50](https://github.com/Shopify/stylelint-config-shopify/pull/50))
+- Fixed an regression where 7.2.0 introduced the need for stylelint 9.9.0 or above. [[#50](https://github.com/Shopify/stylelint-config-shopify/pull/50)]
 
 ## 7.2.0 - 2019-04-03
 
-- Allow non-lowercase values in properties such as `font`, `font-family`, `--anything-with-font-in-its-name`, or Sass variables starting with `$polaris` or containing `font` ([#49](https://github.com/Shopify/stylelint-config-shopify/pull/49))
+- Allow non-lowercase values in properties such as `font`, `font-family`, `--anything-with-font-in-its-name`, or Sass variables starting with `$polaris` or containing `font`. [[#49](https://github.com/Shopify/stylelint-config-shopify/pull/49)]
 
 ## 7.1.0 - 2019-01-07
 
-- Raise `peerDependency` on `stylelint` to 9.4.0 to accomodate the `linebreaks` rule. ([#46](https://github.com/Shopify/stylelint-config-shopify/pull/46))
-- Bump `stylelint-prettier` to v1.0.6 to fix crashes when reading unparsable files. ([#48](https://github.com/Shopify/stylelint-config-shopify/pull/48))
+- Raise `peerDependency` on `stylelint` to 9.4.0 to accomodate the `linebreaks` rule. [[#46](https://github.com/Shopify/stylelint-config-shopify/pull/46)]
+- Bump `stylelint-prettier` to v1.0.6 to fix crashes when reading unparsable files. [[#48](https://github.com/Shopify/stylelint-config-shopify/pull/48)]
 
 ## 7.0.4 - 2018-10-02
 
-- Bump stylelint-prettier v1.0.3 to avoid a transitive dependency on eslint-plugin-prettier ([#45](https://github.com/Shopify/stylelint-config-shopify/pull/45))
+- Bump stylelint-prettier v1.0.3 to avoid a transitive dependency on eslint-plugin-prettier. [[#45](https://github.com/Shopify/stylelint-config-shopify/pull/45)]
 
 ## 7.0.3 - 2018-09-27
 
@@ -155,19 +155,19 @@ After:
 
 ### Changed
 
-- Disable `scss/no-duplicate-dollar-variables` rule by default. It makes no attempt to understand how Sass's variable scoping works which results in lots of false warnings on completely reasonable code. ([#44](https://github.com/Shopify/stylelint-config-shopify/pull/44))
+- Disable `scss/no-duplicate-dollar-variables` rule by default. It makes no attempt to understand how Sass's variable scoping works which results in lots of false warnings on completely reasonable code. [[#44](https://github.com/Shopify/stylelint-config-shopify/pull/44)]
 
 ## 7.0.1 - 2018-09-12
 
 ### Changed
 
-- Updated stylelint-prettier to v1.0.1 ([#42](https://github.com/Shopify/stylelint-config-shopify/pull/42))
+- Updated stylelint-prettier to v1.0.1. [[#42](https://github.com/Shopify/stylelint-config-shopify/pull/42)]
 
 ## 7.0.0 - 2018-08-30
 
 ### Changed
 
-- **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using node [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) versions, we recommend `^8.10.0`. See details on the v4 to v5 migration guide [here](https://eslint.org/docs/user-guide/migrating-to-5.0.0). ([#40](https://github.com/Shopify/stylelint-config-shopify/pull/40))
+- **Breaking:** Updated to eslint `v5.4.0`. Consuming projects must be using node [supported](https://eslint.org/docs/user-guide/migrating-to-5.0.0#-nodejs-4-is-no-longer-supported) versions, we recommend `^8.10.0`. See details on the v4 to v5 migration guide [here](https://eslint.org/docs/user-guide/migrating-to-5.0.0). [[#40](https://github.com/Shopify/stylelint-config-shopify/pull/40)]
 
 ### Added
 
@@ -234,7 +234,7 @@ The following patterns are _not_ considered violations:
 ## 5.0.0 - 2018-02-22
 
 - Dropped support for Node `<8.9`
-- Require stylelint `>=9.0` as a peerDependency for projects consuming this config ([#25](https://github.com/Shopify/stylelint-config-shopify/pull/25) and [#27](https://github.com/Shopify/stylelint-config-shopify/pull/27))
+- Require stylelint `>=9.0` as a peerDependency for projects consuming this config [#25](https://github.com/Shopify/stylelint-config-shopify/pull/25) and [#27](https://github.com/Shopify/stylelint-config-shopify/pull/27))
 - Updated dependencies
 
 ## 4.0.0 - 2017-11-17
