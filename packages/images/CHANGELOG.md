@@ -11,17 +11,17 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Breaking Change
 
-- `svgo` version `2.0.0` is required. ([#261](https://github.com/Shopify/web-configs/pull/261))
-- Update for `svgo` version `2.0.0` ([#261](https://github.com/Shopify/web-configs/pull/261))
+- `svgo` version `2.0.0` is required. [[#261](https://github.com/Shopify/web-configs/pull/261)]
+- Update for `svgo` version `2.0.0`. [[#261](https://github.com/Shopify/web-configs/pull/261)]
 
 ## 2.0.1 - 2020-03-28
 
-- Update internal dependencies and update tests ([#10](https://github.com/Shopify/images/pull/10))
+- Update internal dependencies and update tests. [[#10](https://github.com/Shopify/images/pull/10)]
 
 ## 2.0.0 - 2019-06-03
 
-- Removed `removeDimensions` svg optimization ([#13](https://github.com/Shopify/images/pull/13))
-- Removed icon-loader and related SVGSource as we now use SVGr for loading icons ([#14](https://github.com/Shopify/images/pull/14))
+- Removed `removeDimensions` svg optimization. [[#13](https://github.com/Shopify/images/pull/13)]
+- Removed icon-loader and related SVGSource as we now use SVGr for loading icons. [[#14](https://github.com/Shopify/images/pull/14)]
 
 ## 1.1.5 - 2018-05-04
 
