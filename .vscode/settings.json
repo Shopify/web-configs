@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.DS_Store": true,
+    ".{dev,shadowenv.d}": true
+  },
+  "javascript.validate.enable": false,
+  "typescript.tsdk": "./node_modules/typescript/lib"
+}
