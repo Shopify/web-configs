@@ -5,13 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Changed
+
+- Update env and ecmaVersion to '2021' in `esnext` preset to support modern language features. [[#296](https://github.com/Shopify/web-configs/pull/296)]
 
 ## 40.5.0 - 2021-11-18
 
 ### Changed
-
-- Update ecmaVersion to 'latest' in `esnext.js` in eslint-plugin to ensure it's esnext. ([296](https://github.com/Shopify/web-configs/pull/296))
 
 - Loosen semver restrictions on `eslint` plugins ([297](https://github.com/Shopify/web-configs/pull/297))
 
