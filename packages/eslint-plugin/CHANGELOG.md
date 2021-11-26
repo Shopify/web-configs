@@ -9,7 +9,8 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ### Changed
 
-- Update env and ecmaVersion to '2021' in `esnext` preset to support modern language features. [[#296](https://github.com/Shopify/web-configs/pull/296)]
+- Update env and ecmaVersion to '2021' in `esnext` and`typescript` presets to support modern language features. [[#296](https://github.com/Shopify/web-configs/pull/296), [#304](https://github.com/Shopify/web-configs/pull/304)] 
+- Remove configuring `parserOptions` from the `jest` preset as this handled by the the es5/esnext/typescript presets. [[#304](https://github.com/Shopify/web-configs/pull/304)] 
 
 ## 40.5.0 - 2021-11-18
 

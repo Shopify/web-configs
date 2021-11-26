@@ -5,11 +5,6 @@ module.exports = {
     'jest/globals': true,
   },
 
-  parserOptions: {
-    ecmaVersion: 2015,
-    sourceType: 'module',
-  },
-
   plugins: ['jest', 'jest-formatting', '@shopify'],
 
   rules: merge(require('./rules/jest'), require('./rules/jest-formatting'), {
