@@ -31,7 +31,7 @@ ruleTester.run('class-property-semi', rule, {
       errors: [
         {
           message: 'Missing semicolon.',
-          type: 'ClassProperty',
+          type: 'PropertyDefinition',
         },
       ],
     },
@@ -41,7 +41,7 @@ ruleTester.run('class-property-semi', rule, {
       errors: [
         {
           message: 'Missing semicolon.',
-          type: 'ClassProperty',
+          type: 'PropertyDefinition',
         },
       ],
     },
@@ -51,7 +51,7 @@ ruleTester.run('class-property-semi', rule, {
       errors: [
         {
           message: 'Extra semicolon.',
-          type: 'ClassProperty',
+          type: 'PropertyDefinition',
         },
       ],
     },
@@ -60,7 +60,7 @@ ruleTester.run('class-property-semi', rule, {
       errors: [
         {
           message: 'Missing semicolon.',
-          type: 'ClassProperty',
+          type: 'PropertyDefinition',
         },
       ],
     },
@@ -70,7 +70,7 @@ ruleTester.run('class-property-semi', rule, {
       errors: [
         {
           message: 'Missing semicolon.',
-          type: 'ClassProperty',
+          type: 'PropertyDefinition',
         },
       ],
     },
@@ -80,7 +80,7 @@ ruleTester.run('class-property-semi', rule, {
       errors: [
         {
           message: 'Extra semicolon.',
-          type: 'ClassProperty',
+          type: 'PropertyDefinition',
         },
       ],
     },

@@ -48,7 +48,7 @@ module.exports = {
     }
 
     return {
-      ClassProperty: checkClassProperty,
+      'ClassProperty,PropertyDefinition': checkClassProperty,
     };
   },
 };

@@ -14,7 +14,9 @@ module.exports = {
   create(context) {
     function isStaticMember(node) {
       return (
-        (node.type === 'MethodDefinition' || node.type === 'ClassProperty') &&
+        (node.type === 'MethodDefinition' ||
+          node.type === 'ClassProperty' ||
+          node.type === 'PropertyDefinition') &&
         node.static
       );
     }

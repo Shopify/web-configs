@@ -29,7 +29,7 @@ function errorWithType(type) {
   ];
 }
 
-ruleTester.run('prefer-class-properties', rule, {
+ruleTester.run('no-fully-static-classes', rule, {
   valid: [
     {
       code: `class Foo {

@@ -9,7 +9,7 @@ const ruleTester = new RuleTester({
 
 const babelParser = require.resolve('@babel/eslint-parser');
 
-function makeError({type = 'ClassProperty', memberName, componentName}) {
+function makeError({type = 'PropertyDefinition', memberName, componentName}) {
   return {
     type,
     message: `'${memberName}' should be a private member of '${componentName}'.`,

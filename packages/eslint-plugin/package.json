@@ -30,7 +30,7 @@
     "typescript": "^3.9.2"
   },
   "peerDependencies": {
-    "eslint": "^7.0.0"
+    "eslint": "^8.3.0"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.16.3",

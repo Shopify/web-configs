@@ -11,7 +11,7 @@ const ruleTester = new RuleTester({
 
 const classPropErrors = [
   {
-    type: 'ClassProperty',
+    type: 'PropertyDefinition',
     message: 'Unexpected class property.',
   },
 ];

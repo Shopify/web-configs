@@ -82,7 +82,11 @@ module.exports = {
 
     function getClassInstanceProperties(classNode) {
       return classNode.body.body.filter((propertyNode) => {
-        return propertyNode.type === 'ClassProperty' && !propertyNode.static;
+        return (
+          (propertyNode.type === 'ClassProperty' ||
+            propertyNode.type === 'PropertyDefinition') &&
+          !propertyNode.static
+        );
       });
     }
 
