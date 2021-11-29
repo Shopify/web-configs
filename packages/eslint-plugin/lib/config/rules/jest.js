@@ -17,12 +17,8 @@ module.exports = {
   'jest/no-interpolation-in-snapshots': 'error',
   // For better failure messages, use `toHaveLength()` to on object lengths.
   'jest/prefer-to-have-length': 'error',
-  // Suggest using toMatchInlineSnapshot()
-  'jest/prefer-inline-snapshots': 'off',
-  // For better failure messages, use `toBeNull()` to assert on null values.
-  'jest/prefer-to-be-null': 'error',
-  // For better failure messages, use `toBeUndefined()` to assert on undefined values.
-  'jest/prefer-to-be-undefined': 'error',
+  // For better failure messages, use toBe()` for native value and `toBeNull()`/`toBeUndefined()` to assert on null/undefined values.
+  'jest/prefer-to-be': 'error',
   // Ensure `expect()` is called with a single argument and there is an actual expectation made.
   'jest/valid-expect': 'error',
   // Suggest using expect.assertions() OR expect.hasAssertions()
@@ -30,7 +26,7 @@ module.exports = {
   // Enforce having return statement when testing with promises
   'jest/valid-expect-in-promise': 'error',
   // Enforce valid describe() callback
-  'jest/valid-describe': 'error',
+  'jest/valid-describe-callback': 'error',
   // Have control over test and it usages
   'jest/consistent-test-it': 'error',
   // Use .only and .skip over f and x
@@ -38,7 +34,7 @@ module.exports = {
   // Disallow explicitly returning from tests
   'jest/no-test-return-statement': 'error',
   // Enforce lowercase test names
-  'jest/lowercase-name': ['error', {ignore: ['describe']}],
+  'jest/prefer-lowercase-title': ['error', {ignore: ['describe']}],
   // Disallow importing Jest
   'jest/no-jest-import': 'error',
   // Disallow alias methods
@@ -47,8 +43,15 @@ module.exports = {
   'jest/no-hooks': 'off',
   // Using a callback in asynchronous tests
   'jest/no-done-callback': 'error',
-  // Disallow using toBeTruthy() & toBeFalsy()
-  'jest/no-truthy-falsy': 'error',
+  // Disallow using toBeTruthy(), toBeFalsy(), expect.resolves
+  'jest/no-restricted-matchers': [
+    'error',
+    {
+      toBeTruthy: 'Avoid `toBeTruthy`',
+      toBeFalsy: 'Avoid `toBeFalsy`',
+      resolves: 'Use `expect(await promise)` instead.',
+    },
+  ],
   // Suggest using toBeCalledWith() OR toHaveBeenCalledWith()
   'jest/prefer-called-with': 'off',
   // Suggest using jest.spyOn()
@@ -75,8 +78,6 @@ module.exports = {
   'jest/no-export': 'error',
   // Prevents `expect` statements outside of a `test` or `it` block
   'jest/no-standalone-expect': 'error',
-  // Avoid using `expect().resolves`
-  'jest/no-expect-resolves': 'error',
   // Enforce titles don't duplicate the test function name or start with a space
   'jest/valid-title': 'error',
   // Suggest to have all hooks at top-level before tests

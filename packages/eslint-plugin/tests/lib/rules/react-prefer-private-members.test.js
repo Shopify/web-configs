@@ -114,7 +114,11 @@ ruleTester.run('react-prefer-private-members', rule, {
         render() {}
       }`,
       errors: [
-        makeError({memberName: 'inValid', componentName: 'Button'}),
+        makeError({
+          type: 'PropertyDefinition',
+          memberName: 'inValid',
+          componentName: 'Button',
+        }),
         makeError({
           type: 'MethodDefinition',
           memberName: 'alsoInvalid',
