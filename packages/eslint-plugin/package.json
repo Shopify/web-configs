@@ -33,14 +33,14 @@
     "eslint": "^7.0.0"
   },
   "dependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/eslint-plugin": "^7.14.5",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
-    "babel-eslint": "^10.1.0",
     "change-case": "^4.1.2",
     "common-tags": "^1.8.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-module-utils": "^2.7.1",
-    "eslint-plugin-babel": "^5.3.1",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-graphql": "^4.0.0",
     "eslint-plugin-import": "^2.25.3",

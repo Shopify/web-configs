@@ -198,7 +198,7 @@ function checkContent(
 ) {
   function isInvalidContent(contentNode) {
     return (
-      (contentNode.type === 'Literal' &&
+      ((contentNode.type === 'Literal' || contentNode.type === 'JSXText') &&
         ((!allowStrings &&
           typeof contentNode.value === 'string' &&
           !isEmptyString(contentNode.value)) ||

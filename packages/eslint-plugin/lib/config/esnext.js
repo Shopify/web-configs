@@ -2,7 +2,7 @@ const merge = require('merge');
 
 module.exports = {
   extends: 'plugin:@shopify/core',
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
 
   env: {
     es2021: true,
@@ -13,7 +13,7 @@ module.exports = {
     sourceType: 'module',
   },
 
-  plugins: ['babel', 'promise', 'sort-class-members', 'import'],
+  plugins: ['@babel/eslint-plugin', 'promise', 'sort-class-members', 'import'],
 
   settings: {
     'import/ignore': ['node_modules', '\\.s?css'],

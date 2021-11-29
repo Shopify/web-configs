@@ -7,7 +7,7 @@ const ruleTester = new RuleTester({
   settings: {react: {version: 'detect'}},
 });
 
-const babelParser = require.resolve('babel-eslint');
+const babelParser = require.resolve('@babel/eslint-parser');
 
 function makeError({type = 'ClassProperty', memberName, componentName}) {
   return {

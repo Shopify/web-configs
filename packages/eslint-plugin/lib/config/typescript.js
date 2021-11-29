@@ -16,7 +16,7 @@ module.exports = {
         // TypeScript provides a better mechanism (explicit `this` type)
         // for ensuring proper `this` usage in functions not assigned to
         // object properties.
-        'babel/no-invalid-this': 'off',
+        '@babel/no-invalid-this': 'off',
 
         // Handled by TypeScript itself
         'no-undef': 'off',
@@ -35,7 +35,6 @@ module.exports = {
         'no-empty-function': 'off',
         'func-call-spacing': 'off',
         '@shopify/no-fully-static-classes': 'off',
-        'babel/camelcase': 'off',
         'sort-class-members/sort-class-members': 'off',
         camelcase: 'off',
         'no-array-constructor': 'off',

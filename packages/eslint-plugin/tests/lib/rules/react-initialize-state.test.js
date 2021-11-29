@@ -3,7 +3,14 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/react-initialize-state');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@babel/eslint-parser'),
+  parserOptions: {
+    babelOptions: {
+      presets: [
+        ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
+      ],
+    },
+  },
   settings: {react: {version: 'detect'}},
 });
 
@@ -71,13 +78,6 @@ ruleTester.run('react-initialize-state', rule, {
 
         constructor() {
           this.state = {};
-        }
-      }`,
-    },
-    {
-      code: `class Button extends React.Component<Props, State> {
-        constructor() {
-          (this: any).state = {};
         }
       }`,
     },

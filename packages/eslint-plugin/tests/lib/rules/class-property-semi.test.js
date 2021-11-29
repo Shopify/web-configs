@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/class-property-semi');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@babel/eslint-parser'),
 });
 
 const classPropNoSemi = 'class Foo { bar = 1 }';

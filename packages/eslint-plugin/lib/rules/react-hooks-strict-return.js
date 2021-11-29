@@ -125,9 +125,7 @@ function isSpreadElement(node) {
   if (!node) {
     return false;
   }
-  return (
-    node.type === 'SpreadElement' || node.type === 'ExperimentalSpreadProperty'
-  );
+  return node.type === 'SpreadElement';
 }
 
 function getVariableByName(initialScope, name) {

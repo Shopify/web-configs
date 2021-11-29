@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/react-no-multiple-render-methods');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@babel/eslint-parser'),
   settings: {react: {version: 'detect'}},
 });
 
