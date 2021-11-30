@@ -1,7 +1,7 @@
 const merge = require('merge');
 
 module.exports = {
-  plugins: ['stylelint-scss', 'stylelint-order', './rules/content-no-strings'],
+  plugins: ['stylelint-scss', 'stylelint-order', './rules'],
   // Emit errors for `stylelint-disable` comments that don't actually match any lints that need to be disabled.
   reportNeedlessDisables: true,
   // Emit errors for `stylelint-disable` comments that don't match rules that are specified in the configuration object.
