@@ -31,3 +31,6 @@ module.exports = stylelint.createPlugin(ruleName, (primaryOption) => {
     });
   };
 });
+
+module.exports.ruleName = ruleName;
+module.exports.messages = messages;

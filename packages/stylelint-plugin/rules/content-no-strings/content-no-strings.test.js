@@ -1,21 +1,29 @@
-import {testRule} from '../../tests/utilities';
+const getTestRule = require('jest-preset-stylelint/getTestRule');
 
-const contentNoStrings = require('.');
+const {ruleName} = require('./content-no-strings');
 
-testRule(contentNoStrings, {
-  ruleName: contentNoStrings.ruleName,
+const testRule = getTestRule({plugins: [__dirname]});
+
+testRule({
+  ruleName,
   config: true,
   skipBasicChecks: true,
 
   reject: [
     {
       code: ".foo::before {content: 'nope, no i18n here' }",
+      message:
+        'You must not hard-code unlocalized strings into the `content` property (@shopify/content-no-strings)',
     },
     {
       code: '.foo::before {content: "none here either" }',
+      message:
+        'You must not hard-code unlocalized strings into the `content` property (@shopify/content-no-strings)',
     },
     {
       code: ".foo::before {content: counter(ordered-counter, decimal) '.' }",
+      message:
+        'You must not hard-code unlocalized strings into the `content` property (@shopify/content-no-strings)',
     },
   ],
 

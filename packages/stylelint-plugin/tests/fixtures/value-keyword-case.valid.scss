@@ -1,0 +1,12 @@
+$font-stack: Monaco;
+$foo: bar;
+$foo-font: Monaco;
+
+$polaris-font-stack: Monaco;
+
+.foo {
+  --font-stack: Monaco;
+  --foo-font: Monaco;
+  font: Monaco;
+  font-family: Monaco;
+}
