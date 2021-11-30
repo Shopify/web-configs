@@ -7,6 +7,27 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## Unreleased
 
+### Breaking Change
+
+- Updated peer dependency on `eslint` to require at least v8.3.0. [[#305](https://github.com/Shopify/web-configs/pull/305)]
+- Replaced usage of the long-deprecated `babel-eslint` and `eslint-plugin-babel` with `@babel/eslint-parser` and `@babel/eslint-plugin`. [[#305](https://github.com/Shopify/web-configs/pull/305)]
+- Updated the minimum version of several eslint plugins. [[#305](https://github.com/Shopify/web-configs/pull/305)]
+
+| Package                            | Old version | New version |
+| ---------------------------------- | ----------- | ----------- |
+| `typescript-eslint/eslint-plugin`  | `^4.28.2`   | `^5.4.0`    |
+| `typescript-eslint/parser`         | `^4.28.2`   | `^5.4.0`    |
+| `eslint-plugin-import`             | `^2.23.4`   | `^2.25.3`   |
+| `eslint-plugin-jest`               | `^24.3.6`   | `^25.3.0`   |
+| `eslint-plugin-jest-formatting`    | `^3.0.0`    | `^3.1.0`    |
+| `eslint-plugin-jsx-a11y`           | `^6.4.1`    | `^6.5.0`    |
+| `eslint-plugin-prettier`           | `^3.4.0`    | `^4.0.0`    |
+| `eslint-plugin-promise`            | `^5.1.0`    | `^5.1.1`    |
+| `eslint-plugin-react`              | `^7.24.0`   | `^7.27.1`   |
+| `eslint-plugin-react-hooks`        | `^4.2.0`    | `^4.3.0`    |
+| `eslint-plugin-sort-class-members` | `^1.11.0`   | `^1.14.0`   |
+
+
 ### Changed
 
 - Update env and ecmaVersion to '2021' in `esnext` and`typescript` presets to support modern language features. [[#296](https://github.com/Shopify/web-configs/pull/296), [#304](https://github.com/Shopify/web-configs/pull/304)] 
