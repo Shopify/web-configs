@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/prefer-class-properties');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@babel/eslint-parser'),
   parserOptions: {
     ecmaVersion: 6,
   },
@@ -11,7 +11,7 @@ const ruleTester = new RuleTester({
 
 const classPropErrors = [
   {
-    type: 'ClassProperty',
+    type: 'PropertyDefinition',
     message: 'Unexpected class property.',
   },
 ];

@@ -4,8 +4,6 @@ const rule = require('../../../lib/rules/restrict-full-import');
 
 const ruleTester = new RuleTester();
 
-require('babel-eslint');
-
 const parserOptions = {
   ecmaVersion: 2018,
   sourceType: 'module',

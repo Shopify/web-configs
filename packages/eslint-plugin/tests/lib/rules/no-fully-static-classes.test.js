@@ -2,7 +2,9 @@ const {RuleTester} = require('eslint');
 
 const rule = require('../../../lib/rules/no-fully-static-classes');
 
-const ruleTester = new RuleTester({parser: require.resolve('babel-eslint')});
+const ruleTester = new RuleTester({
+  parser: require.resolve('@babel/eslint-parser'),
+});
 
 function method(name = 'foo') {
   return `${name}() {}`;
@@ -27,7 +29,7 @@ function errorWithType(type) {
   ];
 }
 
-ruleTester.run('prefer-class-properties', rule, {
+ruleTester.run('no-fully-static-classes', rule, {
   valid: [
     {
       code: `class Foo {

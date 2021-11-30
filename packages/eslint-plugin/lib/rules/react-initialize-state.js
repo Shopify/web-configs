@@ -28,7 +28,7 @@ module.exports = {
           declaredState: false,
         };
       },
-      ClassProperty(node) {
+      'ClassProperty,PropertyDefinition': function (node) {
         if (classInfo == null || getName(node.key) !== 'state') {
           return;
         }

@@ -30,7 +30,7 @@ module.exports = {
       ClassDeclaration(node) {
         inTypeScriptReactComponent = looksLikeTypeScriptComponent(node);
       },
-      ClassProperty(node) {
+      'ClassProperty,PropertyDefinition': function (node) {
         if (
           !inTypeScriptReactComponent ||
           getName(node.key) !== 'state' ||

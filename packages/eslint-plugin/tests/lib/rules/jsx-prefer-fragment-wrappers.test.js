@@ -2,7 +2,16 @@ const {RuleTester} = require('eslint');
 
 const rule = require('../../../lib/rules/jsx-prefer-fragment-wrappers');
 
-const ruleTester = new RuleTester({parser: require.resolve('babel-eslint')});
+const ruleTester = new RuleTester({
+  parser: require.resolve('@babel/eslint-parser'),
+  parserOptions: {
+    babelOptions: {
+      presets: [
+        ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
+      ],
+    },
+  },
+});
 
 function errorWithTagName(tagName) {
   return [

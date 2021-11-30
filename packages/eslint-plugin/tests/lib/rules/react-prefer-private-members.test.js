@@ -7,9 +7,9 @@ const ruleTester = new RuleTester({
   settings: {react: {version: 'detect'}},
 });
 
-const babelParser = require.resolve('babel-eslint');
+const babelParser = require.resolve('@babel/eslint-parser');
 
-function makeError({type = 'ClassProperty', memberName, componentName}) {
+function makeError({type = 'PropertyDefinition', memberName, componentName}) {
   return {
     type,
     message: `'${memberName}' should be a private member of '${componentName}'.`,
@@ -114,7 +114,11 @@ ruleTester.run('react-prefer-private-members', rule, {
         render() {}
       }`,
       errors: [
-        makeError({memberName: 'inValid', componentName: 'Button'}),
+        makeError({
+          type: 'PropertyDefinition',
+          memberName: 'inValid',
+          componentName: 'Button',
+        }),
         makeError({
           type: 'MethodDefinition',
           memberName: 'alsoInvalid',

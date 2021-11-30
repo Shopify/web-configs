@@ -41,7 +41,7 @@ module.exports = {
           isES6Component--;
         }
       },
-      ClassProperty(node) {
+      'ClassProperty,PropertyDefinition': function (node) {
         if (isES6Component === 0 || isValid(node)) {
           return;
         }

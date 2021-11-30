@@ -34,9 +34,7 @@ module.exports = {
         (left.type === 'ObjectPattern' &&
           left.properties.some((prop) => {
             return (
-              prop.type === 'SpreadProperty' ||
-              prop.type === 'ExperimentalRestProperty' ||
-              prop.type === 'RestElement'
+              prop.type === 'SpreadProperty' || prop.type === 'RestElement'
             );
           })) ||
         (left.type === 'ArrayPattern' &&
