@@ -34,10 +34,10 @@ value-keyword-case.invalid.scss
     // whitespace when saving the file
     const expectedResult = `
 scss.invalid.scss
-  3:5   ✖  Expected ".n1 .n2 .n3" to have no more than 2 classes                                                  selector-max-class                  ${''}
-  3:5   ✖  Expected ".n1 .n2 .n3" to have no more than 1 combinator                                               selector-max-combinators            ${''}
- 11:20  ✖  Expected "$value * 1px" instead of "#{$value}px". Consider writing "value" in terms of px originally.  scss/dimension-no-non-numeric-values
- 15:3   ✖  Unexpected union class name with the parent selector (&)                                               scss/selector-no-union-class-name
+  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 2 classes                                                  selector-max-class                  ${''}
+  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 1 combinator                                               selector-max-combinators            ${''}
+ 16:20  ✖  Expected "$value * 1px" instead of "#{$value}px". Consider writing "value" in terms of px originally.  scss/dimension-no-non-numeric-values
+ 22:3   ✖  Unexpected union class name with the parent selector (&)                                               scss/selector-no-union-class-name
 `.trim();
 
     expect(result.output).toStrictEqual(expectedResult);

@@ -1,3 +1,6 @@
+// CSS nesting trigers a parse error if we're not using a customSyntax
+// selector-max-class/selector-max-combinators are configured to disallow 3 or
+// more levels of nesting
 .n1 {
   .n2 {
     .n3 {
@@ -6,11 +9,15 @@
   }
 }
 
+// scss/dimension-no-non-numeric-values is configured to disallow creating
+// dimention values using string concatenation
 .foo {
   $size: 10;
   padding: #{$size}px;
 }
 
+// scss/selector-no-union-class-name is configured to disallow using & for
+// constructing class names
 .bar {
   &-baz {
     padding: 8px;
