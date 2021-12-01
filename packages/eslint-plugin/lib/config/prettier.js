@@ -1,11 +1,10 @@
-const merge = require('merge');
-
 module.exports = {
   extends: ['prettier'],
 
   plugins: ['prettier'],
 
-  rules: merge(require('./rules/prettier'), {
+  rules: {
+    ...require('./rules/prettier'),
     // rules to disable to prefer prettier
     '@babel/semi': 'off',
     '@babel/object-curly-spacing': 'off',
@@ -26,7 +25,7 @@ module.exports = {
     // Special rule for 'no-unexpected-multiline'
     // https://github.com/prettier/eslint-config-prettier/blob/5399175c37466747aae9d407021dffec2c169c8b/README.md#no-unexpected-multiline
     'no-unexpected-multiline': 'error',
-  }),
+  },
 
   overrides: [
     {

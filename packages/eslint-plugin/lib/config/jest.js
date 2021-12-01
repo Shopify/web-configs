@@ -1,5 +1,3 @@
-const merge = require('merge');
-
 module.exports = {
   env: {
     'jest/globals': true,
@@ -7,7 +5,9 @@ module.exports = {
 
   plugins: ['jest', 'jest-formatting', '@shopify'],
 
-  rules: merge(require('./rules/jest'), require('./rules/jest-formatting'), {
+  rules: {
+    ...require('./rules/jest'),
+    ...require('./rules/jest-formatting'),
     'jest/valid-title': [
       'error',
       {
@@ -23,5 +23,5 @@ module.exports = {
     ],
     // Disallows jest snapshots.
     '@shopify/jest/no-snapshots': 'error',
-  }),
+  },
 };
