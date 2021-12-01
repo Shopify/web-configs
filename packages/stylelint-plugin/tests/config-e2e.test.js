@@ -16,10 +16,28 @@ describe('stylelint-plugin E2E Tests', () => {
 
     const expectedResult = `
 value-keyword-case.invalid.scss
- 1:7   ✖  Expected "Value" to be "value"     value-keyword-case
- 2:7   ✖  Expected "VALUE" to be "value"     value-keyword-case
- 5:10  ✖  Expected "Monaco" to be "monaco"   value-keyword-case
- 6:18  ✖  Expected "Monaco" to be "monaco"   value-keyword-case
+ 1:7   ✖  Expected "Value" to be "value"    value-keyword-case
+ 2:7   ✖  Expected "VALUE" to be "value"    value-keyword-case
+ 5:10  ✖  Expected "Monaco" to be "monaco"  value-keyword-case
+ 6:18  ✖  Expected "Monaco" to be "monaco"  value-keyword-case
+`.trim();
+
+    expect(result.output).toStrictEqual(expectedResult);
+    expect(result.status).toBe(2);
+  });
+
+  it('configures scss files', () => {
+    const result = runStylelint('scss.*.scss');
+
+    // The trailing `${''}` is very silly, but stylelint spits out a bunch of
+    // trailing whitespace and editors really want to remove that trailing
+    // whitespace when saving the file
+    const expectedResult = `
+scss.invalid.scss
+  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 2 classes                                                  selector-max-class                  ${''}
+  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 1 combinator                                               selector-max-combinators            ${''}
+ 16:20  ✖  Expected "$value * 1px" instead of "#{$value}px". Consider writing "value" in terms of px originally.  scss/dimension-no-non-numeric-values
+ 22:3   ✖  Unexpected union class name with the parent selector (&)                                               scss/selector-no-union-class-name
 `.trim();
 
     expect(result.output).toStrictEqual(expectedResult);

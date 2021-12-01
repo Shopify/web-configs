@@ -5,7 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Breaking Change
+
+- Updated peer dependency on `stylelint` to require at least v14.1.0. [[#307](https://github.com/Shopify/web-configs/pull/307)]
+- Added override config block to parse `scss` files with `postcss-scss`. [[#307](https://github.com/Shopify/web-configs/pull/307)]
+- Updated the minimum version of several stylelint plugins. [[#307](https://github.com/Shopify/web-configs/pull/307)]
+
+| Package                     | Old version | New version |
+| --------------------------- | ----------- | ----------- |
+| `stylelint-config-prettier` | `^8.0.1"`   | `^9.0.3`    |
+| `stylelint-order`           | `^4.0.0`    | `^5.0.0`    |
+| `stylelint-prettier`        | `^1.2.0`    | `^2.0.0`    |
+| `stylelint-scss`            | `^3.19.0`   | `^4.0.0`    |
 
 ## 10.2.0 - 2021-09-13
 
