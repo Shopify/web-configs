@@ -1,0 +1,18 @@
+.n1 {
+  .n2 {
+    .n3 {
+      padding: 1px;
+    }
+  }
+}
+
+.foo {
+  $size: 10;
+  padding: #{$size}px;
+}
+
+.bar {
+  &-baz {
+    padding: 8px;
+  }
+}

@@ -21,7 +21,6 @@ module.exports = {
     require('./config/order'),
     require('./config/property'),
     require('./config/rule'),
-    require('./config/scss'),
     require('./config/selector'),
     require('./config/string'),
     require('./config/time'),
@@ -32,4 +31,13 @@ module.exports = {
       '@shopify/content-no-strings': null,
     },
   ),
+  overrides: [
+    {
+      files: ['**/*.scss'],
+      customSyntax: require('postcss-scss'),
+      rules: {
+        ...require('./config/scss'),
+      },
+    },
+  ],
 };

@@ -1,0 +1,16 @@
+.n1 {
+  .n2 {
+    padding: 1px;
+  }
+}
+
+.foo {
+  $size: 10px;
+  padding: $size;
+}
+
+.bar {
+  .bar-baz {
+    padding: 8px;
+  }
+}
