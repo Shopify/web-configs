@@ -1,5 +1,3 @@
-const merge = require('merge');
-
 module.exports = {
   extends: ['plugin:@shopify/esnext', 'plugin:import/typescript'],
   plugins: ['@typescript-eslint'],
@@ -12,7 +10,8 @@ module.exports = {
         sourceType: 'module',
       },
       files: ['*.ts', '*.tsx'],
-      rules: merge(require('./rules/typescript'), {
+      rules: {
+        ...require('./rules/typescript'),
         // TypeScript provides a better mechanism (explicit `this` type)
         // for ensuring proper `this` usage in functions not assigned to
         // object properties.
@@ -68,7 +67,7 @@ module.exports = {
         '@shopify/typescript/prefer-singular-enums': 'error',
         // Prefer buildClientSchema for schema building.
         '@shopify/typescript/prefer-build-client-schema': 'error',
-      }),
+      },
     },
   ],
 };

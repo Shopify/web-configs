@@ -20,6 +20,10 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 | `stylelint-prettier`        | `^1.2.0`    | `^2.0.0`    |
 | `stylelint-scss`            | `^3.19.0`   | `^4.0.0`    |
 
+### Changed
+
+- Removed dependency on `merge` by replacing usage with object spread. [[#308](https://github.com/Shopify/web-configs/pull/308)]
+
 ## 10.2.0 - 2021-09-13
 
 ### Changed
