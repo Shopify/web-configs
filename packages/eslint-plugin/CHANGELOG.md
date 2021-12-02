@@ -5,7 +5,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-<!-- ## Unreleased -->
+## Unreleased
+
+### Changed
+
+- Set [`requireConfigFile: false`](https://github.com/babel/babel/tree/main/eslint/babel-eslint-parser#additional-parser-configuration) so that js files can be parsed using `@babel/eslint-parser` in projects that lack a babel config file. [[#310](https://github.com/Shopify/web-configs/pull/310)]
 
 ## 41.0.0 - 2021-12-01
 
