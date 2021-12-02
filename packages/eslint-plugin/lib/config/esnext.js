@@ -9,6 +9,7 @@ module.exports = {
   parserOptions: {
     ecmaVersion: '2021',
     sourceType: 'module',
+    requireConfigFile: false,
   },
 
   plugins: ['@babel/eslint-plugin', 'promise', 'sort-class-members', 'import'],
