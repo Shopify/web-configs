@@ -121,7 +121,7 @@ A node project that will use Babel for transpilation would need the following ES
 
 ### Supported Typescript version
 
-The version range of TypeScript currently supported by this plugin is `>=3.2.1 <3.8.0`. This is constrained by the [@typescipt-eslint parser support](https://github.com/typescript-eslint/typescript-eslint#supported-typescript-version).
+The supported version of TypeScript is constrained by the [@typescipt-eslint parser support](https://github.com/typescript-eslint/typescript-eslint#supported-typescript-version) that is installed.
 
 ## Plugin-Provided Rules
 
@@ -147,7 +147,12 @@ This plugin provides the following custom rules, which are included as appropria
 - [react-initialize-state](docs/rules/react-initialize-state.md): Require that React component state be initialized when it has a non-empty type.
 - [react-no-multiple-render-methods](docs/rules/react-no-multiple-render-methods.md): Disallow multiple render methods in React component classes.
 - [react-prefer-private-members](docs/rules/react-prefer-private-members.md): Prefer all non-React-specific members be marked private in React class components.
-- [react-type-state](docs/rules/react-type-state.md): Require that React component state be typed in TypeScript.
+- [react-type-state](docs/rules/react-type-state.md): Require that React component state be typed in 
+
+
+
+
+ript.
 - [restrict-full-import](docs/rules/restrict-full-import.md): Prevent importing the entirety of a package.
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.
 - [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.
