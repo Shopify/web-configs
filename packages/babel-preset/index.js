@@ -8,24 +8,9 @@ module.exports = function shopifyCommonPreset(
     typescript = false,
     typescriptOptions = {},
     transformRuntime = false,
-    transformRuntimeOptions = {
-      corejs: false,
-      helpers: true,
-      // By default, babel assumes babel/runtime version 7.0.0-beta.0,
-      // explicitly resolving to match the provided helper functions.
-      // https://github.com/babel/babel/issues/10261
-      version: require('@babel/runtime/package.json').version,
-      regenerator: true,
-      // This allows users to run transform-runtime broadly across a whole project.
-      // By default, transform-runtime imports from @babel/runtime/foo directly, but
-      // that only works if @babel/runtime is in the node_modules of the file that is being compiled.
-      absoluteRuntime: false,
-    },
+    transformRuntimeOptions = {},
     react = false,
-    reactOptions = {
-      // Will use the native built-in instead of trying to polyfill behavior for any plugins that require one.
-      useBuiltIns: true,
-    },
+    reactOptions = {},
     transformReactConstantElements = false,
     isWebpack5 = false,
   } = {},
@@ -56,6 +41,8 @@ module.exports = function shopifyCommonPreset(
       {
         // This toggles behavior specific to development, such as adding __source and __self.
         development: isDevelopment,
+        // Will use the native built-in instead of trying to polyfill behavior for any plugins that require one.
+        useBuiltIns: true,
         ...reactOptions,
       },
     ],
@@ -110,8 +97,18 @@ module.exports = function shopifyCommonPreset(
     transformRuntime && [
       '@babel/plugin-transform-runtime',
       {
-        ...transformRuntimeOptions,
+        corejs: false,
+        helpers: true,
+        // By default, babel assumes babel/runtime version 7.0.0-beta.0,
+        // explicitly resolving to match the provided helper functions.
+        // https://github.com/babel/babel/issues/10261
         version: require('@babel/runtime/package.json').version,
+        regenerator: true,
+        // This allows users to run transform-runtime broadly across a whole project.
+        // By default, transform-runtime imports from @babel/runtime/foo directly, but
+        // that only works if @babel/runtime is in the node_modules of the file that is being compiled.
+        absoluteRuntime: false,
+        ...transformRuntimeOptions,
       },
     ],
     // Hoist constant JSX elements to the top of their scope, which can
