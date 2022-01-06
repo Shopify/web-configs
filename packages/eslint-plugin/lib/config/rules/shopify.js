@@ -11,6 +11,8 @@ module.exports = {
   '@shopify/jest/no-snapshots': 'off',
   // Disallow complex expressions embedded in in JSX.
   '@shopify/jsx-no-complex-expressions': 'off',
+  // Disallow hardcoded /admin in JSX.
+  '@shopify/jsx-no-hardcoded-admin-prefix': 'off',
   // Disallow hardcoded content in JSX.
   '@shopify/jsx-no-hardcoded-content': 'off',
   // Disallow useless wrapping elements in favour of fragment shorthand in JSX.
