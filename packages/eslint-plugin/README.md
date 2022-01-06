@@ -132,6 +132,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [images-no-direct-imports](docs/rules/images-no-direct-imports.md): Prevent images from being directly imported.
 - [jest/no-snapshots](docs/rules/jest/no-snapshots.md): Disallows jest snapshots.
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
+- [jsx-no-hardcoded-admin-prefix](docs/rules/jsx-no-hardcoded-admin-prefix.md): Disallows hardcoded /admin prefix in URL paths in JSX Route components.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.
 - [jsx-prefer-fragment-wrappers](docs/rules/jsx-prefer-fragment-wrappers.md): Disallow useless wrapping elements in favour of fragment shorthand in JSX.
 - [no-namespace-imports](docs/rules/no-namespace-imports.md): Prevent namespace import declarations.

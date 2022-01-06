@@ -1,0 +1,74 @@
+const {RuleTester} = require('eslint');
+
+const rule = require('../../../lib/rules/jsx-no-hardcoded-admin-prefix');
+
+const ruleTester = new RuleTester({
+  parser: require.resolve('@babel/eslint-parser'),
+  parserOptions: {
+    babelOptions: {
+      presets: [
+        ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
+      ],
+    },
+  },
+});
+
+function errorMessage() {
+  const message =
+    'Do not use hardcoded path prefix /admin in Route components.';
+
+  return [{type: 'JSXElement', message}];
+}
+
+ruleTester.run('jsx-no-hardcoded-admin-prefix', rule, {
+  valid: [
+    {code: '<Route path="/literal/path/without/prefix" />'},
+    {code: '<Route path={`/template/path/without/prefix`} />'},
+    {code: '<div><Route path="/literal/path/without/prefix" /></div>'},
+    {code: '<div><Route path={`/template/path/without/prefix`} /></div>'},
+    {code: '<Route path="/literal/path/without/admin_prefix" />'},
+    {code: '<Route path={`/template/path/without/admin_prefix`} />'},
+  ],
+  invalid: [
+    {
+      code: '<Route path="/admin/literal/path/with/prefix" />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path={`/admin/template/path/with/prefix`} />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<div><Route path="/admin/literal/path/with/prefix" /></div>',
+      errors: errorMessage(),
+    },
+    {
+      code: '<div><Route path={`/admin/template/path/with/prefix`} /></div>',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path="/literal/path/with/admin/prefix" />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path={`/template/path/with/admin/prefix`} />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path="/literal/path/with/prefix/admin" />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path={`/template/path/with/prefix/admin`} />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path="/admin" />',
+      errors: errorMessage(),
+    },
+    {
+      code: '<Route path={`/admin`} />',
+      errors: errorMessage(),
+    },
+  ],
+});
