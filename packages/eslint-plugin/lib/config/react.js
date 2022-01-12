@@ -40,8 +40,8 @@ module.exports = {
     {
       files: ['*.test.*'],
       rules: {
-        'shopify/jsx-no-hardcoded-admin-prefix': 'off',
-        'shopify/jsx-no-hardcoded-content': 'off',
+        '@shopify/jsx-no-hardcoded-admin-prefix': 'off',
+        '@shopify/jsx-no-hardcoded-content': 'off',
       },
     },
   ],
