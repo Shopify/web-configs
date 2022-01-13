@@ -28,13 +28,14 @@ module.exports = {
 
 function hasAdminPrefix(node) {
   function isInvalidContent(contentNode) {
-    if (
-      contentNode.type === 'Literal' ||
-      contentNode.type === 'JSXText' ||
-      typeof contentNode.value === 'string'
-    ) {
-      return contentNode.value && containsAdmin(contentNode.value);
-    } else if (contentNode.type === 'JSXExpressionContainer') {
+    // if (
+    //   contentNode.type === 'Literal' ||
+    //   contentNode.type === 'JSXText' ||
+    //   typeof contentNode.value === 'string'
+    // ) {
+    //   return contentNode.value && containsAdmin(contentNode.value);
+    // } else
+    if (contentNode.type === 'JSXExpressionContainer') {
       return isInvalidContent(contentNode.expression);
     } else if (contentNode.type === 'TemplateLiteral') {
       return contentNode.quasis.some(isInvalidContent);

@@ -26,7 +26,7 @@ module.exports = {
     '@shopify/react-require-autocomplete': 'error',
     '@shopify/react-type-state': 'error',
     '@shopify/jsx-no-complex-expressions': 'error',
-    '@shopify/jsx-no-hardcoded-admin-prefix': 'error',
+    // '@shopify/jsx-no-hardcoded-admin-prefix': 'error',
     '@shopify/jsx-no-hardcoded-content': 'error',
     '@shopify/jsx-prefer-fragment-wrappers': 'error',
     'consistent-return': 'off',
