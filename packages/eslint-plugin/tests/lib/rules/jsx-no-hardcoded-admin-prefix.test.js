@@ -47,22 +47,6 @@ ruleTester.run('jsx-no-hardcoded-admin-prefix', rule, {
       errors: errorMessage(),
     },
     {
-      code: '<Route path="/literal/path/with/admin/prefix" />',
-      errors: errorMessage(),
-    },
-    {
-      code: '<Route path={`/template/path/with/admin/prefix`} />',
-      errors: errorMessage(),
-    },
-    {
-      code: '<Route path="/literal/path/with/prefix/admin" />',
-      errors: errorMessage(),
-    },
-    {
-      code: '<Route path={`/template/path/with/prefix/admin`} />',
-      errors: errorMessage(),
-    },
-    {
       code: '<Route path="/admin" />',
       errors: errorMessage(),
     },

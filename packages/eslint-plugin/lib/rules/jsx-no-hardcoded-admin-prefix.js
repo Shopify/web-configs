@@ -44,7 +44,7 @@ function hasAdminPrefix(node) {
   }
 
   function containsAdmin(value) {
-    return value.endsWith('/admin') || value.indexOf('/admin/') > -1;
+    return value.startsWith('/admin/') || value === '/admin';
   }
 
   function isInvalidProp(propNode) {
