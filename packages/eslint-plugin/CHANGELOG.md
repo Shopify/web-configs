@@ -7,6 +7,12 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
+## 42.0.0 - 2022-01-17
+
+### Breaking Change
+
+- Restrict /admin in Route path literals and templates [[#315](https://github.com/Shopify/web-configs/pull/315)]
+
 ## 41.0.1 - 2021-12-02
 
 ### Changed
