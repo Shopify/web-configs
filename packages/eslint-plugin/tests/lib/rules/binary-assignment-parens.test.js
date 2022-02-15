@@ -41,8 +41,7 @@ const validLogicalExamples = [
   {code: "var foo; foo = ( 'bar' !== 'bar' ) || ( 'baz' === 'baz' );"},
   {code: "var foo; foo = ('bar' !== 'bar') || ('baz' === 'baz') && qux;"},
   {
-    code:
-      "var foo; foo = ('bar' !== 'bar') || ('baz' === 'baz') && (qux <= 2);",
+    code: "var foo; foo = ('bar' !== 'bar') || ('baz' === 'baz') && (qux <= 2);",
   },
   {code: "var foo; foo = ('bar' !== 'bar') || qux;"},
 
@@ -211,8 +210,7 @@ const invalidLogicalExamples = [
     errors: errors(2, false),
   },
   {
-    code:
-      "var foo; foo = ('bar' !== 'bar') || ('baz' === 'baz') && (qux <= 2);",
+    code: "var foo; foo = ('bar' !== 'bar') || ('baz' === 'baz') && (qux <= 2);",
     options: ['never'],
     errors: errors(3, false),
   },

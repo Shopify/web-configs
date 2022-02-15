@@ -41,8 +41,7 @@ ruleTester.run('react-require-autocomplete', rule, {
       code: '<p />',
     },
     {
-      code:
-        'const autoComplete = "email"; const myInput = <input type="email" autoComplete={autoComplete} />;',
+      code: 'const autoComplete = "email"; const myInput = <input type="email" autoComplete={autoComplete} />;',
     },
     {
       code: `
@@ -72,8 +71,7 @@ ruleTester.run('react-require-autocomplete', rule, {
       errors: errorMessage('input', 'email'),
     },
     {
-      code:
-        'const props = {label: "Name"}; const myInput = <input {...props} />;',
+      code: 'const props = {label: "Name"}; const myInput = <input {...props} />;',
       errors: errorMessage('input', 'text'),
     },
   ],

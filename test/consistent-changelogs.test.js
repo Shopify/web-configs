@@ -54,7 +54,8 @@ readChangelogs().forEach(({packageChangelogPath, packageChangelog}) => {
       // - A commented out Unreleased header, that is immediatly preceded by a level 2 heading (A version info)
 
       const unrelasedHeaderWithContent = /^## Unreleased\n\n### /gm;
-      const commentedUnreleasedHeaderWithNoContent = /^<!-- ## Unreleased -->\n\n## /gm;
+      const commentedUnreleasedHeaderWithNoContent =
+        /^<!-- ## Unreleased -->\n\n## /gm;
 
       expect([
         unrelasedHeaderWithContent.test(packageChangelog),
