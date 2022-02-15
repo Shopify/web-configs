@@ -1,6 +1,6 @@
 {
   "name": "@shopify/babel-preset",
-  "version": "24.1.5",
+  "version": "24.1.5-babel-version-beta.0",
   "license": "MIT",
   "description": "Shopify's org-wide Babel preset",
   "main": "index.js",
