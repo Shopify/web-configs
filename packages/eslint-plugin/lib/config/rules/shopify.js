@@ -3,6 +3,8 @@ module.exports = {
   '@shopify/binary-assignment-parens': ['error', 'always'],
   // Require (or disallow) semicolons for class properties.
   '@shopify/class-property-semi': 'error',
+  // Require width and height attributes on media elements (temporarily disabled).
+  '@shopify/require-media-dimensions': 'off',
   // Prevent images from being directly imported
   '@shopify/images-no-direct-imports': 'error',
   // Disallow jest allMocks methods.
