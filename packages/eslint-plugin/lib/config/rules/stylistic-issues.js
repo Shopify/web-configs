@@ -54,7 +54,7 @@ module.exports = {
     {
       min: 2,
       properties: 'always',
-      exceptions: ['x', 'y', 'i', 'j', 't', '_', '$'],
+      exceptions: ['x', 'y', 'i', 'j', 't', 'q', '_', '$'],
     },
   ],
   // Require identifiers to match the provided regular expression
