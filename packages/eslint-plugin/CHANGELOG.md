@@ -7,10 +7,6 @@ and adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- ## Unreleased -->
 
-### Changed
-
-- Allow usage of `q` variable in `id-length` rule [[#329](https://github.com/Shopify/web-configs/pull/329)]
-
 ## 41.2.0 - 2022-03-07
 
 ### Changed
