@@ -1,6 +1,5 @@
-const Components = require('eslint-plugin-react/lib/util/Components');
-
 const {docsUrl, getName} = require('../utilities');
+const {isES6Component} = require('../utilities/component-utils');
 
 module.exports = {
   meta: {
@@ -13,12 +12,12 @@ module.exports = {
     schema: [],
   },
 
-  create: Components.detect((context, components, utils) => {
+  create(context) {
     let inTypeScriptReactComponent = false;
 
     function looksLikeTypeScriptComponent(node) {
       return (
-        utils.isES6Component(node) &&
+        isES6Component(node, context) &&
         Boolean(node.superTypeParameters) &&
         Boolean(node.superTypeParameters.params) &&
         node.superTypeParameters.params.length > 0 &&
@@ -45,5 +44,5 @@ module.exports = {
         );
       },
     };
-  }),
+  },
 };

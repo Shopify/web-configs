@@ -1,6 +1,5 @@
-const Components = require('eslint-plugin-react/lib/util/Components');
-
 const {docsUrl, uncast, getName} = require('../utilities');
+const {isES6Component} = require('../utilities/component-utils');
 
 module.exports = {
   meta: {
@@ -14,12 +13,12 @@ module.exports = {
     schema: [],
   },
 
-  create: Components.detect((context, components, utils) => {
+  create(context) {
     let classInfo = null;
 
     return {
       ClassDeclaration(node) {
-        if (!utils.isES6Component(node)) {
+        if (!isES6Component(node, context)) {
           return;
         }
 
@@ -68,7 +67,7 @@ module.exports = {
         classInfo = null;
       },
     };
-  }),
+  },
 };
 
 function classHasEmptyStateType({superTypeParameters}) {

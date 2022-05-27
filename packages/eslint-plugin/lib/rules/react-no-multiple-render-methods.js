@@ -1,6 +1,5 @@
-const Components = require('eslint-plugin-react/lib/util/Components');
-
 const {docsUrl} = require('../utilities');
+const {isES6Component} = require('../utilities/component-utils');
 
 const message = [
   'Don’t use multiple render methods in a single component;',
@@ -20,8 +19,8 @@ module.exports = {
     },
   },
 
-  create: Components.detect((context, components, utils) => {
-    let isES6Component = false;
+  create(context) {
+    let componentIsES6 = false;
 
     function report(node) {
       const name = getMethodName(node);
@@ -35,11 +34,11 @@ module.exports = {
 
     return {
       ClassDeclaration(node) {
-        isES6Component = utils.isES6Component(node);
+        componentIsES6 = isES6Component(node, context);
       },
 
       MethodDefinition(node) {
-        if (!isES6Component || !isRenderMethod(node)) {
+        if (!componentIsES6 || !isRenderMethod(node)) {
           return;
         }
 
@@ -47,14 +46,14 @@ module.exports = {
       },
 
       ArrowFunctionExpression(node) {
-        if (!isES6Component || !isRenderMethod(node)) {
+        if (!componentIsES6 || !isRenderMethod(node)) {
           return;
         }
 
         report(node);
       },
     };
-  }),
+  },
 };
 
 function isRenderMethod(node) {

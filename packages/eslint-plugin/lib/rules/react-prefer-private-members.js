@@ -1,7 +1,7 @@
 const {pascalCase} = require('change-case');
-const Components = require('eslint-plugin-react/lib/util/Components');
 
 const {docsUrl} = require('../utilities');
+const {isES6Component} = require('../utilities/component-utils');
 
 module.exports = {
   meta: {
@@ -13,8 +13,8 @@ module.exports = {
     },
   },
 
-  create: Components.detect((context, components, utils) => {
-    let isES6Component = 0;
+  create(context) {
+    let componentIsES6 = 0;
     let componentName = null;
 
     function report({node, componentName: classComponent}) {
@@ -31,32 +31,32 @@ module.exports = {
 
     return {
       ClassDeclaration(node) {
-        if (utils.isES6Component(node)) {
-          isES6Component++;
+        if (isES6Component(node, context)) {
+          componentIsES6++;
         }
         componentName = node.id.name;
       },
       'ClassDeclaration:exit': function (node) {
-        if (utils.isES6Component(node)) {
-          isES6Component--;
+        if (isES6Component(node, context)) {
+          componentIsES6--;
         }
       },
       'ClassProperty,PropertyDefinition': function (node) {
-        if (isES6Component === 0 || isValid(node)) {
+        if (componentIsES6 === 0 || isValid(node)) {
           return;
         }
 
         report({node, componentName});
       },
       MethodDefinition(node) {
-        if (isES6Component === 0 || isValid(node)) {
+        if (componentIsES6 === 0 || isValid(node)) {
           return;
         }
 
         report({node, componentName});
       },
     };
-  }),
+  },
 };
 
 function isValid(node) {
