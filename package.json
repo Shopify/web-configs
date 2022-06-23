@@ -11,9 +11,11 @@
     "lint": "eslint '**/*.{js,jsx,ts,tsx}'",
     "generate": "plop",
     "generate:package": "plop package && yarn plop docs",
+    "release": "changeset publish",
     "tophat": "tophat"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.23.0",
     "@shopify/tophat": "^0.0.4",
     "@types/jest": "^26.0.24",
     "eslint": "^8.3.0",
