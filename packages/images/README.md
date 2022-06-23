@@ -16,4 +16,4 @@ $ yarn add @shopify/images
 
 This package exports helpers for optimizing images. The following members are exported:
 
-* `svgOptions`: an object containing our recommended options for using SVGO.
+- `svgOptions`: an object containing our recommended options for using SVGO.

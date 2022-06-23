@@ -39,9 +39,7 @@ The `@shopify/babel-preset` preset is designed to be a common import that can be
 ```json
 {
   "babel": {
-    "presets": [
-      ["@shopify/babel-preset", {"typescript": true}]
-    ]
+    "presets": [["@shopify/babel-preset", {"typescript": true}]]
   }
 }
 ```
@@ -117,4 +115,3 @@ When spreading props, use inline object with spread elements directly instead of
 This option when `true` will enable the `@babel/plugin-transform-react-constant-elements` plugin in production mode.
 
 [Documentation](https://babeljs.io/docs/en/babel-plugin-transform-react-constant-elements)
-    

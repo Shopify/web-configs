@@ -34,7 +34,6 @@
 
 - Updated `@babel/runtime`, `@babel/preset-env`, and `@babel/core`. [[#273](https://github.com/Shopify/web-configs/pull/273)]
 
-
 ## 24.1.0 - 2021-07-07
 
 ### Added
@@ -264,7 +263,6 @@ module.exports = {
   - `babel-plugin-transform-object-rest-spread` 6.23.0 => 6.26.0
   - `babel-preset-env` 1.5.2 => 1.7.0.
 
-
 ### Chore
 
 - Switch from Circle CI to Travis.
@@ -318,7 +316,6 @@ module.exports = {
 - `shopify/react` now includes a `hot` option to enable plugins related to hot reloading (`react-hot-loader` and `react-pure-to-component`).
 - `shopify/react` now includes plugins in development that add additional information for debugging purposes, and plugins in production that offer some performance optimizations.
 - `shopify/web` now accepts an additional option, `browsers` (an array of [`browserslist`](https://github.com/ai/browserslist) strings) which specifies what browsers to transpile for (defaults to the browsers supported by Shopify’s admin).
-
 
 ### Changed
 
