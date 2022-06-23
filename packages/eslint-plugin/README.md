@@ -23,11 +23,13 @@ $ npm i eslint --save-dev
 Next, install `@shopify/eslint-plugin`:
 
 **With Yarn**
+
 ```bash
 yarn add --dev @shopify/eslint-plugin
 ```
 
 **With npm**
+
 ```bash
 $ npm install @shopify/eslint-plugin --save-dev
 ```
@@ -56,10 +58,7 @@ You can also add some "augmenting" configs on top of the "core" config by extend
 
 ```json
 {
-  "extends": [
-    "plugin:@shopify/esnext",
-    "plugin:@shopify/react"
-  ]
+  "extends": ["plugin:@shopify/esnext", "plugin:@shopify/react"]
 }
 ```
 
@@ -70,7 +69,7 @@ Likewise, if you are using TypeScript and React, the following configuration ext
   "extends": [
     "plugin:@shopify/typescript",
     "plugin:@shopify/react",
-    "plugin:@shopify/prettier",
+    "plugin:@shopify/prettier"
   ]
 }
 ```
@@ -98,6 +97,7 @@ This plugin also provides the following tool-specific configurations, which can 
   }
 }
 ```
+
 - [react](lib/config/react.js): Use this for React projects.
 - [graphql](lib/config/graphql.js): Use this for projects that use [graphql-config](https://github.com/prisma/graphql-config) for graphql validation.
 - [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components/get-started).
@@ -112,10 +112,7 @@ A node project that will use Babel for transpilation would need the following ES
 
 ```json
 {
-  "extends": [
-    "plugin:@shopify/esnext",
-    "plugin:@shopify/node"
-  ]
+  "extends": ["plugin:@shopify/esnext", "plugin:@shopify/node"]
 }
 ```
 

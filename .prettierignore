@@ -1,3 +1,3 @@
 node_modules
-*.md
+packages/eslint-plugin/docs/rules/**/*.md
 package.json

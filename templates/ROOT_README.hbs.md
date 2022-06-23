@@ -1,4 +1,4 @@
-[comment]: # (NOTE: This file is generated and should not be modify directly. Update `templates/ROOT_README.hbs.md` instead)
+[comment]: # 'NOTE: This file is generated and should not be modify directly. Update `templates/ROOT_README.hbs.md` instead'
 
 # Web Configs
 
@@ -13,14 +13,16 @@ This repo is managed as a monorepo that is composed of many npm packages, where 
 ### Package Index
 
 | Name | NPM | Size |
-| ------- | --- | --- |
+| ---- | --- | ---- |
+
+
 {{#each jsPackageNames}}
 | [{{this}}](packages/{{this}}) | [![npm version](https://badge.fury.io/js/%40shopify%2F{{this}}.svg)](https://badge.fury.io/js/%40shopify%2F{{this}}) | [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@shopify/{{this}}.svg)](https://img.shields.io/bundlephobia/minzip/@shopify/{{this}}.svg) |
 {{/each}}
 
 ## Contribution
 
-This repository has a CLA-Bot running which will ask contributors to sign a Contributor License Agreement (CLA). 
+This repository has a CLA-Bot running which will ask contributors to sign a Contributor License Agreement (CLA).
 
 Shopify has also adopted a Code of Conduct that we expect contributors to adhere to. Please read the [full text](./CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
@@ -60,11 +62,11 @@ More usage instructions on the `tophat` command can be [found here](https://gith
 
 #### Documentation
 
-If your change affects the public API of any packages within this repository (i.e. adding or changing arguments to a function, adding a new function, changing the return value, etc), please ensure the documentation is updated,  and a changelog is added to reflect this. Documentation is in the `README.md` files of each package. If further documentation is needed please communicate via a GitHub issue.
+If your change affects the public API of any packages within this repository (i.e. adding or changing arguments to a function, adding a new function, changing the return value, etc), please ensure the documentation is updated, and a changelog is added to reflect this. Documentation is in the `README.md` files of each package. If further documentation is needed please communicate via a GitHub issue.
 
 #### Testing
 
-The packages in this repository are used in mission-critical production scenarios. As such, we do not merge any untested code. 
+The packages in this repository are used in mission-critical production scenarios. As such, we do not merge any untested code.
 
 To run the full test suite, simply run `dev test` or `yarn test`.
 

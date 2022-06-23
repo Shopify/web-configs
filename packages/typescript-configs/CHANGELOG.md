@@ -24,13 +24,13 @@ Set `isolatedModules` to be true by default. Sewing-kit is moving away from a `t
 
 The Shopify typescript definition for `.scss` and `.css` have changed.
 
-Before: 
+Before:
 
 ```
 import * as styles from 'foo.scss';
 ```
 
-After: 
+After:
 
 ```
 import styles from 'foo.scss';
@@ -42,4 +42,3 @@ import styles from 'foo.scss';
 
 - Start of Changelog
 - Move the package from [`sewing-kit`](https://github.com/Shopify/sewing-kit).
-
