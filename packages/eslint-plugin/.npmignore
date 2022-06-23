@@ -4,4 +4,3 @@ node_modules
 .eslintignore
 coverage
 *.log
-shipit.yml
