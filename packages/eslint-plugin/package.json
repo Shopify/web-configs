@@ -2,7 +2,7 @@
   "name": "@shopify/eslint-plugin",
   "version": "41.3.1",
   "license": "MIT",
-  "description": "Shopify's ESLint rules and configs.",
+  "description": "Shopify's ESLint rules and configs!",
   "keywords": [
     "eslint",
     "eslintconfig",
