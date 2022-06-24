@@ -1,5 +1,11 @@
 # Changelog
 
+## 5.0.2
+
+### Patch Changes
+
+- [#334](https://github.com/Shopify/web-configs/pull/334) [`9f159d4`](https://github.com/Shopify/web-configs/commit/9f159d44562cb80560bba4fac90cdf8fb59daa33) Thanks [@BPScott](https://github.com/BPScott)! - Update package descriptions. No code changes.
+
 ## 5.0.1 - 2021-07-08
 
 - Fix options. [[#270](https://github.com/Shopify/web-configs/pull/270)]
