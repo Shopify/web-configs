@@ -88,7 +88,19 @@ module.exports = {
     // Prevents `expect` statements outside of a `test` or `it` block
     'jest/no-standalone-expect': 'error',
     // Enforce titles don't duplicate the test function name or start with a space
-    'jest/valid-title': 'error',
+    'jest/valid-title': [
+      'error',
+      {
+        disallowedWords: [
+          'correct',
+          'appropriate',
+          'properly',
+          'should',
+          'every',
+          'descriptive',
+        ],
+      },
+    ],
     // Suggest to have all hooks at top-level before tests
     'jest/prefer-hooks-on-top': 'error',
     // Require top-level describe block
@@ -112,20 +124,6 @@ module.exports = {
     'jest-formatting/padding-around-describe-blocks': 'error',
     // Require padding around test/it blocks
     'jest-formatting/padding-around-test-blocks': 'error',
-
-    'jest/valid-title': [
-      'error',
-      {
-        disallowedWords: [
-          'correct',
-          'appropriate',
-          'properly',
-          'should',
-          'every',
-          'descriptive',
-        ],
-      },
-    ],
 
     //
     // Internal
