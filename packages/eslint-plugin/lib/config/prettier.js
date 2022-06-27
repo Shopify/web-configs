@@ -4,7 +4,8 @@ module.exports = {
   plugins: ['prettier'],
 
   rules: {
-    ...require('./rules/prettier'),
+    'prettier/prettier': 'error',
+
     // rules to disable to prefer prettier
     '@babel/semi': 'off',
     '@babel/object-curly-spacing': 'off',
@@ -31,7 +32,17 @@ module.exports = {
     },
     {
       files: ['*.ts', '*.tsx'],
-      rules: require('./rules/prettier-typescript'),
+      rules: {
+        '@typescript-eslint/quotes': 'off',
+        '@typescript-eslint/brace-style': 'off',
+        '@typescript-eslint/func-call-spacing': 'off',
+        '@typescript-eslint/indent': 'off',
+        '@typescript-eslint/member-delimiter-style': 'off',
+        '@typescript-eslint/no-extra-parens': 'off',
+        '@typescript-eslint/semi': 'off',
+        '@typescript-eslint/type-annotation-spacing': 'off',
+        '@typescript-eslint/object-curly-spacing': 'off',
+      },
     },
   ],
 };
