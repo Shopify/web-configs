@@ -20,16 +20,6 @@ describe('config', () => {
       ).toMatch(/Replace .*"bar".* with .*'bar'/);
     }, 8000);
 
-    it('does not generate prettier errors in graphql files', () => {
-      expect(
-        execESLint(
-          `--ignore-pattern "**/prettier-graphql/build/*" --config "${fixtureFile(
-            'prettier-graphql/.eslintrc.js',
-          )}" "${fixtureFile('prettier-graphql')}"`,
-        ),
-      ).toBe('');
-    }, 8000);
-
     it('uses .prettierrc as the source of prettier rules', () => {
       expect(
         execESLint(

@@ -1,5 +1,0 @@
-query LintErrorFooQuery {
-  foo {
-    DOES_NOT_EXIST
-  }
-}

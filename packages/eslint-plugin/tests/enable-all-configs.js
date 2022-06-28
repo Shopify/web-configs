@@ -8,13 +8,12 @@ module.exports = {
     'plugin:@shopify/es5',
     'plugin:@shopify/esnext',
     'plugin:@shopify/typescript',
-    'plugin:@shopify/react',
 
     // Augmenting configs - When extending, these go after the core config
-    'plugin:@shopify/graphql',
     'plugin:@shopify/jest',
     'plugin:@shopify/node',
     'plugin:@shopify/polaris',
+    'plugin:@shopify/react',
     'plugin:@shopify/webpack',
 
     // Prettier config - When extending, this must go last

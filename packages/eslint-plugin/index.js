@@ -43,7 +43,6 @@ module.exports = {
     typescript: require('./lib/config/typescript'),
 
     // Augmenting configs - When extending, these go after the core config
-    graphql: require('./lib/config/graphql'),
     jest: require('./lib/config/jest'),
     node: require('./lib/config/node'),
     polaris: require('./lib/config/polaris'),
