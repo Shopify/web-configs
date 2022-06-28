@@ -40,15 +40,15 @@ module.exports = {
     core: require('./lib/config/core'),
     es5: require('./lib/config/es5'),
     esnext: require('./lib/config/esnext'),
-    react: require('./lib/config/react'),
     typescript: require('./lib/config/typescript'),
-    'typescript-type-checking': require('./lib/config/typescript-type-checking'),
 
     // Augmenting configs - When extending, these go after the core config
     graphql: require('./lib/config/graphql'),
     jest: require('./lib/config/jest'),
     node: require('./lib/config/node'),
     polaris: require('./lib/config/polaris'),
+    react: require('./lib/config/react'),
+    'typescript-type-checking': require('./lib/config/typescript-type-checking'),
     webpack: require('./lib/config/webpack'),
 
     // Prettier config - When extending, this must go last
