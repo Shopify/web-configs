@@ -1,5 +1,11 @@
 # Changelog
 
+## 42.0.1
+
+### Patch Changes
+
+- [#341](https://github.com/Shopify/web-configs/pull/341) [`8cbfc69`](https://github.com/Shopify/web-configs/commit/8cbfc695d60956e2a702aa1434deae3ace62f63e) Thanks [@BPScott](https://github.com/BPScott)! - Update `eslint-plugin-prettier` to `v4.1.0`, to automatically skip trying to run prettier over graphql files. Remove the explicit override for disabling prettier in graphql files, as it will cause eslint's "work out what extensions need linting" logic to try to parse graphql files. Add `{overrides: {files: ['*.graphql', '*.gql'], rules: {'prettier/prettier': 'off'}}}` to your eslint config if want to disable running the prettier rule over graphql files entirely.
+
 ## 42.0.0
 
 ### Major Changes
