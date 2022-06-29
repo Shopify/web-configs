@@ -1,5 +1,15 @@
 # Changelog
 
+## 42.0.0
+
+### Major Changes
+
+- [#340](https://github.com/Shopify/web-configs/pull/340) [`af6fccc`](https://github.com/Shopify/web-configs/commit/af6fccc7457dd1eca2755e2d1f35cd81f4ff2f30) Thanks [@BPScott](https://github.com/BPScott)! - Remove the `@shopify/eslint-plugin/graphql` config and the dependency on `eslint-plugin-graphql` as it is outdated and unsupported. If you used the graphql config then you should migrate to [`@graphql-eslint/eslint-plugin`](https://www.npmjs.com/package/@graphql-eslint/eslint-plugin). We no longer provide recommended graphql config as it has a large install footprint and we do not want to push that onto consumers that do not use graphql.
+
+### Patch Changes
+
+- [#338](https://github.com/Shopify/web-configs/pull/338) [`d8c61cc`](https://github.com/Shopify/web-configs/commit/d8c61cc4dac9bc33058b3069c9b8070fdb370e12) Thanks [@BPScott](https://github.com/BPScott)! - Remove a layer of indirection by specifying rules in `lib/config/*.js` files instead of having them import content from `lib/config/rules/*.js`
+
 ## 41.3.1
 
 ### Patch Changes
