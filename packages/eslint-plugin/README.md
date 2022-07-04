@@ -155,4 +155,4 @@ This plugin provides the following custom rules, which are included as appropria
 
 ## Suggested additional configs
 
-For applications that use graphql we recommend using [`@graphql-eslint/eslint-plugin`](https://github.com/B2o5T/graphql-eslint). This is not included as part of this plugin because graphql has a large install footprint and not everybody needs it.
+For applications that use graphql we recommend using the `operations-recommended` preset from [`@graphql-eslint/eslint-plugin`](https://github.com/B2o5T/graphql-eslint). This is not included as part of this plugin because graphql has a large install footprint and not everybody needs it.
