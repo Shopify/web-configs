@@ -1,5 +1,7 @@
 # `@shopify/eslint-plugin`
 
+Hello I am a silly test to check CLA integration
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](../../LICENSE.md) [![npm version](https://badge.fury.io/js/%40shopify%2Feslint-plugin.svg)](https://badge.fury.io/js/%40shopify%2Feslint-plugin.svg)
 
 Shopify’s ESLint rules and configs.
