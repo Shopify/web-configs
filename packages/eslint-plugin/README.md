@@ -79,7 +79,7 @@ Likewise, if you are using TypeScript and React, the following configuration ext
 This plugin provides the following core configurations:
 
 - [esnext](lib/config/esnext.js): Use this for anything written with ES2015+ features.
-- [typescript](lib/config/typescript.js): Use this for Typescript projects. The rules enabled in this confige do not require type-checking to run. To enable all Typescript rules, you must augment this config with the `typescript-type-checking` config mentioned below.
+- [typescript](lib/config/typescript.js): Use this for Typescript projects. The rules enabled in this config do not require type-checking to run. To enable all Typescript rules, you must augment this config with the `typescript-type-checking` config mentioned below.
 - [es5](lib/config/es5.js): Use this for legacy projects.
 
 This plugin also provides the following tool-specific configurations, which can be used on top of the core configurations:
