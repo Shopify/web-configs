@@ -142,8 +142,7 @@ ruleTester.run('react-initialize-state', rule, {
   ],
   invalid: [
     {
-      code:
-        'class Button extends React.Component<Props, {focused: boolean}> {}',
+      code: 'class Button extends React.Component<Props, {focused: boolean}> {}',
       errors,
     },
     {
@@ -201,8 +200,7 @@ ruleTester.run('react-initialize-state', rule, {
       errors,
     },
     {
-      code:
-        'class Button extends React.Component<Props, {focused: boolean}> {}',
+      code: 'class Button extends React.Component<Props, {focused: boolean}> {}',
       parser: typeScriptParser,
       errors,
     },
