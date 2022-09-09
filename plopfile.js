@@ -51,8 +51,7 @@ module.exports = function (plop) {
       },
       {
         type: 'add',
-        path:
-          'packages/{{kebabCase name}}/src/test/{{properCase name}}.test.js',
+        path: 'packages/{{kebabCase name}}/src/test/{{properCase name}}.test.js',
         templateFile: 'templates/test.hbs.js',
       },
     ],

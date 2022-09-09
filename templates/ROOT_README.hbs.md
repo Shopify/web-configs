@@ -15,7 +15,6 @@ This repo is managed as a monorepo that is composed of many npm packages, where 
 | Name | NPM | Size |
 | ---- | --- | ---- |
 
-
 {{#each jsPackageNames}}
 | [{{this}}](packages/{{this}}) | [![npm version](https://badge.fury.io/js/%40shopify%2F{{this}}.svg)](https://badge.fury.io/js/%40shopify%2F{{this}}) | [![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/@shopify/{{this}}.svg)](https://img.shields.io/bundlephobia/minzip/@shopify/{{this}}.svg) |
 {{/each}}
