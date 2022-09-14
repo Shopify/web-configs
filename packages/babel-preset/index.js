@@ -152,7 +152,8 @@ module.exports = function shopifyCommonPreset(
     skipForOfIteratorClosing: true,
     // nothing inherits from a constructor function with explicit return value:
     superIsCallableConstructor: true,
-    // noIncompleteNsImportDetection: true,
+    // nothing relies on CJS-transpiled namespace imports having all properties prior to module execution completing:
+    noIncompleteNsImportDetection: true,
   };
 
   // When decorators are used in legacy mode proposal-class-properties, plugin-proposal-private-methods must be used in loose mode (this is now handled by these assumptions)
