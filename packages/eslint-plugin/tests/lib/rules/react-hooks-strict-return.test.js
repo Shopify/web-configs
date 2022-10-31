@@ -15,6 +15,20 @@ const errors = [
 ruleTester.run('react-hooks-strict-return', rule, {
   valid: [
     {
+      // does not error on nested functions
+      code: `function useFoo() {
+        function nestedFunction() {
+          return [1, 2, 3]
+        }
+        const nestedArrow = () => {
+          return [1, 2, 3];
+        };
+
+        return [1]
+      }
+      `,
+    },
+    {
       code: `function useFoo() {
         return [1]
       }
@@ -193,7 +207,6 @@ ruleTester.run('react-hooks-strict-return', rule, {
     {
       code: `function useFoo() {
         useEffect(() => {});
-
         return [1, 2, 3, 4];
       }`,
       errors,
@@ -201,7 +214,6 @@ ruleTester.run('react-hooks-strict-return', rule, {
     {
       code: `function useFoo() {
         useSomeOtherHook();
-
         return [1, 2, 3, 4];
       }`,
       errors,
@@ -210,7 +222,6 @@ ruleTester.run('react-hooks-strict-return', rule, {
       code: `function useFoo() {
         useSomeOtherHook();
         useEffect(() => {});
-
         return [1, 2, 3, 4];
       }`,
       errors,

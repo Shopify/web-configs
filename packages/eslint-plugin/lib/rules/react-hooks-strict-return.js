@@ -17,39 +17,9 @@ module.exports = {
   },
 
   create(context) {
-    let inHook = 0;
-
     return {
-      VariableDeclarator(node) {
-        if (!isHook(node)) {
-          return;
-        }
-
-        inHook++;
-      },
-      'VariableDeclarator:exit': function (node) {
-        if (!isHook(node)) {
-          return;
-        }
-
-        inHook--;
-      },
-      FunctionDeclaration(node) {
-        if (!isHook(node)) {
-          return;
-        }
-
-        inHook++;
-      },
-      'FunctionDeclaration:exit': function (node) {
-        if (!isHook(node)) {
-          return;
-        }
-
-        inHook--;
-      },
       ReturnStatement(node) {
-        if (inHook === 0) {
+        if (!isHook(node.parent.parent)) {
           return;
         }
         if (
@@ -114,11 +84,13 @@ function getProps(node, scope) {
 }
 
 function isHook(node) {
-  if (!node.id) {
+  const {name} = node?.id ?? node?.parent?.id ?? {};
+
+  if (!name) {
     return false;
   }
 
-  return /^use[A-Z0-9].*$/.test(node.id.name);
+  return /^use[A-Z0-9].*$/.test(name);
 }
 
 function isSpreadElement(node) {
