@@ -1,5 +1,11 @@
 # Changelog
 
+## 42.0.2
+
+### Patch Changes
+
+- [#350](https://github.com/Shopify/web-configs/pull/350) [`06e1245`](https://github.com/Shopify/web-configs/commit/06e1245e4e55e9d01bb20c66ec57cadd94252873) Thanks [@marvinhagemeister](https://github.com/marvinhagemeister)! - Update the `eslint-plugin-import` to the latest version which contains significant performance improvements for module resolution.
+
 ## 42.0.1
 
 ### Patch Changes
