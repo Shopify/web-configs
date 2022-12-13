@@ -1,5 +1,11 @@
 # Changelog
 
+## 25.0.0
+
+### Major Changes
+
+- [#347](https://github.com/Shopify/web-configs/pull/347) [`7fbbceb`](https://github.com/Shopify/web-configs/commit/7fbbceb15334f8ebeefda43c18f72a149c20ec41) Thanks [@developit](https://github.com/developit)! - Allow customizing Babel assumptions, and adopt some reasonably loose defaults rather than the normal strict defaults. This shall result in smaller transpiled files, at the expense of not following specs exactly when encountering edge cases.
+
 ## 24.1.5 - 2021-11-18
 
 ### Changed
