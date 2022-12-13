@@ -6,6 +6,7 @@ module.exports = function shopifyCommonPreset(
     modules = 'auto',
     useBuiltIns = 'entry',
     typescript = false,
+    assumptions = {},
     typescriptOptions = {},
     transformRuntime = false,
     transformRuntimeOptions = {
@@ -123,17 +124,49 @@ module.exports = function shopifyCommonPreset(
     includeStripReactTestId && require.resolve('babel-plugin-react-test-id'),
   ].filter(Boolean);
 
+  // Compiler Assumptions
+  // Full List:  https://babeljs.io/docs/en/assumptions
+  const allAssumptions = {
+    // nothing accesses `document.all`:
+    noDocumentAll: true,
+    // nothing relies on class constructors invoked without `new` throwing:
+    noClassCalls: true,
+    // nothing should be relying on tagged template strings being frozen:
+    mutableTemplateObject: true,
+    // nothing is relying on Function.prototype.length:
+    ignoreFunctionLength: true,
+    // nothing is relying on mutable re-exported bindings:
+    constantReexports: true,
+    // don't bother marking Module records non-enumerable:
+    enumerableModuleMeta: true,
+    // nothing uses [[Symbol.toPrimitive]]:
+    // (see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive)
+    ignoreToPrimitiveHint: true,
+    // nothing relies on spread copying Symbol keys:  ({...{ [Symbol()]: 1 }})
+    objectRestNoSymbols: true,
+    // nothing relies on `new (() => {})` throwing:
+    noNewArrows: true,
+    // transpile object spread to assignment instead of defineProperty():
+    setSpreadProperties: true,
+    // nothing should be using custom iterator protocol:
+    skipForOfIteratorClosing: true,
+    // nothing inherits from a constructor function with explicit return value:
+    superIsCallableConstructor: true,
+    // nothing relies on CJS-transpiled namespace imports having all properties prior to module execution completing:
+    noIncompleteNsImportDetection: true,
+  };
+
   // When decorators are used in legacy mode proposal-class-properties, plugin-proposal-private-methods must be used in loose mode (this is now handled by these assumptions)
   // see https://babeljs.io/docs/en/babel-plugin-proposal-decorators#note-compatibility-with-babel-plugin-proposal-class-properties
   // see https://babeljs.io/docs/en/babel-plugin-proposal-class-properties#loose
   // see https://babeljs.io/docs/en/babel-plugin-proposal-private-methods#loose
   // see https://babeljs.io/docs/en/assumptions
-  const assumptions = typescript
-    ? {
-        setPublicClassFields: true,
-        privateFieldsAsProperties: true,
-      }
-    : {};
+  if (typescript) {
+    allAssumptions.setPublicClassFields = true;
+    allAssumptions.privateFieldsAsProperties = true;
+  }
 
-  return {presets, plugins, assumptions};
+  Object.assign(allAssumptions, assumptions);
+
+  return {presets, plugins, assumptions: allAssumptions};
 };
