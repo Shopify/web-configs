@@ -1,5 +1,11 @@
 # Changelog
 
+## 42.0.3
+
+### Patch Changes
+
+- [#356](https://github.com/Shopify/web-configs/pull/356) [`0b52b9e`](https://github.com/Shopify/web-configs/commit/0b52b9eb87e1e847f7408b9fb2a61b5beaefbb5c) Thanks [@marvinhagemeister](https://github.com/marvinhagemeister)! - Speedup polaris linting rules by about 12% via caching already resolved files.
+
 ## 42.0.2
 
 ### Patch Changes
