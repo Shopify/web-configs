@@ -1,1 +1,4 @@
-module.exports = [require('./content-no-strings')];
+module.exports = [
+  require('./content-no-strings'),
+  require('./prefer-focus-visible'),
+];
