@@ -20,6 +20,8 @@ value-keyword-case.invalid.scss
  2:7   ✖  Expected "VALUE" to be "value"    value-keyword-case
  5:10  ✖  Expected "Monaco" to be "monaco"  value-keyword-case
  6:18  ✖  Expected "Monaco" to be "monaco"  value-keyword-case
+
+4 problems (4 errors, 0 warnings)
 `.trim();
 
     expect(result.output).toStrictEqual(expectedResult);
@@ -34,10 +36,12 @@ value-keyword-case.invalid.scss
     // whitespace when saving the file
     const expectedResult = `
 scss.invalid.scss
-  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 2 classes                                                  selector-max-class                  ${''}
-  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 1 combinator                                               selector-max-combinators            ${''}
+  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 2 classes                                                  selector-max-class
+  6:5   ✖  Expected ".n1 .n2 .n3" to have no more than 1 combinator                                               selector-max-combinators
  16:20  ✖  Expected "$value * 1px" instead of "#{$value}px". Consider writing "value" in terms of px originally.  scss/dimension-no-non-numeric-values
  22:3   ✖  Unexpected union class name with the parent selector (&)                                               scss/selector-no-union-class-name
+
+4 problems (4 errors, 0 warnings)
 `.trim();
 
     expect(result.output).toStrictEqual(expectedResult);

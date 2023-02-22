@@ -14,12 +14,6 @@ module.exports = {
       ignoreAtRules: ['else'],
     },
   ],
-  // Specify lowercase or uppercase for at-rules names.
-  'at-rule-name-case': 'lower',
-  // Require a newline after at-rule names.
-  'at-rule-name-newline-after': 'always-multi-line',
-  // Require a single space after at-rule names.
-  'at-rule-name-space-after': 'always-single-line',
   // Disallow unknown at-rules.
   'at-rule-no-unknown': [
     true,
@@ -47,43 +41,20 @@ module.exports = {
   ],
   // Disallow vendor prefixes for @rules.
   'at-rule-no-vendor-prefix': true,
-  // Require a newline after the semicolon of at-rules.
-  'at-rule-semicolon-newline-after': 'always',
   // Specify a allowed-list of allowed at-rules.
   'at-rule-allowed-list': null,
-  // Require a single space or disallow whitespace before the semicolons of at-rules.
-  'at-rule-semicolon-space-before': 'never',
 
   //
   // Block
   //
 
-  'block-closing-brace-empty-line-before': 'never',
-  // Require a newline or disallow whitespace after the closing brace of blocks.
-  'block-closing-brace-newline-after': 'always-single-line',
-  // Require a newline or disallow whitespace before the closing brace of blocks.
-  'block-closing-brace-newline-before': 'always-multi-line',
-  // Require a single space or disallow whitespace after the closing brace of blocks.
-  'block-closing-brace-space-after': null,
-  // Require a single space or disallow whitespace before the closing brace of blocks.
-  'block-closing-brace-space-before': 'always-single-line',
   // Disallow empty blocks.
   'block-no-empty': true,
-  // Require a newline after the opening brace of blocks.
-  'block-opening-brace-newline-after': 'always-multi-line',
-  // Require a newline or disallow whitespace before the opening brace of blocks.
-  'block-opening-brace-newline-before': null,
-  // Require a single space or disallow whitespace after the opening brace of blocks.
-  'block-opening-brace-space-after': 'always-single-line',
-  // Require a single space or disallow whitespace before the opening brace of blocks.
-  'block-opening-brace-space-before': 'always',
 
   //
   // Color
   //
 
-  // Specify lowercase or uppercase for hex colors.
-  'color-hex-case': 'lower',
   // Specify short or long notation for hex colors.
   'color-hex-length': 'long',
   // Require (where possible) or disallow named colors.
@@ -134,28 +105,8 @@ module.exports = {
   ],
   // Disallow shorthand properties that override related longhand properties within declaration blocks.
   'declaration-block-no-shorthand-property-overrides': true,
-  // Require a newline or disallow whitespace after the semicolons of declaration blocks.
-  'declaration-block-semicolon-newline-after': 'always-multi-line',
-  // Require a newline or disallow whitespace before the semicolons of declaration blocks.
-  'declaration-block-semicolon-newline-before': 'never-multi-line',
-  // Require a single space or disallow whitespace after the semicolons of declaration blocks.
-  'declaration-block-semicolon-space-after': 'always-single-line',
-  // Require a single space or disallow whitespace before the semicolons of declaration blocks.
-  'declaration-block-semicolon-space-before': 'never',
   // Limit the number of declaration within single line declaration blocks.
   'declaration-block-single-line-max-declarations': 2,
-  // Require or disallow a trailing semicolon within declaration blocks.
-  'declaration-block-trailing-semicolon': 'always',
-  // Require a single space or disallow whitespace after the bang of declarations.
-  'declaration-bang-space-after': 'never',
-  // Require a single space or disallow whitespace before the bang of declarations.
-  'declaration-bang-space-before': 'always',
-  // Require a newline or disallow whitespace after the colon of declarations.
-  'declaration-colon-newline-after': 'always-multi-line',
-  // Require a single space or disallow whitespace after the colon of declarations.
-  'declaration-colon-space-after': 'always-single-line',
-  // Require a single space or disallow whitespace before the colon of declarations.
-  'declaration-colon-space-before': 'never',
   //  Require or disallow an empty line before declarations.
   'declaration-empty-line-before': [
     'never',
@@ -198,24 +149,10 @@ module.exports = {
   'function-disallowed-list': null,
   // Disallow an unspaced operator within calc functions.
   'function-calc-no-unspaced-operator': true,
-  // Require a newline or disallow whitespace after the commas of functions.
-  'function-comma-newline-after': 'never-multi-line',
-  // Require a newline or disallow whitespace before the commas of functions.
-  'function-comma-newline-before': null,
-  // Require a single space or disallow whitespace after the commas of functions.
-  'function-comma-space-after': 'always-single-line',
-  // Require a single space or disallow whitespace before the commas of functions.
-  'function-comma-space-before': 'never',
   // Disallow direction values in linear-gradient() calls that are not valid according to the standard syntax.
   'function-linear-gradient-no-nonstandard-direction': true,
-  // Limit the number of adjacent empty lines within functions.
-  'function-max-empty-lines': 0,
   // Specify lowercase or uppercase for function names.
   'function-name-case': 'lower',
-  // Require a newline or disallow whitespace on the inside of the parentheses of functions.
-  'function-parentheses-newline-inside': 'always-multi-line',
-  // Require a single space or disallow whitespace on the inside of the parentheses of functions.
-  'function-parentheses-space-inside': 'never-single-line',
   // Disallow scheme-relative urls.
   'function-url-no-scheme-relative': true,
   // Require or disallow quotes for urls.
@@ -226,21 +163,11 @@ module.exports = {
   'function-url-scheme-allowed-list': ['http', 'https'],
   // Specify a allowed-list of only allowed functions.
   'function-allowed-list': null,
-  // Require a single space or disallow whitespace after functions.
-  'function-whitespace-after': 'always',
 
   //
   // General
   //
 
-  // Specify indentation.
-  indentation: 2,
-  // Specify unix or windows linebreaks
-  linebreaks: 'unix',
-  // Disallow more than a specified number of adjacent empty lines.
-  'max-empty-lines': 3,
-  // Limit the length of a line.
-  'max-line-length': null,
   // Limit the depth of nesting.
   'max-nesting-depth': 3,
   // Disallow selectors of lower specificity from coming after overriding selectors of higher specificity.
@@ -249,14 +176,10 @@ module.exports = {
   'no-duplicate-selectors': true,
   // Disallow empty sources.
   'no-empty-source': true,
-  // Disallow end-of-line whitespace.
-  'no-eol-whitespace': true,
-  // Disallow extra semicolons.
-  'no-extra-semicolons': true,
-  // Disallow missing end-of-file newline.
-  'no-missing-end-of-source-newline': true,
   // Disallow animation names that do not correspond to a @keyframes declaration.
   'no-unknown-animations': true,
+  // Disallow unknown values for properties within declarations.
+  'declaration-property-value-no-unknown': true,
 
   //
   // Length
@@ -271,14 +194,8 @@ module.exports = {
 
   // Specify pattern of custom media query names.
   'custom-media-pattern': null,
-  // Require a single space or disallow whitespace after the colon in media features.
-  'media-feature-colon-space-after': 'always',
-  // Require a single space or disallow whitespace before the colon in media features.
-  'media-feature-colon-space-before': 'never',
   // Specify a disallowed-list of disallowed media feature names.
   'media-feature-name-disallowed-list': null,
-  // Specify lowercase or uppercase for media feature names.
-  'media-feature-name-case': 'lower',
   // Disallow unknown media feature names.
   'media-feature-name-no-unknown': [
     true,
@@ -290,31 +207,13 @@ module.exports = {
   'media-feature-name-no-vendor-prefix': true,
   // Specify a allowed-list of allowed media feature names
   'media-feature-name-allowed-list': null,
-  // Require a single space or disallow whitespace on the inside of the parentheses within media features.
-  'media-feature-parentheses-space-inside': 'never',
-  // Require a single space or disallow whitespace after the range operator in media features.
-  'media-feature-range-operator-space-after': 'always',
-  // Require a single space or disallow whitespace before the range operator in media features.
-  'media-feature-range-operator-space-before': 'always',
-  // Require a newline or disallow whitespace after the commas of media query lists.
-  'media-query-list-comma-newline-after': 'always-multi-line',
-  // Require a newline or disallow whitespace before the commas of media query lists.
-  'media-query-list-comma-newline-before': 'never-multi-line',
-  // Require a single space or disallow whitespace after the commas of media query lists.
-  'media-query-list-comma-space-after': 'always-single-line',
-  // Require a single space or disallow whitespace before the commas of media query lists.
-  'media-query-list-comma-space-before': 'never',
 
   //
   // Number
   //
 
-  // Require or disallow a leading zero for fractional numbers less than 1.
-  'number-leading-zero': 'always',
   // Limit the number of decimal places allowed in numbers.
   'number-max-precision': null,
-  // Disallow trailing zeros within numbers.
-  'number-no-trailing-zeros': true,
 
   //
   // Property
@@ -332,8 +231,6 @@ module.exports = {
   'custom-property-pattern': null,
   // Specify a disallowed listed of disallowed properties.
   'property-disallowed-list': [],
-  // Specify lowercase or uppercase for properties.
-  'property-case': 'lower',
   // Disallow unknown properties.
   'property-no-unknown': true,
   // Disallow vendor prefixes for properties.
@@ -362,26 +259,14 @@ module.exports = {
   // Selector
   //
 
-  // Require a single space or disallow whitespace on the inside of the brackets within attribute selectors.
-  'selector-attribute-brackets-space-inside': 'never',
   // Specify a disallowed-list of disallowed attribute operators.
   'selector-attribute-operator-disallowed-list': null,
-  // Require a single space or disallow whitespace after operators within attribute selectors.
-  'selector-attribute-operator-space-after': 'never',
-  // Require a single space or disallow whitespace before operators within attribute selectors.
-  'selector-attribute-operator-space-before': 'never',
   // Specify a allowed-list of allowed attribute operators.
   'selector-attribute-operator-allowed-list': null,
   // Require or disallow quotes for attribute values.
   'selector-attribute-quotes': 'always',
   // Specify a pattern for class selectors.
   'selector-class-pattern': /^[a-zA-Z][a-zA-Z0-9-]+$/,
-  // Require a single space or disallow whitespace after the combinators of selectors.
-  'selector-combinator-space-after': 'always',
-  // Require a single space or disallow whitespace before the combinators of selectors.
-  'selector-combinator-space-before': 'always',
-  // Disallow non-space characters for descendant combinators of selectors.
-  'selector-descendant-combinator-no-non-space': true,
   // Specify a pattern for id selectors.
   'selector-id-pattern': /^[A-Z][a-zA-Z0-9]+$/,
   // Limit the number of attribute selectors in a selector.
@@ -396,14 +281,6 @@ module.exports = {
   'selector-max-type': 1,
   // Limit the number of universal selectors in a selector.
   'selector-max-universal': 2,
-  // Require a newline or disallow whitespace after the commas of selector lists.
-  'selector-list-comma-newline-after': 'always',
-  // Require a newline or disallow whitespace before the commas of selector lists.
-  'selector-list-comma-newline-before': null,
-  // Require a single space or disallow whitespace after the commas of selector lists.
-  'selector-list-comma-space-after': 'never-single-line',
-  // Require a single space or disallow whitespace before the commas of selector lists.
-  'selector-list-comma-space-before': 'never',
   // Limit the number of compound selectors in a selector.
   'selector-max-compound-selectors': 3,
   // Limit the specificity of selectors.
@@ -416,16 +293,10 @@ module.exports = {
   'selector-no-vendor-prefix': true,
   // Specify a disallowed-list of disallowed pseudo-class selectors.
   'selector-pseudo-class-disallowed-list': null,
-  //  Specify lowercase or uppercase for pseudo-class selectors.
-  'selector-pseudo-class-case': 'lower',
   // Disallow unknown pseudo-class selectors.
   'selector-pseudo-class-no-unknown': true,
-  // Require a single space or disallow whitespace on the inside of the parentheses within pseudo-class selectors.
-  'selector-pseudo-class-parentheses-space-inside': 'never',
   // Specify a allowed-list of allowed pseudo-class selectors.
   'selector-pseudo-class-allowed-list': null,
-  // Specify lowercase or uppercase for pseudo-element selectors.
-  'selector-pseudo-element-case': 'lower',
   // Specify single or double colon notation for applicable pseudo-elements.
   'selector-pseudo-element-colon-notation': 'double',
   // Disallow unknown pseudo-element selectors.
@@ -434,8 +305,6 @@ module.exports = {
   'selector-type-case': 'lower',
   // Disallow unknown type selectors.
   'selector-type-no-unknown': true,
-  // Limit the number of adjacent empty lines within selectors.
-  'selector-max-empty-lines': 0,
 
   //
   // String
@@ -443,8 +312,6 @@ module.exports = {
 
   // Disallow (unescaped) newlines in strings.
   'string-no-newline': true,
-  // Specify single or double quotes around strings.
-  'string-quotes': 'single',
 
   //
   // Time
@@ -458,8 +325,6 @@ module.exports = {
 
   // Specify a disallow list of disallowed units.
   'unit-disallowed-list': [],
-  // Specify lowercase or uppercase for units.
-  'unit-case': 'lower',
   // Disallow unknown units.
   'unit-no-unknown': true,
   // Specify a allowed-list of allowed units.
@@ -473,25 +338,9 @@ module.exports = {
   'value-keyword-case': [
     'lower',
     {
-      ignoreProperties: [
-        'font',
-        'font-family',
-        '/^--.*font/',
-        '/^\\$.*font/',
-        '/^\\$polaris/',
-      ],
+      ignoreProperties: ['/^--.*font/', '/^\\$.*font/', '/^\\$polaris/'],
     },
   ],
-  // Require a newline or disallow whitespace after the commas of value lists.
-  'value-list-comma-newline-after': 'always-multi-line',
-  // Require a newline or disallow whitespace before the commas of value lists.
-  'value-list-comma-newline-before': null,
-  // Require a single space or disallow whitespace after the commas of value lists.
-  'value-list-comma-space-after': 'always-single-line',
-  // Require a single space or disallow whitespace before the commas of value lists.
-  'value-list-comma-space-before': 'never',
-  // Limit the number of adjacent empty lines within value lists.
-  'value-list-max-empty-lines': 0,
   // Disallow vendor prefixes for values.
   'value-no-vendor-prefix': true,
 
