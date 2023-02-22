@@ -15,30 +15,7 @@ module.exports = {
     },
   ],
   // Disallow unknown at-rules.
-  'at-rule-no-unknown': [
-    true,
-    {
-      ignoreAtRules: [
-        'at-root',
-        'content',
-        'debug',
-        'each',
-        'else',
-        'error',
-        'extend',
-        'for',
-        'forward',
-        'function',
-        'if',
-        'include',
-        'mixin',
-        'return',
-        'use',
-        'warn',
-        'while',
-      ],
-    },
-  ],
+  'at-rule-no-unknown': true,
   // Disallow vendor prefixes for @rules.
   'at-rule-no-vendor-prefix': true,
   // Specify a allowed-list of allowed at-rules.
@@ -145,6 +122,8 @@ module.exports = {
   // Function
   //
 
+  // Disallow unknown functions.
+  'function-no-unknown': true,
   // Specify a disallowed list of disallowed functions.
   'function-disallowed-list': null,
   // Disallow an unspaced operator within calc functions.

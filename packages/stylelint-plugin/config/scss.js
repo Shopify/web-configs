@@ -81,4 +81,22 @@ module.exports = {
   'scss/no-duplicate-dollar-variables': null,
   // Disallow duplicate mixis within a stylesheet
   'scss/no-duplicate-mixins': true,
+  // Disallow assignment to namespaced variables.
+  'scss/dollar-variable-no-namespaced-assignment': true,
+  // Disallow usage of @use without a namespace.
+  'scss/at-use-no-unnamespaced': true,
+  // Disallow unknown functions. Should be used instead of Stylelint's function-no-unknown.
+  // Doesn't support `@use 'foo' as bar` yet.
+  // https://github.com/stylelint-scss/stylelint-scss/issues/760
+  'function-no-unknown': null,
+  'scss/function-no-unknown': null,
+  // Require or disallow extension in @import commands.
+  'scss/at-import-partial-extension': 'always',
+  // Disallow unknown at-rules. Should be used instead of stylelint's at-rule-no-unknown.
+  'at-rule-no-unknown': null,
+  'scss/at-rule-no-unknown': true,
+
+  // Incompatible with scss at the moment.
+  // Disallow unknown values for properties within declarations.
+  'declaration-property-value-no-unknown': null,
 };
