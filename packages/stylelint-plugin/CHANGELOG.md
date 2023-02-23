@@ -1,5 +1,37 @@
 # Changelog
 
+## 12.0.0
+
+### Major Changes
+
+- [#364](https://github.com/Shopify/web-configs/pull/364) [`2283dfe`](https://github.com/Shopify/web-configs/commit/2283dfed0a3ecbe0db7d995e77df308dca623b57) Thanks [@alexandcote](https://github.com/alexandcote)! - Updating our stylelint rules to support stylelint@^15
+
+  - Removing [76 rules](https://stylelint.io/user-guide/rules#deprecated) deprecated rules.
+  - Enable a new [`declaration-property-value-no-unknown`](https://github.com/stylelint/stylelint/blob/main/lib/rules/declaration-property-value-no-unknown/README.md) rule.
+  - Only support `stylelint` >= 15
+
+### Minor Changes
+
+- [#364](https://github.com/Shopify/web-configs/pull/364) [`2283dfe`](https://github.com/Shopify/web-configs/commit/2283dfed0a3ecbe0db7d995e77df308dca623b57) Thanks [@alexandcote](https://github.com/alexandcote)! - Updating `stylelint-scss` to version `^4.4.0`.
+
+  This version support new rules:
+
+  - [`scss/dollar-variable-no-namespaced-assignment`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-no-namespaced-assignment/README.md)
+  - [`scss/at-use-no-unnamespaced`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-unnamespaced/README.md)
+  - [`scss/function-no-unknown`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-no-unknown/README.md)
+  - [`scss/at-import-partial-extension`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension/README.md)
+  - [`scss/at-rule-no-unknown`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-rule-no-unknown/README.md)
+
+### Patch Changes
+
+- [#364](https://github.com/Shopify/web-configs/pull/364) [`2283dfe`](https://github.com/Shopify/web-configs/commit/2283dfed0a3ecbe0db7d995e77df308dca623b57) Thanks [@alexandcote](https://github.com/alexandcote)! - Update `postcss` to version ^8.4.21
+
+- [#364](https://github.com/Shopify/web-configs/pull/364) [`2283dfe`](https://github.com/Shopify/web-configs/commit/2283dfed0a3ecbe0db7d995e77df308dca623b57) Thanks [@alexandcote](https://github.com/alexandcote)! - Updating stylelint-prettier to `^3.0.0`
+
+- [#364](https://github.com/Shopify/web-configs/pull/364) [`2283dfe`](https://github.com/Shopify/web-configs/commit/2283dfed0a3ecbe0db7d995e77df308dca623b57) Thanks [@alexandcote](https://github.com/alexandcote)! - Update `stylelint-order` to version `^6.0.0`
+
+- [#366](https://github.com/Shopify/web-configs/pull/366) [`33f12e4`](https://github.com/Shopify/web-configs/commit/33f12e48ee0e7c95bfa35392ef0d2a9c27329d68) Thanks [@BPScott](https://github.com/BPScott)! - Remove a layer of indirection by specifying rules in `index.js` instead of having that import content from `config/*.js`
+
 ## 11.0.1 - 2021-12-07
 
 ### Changed
