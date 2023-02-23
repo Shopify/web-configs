@@ -25,19 +25,18 @@
   },
   "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/stylelint-plugin/README.md",
   "dependencies": {
-    "postcss": "^8.3.11",
-    "postcss-scss": "^4.0.2",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-order": "^5.0.0",
-    "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.0.0"
+    "postcss": "^8.4.21",
+    "postcss-scss": "^4.0.6",
+    "stylelint-order": "^6.0.2",
+    "stylelint-prettier": "^3.0.0",
+    "stylelint-scss": "^4.4.0"
   },
   "peerDependencies": {
-    "stylelint": ">=14.1.0"
+    "stylelint": ">=15.0.0"
   },
   "devDependencies": {
     "jest-preset-stylelint": "^4.2.0",
     "strip-ansi": "^6.0.0",
-    "stylelint": "^14.1.0"
+    "stylelint": "^15.2.0"
   }
 }
