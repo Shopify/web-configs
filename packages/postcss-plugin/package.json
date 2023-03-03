@@ -28,6 +28,7 @@
     "autoprefixer": "^10.2.5",
     "postcss-calc": "^8.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-pxtorem": "^6.0.0",
     "postcss-will-change": "^4.0.1"
   },
   "devDependencies": {
