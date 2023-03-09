@@ -14,7 +14,7 @@ const errors = [
   {
     type: 'JSXElement',
     message:
-      'You don’t need to wrap content in a Stack.Item unless you need to customize one of its props.',
+      'You don’t need to wrap content in a LegacyStack.Item unless you need to customize one of its props.',
   },
 ];
 
@@ -22,32 +22,32 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
   valid: [
     {
       code: `
-        import {Stack} from '@shopify/polaris';
-        <Stack>Content</Stack>;
+        import {LegacyStack} from '@shopify/polaris';
+        <LegacyStack>Content</LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Stack} from '@shopify/polaris';
-        <Stack>Content<Stack.Item fill>More content</Stack.Item></Stack>;
+        import {LegacyStack} from '@shopify/polaris';
+        <LegacyStack>Content<LegacyStack.Item fill>More content</LegacyStack.Item></LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Stack} from 'other-module';
-        <Stack><Stack.Item>Content</Stack.Item></Stack>;
+        import {LegacyStack} from 'other-module';
+        <LegacyStack><LegacyStack.Item>Content</LegacyStack.Item></LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Stack} from '@shopify/polaris';
-        <Stack.Item fill>Content</Stack.Item>;
+        import {LegacyStack} from '@shopify/polaris';
+        <LegacyStack.Item fill>Content</LegacyStack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
@@ -56,8 +56,8 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
   invalid: [
     {
       code: `
-        import {Stack} from '@shopify/polaris';
-        <Stack><Stack.Item>Content</Stack.Item></Stack>;
+        import {LegacyStack} from '@shopify/polaris';
+        <LegacyStack><LegacyStack.Item>Content</LegacyStack.Item></LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
@@ -65,8 +65,8 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
     },
     {
       code: `
-        import {Stack} from '@shopify/polaris';
-        <Stack.Item>Content</Stack.Item>;
+        import {LegacyStack} from '@shopify/polaris';
+        <LegacyStack.Item>Content</LegacyStack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
@@ -75,7 +75,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
     {
       code: `
         import * as P from '@shopify/polaris';
-        <P.Stack.Item>Content</P.Stack.Item>;
+        <P.LegacyStack.Item>Content</P.LegacyStack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
