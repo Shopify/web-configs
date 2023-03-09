@@ -23,8 +23,8 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
   valid: [
     {
       code: `
-        import {Card} from '@shopify/other';
-        <Card><Card.Section /></Card>;
+        import {LegacyCard} from '@shopify/other';
+        <LegacyCard><LegacyCard.Section /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
@@ -39,48 +39,48 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
     },
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card />;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard />;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card>Content</Card>;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard>Content</LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card><Card.Section subdued /></Card>;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard><LegacyCard.Section subdued /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card><Card.Section {...props} /></Card>;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard><LegacyCard.Section {...props} /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card><Card.Other /></Card>;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard><LegacyCard.Other /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
     },
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card><Card.Section /><Card.Section /></Card>;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard><LegacyCard.Section /><LegacyCard.Section /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
@@ -97,12 +97,12 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
   invalid: [
     {
       code: `
-        import {Card} from '@shopify/polaris';
-        <Card><Card.Section /></Card>;
+        import {LegacyCard} from '@shopify/polaris';
+        <LegacyCard><LegacyCard.Section /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
-      errors: errorsFor('Card'),
+      errors: errorsFor('LegacyCard'),
     },
     {
       code: `
@@ -125,20 +125,20 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
     {
       code: `
         import * as Polaris from '@shopify/polaris';
-        <Polaris.Card><Polaris.Card.Section /></Polaris.Card>;
+        <Polaris.LegacyCard><Polaris.LegacyCard.Section /></Polaris.LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
-      errors: errorsFor('Card'),
+      errors: errorsFor('LegacyCard'),
     },
     {
       code: `
         import Polaris from '@shopify/polaris';
-        <Polaris.Card><Polaris.Card.Section /></Polaris.Card>;
+        <Polaris.LegacyCard><Polaris.LegacyCard.Section /></Polaris.LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
       parserOptions,
-      errors: errorsFor('Card'),
+      errors: errorsFor('LegacyCard'),
     },
   ],
 });

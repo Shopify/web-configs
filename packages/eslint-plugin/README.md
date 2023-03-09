@@ -99,7 +99,7 @@ This plugin also provides the following tool-specific configurations, which can 
 ```
 
 - [react](lib/config/react.js): Use this for React projects.
-- [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components/get-started).
+- [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components).
 - [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting. Prettier must be installed within your project, as @shopify/eslint-plugin does not provide the dependency itself.
 - [webpack](lib/config/webpack.js): Use this for projects built by [webpack](https://webpack.js.org/).
 
@@ -132,7 +132,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [jsx-prefer-fragment-wrappers](docs/rules/jsx-prefer-fragment-wrappers.md): Disallow useless wrapping elements in favour of fragment shorthand in JSX.
 - [no-namespace-imports](docs/rules/no-namespace-imports.md): Prevent namespace import declarations.
 - [no-useless-computed-properties](docs/rules/no-useless-computed-properties.md): Prevent the usage of unnecessary computed properties.
-- [polaris-no-bare-stack-item](docs/rules/polaris-no-bare-stack-item.md): Disallow the use of Polaris’s `Stack.Item` without any custom props.
+- [polaris-no-bare-stack-item](docs/rules/polaris-no-bare-stack-item.md): Disallow the use of Polaris’s `LegacyStack.Item` without any custom props.
 - [polaris-prefer-sectioned-prop](docs/rules/polaris-prefer-sectioned-prop.md): Prefer the use of the `sectioned` props in Polaris components instead of wrapping all contents in a `Section` component.
 - [prefer-class-properties](docs/rules/prefer-class-properties.md): Prefer class properties to assignment of literals in constructors.
 - [prefer-early-return](docs/rules/prefer-early-return.md): Prefer early returns over full-body conditional wrapping in function declarations.

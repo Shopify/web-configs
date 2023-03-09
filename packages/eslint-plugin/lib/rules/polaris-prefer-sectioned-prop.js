@@ -1,6 +1,6 @@
 const {polarisComponentFromJSX, docsUrl} = require('../utilities');
 
-const COMPONENTS_WITH_SECTIONED_PROP = ['Popover', 'Card', 'Layout'];
+const COMPONENTS_WITH_SECTIONED_PROP = ['Popover', 'LegacyCard', 'Layout'];
 
 module.exports = {
   meta: {
