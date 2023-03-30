@@ -1,5 +1,11 @@
 # Changelog
 
+## 42.1.0
+
+### Minor Changes
+
+- [#371](https://github.com/Shopify/web-configs/pull/371) [`3e31042`](https://github.com/Shopify/web-configs/commit/3e310423bdc8cf130ec6c6a3992193e52de3b387) Thanks [@laurkim](https://github.com/laurkim)! - Updated component URLs for polaris.shopify.com and updated `polaris-no-bare-stack-item` to support `LegacyStack` and `polaris-prefer-sectioned-prop` to support `LegacyCard`'
+
 ## 42.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.0.1
+
+### Patch Changes
+
+- [#375](https://github.com/Shopify/web-configs/pull/375) [`7a0dcd1`](https://github.com/Shopify/web-configs/commit/7a0dcd1d211f3985ae771174268c016ebbb240d9) Thanks [@BPScott](https://github.com/BPScott)! - Don't replace `top`/`right`/`bottom`/`left` declarations with `inset` shorthand as `inset` is only supported in iOS Safari 14.5+
+
 ## 12.0.0
 
 ### Major Changes
