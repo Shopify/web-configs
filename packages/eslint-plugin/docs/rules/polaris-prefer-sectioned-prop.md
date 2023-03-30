@@ -6,6 +6,7 @@ Polaris provides a convenience `sectioned` prop for some components that wraps t
 
 This rule currently Require the use of the `sectioned` prop over the `Section` subcomponent for the following components:
 
+* [`Card`](https://polaris.shopify.com/components/deprecated/card)
 * [`LegacyCard`](https://polaris.shopify.com/components/layout-and-structure/legacy-card)
 * [`Popover`](https://polaris.shopify.com/components/overlays/popover)
 * [`Layout`](https://polaris.shopify.com/components/layout-and-structure/layout)
@@ -15,8 +16,9 @@ This rule only takes effect when the `Section` subcomponent is the only top-leve
 The following patterns are considered warnings:
 
 ```js
-import {LegacyCard, Popover, Layout} from '@shopify/polaris';
+import {Card, LegacyCard, Popover, Layout} from '@shopify/polaris';
 
+<Card><Card.Section>Contents</Card.Section></Card>
 <LegacyCard><LegacyCard.Section>Contents</LegacyCard.Section></LegacyCard>
 <Popover><Popover.Section>Contents</Popover.Section></Popover>
 <Layout><Layout.Section>Contents</Layout.Section></Layout>
@@ -25,7 +27,13 @@ import {LegacyCard, Popover, Layout} from '@shopify/polaris';
 The following patterns are not warnings:
 
 ```js
-import {LegacyCard, Layout, Popover} from '@shopify/polaris';
+import {Card, LegacyCard, Layout, Popover} from '@shopify/polaris';
+
+<Card sectioned>Contents</Card>
+
+<Card>
+  <Card.Section subdued>Contents</Card.Section>
+</Card>
 
 <LegacyCard sectioned>Contents</LegacyCard>
 

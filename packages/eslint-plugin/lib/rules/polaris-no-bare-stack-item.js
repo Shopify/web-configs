@@ -4,7 +4,7 @@ module.exports = {
   meta: {
     docs: {
       description:
-        'Disallow the use of Polaris’s `LegacyStack.Item` without any custom props.',
+        'Disallow the use of Polaris’s `Stack.Item` and `LegacyStack.Item` without any custom props.',
       category: 'Best Practices',
       recommended: true,
       uri: docsUrl('polaris-no-bare-stack-item'),
@@ -17,13 +17,13 @@ module.exports = {
       JSXElement(node) {
         const component = polarisComponentFromJSX(node, context);
         if (
-          component === 'LegacyStack.Item' &&
+          (component === 'Stack.Item' || component === 'LegacyStack.Item') &&
           node.openingElement.attributes.length === 0
         ) {
           context.report({
             node,
             message:
-              'You don’t need to wrap content in a LegacyStack.Item unless you need to customize one of its props.',
+              'You don’t need to wrap content in a Stack.Item or LegacyStack.Item unless you need to customize one of its props.',
           });
         }
       },
