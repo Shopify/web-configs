@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/browserslist-config/README.md",
   "devDependencies": {
-    "browserslist": "^4.3.4"
+    "browserslist": "^4.21.5"
   }
 }
