@@ -2,4 +2,4 @@
 '@shopify/stylelint-plugin': major
 ---
 
-upgrade stylelint plugins to support prettier ^3
+Upgrade stylelint plugins to support prettier `3.x`. Drop support for prettier `2.x`.
