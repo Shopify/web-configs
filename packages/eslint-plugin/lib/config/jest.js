@@ -44,8 +44,6 @@ module.exports = {
     'jest/no-test-return-statement': 'error',
     // Enforce lowercase test names
     'jest/prefer-lowercase-title': ['error', {ignore: ['describe']}],
-    // Disallow importing Jest
-    'jest/no-jest-import': 'error',
     // Disallow alias methods
     'jest/no-alias-methods': 'error',
     // Disallow setup and teardown hooks
