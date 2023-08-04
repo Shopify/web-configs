@@ -15,8 +15,8 @@
     "tophat": "tophat"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.4.7",
-    "@changesets/cli": "^2.25.0",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.1",
     "@shopify/tophat": "^0.0.4",
     "@types/jest": "^26.0.24",
     "eslint": "^8.3.0",
