@@ -1,5 +1,11 @@
 # Changelog
 
+## 13.0.0
+
+### Major Changes
+
+- [#400](https://github.com/Shopify/web-configs/pull/400) [`cbfdb60`](https://github.com/Shopify/web-configs/commit/cbfdb6034d79acc7969bdd7daddf8f136e5eeb4f) Thanks [@BPScott](https://github.com/BPScott)! - Upgrade stylelint plugins to support prettier `3.x`. Drop support for prettier `2.x`.
+
 ## 12.0.1
 
 ### Patch Changes
