@@ -1,5 +1,13 @@
 # Changelog
 
+## 43.0.0
+
+### Major Changes
+
+- [#397](https://github.com/Shopify/web-configs/pull/397) [`3895e25`](https://github.com/Shopify/web-configs/commit/3895e25e62939d67082bb24dac3bd4604908b80e) Thanks [@m4thieulavoie](https://github.com/m4thieulavoie)! - Upgrade eslint plugins to support prettier `3.x`. Drop support for prettier `2.x`.
+
+- [#399](https://github.com/Shopify/web-configs/pull/399) [`b602765`](https://github.com/Shopify/web-configs/commit/b6027656af2898b054077be81bc419863a437346) Thanks [@m4thieulavoie](https://github.com/m4thieulavoie)! - upgrade @typescript-eslint and eslint plugins and drop support for node 14
+
 ## 42.1.0
 
 ### Minor Changes
