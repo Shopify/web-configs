@@ -75,7 +75,8 @@ module.exports = {
       return classNode.body.body.find((propertyNode) => {
         return (
           propertyNode.type === 'MethodDefinition' &&
-          propertyNode.key.name === 'constructor'
+          propertyNode.key.name === 'constructor' &&
+          propertyNode.value.body
         );
       });
     }
