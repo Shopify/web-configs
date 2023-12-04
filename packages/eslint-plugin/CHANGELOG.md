@@ -1,5 +1,11 @@
 # Changelog
 
+## 44.0.0
+
+### Major Changes
+
+- [#409](https://github.com/Shopify/web-configs/pull/409) [`4fd9e99`](https://github.com/Shopify/web-configs/commit/4fd9e991d2d94252210890c8f6af06902099cac4) Thanks [@jas7457](https://github.com/jas7457)! - Change the @typescript-eslint/consistent-indexed-object-style rule to use default error settings, aka Record over index signature
+
 ## 43.0.0
 
 ### Major Changes
