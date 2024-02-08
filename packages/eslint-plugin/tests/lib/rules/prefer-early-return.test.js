@@ -6,7 +6,7 @@ const ruleTester = new RuleTester();
 
 const error = {
   message: 'Prefer an early return to a conditionally-wrapped function body',
-  type: 'BlockStatement',
+  type: 'IfStatement',
 };
 
 ruleTester.run('prefer-early-return', rule, {
@@ -142,6 +142,16 @@ ruleTester.run('prefer-early-return', rule, {
           doSomethingElse();
         }
       })`,
+      errors: [error],
+    },
+    {
+      code: `function foo() {
+        var bool = a && b;
+        if (bool) {
+          doSomething();
+          doSomethingElse();
+        }
+      }`,
       errors: [error],
     },
   ],
