@@ -32,6 +32,7 @@
     "stylelint-scss": "^5.0.1"
   },
   "peerDependencies": {
+    "prettier": ">=2.0.0",
     "stylelint": ">=15.0.0"
   },
   "devDependencies": {

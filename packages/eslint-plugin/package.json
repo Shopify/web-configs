@@ -50,7 +50,9 @@
     "pluralize": "^8.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.3.0"
+    "@babel/core": ">=7.11.0",
+    "eslint": "^8.3.0",
+    "prettier": ">=2.0.0"
   },
   "devDependencies": {
     "react": "^16.13.1",
