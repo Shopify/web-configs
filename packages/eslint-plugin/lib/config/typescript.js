@@ -187,6 +187,8 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'error',
         // Enforce consistent brace style for blocks
         '@typescript-eslint/brace-style': 'error',
+        // Enforce consistent type imports when importing a token as strictly a type vs as a runtime value
+        '@typescript-eslint/consistent-type-imports': 'error',
         // Enforces consistent usage of type assertions.
         '@typescript-eslint/consistent-type-assertions': [
           'error',
