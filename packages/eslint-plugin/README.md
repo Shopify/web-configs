@@ -117,7 +117,7 @@ A node project that will use Babel for transpilation would need the following ES
 
 ### Supported Typescript version
 
-The supported version of TypeScript is constrained by the [@typescipt-eslint parser support](https://github.com/typescript-eslint/typescript-eslint#supported-typescript-version) that is installed.
+The supported version of TypeScript is constrained by the [@typescipt-eslint parser support](https://typescript-eslint.io/users/dependency-versions/#typescript) that is installed.
 
 ## Plugin-Provided Rules
 
