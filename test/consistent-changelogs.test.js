@@ -44,6 +44,7 @@ readChangelogs().forEach(({packageChangelogPath, packageChangelog}) => {
       const headerLines = packageChangelog
         .split('\n')
         .filter(
+          // eslint-disable-next-line jest/no-conditional-in-test
           (line) => HEADER_START_REGEX.exec(line) || /## Unreleased/.exec(line),
         )
         .sort();

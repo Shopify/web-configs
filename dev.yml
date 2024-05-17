@@ -1,7 +1,7 @@
 name: web-configs
 up:
   - node:
-      version: v18.16.0
+      version: v18.20.0
       yarn: v1.22.5
 commands:
   __default__: start
