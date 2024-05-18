@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/prefer-class-properties');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
+  parser: require.resolve('@typescript-eslint/parser'),
   parserOptions: {
     ecmaVersion: 6,
   },
@@ -127,6 +127,15 @@ ruleTester.run('prefer-class-properties', rule, {
       }`,
       options: ['always'],
     },
+    {
+      code: `class Foo {
+        constructor();
+        constructor() {
+          this.foo = {[foo]: 123};
+        }
+      }`,
+      options: ['always'],
+    },
   ],
   invalid: [
     {
@@ -237,6 +246,16 @@ ruleTester.run('prefer-class-properties', rule, {
     {
       code: `class Foo {
         constructor() {
+          this['foo'] = 123;
+        }
+      }`,
+      errors: assignErrors,
+      options: ['always'],
+    },
+    {
+      code: `class Foo {
+        constructor();
+        constructor(a: number) {
           this['foo'] = 123;
         }
       }`,
