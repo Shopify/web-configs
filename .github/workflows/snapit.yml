@@ -12,7 +12,7 @@ jobs:
     name: /snapit
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout default branch
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Create snapshot
