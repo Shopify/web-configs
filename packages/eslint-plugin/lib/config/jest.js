@@ -78,7 +78,7 @@ module.exports = {
     // Disallow duplicate hooks within a `describe` block
     'jest/no-duplicate-hooks': 'error',
     // Disallow conditional logic
-    'jest/no-if': 'error',
+    'jest/no-conditional-in-test': 'error',
     // Prevent assertions that are conditional.
     'jest/no-conditional-expect': 'error',
     // Disallow export from test files
