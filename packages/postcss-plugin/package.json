@@ -31,9 +31,9 @@
     "postcss-will-change": "^4.0.1"
   },
   "devDependencies": {
-    "postcss": "^8.2.8"
+    "postcss": "^8.4.31"
   },
   "peerDependencies": {
-    "postcss": "^8.2.8"
+    "postcss": "^8.4.31"
   }
 }
