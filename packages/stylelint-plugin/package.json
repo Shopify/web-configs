@@ -29,7 +29,7 @@
     "postcss-scss": "^4.0.6",
     "stylelint-order": "^6.0.3",
     "stylelint-prettier": "^4.0.2",
-    "stylelint-scss": "^5.0.1"
+    "stylelint-scss": "^6.3.2"
   },
   "peerDependencies": {
     "stylelint": ">=15.0.0"
