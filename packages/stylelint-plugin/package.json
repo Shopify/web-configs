@@ -26,9 +26,9 @@
   "homepage": "https://github.com/Shopify/web-configs/blob/main/packages/stylelint-plugin/README.md",
   "dependencies": {
     "postcss": "^8.4.21",
-    "postcss-scss": "^4.0.6",
-    "stylelint-order": "^6.0.3",
-    "stylelint-prettier": "^4.0.2",
+    "postcss-scss": "^4.0.9",
+    "stylelint-order": "^6.0.4",
+    "stylelint-prettier": "^5.0.0",
     "stylelint-scss": "^6.3.2"
   },
   "peerDependencies": {
