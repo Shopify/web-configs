@@ -32,7 +32,7 @@
     "stylelint-scss": "^6.3.2"
   },
   "peerDependencies": {
-    "stylelint": ">=15.0.0"
+    "stylelint": ">=16.0.0"
   },
   "devDependencies": {
     "jest-preset-stylelint": "^4.2.0",
