@@ -476,11 +476,11 @@ module.exports = {
         // Require a single space or disallow whitespace after the closing brace of @if statements.
         'scss/at-if-closing-brace-space-after': 'always-intermediate',
         // Disallow leading underscore in partial names in @import.
-        'scss/at-import-no-partial-leading-underscore': true,
+        'scss/load-no-partial-leading-underscore': true,
         // Disallow unneeded `!= null` in if expressions (`@if $x != null` can be simplified to `@if $x`)
         'scss/at-if-no-null': true,
         // Specify blacklist of disallowed file extensions for partial names in @import commands.
-        'scss/at-import-partial-extension-blacklist': ['scss'],
+        'scss/at-import-partial-extension-disallowed-list': ['scss'],
         // Specify whitelist of allowed file extensions for partial names in @import commands.
         'scss/at-import-partial-extension-whitelist': null,
         // Require using `@each $key, $value in $list` instead of getting the value inside the loop
