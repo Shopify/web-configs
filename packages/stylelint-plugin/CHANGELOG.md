@@ -1,5 +1,15 @@
 # Changelog
 
+## 14.0.0
+
+### Major Changes
+
+- [#426](https://github.com/Shopify/web-configs/pull/426) [`f00d08d`](https://github.com/Shopify/web-configs/commit/f00d08df6ce494dd39eaf9dc27eb7518d6c85df0) Thanks [@kyledurand](https://github.com/kyledurand)! - Bumped all dependencies. Dropped support for sylelint@14 and stylelint@15
+
+### Patch Changes
+
+- [#428](https://github.com/Shopify/web-configs/pull/428) [`f8ce1ef`](https://github.com/Shopify/web-configs/commit/f8ce1ef339ec5215eaba0d6cc98f3533ecad9f22) Thanks [@kyledurand](https://github.com/kyledurand)! - Updated deprecated rules
+
 ## 13.0.0
 
 ### Major Changes
