@@ -141,7 +141,7 @@ module.exports = [
       //
 
       // Disallows jest snapshots.
-      '@shopify/jest/no-snapshots': 'error',
+      '@shopify/jest-no-snapshots': 'error',
     },
   },
 ];

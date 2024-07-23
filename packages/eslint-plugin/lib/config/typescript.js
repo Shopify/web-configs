@@ -337,11 +337,11 @@ module.exports = [
       'getter-return': 'off',
 
       // Prefer TypeScript enums be defined using Pascal case
-      '@shopify/typescript/prefer-pascal-case-enums': 'error',
+      '@shopify/typescript-prefer-pascal-case-enums': 'error',
       // Prefer TypeScript enums be defined using singular names
-      '@shopify/typescript/prefer-singular-enums': 'error',
+      '@shopify/typescript-prefer-singular-enums': 'error',
       // Prefer buildClientSchema for schema building.
-      '@shopify/typescript/prefer-build-client-schema': 'error',
+      '@shopify/typescript-prefer-build-client-schema': 'error',
     },
   },
 ];

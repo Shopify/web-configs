@@ -281,9 +281,9 @@ module.exports = [
       // Prevent images from being directly imported
       '@shopify/images-no-direct-imports': 'error',
       // Disallow jest allMocks methods.
-      '@shopify/jest/no-all-mocks-methods': 'off',
+      '@shopify/jest-no-all-mocks-methods': 'off',
       // Disallow jest snapshots.
-      '@shopify/jest/no-snapshots': 'off',
+      '@shopify/jest-no-snapshots': 'off',
       // Disallow complex expressions embedded in in JSX.
       '@shopify/jsx-no-complex-expressions': 'off',
       // Disallow hardcoded content in JSX.
@@ -333,13 +333,13 @@ module.exports = [
       // Prevent module imports between components.
       '@shopify/strict-component-boundaries': 'error',
       // Enforces all TypeScript enums to be in pascal case
-      '@shopify/typescript/prefer-pascal-case-enums': 'off',
+      '@shopify/typescript-prefer-pascal-case-enums': 'off',
       // Enforces all TypeScript enums to be singular
-      '@shopify/typescript/prefer-singular-enums': 'off',
+      '@shopify/typescript-prefer-singular-enums': 'off',
       // Prefer buildClientSchema for schema building.
-      '@shopify/typescript/prefer-build-client-schema': 'error',
+      '@shopify/typescript-prefer-build-client-schema': 'error',
       // Require that all dynamic imports contain a `webpackChunkName` comment.
-      '@shopify/webpack/no-unnamed-dynamic-imports': 'off',
+      '@shopify/webpack-no-unnamed-dynamic-imports': 'off',
 
       //
       // strict mode
