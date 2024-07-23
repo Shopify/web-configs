@@ -4,10 +4,9 @@ const typescriptEslintParser = require('@typescript-eslint/parser');
 const shopifyEsnextConfig = require('./esnext');
 
 module.exports = [
+  ...shopifyEsnextConfig,
+  // ...typescriptEslintPlugin.configs.typescript,
   {
-    ...shopifyEsnextConfig,
-    // ...typescriptEslintPlugin.configs.typescript,
-
     files: ['*.ts', '*.tsx'],
 
     plugins: {
