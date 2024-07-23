@@ -1,3 +1,4 @@
+const globals = require('globals');
 const jestPlugin = require('eslint-plugin-jest');
 const jestFormattingPlugin = require('eslint-plugin-jest-formatting');
 
@@ -7,7 +8,7 @@ module.exports = [
   {
     languageOptions: {
       globals: {
-        'jest/globals': true,
+        ...globals.jest,
       },
     },
 

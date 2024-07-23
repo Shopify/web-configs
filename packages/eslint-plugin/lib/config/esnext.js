@@ -1,3 +1,4 @@
+const globals = require('globals');
 const babelParser = require('@babel/eslint-parser');
 const babelEslintPlugin = require('@babel/eslint-plugin');
 const promisePlugin = require('eslint-plugin-promise');
@@ -17,7 +18,7 @@ module.exports = [
         requireConfigFile: false,
       },
       globals: {
-        es2021: true,
+        ...globals.es2021,
       },
     },
 

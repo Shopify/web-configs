@@ -1,3 +1,4 @@
+const globals = require('globals');
 const reactPlugin = require('eslint-plugin-react');
 const reactHooksPlugin = require('eslint-plugin-react-hooks');
 const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
@@ -11,10 +12,13 @@ module.exports = [
         ecmaFeatures: {jsx: true},
       },
       globals: {
-        react: {
-          version: 'detect',
-        },
-        browser: true,
+        ...globals.browser,
+      },
+    },
+
+    settings: {
+      react: {
+        version: 'detect',
       },
     },
 
