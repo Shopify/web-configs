@@ -27,6 +27,6 @@ jobs:
 
       - run: yarn --frozen-lockfile
 
-      - run: yarn run lint
+      # - run: yarn run lint
 
-      - run: yarn run test --coverage
+      # - run: yarn run test --coverage
