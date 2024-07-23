@@ -1,8 +1,8 @@
 const babelParser = require('@babel/eslint-parser');
 const babelEslintPlugin = require('@babel/eslint-plugin');
-const promisePlugin = require('promise');
-const sortClassMembersPlugin = require('sort-class-members');
-const importPlugin = require('import');
+const promisePlugin = require('eslint-plugin-promise');
+const sortClassMembersPlugin = require('eslint-plugin-sort-class-members');
+const importPlugin = require('eslint-plugin-import');
 
 const shopifyCoreConfig = require('./core');
 
