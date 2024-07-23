@@ -6,7 +6,7 @@ const shopifyEsnextConfig = require('./esnext');
 module.exports = [
   {
     ...shopifyEsnextConfig,
-    ...typescriptEslintPlugin.configs.typescript,
+    // ...typescriptEslintPlugin.configs.typescript,
 
     files: ['*.ts', '*.tsx'],
 
