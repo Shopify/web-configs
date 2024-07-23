@@ -1,10 +1,11 @@
+const globals = require('globals');
 const nodePlugin = require('eslint-plugin-node');
 
 module.exports = [
   {
     languageOptions: {
       globals: {
-        node: true,
+        ...globals.node,
       },
     },
 
