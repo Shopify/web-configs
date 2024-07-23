@@ -1,11 +1,12 @@
 const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin');
 const typescriptEslintParser = require('@typescript-eslint/parser');
+const importTypescriptConfig = require('eslint-plugin-import');
 
 const shopifyEsnextConfig = require('./esnext');
 
 module.exports = [
   ...shopifyEsnextConfig,
-  // ...typescriptEslintPlugin.configs.typescript,
+  importTypescriptConfig.configs.typescript,
   {
     files: ['**/*.ts', '**/*.tsx'],
 
