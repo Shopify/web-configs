@@ -16,10 +16,9 @@ module.exports = [
         sourceType: 'module',
         requireConfigFile: false,
       },
-    },
-
-    globals: {
-      es2021: true,
+      globals: {
+        es2021: true,
+      },
     },
 
     settings: {

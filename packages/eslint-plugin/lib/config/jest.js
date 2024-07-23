@@ -5,8 +5,10 @@ const shopifyPlugin = require('../..');
 
 module.exports = [
   {
-    globals: {
-      'jest/globals': true,
+    languageOptions: {
+      globals: {
+        'jest/globals': true,
+      },
     },
 
     plugins: {

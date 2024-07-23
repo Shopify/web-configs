@@ -6,16 +6,15 @@ const shopifyPlugin = require('../..');
 
 module.exports = [
   {
-    globals: {
-      react: {
-        version: 'detect',
-      },
-      browser: true,
-    },
-
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {jsx: true},
+      },
+      globals: {
+        react: {
+          version: 'detect',
+        },
+        browser: true,
       },
     },
 

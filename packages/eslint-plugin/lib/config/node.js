@@ -2,8 +2,10 @@ const nodePlugin = require('eslint-plugin-node');
 
 module.exports = [
   {
-    globals: {
-      node: true,
+    languageOptions: {
+      globals: {
+        node: true,
+      },
     },
 
     plugins: {
