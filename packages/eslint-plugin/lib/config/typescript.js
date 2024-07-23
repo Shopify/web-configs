@@ -7,7 +7,7 @@ module.exports = [
   ...shopifyEsnextConfig,
   // ...typescriptEslintPlugin.configs.typescript,
   {
-    files: ['*.ts', '*.tsx'],
+    files: ['**/*.ts', '**/*.tsx'],
 
     plugins: {
       '@typescript-eslint': typescriptEslintPlugin,

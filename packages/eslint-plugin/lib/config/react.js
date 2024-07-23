@@ -322,7 +322,7 @@ module.exports = [
     },
   },
   {
-    files: ['*.ts', '*.tsx'],
+    files: ['**/*.ts', '**/*.tsx'],
     rules: {
       // Disable JS specific rules
       'react/jsx-filename-extension': 'off',
@@ -337,7 +337,7 @@ module.exports = [
     },
   },
   {
-    files: ['*.test.*'],
+    files: ['**/*.test.*'],
     rules: {
       'shopify/jsx-no-hardcoded-content': 'off',
     },

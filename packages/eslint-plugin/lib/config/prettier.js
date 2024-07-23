@@ -24,7 +24,7 @@ module.exports = [
     },
   },
   {
-    files: ['*.ts', '*.tsx'],
+    files: ['**/*.ts', '**/*.tsx'],
     rules: {
       '@typescript-eslint/quotes': 'off',
       '@typescript-eslint/brace-style': 'off',

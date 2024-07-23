@@ -3,7 +3,7 @@ const typescriptEslintParser = require('@typescript-eslint/parser');
 
 module.exports = [
   {
-    files: ['*.ts', '*.tsx'],
+    files: ['**/*.ts', '**/*.tsx'],
 
     languageOptions: {
       parser: typescriptEslintParser,
