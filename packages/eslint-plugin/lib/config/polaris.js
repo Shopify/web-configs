@@ -1,4 +1,4 @@
-const shopifyPlugin = require('../..');
+const shopifyPlugin = require('../../plugin');
 
 module.exports = [
   {

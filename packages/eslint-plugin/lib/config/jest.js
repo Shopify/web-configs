@@ -2,7 +2,7 @@ const globals = require('globals');
 const jestPlugin = require('eslint-plugin-jest');
 const jestFormattingPlugin = require('eslint-plugin-jest-formatting');
 
-const shopifyPlugin = require('../..');
+const shopifyPlugin = require('../../plugin');
 
 module.exports = [
   {

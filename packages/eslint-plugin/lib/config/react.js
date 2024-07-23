@@ -3,7 +3,7 @@ const reactPlugin = require('eslint-plugin-react');
 const reactHooksPlugin = require('eslint-plugin-react-hooks');
 const jsxA11yPlugin = require('eslint-plugin-jsx-a11y');
 
-const shopifyPlugin = require('../..');
+const shopifyPlugin = require('../../plugin');
 
 module.exports = [
   {

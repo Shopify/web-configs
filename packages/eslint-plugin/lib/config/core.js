@@ -1,6 +1,6 @@
 const eslintCommentsPlugin = require('eslint-plugin-eslint-comments');
 
-const shopifyPlugin = require('../..');
+const shopifyPlugin = require('../../plugin');
 
 module.exports = [
   {
