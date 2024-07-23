@@ -1,3 +1,3 @@
-module.exports = {
-  extends: 'plugin:@shopify/core',
-};
+const shopifyCoreConfig = require('./core');
+
+module.exports = [...shopifyCoreConfig];
