@@ -1,5 +1,11 @@
 # Changelog
 
+## 46.0.0
+
+### Major Changes
+
+- [#433](https://github.com/Shopify/web-configs/pull/433) [`f09362b`](https://github.com/Shopify/web-configs/commit/f09362b9c7dcb84f1366fb6e1e7f252ffcbf72e1) Thanks [@ryanwilsonperkin](https://github.com/ryanwilsonperkin)! - Switching to Eslint flat config format for v9
+
 ## 45.0.0
 
 ### Major Changes
