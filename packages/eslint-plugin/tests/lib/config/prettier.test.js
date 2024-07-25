@@ -14,7 +14,7 @@ describe('config', () => {
       expect(
         execESLint(
           `--config ${fixtureFile(
-            'prettier-typescript/.eslintrc.js',
+            'prettier-typescript/eslint.config.js',
           )} ${fixtureFile('prettier-typescript')}`,
         ),
       ).toMatch(/Replace .*"bar".* with .*'bar'/);
@@ -34,7 +34,7 @@ describe('config', () => {
       expect(
         execESLint(
           `--config ${fixtureFile(
-            'prettier-typescript/.eslintrc.js',
+            'prettier-typescript/eslint.config.js',
           )} ${fixtureFile('prettier-config')}`,
         ),
       ).toMatch(/Delete .;./);

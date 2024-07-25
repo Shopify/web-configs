@@ -38,40 +38,47 @@ $ npm install @shopify/eslint-plugin --save-dev
 
 ## Usage
 
-Shopify’s ESLint configs come bundled in this package. In order to use them, you simply extend the relevant configuration in your project’s `.eslintrc`. For example, the following will extend the ESNext (ES2015 and later) config:
+As of version 46.0.0, this package uses Eslint's "Flat Config" format, not the legacy "eslintrc" format. To upgrade your Eslint configuration, follow the [Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide).
 
-```json
-{
-  "extends": "plugin:@shopify/esnext"
-}
+---
+
+Shopify’s ESLint configs come bundled in this package. In order to use them, you include the relevant configurations in your project’s `eslint.config.js`. For example, the following will use the ESNext (ES2015 and later) config:
+
+```js
+import shopifyEslintPlugin from '@shopify/eslint-plugin';
+
+export default [...shopifyEslintPlugin.configs.esnext];
 ```
 
-If you are working on an ES5 project, extend the ES5 version of the configuration:
+If you are working on an ES5 project, use the ES5 version of the configuration:
 
-```json
-{
-  "extends": "plugin:@shopify/es5"
-}
+```js
+import shopifyEslintPlugin from '@shopify/eslint-plugin';
+
+export default [...shopifyEslintPlugin.configs.es5];
 ```
 
-You can also add some "augmenting" configs on top of the "core" config by extending an array of linting configs. For example, the following configuration would provide a base ESNext config that is augmented by a React config:
+You can also add some "augmenting" configs on top of the "core" config by using an array of linting configs. For example, the following configuration would provide a base ESNext config that is augmented by a React config:
 
-```json
-{
-  "extends": ["plugin:@shopify/esnext", "plugin:@shopify/react"]
-}
+```js
+import shopifyEslintPlugin from '@shopify/eslint-plugin';
+
+export default [
+  ...shopifyEslintPlugin.configs.esnext,
+  ...shopifyEslintPlugin.configs.react,
+];
 ```
 
-Likewise, if you are using TypeScript and React, the following configuration extends the TypeScript base config with the React-specific rules provided by the React configuration file. To demonstrate multiple augmentations, we've also added the Prettier config, which disables rules that will conflict in projects using prettier.
+Likewise, if you are using TypeScript and React, the following configuration uses the TypeScript base config with the React-specific rules provided by the React configuration file. To demonstrate multiple augmentations, we've also added the Prettier config, which disables rules that will conflict in projects using prettier.
 
-```json
-{
-  "extends": [
-    "plugin:@shopify/typescript",
-    "plugin:@shopify/react",
-    "plugin:@shopify/prettier"
-  ]
-}
+```js
+import shopifyEslintPlugin from '@shopify/eslint-plugin';
+
+export default [
+  ...shopifyEslintPlugin.configs.typescript,
+  ...shopifyEslintPlugin.configs.react,
+  ...shopifyEslintPlugin.configs.prettier,
+];
 ```
 
 ## Provided configurations
@@ -86,21 +93,25 @@ This plugin also provides the following tool-specific configurations, which can 
 
 - [typescript-type-checking](lib/config/typescript-type-checking.js) Use this config to augment the `typescript` config to enable all TypeScript rules, including those that require type checking. These rules are slower to run and and you will need to specify a path to your tsconfig.json file in the "project" property of "parserOptions". The following example would provide all of the TypeScript rules, assuming the tsconfig.json is in the same directory as you ESlint configuration.
 
-```json
-{
-  "extends": [
-    "plugin:@shopify/typescript",
-    "plugin:@shopify/typescript-type-checking"
-  ],
-  "parserOptions": {
-    "project": "tsconfig.json"
-  }
-}
+```js
+import shopifyEslintPlugin from '@shopify/eslint-plugin';
+
+export default [
+  ...shopifyEslintPlugin.configs.typescript,
+  ...shopifyEslintPlugin.configs['typescript-type-checking'],
+  {
+    languageOptions: {
+      parserOptions: {
+        project: 'tsconfig.json',
+      },
+    },
+  },
+];
 ```
 
 - [react](lib/config/react.js): Use this for React projects.
 - [polaris](lib/config/polaris.js): Use this for projects that use [Shopify’s React Polaris components](https://polaris.shopify.com/components).
-- [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Extending this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting. Prettier must be installed within your project, as @shopify/eslint-plugin does not provide the dependency itself.
+- [prettier](lib/config/prettier.js): Use [prettier](https://github.com/prettier/prettier) for consistent formatting. Using this Shopify's prettier config will [override](https://github.com/prettier/eslint-config-prettier/blob/master/index.js) the default Shopify eslint rules in favor of prettier formatting. Prettier must be installed within your project, as @shopify/eslint-plugin does not provide the dependency itself.
 - [webpack](lib/config/webpack.js): Use this for projects built by [webpack](https://webpack.js.org/).
 
 ### node
@@ -109,10 +120,13 @@ If you are working on a node module, we also provide the [node configuration](li
 
 A node project that will use Babel for transpilation would need the following ESLint config:
 
-```json
-{
-  "extends": ["plugin:@shopify/esnext", "plugin:@shopify/node"]
-}
+```js
+import shopifyEslintPlugin from '@shopify/eslint-plugin';
+
+export default [
+  ...shopifyEslintPlugin.configs.esnext,
+  ...shopifyEslintPlugin.configs.node,
+];
 ```
 
 ### Supported Typescript version
