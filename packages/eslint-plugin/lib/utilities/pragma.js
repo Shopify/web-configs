@@ -17,7 +17,7 @@ const JS_IDENTIFIER_REGEX = /^[_$a-zA-Z][_$a-zA-Z0-9]*$/;
  */
 function getCreateClassFromContext(context) {
   let pragma = 'createReactClass';
-  // .eslintrc shared settings (https://eslint.org/docs/user-guide/configuring#adding-shared-settings)
+  // eslint.config.js shared settings (https://eslint.org/docs/user-guide/configuring#adding-shared-settings)
   if (context.settings.react && context.settings.react.createClass) {
     pragma = context.settings.react.createClass;
   }
@@ -35,7 +35,7 @@ function getCreateClassFromContext(context) {
  */
 function getFragmentFromContext(context) {
   let pragma = 'Fragment';
-  // .eslintrc shared settings (https://eslint.org/docs/user-guide/configuring#adding-shared-settings)
+  // eslint.config.js shared settings (https://eslint.org/docs/user-guide/configuring#adding-shared-settings)
   if (context.settings.react && context.settings.react.fragment) {
     pragma = context.settings.react.fragment;
   }
@@ -60,7 +60,7 @@ function getFromContext(context) {
   if (pragmaNode) {
     const matches = JSX_ANNOTATION_REGEX.exec(pragmaNode.value);
     pragma = matches[1].split('.')[0];
-    // .eslintrc shared settings (https://eslint.org/docs/user-guide/configuring#adding-shared-settings)
+    // eslint.config.js shared settings (https://eslint.org/docs/user-guide/configuring#adding-shared-settings)
   } else if (context.settings.react && context.settings.react.pragma) {
     pragma = context.settings.react.pragma;
   }

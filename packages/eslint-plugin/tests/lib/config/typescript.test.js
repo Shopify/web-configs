@@ -6,7 +6,7 @@ describe('config', () => {
       expect(
         execESLint(
           `--config ${fixtureFile(
-            'typescript-no-js/.eslintrc.js',
+            'typescript-no-js/eslint.config.js',
           )} ${fixtureFile('typescript-no-js')}`,
         ),
       ).toBe('');
@@ -15,9 +15,9 @@ describe('config', () => {
 
   it('identifies import path issues', () => {
     const esLintOutput = execESLint(
-      `--config ${fixtureFile('typescript-imports/.eslintrc.js')} ${fixtureFile(
-        'typescript-imports',
-      )}`,
+      `--config ${fixtureFile(
+        'typescript-imports/eslint.config.js',
+      )} ${fixtureFile('typescript-imports')}`,
     );
 
     expect(esLintOutput).toStrictEqual(

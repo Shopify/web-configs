@@ -5,7 +5,7 @@ describe('config', () => {
     expect(
       execESLint(
         `--ignore-pattern "**/all/build/*" --config ${fixtureFile(
-          'all/.eslintrc.js',
+          'all/eslint.config.js',
         )} ${fixtureFile('all')}`,
       ),
     ).toBe('');

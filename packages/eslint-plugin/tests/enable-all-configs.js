@@ -1,22 +1,22 @@
-module.exports = {
+const shopifyEslintPlugin = require('@shopify/eslint-plugin');
+
+module.exports = [
   // This isn't a best practice - you should only pick out the extends that you
   // care about and typescript/react implies the presence of the esnext, es5 and
   // core configs so specifying them all is not needed.
   // But it is useful for testing to prove all configs can be loaded sucessfully
-  extends: [
-    'plugin:@shopify/core',
-    'plugin:@shopify/es5',
-    'plugin:@shopify/esnext',
-    'plugin:@shopify/typescript',
+  ...shopifyEslintPlugin.configs.core,
+  ...shopifyEslintPlugin.configs.es5,
+  ...shopifyEslintPlugin.configs.esnext,
+  ...shopifyEslintPlugin.configs.typescript,
 
-    // Augmenting configs - When extending, these go after the core config
-    'plugin:@shopify/jest',
-    'plugin:@shopify/node',
-    'plugin:@shopify/polaris',
-    'plugin:@shopify/react',
-    'plugin:@shopify/webpack',
+  // Augmenting configs - When extending, these go after the core config
+  ...shopifyEslintPlugin.configs.jest,
+  ...shopifyEslintPlugin.configs.node,
+  ...shopifyEslintPlugin.configs.polaris,
+  ...shopifyEslintPlugin.configs.react,
+  ...shopifyEslintPlugin.configs.webpack,
 
-    // Prettier config - When extending, this must go last
-    'plugin:@shopify/prettier',
-  ],
-};
+  // Prettier config - When extending, this must go last
+  ...shopifyEslintPlugin.configs.prettier,
+];
