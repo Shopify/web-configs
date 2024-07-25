@@ -2,15 +2,6 @@ const shopifyEslintPlugin = require('@shopify/eslint-plugin');
 
 module.exports = [
   {
-    settings: {
-      // Workaround for bug in eslint-plugin-import for new versions of Eslint
-      // https://github.com/eslint/eslint/issues/17953
-      'import/parsers': {
-        '@babel/eslint-parser': ['.js'],
-      },
-    },
-  },
-  {
     ignores: [
       'eslint.config.js',
       'node_modules',
