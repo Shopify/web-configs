@@ -1,6 +1,6 @@
 const {spawnSync} = require('child_process');
 const path = require('path');
-const {resolve} = require('path');
+const {resolve, relative} = require('path');
 
 /**
  * Tests that report errors in multiple files may change the order of the files
@@ -12,12 +12,61 @@ describe('stylelint-plugin E2E Tests', () => {
   it('configures value-keyword-case', () => {
     const result = runStylelint('value-keyword-case.*.scss');
 
-    const expectedResult = `
-::error file=value-keyword-case.invalid.scss,line=1,col=7,endLine=1,endColumn=12,title=Stylelint problem::Expected "Value" to be "value" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-::error file=value-keyword-case.invalid.scss,line=2,col=7,endLine=2,endColumn=12,title=Stylelint problem::Expected "VALUE" to be "value" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-::error file=value-keyword-case.invalid.scss,line=5,col=10,endLine=5,endColumn=16,title=Stylelint problem::Expected "Monaco" to be "monaco" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-::error file=value-keyword-case.invalid.scss,line=6,col=18,endLine=6,endColumn=24,title=Stylelint problem::Expected "Monaco" to be "monaco" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-    `.trim();
+    const expectedResult = [
+      {
+        deprecations: [],
+        errored: true,
+        invalidOptionWarnings: [],
+        parseErrors: [],
+        source: 'value-keyword-case.invalid.scss',
+        warnings: [
+          {
+            column: 7,
+            endColumn: 12,
+            endLine: 1,
+            line: 1,
+            rule: 'value-keyword-case',
+            severity: 'error',
+            text: 'Expected "Value" to be "value" (value-keyword-case)',
+          },
+          {
+            column: 7,
+            endColumn: 12,
+            endLine: 2,
+            line: 2,
+            rule: 'value-keyword-case',
+            severity: 'error',
+            text: 'Expected "VALUE" to be "value" (value-keyword-case)',
+          },
+          {
+            column: 10,
+            endColumn: 16,
+            endLine: 5,
+            line: 5,
+            rule: 'value-keyword-case',
+            severity: 'error',
+            text: 'Expected "Monaco" to be "monaco" (value-keyword-case)',
+          },
+          {
+            column: 18,
+            endColumn: 24,
+            endLine: 6,
+            line: 6,
+            rule: 'value-keyword-case',
+            severity: 'error',
+            text: 'Expected "Monaco" to be "monaco" (value-keyword-case)',
+          },
+        ],
+      },
+      {
+        deprecations: [],
+        errored: false,
+        invalidOptionWarnings: [],
+        parseErrors: [],
+        source: 'value-keyword-case.valid.scss',
+        warnings: [],
+      },
+    ];
 
     expect(result.error).toStrictEqual(expectedResult);
     expect(result.status).toBe(2);
@@ -29,34 +78,83 @@ describe('stylelint-plugin E2E Tests', () => {
     // The trailing `${''}` is very silly, but stylelint spits out a bunch of
     // trailing whitespace and editors really want to remove that trailing
     // whitespace when saving the file
-    const expectedResult = `
-::error file=scss.invalid.scss,line=6,col=5,endLine=6,endColumn=8,title=Stylelint problem::Expected ".n3" to have no more than 2 classes (selector-max-class) - https://stylelint.io/user-guide/rules/selector-max-class
-::error file=scss.invalid.scss,line=6,col=5,endLine=6,endColumn=8,title=Stylelint problem::Expected ".n3" to have no more than 1 combinator (selector-max-combinators) - https://stylelint.io/user-guide/rules/selector-max-combinators
-::error file=scss.invalid.scss,line=16,col=12,endLine=16,endColumn=22,title=Stylelint problem::Expected "$value * 1px" instead of "#{$value}px". Consider writing "value" in terms of px originally. (scss/dimension-no-non-numeric-values) - https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dimension-no-non-numeric-values
-::error file=scss.invalid.scss,line=22,col=3,endLine=22,endColumn=8,title=Stylelint problem::Unexpected union class name with the parent selector (&) (scss/selector-no-union-class-name) - https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-no-union-class-name
-    `.trim();
+    const expectedResult = [
+      {
+        source: 'scss.invalid.scss',
+        deprecations: [],
+        invalidOptionWarnings: [],
+        parseErrors: [],
+        errored: true,
+        warnings: [
+          {
+            line: 16,
+            column: 12,
+            endLine: 16,
+            endColumn: 22,
+            rule: 'scss/dimension-no-non-numeric-values',
+            severity: 'error',
+            text: 'Expected "$value * 1px" instead of "#{$value}px". Consider writing "value" in terms of px originally. (scss/dimension-no-non-numeric-values)',
+          },
+          {
+            line: 22,
+            column: 3,
+            endLine: 22,
+            endColumn: 8,
+            rule: 'scss/selector-no-union-class-name',
+            severity: 'error',
+            text: 'Unexpected union class name with the parent selector (&) (scss/selector-no-union-class-name)',
+          },
+          {
+            line: 6,
+            column: 5,
+            endLine: 6,
+            endColumn: 8,
+            rule: 'selector-max-class',
+            severity: 'error',
+            text: 'Expected ".n3" to have no more than 2 classes (selector-max-class)',
+          },
+          {
+            line: 6,
+            column: 5,
+            endLine: 6,
+            endColumn: 8,
+            rule: 'selector-max-combinators',
+            severity: 'error',
+            text: 'Expected ".n3" to have no more than 1 combinator (selector-max-combinators)',
+          },
+        ],
+      },
+      {
+        source: 'scss.valid.scss',
+        deprecations: [],
+        invalidOptionWarnings: [],
+        parseErrors: [],
+        errored: false,
+        warnings: [],
+      },
+    ];
     expect(result.error).toStrictEqual(expectedResult);
     expect(result.status).toBe(2);
   });
 });
 
 function runStylelint(pattern) {
+  const stylelintCwd = path.resolve(__dirname, 'fixtures');
   const stylelintCmd = resolve(__dirname, `../node_modules/.bin/stylelint`);
 
-  const result = spawnSync(
-    stylelintCmd,
-    ['--custom-formatter=../../tests/formatter-github.js', pattern],
-    {
-      cwd: path.resolve(__dirname, 'fixtures'),
-    },
-  );
+  const result = spawnSync(stylelintCmd, ['--formatter=json', pattern], {
+    cwd: stylelintCwd,
+  });
 
   return {
     status: result.status,
     output: result.stdout.toString().trim(),
-    error: result.stderr
-      .toString()
-      .trim()
-      .replace(/file=.*?fixtures\//g, 'file='),
+    error: JSON.parse(result.stderr.toString().trim(), function (key, value) {
+      if (key !== 'source') {
+        return value;
+      }
+
+      return relative(stylelintCwd, value);
+    }),
   };
 }
