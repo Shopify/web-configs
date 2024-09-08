@@ -13,10 +13,10 @@ describe('stylelint-plugin E2E Tests', () => {
     const result = runStylelint('value-keyword-case.*.scss');
 
     const expectedResult = `
-::error file=value-keyword-case.invalid.scss,line=1,col=7,endLine=1,endColumn=8,title=Stylelint problem::Expected "Value" to be "value" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-::error file=value-keyword-case.invalid.scss,line=2,col=7,endLine=2,endColumn=8,title=Stylelint problem::Expected "VALUE" to be "value" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-::error file=value-keyword-case.invalid.scss,line=5,col=10,endLine=5,endColumn=11,title=Stylelint problem::Expected "Monaco" to be "monaco" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
-::error file=value-keyword-case.invalid.scss,line=6,col=18,endLine=6,endColumn=19,title=Stylelint problem::Expected "Monaco" to be "monaco" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
+::error file=value-keyword-case.invalid.scss,line=1,col=7,endLine=1,endColumn=12,title=Stylelint problem::Expected "Value" to be "value" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
+::error file=value-keyword-case.invalid.scss,line=2,col=7,endLine=2,endColumn=12,title=Stylelint problem::Expected "VALUE" to be "value" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
+::error file=value-keyword-case.invalid.scss,line=5,col=10,endLine=5,endColumn=16,title=Stylelint problem::Expected "Monaco" to be "monaco" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
+::error file=value-keyword-case.invalid.scss,line=6,col=18,endLine=6,endColumn=24,title=Stylelint problem::Expected "Monaco" to be "monaco" (value-keyword-case) [maybe fixable] - https://stylelint.io/user-guide/rules/value-keyword-case
     `.trim();
 
     expect(result.error).toStrictEqual(expectedResult);
@@ -43,9 +43,13 @@ describe('stylelint-plugin E2E Tests', () => {
 function runStylelint(pattern) {
   const stylelintCmd = resolve(__dirname, `../node_modules/.bin/stylelint`);
 
-  const result = spawnSync(stylelintCmd, ['--formatter=github', pattern], {
-    cwd: path.resolve(__dirname, 'fixtures'),
-  });
+  const result = spawnSync(
+    stylelintCmd,
+    ['--custom-formatter=../../tests/formatter-github.js', pattern],
+    {
+      cwd: path.resolve(__dirname, 'fixtures'),
+    },
+  );
 
   return {
     status: result.status,
