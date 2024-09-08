@@ -49,7 +49,7 @@ function runStylelint(pattern) {
     {
       cwd: path.resolve(__dirname, 'fixtures'),
     },
-  )
+  );
 
   return {
     status: result.status,
