@@ -3529,6 +3529,14 @@ css-tree@^2.3.1:
     mdn-data "2.0.30"
     source-map-js "^1.0.1"
 
+css-tree@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-3.0.0.tgz#079c7b87e465a28cedbc826502f9a227213db0f3"
+  integrity sha512-o88DVQ6GzsABn1+6+zo2ct801dBO5OASVyxbbvA2W20ue2puSh/VOuqUj90eUeMSX/xqGqBmOKiRQN7tJOuBXw==
+  dependencies:
+    mdn-data "2.10.0"
+    source-map-js "^1.0.1"
+
 css-what@^5.0.0:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/css-what/-/css-what-5.0.1.tgz#3efa820131f4669a8ac2408f9c32e7c7de9f4cad"
@@ -6375,11 +6383,6 @@ kleur@^4.1.4:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-4.1.4.tgz#8c202987d7e577766d039a8cd461934c01cda04d"
   integrity sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA==
 
-known-css-properties@^0.31.0:
-  version "0.31.0"
-  resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.31.0.tgz#5c8d9d8777b3ca09482b2397f6a241e5d69a1023"
-  integrity sha512-sBPIUGTNF0czz0mwGGUoKKJC8Q7On1GPbCSFPfyEsfHb2DyBG0Y4QtV+EVWpINSaiGKZblDNuF5AezxSgOhesQ==
-
 known-css-properties@^0.34.0:
   version "0.34.0"
   resolved "https://registry.yarnpkg.com/known-css-properties/-/known-css-properties-0.34.0.tgz#ccd7e9f4388302231b3f174a8b1d5b1f7b576cea"
@@ -6595,6 +6598,16 @@ mdn-data@2.0.30:
   version "2.0.30"
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.0.30.tgz#ce4df6f80af6cfbe218ecd5c552ba13c4dfa08cc"
   integrity sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==
+
+mdn-data@2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.10.0.tgz#701da407f8fbc7a42aa0ba0c149ec897daef8986"
+  integrity sha512-qq7C3EtK3yJXMwz1zAab65pjl+UhohqMOctTgcqjLOWABqmwj+me02LSsCuEUxnst9X1lCBpoE0WArGKgdGDzw==
+
+mdn-data@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.11.1.tgz#bb973c4272a446005444259fd8227d7f727dc047"
+  integrity sha512-Hdx3wmyqPFrhd6YHVuSkUK2eIGAcxR0xlndcgZqjA68yMJTbfXrjJwbgsBOsNjI7LnBIVUQnmyMVSdi/ob0GpQ==
 
 meow@^13.2.0:
   version "13.2.0"
@@ -7357,7 +7370,7 @@ postcss-media-query-parser@^0.2.3:
   resolved "https://registry.yarnpkg.com/postcss-media-query-parser/-/postcss-media-query-parser-0.2.3.tgz#27b39c6f4d94f81b1a73b8f76351c609e5cef244"
   integrity sha1-J7Ocb02U+Bsac7j3Y1HGCeXO8kQ=
 
-postcss-resolve-nested-selector@^0.1.1, postcss-resolve-nested-selector@^0.1.6:
+postcss-resolve-nested-selector@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/postcss-resolve-nested-selector/-/postcss-resolve-nested-selector-0.1.6.tgz#3d84dec809f34de020372c41b039956966896686"
   integrity sha512-0sglIs9Wmkzbr8lQwEyIzlDOOC9bGmfVKcJTaxv3vMmd3uo4o4DerC3En0bnmgceeql9BfC8hRkp7cg0fjdVqw==
@@ -7372,7 +7385,7 @@ postcss-scss@^4.0.9:
   resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-4.0.9.tgz#a03c773cd4c9623cb04ce142a52afcec74806685"
   integrity sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==
 
-postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.1.0, postcss-selector-parser@^6.1.2:
+postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz#27ecb41fb0e3b6ba7a1ec84fff347f734c7929de"
   integrity sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==
@@ -8407,15 +8420,18 @@ stylelint-prettier@^5.0.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-stylelint-scss@^6.3.2:
-  version "6.3.2"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-6.3.2.tgz#085072e774e5a31e65aa2acefaad5417a29d6ec1"
-  integrity sha512-pNk9mXOVKkQtd+SROPC9io8ISSgX+tOVPhFdBE+LaKQnJMLdWPbGKAGYv4Wmf/RrnOjkutunNTN9kKMhkdE5qA==
+stylelint-scss@^6.8.1:
+  version "6.8.1"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-6.8.1.tgz#b6554d93f2ea0bf37ffdcae571bbfaa35d79ba8a"
+  integrity sha512-al+5eRb72bKrFyVAY+CLWKUMX+k+wsDCgyooSfhISJA2exqnJq1PX1iIIpdrvhu3GtJgNJZl9/BIW6EVSMCxdg==
   dependencies:
-    known-css-properties "^0.31.0"
+    css-tree "^3.0.0"
+    is-plain-object "^5.0.0"
+    known-css-properties "^0.34.0"
+    mdn-data "^2.11.1"
     postcss-media-query-parser "^0.2.3"
-    postcss-resolve-nested-selector "^0.1.1"
-    postcss-selector-parser "^6.1.0"
+    postcss-resolve-nested-selector "^0.1.6"
+    postcss-selector-parser "^6.1.2"
     postcss-value-parser "^4.2.0"
 
 stylelint@^16.9.0:
