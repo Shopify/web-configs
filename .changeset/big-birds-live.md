@@ -1,5 +1,5 @@
 ---
-'@shopify/stylelint-plugin': patch
+'@shopify/stylelint-plugin': major
 ---
 
-Replace deprecated `at-import-partial-extension` rule with `load-partial-extension`.
+Replace deprecated `scss/at-import-partial-extension` rule with `scss/load-partial-extension`.
