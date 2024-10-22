@@ -553,7 +553,7 @@ module.exports = {
         'function-no-unknown': null,
         'scss/function-no-unknown': null,
         // Require or disallow extension in @import commands.
-        'scss/at-import-partial-extension': 'always',
+        'scss/load-partial-extension': 'always',
         // Disallow unknown at-rules. Should be used instead of stylelint's at-rule-no-unknown.
         'at-rule-no-unknown': null,
         'scss/at-rule-no-unknown': true,
