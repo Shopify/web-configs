@@ -1,5 +1,11 @@
 # Changelog
 
+## 15.0.0
+
+### Major Changes
+
+- [#438](https://github.com/Shopify/web-configs/pull/438) [`0f7fde2`](https://github.com/Shopify/web-configs/commit/0f7fde2aa5b3cdbb8514566179f108d2f8f16ebb) Thanks [@brendo](https://github.com/brendo)! - Replace deprecated `scss/at-import-partial-extension` rule with `scss/load-partial-extension`.
+
 ## 14.0.0
 
 ### Major Changes
