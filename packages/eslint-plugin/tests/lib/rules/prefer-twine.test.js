@@ -3,7 +3,6 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/prefer-twine');
 
 const ruleTester = new RuleTester();
-const parserOptions = {ecmaVersion: 6, sourceType: 'module'};
 const errors = [
   {
     type: 'ImportDeclaration',
@@ -14,11 +13,11 @@ const errors = [
 
 ruleTester.run('prefer-twine', rule, {
   valid: [
-    {code: 'import Twine from "twine";', parserOptions},
-    {code: 'import foo from "bar"', parserOptions},
+    {code: 'import Twine from "twine";'},
+    {code: 'import foo from "bar"'},
   ],
   invalid: [
-    {code: 'import Bindings from "twine";', errors, parserOptions},
-    {code: 'import foo from "twine";', errors, parserOptions},
+    {code: 'import Bindings from "twine";', errors},
+    {code: 'import foo from "twine";', errors},
   ],
 });

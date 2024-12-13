@@ -1,14 +1,17 @@
 const {RuleTester} = require('eslint');
+const babelEsLintParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/react-require-autocomplete');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
-  parserOptions: {
-    babelOptions: {
-      presets: [
-        ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
-      ],
+  languageOptions: {
+    parser: babelEsLintParser,
+    parserOptions: {
+      babelOptions: {
+        presets: [
+          ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
+        ],
+      },
     },
   },
 });

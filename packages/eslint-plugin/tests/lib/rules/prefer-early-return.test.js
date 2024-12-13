@@ -74,18 +74,9 @@ ruleTester.run('prefer-early-return', rule, {
           doSomething();
         }
       }`,
-      parserOptions: {ecmaVersion: 6},
-    },
-    {
-      code: `var foo = function() {
-        if (something) {
-          doSomething();
-        }
-      }`,
     },
     {
       code: "var foo = () => 'bar'",
-      parserOptions: {ecmaVersion: 6},
     },
   ],
 
@@ -132,7 +123,6 @@ ruleTester.run('prefer-early-return', rule, {
           doSomethingElse();
         }
       }`,
-      parserOptions: {ecmaVersion: 6},
       errors: [error],
     },
     {

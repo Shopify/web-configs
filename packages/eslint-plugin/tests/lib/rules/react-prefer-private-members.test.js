@@ -1,13 +1,13 @@
 const {RuleTester} = require('eslint');
+const babelParser = require('@babel/eslint-parser');
+const typescriptParser = require('@typescript-eslint/parser');
 
 const rule = require('../../../lib/rules/react-prefer-private-members');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@typescript-eslint/parser'),
+  languageOptions: {parser: typescriptParser},
   settings: {react: {version: 'detect'}},
 });
-
-const babelParser = require.resolve('@babel/eslint-parser');
 
 function makeError({type = 'PropertyDefinition', memberName, componentName}) {
   return {
@@ -29,11 +29,11 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMember = true
         publicMethod() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
     },
     {
       code: 'class Button extends React.Component {}',
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
     },
     {
       code: `class KitchenSink extends React.Component {
@@ -61,7 +61,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         componentWillUnmount() {}
         render() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
     },
     {
       code: `class CompoundComponent extends React.Component {
@@ -70,7 +70,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         static AnotherItem = AnotherItem
         render() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
     },
     {
       code: `class NormalClass {
@@ -82,7 +82,7 @@ ruleTester.run('react-prefer-private-members', rule, {
 
       get foo() {}
     }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
     },
   ],
   invalid: [
@@ -91,7 +91,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMember = true;
         componentDidMount() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
       errors: [
         makeError({memberName: 'publicMember', componentName: 'Button'}),
       ],
@@ -102,7 +102,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         static inValid = inValid;
         render() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
       errors: [makeError({memberName: 'inValid', componentName: 'Button'})],
     },
     {
@@ -131,7 +131,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMethod() {}
         componentDidMount() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
       errors: [
         makeError({
           type: 'MethodDefinition',
@@ -145,7 +145,7 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMethod() {}
         componentDidMount() {}
       }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
       errors: [
         makeError({
           type: 'MethodDefinition',
@@ -165,7 +165,7 @@ ruleTester.run('react-prefer-private-members', rule, {
 
       get foo() {}
     }`,
-      parser: babelParser,
+      languageOptions: {parser: babelParser},
       errors: [
         makeError({
           type: 'MethodDefinition',

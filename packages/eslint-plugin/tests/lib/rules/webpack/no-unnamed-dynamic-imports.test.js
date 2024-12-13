@@ -1,9 +1,11 @@
 const {RuleTester} = require('eslint');
+const babelParser = require('@babel/eslint-parser');
+const typescriptParser = require('@typescript-eslint/parser');
 
 const rule = require('../../../../lib/rules/webpack/no-unnamed-dynamic-imports');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
+  languageOptions: {parser: babelParser},
 });
 
 const CHUNK_NAME_REQUIRED =
@@ -57,18 +59,16 @@ ruleTester.run('webpack/no-unnamed-dynamic-imports', rule, {
         ).then(bar => bar);
       }
       `,
-      parser: require.resolve('@typescript-eslint/parser'),
+      languageOptions: {parser: typescriptParser},
     },
   ],
   invalid: [
     {
       code: `function foo() { import('bar'); }`,
-      options: ['never'],
       errors: [CHUNK_NAME_REQUIRED],
     },
     {
       code: `function foo() { System.import('bar'); }`,
-      options: ['never'],
       errors: [CHUNK_NAME_REQUIRED],
     },
     {
@@ -78,7 +78,6 @@ ruleTester.run('webpack/no-unnamed-dynamic-imports', rule, {
           'bar'
         );
       `,
-      options: ['never'],
       errors: ['webpackChunkName must be in a /* */ block comment'],
     },
   ],

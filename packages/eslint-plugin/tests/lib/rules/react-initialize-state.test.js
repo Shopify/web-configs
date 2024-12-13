@@ -1,20 +1,22 @@
 const {RuleTester} = require('eslint');
+const babelParser = require('@babel/eslint-parser');
+const typescriptParser = require('@typescript-eslint/parser');
 
 const rule = require('../../../lib/rules/react-initialize-state');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
-  parserOptions: {
-    babelOptions: {
-      presets: [
-        ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
-      ],
+  languageOptions: {
+    parser: babelParser,
+    parserOptions: {
+      babelOptions: {
+        presets: [
+          ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
+        ],
+      },
     },
   },
   settings: {react: {version: 'detect'}},
 });
-
-const typeScriptParser = require.resolve('@typescript-eslint/parser');
 
 const errors = [
   {
@@ -83,37 +85,37 @@ ruleTester.run('react-initialize-state', rule, {
     },
     {
       code: 'class Button extends React.Component {}',
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: 'class Button extends React.Component<Props, {}> {}',
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: 'class Button extends React.Component<Props, never> {}',
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: 'class Button extends React.Component<Props, any> {}',
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: `class Button extends React.Component<Props, {focused: boolean}> {
         state = {focused: false};
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: `class Button extends React.Component<Props, State> {
         state = {focused: false};
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: `class Button extends React.Component<Props, State> {
         state = getState();
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: `class Button extends React.Component<Props, State> {
@@ -121,7 +123,7 @@ ruleTester.run('react-initialize-state', rule, {
           this.state = {focused: true};
         }
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: `class Button extends React.Component<Props, State> {
@@ -129,7 +131,7 @@ ruleTester.run('react-initialize-state', rule, {
           this.state = getState();
         }
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
     {
       code: `class Button extends React.Component<Props, State> {
@@ -137,7 +139,7 @@ ruleTester.run('react-initialize-state', rule, {
           (this as any).state = {};
         }
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
     },
   ],
   invalid: [
@@ -201,21 +203,21 @@ ruleTester.run('react-initialize-state', rule, {
     },
     {
       code: 'class Button extends React.Component<Props, {focused: boolean}> {}',
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
       errors,
     },
     {
       code: `class Button extends React.Component<Props, {focused: boolean}> {
         state = null;
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
       errors,
     },
     {
       code: `class Button extends React.Component<Props, State> {
         states = {focused: false};
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
       errors,
     },
     {
@@ -224,7 +226,7 @@ ruleTester.run('react-initialize-state', rule, {
           this.state = null;
         }
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
       errors,
     },
     {
@@ -233,7 +235,7 @@ ruleTester.run('react-initialize-state', rule, {
           this.states = {focused: true};
         }
       }`,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
       errors,
     },
     {
@@ -241,7 +243,7 @@ ruleTester.run('react-initialize-state', rule, {
         class Button extends React.Component<Props, State> {}
         class OtherClass {}
       `,
-      parser: typeScriptParser,
+      languageOptions: {parser: typescriptParser},
       errors,
     },
   ],

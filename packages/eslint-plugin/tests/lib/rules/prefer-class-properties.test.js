@@ -1,12 +1,10 @@
 const {RuleTester} = require('eslint');
+const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/prefer-class-properties');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
-  parserOptions: {
-    ecmaVersion: 6,
-  },
+  languageOptions: {parser: babelParser},
 });
 
 const classPropErrors = [

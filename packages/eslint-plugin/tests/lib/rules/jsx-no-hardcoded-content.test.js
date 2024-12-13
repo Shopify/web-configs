@@ -1,15 +1,18 @@
 const {RuleTester} = require('eslint');
+const babelParser = require('@babel/eslint-parser');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/jsx-no-hardcoded-content');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
-  parserOptions: {
-    babelOptions: {
-      presets: [
-        ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
-      ],
+  languageOptions: {
+    parser: babelParser,
+    parserOptions: {
+      babelOptions: {
+        presets: [
+          ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
+        ],
+      },
     },
   },
 });
@@ -47,7 +50,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {code: '<MyComponent>{true}</MyComponent>'},
     {code: '<MyComponent>{2}</MyComponent>'},
-    {code: '<MyComponent>{true}</MyComponent>'},
     {
       code: '<MyComponent>Content</MyComponent>',
       options: [allowStrings],
@@ -105,10 +107,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {
       code: "<MyComponent foo={'bar'} />",
-      options: [{...checkProps, ...allowStrings}],
-    },
-    {
-      code: '<MyComponent foo={`bar`} />',
       options: [{...checkProps, ...allowStrings}],
     },
     {

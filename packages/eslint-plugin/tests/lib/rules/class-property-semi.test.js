@@ -1,9 +1,10 @@
 const {RuleTester} = require('eslint');
+const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/class-property-semi');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
+  languageOptions: {parser: babelParser},
 });
 
 const classPropNoSemi = 'class Foo { bar = 1 }';
@@ -23,7 +24,7 @@ ruleTester.run('class-property-semi', rule, {
       options: ['always'],
     },
     {code: classStaticPropNoSemi, options: ['never']},
-    {code: classMethod, parserOptions: {ecmaVersion: 6}},
+    {code: classMethod},
   ],
   invalid: [
     {

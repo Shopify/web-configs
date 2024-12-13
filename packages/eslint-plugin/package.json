@@ -51,7 +51,7 @@
     "pluralize": "^8.0.0"
   },
   "peerDependencies": {
-    "eslint": "^8.56.0"
+    "eslint": "^9.7.0"
   },
   "devDependencies": {
     "react": "^16.13.1",
