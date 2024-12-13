@@ -55,7 +55,7 @@ module.exports = {
         if (
           !exceedsMaxReturnProperties(
             node,
-            context.getScope(),
+            context.sourceCode.getScope(node),
             MAX_RETURN_ELEMENTS,
           )
         ) {

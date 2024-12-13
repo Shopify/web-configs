@@ -25,7 +25,7 @@ module.exports = {
     }
 
     function checkClassProperty(node) {
-      const lastToken = context.getLastToken(node);
+      const lastToken = context.sourceCode.getLastToken(node);
       const hasSemicolon = isSemicolon(lastToken);
 
       if (always && !hasSemicolon) {

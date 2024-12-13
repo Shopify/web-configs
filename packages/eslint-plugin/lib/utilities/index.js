@@ -35,8 +35,8 @@ function getName(node) {
 const DEFAULT_IMPORT = Symbol('default');
 const NAMESPACE_IMPORT = Symbol('namespace');
 
-function getImportDetailsForName(name, context) {
-  const definition = findDefinition(name, context);
+function getImportDetailsForName(name, context, node) {
+  const definition = findDefinition(name, context, node);
   if (definition == null || definition.type !== 'ImportBinding') {
     return null;
   }
@@ -100,9 +100,9 @@ function normalizeSource(source, context) {
   return normalized;
 }
 
-function findDefinition(name, context) {
+function findDefinition(name, context, node) {
   let definition = null;
-  let currentScope = context.getScope();
+  let currentScope = context.sourceCode.getScope(node);
 
   while (currentScope && !definition) {
     if (currentScope.set.has(name)) {
@@ -116,11 +116,16 @@ function findDefinition(name, context) {
   return definition;
 }
 
-function polarisComponentFromJSX({openingElement}, context) {
+function polarisComponentFromJSX(node, context) {
+  const openingElement = node.openingElement;
   const isMemberExpression = openingElement.name.type === 'JSXMemberExpression';
   const importDetails = isMemberExpression
-    ? getImportDetailsForName(getRootObject(openingElement.name).name, context)
-    : getImportDetailsForName(openingElement.name.name, context);
+    ? getImportDetailsForName(
+        getRootObject(openingElement.name).name,
+        context,
+        node,
+      )
+    : getImportDetailsForName(openingElement.name.name, context, node);
 
   if (importDetails == null || importDetails.source !== '@shopify/polaris') {
     return false;

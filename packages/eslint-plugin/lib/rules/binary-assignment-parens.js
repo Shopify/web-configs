@@ -30,12 +30,12 @@ module.exports = {
     const shouldHaveParens = config === 'always';
 
     function hasParens(node) {
-      const beforeToken = context.getTokenBefore(node);
+      const beforeToken = context.sourceCode.getTokenBefore(node);
       const hasBeforeParen =
         beforeToken &&
         beforeToken.type === 'Punctuator' &&
         beforeToken.value === '(';
-      const afterToken = context.getTokenAfter(node);
+      const afterToken = context.sourceCode.getTokenAfter(node);
       const hasAfterParen =
         afterToken &&
         afterToken.type === 'Punctuator' &&
