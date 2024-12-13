@@ -1,4 +1,4 @@
-const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
+const {RuleTester} = require('eslint');
 
 const rule = require('../../../lib/rules/jsx-no-complex-expressions');
 

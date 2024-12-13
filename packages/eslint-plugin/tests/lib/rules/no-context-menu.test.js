@@ -3,12 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/no-context-menu');
 
 const ruleTester = new RuleTester({
-  parserOptions: {
-    ecmaVersion: 6,
-    ecmaFeatures: {
-      jsx: true,
-    },
-  },
+  languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}},
 });
 
 const error = {
