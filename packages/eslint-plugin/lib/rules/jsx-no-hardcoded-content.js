@@ -149,13 +149,14 @@ module.exports = {
   },
 };
 
-function getImportDetailsForJSX({openingElement}, context) {
+function getImportDetailsForJSX(node, context) {
+  const openingElement = node.openingElement;
   const isMemberExpression = openingElement.name.type === 'JSXMemberExpression';
   const searchForName = isMemberExpression
     ? openingElement.name.object.name
     : openingElement.name.name;
 
-  const importDetails = getImportDetailsForName(searchForName, context);
+  const importDetails = getImportDetailsForName(searchForName, context, node);
 
   if (importDetails == null) {
     return null;

@@ -34,7 +34,7 @@ module.exports = {
           return;
         }
 
-        const scope = context.getScope();
+        const scope = context.sourceCode.getScope(node);
         if (!['module', 'global'].includes(scope.type)) {
           context.report(
             node,
