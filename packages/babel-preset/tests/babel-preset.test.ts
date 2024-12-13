@@ -73,29 +73,23 @@ function Test() {
 const expectedTransformedSampleCode = `
 "use strict";
 
-function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
-
+function _applyDecoratedDescriptor(i, e, r, n, l) { var a = {}; return Object.keys(n).forEach(function (i) { a[i] = n[i]; }), a.enumerable = !!a.enumerable, a.configurable = !!a.configurable, ("value" in a || a.initializer) && (a.writable = !0), a = r.slice().reverse().reduce(function (r, n) { return n(i, e, r) || r; }, a), l && void 0 !== a.initializer && (a.value = a.initializer ? a.initializer.call(l) : void 0, a.initializer = void 0), void 0 === a.initializer && (Object.defineProperty(i, e, a), a = null), a; }
 function Test() {
   var _dec, _class;
-
   function uppercase() {
     return function (_target, _propertyKey, descriptor) {
       const originalMethod = descriptor.value;
-
       descriptor.value = function (...args) {
         return originalMethod.apply(this, args).toUpperCase();
       };
-
       return descriptor;
     };
   }
-
   ;
   let ExampleClass = (_dec = uppercase(), (_class = class ExampleClass {
     method() {
       return 'test';
     }
-
   }, (_applyDecoratedDescriptor(_class.prototype, "method", [_dec], Object.getOwnPropertyDescriptor(_class.prototype, "method"), _class.prototype)), _class));
   return {
     decoratorOutput: new ExampleClass().method()
