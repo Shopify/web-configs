@@ -1,5 +1,26 @@
 # Changelog
 
+## 47.0.0
+
+### Major Changes
+
+- [#444](https://github.com/Shopify/web-configs/pull/444) [`75fe8da`](https://github.com/Shopify/web-configs/commit/75fe8daf5479a00349c3048bae62d0131ec6a0e2) Thanks [@BPScott](https://github.com/BPScott)! - Replace `eslint-plugin-node` with `eslint-plugin-n`
+
+- [#445](https://github.com/Shopify/web-configs/pull/445) [`f1e02bc`](https://github.com/Shopify/web-configs/commit/f1e02bc1d0d11517ebb9bc8bf6e8c519d7f3dce4) Thanks [@BPScott](https://github.com/BPScott)! - Update plugin dependencies
+
+  - `eslint-plugin-import`: `^2.29.0`to `^2.31.0`
+  - `eslint-plugin-jest`: `^28.5.0`to `^28.9.0`
+  - `eslint-plugin-jsx-a11y`: `6.8.0` to `6.10.2`
+  - `eslint-plugin-prettier`: `^5.1.3`to`^5.2.1`
+  - `eslint-plugin-promise`: `^6.1.1`to`^7.2.1`
+  - `eslint-plugin-react`: `^7.34.1`to`^7.37.2`
+  - `eslint-plugin-react-hooks`: `^4.6.2`to`^5.1.0`
+  - `eslint-plugin-sort-class-members`: `^1.20.0` to `^1.21.0`
+
+### Minor Changes
+
+- [#442](https://github.com/Shopify/web-configs/pull/442) [`9931668`](https://github.com/Shopify/web-configs/commit/9931668a48147e8e4b7388ba62b5848a131f1c7d) Thanks [@BPScott](https://github.com/BPScott)! - Replace usage of deprecated APIs that will be removed in ESLint v9
+
 ## 46.0.0
 
 ### Major Changes
