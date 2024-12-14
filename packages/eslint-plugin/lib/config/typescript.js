@@ -1,5 +1,4 @@
-const typescriptEslintPlugin = require('@typescript-eslint/eslint-plugin');
-const typescriptEslintParser = require('@typescript-eslint/parser');
+const typescriptEslint = require('typescript-eslint');
 const importTypescriptConfig = require('eslint-plugin-import');
 
 const shopifyEsnextConfig = require('./esnext');
@@ -11,11 +10,11 @@ module.exports = [
     files: ['**/*.ts', '**/*.tsx'],
 
     plugins: {
-      '@typescript-eslint': typescriptEslintPlugin,
+      '@typescript-eslint': typescriptEslint.plugin,
     },
 
     languageOptions: {
-      parser: typescriptEslintParser,
+      parser: typescriptEslint.parser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -52,8 +51,6 @@ module.exports = [
       '@typescript-eslint/no-non-null-assertion': 'off',
       // Disallow the use of variables before they are defined.
       '@typescript-eslint/no-use-before-define': 'off',
-      // Disallows the use of require statements except in import statements (no-var-requires from TSLint)
-      '@typescript-eslint/no-var-requires': 'error',
       // Enforce the use of the keyword namespace over module to declare custom TypeScript modules. (no-internal-module from TSLint)
       '@typescript-eslint/prefer-namespace-keyword': 'off',
       // Disallow the use of type aliases. (interface-over-type-literal from TSLint)
@@ -96,18 +93,8 @@ module.exports = [
         },
       ],
       // Enforces that types will not to be used
-      '@typescript-eslint/ban-types': [
-        'error',
-        {
-          types: {
-            String: {message: 'Use string instead', fixWith: 'string'},
-            Boolean: {message: 'Use boolean instead', fixWith: 'boolean'},
-            Number: {message: 'Use number instead', fixWith: 'number'},
-            Object: {message: 'Use object instead', fixWith: 'object'},
-            Array: {message: 'Provide a more specific type'},
-          },
-        },
-      ],
+      '@typescript-eslint/no-empty-object-type': 'error',
+      '@typescript-eslint/no-wrapper-object-types': 'error',
       // Enforce camelCase naming convention and PascalCase class and interface names
       '@typescript-eslint/naming-convention': [
         'error',
@@ -158,7 +145,7 @@ module.exports = [
       // Enforce valid definition of new and constructor
       '@typescript-eslint/no-misused-new': 'error',
       // Disallows invocation of require()
-      '@typescript-eslint/no-require-imports': 'off',
+      '@typescript-eslint/no-require-imports': 'error',
       // Disallow aliasing this
       '@typescript-eslint/no-this-alias': [
         'error',
