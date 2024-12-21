@@ -1,10 +1,8 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/react-no-multiple-render-methods');
 
 const ruleTester = new RuleTester({
-  languageOptions: {parser: babelParser},
   settings: {react: {version: 'detect'}},
 });
 

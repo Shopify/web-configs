@@ -226,11 +226,6 @@ module.exports = [
       // Disallows unnecessary constraints on generic types
       '@typescript-eslint/no-unnecessary-type-constraint': 'error',
 
-      // TypeScript provides a better mechanism (explicit `this` type)
-      // for ensuring proper `this` usage in functions not assigned to
-      // object properties.
-      '@babel/no-invalid-this': 'off',
-
       // Handled by TypeScript itself
       'no-undef': 'off',
       'no-unused-expressions': 'off',

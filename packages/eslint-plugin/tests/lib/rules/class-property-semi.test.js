@@ -1,11 +1,8 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/class-property-semi');
 
-const ruleTester = new RuleTester({
-  languageOptions: {parser: babelParser},
-});
+const ruleTester = new RuleTester();
 
 const classPropNoSemi = 'class Foo { bar = 1 }';
 const classPropWithSemi = 'class Foo { bar = 1; }';

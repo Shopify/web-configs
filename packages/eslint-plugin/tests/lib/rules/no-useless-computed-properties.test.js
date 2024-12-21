@@ -1,11 +1,8 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/no-useless-computed-properties');
 
-const ruleTester = new RuleTester({
-  languageOptions: {parser: babelParser},
-});
+const ruleTester = new RuleTester();
 const message = 'Computed property is using a literal key unnecessarily.';
 
 ruleTester.run('no-useless-computed-properties', rule, {

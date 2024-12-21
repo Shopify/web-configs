@@ -1,11 +1,8 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/react-hooks-strict-return');
 
-const ruleTester = new RuleTester({
-  languageOptions: {parser: babelParser},
-});
+const ruleTester = new RuleTester();
 
 const errors = [
   {

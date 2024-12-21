@@ -1,11 +1,8 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 
 const rule = require('../../../lib/rules/no-fully-static-classes');
 
-const ruleTester = new RuleTester({
-  languageOptions: {parser: babelParser},
-});
+const ruleTester = new RuleTester();
 
 function method(name = 'foo') {
   return `${name}() {}`;

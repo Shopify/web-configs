@@ -1,20 +1,10 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/jsx-no-hardcoded-content');
 
 const ruleTester = new RuleTester({
-  languageOptions: {
-    parser: babelParser,
-    parserOptions: {
-      babelOptions: {
-        presets: [
-          ['@babel/preset-typescript', {isTSX: true, allExtensions: true}],
-        ],
-      },
-    },
-  },
+  languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}},
 });
 
 function errorsFor(component, prop) {

@@ -1,5 +1,4 @@
 const {RuleTester} = require('eslint');
-const babelParser = require('@babel/eslint-parser');
 const typescriptParser = require('@typescript-eslint/parser');
 
 const rule = require('../../../lib/rules/react-prefer-private-members');
@@ -29,11 +28,9 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMember = true
         publicMethod() {}
       }`,
-      languageOptions: {parser: babelParser},
     },
     {
       code: 'class Button extends React.Component {}',
-      languageOptions: {parser: babelParser},
     },
     {
       code: `class KitchenSink extends React.Component {
@@ -61,7 +58,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         componentWillUnmount() {}
         render() {}
       }`,
-      languageOptions: {parser: babelParser},
     },
     {
       code: `class CompoundComponent extends React.Component {
@@ -70,7 +66,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         static AnotherItem = AnotherItem
         render() {}
       }`,
-      languageOptions: {parser: babelParser},
     },
     {
       code: `class NormalClass {
@@ -82,7 +77,6 @@ ruleTester.run('react-prefer-private-members', rule, {
 
       get foo() {}
     }`,
-      languageOptions: {parser: babelParser},
     },
   ],
   invalid: [
@@ -91,7 +85,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMember = true;
         componentDidMount() {}
       }`,
-      languageOptions: {parser: babelParser},
       errors: [
         makeError({memberName: 'publicMember', componentName: 'Button'}),
       ],
@@ -102,7 +95,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         static inValid = inValid;
         render() {}
       }`,
-      languageOptions: {parser: babelParser},
       errors: [makeError({memberName: 'inValid', componentName: 'Button'})],
     },
     {
@@ -131,7 +123,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMethod() {}
         componentDidMount() {}
       }`,
-      languageOptions: {parser: babelParser},
       errors: [
         makeError({
           type: 'MethodDefinition',
@@ -145,7 +136,6 @@ ruleTester.run('react-prefer-private-members', rule, {
         publicMethod() {}
         componentDidMount() {}
       }`,
-      languageOptions: {parser: babelParser},
       errors: [
         makeError({
           type: 'MethodDefinition',
@@ -165,7 +155,6 @@ ruleTester.run('react-prefer-private-members', rule, {
 
       get foo() {}
     }`,
-      languageOptions: {parser: babelParser},
       errors: [
         makeError({
           type: 'MethodDefinition',
