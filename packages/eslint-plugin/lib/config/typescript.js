@@ -287,11 +287,6 @@ module.exports = [
       'space-infix-ops': 'off',
       '@typescript-eslint/space-infix-ops': 'error',
 
-      // TypeScript provides a better mechanism (explicit `this` type)
-      // for ensuring proper `this` usage in functions not assigned to
-      // object properties.
-      '@babel/no-invalid-this': 'off',
-
       // Handled by TypeScript itself
       'no-undef': 'off',
       'no-unused-expressions': 'off',
