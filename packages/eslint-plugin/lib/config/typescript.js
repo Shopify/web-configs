@@ -23,15 +23,6 @@ module.exports = [
     },
 
     rules: {
-      // This rule extends the base eslint/keyword-spacing rule.
-      // This version adds support for generic type parameters on function calls.
-      'keyword-spacing': 'off',
-      '@typescript-eslint/keyword-spacing': [
-        'error',
-        {before: true, after: true, overrides: {}},
-      ],
-      // Enforce one space after the colon and zero spaces before the colon of a type annotation.
-      '@typescript-eslint/type-annotation-spacing': ['error'],
       // Require explicit return types on functions and class methods
       '@typescript-eslint/explicit-function-return-type': 'off',
       // Enforce accessibility modifiers on class properties and methods. (member-access from TSLint)
@@ -94,20 +85,6 @@ module.exports = [
       '@typescript-eslint/adjacent-overload-signatures': 'error',
       // Disallow parameter properties in class constructors. (no-parameter-properties from TSLint)
       '@typescript-eslint/no-parameter-properties': 'off',
-      // Enforce a member delimiter style in interfaces and type literals.
-      '@typescript-eslint/member-delimiter-style': [
-        'error',
-        {
-          multiline: {
-            delimiter: 'semi',
-            requireLast: true,
-          },
-          singleline: {
-            delimiter: 'semi',
-            requireLast: true,
-          },
-        },
-      ],
       // Disallow the declaration of empty interfaces. (no-empty-interface from TSLint)
       '@typescript-eslint/no-empty-interface': 'off',
       // Requires using either T[] for arrays (array-type)
@@ -169,8 +146,6 @@ module.exports = [
       ],
       // Enforces naming of generic type variables
       '@typescript-eslint/generic-type-naming': 'off',
-      // Enforce consistent indentation
-      '@typescript-eslint/indent': 'off',
       // Forbids the use of classes as namespaces
       '@typescript-eslint/no-extraneous-class': [
         'error',
@@ -197,8 +172,6 @@ module.exports = [
       '@typescript-eslint/promise-function-async': 'off',
       // Bans “// @ts-ignore” comments from being used. "@ts-expect-error: some comment describing why it's disabled" is allowed
       '@typescript-eslint/ban-ts-comment': 'error',
-      // Enforce consistent brace style for blocks
-      '@typescript-eslint/brace-style': 'error',
       // Enforces consistent usage of type assertions.
       '@typescript-eslint/consistent-type-assertions': [
         'error',
@@ -206,28 +179,16 @@ module.exports = [
       ],
       // Consistent with type definition either interface or type
       '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-      // Require or disallow spacing between function identifiers and their invocations
-      '@typescript-eslint/func-call-spacing': 'error',
       // Disallow empty functions
       '@typescript-eslint/no-empty-function': 'off',
-      // Disallow unnecessary parentheses
-      '@typescript-eslint/no-extra-parens': 'error',
       // Requires Promise-like values to be handled appropriately.
       '@typescript-eslint/no-floating-promises': 'off',
       // Disallows magic numbers
       '@typescript-eslint/no-magic-numbers': 'off',
       // Prefer a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated
       '@typescript-eslint/prefer-for-of': 'error',
-      // Enforce the consistent use of either backticks, double, or single quotes
-      '@typescript-eslint/quotes': [
-        'error',
-        'single',
-        {avoidEscape: true, allowTemplateLiterals: true},
-      ],
       // Enforce giving compare argument to Array#sort
       '@typescript-eslint/require-array-sort-compare': 'off',
-      // Require or disallow semicolons instead of ASI
-      '@typescript-eslint/semi': 'error',
       // Restricts the types allowed in boolean expressions
       '@typescript-eslint/strict-boolean-expressions': 'off',
       // Sets preference level for triple slash directives versus ES6-style import declarations
@@ -277,16 +238,6 @@ module.exports = [
       // Disallows unnecessary constraints on generic types
       '@typescript-eslint/no-unnecessary-type-constraint': 'error',
 
-      // Enforce consistent spacing inside braces
-      // disabling the base rule as it can report incorrect errors
-      'object-curly-spacing': 'off',
-      '@typescript-eslint/object-curly-spacing': 'error',
-
-      // This rule is aimed at ensuring there are spaces around infix operators.
-      // disabling the base rule as it can report incorrect errors
-      'space-infix-ops': 'off',
-      '@typescript-eslint/space-infix-ops': 'error',
-
       // Handled by TypeScript itself
       'no-undef': 'off',
       'no-unused-expressions': 'off',
@@ -294,15 +245,9 @@ module.exports = [
       'no-useless-constructor': 'off',
       'no-shadow': 'off',
       'no-use-before-define': 'off',
-      semi: 'off',
-      quotes: 'off',
-      indent: 'off',
-      'brace-style': 'off',
       'require-await': 'off',
       'no-magic-numbers': 'off',
-      'no-extra-parens': 'off',
       'no-empty-function': 'off',
-      'func-call-spacing': 'off',
       '@shopify/no-fully-static-classes': 'off',
       'sort-class-members/sort-class-members': 'off',
       camelcase: 'off',
