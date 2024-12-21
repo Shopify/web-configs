@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../lib/rules/react-hooks-strict-return');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
+  parserOptions: {ecmaVersion: 'latest', sourceType: 'module'},
 });
 
 const errors = [

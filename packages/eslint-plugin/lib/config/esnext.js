@@ -1,6 +1,4 @@
 const globals = require('globals');
-const babelParser = require('@babel/eslint-parser');
-const babelEslintPlugin = require('@babel/eslint-plugin');
 const promisePlugin = require('eslint-plugin-promise');
 const sortClassMembersPlugin = require('eslint-plugin-sort-class-members');
 const importPlugin = require('eslint-plugin-import');
@@ -11,11 +9,9 @@ module.exports = [
   ...shopifyCoreConfig,
   {
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
-        ecmaVersion: '2021',
+        ecmaVersion: 'latest',
         sourceType: 'module',
-        requireConfigFile: false,
       },
       globals: {
         ...globals.es2021,
@@ -24,13 +20,9 @@ module.exports = [
 
     settings: {
       'import/ignore': ['node_modules', '\\.s?css'],
-      'import/parsers': {
-        '@babel/eslint-parser': ['.js', '.cjs', '.mjs', '.jsx'],
-      },
     },
 
     plugins: {
-      '@babel': babelEslintPlugin,
       promise: promisePlugin,
       'sort-class-members': sortClassMembersPlugin,
       import: importPlugin,
@@ -136,21 +128,6 @@ module.exports = [
       'promise/prefer-await-to-then': 'off',
       // Prefer async/await to the callback pattern
       'promise/prefer-await-to-callbacks': 'off',
-
-      //
-      // babel
-      //
-
-      // Ignores capitalized decorators (@Decorator)
-      '@babel/new-cap': ['error', {newIsCap: true, capIsNew: false}],
-      // Doesn't complain about export x from "mod"; or export * as x from "mod";
-      '@babel/object-curly-spacing': ['error', 'never'],
-      // Doesn't fail when inside class properties
-      '@babel/no-invalid-this': 'error',
-      // Doesn't fail when using do expressions or optional chaining
-      '@babel/no-unused-expressions': 'error',
-      // Rule to flag missing semicolons
-      '@babel/semi': 'error',
 
       //
       // sort-class-members
