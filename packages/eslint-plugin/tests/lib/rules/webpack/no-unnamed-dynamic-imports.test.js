@@ -3,7 +3,7 @@ const {RuleTester} = require('eslint');
 const rule = require('../../../../lib/rules/webpack/no-unnamed-dynamic-imports');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@babel/eslint-parser'),
+  parserOptions: {ecmaVersion: 'latest', sourceType: 'module'},
 });
 
 const CHUNK_NAME_REQUIRED =

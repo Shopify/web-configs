@@ -12,8 +12,6 @@ module.exports = [
       'prettier/prettier': 'error',
 
       // rules to disable to prefer prettier
-      '@babel/semi': 'off',
-      '@babel/object-curly-spacing': 'off',
       '@shopify/class-property-semi': 'off',
       '@shopify/binary-assignment-parens': 'off',
       'prefer-arrow-callback': 'off',
