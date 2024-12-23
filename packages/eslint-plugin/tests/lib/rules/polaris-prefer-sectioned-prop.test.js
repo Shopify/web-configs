@@ -1,14 +1,11 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/polaris-prefer-sectioned-prop');
 
-const ruleTester = new RuleTester();
-const parserOptions = {
-  ecmaVersion: 6,
-  sourceType: 'module',
-  ecmaFeatures: {jsx: true},
-};
+const ruleTester = new RuleTester({
+  languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}},
+});
 
 function errorsFor(component) {
   return [
@@ -27,7 +24,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card><Card.Section /></Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -35,7 +31,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard><LegacyCard.Section /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -43,7 +38,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <OtherComponent><OtherComponent.Section /></OtherComponent>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -51,7 +45,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card />;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -59,7 +52,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard />;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -67,7 +59,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card>Content</Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -75,7 +66,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard>Content</LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -83,7 +73,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card><Card.Section subdued /></Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -91,7 +80,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard><LegacyCard.Section subdued /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -99,7 +87,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card><Card.Section {...props} /></Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -107,7 +94,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard><LegacyCard.Section {...props} /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -115,7 +101,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card><Card.Other /></Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -123,7 +108,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard><LegacyCard.Other /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -131,7 +115,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card><Card.Section /><Card.Section /></Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -139,7 +122,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard><LegacyCard.Section /><LegacyCard.Section /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -147,7 +129,6 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Layout><Layout.AnnotatedSection /></Layout>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
   ],
   invalid: [
@@ -157,7 +138,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Card><Card.Section /></Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('Card'),
     },
     {
@@ -166,7 +147,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <LegacyCard><LegacyCard.Section /></LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('LegacyCard'),
     },
     {
@@ -175,7 +156,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Popover><Popover.Section /></Popover>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('Popover'),
     },
     {
@@ -184,7 +165,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Layout><Layout.Section /></Layout>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('Layout'),
     },
     {
@@ -193,7 +174,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Polaris.Card><Polaris.Card.Section /></Polaris.Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('Card'),
     },
     {
@@ -202,7 +183,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Polaris.LegacyCard><Polaris.LegacyCard.Section /></Polaris.LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('LegacyCard'),
     },
     {
@@ -211,7 +192,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Polaris.Card><Polaris.Card.Section /></Polaris.Card>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('Card'),
     },
     {
@@ -220,7 +201,7 @@ ruleTester.run('polaris-prefer-sectioned-prop', rule, {
         <Polaris.LegacyCard><Polaris.LegacyCard.Section /></Polaris.LegacyCard>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors: errorsFor('LegacyCard'),
     },
   ],

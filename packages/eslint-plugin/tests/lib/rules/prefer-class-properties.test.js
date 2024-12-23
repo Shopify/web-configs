@@ -1,10 +1,8 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const rule = require('../../../lib/rules/prefer-class-properties');
 
-const ruleTester = new RuleTester({
-  parserOptions: {ecmaVersion: 'latest', sourceType: 'module'},
-});
+const ruleTester = new RuleTester();
 
 const classPropErrors = [
   {

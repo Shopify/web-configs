@@ -1,14 +1,9 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/no-ancestor-directory-import');
 
-const ruleTester = new RuleTester({
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-  },
-});
+const ruleTester = new RuleTester();
 
 const errors = [
   {

@@ -1,13 +1,10 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
+const typescriptParser = require('@typescript-eslint/parser');
 
 const rule = require('../../../../lib/rules/typescript/prefer-build-client-schema');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@typescript-eslint/parser'),
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-  },
+  languageOptions: {parser: typescriptParser},
 });
 
 function error() {

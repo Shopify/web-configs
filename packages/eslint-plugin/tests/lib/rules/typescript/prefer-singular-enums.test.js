@@ -1,9 +1,10 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
+const typescriptParser = require('@typescript-eslint/parser');
 
 const rule = require('../../../../lib/rules/typescript/prefer-singular-enums');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@typescript-eslint/parser'),
+  languageOptions: {parser: typescriptParser},
 });
 
 function errorWithName(name) {

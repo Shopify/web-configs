@@ -1,9 +1,9 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const rule = require('../../../lib/rules/jsx-prefer-fragment-wrappers');
 
 const ruleTester = new RuleTester({
-  parserOptions: {ecmaVersion: 'latest', ecmaFeatures: {jsx: true}},
+  languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}},
 });
 
 function errorWithTagName(tagName) {

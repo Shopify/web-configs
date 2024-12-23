@@ -1,14 +1,10 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/jsx-no-hardcoded-content');
 
 const ruleTester = new RuleTester({
-  parserOptions: {
-    ecmaVersion: 'latest',
-    ecmaFeatures: {jsx: true},
-    sourceType: 'module',
-  },
+  languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}},
 });
 
 function errorsFor(component, prop) {
@@ -44,7 +40,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {code: '<MyComponent>{true}</MyComponent>'},
     {code: '<MyComponent>{2}</MyComponent>'},
-    {code: '<MyComponent>{true}</MyComponent>'},
     {
       code: '<MyComponent>Content</MyComponent>',
       options: [allowStrings],
@@ -102,10 +97,6 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
     },
     {
       code: "<MyComponent foo={'bar'} />",
-      options: [{...checkProps, ...allowStrings}],
-    },
-    {
-      code: '<MyComponent foo={`bar`} />',
       options: [{...checkProps, ...allowStrings}],
     },
     {

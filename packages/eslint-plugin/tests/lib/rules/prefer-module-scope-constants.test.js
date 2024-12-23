@@ -1,4 +1,4 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const rule = require('../../../lib/rules/prefer-module-scope-constants');
 
@@ -19,28 +19,28 @@ const nonConstErrors = [
   },
 ];
 
-const supportedParserOptions = [
-  {ecmaVersion: 6, sourceType: 'module'},
-  {ecmaVersion: 6, sourceType: 'script'},
+const supportedLanguageOptions = [
+  {parserOptions: {sourceType: 'module'}},
+  {parserOptions: {sourceType: 'script'}},
 ];
 
-supportedParserOptions.forEach((parserOptions) => {
+supportedLanguageOptions.forEach((languageOptions) => {
   ruleTester.run('prefer-module-scope-constants', rule, {
     valid: [
-      {code: 'const FOO = true;', parserOptions},
-      {code: 'const foo = true;', parserOptions},
-      {code: '{ const foo = true; }', parserOptions},
-      {code: 'const foo = true, FOO = true;', parserOptions},
-      {code: 'const {FOO} = bar', parserOptions},
-      {code: '{ const {FOO} = bar; }', parserOptions},
-      {code: 'function foo() { const {FOO} = bar; }', parserOptions},
-      {code: '{ let {FOO} = bar; }', parserOptions},
-      {code: 'function foo() { let {FOO} = bar; }', parserOptions},
-      {code: 'const [FOO] = bar', parserOptions},
-      {code: '{ const [FOO] = bar; }', parserOptions},
-      {code: 'function foo() { const [FOO] = bar; }', parserOptions},
-      {code: '{ let [FOO] = bar; }', parserOptions},
-      {code: 'function foo() { let [FOO] = bar; }', parserOptions},
+      {code: 'const FOO = true;', languageOptions},
+      {code: 'const foo = true;', languageOptions},
+      {code: '{ const foo = true; }', languageOptions},
+      {code: 'const foo = true, FOO = true;', languageOptions},
+      {code: 'const {FOO} = bar', languageOptions},
+      {code: '{ const {FOO} = bar; }', languageOptions},
+      {code: 'function foo() { const {FOO} = bar; }', languageOptions},
+      {code: '{ let {FOO} = bar; }', languageOptions},
+      {code: 'function foo() { let {FOO} = bar; }', languageOptions},
+      {code: 'const [FOO] = bar', languageOptions},
+      {code: '{ const [FOO] = bar; }', languageOptions},
+      {code: 'function foo() { const [FOO] = bar; }', languageOptions},
+      {code: '{ let [FOO] = bar; }', languageOptions},
+      {code: 'function foo() { let [FOO] = bar; }', languageOptions},
       {
         code: `
           const MY_VALUE = true;
@@ -49,31 +49,35 @@ supportedParserOptions.forEach((parserOptions) => {
             console.log(MY_VALUE);
           };
         `,
-        parserOptions,
+        languageOptions,
       },
     ],
     invalid: [
-      {code: 'let FOO = true;', parserOptions, errors: nonConstErrors},
-      {code: '{ let FOO = true; }', parserOptions, errors: nonConstErrors},
+      {code: 'let FOO = true;', languageOptions, errors: nonConstErrors},
+      {code: '{ let FOO = true; }', languageOptions, errors: nonConstErrors},
       {
         code: 'function foo() { let FOO = true; }',
-        parserOptions,
+        languageOptions,
         errors: nonConstErrors,
       },
       {
         code: 'let foo = false, FOO = true;',
-        parserOptions,
+        languageOptions,
         errors: nonConstErrors,
       },
-      {code: '{ const FOO = true; }', parserOptions, errors: moduleScopeErrors},
+      {
+        code: '{ const FOO = true; }',
+        languageOptions,
+        errors: moduleScopeErrors,
+      },
       {
         code: 'function foo() { const FOO = true; }',
-        parserOptions,
+        languageOptions,
         errors: moduleScopeErrors,
       },
       {
         code: '{ const foo = false, FOO = true; }',
-        parserOptions,
+        languageOptions,
         errors: moduleScopeErrors,
       },
     ],
