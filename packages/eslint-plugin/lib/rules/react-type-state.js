@@ -18,10 +18,10 @@ module.exports = {
     function looksLikeTypeScriptComponent(node) {
       return (
         isES6Component(node, context) &&
-        Boolean(node.superTypeParameters) &&
-        Boolean(node.superTypeParameters.params) &&
-        node.superTypeParameters.params.length > 0 &&
-        node.superTypeParameters.params[0].type === 'TSTypeReference'
+        Boolean(node.superTypeArguments) &&
+        Boolean(node.superTypeArguments.params) &&
+        node.superTypeArguments.params.length > 0 &&
+        node.superTypeArguments.params[0].type === 'TSTypeReference'
       );
     }
 
