@@ -1,4 +1,4 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const rule = require('../../../lib/rules/sinon-no-restricted-features');
 

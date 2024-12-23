@@ -1,10 +1,8 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const rule = require('../../../lib/rules/class-property-semi');
 
-const ruleTester = new RuleTester({
-  parserOptions: {ecmaVersion: 'latest'},
-});
+const ruleTester = new RuleTester();
 
 const classPropNoSemi = 'class Foo { bar = 1 }';
 const classPropWithSemi = 'class Foo { bar = 1; }';
@@ -23,7 +21,7 @@ ruleTester.run('class-property-semi', rule, {
       options: ['always'],
     },
     {code: classStaticPropNoSemi, options: ['never']},
-    {code: classMethod, parserOptions: {ecmaVersion: 6}},
+    {code: classMethod},
   ],
   invalid: [
     {

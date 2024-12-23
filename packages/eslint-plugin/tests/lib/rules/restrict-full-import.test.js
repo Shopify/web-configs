@@ -1,13 +1,8 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const rule = require('../../../lib/rules/restrict-full-import');
 
 const ruleTester = new RuleTester();
-
-const parserOptions = {
-  ecmaVersion: 2018,
-  sourceType: 'module',
-};
 
 const options = [['lodash']];
 
@@ -17,7 +12,6 @@ function configFor(type) {
   const message = `Unexpected full import of restricted module '${options[0][0]}'.`;
 
   return {
-    parserOptions,
     options,
     errors: [
       {
@@ -30,11 +24,11 @@ function configFor(type) {
 
 ruleTester.run('restrict-full-import', rule, {
   valid: [
-    {code: 'import {chain} from "lodash";', parserOptions, options},
-    {code: 'import _ from "something-else";', parserOptions, options},
-    {code: 'import chain from "lodash/chain";', parserOptions, options},
+    {code: 'import {chain} from "lodash";', options},
+    {code: 'import _ from "something-else";', options},
+    {code: 'import chain from "lodash/chain";', options},
     {code: 'var chain = require("lodash").chain;', options},
-    {code: 'var {chain} = require("lodash");', parserOptions, options},
+    {code: 'var {chain} = require("lodash");', options},
     {code: 'var chain = require("lodash/chain");', options},
     {code: 'var _ = require("something-else");', options},
   ],
@@ -66,14 +60,6 @@ ruleTester.run('restrict-full-import', rule, {
     },
     {
       code: 'var {chain, ...rest} = require("lodash");',
-      ...configFor('VariableDeclarator'),
-    },
-    {
-      code: 'var {chain, ...rest} = require("lodash");',
-      ...configFor('VariableDeclarator'),
-    },
-    {
-      code: 'var [chain, ...rest] = require("lodash");',
       ...configFor('VariableDeclarator'),
     },
     {

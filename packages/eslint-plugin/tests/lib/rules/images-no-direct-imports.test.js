@@ -1,14 +1,9 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/images-no-direct-imports');
 
-const ruleTester = new RuleTester({
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-  },
-});
+const ruleTester = new RuleTester();
 
 function errors(type, folderPath, filePath) {
   return [
@@ -72,7 +67,7 @@ ruleTester.run('images-no-direct-imports', rule, {
     {
       code: "import * as icon1 from './icons/icon1.svg'",
       errors: errors('ImportDeclaration', './icons', './icons/icon1.svg'),
-      filename: fixtureFile('basic-app/app/components/Foo/index.js'),
+      filename: fixtureFile('basic-app/app/components/Foo/Foo.js'),
     },
     {
       code: "export {default as icon1} from './icons/icon1.svg'",

@@ -1,14 +1,11 @@
-const {RuleTester} = require('eslint');
+const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
 const {fixtureFile} = require('../../utilities');
 const rule = require('../../../lib/rules/polaris-no-bare-stack-item');
 
-const ruleTester = new RuleTester();
-const parserOptions = {
-  ecmaVersion: 6,
-  sourceType: 'module',
-  ecmaFeatures: {jsx: true},
-};
+const ruleTester = new RuleTester({
+  languageOptions: {parserOptions: {ecmaFeatures: {jsx: true}}},
+});
 
 const errors = [
   {
@@ -26,7 +23,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <Stack>Content</Stack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -34,7 +30,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <LegacyStack>Content</LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -42,7 +37,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <Stack>Content<Stack.Item fill>More content</Stack.Item></Stack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -50,7 +44,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <LegacyStack>Content<LegacyStack.Item fill>More content</LegacyStack.Item></LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -58,7 +51,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <Stack><Stack.Item>Content</Stack.Item></Stack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -66,7 +58,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <LegacyStack><LegacyStack.Item>Content</LegacyStack.Item></LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -74,7 +65,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <Stack.Item fill>Content</Stack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
     {
       code: `
@@ -82,7 +72,6 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <LegacyStack.Item fill>Content</LegacyStack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
     },
   ],
   invalid: [
@@ -92,7 +81,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <Stack><Stack.Item>Content</Stack.Item></Stack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors,
     },
     {
@@ -101,7 +90,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <LegacyStack><LegacyStack.Item>Content</LegacyStack.Item></LegacyStack>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors,
     },
     {
@@ -110,7 +99,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <Stack.Item>Content</Stack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors,
     },
     {
@@ -119,7 +108,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <LegacyStack.Item>Content</LegacyStack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors,
     },
     {
@@ -128,7 +117,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <P.Stack.Item>Content</P.Stack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors,
     },
     {
@@ -137,7 +126,7 @@ ruleTester.run('polaris-no-bare-stack-item', rule, {
         <P.LegacyStack.Item>Content</P.LegacyStack.Item>;
       `,
       filename: fixtureFile('polaris-app/index.js'),
-      parserOptions,
+
       errors,
     },
   ],
