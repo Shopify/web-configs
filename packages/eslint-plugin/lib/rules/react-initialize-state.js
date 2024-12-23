@@ -70,24 +70,24 @@ module.exports = {
   },
 };
 
-function classHasEmptyStateType({superTypeParameters}) {
+function classHasEmptyStateType({superTypeArguments}) {
   const hasNoStateType =
-    !superTypeParameters ||
-    superTypeParameters.params.length < 2 ||
-    superTypeParameters.params[1].type === 'TSNeverKeyword' ||
-    superTypeParameters.params[1].type === 'TSAnyKeyword' ||
-    superTypeParameters.params[1].type === 'AnyTypeAnnotation';
+    !superTypeArguments ||
+    superTypeArguments.params.length < 2 ||
+    superTypeArguments.params[1].type === 'TSNeverKeyword' ||
+    superTypeArguments.params[1].type === 'TSAnyKeyword' ||
+    superTypeArguments.params[1].type === 'AnyTypeAnnotation';
 
   if (hasNoStateType) {
     return true;
   }
 
-  if (superTypeParameters.params[1].type === 'ObjectTypeAnnotation') {
-    return superTypeParameters.params[1].properties.length === 0;
+  if (superTypeArguments.params[1].type === 'ObjectTypeAnnotation') {
+    return superTypeArguments.params[1].properties.length === 0;
   }
 
-  if (superTypeParameters.params[1].type === 'TSTypeLiteral') {
-    return superTypeParameters.params[1].members.length === 0;
+  if (superTypeArguments.params[1].type === 'TSTypeLiteral') {
+    return superTypeArguments.params[1].members.length === 0;
   }
 
   return false;
