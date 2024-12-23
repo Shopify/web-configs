@@ -1,5 +1,45 @@
 # Changelog
 
+## 47.0.0
+
+### Major Changes
+
+- [#444](https://github.com/Shopify/web-configs/pull/444) [`75fe8da`](https://github.com/Shopify/web-configs/commit/75fe8daf5479a00349c3048bae62d0131ec6a0e2) Thanks [@BPScott](https://github.com/BPScott)! - Replace `eslint-plugin-node` with `eslint-plugin-n`
+
+- [#445](https://github.com/Shopify/web-configs/pull/445) [`f1e02bc`](https://github.com/Shopify/web-configs/commit/f1e02bc1d0d11517ebb9bc8bf6e8c519d7f3dce4) Thanks [@BPScott](https://github.com/BPScott)! - Update plugin dependencies
+
+  - `eslint-plugin-import`: `^2.29.0`to `^2.31.0`
+  - `eslint-plugin-jest`: `^28.5.0`to `^28.9.0`
+  - `eslint-plugin-jsx-a11y`: `6.8.0` to `6.10.2`
+  - `eslint-plugin-prettier`: `^5.1.3`to`^5.2.1`
+  - `eslint-plugin-promise`: `^6.1.1`to`^7.2.1`
+  - `eslint-plugin-react`: `^7.34.1`to`^7.37.2`
+  - `eslint-plugin-react-hooks`: `^4.6.2`to`^5.1.0`
+  - `eslint-plugin-sort-class-members`: `^1.20.0` to `^1.21.0`
+
+- [#450](https://github.com/Shopify/web-configs/pull/450) [`9c5e826`](https://github.com/Shopify/web-configs/commit/9c5e8263672d4c241cdea58e9c688094ecd8475f) Thanks [@BPScott](https://github.com/BPScott)! - Remove Babel parser and plugin.
+
+  The Babel plugin and parser are only useful when authoring JavaScript that uses syntax that has not yet reached stage 4 of the standardisation process.
+
+  We do not wish to encourage the usage of non-standard syntax in `.js` files as a default supported behaviour.
+
+  If you wish to continue to use non-standard syntax in `.js` files then you should add and configure `@babel/eslint-parser` and `@babel/eslint-plugin` yourself.
+
+  - ESLint v8's `semi` and `no-invalid-this` rules provide the behaviour that `@babel/semi`, `@babel/no-invalid-this` were introduced to solve, and thus the babel versions of these rules are no longer requried.
+  - `@babel/new-cap` exists to handle the non-standard decorator syntax.
+  - `@babel/object-curly-spacing` exists to handle non-standard `export x from "mod"` syntax.
+  - `@babel/no-unused-expressions` exists to handle non-standard "do expressions".
+
+  Remove all mentions of `@babel/*` rules in your eslint config unless you configure the babel plugin yourself.
+
+### Minor Changes
+
+- [#453](https://github.com/Shopify/web-configs/pull/453) [`a38a7ea`](https://github.com/Shopify/web-configs/commit/a38a7ea004bd83481bef4c8df683ecb5222bf8a8) Thanks [@BPScott](https://github.com/BPScott)! - Replace usage of deprecated `superTypeParameters` with `superTypeArguments`
+
+- [#451](https://github.com/Shopify/web-configs/pull/451) [`8606071`](https://github.com/Shopify/web-configs/commit/860607150911ba57bedcbc16a0e52e909b049934) Thanks [@BPScott](https://github.com/BPScott)! - Use the "latest" ecmaVersion when parsing
+
+- [#442](https://github.com/Shopify/web-configs/pull/442) [`9931668`](https://github.com/Shopify/web-configs/commit/9931668a48147e8e4b7388ba62b5848a131f1c7d) Thanks [@BPScott](https://github.com/BPScott)! - Replace usage of deprecated APIs that will be removed in ESLint v9
+
 ## 46.0.0
 
 ### Major Changes
