@@ -276,15 +276,6 @@ module.exports = [
 
       // default params
       'no-param-reassign': 'error',
-      // Rules override by the Babel plugin
-      camelcase: 'off',
-      quotes: 'off',
-      'no-unused-expressions': 'off',
-      'valid-typeof': 'off',
-      'new-cap': 'off',
-      'no-await-in-loop': 'off',
-      'object-curly-spacing': 'off',
-      'no-invalid-this': 'off',
     },
   },
 ];
