@@ -53,11 +53,7 @@ yarn # install project dependencies
 
 #### Testing your changes in a local project
 
-To try out your changes in another locally cloned project, you can use `yarn tophat <package-name-without-@shopify-prefix> <relative-path-to-project>`. Using this command rather than `yarn link` will set up a watcher let you make changes without needing to rerun any commands.
-
-Example: To test my changes to `@shopify/react-form-state` in my local project named `my-project`, I would run `yarn tophat react-form-state ../path/to/my-project`.
-
-More usage instructions on the `tophat` command can be [found here](https://github.com/Shopify/tophat-web).
+Run `/snapit` on a PR to generate a snapshot version that can be installed like any package, and install it in your local package.
 
 #### Documentation
 

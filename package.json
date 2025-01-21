@@ -11,20 +11,17 @@
     "lint": "eslint '**/*.{js,jsx,ts,tsx}' && prettier './**/*.{md,json,yml}' --check",
     "generate": "plop",
     "generate:package": "plop package && yarn plop docs",
-    "release": "changeset publish",
-    "tophat": "tophat"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.10",
-    "@shopify/tophat": "^0.0.4",
     "@types/jest": "^26.0.24",
     "eslint": "^8.56.0",
     "fs-extra": "^9.0.0",
     "glob": "^7.1.6",
     "jest": "^29.6.2",
     "plop": "^2.6.0",
-    "prettier": "^3.0.1",
-    "watchpack": "^2.2.0"
+    "prettier": "^3.0.1"
   }
 }
