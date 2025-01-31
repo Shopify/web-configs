@@ -1,10 +1,12 @@
+const {docsUrl} = require('../utilities');
+
 module.exports = {
   meta: {
     docs: {
       description: 'Disallows jest allMocks methods.',
       category: 'Best Practices',
       recommended: false,
-      uri: 'https://github.com/Shopify/web-configs/blob/main/packages/eslint-plugin/docs/rules/jest/no-all-mocks-methods.md',
+      uri: docsUrl('jest-no-all-mocks-methods'),
     },
   },
   messages: {

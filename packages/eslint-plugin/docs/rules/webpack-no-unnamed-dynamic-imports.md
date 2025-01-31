@@ -1,4 +1,4 @@
-# Enforces named dynamic webpack chunks. (`shopify/webpack/no-unnamed-dynamic-imports`)
+# Enforces named dynamic webpack chunks. (`webpack-no-unnamed-dynamic-imports`)
 
 Omiting a dynamic import's `webpackChunkName` leads to hashed JavaScript filenames being deployed to production servers.  Including a human-readable fragment in filenames makes stack traces more readable, and improves triage accuracy.
 

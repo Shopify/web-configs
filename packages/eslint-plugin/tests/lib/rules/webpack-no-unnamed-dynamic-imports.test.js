@@ -1,14 +1,14 @@
 const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 const typescriptParser = require('@typescript-eslint/parser');
 
-const rule = require('../../../../lib/rules/webpack/no-unnamed-dynamic-imports');
+const rule = require('../../../lib/rules/webpack-no-unnamed-dynamic-imports');
 
 const ruleTester = new RuleTester();
 
 const CHUNK_NAME_REQUIRED =
   'imports should have a webpackChunkName (https://webpack.js.org/api/module-methods/#import-)';
 
-ruleTester.run('webpack/no-unnamed-dynamic-imports', rule, {
+ruleTester.run('webpack-no-unnamed-dynamic-imports', rule, {
   valid: [
     {
       code: `

@@ -1,7 +1,7 @@
 const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 const typescriptParser = require('@typescript-eslint/parser');
 
-const rule = require('../../../../lib/rules/typescript/prefer-singular-enums');
+const rule = require('../../../lib/rules/typescript-prefer-singular-enums');
 
 const ruleTester = new RuleTester({
   languageOptions: {parser: typescriptParser},
@@ -14,7 +14,7 @@ function errorWithName(name) {
   };
 }
 
-ruleTester.run('prefer-singular-enums', rule, {
+ruleTester.run('typescript-prefer-singular-enums', rule, {
   valid: [
     {
       code: `enum SortOrder {MostRecent, LeastRecent, Newest, Oldest}`,

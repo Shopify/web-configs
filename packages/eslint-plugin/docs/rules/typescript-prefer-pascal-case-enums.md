@@ -1,4 +1,4 @@
-# Enforce Pascal case when naming enums. (typescript/prefer-pascal-case-enums)
+# Enforce Pascal case when naming enums. (typescript-prefer-pascal-case-enums)
 
 Provides consistency when naming [Enums](https://www.typescriptlang.org/docs/handbook/enums.html) within TypeScript code.
 

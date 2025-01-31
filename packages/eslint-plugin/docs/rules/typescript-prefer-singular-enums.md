@@ -1,4 +1,4 @@
-# Prefer singular TypeScript enums. (typescript/prefer-singular-enums)
+# Prefer singular TypeScript enums. (typescript-prefer-singular-enums)
 
 Provides consistency when naming [enums](https://www.typescriptlang.org/docs/handbook/enums.html) within TypeScript code.
 

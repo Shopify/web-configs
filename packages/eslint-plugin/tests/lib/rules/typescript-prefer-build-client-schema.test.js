@@ -1,7 +1,7 @@
 const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 const typescriptParser = require('@typescript-eslint/parser');
 
-const rule = require('../../../../lib/rules/typescript/prefer-build-client-schema');
+const rule = require('../../../lib/rules/typescript-prefer-build-client-schema');
 
 const ruleTester = new RuleTester({
   languageOptions: {parser: typescriptParser},
@@ -13,7 +13,7 @@ function error() {
   };
 }
 
-ruleTester.run('prefer-build-client-schema', rule, {
+ruleTester.run('typescript-prefer-build-client-schema', rule, {
   valid: [
     {
       code: `import {foo} from 'bar';`,

@@ -1,4 +1,4 @@
-const {docsUrl} = require('../../utilities');
+const {docsUrl} = require('../utilities');
 
 function isDynamicImport(node) {
   if (node.type !== 'CallExpression') {
@@ -52,7 +52,7 @@ module.exports = {
         'Require that all dynamic imports contain a `webpackChunkName` comment.',
       category: 'Best Practices',
       recommended: true,
-      uri: docsUrl('webpack/no-unnamed-dynamic-imports'),
+      uri: docsUrl('webpack-no-unnamed-dynamic-imports'),
     },
   },
 

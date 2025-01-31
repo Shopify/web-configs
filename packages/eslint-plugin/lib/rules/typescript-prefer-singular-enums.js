@@ -1,6 +1,6 @@
 const pluralize = require('pluralize');
 
-const {docsUrl} = require('../../utilities');
+const {docsUrl} = require('../utilities');
 
 module.exports = {
   meta: {
@@ -8,7 +8,7 @@ module.exports = {
       description: 'Prefer singular TypeScript enums.',
       category: 'Stylistic Issues',
       recommended: false,
-      uri: docsUrl('typescript/prefer-singular-enums'),
+      uri: docsUrl('typescript-prefer-singular-enums'),
     },
     fixable: null,
   },

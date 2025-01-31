@@ -1,4 +1,4 @@
-const {docsUrl} = require('../../utilities');
+const {docsUrl} = require('../utilities');
 
 module.exports = {
   meta: {
@@ -6,7 +6,7 @@ module.exports = {
       description: 'Disallows jest snapshots.',
       category: 'Best Practices',
       recommended: false,
-      uri: docsUrl('jest/no-snapshots'),
+      uri: docsUrl('jest-no-snapshots'),
     },
   },
 

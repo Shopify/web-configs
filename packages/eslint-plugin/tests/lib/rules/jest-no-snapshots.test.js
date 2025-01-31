@@ -1,6 +1,6 @@
 const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
-const rule = require('../../../../lib/rules/jest/no-snapshots');
+const rule = require('../../../lib/rules/jest-no-snapshots');
 
 const ruleTester = new RuleTester();
 function errorWithMethodName(name) {
@@ -12,7 +12,7 @@ function errorWithMethodName(name) {
   ];
 }
 
-ruleTester.run('no-snapshots', rule, {
+ruleTester.run('jest-no-snapshots', rule, {
   valid: [
     {
       code: `expect(something).toHaveProperty('something');`,
