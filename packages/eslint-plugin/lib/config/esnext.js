@@ -31,18 +31,10 @@ module.exports = [
     rules: {
       // Require braces in arrow function body
       'arrow-body-style': 'off',
-      // Require parens in arrow function arguments
-      'arrow-parens': ['error', 'always'],
-      // Require space before/after arrow function's arrow
-      'arrow-spacing': ['error', {before: true, after: true}],
       // Verify super() callings in constructors
       'constructor-super': 'error',
-      // Enforce the spacing around the * in generator functions
-      'generator-star-spacing': ['error', 'after'],
       // Disallow modifying variables of class declarations
       'no-class-assign': 'error',
-      // Disallow arrow functions where they could be confused with comparisons
-      'no-confusing-arrow': ['error', {allowParens: true}],
       // Disallow modifying variables that are declared using const
       'no-const-assign': 'error',
       // Disallow duplicate name in class members
@@ -79,18 +71,12 @@ module.exports = [
       'prefer-reflect': 'off',
       // Suggest using template literals instead of strings concatenation
       'prefer-template': 'error',
-      // Enforce spacing between rest and spread operators and their expressions
-      'rest-spread-spacing': ['error', 'never'],
       // Disallow generator functions that do not have yield
       'require-yield': 'error',
       // Sort import declarations within module
       'sort-imports': 'off',
       // Require symbol descriptions
       'symbol-description': 'error',
-      // Enforce spacing around embedded expressions of template strings
-      'template-curly-spacing': ['error', 'never'],
-      // Enforce spacing around the * in yield* expressions
-      'yield-star-spacing': ['error', {before: false, after: true}],
 
       //
       // promise

@@ -40,6 +40,8 @@ $ npm install @shopify/eslint-plugin --save-dev
 
 As of version 46.0.0, this package uses Eslint's "Flat Config" format, not the legacy "eslintrc" format. To upgrade your Eslint configuration, follow the [Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide).
 
+As of version 47.0.0, this package no longer configures formatting related fules in the `es5`, `esnext` and `typescript` configs, as ESLint [depreacated their formatting related rules](https://eslint.org/blog/2023/10/deprecating-formatting-rules/).
+
 ---
 
 Shopify’s ESLint configs come bundled in this package. In order to use them, you include the relevant configurations in your project’s `eslint.config.js`. For example, the following will use the ESNext (ES2015 and later) config:
@@ -170,3 +172,5 @@ This plugin provides the following custom rules, which are included as appropria
 ## Suggested additional configs
 
 For applications that use graphql we recommend using the `operations-recommended` preset from [`@graphql-eslint/eslint-plugin`](https://github.com/B2o5T/graphql-eslint). This is not included as part of this plugin because graphql has a large install footprint and not everybody needs it.
+
+For applications that wish to have code formatting opinions, we strongly suggest using `prettier`, and either format with `prettier`'s CLI after running eslint, or run prettier within eslint by using the `prettier` config. If you wish to diverge from this then you can configure formatting using the rules from [`@stylistic/eslint-plugin`](https://eslint.style/packages/default) package.
