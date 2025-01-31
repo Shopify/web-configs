@@ -8,10 +8,10 @@ module.exports = {
       recommended: false,
       uri: docsUrl('jest-no-all-mocks-methods'),
     },
-  },
-  messages: {
-    allMocksMethod:
-      'Do not use {{method}} or related methods that are not explicit to a single mock. Instead, clear, reset and restore mocks individually.',
+    messages: {
+      allMocksMethod:
+        'Do not use {{method}} or related methods that are not explicit to a single mock. Instead, clear, reset and restore mocks individually.',
+    },
   },
 
   create(context) {
