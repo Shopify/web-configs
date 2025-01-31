@@ -1,5 +1,139 @@
 # Changelog
 
+## 47.0.0
+
+### Major Changes
+
+- [#444](https://github.com/Shopify/web-configs/pull/444) [`75fe8da`](https://github.com/Shopify/web-configs/commit/75fe8daf5479a00349c3048bae62d0131ec6a0e2) Thanks [@BPScott](https://github.com/BPScott)! - Replace `eslint-plugin-node` with `eslint-plugin-n`
+
+- [#445](https://github.com/Shopify/web-configs/pull/445) [`f1e02bc`](https://github.com/Shopify/web-configs/commit/f1e02bc1d0d11517ebb9bc8bf6e8c519d7f3dce4) Thanks [@BPScott](https://github.com/BPScott)! - Update plugin dependencies
+
+  - `eslint-plugin-import`: `^2.29.0`to `^2.31.0`
+  - `eslint-plugin-jest`: `^28.5.0`to `^28.9.0`
+  - `eslint-plugin-jsx-a11y`: `6.8.0` to `6.10.2`
+  - `eslint-plugin-prettier`: `^5.1.3`to`^5.2.1`
+  - `eslint-plugin-promise`: `^6.1.1`to`^7.2.1`
+  - `eslint-plugin-react`: `^7.34.1`to`^7.37.2`
+  - `eslint-plugin-react-hooks`: `^4.6.2`to`^5.1.0`
+  - `eslint-plugin-sort-class-members`: `^1.20.0` to `^1.21.0`
+
+- [#457](https://github.com/Shopify/web-configs/pull/457) [`ef24642`](https://github.com/Shopify/web-configs/commit/ef24642d5d221aaf1fd3852e4cc12b19ce9b6ce0) Thanks [@BPScott](https://github.com/BPScott)! - Update typescript-eslint from `^7.9.0` to `^8.18.0`. Replace usage of the `@typescript-eslint/eslint-plugin` and `@typescript-eslint/eslint-parser` packages with using the new `typescript-eslint` package. See migration information at https://typescript-eslint.io/blog/announcing-typescript-eslint-v8.
+
+  The `@typescript-eslint/ban-types` rule has been removed and replaced with `@typescript-eslint/no-empty-object-type` and `@typescript-eslint/no-wrapper-object-types`. `@typescript-eslint/no-require-imports` is now enabled.
+
+- [#455](https://github.com/Shopify/web-configs/pull/455) [`e347da8`](https://github.com/Shopify/web-configs/commit/e347da821d4fc26a5113763be3b5662bf8081e79) Thanks [@BPScott](https://github.com/BPScott)! - Remove configuration of deprecated formatting rules.
+
+  Per https://eslint.org/blog/2023/10/deprecating-formatting-rules/ and https://typescript-eslint.io/blog/deprecating-formatting-rules several formatting related rules have been deprecated from `eslint` core and `typescript-eslint` and moved into `@stylistic/eslint-plugin`. These rules are removed in typescript-eslint v8 (released) and probably eslint v10 (unreleased).
+
+  To prepare for future updates we are removing our configuration of these rules. We recommend that you use Prettier (https://prettier.io/) for formatting considerations - either by running it in parallel with ESLint or as part of ESLint through using `eslint-plugin-prettier` via the `prettier` config provided by `@shopify/eslint-plugin`. If you do not wish to use Prettier, then we suggest you configure rules from `@stylistic/eslint-plugin` (https://eslint.style/packages/default).
+
+  Note that if you already use the `prettier` config then this removal will have no effect as all these rules were already turned off.
+
+  Configuration for the following rules in the `es5`, `esnext` and `typescript` configs have been removed:
+
+  From `typescript-eslint`:
+
+  - @typescript-eslint/brace-style
+  - @typescript-eslint/func-call-spacing
+  - @typescript-eslint/indent
+  - @typescript-eslint/keyword-spacing
+  - @typescript-eslint/member-delimiter-style
+  - @typescript-eslint/no-extra-parens
+  - @typescript-eslint/quotes
+  - @typescript-eslint/semi
+  - @typescript-eslint/space-infix-ops
+  - @typescript-eslint/type-annotation-spacing
+
+  From ESLint core:
+
+  - array-bracket-spacing
+  - arrow-parens
+  - arrow-spacing
+  - block-spacing
+  - brace-style
+  - comma-dangle
+  - comma-spacing
+  - comma-style
+  - computed-property-spacing
+  - dot-location
+  - eol-last
+  - func-call-spacing
+  - function-paren-newline
+  - generator-star-spacing
+  - indent-legacy
+  - jsx-quotes
+  - key-spacing
+  - keyword-spacing
+  - lines-around-comment
+  - lines-between-class-members
+  - max-statements-per-line
+  - new-parens
+  - newline-per-chained-call
+  - no-confusing-arrow
+  - no-extra-semi
+  - no-floating-decimal
+  - no-mixed-operators
+  - no-mixed-spaces-and-tabs
+  - no-multi-spaces
+  - no-multiple-empty-lines
+  - no-tabs
+  - no-trailing-spaces
+  - no-whitespace-before-property
+  - object-curly-spacing
+  - one-var-declaration-per-line
+  - operator-linebreak
+  - padding-line-between-statements
+  - quote-props
+  - quotes
+  - rest-spread-spacing
+  - semi
+  - semi-spacing
+  - semi-style
+  - space-before-blocks
+  - space-before-function-paren
+  - space-in-parens
+  - space-infix-ops
+  - space-unary-ops
+  - spaced-comment
+  - switch-colon-spacing
+  - template-curly-spacing
+  - template-tag-spacing
+  - wrap-iife
+  - yield-star-spacing
+
+  We retain configuration for the following rules for the moment - even though they are depreated - as prettier does not have opinions about whitespace in these cases:
+
+  - lines-between-class-members
+  - padding-line-between-statements
+  - spaced-comment
+
+- [#450](https://github.com/Shopify/web-configs/pull/450) [`9c5e826`](https://github.com/Shopify/web-configs/commit/9c5e8263672d4c241cdea58e9c688094ecd8475f) Thanks [@BPScott](https://github.com/BPScott)! - Remove Babel parser and plugin.
+
+  The Babel plugin and parser are only useful when authoring JavaScript that uses syntax that has not yet reached stage 4 of the standardisation process.
+
+  We do not wish to encourage the usage of non-standard syntax in `.js` files as a default supported behaviour.
+
+  If you wish to continue to use non-standard syntax in `.js` files then you should add and configure `@babel/eslint-parser` and `@babel/eslint-plugin` yourself.
+
+  - ESLint v8's `semi` and `no-invalid-this` rules provide the behaviour that `@babel/semi`, `@babel/no-invalid-this` were introduced to solve, and thus the babel versions of these rules are no longer requried.
+  - `@babel/new-cap` exists to handle the non-standard decorator syntax.
+  - `@babel/object-curly-spacing` exists to handle non-standard `export x from "mod"` syntax.
+  - `@babel/no-unused-expressions` exists to handle non-standard "do expressions".
+
+  Remove all mentions of `@babel/*` rules in your eslint config unless you configure the babel plugin yourself.
+
+### Minor Changes
+
+- [#460](https://github.com/Shopify/web-configs/pull/460) [`108c1cd`](https://github.com/Shopify/web-configs/commit/108c1cd91e96652577da6c6f738be78a8e27026c) Thanks [@BPScott](https://github.com/BPScott)! - Fix false positives for `prefer-module-scope-constants` rule in `*.cjs` files
+
+- [#453](https://github.com/Shopify/web-configs/pull/453) [`a38a7ea`](https://github.com/Shopify/web-configs/commit/a38a7ea004bd83481bef4c8df683ecb5222bf8a8) Thanks [@BPScott](https://github.com/BPScott)! - Replace usage of deprecated `superTypeParameters` with `superTypeArguments`
+
+- [#451](https://github.com/Shopify/web-configs/pull/451) [`8606071`](https://github.com/Shopify/web-configs/commit/860607150911ba57bedcbc16a0e52e909b049934) Thanks [@BPScott](https://github.com/BPScott)! - Use the "latest" ecmaVersion when parsing
+
+- [#454](https://github.com/Shopify/web-configs/pull/454) [`4cfd24c`](https://github.com/Shopify/web-configs/commit/4cfd24cc01929af243b99d1011d6e808a53d7999) Thanks [@BPScott](https://github.com/BPScott)! - Stop disabling rules that existed because we used their babel counterparts
+
+- [#442](https://github.com/Shopify/web-configs/pull/442) [`9931668`](https://github.com/Shopify/web-configs/commit/9931668a48147e8e4b7388ba62b5848a131f1c7d) Thanks [@BPScott](https://github.com/BPScott)! - Replace usage of deprecated APIs that will be removed in ESLint v9
+
 ## 46.0.0
 
 ### Major Changes
