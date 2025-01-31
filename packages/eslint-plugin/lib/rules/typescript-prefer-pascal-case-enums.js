@@ -1,6 +1,6 @@
 const {pascalCase} = require('change-case');
 
-const {docsUrl} = require('../../utilities');
+const {docsUrl} = require('../utilities');
 
 module.exports = {
   meta: {
@@ -8,7 +8,7 @@ module.exports = {
       description: 'Enforce Pascal case when naming enums.',
       category: 'Stylistic Issues',
       recommended: false,
-      uri: docsUrl('typescript/prefer-pascal-case-enum'),
+      uri: docsUrl('typescript-prefer-pascal-case-enum'),
     },
     fixable: null,
   },

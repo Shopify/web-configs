@@ -1,4 +1,4 @@
-# Disallows jest snapshots. (no-snapshots)
+# Disallows jest snapshots. (jest-no-snapshots)
 
 Jest’s snapshot feature allows you to assert that a value has not changed from a stored value in a previous test. The matchers `toMatchSnapshot`, `toMatchInlineSnapshot`, `toThrowErrorMatchingSnapshot` and `toThrowErrorMatchingInlineSnapshot` will generate snapshots when used inside test blocks.
 

@@ -1,4 +1,4 @@
-const {docsUrl} = require('../../utilities');
+const {docsUrl} = require('../utilities');
 
 module.exports = {
   meta: {
@@ -6,7 +6,7 @@ module.exports = {
       description: 'Prefer buildClientSchema for schema building',
       category: 'Best Practices',
       recommended: true,
-      uri: docsUrl('typescript/prefer-build-client-schema'),
+      uri: docsUrl('typescript-prefer-build-client-schema'),
     },
     fixable: null,
   },

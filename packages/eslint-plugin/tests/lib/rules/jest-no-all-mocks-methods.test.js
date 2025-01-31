@@ -1,10 +1,10 @@
 const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
 
-const rule = require('../../../../lib/rules/jest/no-all-mocks-methods');
+const rule = require('../../../lib/rules/jest-no-all-mocks-methods');
 
 const ruleTester = new RuleTester();
 
-ruleTester.run('no-all-mocks-methods', rule, {
+ruleTester.run('jest-no-all-mocks-methods', rule, {
   valid: [
     {
       code: `jest.mock()`,

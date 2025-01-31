@@ -1,4 +1,4 @@
-# Prefer buildClientSchema (typescript/prefer-build-client-schema)
+# Prefer buildClientSchema (typescript-prefer-build-client-schema)
 
 Enforces [buildClientSchema](https://graphql.org/graphql-js/utilities/#buildclientschema) to `buildSchema` for performance within TypeScript code.
 

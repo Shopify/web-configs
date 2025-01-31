@@ -1,4 +1,4 @@
-# Disallows jest allMocks methods.
+# Disallows jest allMocks methods. (jest-no-all-mocks-methods)
 
 This rule discourages the use of overly broad Jest methods such as `resetAllMocks`, `clearAllMocks`, `restoreAllMocks` and `resetModules`.
 

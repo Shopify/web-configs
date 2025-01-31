@@ -142,7 +142,7 @@ This plugin provides the following custom rules, which are included as appropria
 - [binary-assignment-parens](docs/rules/binary-assignment-parens.md): Require (or disallow) assignments of binary, boolean-producing expressions to be wrapped in parentheses.
 - [class-property-semi](docs/rules/class-property-semi.md): Require (or disallow) semicolons for class properties.
 - [images-no-direct-imports](docs/rules/images-no-direct-imports.md): Prevent images from being directly imported.
-- [jest/no-snapshots](docs/rules/jest/no-snapshots.md): Disallows jest snapshots.
+- [jest-no-snapshots](docs/rules/jest-no-snapshots.md): Disallows jest snapshots.
 - [jsx-no-complex-expressions](docs/rules/jsx-no-complex-expressions.md): Disallow complex expressions embedded in in JSX.
 - [jsx-no-hardcoded-content](docs/rules/jsx-no-hardcoded-content.md): Disallow hardcoded content in JSX.
 - [jsx-prefer-fragment-wrappers](docs/rules/jsx-prefer-fragment-wrappers.md): Disallow useless wrapping elements in favour of fragment shorthand in JSX.
@@ -164,10 +164,10 @@ This plugin provides the following custom rules, which are included as appropria
 - [sinon-no-restricted-features](docs/rules/sinon-no-restricted-features.md): Restrict the use of specified sinon features.
 - [sinon-prefer-meaningful-assertions](docs/rules/sinon-prefer-meaningful-assertions.md): Require the use of meaningful sinon assertions through sinon.assert or sinon-chai.
 - [strict-component-boundaries](docs/rules/strict-component-boundaries.md): Prevent module imports between components.
-- [typescript/prefer-pascal-case-enums](docs/rules/typescript/prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using Pascal case.
-- [typescript/prefer-singular-enums](docs/rules/typescript/prefer-singular-enums.md): Prefer TypeScript enums be singular.
-- [typescript/prefer-build-client-schema](docs/rules/typescript/prefer-build-client-schema.md): Prefer buildClientSchema for schema building.
-- [webpack/no-unnamed-dynamic-imports](docs/rules/webpack/no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
+- [typescript-prefer-pascal-case-enums](docs/rules/typescript-prefer-pascal-case-enums.md): Prefer TypeScript enums be defined using Pascal case.
+- [typescript-prefer-singular-enums](docs/rules/typescript-prefer-singular-enums.md): Prefer TypeScript enums be singular.
+- [typescript-prefer-build-client-schema](docs/rules/typescript-prefer-build-client-schema.md): Prefer buildClientSchema for schema building.
+- [webpack-no-unnamed-dynamic-imports](docs/rules/webpack-no-unnamed-dynamic-imports.md): Require that all dynamic imports contain a `webpackChunkName` comment.
 
 ## Suggested additional configs
 
