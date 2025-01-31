@@ -35,7 +35,8 @@ module.exports = {
         }
 
         const scope = context.sourceCode.getScope(node);
-        if (!['module', 'global'].includes(scope.type)) {
+
+        if (!isTopScope(scope)) {
           context.report(
             node,
             'You must place screaming snake case at module scope. If this is not meant to be a module-scoped variable, use camelcase instead.',
@@ -48,3 +49,19 @@ module.exports = {
     };
   },
 };
+
+function isTopScope(scope) {
+  if (['module', 'global'].includes(scope.type)) {
+    return true;
+  }
+
+  // CommonJS does not leak values outside of a given file. ESLint handles this
+  // by claiming the whole file is wrapped in a function scope
+  if (
+    scope.upper.block.sourceType === 'commonjs' &&
+    scope.upper.type === 'global'
+  ) {
+    return true;
+  }
+  return false;
+}

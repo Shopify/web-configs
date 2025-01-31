@@ -20,8 +20,9 @@ const nonConstErrors = [
 ];
 
 const supportedLanguageOptions = [
-  {parserOptions: {sourceType: 'module'}},
-  {parserOptions: {sourceType: 'script'}},
+  {sourceType: 'module'},
+  {sourceType: 'script'},
+  {sourceType: 'commonjs'},
 ];
 
 supportedLanguageOptions.forEach((languageOptions) => {
