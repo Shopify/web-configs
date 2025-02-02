@@ -224,6 +224,8 @@ module.exports = [
       '@typescript-eslint/consistent-indexed-object-style': 'error',
       // Disallows unnecessary constraints on generic types
       '@typescript-eslint/no-unnecessary-type-constraint': 'error',
+      // Disallow unused expressions
+      '@typescript-eslint/no-unused-expressions': 'error',
 
       // Handled by TypeScript itself
       'no-undef': 'off',
