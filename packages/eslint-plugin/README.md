@@ -40,7 +40,7 @@ $ npm install @shopify/eslint-plugin --save-dev
 
 As of version 46.0.0, this package uses Eslint's "Flat Config" format, not the legacy "eslintrc" format. To upgrade your Eslint configuration, follow the [Configuration Migration Guide](https://eslint.org/docs/latest/use/configure/migration-guide).
 
-As of version 47.0.0, this package no longer configures formatting related fules in the `es5`, `esnext` and `typescript` configs, as ESLint [depreacated their formatting related rules](https://eslint.org/blog/2023/10/deprecating-formatting-rules/).
+As of version 47.0.0, this package no longer configures formatting related rules in the `es5`, `esnext` and `typescript` configs, as ESLint [depreacated their formatting related rules](https://eslint.org/blog/2023/10/deprecating-formatting-rules/).
 
 ---
 
