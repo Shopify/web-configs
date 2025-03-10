@@ -9,6 +9,7 @@ module.exports = {
     'jsx-no-hardcoded-content': require('./lib/rules/jsx-no-hardcoded-content'),
     'jsx-prefer-fragment-wrappers': require('./lib/rules/jsx-prefer-fragment-wrappers'),
     'no-ancestor-directory-import': require('./lib/rules/no-ancestor-directory-import'),
+    'no-context-menu': require('./lib/rules/no-context-menu'),
     'no-debugger': require('./lib/rules/no-debugger'),
     'no-namespace-imports': require('./lib/rules/no-namespace-imports'),
     'no-useless-computed-properties': require('./lib/rules/no-useless-computed-properties'),
