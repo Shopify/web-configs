@@ -1,6 +1,6 @@
 {
   "name": "@shopify/eslint-plugin",
-  "version": "47.0.1",
+  "version": "48.0.0",
   "license": "MIT",
   "description": "Shopify's ESLint rules and configs.",
   "keywords": [

@@ -1,5 +1,11 @@
 # Changelog
 
+## 48.0.0
+
+### Major Changes
+
+- [#465](https://github.com/Shopify/web-configs/pull/465) [`66fb520`](https://github.com/Shopify/web-configs/commit/66fb520e9b5e02a21a7a13528756ac78de7d01fe) Thanks [@PhilippeCollin](https://github.com/PhilippeCollin)! - Add no-context-menu eslint rule
+
 ## 47.0.1
 
 ### Patch Changes
