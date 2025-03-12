@@ -278,6 +278,8 @@ module.exports = [
       '@shopify/jsx-prefer-fragment-wrappers': 'off',
       // Prefer that imports from within a directory extend to the file from where they are importing without relying on an index file.
       '@shopify/no-ancestor-directory-import': 'off',
+      // Disallow context-menu event listeners.
+      '@shopify/no-context-menu': 'error',
       // Disallow the use of debugger (without fixer to prevent autofix on save in editors)
       '@shopify/no-debugger': 'error',
       // Prevent namespace import declarations
