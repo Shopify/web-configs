@@ -1,6 +1,6 @@
 {
   "name": "@shopify/typescript-configs",
-  "version": "5.1.0",
+  "version": "5.1.1",
   "license": "MIT",
   "description": "A set of typescript configuration files that can be extended.",
   "author": "Shopify Inc.",
