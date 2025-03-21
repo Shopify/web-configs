@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.4
+
+### Patch Changes
+
+- [#468](https://github.com/Shopify/web-configs/pull/468) [`21bf8bb`](https://github.com/Shopify/web-configs/commit/21bf8bbb86d819df07893fbcd66eb1b8575eabe7) Thanks [@znja](https://github.com/znja)! - NPM provenance statements
+
 ## 1.1.0 - 2020-05-14
 
 ### Changed
