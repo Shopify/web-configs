@@ -1,4 +1,4 @@
-const {FlatRuleTester: RuleTester} = require('eslint/use-at-your-own-risk');
+const {RuleTester} = require('eslint');
 const {parser: typescriptParser} = require('typescript-eslint');
 
 const rule = require('../../../lib/rules/webpack-no-unnamed-dynamic-imports');
