@@ -2,11 +2,12 @@ name: web-configs
 up:
   - node:
       version: v22.14.0
-      yarn: v1.22.5
+      package_manager: pnpm@10.11.0
+
 commands:
   __default__: start
-  check: yarnpkg check
-  lint: yarnpkg lint
+  check: pnpm run check
+  lint: pnpm run lint
   start: echo "Running web-configs is not really a concept that makes sense."
-  test: yarnpkg test
-  generate: yarnpkg generate
+  test: pnpm run test
+  generate: pnpm run generate

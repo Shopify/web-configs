@@ -2,7 +2,6 @@
 .babelrc
 .eslintignore
 .npmignore
-yarn.lock
 config
 node_modules
 test

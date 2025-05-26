@@ -3,14 +3,11 @@
   "author": "Shopify Inc.",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --runInBand",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}' && prettier './**/*.{md,json,yml}' --check",
     "generate": "plop",
-    "generate:package": "plop package && yarn plop docs",
+    "generate:package": "plop package && plop docs",
     "release": "changeset publish"
   },
   "devDependencies": {
