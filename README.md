@@ -48,7 +48,7 @@ dev up
 
 # External Contributor - To start working on the codebase, first fork the repo, then clone it
 git clone git@github.com:{your-username}/web-configs.git # replace {your-username} with your GitHub handle
-yarn # install project dependencies
+pnpm i # install project dependencies
 ```
 
 ##### What is `dev`?
@@ -67,7 +67,7 @@ If your change affects the public API of any packages within this repository (i.
 
 The packages in this repository are used in mission-critical production scenarios. As such, we do not merge any untested code.
 
-To run the full test suite, simply run `dev test` or `yarn test`.
+To run the full test suite, simply run `dev test` or `pnpm run test`.
 
 ### Releasing
 

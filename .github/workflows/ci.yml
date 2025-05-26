@@ -19,14 +19,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+          cache: 'pnpm'
 
-      - run: yarn --frozen-lockfile
+      - run: pnpm install
 
-      - run: yarn run lint
+      - run: pnpm run lint
 
-      - run: yarn run test --coverage
+      - run: pnpm run test --coverage
