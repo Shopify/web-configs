@@ -42,7 +42,7 @@ function isExplicitComponent(node, context) {
   // FIXME: Remove try/catch when https://github.com/eslint/eslint-scope/issues/27 is implemented.
   try {
     comment = sourceCode.getJSDocComment(node);
-  } catch (err) {
+  } catch {
     comment = null;
   }
 
@@ -56,7 +56,7 @@ function isExplicitComponent(node, context) {
       unwrap: true,
       tags: ['extends', 'augments'],
     });
-  } catch (err) {
+  } catch {
     // handle a bug in the archived `doctrine`, see #2596
     return false;
   }
