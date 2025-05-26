@@ -1,5 +1,13 @@
 # Changelog
 
+## 49.0.0
+
+### Major Changes
+
+- [#473](https://github.com/Shopify/web-configs/pull/473) [`9d51688`](https://github.com/Shopify/web-configs/commit/9d51688051d2efe7af73d24e177b942370857b43) Thanks [@BPScott](https://github.com/BPScott)! - Update minimum eslint version to v9.27.0.
+
+  When updating, you must also update the version of eslint installed as a sibling of `@shopify/eslint-plugin` to be at least v9.27.0.
+
 ## 48.0.2
 
 ### Patch Changes
