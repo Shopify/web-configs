@@ -1,11 +1,15 @@
 const typescriptEslint = require('typescript-eslint');
-const importTypescriptConfig = require('eslint-plugin-import');
+const {
+  createTypeScriptImportResolver,
+} = require('eslint-import-resolver-typescript');
 
 const shopifyEsnextConfig = require('./esnext');
 
+const typeScriptExtensions = ['.ts', '.tsx', '.cts', '.mts'];
+const allExtensions = [...typeScriptExtensions, '.js', '.jsx', '.cjs', '.mjs'];
+
 module.exports = [
   ...shopifyEsnextConfig,
-  importTypescriptConfig.configs.typescript,
   {
     files: ['**/*.ts', '**/*.tsx'],
 
@@ -13,6 +17,17 @@ module.exports = [
       '@typescript-eslint': typescriptEslint.plugin,
     },
 
+    settings: {
+      'import-x/extensions': allExtensions,
+      'import-x/external-module-folders': [
+        'node_modules',
+        'node_modules/@types',
+      ],
+      'import-x/parsers': {
+        '@typescript-eslint/parser': [...typeScriptExtensions],
+      },
+      'import-x/resolver-next': [createTypeScriptImportResolver()],
+    },
     languageOptions: {
       parser: typescriptEslint.parser,
       parserOptions: {
@@ -251,13 +266,15 @@ module.exports = [
       'no-redeclare': 'off',
 
       // Does not support TS equivalent
-      'import/no-unresolved': 'off',
+      'import-x/no-unresolved': 'off',
+      // TypeScript compilation already ensures that named imports exist in the referenced module
+      'import-x/named': 'off',
 
       // Flag overloaded methods in TS
       'no-dupe-class-members': 'off',
 
       // Flag typedef files with multiple modules with export default
-      'import/export': 'off',
+      'import-x/export': 'off',
 
       // Breaks @typescript-eslint/parser
       strict: 'off',
