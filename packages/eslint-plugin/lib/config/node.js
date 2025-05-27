@@ -52,10 +52,10 @@ module.exports = [
       // Disallow use of synchronous methods
       'n/no-sync': 'off',
       // Disallow import declarations of extraneous packages
-      // defer to import/no-extraneous-dependencies
+      // defer to import-x/no-extraneous-dependencies
       'n/no-extraneous-import': 'off',
       // Disallow require() expressions of extraneous packages
-      // defer to import/no-extraneous-dependencies
+      // defer to import-x/no-extraneous-dependencies
       'n/no-extraneous-require': 'off',
       // Enforce either module.exports or exports.
       'n/exports-style': ['error', 'module.exports'],

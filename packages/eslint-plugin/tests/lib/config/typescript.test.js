@@ -24,7 +24,7 @@ describe('config', () => {
       expect.stringContaining('3 problems (3 errors, 0 warnings)'),
     );
 
-    // import/no-cycle error
+    // import-x/no-cycle error
     expect(esLintOutput).toStrictEqual(
       expect.stringContaining('typescript-imports/check-cycle/index.ts'),
     );
@@ -32,7 +32,7 @@ describe('config', () => {
       expect.stringContaining('Dependency cycle detected'),
     );
 
-    // import/no-useless-path-segments error
+    // import-x/no-useless-path-segments error
     expect(esLintOutput).toStrictEqual(
       expect.stringContaining('typescript-imports/check-path-segment/File2.ts'),
     );
