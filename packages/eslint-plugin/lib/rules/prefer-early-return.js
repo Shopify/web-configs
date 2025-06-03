@@ -50,20 +50,20 @@ module.exports = {
     }
 
     function hasSimplifiableConditionalBody(functionBody) {
-      const body = functionBody.body;
-      return (
-        functionBody.type === 'BlockStatement' &&
-        body.length === 1 &&
-        isOffendingIfStatement(body[0])
-      );
+      if (!isBlockStatement(functionBody)) {
+        return false;
+      }
+
+      const lastStatement = getLastStatement(functionBody);
+      return Boolean(lastStatement) && isOffendingIfStatement(lastStatement);
     }
 
     function checkFunctionBody(functionNode) {
       const body = functionNode.body;
 
-      if (hasSimplifiableConditionalBody(body)) {
+      if (isBlockStatement(body) && hasSimplifiableConditionalBody(body)) {
         context.report(
-          body,
+          getLastStatement(body),
           'Prefer an early return to a conditionally-wrapped function body',
         );
       }
@@ -76,3 +76,13 @@ module.exports = {
     };
   },
 };
+
+function getLastStatement(statement) {
+  return 'body' in statement && statement.body.length > 0
+    ? statement.body[statement.body.length - 1]
+    : undefined;
+}
+
+function isBlockStatement(statement) {
+  return statement?.type === 'BlockStatement';
+}
