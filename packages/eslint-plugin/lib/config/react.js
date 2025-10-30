@@ -268,8 +268,6 @@ module.exports = [
       'jsx-a11y/interactive-supports-focus': 'error',
       // Enforce that a label tag has a text label and an associated control.
       'jsx-a11y/label-has-associated-control': 'error',
-      // Enforce that <label> elements have the htmlFor prop.
-      'jsx-a11y/label-has-for': 'error',
       // Enforces that <audio> and <video> elements must have a <track> for captions.
       'jsx-a11y/media-has-caption': 'error',
       // Enforce lang attribute has a valid value.
