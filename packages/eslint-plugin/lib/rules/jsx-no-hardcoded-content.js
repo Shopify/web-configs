@@ -205,6 +205,12 @@ function checkContent(
           !isEmptyString(contentNode.value)) ||
           (!allowNumbers && typeof contentNode.value === 'number'))) ||
       (contentNode.type === 'TemplateLiteral' && !allowStrings) ||
+      (contentNode.type === 'ConditionalExpression' &&
+        (isInvalidContent(contentNode.consequent) ||
+          isInvalidContent(contentNode.alternate))) ||
+      (contentNode.type === 'LogicalExpression' &&
+        (isInvalidContent(contentNode.left) ||
+          isInvalidContent(contentNode.right))) ||
       (contentNode.type === 'JSXExpressionContainer' &&
         isInvalidContent(contentNode.expression))
     );
