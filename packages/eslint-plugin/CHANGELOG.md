@@ -1,5 +1,14 @@
 # Changelog
 
+## 50.1.0
+
+### Minor Changes
+
+- [#485](https://github.com/Shopify/web-configs/pull/485) [`1f6cd8e`](https://github.com/Shopify/web-configs/commit/1f6cd8e395a04bf694697e1a2e53051af4638a57) Thanks [@qqii](https://github.com/qqii)! - `jsx-a11y/label-has-for` has been deprecated in favor of
+  `jsx-a11y/label-has-associated-control`, which is already enabled.
+
+- [#488](https://github.com/Shopify/web-configs/pull/488) [`907a3ce`](https://github.com/Shopify/web-configs/commit/907a3ceb834d875d7db6147a28d29f057f1d6074) Thanks [@mateus](https://github.com/mateus)! - extend jsx-no-hardcoded-content to handle ternary and logical expressions
+
 ## 50.0.0
 
 ### Major Changes
