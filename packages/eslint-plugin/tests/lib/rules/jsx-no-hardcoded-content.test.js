@@ -104,6 +104,14 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
       options: [{...checkProps, ...allowStrings}],
     },
     {
+      code: '<MyComponent>{foo ? "Content" : "Other Content"}</MyComponent>',
+      options: [{...checkProps, ...allowStrings}],
+    },
+    {
+      code: '<MyComponent>{foo && "Content"}</MyComponent>',
+      options: [{...checkProps, ...allowStrings}],
+    },
+    {
       code: '<MyComponent>{42}</MyComponent>',
       options: [
         {
@@ -425,6 +433,18 @@ ruleTester.run('jsx-no-hardcoded-content', rule, {
       code: '<MyComponent foo={`bar`} />',
       options: [checkProps],
       errors: errorsFor('MyComponent', 'foo'),
+    },
+    {
+      code: '<MyComponent>{foo ? "Content" : "Other Content"}</MyComponent>',
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: '<MyComponent>{foo && "Content"}</MyComponent>',
+      errors: errorsFor('MyComponent', 'children'),
+    },
+    {
+      code: '<MyComponent>{foo || "Content"}</MyComponent>',
+      errors: errorsFor('MyComponent', 'children'),
     },
     {
       code: `
