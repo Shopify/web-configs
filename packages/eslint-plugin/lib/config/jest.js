@@ -106,7 +106,6 @@ module.exports = [
             'correct',
             'appropriate',
             'properly',
-            'should',
             'every',
             'descriptive',
           ],
