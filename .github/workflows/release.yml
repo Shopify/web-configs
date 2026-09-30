@@ -30,17 +30,23 @@ jobs:
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
           node-version: 22.14.0
+          registry-url: 'https://registry.npmjs.org'
           cache: 'pnpm'
+
+      - name: Install npm with trusted publishing support
+        run: npm install --global npm@11.7.0
 
       - name: Install dependencies
         run: pnpm install
 
       - name: Create release Pull Request or publish to NPM
         id: changesets
-        uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba # v1.5.3
+        uses: changesets/action@a45c4d594aa4e2c509dc14a9f2b3b67ba3780d0d # v1.9.0
         with:
           publish: pnpm run release
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # Keep both empty so npm uses OIDC instead of token authentication.
+          NPM_TOKEN: ''
+          NODE_AUTH_TOKEN: ''
           GITHUB_TOKEN: ${{ secrets.SHOPIFY_GH_ACCESS_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
